@@ -4,6 +4,7 @@ extends Control
 # Mode Cards
 @onready var card_play_bots: Button = $CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardPlayBots
 @onready var card_play_friend: Button = $CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardPlayFriend
+@onready var card_trainer: Button = $CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardTrainer
 @onready var card_variants: Button = $CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardVariants
 
 # Left Card Player Details
@@ -133,6 +134,7 @@ func _ready() -> void:
 	# Setup Mode Card Clicks
 	card_play_bots.pressed.connect(func(): _select_mode("vs_ai"))
 	card_play_friend.pressed.connect(func(): _select_mode("local_2p"))
+	card_trainer.pressed.connect(func(): _select_mode("trainer"))
 	card_variants.pressed.connect(func(): _select_mode("painter"))
 
 	# Setup Side Selector Buttons
@@ -198,14 +200,18 @@ func _select_mode(mode: String) -> void:
 	card_play_friend.add_theme_stylebox_override("hover", card_active_hover_style if mode == "local_2p" else card_normal_hover_style)
 	card_play_friend.add_theme_stylebox_override("pressed", card_active_pressed_style if mode == "local_2p" else card_normal_pressed_style)
 
+	card_trainer.add_theme_stylebox_override("normal", card_active_style if mode == "trainer" else card_normal_style)
+	card_trainer.add_theme_stylebox_override("hover", card_active_hover_style if mode == "trainer" else card_normal_hover_style)
+	card_trainer.add_theme_stylebox_override("pressed", card_active_pressed_style if mode == "trainer" else card_normal_pressed_style)
+
 	card_variants.add_theme_stylebox_override("normal", card_active_style if mode == "painter" else card_normal_style)
 	card_variants.add_theme_stylebox_override("hover", card_active_hover_style if mode == "painter" else card_normal_hover_style)
 	card_variants.add_theme_stylebox_override("pressed", card_active_pressed_style if mode == "painter" else card_normal_pressed_style)
 
 	# Tampilkan / sembunyikan pengaturan bot ELO, Best Move, dan Side selector
 	difficulty_card.visible = (mode == "vs_ai")
-	engine_assist_card.visible = (mode != "painter")
-	play_as_row.visible = (mode != "painter")
+	engine_assist_card.visible = (mode != "painter" and mode != "trainer")
+	play_as_row.visible = (mode != "painter" and mode != "trainer")
 
 	if mode == "vs_ai":
 		opponent_name.text = "Stockfish 18 (AI)"
@@ -215,6 +221,10 @@ func _select_mode(mode: String) -> void:
 		opponent_name.text = "Player 2 (Opponent)"
 		opponent_badge.text = "Local 2P"
 		btn_play.text = "Play"
+	elif mode == "trainer":
+		opponent_name.text = "Opening Trainer"
+		opponent_badge.text = "SRS Reps"
+		btn_play.text = "Train Openings"
 	elif mode == "painter":
 		opponent_name.text = "Custom Position Setup"
 		opponent_badge.text = "Sandbox"
@@ -224,7 +234,7 @@ func _select_mode(mode: String) -> void:
 	_sync_settings_form_arrows()
 
 func _setup_tactile_card_effects() -> void:
-	var cards: Array[Button] = [card_play_bots, card_play_friend, card_variants]
+	var cards: Array[Button] = [card_play_bots, card_play_friend, card_trainer, card_variants]
 	for card in cards:
 		var hbox = card.get_node_or_null("HBox") as Control
 		if not hbox:
@@ -437,6 +447,8 @@ func _on_play_pressed() -> void:
 		GameSettings.current_game_mode = "local_2p"
 		GameSettings.open_painter_on_launch = false
 		get_tree().change_scene_to_file(MAIN_SCENE_PATH)
+	elif selected_mode == "trainer":
+		get_tree().change_scene_to_file("res://src/ui/trainer/opening_trainer.tscn")
 	elif selected_mode == "painter":
 		GameSettings.current_game_mode = "vs_ai"
 		GameSettings.open_painter_on_launch = true

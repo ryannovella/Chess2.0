@@ -1,0 +1,264 @@
+[gd_scene format=3 uid="uid://copeningtrainersc01"]
+
+[ext_resource type="Script" path="res://src/ui/trainer/opening_trainer.gd" id="1_trainer"]
+[ext_resource type="Theme" uid="uid://thmmodern01" path="res://src/theme/theme_modern.tres" id="2_thm"]
+[ext_resource type="PackedScene" uid="uid://cboard8x8sc01" path="res://src/ui/board/chess_board.tscn" id="3_board"]
+[ext_resource type="FontFile" uid="uid://dlnekggtoarsd" path="res://assets/fonts/ChessSans-ExtraBold.ttf" id="4_font_xbold"]
+[ext_resource type="FontFile" uid="uid://r6a0ykpbyp5h" path="res://assets/fonts/ChessSans-Bold.ttf" id="5_font_bold"]
+[ext_resource type="Texture2D" uid="uid://brat8uuhjrw04" path="res://assets/ui/icons/icon_home.svg" id="6_icon_home"]
+[ext_resource type="Texture2D" uid="uid://bd54i7go1ratp" path="res://assets/ui/icons/icon_robot.svg" id="7_icon_robot"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header_card"]
+content_margin_left = 18.0
+content_margin_top = 14.0
+content_margin_right = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.149, 0.141, 0.133, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24, 0.23, 0.21, 0.9)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_coach_card"]
+content_margin_left = 18.0
+content_margin_top = 12.0
+content_margin_right = 18.0
+content_margin_bottom = 12.0
+bg_color = Color(0.149, 0.141, 0.133, 0.98)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.65, 0.95, 0.9)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_bg"]
+bg_color = Color(0.11, 0.10, 0.09, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_fill"]
+bg_color = Color(0.51, 0.72, 0.30, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="OpeningTrainer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_thm")
+script = ExtResource("1_trainer")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.106, 0.098, 0.09, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainLayout" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(708, 1220)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="TopBar" type="HBoxContainer" parent="CenterContainer/MainLayout"]
+custom_minimum_size = Vector2(708, 44)
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="BtnBack" type="Button" parent="CenterContainer/MainLayout/TopBar"]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+tooltip_text = "Back to Main Menu"
+icon = ExtResource("6_icon_home")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/MainLayout/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_font_xbold")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+text = "OPENING REPS"
+vertical_alignment = 1
+
+[node name="OptRepertoire" type="OptionButton" parent="CenterContainer/MainLayout/TopBar"]
+custom_minimum_size = Vector2(230, 42)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 13
+alignment = 1
+
+[node name="HeaderCard" type="PanelContainer" parent="CenterContainer/MainLayout"]
+custom_minimum_size = Vector2(708, 104)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_header_card")
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/MainLayout/HeaderCard"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="RepertoireTitleLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_font_xbold")
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.96, 0.96, 0.96, 1)
+text = "Fried Liver Attack"
+
+[node name="RepertoireMetaLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.70, 0.68, 0.65, 1)
+text = "C57 · Playing as White · 12 Key Positions"
+
+[node name="ProgressHBox" type="HBoxContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MasteryProgressBar" type="ProgressBar" parent="CenterContainer/MainLayout/HeaderCard/VBox/ProgressHBox"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_progress_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_progress_fill")
+show_percentage = false
+
+[node name="MasteryPercentLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/ProgressHBox"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.51, 0.72, 0.30, 1)
+text = "0% Mastered"
+horizontal_alignment = 2
+
+[node name="MetaRow" type="HBoxContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ModeBadgeLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/MetaRow"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.85, 0.75, 0.45, 1)
+text = "MODE: DRILL"
+
+[node name="DueBadgeLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/MetaRow"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.60, 0.60, 0.60, 1)
+text = "0 moves due"
+
+[node name="BoardCenter" type="CenterContainer" parent="CenterContainer/MainLayout"]
+layout_mode = 2
+
+[node name="ChessBoard" parent="CenterContainer/MainLayout/BoardCenter" instance=ExtResource("3_board")]
+layout_mode = 2
+
+[node name="CoachCard" type="PanelContainer" parent="CenterContainer/MainLayout"]
+custom_minimum_size = Vector2(708, 108)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_coach_card")
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/MainLayout/CoachCard"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="StatusRow" type="HBoxContainer" parent="CenterContainer/MainLayout/CoachCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Avatar" type="TextureRect" parent="CenterContainer/MainLayout/CoachCard/VBox/StatusRow"]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("7_icon_robot")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatusLabel" type="Label" parent="CenterContainer/MainLayout/CoachCard/VBox/StatusRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_font_xbold")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+text = "Your Turn (White): Play the best repertoire move"
+
+[node name="BlurbLabel" type="Label" parent="CenterContainer/MainLayout/CoachCard/VBox"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.80, 0.78, 0.75, 1)
+text = "Recall the correct opening move for this position."
+autowrap_mode = 3
+
+[node name="ControlsBar" type="HBoxContainer" parent="CenterContainer/MainLayout"]
+custom_minimum_size = Vector2(708, 46)
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="BtnHint" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 14
+text = "Hint"
+
+[node name="BtnRetry" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 14
+text = "Retry"
+
+[node name="BtnNextLine" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_font_xbold")
+theme_override_font_sizes/font_size = 14
+text = "Next Line"
+
+[node name="BtnModeToggle" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 14
+text = "Learn Mode"
