@@ -1,0 +1,166 @@
+[gd_resource type="Theme" format=3 uid="uid://thmmodern01"]
+
+[ext_resource type="FontFile" uid="uid://r6a0ykpbyp5h" path="res://assets/fonts/ChessSans-Bold.ttf" id="1_font_bold"]
+[ext_resource type="FontFile" uid="uid://dlnekggtoarsd" path="res://assets/fonts/ChessSans-ExtraBold.ttf" id="2_font_xbold"]
+[ext_resource type="FontFile" uid="uid://bnbiavn02knhf" path="res://assets/fonts/ChessSans-Regular.ttf" id="3_font_regular"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/checkbox_off.svg" id="4_cb_off"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/checkbox_on.svg" id="5_cb_on"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_disabled"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 12.0
+bg_color = Color(0.15, 0.14, 0.13, 0.5)
+border_width_bottom = 2
+border_color = Color(0.11, 0.1, 0.09, 0.4)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_focus"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.271, 0.259, 0.243, 1)
+border_width_bottom = 4
+border_color = Color(0.149, 0.141, 0.133, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.25)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.212, 0.204, 0.192, 1)
+border_width_bottom = 4
+border_color = Color(0.129, 0.122, 0.114, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.2)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+content_margin_left = 18.0
+content_margin_top = 13.0
+content_margin_right = 18.0
+content_margin_bottom = 11.0
+bg_color = Color(0.165, 0.157, 0.149, 1)
+border_width_bottom = 1
+border_color = Color(0.1, 0.095, 0.09, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel_card"]
+content_margin_left = 18.0
+content_margin_top = 16.0
+content_margin_right = 18.0
+content_margin_bottom = 16.0
+bg_color = Color(0.149, 0.141, 0.133, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.212, 0.204, 0.192, 0.9)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_selected"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.212, 0.204, 0.192, 1)
+border_width_bottom = 3
+border_color = Color(0.506, 0.714, 0.298, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_unselected"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.149, 0.141, 0.133, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[resource]
+default_font = ExtResource("3_font_regular")
+default_font_size = 18
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0.48, 0.46, 0.44, 0.8)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.92, 0.92, 0.92, 1)
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("2_font_xbold")
+Button/styles/disabled = SubResource("StyleBoxFlat_btn_disabled")
+Button/styles/focus = SubResource("StyleBoxEmpty_focus")
+Button/styles/hover = SubResource("StyleBoxFlat_btn_hover")
+Button/styles/normal = SubResource("StyleBoxFlat_btn_normal")
+Button/styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+CheckBox/colors/font_color = Color(0.94, 0.94, 0.94, 1)
+CheckBox/colors/font_hover_color = Color(1, 1, 1, 1)
+CheckBox/colors/font_pressed_color = Color(1, 1, 1, 1)
+CheckBox/constants/h_separation = 10
+CheckBox/icons/checked = ExtResource("5_cb_on")
+CheckBox/icons/checked_disabled = ExtResource("5_cb_on")
+CheckBox/icons/unchecked = ExtResource("4_cb_off")
+CheckBox/icons/unchecked_disabled = ExtResource("4_cb_off")
+CheckBox/font_sizes/font_size = 18
+CheckBox/fonts/font = ExtResource("3_font_regular")
+CheckBox/styles/disabled = SubResource("StyleBoxEmpty_focus")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_focus")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_focus")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_focus")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_focus")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_focus")
+HeaderLarge/font_sizes/font_size = 30
+HeaderLarge/fonts/font = ExtResource("2_font_xbold")
+HeaderMedium/font_sizes/font_size = 23
+HeaderMedium/fonts/font = ExtResource("2_font_xbold")
+HeaderSmall/font_sizes/font_size = 19
+HeaderSmall/fonts/font = ExtResource("1_font_bold")
+Label/font_sizes/font_size = 18
+Label/fonts/font = ExtResource("3_font_regular")
+LabelBold/base_type = &"Label"
+LabelBold/fonts/font = ExtResource("1_font_bold")
+LabelExtraBold/base_type = &"Label"
+LabelExtraBold/fonts/font = ExtResource("2_font_xbold")
+LabelRegular/base_type = &"Label"
+LabelRegular/fonts/font = ExtResource("3_font_regular")
+LabelSemibold/base_type = &"Label"
+LabelSemibold/fonts/font = ExtResource("1_font_bold")
+LineEdit/font_sizes/font_size = 18
+LineEdit/fonts/font = ExtResource("3_font_regular")
+OptionButton/font_sizes/font_size = 18
+OptionButton/fonts/font = ExtResource("1_font_bold")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_panel_card")
+RichTextLabel/fonts/bold_font = ExtResource("1_font_bold")
+RichTextLabel/fonts/normal_font = ExtResource("3_font_regular")
+TabBar/colors/font_selected_color = Color(1, 1, 1, 1)
+TabBar/colors/font_unselected_color = Color(0.65, 0.63, 0.6, 1)
+TabBar/font_sizes/font_size = 18
+TabBar/fonts/font = ExtResource("1_font_bold")
+TabBar/styles/tab_focus = SubResource("StyleBoxEmpty_focus")
+TabBar/styles/tab_selected = SubResource("StyleBoxFlat_tab_selected")
+TabBar/styles/tab_unselected = SubResource("StyleBoxFlat_tab_unselected")
+TooltipLabel/font_sizes/font_size = 16
+TooltipLabel/fonts/font = ExtResource("3_font_regular")

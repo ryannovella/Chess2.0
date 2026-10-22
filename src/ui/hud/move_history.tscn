@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmovehistsc01"]
+
+[ext_resource type="Script" path="res://src/ui/hud/move_history.gd" id="1_history"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hist_bg"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.149, 0.141, 0.133, 0.9)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.255, 0.245, 0.23, 0.7)
+
+[node name="MoveHistory" type="PanelContainer"]
+custom_minimum_size = Vector2(240, 96)
+offset_right = 240.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hist_bg")
+script = ExtResource("1_history")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"LabelBold"
+theme_override_colors/font_color = Color(0.9, 0.92, 0.95, 1)
+theme_override_font_sizes/font_size = 19
+text = "Move History"
+
+[node name="CountLabel" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.68, 0.66, 0.63, 1)
+theme_override_font_sizes/font_size = 16
+text = "0 moves"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ListContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 2
+columns = 3

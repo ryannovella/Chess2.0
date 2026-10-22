@@ -1,0 +1,221 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpaintersc001"]
+
+[ext_resource type="Script" path="res://src/ui/painter/chess_painter.gd" id="1_painter"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_palette.svg" id="2_palette"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_play.svg" id="3_play"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_people.svg" id="4_people"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel_bg"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.125, 0.118, 0.11, 0.95)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.255, 0.245, 0.23, 0.8)
+
+[node name="ChessPainter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_painter")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09, 0.083, 0.076, 0.98)
+
+[node name="MainLayout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 20.0
+offset_right = -30.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="BoardSection" type="VBoxContainer" parent="MainLayout"]
+layout_mode = 2
+alignment = 1
+
+[node name="BoardViewport" type="Control" parent="MainLayout/BoardSection"]
+custom_minimum_size = Vector2(560, 560)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="RanksContainer" type="VBoxContainer" parent="MainLayout/BoardSection"]
+layout_mode = 2
+
+[node name="FilesContainer" type="HBoxContainer" parent="MainLayout/BoardSection"]
+layout_mode = 2
+
+[node name="ToolsSection" type="PanelContainer" parent="MainLayout"]
+custom_minimum_size = Vector2(0, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel_bg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainLayout/ToolsSection"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitleRow" type="HBoxContainer" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Icon" type="TextureRect" parent="MainLayout/ToolsSection/VBoxContainer/TitleRow"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("2_palette")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="MainLayout/ToolsSection/VBoxContainer/TitleRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.85, 0.4, 1)
+theme_override_font_sizes/font_size = 23
+text = "Chess Painter (Sandbox)"
+
+[node name="Desc" type="Label" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
+theme_override_font_sizes/font_size = 18
+text = "Place pieces freely on board. Left-click to place, right-click to clear."
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="PaletteGroup" type="VBoxContainer" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Label" type="Label" parent="MainLayout/ToolsSection/VBoxContainer/PaletteGroup"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Piece Palette:"
+
+[node name="WhitePalette" type="HBoxContainer" parent="MainLayout/ToolsSection/VBoxContainer/PaletteGroup"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BlackPalette" type="HBoxContainer" parent="MainLayout/ToolsSection/VBoxContainer/PaletteGroup"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ToolButtons" type="HBoxContainer" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnClear" type="Button" parent="MainLayout/ToolsSection/VBoxContainer/ToolButtons"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Clear Board"
+
+[node name="BtnReset" type="Button" parent="MainLayout/ToolsSection/VBoxContainer/ToolButtons"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Initial Setup"
+
+[node name="HSeparator2" type="HSeparator" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="TurnRow" type="HBoxContainer" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainLayout/ToolsSection/VBoxContainer/TurnRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Turn to Move:"
+
+[node name="OptTurn" type="OptionButton" parent="MainLayout/ToolsSection/VBoxContainer/TurnRow"]
+custom_minimum_size = Vector2(200, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="CastlingLabel" type="Label" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Castling Rights:"
+
+[node name="CastlingGrid" type="GridContainer" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="ChkWK" type="CheckBox" parent="MainLayout/ToolsSection/VBoxContainer/CastlingGrid"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+button_pressed = true
+text = "White O-O (K)"
+
+[node name="ChkWQ" type="CheckBox" parent="MainLayout/ToolsSection/VBoxContainer/CastlingGrid"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+button_pressed = true
+text = "White O-O-O (Q)"
+
+[node name="ChkBk" type="CheckBox" parent="MainLayout/ToolsSection/VBoxContainer/CastlingGrid"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+button_pressed = true
+text = "Black O-O (k)"
+
+[node name="ChkBq" type="CheckBox" parent="MainLayout/ToolsSection/VBoxContainer/CastlingGrid"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+button_pressed = true
+text = "Black O-O-O (q)"
+
+[node name="HSeparator3" type="HSeparator" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="BtnPlayAI" type="Button" parent="MainLayout/ToolsSection/VBoxContainer"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.9, 0.4, 1)
+theme_override_font_sizes/font_size = 18
+text = "Play vs AI"
+icon = ExtResource("3_play")
+
+[node name="BtnPlayLocal" type="Button" parent="MainLayout/ToolsSection/VBoxContainer"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.75, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Play Local 2P"
+icon = ExtResource("4_people")
+
+[node name="BtnBack" type="Button" parent="MainLayout/ToolsSection/VBoxContainer"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.76, 0.74, 0.71, 1)
+theme_override_font_sizes/font_size = 18
+text = "Back"

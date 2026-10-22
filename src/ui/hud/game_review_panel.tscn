@@ -1,0 +1,486 @@
+[gd_scene load_steps=11 format=3 uid="uid://cgamereviewpan01"]
+
+[ext_resource type="Theme" path="res://src/theme/theme_modern.tres" id="1_thm"]
+[ext_resource type="Script" path="res://src/ui/hud/game_review_panel.gd" id="2_script"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_robot.svg" id="3_robot"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_settings.svg" id="4_settings"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_exit.svg" id="5_exit"]
+[ext_resource type="Script" path="res://src/ui/hud/eval_graph.gd" id="6_graph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_review_bg"]
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+bg_color = Color(0.125, 0.118, 0.11, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24, 0.23, 0.21, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ledger_box"]
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+bg_color = Color(0.149, 0.141, 0.133, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22, 0.21, 0.19, 0.7)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_coach_panel"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.149, 0.141, 0.133, 0.95)
+border_width_left = 3
+border_color = Color(0.35, 0.65, 0.95, 0.9)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prog_bar"]
+bg_color = Color(0.38, 0.74, 0.28, 0.95)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="GameReviewPanel" type="PanelContainer"]
+custom_minimum_size = Vector2(260, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_thm")
+theme_override_styles/panel = SubResource("StyleBoxFlat_review_bg")
+script = ExtResource("2_script")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HeaderBar" type="HBoxContainer" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BtnTabSummary" type="Button" parent="Margin/VBox/HeaderBar"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Summary"
+
+[node name="BtnTabGraph" type="Button" parent="Margin/VBox/HeaderBar"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Graph"
+
+[node name="BtnTabMovesList" type="Button" parent="Margin/VBox/HeaderBar"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Moves"
+
+[node name="BtnTabMoves" type="Button" parent="Margin/VBox/HeaderBar"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Move Review"
+
+[node name="BtnSettings" type="Button" parent="Margin/VBox/HeaderBar"]
+custom_minimum_size = Vector2(36, 32)
+layout_mode = 2
+tooltip_text = "Review Engine Settings"
+icon = ExtResource("4_settings")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BtnCloseReview" type="Button" parent="Margin/VBox/HeaderBar"]
+custom_minimum_size = Vector2(36, 32)
+layout_mode = 2
+tooltip_text = "Close Game Review"
+icon = ExtResource("5_exit")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProgressBox" type="VBoxContainer" parent="Margin/VBox"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="ProgressLabel" type="Label" parent="Margin/VBox/ProgressBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+text = "Analyzing moves with Stockfish..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Margin/VBox/ProgressBox"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_prog_bar")
+show_percentage = false
+
+[node name="SummaryScroll" type="ScrollContainer" parent="Margin/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="SummaryBox" type="VBoxContainer" parent="Margin/VBox/SummaryScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="AccuracyLedger" type="PanelContainer" parent="Margin/VBox/SummaryScroll/SummaryBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ledger_box")
+
+[node name="LedgerVBox" type="VBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="AccuracyRow" type="HBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="WhiteCol" type="VBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="WhiteHeadRow" type="HBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow/WhiteCol"]
+layout_mode = 2
+
+[node name="Caption" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow/WhiteCol/WhiteHeadRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "WHITE ACCURACY"
+
+[node name="WhiteAccLabel" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow/WhiteCol"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98, 0.98, 0.98, 1)
+theme_override_font_sizes/font_size = 26
+text = "95.0%"
+
+[node name="Divider" type="VSeparator" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow"]
+layout_mode = 2
+
+[node name="BlackCol" type="VBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="BlackHeadRow" type="HBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow/BlackCol"]
+layout_mode = 2
+
+[node name="Caption" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow/BlackCol/BlackHeadRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "BLACK ACCURACY"
+
+[node name="BlackAccLabel" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox/AccuracyRow/BlackCol"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 26
+text = "82.5%"
+
+[node name="OpeningLabel" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/AccuracyLedger/LedgerVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.82, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "Opening: Queen's Gambit Declined (D30)"
+horizontal_alignment = 1
+text_overrun_behavior = 3
+
+[node name="MoveClassTable" type="PanelContainer" parent="Margin/VBox/SummaryScroll/SummaryBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ledger_box")
+
+[node name="TableVBox" type="VBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="CountsHeader" type="HBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LeftPad" type="Control" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox/CountsHeader"]
+custom_minimum_size = Vector2(31, 0)
+layout_mode = 2
+
+[node name="NameCaption" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox/CountsHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "Move Class"
+
+[node name="WhiteCaption" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox/CountsHeader"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "White"
+horizontal_alignment = 2
+
+[node name="BlackCaption" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox/CountsHeader"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 13
+text = "Black"
+horizontal_alignment = 2
+
+[node name="RightPad" type="Control" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox/CountsHeader"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="CountsContainer" type="VBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="RatingRow" type="HBoxContainer" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="RatingCaption" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox/RatingRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.88, 0.88, 0.88, 1)
+theme_override_font_sizes/font_size = 14
+text = "Game Rating"
+
+[node name="WhitePerfLabel" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox/RatingRow"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.8, 0.6, 1)
+theme_override_font_sizes/font_size = 14
+text = "100"
+horizontal_alignment = 2
+
+[node name="BlackPerfLabel" type="Label" parent="Margin/VBox/SummaryScroll/SummaryBox/MoveClassTable/TableVBox/RatingRow"]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.75, 0.95, 1)
+theme_override_font_sizes/font_size = 14
+text = "100"
+horizontal_alignment = 2
+
+[node name="BtnStartReview" type="Button" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Start Move Review"
+
+[node name="GraphBox" type="VBoxContainer" parent="Margin/VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="EvalGraph" type="Control" parent="Margin/VBox/GraphBox"]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 0
+clip_contents = true
+script = ExtResource("6_graph")
+
+[node name="ReadoutLabel" type="Label" parent="Margin/VBox/GraphBox"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+text = "Select a move to inspect"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="MovesListBox" type="VBoxContainer" parent="Margin/VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 4
+
+[node name="MovesScroll" type="ScrollContainer" parent="Margin/VBox/MovesListBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MovesContainer" type="VBoxContainer" parent="Margin/VBox/MovesListBox/MovesScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 3
+
+[node name="MoveReviewBox" type="VBoxContainer" parent="Margin/VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="CoachCard" type="PanelContainer" parent="Margin/VBox/MoveReviewBox"]
+layout_mode = 2
+size_flags_vertical = 3
+clip_contents = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_coach_panel")
+
+[node name="VBox" type="VBoxContainer" parent="Margin/VBox/MoveReviewBox/CoachCard"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="HeaderRow" type="HBoxContainer" parent="Margin/VBox/MoveReviewBox/CoachCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Avatar" type="TextureRect" parent="Margin/VBox/MoveReviewBox/CoachCard/VBox/HeaderRow"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3_robot")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BadgeIcon" type="TextureRect" parent="Margin/VBox/MoveReviewBox/CoachCard/VBox/HeaderRow"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BadgeLabel" type="Label" parent="Margin/VBox/MoveReviewBox/CoachCard/VBox/HeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Best Move"
+
+[node name="MoveTitleLabel" type="Label" parent="Margin/VBox/MoveReviewBox/CoachCard/VBox/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 15
+text = "14. Nf3"
+horizontal_alignment = 2
+
+[node name="ExplanationLabel" type="Label" parent="Margin/VBox/MoveReviewBox/CoachCard/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 14
+text = "This move developed a knight and maintained central control."
+autowrap_mode = 2
+clip_text = true
+
+[node name="EvalLossLabel" type="Label" parent="Margin/VBox/MoveReviewBox/CoachCard/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.45, 0.45, 1)
+theme_override_font_sizes/font_size = 14
+text = " "
+
+[node name="ActionRow" type="HBoxContainer" parent="Margin/VBox/MoveReviewBox"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnShowBest" type="Button" parent="Margin/VBox/MoveReviewBox/ActionRow"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Show Best Move"
+
+[node name="BtnRetry" type="Button" parent="Margin/VBox/MoveReviewBox/ActionRow"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Retry Move"
+
+[node name="NavRow" type="HBoxContainer" parent="Margin/VBox/MoveReviewBox"]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="BtnFirst" type="Button" parent="Margin/VBox/MoveReviewBox/NavRow"]
+custom_minimum_size = Vector2(40, 34)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "|<"
+clip_text = true
+tooltip_text = "First Move"
+
+[node name="BtnPrevMoment" type="Button" parent="Margin/VBox/MoveReviewBox/NavRow"]
+custom_minimum_size = Vector2(40, 34)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "<<"
+clip_text = true
+tooltip_text = "Previous Key Moment"
+
+[node name="BtnPrevMove" type="Button" parent="Margin/VBox/MoveReviewBox/NavRow"]
+custom_minimum_size = Vector2(40, 34)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "<"
+clip_text = true
+tooltip_text = "Previous Move"
+
+[node name="MoveIndicatorLabel" type="Label" parent="Margin/VBox/MoveReviewBox/NavRow"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 14
+text = "1 / 24"
+horizontal_alignment = 1
+
+[node name="BtnNextMove" type="Button" parent="Margin/VBox/MoveReviewBox/NavRow"]
+custom_minimum_size = Vector2(40, 34)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = ">"
+clip_text = true
+tooltip_text = "Next Move"
+
+[node name="BtnNextMoment" type="Button" parent="Margin/VBox/MoveReviewBox/NavRow"]
+custom_minimum_size = Vector2(40, 34)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = ">>"
+clip_text = true
+tooltip_text = "Next Key Moment"
+
+[node name="BtnLast" type="Button" parent="Margin/VBox/MoveReviewBox/NavRow"]
+custom_minimum_size = Vector2(40, 34)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = ">|"
+clip_text = true
+tooltip_text = "Last Move"

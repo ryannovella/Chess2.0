@@ -1,0 +1,26 @@
+# Godot 4 
+.godot/
+*.translation
+
+# Log / crash dump
+*.log
+
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Diagnostics & temporary editor files
+.dsh_tmp/
+.roo/
+.kilo/
+zzdiag/settings_modal.png
+
+# Engine Binaries & Models (Downloaded via setup scripts)
+/engine/*.exe
+/engine/*.pt
+/engine/maia3/maia3/__pycache__/
+/engine/maia3/.git/
+
+# User settings locally generated
+settings.json

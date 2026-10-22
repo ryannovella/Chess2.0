@@ -1,0 +1,147 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgameoverdlg001"]
+
+[ext_resource type="Script" path="res://src/ui/dialogs/game_over_dialog.gd" id="1_godlg"]
+[ext_resource type="Theme" path="res://src/theme/theme_modern.tres" id="2_thm"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_checkmark.svg" id="3_check"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_new_game.svg" id="4_newgame"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_target.svg" id="5_target"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_home.svg" id="6_home"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+content_margin_left = 28.0
+content_margin_top = 26.0
+content_margin_right = 28.0
+content_margin_bottom = 26.0
+bg_color = Color(0.13, 0.123, 0.115, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.33, 0.32, 0.3, 0.9)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.7)
+shadow_size = 28
+shadow_offset = Vector2(0, 6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_score_pill"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.19, 0.18, 0.17, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.38, 0.37, 0.34, 0.5)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="GameOverDialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_thm")
+script = ExtResource("1_godlg")
+
+[node name="DimBackdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.045, 0.04, 0.75)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardPanel" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(520, 400)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/CardPanel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="BannerRow" type="HBoxContainer" parent="CenterContainer/CardPanel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 10
+
+[node name="HeaderIcon" type="TextureRect" parent="CenterContainer/CardPanel/VBoxContainer/BannerRow"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+texture = ExtResource("3_check")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/CardPanel/VBoxContainer/BannerRow"]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+text = "White Won!"
+
+[node name="SubtitleLabel" type="Label" parent="CenterContainer/CardPanel/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"HeaderSmall"
+theme_override_colors/font_color = Color(0.78, 0.76, 0.73, 1)
+text = "by Checkmate"
+horizontal_alignment = 1
+
+[node name="ScoreBadge" type="PanelContainer" parent="CenterContainer/CardPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_score_pill")
+
+[node name="ScoreLabel" type="Label" parent="CenterContainer/CardPanel/VBoxContainer/ScoreBadge"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.93, 0.98, 1)
+theme_override_font_sizes/font_size = 22
+text = "1 - 0"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/CardPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnRematch" type="Button" parent="CenterContainer/CardPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+text = "Rematch"
+icon = ExtResource("4_newgame")
+alignment = 1
+
+[node name="BtnReview" type="Button" parent="CenterContainer/CardPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+text = "Game Review"
+icon = ExtResource("5_target")
+alignment = 1
+
+[node name="BtnMainMenu" type="Button" parent="CenterContainer/CardPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+text = "Main Menu"
+icon = ExtResource("6_home")
+alignment = 1
+
+[node name="BtnClose" type="Button" parent="CenterContainer/CardPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 0.9)
+theme_override_font_sizes/font_size = 20
+flat = true
+text = "View Board"

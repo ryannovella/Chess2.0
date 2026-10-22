@@ -1,0 +1,324 @@
+{
+  "communities": {
+    "0": [
+      "src_ui_board_arrow_overlay_arrowoverlay",
+      "src_ui_board_arrow_overlay_compute_arrow_polygon",
+      "src_ui_board_chess_board_chessboard",
+      "src_ui_board_chess_board_scene",
+      "src_ui_board_piece_view_pieceview",
+      "src_ui_board_square_cell_squarecell",
+      "src_ui_dialogs_promotion_dialog_promotiondialog",
+      "src_ui_dialogs_promotion_dialog_scene",
+      "src_ui_painter_chess_painter_chesspainter",
+      "src_ui_painter_chess_painter_scene"
+    ],
+    "1": [
+      "src_config_game_settings_gamesettings",
+      "src_core_chess_move_generator_chessmovegenerator",
+      "src_core_chess_san_chesssan",
+      "src_core_threat_detector_threatdetector",
+      "src_engine_engine_service_engineservice",
+      "src_engine_uci_client_uciclient",
+      "src_main_main"
+    ],
+    "2": [
+      "src_ui_hud_elo_slider_eloslider",
+      "src_ui_hud_elo_slider_scene",
+      "src_ui_hud_eval_bar_evalbar",
+      "src_ui_hud_eval_bar_scene"
+    ],
+    "3": [
+      "assets_pieces_cburnett_bb",
+      "assets_pieces_staunty_bb"
+    ],
+    "4": [
+      "assets_pieces_cburnett_bk",
+      "assets_pieces_staunty_bk"
+    ],
+    "5": [
+      "assets_pieces_cburnett_bn",
+      "assets_pieces_staunty_bn"
+    ],
+    "6": [
+      "assets_pieces_cburnett_bp",
+      "assets_pieces_staunty_bp"
+    ],
+    "7": [
+      "assets_pieces_cburnett_bq",
+      "assets_pieces_staunty_bq"
+    ],
+    "8": [
+      "assets_pieces_cburnett_br",
+      "assets_pieces_staunty_br"
+    ],
+    "9": [
+      "assets_pieces_cburnett_wb",
+      "assets_pieces_staunty_wb"
+    ],
+    "10": [
+      "assets_pieces_cburnett_wk",
+      "assets_pieces_staunty_wk"
+    ],
+    "11": [
+      "assets_pieces_cburnett_wn",
+      "assets_pieces_staunty_wn"
+    ],
+    "12": [
+      "assets_pieces_cburnett_wp",
+      "assets_pieces_staunty_wp"
+    ],
+    "13": [
+      "assets_pieces_cburnett_wq",
+      "assets_pieces_staunty_wq"
+    ],
+    "14": [
+      "assets_pieces_cburnett_wr",
+      "assets_pieces_staunty_wr"
+    ],
+    "15": [
+      "src_core_chess_board_state_chessboardstate",
+      "src_core_chess_types_chesstypes"
+    ],
+    "16": [
+      "src_ui_hud_game_controls_gamecontrols",
+      "src_ui_hud_game_controls_scene"
+    ],
+    "17": [
+      "src_ui_hud_move_history_movehistory",
+      "src_ui_hud_move_history_scene"
+    ],
+    "18": [
+      "assets_pieces_horsey_bb"
+    ],
+    "19": [
+      "assets_pieces_horsey_bk"
+    ],
+    "20": [
+      "assets_pieces_horsey_bn"
+    ],
+    "21": [
+      "assets_pieces_horsey_bp"
+    ],
+    "22": [
+      "assets_pieces_horsey_bq"
+    ],
+    "23": [
+      "assets_pieces_horsey_br"
+    ],
+    "24": [
+      "assets_pieces_horsey_bw"
+    ],
+    "25": [
+      "assets_pieces_horsey_kb"
+    ],
+    "26": [
+      "assets_pieces_horsey_kw"
+    ],
+    "27": [
+      "assets_pieces_horsey_nb"
+    ],
+    "28": [
+      "assets_pieces_horsey_nw"
+    ],
+    "29": [
+      "assets_pieces_horsey_pb"
+    ],
+    "30": [
+      "assets_pieces_horsey_pw"
+    ],
+    "31": [
+      "assets_pieces_horsey_qb"
+    ],
+    "32": [
+      "assets_pieces_horsey_qw"
+    ],
+    "33": [
+      "assets_pieces_horsey_rb"
+    ],
+    "34": [
+      "assets_pieces_horsey_rw"
+    ],
+    "35": [
+      "assets_pieces_horsey_wb"
+    ],
+    "36": [
+      "assets_pieces_horsey_wk"
+    ],
+    "37": [
+      "assets_pieces_horsey_wn"
+    ],
+    "38": [
+      "assets_pieces_horsey_wp"
+    ],
+    "39": [
+      "assets_pieces_horsey_wq"
+    ],
+    "40": [
+      "assets_pieces_horsey_wr"
+    ],
+    "41": [
+      "src_audio_audio_service_audioservice"
+    ],
+    "42": [
+      "src_config_board_themes_boardthemes"
+    ]
+  },
+  "cohesion": {
+    "0": 0.28888888888888886,
+    "1": 0.3333333333333333,
+    "2": 0.5,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_ui_board_chess_board_chessboard",
+      "label": "ChessBoard",
+      "degree": 7
+    },
+    {
+      "id": "src_ui_painter_chess_painter_chesspainter",
+      "label": "ChessPainter",
+      "degree": 4
+    },
+    {
+      "id": "src_main_main",
+      "label": "MainGame",
+      "degree": 4
+    },
+    {
+      "id": "src_ui_board_arrow_overlay_arrowoverlay",
+      "label": "ArrowOverlay",
+      "degree": 3
+    },
+    {
+      "id": "src_ui_board_chess_board_scene",
+      "label": "ChessBoard Scene",
+      "degree": 2
+    },
+    {
+      "id": "src_ui_board_piece_view_pieceview",
+      "label": "PieceView",
+      "degree": 2
+    },
+    {
+      "id": "src_ui_board_square_cell_squarecell",
+      "label": "SquareCell",
+      "degree": 2
+    },
+    {
+      "id": "src_ui_dialogs_promotion_dialog_promotiondialog",
+      "label": "PromotionDialog",
+      "degree": 2
+    },
+    {
+      "id": "src_ui_dialogs_promotion_dialog_scene",
+      "label": "PromotionDialog Scene",
+      "degree": 2
+    },
+    {
+      "id": "src_ui_hud_elo_slider_eloslider",
+      "label": "EloSlider",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "ChessBoard",
+      "target": "ChessPainter",
+      "source_files": [
+        "src/ui/board/chess_board.gd",
+        "src/ui/painter/chess_painter.gd"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "cburnett white King",
+      "target": "staunty white King",
+      "source_files": [
+        "assets/pieces/cburnett/wK.svg",
+        "assets/pieces/staunty/wK.svg"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "cburnett white Knight",
+      "target": "staunty white Knight",
+      "source_files": [
+        "assets/pieces/cburnett/wN.svg",
+        "assets/pieces/staunty/wN.svg"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "cburnett white Pawn",
+      "target": "staunty white Pawn",
+      "source_files": [
+        "assets/pieces/cburnett/wP.svg",
+        "assets/pieces/staunty/wP.svg"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    },
+    {
+      "source": "cburnett white Queen",
+      "target": "staunty white Queen",
+      "source_files": [
+        "assets/pieces/cburnett/wQ.svg",
+        "assets/pieces/staunty/wQ.svg"
+      ],
+      "confidence": "INFERRED",
+      "relation": "semantically_similar_to",
+      "why": "inferred connection - not explicitly stated in source; semantically similar concepts with no structural link"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

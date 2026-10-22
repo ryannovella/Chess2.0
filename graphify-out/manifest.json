@@ -1,0 +1,518 @@
+{
+  "src/audio/audio_service.gd": {
+    "mtime": 1790169325.5500908,
+    "seen": 1790201203.5077,
+    "ast_hash": "14b4c2cb24b446fb29141dfb8ce918ab",
+    "semantic_hash": "14b4c2cb24b446fb29141dfb8ce918ab"
+  },
+  "src/config/board_themes.gd": {
+    "mtime": 1790169250.67659,
+    "seen": 1790201203.5077,
+    "ast_hash": "74a543429af456c5642e063d57a66813",
+    "semantic_hash": "74a543429af456c5642e063d57a66813"
+  },
+  "src/config/game_settings.gd": {
+    "mtime": 1790169259.848129,
+    "seen": 1790201203.5077,
+    "ast_hash": "324fe0e9bac996d343458cca03bc495d",
+    "semantic_hash": "324fe0e9bac996d343458cca03bc495d"
+  },
+  "src/core/chess_board_state.gd": {
+    "mtime": 1790169165.406031,
+    "seen": 1790201203.5077,
+    "ast_hash": "b95d7cc09880e1075c1bf4bf5f2b2789",
+    "semantic_hash": "b95d7cc09880e1075c1bf4bf5f2b2789"
+  },
+  "src/core/chess_move_generator.gd": {
+    "mtime": 1790169188.8211863,
+    "seen": 1790201203.5077,
+    "ast_hash": "30574452e71e106d1e7df708f7ad7114",
+    "semantic_hash": "30574452e71e106d1e7df708f7ad7114"
+  },
+  "src/core/chess_san.gd": {
+    "mtime": 1790169196.49075,
+    "seen": 1790201203.5077,
+    "ast_hash": "513e7ddd100b8f52536569b492232c92",
+    "semantic_hash": "513e7ddd100b8f52536569b492232c92"
+  },
+  "src/core/chess_types.gd": {
+    "mtime": 1790169155.7750647,
+    "seen": 1790201203.5077,
+    "ast_hash": "194eeb5c949f7b60add3ccfb2656970b",
+    "semantic_hash": "194eeb5c949f7b60add3ccfb2656970b"
+  },
+  "src/core/threat_detector.gd": {
+    "mtime": 1790169205.0340376,
+    "seen": 1790201203.5077,
+    "ast_hash": "5c68844e8724e62146dc5691f5ba82a0",
+    "semantic_hash": "5c68844e8724e62146dc5691f5ba82a0"
+  },
+  "src/engine/engine_service.gd": {
+    "mtime": 1790169780.7649665,
+    "seen": 1790201203.5077,
+    "ast_hash": "fac57a4548637e974821f0a703ea52f6",
+    "semantic_hash": "fac57a4548637e974821f0a703ea52f6"
+  },
+  "src/engine/uci_client.gd": {
+    "mtime": 1790169721.8278625,
+    "seen": 1790201203.5077,
+    "ast_hash": "d09a6289d168a10658256706b3d1e181",
+    "semantic_hash": "d09a6289d168a10658256706b3d1e181"
+  },
+  "src/main.gd": {
+    "mtime": 1790169795.6946645,
+    "seen": 1790201203.5077,
+    "ast_hash": "b9cdf14dd0a156fa922a273df720cd37",
+    "semantic_hash": "b9cdf14dd0a156fa922a273df720cd37"
+  },
+  "src/ui/board/arrow_overlay.gd": {
+    "mtime": 1790169375.3395705,
+    "seen": 1790201203.5077,
+    "ast_hash": "b44bef2114047197ffdc9bf07ac2d805",
+    "semantic_hash": "b44bef2114047197ffdc9bf07ac2d805"
+  },
+  "src/ui/board/chess_board.gd": {
+    "mtime": 1790169600.2983377,
+    "seen": 1790201203.5077,
+    "ast_hash": "8ebbe48df17a4f642f458e63ca295e0b",
+    "semantic_hash": "8ebbe48df17a4f642f458e63ca295e0b"
+  },
+  "src/ui/board/chess_board.tscn": {
+    "mtime": 1790169430.3937144,
+    "seen": 1790201203.5077,
+    "ast_hash": "2369527d5ab4d4c487a6b916380893db",
+    "semantic_hash": "2369527d5ab4d4c487a6b916380893db"
+  },
+  "src/ui/board/piece_view.gd": {
+    "mtime": 1790169384.740219,
+    "seen": 1790201203.5077,
+    "ast_hash": "154dd3fdbe7371dc4a0237e9448fada2",
+    "semantic_hash": "154dd3fdbe7371dc4a0237e9448fada2"
+  },
+  "src/ui/board/square_cell.gd": {
+    "mtime": 1790169393.195288,
+    "seen": 1790201203.5077,
+    "ast_hash": "8bae6366bb9305418f05e2bda095e013",
+    "semantic_hash": "8bae6366bb9305418f05e2bda095e013"
+  },
+  "src/ui/dialogs/promotion_dialog.gd": {
+    "mtime": 1790169400.8474948,
+    "seen": 1790201203.5077,
+    "ast_hash": "73f386c81ffdf6c49df053911a70ad93",
+    "semantic_hash": "73f386c81ffdf6c49df053911a70ad93"
+  },
+  "src/ui/dialogs/promotion_dialog.tscn": {
+    "mtime": 1790169408.2862313,
+    "seen": 1790201203.5077,
+    "ast_hash": "8df9875e4323c1a390eb3bee982c01af",
+    "semantic_hash": "8df9875e4323c1a390eb3bee982c01af"
+  },
+  "src/ui/hud/elo_slider.gd": {
+    "mtime": 1790169477.208563,
+    "seen": 1790201203.5077,
+    "ast_hash": "1b2d4abba9626f12500edefae5c2fed9",
+    "semantic_hash": "1b2d4abba9626f12500edefae5c2fed9"
+  },
+  "src/ui/hud/elo_slider.tscn": {
+    "mtime": 1790169484.528802,
+    "seen": 1790201203.5077,
+    "ast_hash": "4920bea4d250b0b47ef57946f8d8096f",
+    "semantic_hash": "4920bea4d250b0b47ef57946f8d8096f"
+  },
+  "src/ui/hud/eval_bar.gd": {
+    "mtime": 1790169444.9970763,
+    "seen": 1790201203.5077,
+    "ast_hash": "11500e6b5c2d37ad412f116bf6993990",
+    "semantic_hash": "11500e6b5c2d37ad412f116bf6993990"
+  },
+  "src/ui/hud/eval_bar.tscn": {
+    "mtime": 1790169451.1499379,
+    "seen": 1790201203.5077,
+    "ast_hash": "4f8dd6046dbba789fefeac8626149a6d",
+    "semantic_hash": "4f8dd6046dbba789fefeac8626149a6d"
+  },
+  "src/ui/hud/game_controls.gd": {
+    "mtime": 1790169495.5571642,
+    "seen": 1790201203.5077,
+    "ast_hash": "d547daa794c23b22b4705dc19a39187c",
+    "semantic_hash": "d547daa794c23b22b4705dc19a39187c"
+  },
+  "src/ui/hud/game_controls.tscn": {
+    "mtime": 1790169505.8888123,
+    "seen": 1790201203.5077,
+    "ast_hash": "551f14dd33f7fadc85096f6acf2d7688",
+    "semantic_hash": "551f14dd33f7fadc85096f6acf2d7688"
+  },
+  "src/ui/hud/move_history.gd": {
+    "mtime": 1790169594.5956576,
+    "seen": 1790201203.5077,
+    "ast_hash": "03cbdd86596a290c98f044ccf25c76b8",
+    "semantic_hash": "03cbdd86596a290c98f044ccf25c76b8"
+  },
+  "src/ui/hud/move_history.tscn": {
+    "mtime": 1790169466.9104657,
+    "seen": 1790201203.5077,
+    "ast_hash": "d57b3707a81306a93bdfedef35a5d152",
+    "semantic_hash": "d57b3707a81306a93bdfedef35a5d152"
+  },
+  "src/ui/painter/chess_painter.gd": {
+    "mtime": 1790169531.3302138,
+    "seen": 1790201203.5077,
+    "ast_hash": "a66697c1df7a9650593693f31c0fbf30",
+    "semantic_hash": "a66697c1df7a9650593693f31c0fbf30"
+  },
+  "src/ui/painter/chess_painter.tscn": {
+    "mtime": 1790169524.5427506,
+    "seen": 1790201203.5077,
+    "ast_hash": "5ef109682580952ebba2f803dd6656f2",
+    "semantic_hash": "5ef109682580952ebba2f803dd6656f2"
+  },
+  "assets/pieces/cburnett/bB.svg": {
+    "mtime": 1788489067.783,
+    "seen": 1790201203.5077,
+    "ast_hash": "aa5bdbcda55c58802a4a343142f3d1b4",
+    "semantic_hash": "aa5bdbcda55c58802a4a343142f3d1b4"
+  },
+  "assets/pieces/cburnett/bK.svg": {
+    "mtime": 1788489068.06,
+    "seen": 1790201203.5077,
+    "ast_hash": "2705f038444746c258cd3287c9ea7e46",
+    "semantic_hash": "2705f038444746c258cd3287c9ea7e46"
+  },
+  "assets/pieces/cburnett/bN.svg": {
+    "mtime": 1788489068.327,
+    "seen": 1790201203.5077,
+    "ast_hash": "f1f87cc7e535ab7fa91dd814296a3137",
+    "semantic_hash": "f1f87cc7e535ab7fa91dd814296a3137"
+  },
+  "assets/pieces/cburnett/bP.svg": {
+    "mtime": 1788489068.588,
+    "seen": 1790201203.5077,
+    "ast_hash": "48e87076aa493c1aa5bbdb9ab1c7b850",
+    "semantic_hash": "48e87076aa493c1aa5bbdb9ab1c7b850"
+  },
+  "assets/pieces/cburnett/bQ.svg": {
+    "mtime": 1788489068.934,
+    "seen": 1790201203.5077,
+    "ast_hash": "1a007b5f6c698882a7dfb87eee2bb202",
+    "semantic_hash": "1a007b5f6c698882a7dfb87eee2bb202"
+  },
+  "assets/pieces/cburnett/bR.svg": {
+    "mtime": 1788489069.196,
+    "seen": 1790201203.5077,
+    "ast_hash": "23d9da42b76fdd8d4e73783c37271c6a",
+    "semantic_hash": "23d9da42b76fdd8d4e73783c37271c6a"
+  },
+  "assets/pieces/cburnett/wB.svg": {
+    "mtime": 1788489069.482,
+    "seen": 1790201203.5077,
+    "ast_hash": "b0e727696a8dea27425e41989d188c09",
+    "semantic_hash": "b0e727696a8dea27425e41989d188c09"
+  },
+  "assets/pieces/cburnett/wK.svg": {
+    "mtime": 1788489069.768,
+    "seen": 1790201203.5077,
+    "ast_hash": "7370acea7313d9b890231460694cbd28",
+    "semantic_hash": "7370acea7313d9b890231460694cbd28"
+  },
+  "assets/pieces/cburnett/wN.svg": {
+    "mtime": 1788489070.072,
+    "seen": 1790201203.5077,
+    "ast_hash": "b1c98299d891b245c1a76d5f06bd1c46",
+    "semantic_hash": "b1c98299d891b245c1a76d5f06bd1c46"
+  },
+  "assets/pieces/cburnett/wP.svg": {
+    "mtime": 1788489070.364,
+    "seen": 1790201203.5077,
+    "ast_hash": "6f891a84f6611d3c35e4878961862d61",
+    "semantic_hash": "6f891a84f6611d3c35e4878961862d61"
+  },
+  "assets/pieces/cburnett/wQ.svg": {
+    "mtime": 1788489070.651,
+    "seen": 1790201203.5077,
+    "ast_hash": "cd8ccf4584812e0c71d5123f73c5ee6e",
+    "semantic_hash": "cd8ccf4584812e0c71d5123f73c5ee6e"
+  },
+  "assets/pieces/cburnett/wR.svg": {
+    "mtime": 1788489070.92,
+    "seen": 1790201203.5077,
+    "ast_hash": "7315ff92e4189cb33fa9d8b8c9c9f1c9",
+    "semantic_hash": "7315ff92e4189cb33fa9d8b8c9c9f1c9"
+  },
+  "assets/pieces/horsey/bB.svg": {
+    "mtime": 1788532949.14,
+    "seen": 1790201203.5077,
+    "ast_hash": "ced7622b0a7908a3625bea1fa03eb21f",
+    "semantic_hash": "ced7622b0a7908a3625bea1fa03eb21f"
+  },
+  "assets/pieces/horsey/bK.svg": {
+    "mtime": 1788532948.997,
+    "seen": 1790201203.5077,
+    "ast_hash": "75f3e27b099273d99399098e8f5c6310",
+    "semantic_hash": "75f3e27b099273d99399098e8f5c6310"
+  },
+  "assets/pieces/horsey/bN.svg": {
+    "mtime": 1788532949.163,
+    "seen": 1790201203.5077,
+    "ast_hash": "4c4b6b51f7e10e48cec87f3f7e89ada9",
+    "semantic_hash": "4c4b6b51f7e10e48cec87f3f7e89ada9"
+  },
+  "assets/pieces/horsey/bP.svg": {
+    "mtime": 1788532949.206,
+    "seen": 1790201203.5077,
+    "ast_hash": "3ed956d3e1765ad129996c06eed9387f",
+    "semantic_hash": "3ed956d3e1765ad129996c06eed9387f"
+  },
+  "assets/pieces/horsey/bQ.svg": {
+    "mtime": 1788532949.048,
+    "seen": 1790201203.5077,
+    "ast_hash": "7896d3d4289ba641d53d0bd2f97e770b",
+    "semantic_hash": "7896d3d4289ba641d53d0bd2f97e770b"
+  },
+  "assets/pieces/horsey/bR.svg": {
+    "mtime": 1788532949.088,
+    "seen": 1790201203.5077,
+    "ast_hash": "fc6670c42fa7fc61400727998587021f",
+    "semantic_hash": "fc6670c42fa7fc61400727998587021f"
+  },
+  "assets/pieces/horsey/bw.svg": {
+    "mtime": 1788532949.116,
+    "seen": 1790201203.5077,
+    "ast_hash": "adc099136b2e9edacac0bf7204a2555b",
+    "semantic_hash": "adc099136b2e9edacac0bf7204a2555b"
+  },
+  "assets/pieces/horsey/kb.svg": {
+    "mtime": 1788532949.007,
+    "seen": 1790201203.5077,
+    "ast_hash": "75f3e27b099273d99399098e8f5c6310",
+    "semantic_hash": "75f3e27b099273d99399098e8f5c6310"
+  },
+  "assets/pieces/horsey/kw.svg": {
+    "mtime": 1788532948.988,
+    "seen": 1790201203.5077,
+    "ast_hash": "b19928f4c48a1cd83653465b9bdc9121",
+    "semantic_hash": "b19928f4c48a1cd83653465b9bdc9121"
+  },
+  "assets/pieces/horsey/nb.svg": {
+    "mtime": 1788532949.176,
+    "seen": 1790201203.5077,
+    "ast_hash": "4c4b6b51f7e10e48cec87f3f7e89ada9",
+    "semantic_hash": "4c4b6b51f7e10e48cec87f3f7e89ada9"
+  },
+  "assets/pieces/horsey/nw.svg": {
+    "mtime": 1788532949.154,
+    "seen": 1790201203.5077,
+    "ast_hash": "d258d9725ac7e805ca94dcb702f1777e",
+    "semantic_hash": "d258d9725ac7e805ca94dcb702f1777e"
+  },
+  "assets/pieces/horsey/pb.svg": {
+    "mtime": 1788532949.214,
+    "seen": 1790201203.5077,
+    "ast_hash": "3ed956d3e1765ad129996c06eed9387f",
+    "semantic_hash": "3ed956d3e1765ad129996c06eed9387f"
+  },
+  "assets/pieces/horsey/pw.svg": {
+    "mtime": 1788532949.197,
+    "seen": 1790201203.5077,
+    "ast_hash": "0283677703b397be1966fa3d4d17d31f",
+    "semantic_hash": "0283677703b397be1966fa3d4d17d31f"
+  },
+  "assets/pieces/horsey/qb.svg": {
+    "mtime": 1788532949.058,
+    "seen": 1790201203.5077,
+    "ast_hash": "7896d3d4289ba641d53d0bd2f97e770b",
+    "semantic_hash": "7896d3d4289ba641d53d0bd2f97e770b"
+  },
+  "assets/pieces/horsey/qw.svg": {
+    "mtime": 1788532949.039,
+    "seen": 1790201203.5077,
+    "ast_hash": "73831de5e17024869307161ba0a43e8e",
+    "semantic_hash": "73831de5e17024869307161ba0a43e8e"
+  },
+  "assets/pieces/horsey/rb.svg": {
+    "mtime": 1788532949.097,
+    "seen": 1790201203.5077,
+    "ast_hash": "fc6670c42fa7fc61400727998587021f",
+    "semantic_hash": "fc6670c42fa7fc61400727998587021f"
+  },
+  "assets/pieces/horsey/rw.svg": {
+    "mtime": 1788532949.079,
+    "seen": 1790201203.5077,
+    "ast_hash": "4a20f75467e51b97f0c872b188407438",
+    "semantic_hash": "4a20f75467e51b97f0c872b188407438"
+  },
+  "assets/pieces/horsey/wB.svg": {
+    "mtime": 1788532949.108,
+    "seen": 1790201203.5077,
+    "ast_hash": "adc099136b2e9edacac0bf7204a2555b",
+    "semantic_hash": "adc099136b2e9edacac0bf7204a2555b"
+  },
+  "assets/pieces/horsey/wK.svg": {
+    "mtime": 1788532948.978,
+    "seen": 1790201203.5077,
+    "ast_hash": "b19928f4c48a1cd83653465b9bdc9121",
+    "semantic_hash": "b19928f4c48a1cd83653465b9bdc9121"
+  },
+  "assets/pieces/horsey/wN.svg": {
+    "mtime": 1788532949.145,
+    "seen": 1790201203.5077,
+    "ast_hash": "d258d9725ac7e805ca94dcb702f1777e",
+    "semantic_hash": "d258d9725ac7e805ca94dcb702f1777e"
+  },
+  "assets/pieces/horsey/wP.svg": {
+    "mtime": 1788532949.186,
+    "seen": 1790201203.5077,
+    "ast_hash": "0283677703b397be1966fa3d4d17d31f",
+    "semantic_hash": "0283677703b397be1966fa3d4d17d31f"
+  },
+  "assets/pieces/horsey/wQ.svg": {
+    "mtime": 1788532949.028,
+    "seen": 1790201203.5077,
+    "ast_hash": "73831de5e17024869307161ba0a43e8e",
+    "semantic_hash": "73831de5e17024869307161ba0a43e8e"
+  },
+  "assets/pieces/horsey/wR.svg": {
+    "mtime": 1788532949.068,
+    "seen": 1790201203.5077,
+    "ast_hash": "4a20f75467e51b97f0c872b188407438",
+    "semantic_hash": "4a20f75467e51b97f0c872b188407438"
+  },
+  "assets/pieces/staunty/bB.svg": {
+    "mtime": 1789513326.330832,
+    "seen": 1790201203.5077,
+    "ast_hash": "04fb20da961a240d9fb0e3ef8df12247",
+    "semantic_hash": "04fb20da961a240d9fb0e3ef8df12247"
+  },
+  "assets/pieces/staunty/bK.svg": {
+    "mtime": 1789513325.8369763,
+    "seen": 1790201203.5077,
+    "ast_hash": "0f19bb2f776cc33c14d1aa94f1ecaf72",
+    "semantic_hash": "0f19bb2f776cc33c14d1aa94f1ecaf72"
+  },
+  "assets/pieces/staunty/bN.svg": {
+    "mtime": 1789513325.870662,
+    "seen": 1790201203.5077,
+    "ast_hash": "a47562884f006f041aa3afca8a0c57dd",
+    "semantic_hash": "a47562884f006f041aa3afca8a0c57dd"
+  },
+  "assets/pieces/staunty/bP.svg": {
+    "mtime": 1789513325.894582,
+    "seen": 1790201203.5077,
+    "ast_hash": "bcfe86ef1a588f773a2df05031542b1f",
+    "semantic_hash": "bcfe86ef1a588f773a2df05031542b1f"
+  },
+  "assets/pieces/staunty/bQ.svg": {
+    "mtime": 1789513325.7373092,
+    "seen": 1790201203.5077,
+    "ast_hash": "bb8f473768738e9eec87ce606c9c1efa",
+    "semantic_hash": "bb8f473768738e9eec87ce606c9c1efa"
+  },
+  "assets/pieces/staunty/bR.svg": {
+    "mtime": 1789513325.8806293,
+    "seen": 1790201203.5077,
+    "ast_hash": "1230a50b65616237c7abfeb506995e17",
+    "semantic_hash": "1230a50b65616237c7abfeb506995e17"
+  },
+  "assets/pieces/staunty/wB.svg": {
+    "mtime": 1789513326.3181162,
+    "seen": 1790201203.5077,
+    "ast_hash": "e0d0ccfe215facce829dff85d7c0c0b3",
+    "semantic_hash": "e0d0ccfe215facce829dff85d7c0c0b3"
+  },
+  "assets/pieces/staunty/wK.svg": {
+    "mtime": 1789513325.8686688,
+    "seen": 1790201203.5077,
+    "ast_hash": "284c6d4e05682eadd882155a608527aa",
+    "semantic_hash": "284c6d4e05682eadd882155a608527aa"
+  },
+  "assets/pieces/staunty/wN.svg": {
+    "mtime": 1789513325.528914,
+    "seen": 1790201203.5077,
+    "ast_hash": "bf4ec589e955c8d204a41d0d3f431b13",
+    "semantic_hash": "bf4ec589e955c8d204a41d0d3f431b13"
+  },
+  "assets/pieces/staunty/wP.svg": {
+    "mtime": 1789513325.8477392,
+    "seen": 1790201203.5077,
+    "ast_hash": "01209b0d6ab9556c4c82c93c0e7e6633",
+    "semantic_hash": "01209b0d6ab9556c4c82c93c0e7e6633"
+  },
+  "assets/pieces/staunty/wQ.svg": {
+    "mtime": 1789513325.8756452,
+    "seen": 1790201203.5077,
+    "ast_hash": "49bb09edad72373c1eb15b2fee6166ac",
+    "semantic_hash": "49bb09edad72373c1eb15b2fee6166ac"
+  },
+  "assets/pieces/staunty/wR.svg": {
+    "mtime": 1789513325.7273428,
+    "seen": 1790201203.5077,
+    "ast_hash": "aec8a10c2bc3f2c0f982dcb01a8249fc",
+    "semantic_hash": "aec8a10c2bc3f2c0f982dcb01a8249fc"
+  },
+  "assets/sounds/achievement.mp3": {
+    "mtime": 1789505662.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "f1a937081745a0dc31d5836a2a4b03c5",
+    "semantic_hash": "f1a937081745a0dc31d5836a2a4b03c5"
+  },
+  "assets/sounds/capture.mp3": {
+    "mtime": 1789502986.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "a2b149c4f98d37bd7863462fdc4539b0",
+    "semantic_hash": "a2b149c4f98d37bd7863462fdc4539b0"
+  },
+  "assets/sounds/castle.mp3": {
+    "mtime": 1789502986.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "b3cc873a1330cfc5334d80ab016dfe2f",
+    "semantic_hash": "b3cc873a1330cfc5334d80ab016dfe2f"
+  },
+  "assets/sounds/check.mp3": {
+    "mtime": 1789502986.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "74550551237086437b3d4621d2a6bef8",
+    "semantic_hash": "74550551237086437b3d4621d2a6bef8"
+  },
+  "assets/sounds/checkmate.mp3": {
+    "mtime": 1789502988.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "f22026407759018b66fef935b202e02e",
+    "semantic_hash": "f22026407759018b66fef935b202e02e"
+  },
+  "assets/sounds/game-end.wav": {
+    "mtime": 1789505662.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "8ed3a6a8db7789abafd92d959e2aabbc",
+    "semantic_hash": "8ed3a6a8db7789abafd92d959e2aabbc"
+  },
+  "assets/sounds/illegal.mp3": {
+    "mtime": 1789502988.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "812796180234774401380176393c08eb",
+    "semantic_hash": "812796180234774401380176393c08eb"
+  },
+  "assets/sounds/move.mp3": {
+    "mtime": 1789502984.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "d9502a4de53f50cbb0147e25d2c172b2",
+    "semantic_hash": "d9502a4de53f50cbb0147e25d2c172b2"
+  },
+  "assets/sounds/notify.mp3": {
+    "mtime": 1789502988.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "1ca271535cc745b6facaff0c844c44de",
+    "semantic_hash": "1ca271535cc745b6facaff0c844c44de"
+  },
+  "assets/sounds/promote.mp3": {
+    "mtime": 1789502988.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "6bc11a38e0ff1d5668a84241be594c4f",
+    "semantic_hash": "6bc11a38e0ff1d5668a84241be594c4f"
+  },
+  "assets/sounds/victory.wav": {
+    "mtime": 1789505662.0,
+    "seen": 1790248075.5360987,
+    "ast_hash": "95df73de92f4c2b8948e26b7da67c651",
+    "semantic_hash": "95df73de92f4c2b8948e26b7da67c651"
+  }
+}

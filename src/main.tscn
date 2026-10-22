@@ -1,0 +1,535 @@
+[gd_scene load_steps=27 format=3 uid="uid://cmaingamesc001"]
+
+[ext_resource type="Script" path="res://src/main.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://cevalbarsc001" path="res://src/ui/hud/eval_bar.tscn" id="2_eval"]
+[ext_resource type="PackedScene" uid="uid://cboard8x8sc01" path="res://src/ui/board/chess_board.tscn" id="3_board"]
+[ext_resource type="PackedScene" uid="uid://celoslidersc01" path="res://src/ui/hud/elo_slider.tscn" id="4_elo"]
+[ext_resource type="PackedScene" uid="uid://cmovehistsc01" path="res://src/ui/hud/move_history.tscn" id="5_hist"]
+[ext_resource type="PackedScene" uid="uid://cgamectrlsc01" path="res://src/ui/hud/game_controls.tscn" id="6_ctrl"]
+[ext_resource type="PackedScene" uid="uid://cpaintersc001" path="res://src/ui/painter/chess_painter.tscn" id="7_painter"]
+[ext_resource type="PackedScene" path="res://src/ui/dialogs/pause_menu.tscn" id="8_pause"]
+[ext_resource type="PackedScene" path="res://src/ui/hud/analysis_panel.tscn" id="9_analysis"]
+[ext_resource type="Theme" path="res://src/theme/theme_modern.tres" id="10_thm"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_pause.svg" id="11_pause"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_checkmark.svg" id="12_check"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_robot.svg" id="13_robot"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_person.svg" id="14_person"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_target.svg" id="15_target"]
+[ext_resource type="Script" path="res://src/ui/effects/confetti_burst.gd" id="16_confetti"]
+[ext_resource type="PackedScene" path="res://src/ui/dialogs/game_over_dialog.tscn" id="17_gameover"]
+[ext_resource type="PackedScene" path="res://src/ui/hud/game_review_panel.tscn" id="18_review"]
+[ext_resource type="PackedScene" path="res://src/ui/hud/review_settings_dialog.tscn" id="19_review_settings"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_status"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.173, 0.165, 0.157, 0.95)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29, 0.28, 0.26, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_player_card"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.149, 0.141, 0.133, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.255, 0.245, 0.23, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card_mate_badge"]
+content_margin_left = 10.0
+content_margin_top = 2.0
+content_margin_right = 10.0
+content_margin_bottom = 2.0
+bg_color = Color(0.11, 0.15, 0.12, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.85, 0.55, 0.9)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prog_bg"]
+bg_color = Color(0.13, 0.123, 0.115, 0.85)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prog_fill"]
+bg_color = Color(0.2, 0.78, 0.9, 0.95)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_selected"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.18, 0.23, 0.17, 1)
+border_width_bottom = 2
+border_color = Color(0.506, 0.714, 0.298, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_unselected"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.149, 0.141, 0.133, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tab_panel"]
+content_margin_left = 6.0
+content_margin_top = 8.0
+content_margin_right = 6.0
+content_margin_bottom = 8.0
+bg_color = Color(0.125, 0.118, 0.11, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.23, 0.22, 0.205, 0.7)
+corner_radius_top_left = 0
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.106, 0.098, 0.09, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainLayout" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(708, 1220)
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="TopBar" type="HBoxContainer" parent="CenterContainer/MainLayout"]
+custom_minimum_size = Vector2(708, 44)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="LeftPad" type="Control" parent="CenterContainer/MainLayout/TopBar"]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+
+[node name="TitleGroup" type="HBoxContainer" parent="CenterContainer/MainLayout/TopBar"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="AppTitle" type="Label" parent="CenterContainer/MainLayout/TopBar/TitleGroup"]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+theme_override_colors/font_color = Color(0.95, 0.96, 0.98, 1)
+theme_override_font_sizes/font_size = 22
+text = "CHESS 2.0"
+
+[node name="Divider" type="Label" parent="CenterContainer/MainLayout/TopBar/TitleGroup"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.48, 0.45, 1)
+theme_override_font_sizes/font_size = 15
+text = "|"
+
+[node name="AppSub" type="Label" parent="CenterContainer/MainLayout/TopBar/TitleGroup"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.68, 0.66, 0.63, 1)
+theme_override_font_sizes/font_size = 15
+text = "Stockfish 18 UCI"
+
+[node name="TopSpacer" type="Control" parent="CenterContainer/MainLayout/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BtnPause" type="Button" parent="CenterContainer/MainLayout/TopBar"]
+custom_minimum_size = Vector2(130, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Pause"
+icon = ExtResource("11_pause")
+
+[node name="RightPad" type="Control" parent="CenterContainer/MainLayout/TopBar"]
+custom_minimum_size = Vector2(6, 0)
+layout_mode = 2
+
+[node name="GameLayout" type="VBoxContainer" parent="CenterContainer/MainLayout"]
+custom_minimum_size = Vector2(708, 1170)
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="BoardArea" type="VBoxContainer" parent="CenterContainer/MainLayout/GameLayout"]
+custom_minimum_size = Vector2(708, 852)
+layout_mode = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="TopPlayerCard" type="PanelContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea"]
+custom_minimum_size = Vector2(708, 56)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_player_card")
+
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 0
+
+[node name="AvatarIcon" type="TextureRect" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("13_robot")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox"]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
+theme_override_font_sizes/font_size = 18
+text = "Stockfish 18 (AI)"
+
+[node name="BadgeLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
+theme_override_font_sizes/font_size = 16
+text = "ELO 1500"
+
+[node name="MateBadge" type="PanelContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card_mate_badge")
+
+[node name="MateHBox" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox/MateBadge"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox/MateBadge/MateHBox"]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+texture = ExtResource("15_target")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MateLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox/MateBadge/MateHBox"]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+theme_override_colors/font_color = Color(0.3, 0.85, 0.55, 1)
+theme_override_font_sizes/font_size = 15
+text = "Checkmate in 5 moves"
+
+[node name="Spacer" type="Control" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CapturedContainer" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="BoardMiddle" type="VBoxContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea"]
+custom_minimum_size = Vector2(708, 734)
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="EvalBar" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BoardMiddle" instance=ExtResource("2_eval")]
+layout_mode = 2
+
+[node name="ChessBoard" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BoardMiddle" instance=ExtResource("3_board")]
+layout_mode = 2
+
+[node name="BottomPlayerCard" type="PanelContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea"]
+custom_minimum_size = Vector2(708, 56)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_player_card")
+
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 0
+
+[node name="AvatarIcon" type="TextureRect" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("14_person")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox"]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
+theme_override_font_sizes/font_size = 18
+text = "Player (You)"
+
+[node name="BadgeLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
+theme_override_font_sizes/font_size = 16
+text = "White"
+
+[node name="MateBadge" type="PanelContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card_mate_badge")
+
+[node name="MateHBox" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox/MateBadge"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox/MateBadge/MateHBox"]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+texture = ExtResource("15_target")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MateLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox/MateBadge/MateHBox"]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+theme_override_colors/font_color = Color(0.3, 0.85, 0.55, 1)
+theme_override_font_sizes/font_size = 15
+text = "Checkmate in 5 moves"
+
+[node name="Spacer" type="Control" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CapturedContainer" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="SidePanel" type="VBoxContainer" parent="CenterContainer/MainLayout/GameLayout"]
+custom_minimum_size = Vector2(708, 310)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("10_thm")
+theme_override_constants/separation = 5
+
+[node name="StatusPanel" type="PanelContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel"]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_status")
+
+[node name="StatusContent" type="VBoxContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel/StatusPanel"]
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="StatusLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/SidePanel/StatusPanel/StatusContent"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.85, 0.55, 1)
+theme_override_font_sizes/font_size = 18
+text = "Play vs AI - White to move"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EngineStatusRow" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel/StatusPanel/StatusContent"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="EngineStatusLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/SidePanel/StatusPanel/StatusContent/EngineStatusRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
+theme_override_font_sizes/font_size = 15
+text = "Engine Analysis: Ready"
+clip_text = true
+
+[node name="EngineFinalBadge" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel/StatusPanel/StatusContent/EngineStatusRow"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Icon" type="TextureRect" parent="CenterContainer/MainLayout/GameLayout/SidePanel/StatusPanel/StatusContent/EngineStatusRow/EngineFinalBadge"]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+texture = ExtResource("12_check")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CenterContainer/MainLayout/GameLayout/SidePanel/StatusPanel/StatusContent/EngineStatusRow/EngineFinalBadge"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.85, 0.55, 1)
+theme_override_font_sizes/font_size = 15
+text = "Ready"
+
+[node name="EngineProgressBar" type="ProgressBar" parent="CenterContainer/MainLayout/GameLayout/SidePanel/StatusPanel/StatusContent"]
+custom_minimum_size = Vector2(0, 6)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_prog_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_prog_fill")
+max_value = 1.0
+value = 1.0
+show_percentage = false
+
+[node name="GameControls" parent="CenterContainer/MainLayout/GameLayout/SidePanel" instance=ExtResource("6_ctrl")]
+layout_mode = 2
+
+[node name="HUDTabBar" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BtnTabMoves" type="Button" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabBar"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Moves"
+
+[node name="BtnTabEngine" type="Button" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabBar"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Engine & Assist"
+
+[node name="BtnTabReview" type="Button" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabBar"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Review"
+
+[node name="HUDTabContainer" type="TabContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel"]
+custom_minimum_size = Vector2(0, 148)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_tab_selected")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_tab_unselected")
+theme_override_styles/panel = SubResource("StyleBoxFlat_tab_panel")
+current_tab = 0
+tabs_visible = false
+
+[node name="Moves" type="MarginContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="MoveHistory" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabContainer/Moves" instance=ExtResource("5_hist")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Engine & Assist" type="MarginContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBox" type="HBoxContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabContainer/Engine & Assist"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="EloSlider" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabContainer/Engine & Assist/VBox" instance=ExtResource("4_elo")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AnalysisPanel" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabContainer/Engine & Assist/VBox" instance=ExtResource("9_analysis")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Review" type="MarginContainer" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="GameReviewPanel" parent="CenterContainer/MainLayout/GameLayout/SidePanel/HUDTabContainer/Review" instance=ExtResource("18_review")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChessPainterLayer" type="CanvasLayer" parent="."]
+layer = 5
+visible = false
+
+[node name="ChessPainter" parent="ChessPainterLayer" instance=ExtResource("7_painter")]
+
+[node name="PauseMenuLayer" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="PauseMenu" parent="PauseMenuLayer" instance=ExtResource("8_pause")]
+
+[node name="ConfettiLayer" type="CanvasLayer" parent="."]
+layer = 12
+
+[node name="ConfettiBurst" type="Control" parent="ConfettiLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("16_confetti")
+
+[node name="GameOverLayer" type="CanvasLayer" parent="."]
+layer = 15
+visible = false
+
+[node name="GameOverDialog" parent="GameOverLayer" instance=ExtResource("17_gameover")]
+
+[node name="ReviewSettingsLayer" type="CanvasLayer" parent="."]
+layer = 16
+visible = false
+
+[node name="ReviewSettingsDialog" parent="ReviewSettingsLayer" instance=ExtResource("19_review_settings")]

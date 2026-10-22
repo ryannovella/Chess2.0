@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://cgamectrlsc01"]
+
+[ext_resource type="Theme" path="res://src/theme/theme_modern.tres" id="1_thm"]
+[ext_resource type="Script" path="res://src/ui/hud/game_controls.gd" id="2_ctrl"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_undo.svg" id="3_undo"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_redo.svg" id="4_redo"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_flip.svg" id="5_flip"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_new_game.svg" id="6_new"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_palette.svg" id="7_palette"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/icon_flag.svg" id="8_flag"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctrl_bg"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.149, 0.141, 0.133, 0.95)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.255, 0.245, 0.23, 0.6)
+
+[node name="GameControls" type="PanelContainer"]
+custom_minimum_size = Vector2(300, 60)
+offset_right = 300.0
+offset_bottom = 42.0
+theme = ExtResource("1_thm")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ctrl_bg")
+script = ExtResource("2_ctrl")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Toolbar" type="HBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="BtnUndo" type="Button" parent="Margin/Toolbar"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Undo move (Ctrl+Z)"
+icon = ExtResource("3_undo")
+icon_alignment = 1
+
+[node name="BtnRedo" type="Button" parent="Margin/Toolbar"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Redo move (Ctrl+Y)"
+icon = ExtResource("4_redo")
+icon_alignment = 1
+
+[node name="BtnFlip" type="Button" parent="Margin/Toolbar"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Flip board"
+icon = ExtResource("5_flip")
+icon_alignment = 1
+
+[node name="BtnNewGame" type="Button" parent="Margin/Toolbar"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "New game"
+icon = ExtResource("6_new")
+icon_alignment = 1
+
+[node name="BtnPainter" type="Button" parent="Margin/Toolbar"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.95, 0.85, 0.4, 1)
+tooltip_text = "Custom Sandbox editor"
+icon = ExtResource("7_palette")
+icon_alignment = 1
+
+[node name="BtnResign" type="Button" parent="Margin/Toolbar"]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.95, 0.5, 0.5, 1)
+tooltip_text = "Resign game"
+icon = ExtResource("8_flag")
+icon_alignment = 1

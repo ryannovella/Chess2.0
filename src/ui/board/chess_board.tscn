@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=3 uid="uid://cboard8x8sc01"]
+
+[ext_resource type="Script" path="res://src/ui/board/chess_board.gd" id="1_board"]
+[ext_resource type="Script" path="res://src/ui/board/arrow_overlay.gd" id="2_arrow"]
+[ext_resource type="Script" path="res://src/ui/board/badge_overlay.gd" id="3_badge"]
+
+[node name="ChessBoard" type="HBoxContainer"]
+custom_minimum_size = Vector2(708, 708)
+offset_right = 708.0
+offset_bottom = 708.0
+theme_override_constants/separation = 4
+alignment = 1
+script = ExtResource("1_board")
+
+[node name="RanksContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(16, 688)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="BoardArea" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BoardViewport" type="Control" parent="BoardArea"]
+custom_minimum_size = Vector2(688, 688)
+layout_mode = 2
+
+[node name="BoardUnderlay" type="ColorRect" parent="BoardArea/BoardViewport"]
+custom_minimum_size = Vector2(688, 688)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.886275, 0.909804, 0.941176, 1)
+
+[node name="SquaresContainer" type="Control" parent="BoardArea/BoardViewport"]
+custom_minimum_size = Vector2(688, 688)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PiecesContainer" type="Control" parent="BoardArea/BoardViewport"]
+custom_minimum_size = Vector2(688, 688)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BadgeOverlay" type="Control" parent="BoardArea/BoardViewport"]
+custom_minimum_size = Vector2(688, 688)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_badge")
+
+[node name="ArrowOverlay" type="Control" parent="BoardArea/BoardViewport"]
+custom_minimum_size = Vector2(688, 688)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_arrow")
+
+[node name="FilesContainer" type="HBoxContainer" parent="BoardArea"]
+custom_minimum_size = Vector2(688, 16)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1

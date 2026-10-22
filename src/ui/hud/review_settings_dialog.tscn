@@ -1,0 +1,191 @@
+[gd_scene load_steps=5 format=3 uid="uid://creviewsettdlg01"]
+
+[ext_resource type="Script" path="res://src/ui/hud/review_settings_dialog.gd" id="1_dlg"]
+[ext_resource type="Theme" path="res://src/theme/theme_modern.tres" id="2_thm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal_bg"]
+bg_color = Color(0, 0, 0, 0.65)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel_card"]
+content_margin_left = 20.0
+content_margin_top = 18.0
+content_margin_right = 20.0
+content_margin_bottom = 18.0
+bg_color = Color(0.149, 0.141, 0.133, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.28, 0.27, 0.25, 0.8)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 12
+
+[node name="ReviewSettingsDialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_thm")
+script = ExtResource("1_dlg")
+
+[node name="Backdrop" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal_bg")
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel_card")
+
+[node name="Margin" type="MarginContainer" parent="Center/Panel"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="Center/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TitleRow" type="HBoxContainer" parent="Center/Panel/Margin/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Center/Panel/Margin/VBox/TitleRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Review Engine Settings"
+
+[node name="SubTitle" type="Label" parent="Center/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_font_sizes/font_size = 14
+text = "Configure Stockfish analysis depth, time limit, and threads."
+autowrap_mode = 2
+
+[node name="Grid" type="GridContainer" parent="Center/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="LblStrength" type="Label" parent="Center/Panel/Margin/VBox/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Preset"
+
+[node name="OptStrength" type="OptionButton" parent="Center/Panel/Margin/VBox/Grid"]
+custom_minimum_size = Vector2(200, 34)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+
+[node name="LblDepth" type="Label" parent="Center/Panel/Margin/VBox/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Max Depth"
+
+[node name="SpinDepth" type="SpinBox" parent="Center/Panel/Margin/VBox/Grid"]
+custom_minimum_size = Vector2(200, 34)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 10.0
+max_value = 26.0
+value = 14.0
+
+[node name="LblTime" type="Label" parent="Center/Panel/Margin/VBox/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Time Limit (ms)"
+
+[node name="SpinTime" type="SpinBox" parent="Center/Panel/Margin/VBox/Grid"]
+custom_minimum_size = Vector2(200, 34)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 300.0
+max_value = 10000.0
+step = 100.0
+value = 800.0
+
+[node name="LblMultiPV" type="Label" parent="Center/Panel/Margin/VBox/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "MultiPV (Lines)"
+
+[node name="SpinMultiPV" type="SpinBox" parent="Center/Panel/Margin/VBox/Grid"]
+custom_minimum_size = Vector2(200, 34)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 5.0
+value = 2.0
+
+[node name="LblThreads" type="Label" parent="Center/Panel/Margin/VBox/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Threads"
+
+[node name="SpinThreads" type="SpinBox" parent="Center/Panel/Margin/VBox/Grid"]
+custom_minimum_size = Vector2(200, 34)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 8.0
+value = 1.0
+
+[node name="LblHash" type="Label" parent="Center/Panel/Margin/VBox/Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "Hash Table (MB)"
+
+[node name="SpinHash" type="SpinBox" parent="Center/Panel/Margin/VBox/Grid"]
+custom_minimum_size = Vector2(200, 34)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 16.0
+max_value = 512.0
+step = 16.0
+value = 64.0
+
+[node name="Spacer" type="Control" parent="Center/Panel/Margin/VBox"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="ButtonRow" type="HBoxContainer" parent="Center/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="BtnClose" type="Button" parent="Center/Panel/Margin/VBox/ButtonRow"]
+custom_minimum_size = Vector2(100, 38)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Close"
+
+[node name="BtnApply" type="Button" parent="Center/Panel/Margin/VBox/ButtonRow"]
+custom_minimum_size = Vector2(160, 38)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Apply & Re-analyze"

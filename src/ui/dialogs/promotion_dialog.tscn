@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3q8fpromo001"]
+
+[ext_resource type="Script" path="res://src/ui/dialogs/promotion_dialog.gd" id="1_promo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_promo"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.13, 0.123, 0.115, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.65, 0.95, 0.9)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_size = 14
+shadow_offset = Vector2(0, 4)
+
+[node name="PromotionDialog" type="Control"]
+z_index = 60
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_promo")
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.35)
+
+[node name="PopupPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(80, 284)
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_promo")
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="PopupPanel"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
