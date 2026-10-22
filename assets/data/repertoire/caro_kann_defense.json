@@ -1,0 +1,115 @@
+{
+  "id": "caro_kann_defense",
+  "name": "Caro-Kann Defense",
+  "eco": "B12",
+  "color": "black",
+  "description": "Solid pawn structure and counter-punching against 1. e4.",
+  "root": {
+    "move": "e2e4",
+    "san": "e4",
+    "human_freq": 1.0,
+    "children": [
+      {
+        "move": "c7c6",
+        "san": "c6",
+        "blurb": "The Caro-Kann! Prepare to challenge White's center with d5.",
+        "children": [
+          {
+            "move": "d2d4",
+            "san": "d4",
+            "human_freq": 0.82,
+            "children": [
+              {
+                "move": "d7d5",
+                "san": "d5",
+                "blurb": "Strike back at White's central e4 pawn.",
+                "children": [
+                  {
+                    "move": "e4e5",
+                    "san": "e5",
+                    "human_freq": 0.54,
+                    "children": [
+                      {
+                        "move": "c8f5",
+                        "san": "Bf5",
+                        "blurb": "Develop the light-squared Bishop outside the pawn chain before playing e6.",
+                        "children": [
+                          {
+                            "move": "g1f3",
+                            "san": "Nf3",
+                            "human_freq": 0.65,
+                            "children": [
+                              {
+                                "move": "e7e6",
+                                "san": "e6",
+                                "blurb": "Anchor the center now that the Bishop is active.",
+                                "children": [
+                                  {
+                                    "move": "f1e2",
+                                    "san": "Be2",
+                                    "human_freq": 0.72,
+                                    "children": [
+                                      {
+                                        "move": "c6c5",
+                                        "san": "c5",
+                                        "blurb": "The thematic c5 counter-break targeting White's d4 foundation."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "move": "b1c3",
+                    "san": "Nc3",
+                    "human_freq": 0.38,
+                    "children": [
+                      {
+                        "move": "d5e4",
+                        "san": "dxe4",
+                        "blurb": "Classical Variation. Release the tension and target White's knight.",
+                        "children": [
+                          {
+                            "move": "c3e4",
+                            "san": "Nxe4",
+                            "human_freq": 0.98,
+                            "children": [
+                              {
+                                "move": "c8f5",
+                                "san": "Bf5",
+                                "blurb": "Develop with tempo, attacking the centralized Knight.",
+                                "children": [
+                                  {
+                                    "move": "e4g3",
+                                    "san": "Ng3",
+                                    "human_freq": 0.88,
+                                    "children": [
+                                      {
+                                        "move": "f5g6",
+                                        "san": "Bg6",
+                                        "blurb": "Retreat safely while keeping pressure on the diagonal."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": "fried_liver_attack",
+  "name": "Fried Liver Attack",
+  "eco": "C57",
+  "color": "white",
+  "description": "Sacrifice a Knight on f7 to drag Black King into the open center.",
+  "root": {
+    "move": "e2e4",
+    "san": "e4",
+    "blurb": "Control the center and open diagonals for Queen and Bishop.",
+    "children": [
+      {
+        "move": "e7e5",
+        "san": "e5",
+        "human_freq": 0.68,
+        "children": [
+          {
+            "move": "g1f3",
+            "san": "Nf3",
+            "blurb": "Develop the Knight with tempo, attacking the e5 pawn.",
+            "children": [
+              {
+                "move": "b8c6",
+                "san": "Nc6",
+                "human_freq": 0.81,
+                "children": [
+                  {
+                    "move": "f1c4",
+                    "san": "Bc4",
+                    "blurb": "Italian Game setup. Eye the critical f7 square.",
+                    "children": [
+                      {
+                        "move": "g8f6",
+                        "san": "Nf6",
+                        "human_freq": 0.52,
+                        "children": [
+                          {
+                            "move": "f3g5",
+                            "san": "Ng5",
+                            "blurb": "Two Knights Defense! Double attack on the weak f7 square.",
+                            "children": [
+                              {
+                                "move": "d7d5",
+                                "san": "d5",
+                                "human_freq": 0.74,
+                                "children": [
+                                  {
+                                    "move": "e4d5",
+                                    "san": "exd5",
+                                    "blurb": "Pawn break blocked. Force Black to make a critical decision.",
+                                    "children": [
+                                      {
+                                        "move": "f6d5",
+                                        "san": "Nxd5",
+                                        "is_blunder": true,
+                                        "human_freq": 0.45,
+                                        "children": [
+                                          {
+                                            "move": "g5f7",
+                                            "san": "Nxf7",
+                                            "blurb": "The Fried Liver! Sacrifice the Knight to drag the King out.",
+                                            "children": [
+                                              {
+                                                "move": "e8f7",
+                                                "san": "Kxf7",
+                                                "human_freq": 0.98,
+                                                "children": [
+                                                  {
+                                                    "move": "d1f3",
+                                                    "san": "Qf3+",
+                                                    "blurb": "Fork the King and the pinned Knight on d5.",
+                                                    "children": [
+                                                      {
+                                                        "move": "f7e6",
+                                                        "san": "Ke6",
+                                                        "human_freq": 0.85,
+                                                        "children": [
+                                                          {
+                                                            "move": "b1c3",
+                                                            "san": "Nc3",
+                                                            "blurb": "Pile up attackers on the immobilized d5 Knight."
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "move": "c6a5",
+                                        "san": "Na5",
+                                        "human_freq": 0.48,
+                                        "children": [
+                                          {
+                                            "move": "c4b5",
+                                            "san": "Bb5+",
+                                            "blurb": "Check with tempo. Force Black to block with c6.",
+                                            "children": [
+                                              {
+                                                "move": "c7c6",
+                                                "san": "c6",
+                                                "human_freq": 0.92,
+                                                "children": [
+                                                  {
+                                                    "move": "d5c6",
+                                                    "san": "dxc6",
+                                                    "blurb": "Take the pawn and undermine Black's pawn structure.",
+                                                    "children": [
+                                                      {
+                                                        "move": "b7c6",
+                                                        "san": "bxc6",
+                                                        "human_freq": 0.95,
+                                                        "children": [
+                                                          {
+                                                            "move": "b5e2",
+                                                            "san": "Be2",
+                                                            "blurb": "Retreat safely. White is up a clean pawn with solid play."
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "move": "f8c5",
+                        "san": "Bc5",
+                        "human_freq": 0.42,
+                        "children": [
+                          {
+                            "move": "c2c3",
+                            "san": "c3",
+                            "blurb": "Prepare the classical d4 central break.",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "human_freq": 0.78,
+                                "children": [
+                                  {
+                                    "move": "d2d4",
+                                    "san": "d4",
+                                    "blurb": "Strike at the center immediately to gain space and tempo."
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

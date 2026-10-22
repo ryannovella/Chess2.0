@@ -18,6 +18,11 @@ const ReviewEngineSession = preload("res://src/engine/review_engine_session.gd")
 const TactileStyles = preload("res://src/theme/tactile_styles.gd")
 const CapturedPiecesView = preload("res://src/ui/hud/captured_pieces_view.gd")
 const CardPalette = preload("res://src/ui/card_palette.gd")
+const RepertoireService = preload("res://src/core/repertoire/repertoire_service.gd")
+const RepertoireTree = preload("res://src/core/repertoire/repertoire_tree.gd")
+const SRSEngine = preload("res://src/core/repertoire/srs_engine.gd")
+const RepertoireNode = preload("res://src/core/repertoire/repertoire_node.gd")
+const OpeningTrainerScene = preload("res://src/ui/trainer/opening_trainer.tscn")
 
 var total_tests: int = 0
 var passed_tests: int = 0
@@ -116,6 +121,9 @@ func _init() -> void:
 
 	# 15e. Kartu pemain terang/gelap + formula kontras WCAG
 	test_player_card_contrast_formula()
+
+	# 15f. Unit Tests: Opening Repertoire & Spaced Repetition System (Chessreps Parity)
+	test_opening_repertoire_and_srs()
 
 	# 16. Performance Test: Perft Suite (Initial & Kiwipete)
 	test_perft_suite()
@@ -2016,6 +2024,148 @@ func test_player_card_contrast_formula() -> void:
 		"Teks +3 pada kartu Hitam memakai tinta hasil formula untuk latar gelap")
 	root.remove_child(view)
 	view.free()
+
+func test_opening_repertoire_and_srs() -> void:
+	print("\n[Kategori 20: Opening Repertoire & Spaced Repetition System (Chessreps Parity)]")
+
+	# 1. Katalog Repertoire tersedia di assets/data/repertoire
+	var reps = RepertoireService.get_available_repertoires()
+	assert_true(reps.size() >= 2, "Tersedia minimal 2 repertoire pembukaan (ditemukan %d)" % reps.size())
+
+	# 2. Repertoire White: Fried Liver Attack
+	var fl = RepertoireService.load_repertoire("fried_liver_attack")
+	assert_true(fl != null, "Repertoire Fried Liver Attack berhasil dimuat")
+	assert_equal(fl.color, "white", "Fried Liver Attack adalah repertoire Putih")
+	assert_equal(fl.eco, "C57", "ECO Fried Liver Attack adalah C57")
+	assert_true(fl.get_total_player_moves() >= 10, "Fried Liver memiliki >= 10 langkah pemain (ditemukan %d)" % fl.get_total_player_moves())
+	assert_true(fl.get_total_lines() >= 3, "Fried Liver memiliki >= 3 variasi cabang (ditemukan %d)" % fl.get_total_lines())
+
+	# 3. Langkah awal Fried Liver dari posisi default FEN
+	var fl_first = fl.get_expected_player_move_from_fen(ChessBoardState.DEFAULT_FEN)
+	assert_true(fl_first != null, "Langkah pembuka Fried Liver terdeteksi dari start position")
+	assert_equal(fl_first.san, "e4", "Langkah pembuka Fried Liver adalah 1. e4")
+
+	# 4. Deteksi blunder manusia yang harus dihukum (5... Nxd5)
+	var found_blunder_node = false
+	for line in fl.flattened_lines:
+		for node in line:
+			if node.is_blunder:
+				found_blunder_node = true
+				break
+	assert_true(found_blunder_node, "Repertoire memuat cabang blunder manusia (Lichess/club error) untuk dilatih")
+
+	# 5. Repertoire Black: Caro-Kann Defense
+	var ck = RepertoireService.load_repertoire("caro_kann_defense")
+	assert_true(ck != null, "Repertoire Caro-Kann Defense berhasil dimuat")
+	assert_equal(ck.color, "black", "Caro-Kann Defense adalah repertoire Hitam")
+	assert_equal(ck.eco, "B12", "ECO Caro-Kann Defense adalah B12")
+	assert_true(ck.get_total_player_moves() >= 6, "Caro-Kann memiliki >= 6 langkah pemain (ditemukan %d)" % ck.get_total_player_moves())
+
+	# 6. Guard ASCII: Semua teks blurb dan anotasi bebas dari karakter non-ASCII
+	var all_blurbs_ascii = true
+	for rep_tree in [fl, ck]:
+		for line in rep_tree.flattened_lines:
+			for node in line:
+				if not node.blurb.is_empty() and not _is_clean_ascii(node.blurb):
+					all_blurbs_ascii = false
+	assert_true(all_blurbs_ascii, "Seluruh blurb pembukaan berupa teks ASCII bersih tanpa mojibake")
+
+	# 7. Respon lawan berbobot frekuensi manusia (human_freq)
+	var opp_replies = ck.get_opponent_replies_from_fen(ChessBoardState.DEFAULT_FEN)
+	assert_true(opp_replies.size() >= 1, "Respon lawan terdeteksi untuk pemain Hitam pada posisi awal")
+	assert_equal(opp_replies[0].san, "e4", "Lawan memainkan e4 terhadap Caro-Kann")
+
+	# 8. Mesin Spaced Repetition (SuperMemo SM-2 Math)
+	var srs = SRSEngine.new()
+	var test_id = "__guard_test_card__"
+	var t0 = 1700000000
+
+	# Initial: reps=0, due=true
+	assert_true(srs.is_due(test_id, t0), "Kartu baru otomatis due untuk direview")
+	assert_equal(srs.get_mastery_level(test_id), 0, "Level penguasaan kartu baru adalah 0 (New)")
+
+	# Percobaan 1: Jawaban sempurna (q=5) -> interval 1 hari
+	var res1 = srs.record_attempt(test_id, 5, t0)
+	assert_equal(res1["reps"], 1, "SRS percobaan 1 menghasilkan reps = 1")
+	assert_equal(res1["interval_days"], 1.0, "SRS percobaan 1 interval tepat 1.0 hari")
+	assert_true(res1["ease_factor"] >= 2.5, "Ease factor bertambah atau tetap pada recall sempurna")
+
+	# Percobaan 2: Jawaban sempurna (q=5) -> interval 6 hari
+	var t1 = t0 + 86400
+	var res2 = srs.record_attempt(test_id, 5, t1)
+	assert_equal(res2["reps"], 2, "SRS percobaan 2 menghasilkan reps = 2")
+	assert_equal(res2["interval_days"], 6.0, "SRS percobaan 2 interval tepat 6.0 hari")
+
+	# Percobaan 3: Jawaban sempurna (q=5) -> interval = 6 * EF
+	var t2 = t1 + (6 * 86400)
+	var res3 = srs.record_attempt(test_id, 5, t2)
+	assert_equal(res3["reps"], 3, "SRS percobaan 3 menghasilkan reps = 3")
+	assert_true(res3["interval_days"] >= 15.0, "SRS percobaan 3 interval berkembang eksponensial (>= 15 hari)")
+	assert_equal(srs.get_mastery_level(test_id), 2, "Level penguasaan reps=3 adalah 2 (Reviewing)")
+
+	# Percobaan 4: Blunder / salah (q=1) -> reset reps ke 0 dan interval ke 1 hari
+	var t3 = t2 + int(res3["interval_days"] * 86400)
+	var res4 = srs.record_attempt(test_id, 1, t3)
+	assert_equal(res4["reps"], 0, "SRS reset reps menjadi 0 setelah blunder")
+	assert_equal(res4["interval_days"], 1.0, "SRS reset interval menjadi 1.0 hari setelah blunder")
+	assert_true(res4["ease_factor"] >= 1.3, "Ease factor dijaga pada lantai minimum 1.3")
+
+	# 9. Metrik Persentase Penguasaan (Mastery Percentage)
+	var sample_ids: Array[String] = ["__item_a__", "__item_b__"]
+	srs.record_attempt("__item_a__", 5, t0)
+	srs.record_attempt("__item_a__", 5, t0 + 86400)
+	srs.record_attempt("__item_a__", 5, t0 + 7 * 86400)
+	srs.record_attempt("__item_a__", 5, t0 + 25 * 86400)
+	srs.record_attempt("__item_a__", 5, t0 + 60 * 86400) # reps=5 -> Level 3 (Mastered)
+	var pct = srs.get_mastery_percentage(sample_ids)
+	assert_true(pct > 0.0 and pct <= 50.0, "Mastery percentage terhitung proporsional terhadap level (terukur %.1f%%)" % pct)
+
+	# Bersihkan kartu pengujian
+	srs.reset_item(test_id)
+	srs.reset_item("__item_a__")
+	srs.reset_item("__item_b__")
+
+	# 10. OpeningTrainer UI Screen & Interactive Drill Controller
+	var trainer = OpeningTrainerScene.instantiate()
+	assert_true(trainer != null, "Scene OpeningTrainer berhasil di-instantiate")
+	root.add_child(trainer)
+	trainer._ready()
+
+	assert_true(trainer.chess_board != null, "ChessBoard ter-resolusi dalam OpeningTrainer")
+	assert_true(trainer.status_label != null, "StatusLabel ter-resolusi dalam OpeningTrainer")
+	assert_true(trainer.blurb_label != null, "BlurbLabel ter-resolusi dalam OpeningTrainer")
+	assert_true(trainer.btn_hint != null and trainer.btn_retry != null and trainer.btn_next_line != null,
+		"Tombol kontrol (Hint, Retry, NextLine) lengkap di OpeningTrainer")
+
+	assert_equal(trainer.current_tree.id, "fried_liver_attack", "Default opening aktif adalah Fried Liver Attack")
+	assert_true(trainer.status_label.text.contains("Your Turn") or trainer.status_label.text.contains("Play"), "Opening trainer langsung meminta player menjawab langkah pertama")
+	assert_true(trainer.chess_board.is_interactive, "Papan catur dalam status is_interactive = true agar bidak dapat digerakkan")
+
+	# Simulasikan langkah salah (h2h4)
+	trainer._on_board_move_made(ChessMove.new("h2", "h4"))
+	assert_true(trainer.status_label.text.contains("Incorrect"), "Langkah di luar repertoire ditolak dengan status Incorrect")
+
+	# Simulasikan Hint
+	trainer._on_hint_pressed()
+	assert_true(trainer.hint_used_on_step, "Tombol Hint menandai bendera hint_used_on_step")
+	assert_true(trainer.blurb_label.text.contains("Hint:"), "Blurb menampilkan arahan langkah pembukaan saat hint ditekan")
+
+	# Simulasikan langkah benar (e2e4)
+	trainer._on_board_move_made(ChessMove.new("e2", "e4"))
+	assert_true(trainer.status_label.text.contains("Correct"), "Langkah repertoire yang benar diterima dengan status Correct")
+
+	# Toggle Learn / Drill mode
+	var prev_mode = trainer.is_drill_mode
+	trainer._on_mode_toggle_pressed()
+	assert_true(trainer.is_drill_mode != prev_mode, "Mode toggle berhasil mengubah state antara Drill dan Learn")
+
+	# Ganti repertoire ke Caro-Kann (Black)
+	trainer.start_repertoire("caro_kann_defense")
+	assert_true(trainer.is_flipped, "Papan otomatis diflip saat berganti ke repertoire Hitam (Caro-Kann)")
+
+	root.remove_child(trainer)
+	trainer.free()
+
 
 
 

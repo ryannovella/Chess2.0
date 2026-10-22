@@ -106,6 +106,7 @@ func setup_board(state: ChessBoardState, flipped: bool = false) -> void:
 	last_move.clear()
 	selected_square = ""
 	legal_moves.clear()
+	is_interactive = true
 	_position_cells()
 	_update_coordinates()
 	_refresh_all_squares()
@@ -476,6 +477,8 @@ func animate_move(move: Variant, new_state: ChessBoardState, is_cap: bool, is_ca
 
 		if current_state != null and ChessMoveGenerator.is_in_check(current_state, current_state.turn):
 			shake_king_in_check()
+
+		is_interactive = true
 
 		if callback.is_valid():
 			callback.call()

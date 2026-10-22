@@ -556,6 +556,53 @@ theme_override_fonts/font = ExtResource("18_font_xbold")
 theme_override_font_sizes/font_size = 23
 text = "Play a Friend"
 
+[node name="CardTrainer" type="Button" parent="CenterContainer/MainLayout/RightCard/VBox/ModeCards" unique_id=1384021984]
+custom_minimum_size = Vector2(0, 66)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_card_normal")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_card_pressed")
+theme_override_styles/hover = SubResource("StyleBoxTexture_card_hover")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_btn_focus")
+
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardTrainer" unique_id=2284910283]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="MarginContainer2" type="MarginContainer" parent="CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardTrainer/HBox" unique_id=1582940192]
+layout_mode = 2
+theme_override_constants/margin_bottom = 6
+
+[node name="Icon" type="TextureRect" parent="CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardTrainer/HBox/MarginContainer2" unique_id=1920491823]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("11_target")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardTrainer/HBox" unique_id=1849201948]
+layout_mode = 2
+theme_override_constants/margin_bottom = 6
+
+[node name="Title" type="Label" parent="CenterContainer/MainLayout/RightCard/VBox/ModeCards/CardTrainer/HBox/MarginContainer" unique_id=1748291039]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.45)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/font = ExtResource("18_font_xbold")
+theme_override_font_sizes/font_size = 23
+text = "Opening Trainer (Reps)"
+
 [node name="CardVariants" type="Button" parent="CenterContainer/MainLayout/RightCard/VBox/ModeCards" unique_id=1069394835]
 custom_minimum_size = Vector2(0, 66)
 layout_mode = 2
