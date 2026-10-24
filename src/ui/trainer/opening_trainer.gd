@@ -54,6 +54,7 @@ const ICON_CHECKMARK = preload("res://assets/ui/icons/icon_checkmark.svg")
 
 @onready var btn_hint: Button = $CenterContainer/MainLayout/ControlsBar/BtnHint
 @onready var btn_retry: Button = $CenterContainer/MainLayout/ControlsBar/BtnRetry
+@onready var btn_prev_line: Button = $CenterContainer/MainLayout/ControlsBar/BtnPrevLine
 @onready var btn_next_line: Button = $CenterContainer/MainLayout/ControlsBar/BtnNextLine
 @onready var btn_mode_toggle: Button = $CenterContainer/MainLayout/ControlsBar/BtnModeToggle
 
@@ -169,6 +170,10 @@ func _ensure_nodes() -> void:
 		btn_retry = get_node_or_null("CenterContainer/MainLayout/ControlsBar/BtnRetry")
 	if btn_retry == null:
 		btn_retry = get_node_or_null("CenterContainer/MainLayout/ControlsCard/ControlsBar/BtnRetry")
+	if btn_prev_line == null:
+		btn_prev_line = get_node_or_null("CenterContainer/MainLayout/ControlsBar/BtnPrevLine")
+	if btn_prev_line == null:
+		btn_prev_line = get_node_or_null("CenterContainer/MainLayout/ControlsCard/ControlsBar/BtnPrevLine")
 	if btn_next_line == null:
 		btn_next_line = get_node_or_null("CenterContainer/MainLayout/ControlsBar/BtnNextLine")
 	if btn_next_line == null:
@@ -209,6 +214,9 @@ func _apply_tactile_styles() -> void:
 	if btn_retry:
 		TactileStyles.apply_tactile_button(btn_retry, false, false, false)
 		btn_retry.add_theme_color_override("font_disabled_color", Color(0.72, 0.70, 0.67, 0.65))
+	if btn_prev_line:
+		TactileStyles.apply_tactile_button(btn_prev_line, false, false, false)
+		btn_prev_line.add_theme_color_override("font_disabled_color", Color(0.72, 0.70, 0.67, 0.65))
 	if btn_next_line:
 		TactileStyles.apply_tactile_button(btn_next_line, true, false, false)
 		btn_next_line.add_theme_color_override("font_disabled_color", Color(0.72, 0.70, 0.67, 0.65))
@@ -225,6 +233,8 @@ func _connect_signals() -> void:
 		btn_hint.pressed.connect(_on_hint_pressed)
 	if btn_retry and not btn_retry.pressed.is_connected(_on_retry_pressed):
 		btn_retry.pressed.connect(_on_retry_pressed)
+	if btn_prev_line and not btn_prev_line.pressed.is_connected(_on_prev_line_pressed):
+		btn_prev_line.pressed.connect(_on_prev_line_pressed)
 	if btn_next_line and not btn_next_line.pressed.is_connected(_on_next_line_pressed):
 		btn_next_line.pressed.connect(_on_next_line_pressed)
 	if btn_mode_toggle and not btn_mode_toggle.pressed.is_connected(_on_mode_toggle_pressed):
@@ -516,6 +526,8 @@ func _load_line(line_idx: int) -> void:
 
 	_update_player_cards()
 
+	if btn_prev_line:
+		btn_prev_line.disabled = (current_tree.flattened_lines.size() <= 1)
 	if btn_next_line:
 		btn_next_line.disabled = (current_tree.flattened_lines.size() <= 1)
 		TactileStyles.apply_tactile_button(btn_next_line, true, false, false)
@@ -861,6 +873,9 @@ func _on_line_completed() -> void:
 		_clear_arrows()
 
 	_play_sfx("play_victory")
+
+func _on_prev_line_pressed() -> void:
+	_load_line(active_line_index - 1)
 
 func _on_next_line_pressed() -> void:
 	_load_line(active_line_index + 1)

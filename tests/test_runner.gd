@@ -2199,8 +2199,8 @@ func test_opening_repertoire_and_srs() -> void:
 	assert_true(trainer.chess_board != null, "ChessBoard ter-resolusi dalam OpeningTrainer")
 	assert_true(trainer.status_label != null, "StatusLabel ter-resolusi dalam OpeningTrainer")
 	assert_true(trainer.blurb_label != null, "BlurbLabel ter-resolusi dalam OpeningTrainer")
-	assert_true(trainer.btn_hint != null and trainer.btn_retry != null and trainer.btn_next_line != null,
-		"Tombol kontrol (Hint, Retry, NextLine) lengkap di OpeningTrainer")
+	assert_true(trainer.btn_hint != null and trainer.btn_retry != null and trainer.btn_prev_line != null and trainer.btn_next_line != null,
+		"Tombol kontrol (Hint, Retry, PrevLine, NextLine) lengkap di OpeningTrainer")
 	assert_true(trainer.top_player_card != null and trainer.bottom_player_card != null,
 		"TopPlayerCard dan BottomPlayerCard ter-resolusi dalam OpeningTrainer")
 	assert_true(trainer.top_captured_container != null and trainer.bottom_captured_container != null,
@@ -2238,6 +2238,13 @@ func test_opening_repertoire_and_srs() -> void:
 	var bot_cap_view = trainer.bottom_captured_container.get_child(0) as CapturedPiecesView
 	assert_true(top_cap_view != null and bot_cap_view != null and top_cap_view.has_content() and bot_cap_view.has_content(),
 		"CapturedPiecesView di OpeningTrainer identik dengan permainan biasa dan memuat grup bidak yang dicapture")
+
+	# Navigasi Line (Next Line & Prev Line)
+	var init_line_idx = trainer.active_line_index
+	trainer._on_next_line_pressed()
+	assert_true(trainer.active_line_index != init_line_idx, "Next Line berpindah ke variasi cabang berikutnya")
+	trainer._on_prev_line_pressed()
+	assert_equal(trainer.active_line_index, init_line_idx, "Prev Line kembali ke variasi cabang sebelumnya")
 
 	# Toggle Learn / Drill mode
 	var prev_mode = trainer.is_drill_mode
