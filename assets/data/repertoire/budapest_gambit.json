@@ -7,7 +7,7 @@
   "root": {
     "move": "d2d4",
     "san": "d4",
-    "blurb": "White opens dengan 1.d4.",
+    "blurb": "White membuka dengan 1.d4.",
     "children": [
       {
         "move": "g8f6",
@@ -108,7 +108,7 @@
                                               {
                                                 "move": "f7f6",
                                                 "san": "f6",
-                                                "blurb": "Blunt g5 Bishop dan open f-file."
+                                                "blurb": "Redam pengaruh Bishop g5 dan open f-file."
                                               }
                                             ],
                                             "blurb": "King White terpaksa naik ke petak d2.",
@@ -160,7 +160,7 @@
                                                       {
                                                         "move": "b4c3",
                                                         "san": "Bxc3+",
-                                                        "blurb": "Shatter White's queenside pawn dengan Bxc3+!"
+                                                        "blurb": "Hancurkan struktur pawn queenside White dengan Bxc3+!"
                                                       }
                                                     ],
                                                     "blurb": "White mempertahankan kedua.",
@@ -204,7 +204,7 @@
                                                             "human_freq": 0.4197
                                                           }
                                                         ],
-                                                        "blurb": "Capture di e5! Bishop b4 tidak dapat dimakan karena ancaman smothered mate di d3!"
+                                                        "blurb": "Capture di e5! Bishop b4 tidak dapat dimakan karena ada ancaman smothered mate di d3!"
                                                       }
                                                     ],
                                                     "blurb": "Pemain klub almost selalu Usir b4 Bishop dengan 7.a3??",
@@ -226,7 +226,7 @@
                                                               {
                                                                 "move": "c6e5",
                                                                 "san": "Nxe5",
-                                                                "blurb": "Recapture di e5 dan bersiap d6."
+                                                                "blurb": "Recapture di e5 dan bersiap memainkan d6."
                                                               }
                                                             ],
                                                             "blurb": "White menukar Knight.",
@@ -236,7 +236,7 @@
                                                         "blurb": "Regain e5 pawn dengan full equality dan tekanan di d2."
                                                       }
                                                     ],
-                                                    "blurb": "White avoids 7.a3?? dan plays 7.e3.",
+                                                    "blurb": "White menghindari 7.a3?? dan melangkah 7.e3.",
                                                     "human_freq": 0.2249
                                                   }
                                                 ],
@@ -247,17 +247,17 @@
                                             "human_freq": 0.333
                                           }
                                         ],
-                                        "blurb": "Develop dengan check ke draw White's Knight ke d2!"
+                                        "blurb": "Develop dengan check untuk memancing Knight White ke d2!"
                                       }
                                     ],
-                                    "blurb": "White adds a second defender ke e5.",
+                                    "blurb": "White menambah defender kedua ke e5.",
                                     "human_freq": 0.637
                                   }
                                 ],
                                 "blurb": "Add a second attacker melawan e5 pawn."
                               }
                             ],
-                            "blurb": "Langkah Populer Maia-3 #2 (16.3%): White mempertahankan e5 dengan Bf4, walking ke dalam Kieninger jebakan.",
+                            "blurb": "Langkah Populer Maia-3 #2 (16.3%): White mempertahankan e5 dengan Bf4, masuk ke dalam jebakan Kieninger.",
                             "human_freq": 0.163
                           },
                           {
@@ -285,7 +285,7 @@
                                 "blurb": "Merebut a7-g1 diagonal dan mengancam Nf2!"
                               }
                             ],
-                            "blurb": "Langkah Populer Maia-3 #3 (6.5%): White bolsters e5 dengan f4, weakening King's diagonal.",
+                            "blurb": "Langkah Populer Maia-3 #3 (6.5%): White memperkuat e5 dengan f4, melemahkan diagonal King sendiri.",
                             "human_freq": 0.0647
                           },
                           {
@@ -306,14 +306,14 @@
                                         "blurb": "Tuck Knight ke g6 dan follow up dengan Bc5."
                                       }
                                     ],
-                                    "blurb": "White kicks e5 Knight.",
+                                    "blurb": "White mengusir Knight e5.",
                                     "human_freq": 0.2423
                                   }
                                 ],
                                 "blurb": "Capture e5 pawn dengan tempo."
                               }
                             ],
-                            "blurb": "Langkah Populer Maia-3 #4 (5.1%): White returns pawn ke attack g4.",
+                            "blurb": "Langkah Populer Maia-3 #4 (5.1%): White mengembalikan pawn untuk menyerang g4.",
                             "human_freq": 0.0505
                           },
                           {
@@ -338,10 +338,10 @@
                                     "human_freq": 0.2915
                                   }
                                 ],
-                                "blurb": "Recapture di e5 dengan aktif piece play."
+                                "blurb": "Recapture di e5 dengan aktivitas perwira yang lincah."
                               }
                             ],
-                            "blurb": "Langkah Populer Maia-3 #5 (3.9%): White returns pawn segera.",
+                            "blurb": "Langkah Populer Maia-3 #5 (3.9%): White mengembalikan pawn segera.",
                             "human_freq": 0.0392
                           },
                           {
@@ -362,7 +362,7 @@
                                         "blurb": "Recapture dengan Bishop dan mengancam Be5 atau Nc6."
                                       }
                                     ],
-                                    "blurb": "White capture di d6.",
+                                    "blurb": "White memakan di d6.",
                                     "human_freq": 0.664
                                   }
                                 ],
@@ -429,7 +429,7 @@
                             "human_freq": 0.9323
                           }
                         ],
-                        "blurb": "Capture di d4 ke draw White's Queen ke center."
+                        "blurb": "Capture di d4 untuk memancing Queen White keluar ke center."
                       }
                     ],
                     "blurb": "Langkah Populer Maia-3 #3 (12.1%): White mendevelop Nc3.",
@@ -457,7 +457,7 @@
                             "human_freq": 0.8275
                           }
                         ],
-                        "blurb": "Exchange di d4 ke isolate atau open e-file."
+                        "blurb": "Tukarkan di d4 untuk mengisolasi bidak atau membuka e-file."
                       }
                     ],
                     "blurb": "Langkah Populer Maia-3 #4 (9.8%): pasif e3 defense.",
@@ -485,7 +485,7 @@
                             "human_freq": 0.4412
                           }
                         ],
-                        "blurb": "Dorong maju e4 dengan tempo ke Usir f3 Knight!"
+                        "blurb": "Dorong maju e4 dengan tempo untuk mengusir f3 Knight!"
                       }
                     ],
                     "blurb": "Langkah Populer Maia-3 #5 (5.8%): White mendevelop Nf3.",
@@ -523,11 +523,11 @@
                 "blurb": "Budapest Gambit! Strike di d4 segera dan set Kieninger jebakan."
               }
             ],
-            "blurb": "White memainkan Queen's Gambit setup.",
+            "blurb": "White memainkan formasi Queen Gambit.",
             "human_freq": 0.375
           }
         ],
-        "blurb": "Develop King's Knight flexibly."
+        "blurb": "Develop King Knight secara fleksibel."
       }
     ],
     "human_freq": 0.241

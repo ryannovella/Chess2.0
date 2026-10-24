@@ -7,7 +7,7 @@
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "White opens dengan 1.e4.",
+    "blurb": "White membuka dengan 1.e4.",
     "children": [
       {
         "move": "e7e5",
@@ -76,17 +76,17 @@
                                                                       {
                                                                         "move": "h5g4",
                                                                         "san": "hxg4",
-                                                                        "blurb": "Buka h-file! White cannot hentikan Qh2# tanpa giving up heavy material."
+                                                                        "blurb": "open h-file! White tidak dapat menghentikan ancaman Qh2# tanpa mengorbankan banyak material."
                                                                       }
                                                                     ],
                                                                     "blurb": "White capture Knight.",
                                                                     "human_freq": 0.3365
                                                                   }
                                                                 ],
-                                                                "blurb": "Mengancam Qh2# dan biarkan g4 Knight poisoned (hxg4 hxg4 opens h-file untuk mate)!"
+                                                                "blurb": "Mengancam Qh2# dan membiarkan Knight g4 beracun (jika hxg4 hxg4, h-file terbuka untuk mate)!"
                                                               }
                                                             ],
-                                                            "blurb": "White tries ke Usir g4 Knight.",
+                                                            "blurb": "White mencoba mengusir Knight g4.",
                                                             "human_freq": 0.3611
                                                           }
                                                         ],
@@ -154,10 +154,10 @@
                                                               {
                                                                 "move": "d8d1",
                                                                 "san": "Qxd1",
-                                                                "blurb": "Capture White's Queen di d1 untuk menang keunggulan material!"
+                                                                "blurb": "Capture Queen White di d1 untuk meraih keunggulan material telak!"
                                                               }
                                                             ],
-                                                            "blurb": "White capture di f2.",
+                                                            "blurb": "White memakan di f2.",
                                                             "human_freq": 0.4278
                                                           }
                                                         ],
@@ -208,7 +208,7 @@
                                                         "blurb": "Double attack! check via discovery di d-file sembari mengancam Qxd1."
                                                       }
                                                     ],
-                                                    "blurb": "White capture di f2.",
+                                                    "blurb": "White memakan di f2.",
                                                     "human_freq": 0.9891
                                                   }
                                                 ],
@@ -255,7 +255,7 @@
                                                     "human_freq": 0.9982
                                                   }
                                                 ],
-                                                "blurb": "Shatter White's central struktur oleh menukar di e3!"
+                                                "blurb": "Hancurkan struktur sentral White dengan menukar perwira di e3!"
                                               }
                                             ],
                                             "blurb": "Langkah Populer Maia-3 #4 (11.9%): White tantangan c5 Bishop.",
@@ -276,7 +276,7 @@
                                                       {
                                                         "move": "g4e3",
                                                         "san": "Nxe3",
-                                                        "blurb": "Habisi dark-squared Bishop dan ruin White's f-pawn!"
+                                                        "blurb": "Habisi dark-squared Bishop dan rusak struktur f-pawn White!"
                                                       }
                                                     ],
                                                     "blurb": "White memblokir dengan Be3.",
@@ -334,7 +334,7 @@
                                                             "human_freq": 0.772
                                                           }
                                                         ],
-                                                        "blurb": "Bring Queen ke h4, mengancam Qxh2# dan Nxf2!"
+                                                        "blurb": "Bawa Queen ke h4, mengancam Qxh2# dan Nxf2!"
                                                       }
                                                     ],
                                                     "blurb": "White castling untuk menjaga f2.",
@@ -432,7 +432,7 @@
                                             "human_freq": 0.0455
                                           }
                                         ],
-                                        "blurb": "Develop Bc5 dan eye f2."
+                                        "blurb": "Develop Bc5 dan arahkan bidikan ke petak f2."
                                       }
                                     ],
                                     "blurb": "Langkah Populer Maia-3 #2 (29.0%): White mempertahankan e4 dengan Nc3.",
@@ -469,7 +469,7 @@
                                                               {
                                                                 "move": "d8d1",
                                                                 "san": "Qxd1",
-                                                                "blurb": "Memenangkan White's Queen dengan bersih di d1!"
+                                                                "blurb": "Menangkan Queen White secara bersih di petak d1!"
                                                               }
                                                             ],
                                                             "blurb": "White must capture Bishop.",
@@ -483,7 +483,7 @@
                                                     "human_freq": 0.626
                                                   }
                                                 ],
-                                                "blurb": "Counter-attack f2! If White takes di e4, Bxf2+ memenangkan d1 Queen!"
+                                                "blurb": "Counter-attack ke f2! Jika White memakan di e4, balasan Bxf2+ memenangkan Queen d1!"
                                               }
                                             ],
                                             "blurb": "Langkah Populer Maia-3 #1 (28.0%): blunder! White menyerang Knight e4 dan langsung terhukum oleh Bc5!",
@@ -536,7 +536,7 @@
                                                         "blurb": "Ignore Knight dan strike di f2!"
                                                       }
                                                     ],
-                                                    "blurb": "White kicks e4 Knight dengan d3.",
+                                                    "blurb": "White mengusir Knight e4 dengan d3.",
                                                     "human_freq": 0.6689
                                                   }
                                                 ],
@@ -547,10 +547,10 @@
                                             "human_freq": 0.153
                                           }
                                         ],
-                                        "blurb": "Centralize Knight di e4 dan eye f2!"
+                                        "blurb": "Pusatkan Knight di e4 dan bidik langsung petak f2!"
                                       }
                                     ],
-                                    "blurb": "Langkah Populer Maia-3 #3 (15.5%): White mendorong e5 ke Usir f6 Knight.",
+                                    "blurb": "Langkah Populer Maia-3 #3 (15.5%): White mendorong e5 untuk mengusir f6 Knight.",
                                     "human_freq": 0.1547
                                   },
                                   {
@@ -604,10 +604,10 @@
                                             "human_freq": 0.1258
                                           }
                                         ],
-                                        "blurb": "Lock White's King di center oleh merebut a7-g1 diagonal!"
+                                        "blurb": "Kunci King White di center dengan merebut diagonal a7-g1!"
                                       }
                                     ],
-                                    "blurb": "Langkah Populer Maia-3 #5 (3.1%): White mempertahankan e4 dengan f3, weakening King's diagonal!",
+                                    "blurb": "Langkah Populer Maia-3 #5 (3.1%): White menjaga e4 dengan f3, yang melemahkan diagonal King sendiri!",
                                     "is_blunder": true,
                                     "human_freq": 0.0307
                                   },
@@ -643,18 +643,18 @@
                                 "blurb": "Recapture ke arah center! Kedua Bishop dan Queen d8 kini memiliki diagonal terbuka lebar."
                               }
                             ],
-                            "blurb": "White menerima Knight tukar di c6.",
+                            "blurb": "White menerima pertukaran Knight di c6.",
                             "human_freq": 0.8547
                           }
                         ],
-                        "blurb": "Stafford Gambit! Offer a pawn untuk membuka d-file dan c8-h3/a7-g1 diagonal."
+                        "blurb": "Stafford Gambit! Tawarkan satu pawn untuk membuka d-file dan c8-h3/a7-g1 diagonal."
                       }
                     ],
                     "blurb": "Langkah Populer Maia-3 #1: White capture e5 pawn.",
                     "human_freq": 0.3286
                   }
                 ],
-                "blurb": "Petrov defense! counter-attack White's e4 pawn ke bait 3.Nxe5."
+                "blurb": "Petrov Defense! Serang balik pawn e4 White untuk memancing langkah 3.Nxe5."
               }
             ],
             "blurb": "White attack e5.",

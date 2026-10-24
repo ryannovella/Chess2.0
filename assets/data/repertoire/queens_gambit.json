@@ -7,7 +7,7 @@
   "root": {
     "move": "d2d4",
     "san": "d4",
-    "blurb": "Buka dengan Queen's pawn ke control d4 dan e5.",
+    "blurb": "Buka dengan Queen pawn untuk mengontrol petak d4 dan e5.",
     "children": [
       {
         "move": "d7d5",
@@ -117,18 +117,18 @@
                                                     "blurb": "Korbankan Knight di b5! Karena pawn a6 terkena pin ke arah Rook a8, axb5 akan kehilangan Qxa8."
                                                   }
                                                 ],
-                                                "blurb": "Black tries ke Dukung b5 dengan a6.",
+                                                "blurb": "Black mencoba mendukung b5 dengan a6.",
                                                 "human_freq": 0.2469
                                               }
                                             ],
                                             "blurb": "Attack b5 pawn! Black cannot mempertahankan b5 tanpa kehilangan a piece atau a8 Rook."
                                           }
                                         ],
-                                        "blurb": "Black recapture di b5, membiarkan a8 Rook tanpa penjagaan behind diagonal.",
+                                        "blurb": "Black memakan balik di b5, membiarkan Rook a8 tanpa penjagaan di jalur diagonal.",
                                         "human_freq": 0.991
                                       }
                                     ],
-                                    "blurb": "Buka a-file dan buka long diagonal ke a8!"
+                                    "blurb": "open a-file dan buka diagonal panjang ke petak a8!"
                                   }
                                 ],
                                 "blurb": "Langkah Populer Maia-3 #1 (65.9%): Two-thirds dari pemain klub fall straight ke dalam classic QGA Rook jebakan!",
@@ -167,7 +167,7 @@
                             "blurb": "Rusak b5 pawn segera dengan a4!"
                           }
                         ],
-                        "blurb": "Langkah Populer Maia-3 #2 (20.3%): Greedy club kesalahan trying ke hold c4 gambit pawn!",
+                        "blurb": "Langkah Populer Maia-3 #2 (20.3%): Kesalahan serakah pemain klub yang berupaya mempertahankan pawn gambit c4!",
                         "is_blunder": true,
                         "human_freq": 0.2027
                       },
@@ -208,7 +208,7 @@
                                 "human_freq": 0.6765
                               }
                             ],
-                            "blurb": "Dorong maju e5 dengan tempo ke Usir f6 Knight!"
+                            "blurb": "Dorong maju e5 dengan tempo untuk mengusir f6 Knight!"
                           }
                         ],
                         "blurb": "Langkah Populer Maia-3 #3 (15.4%): Main variasi QGA attack e4.",
@@ -237,7 +237,7 @@
                                           {
                                             "move": "f1c4",
                                             "san": "Bxc4",
-                                            "blurb": "Recapture di c4 dan mengancam Nxe5 followed oleh Qxg4."
+                                            "blurb": "Recapture di c4 dan ancam langkah lanjutan Nxe5 yang disusul Qxg4."
                                           }
                                         ],
                                         "blurb": "Black melompat ke e5.",
@@ -287,14 +287,14 @@
                                         "human_freq": 0.2743
                                       }
                                     ],
-                                    "blurb": "Recapture di c4 dan target f7."
+                                    "blurb": "Recapture di c4 dan arahkan serangan ke f7."
                                   }
                                 ],
-                                "blurb": "Black capture di d4.",
+                                "blurb": "Black memakan di d4.",
                                 "human_freq": 0.6713
                               }
                             ],
-                            "blurb": "Develop Nf3 ke melindungi d4 dan attack e5!"
+                            "blurb": "Develop Nf3 untuk melindungi d4 dan attack e5!"
                           }
                         ],
                         "blurb": "Langkah Populer Maia-3 #5 (14.2%): Central counter-strike 3...e5.",
@@ -304,7 +304,7 @@
                     "blurb": "Merebut full d4-e4 pawn center segera dan mengancam Bxc4."
                   }
                 ],
-                "blurb": "Langkah Populer Maia-3 #1 (27.7%): Queen's Gambit Accepted!",
+                "blurb": "Langkah Populer Maia-3 #1 (27.7%): Queen Gambit Accepted!",
                 "human_freq": 0.2765
               },
               {
@@ -376,7 +376,7 @@
                                     "blurb": "Avoid 5.cxd5 exd5 6.Nxd5?? Nxd5! Elephant jebakan dan Develop dengan tenang."
                                   }
                                 ],
-                                "blurb": "Black sets famous Elephant jebakan!",
+                                "blurb": "Black memasang jebakan Elephant Gambit yang terkenal!",
                                 "human_freq": 0.0741
                               }
                             ],
@@ -437,17 +437,17 @@
                                           {
                                             "move": "c1d2",
                                             "san": "Bd2",
-                                            "blurb": "Blokir check dan offer a favorable Bishop tukar."
+                                            "blurb": "Blokir check dan tawarkan pertukaran Bishop yang menguntungkan."
                                           }
                                         ],
                                         "blurb": "Black memberi check di b4.",
                                         "human_freq": 0.1267
                                       }
                                     ],
-                                    "blurb": "Recapture di e4 dengan commanding central Knight."
+                                    "blurb": "Recapture di e4 dengan dominasi sentral Knight."
                                   }
                                 ],
-                                "blurb": "Black capture di e4.",
+                                "blurb": "Black memakan di e4.",
                                 "human_freq": 0.2807
                               }
                             ],
@@ -461,7 +461,7 @@
                     "blurb": "Develop Nc3 dan increase tekanan di d5."
                   }
                 ],
-                "blurb": "Langkah Populer Maia-3 #2 (23.4%): Queen's Gambit Declined.",
+                "blurb": "Langkah Populer Maia-3 #2 (23.4%): Queen Gambit Declined.",
                 "human_freq": 0.2338
               },
               {
@@ -505,7 +505,7 @@
                                     "blurb": "Mencegah 5...b5 dan guarantee recovery dari c4 pawn!"
                                   }
                                 ],
-                                "blurb": "Black capture di c4.",
+                                "blurb": "Black memakan di c4.",
                                 "human_freq": 0.0632
                               }
                             ],
@@ -659,7 +659,7 @@
                         "human_freq": 0.2524
                       }
                     ],
-                    "blurb": "Exchange di d5 untuk menyeret f6 Knight ke center di mana e4 hits it!"
+                    "blurb": "Tukar di d5 untuk menyeret Knight f6 ke center di mana e4 langsung menyerangnya!"
                   }
                 ],
                 "blurb": "Langkah Populer Maia-3 #4 (16.7%): Marshall defense! Inaccurate karena White memenangkan center dengan tempo.",
@@ -710,7 +710,7 @@
                 "human_freq": 0.0423
               }
             ],
-            "blurb": "Queen's Gambit! tantangan Black's d5 anchor ke memenangkan kendali center."
+            "blurb": "Queen Gambit! Tantang pertahanan d5 Black untuk merebut kendali center."
           }
         ],
         "blurb": "Langkah Populer Maia-3 #1 (47.5%): Black matches di center.",

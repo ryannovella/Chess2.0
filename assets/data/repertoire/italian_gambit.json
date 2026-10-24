@@ -7,7 +7,7 @@
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "Buka dengan King's pawn untuk menguasai center.",
+    "blurb": "Buka dengan King pawn untuk menguasai center.",
     "children": [
       {
         "move": "e7e5",
@@ -72,7 +72,7 @@
                                                                   {
                                                                     "move": "h5c5",
                                                                     "san": "Qxc5",
-                                                                    "blurb": "Regain piece dengan interest! Black's King cannot Castle dan White dominates."
+                                                                    "blurb": "Rebut kembali perwira dengan keuntungan ekstra! King Black tidak bisa castling dan White memegang dominasi."
                                                                   }
                                                                 ],
                                                                 "blurb": "Black memblokir check, membuka h8 Rook.",
@@ -128,7 +128,7 @@
                                                                   {
                                                                     "move": "c5c3",
                                                                     "san": "Qxc3",
-                                                                    "blurb": "Recapture di c3 sembari Black's King memblokir e7 Bishop."
+                                                                    "blurb": "Recapture di c3 selagi King Black menghalangi jalan Bishop e7."
                                                                   }
                                                                 ],
                                                                 "blurb": "Black memblokir dengan d6.",
@@ -149,10 +149,10 @@
                                                 "human_freq": 0.8245
                                               }
                                             ],
-                                            "blurb": "Greek-style deflection sacrifice! Drag Black's King ke f7 so c5 Bishop falls ke Qd5+."
+                                            "blurb": "Pengorbanan deflection ala Greek Gift! Seret King Black ke f7 agar Bishop c5 jatuh terkena Qd5+."
                                           }
                                         ],
-                                        "blurb": "Langkah Populer Maia-3 #1 (73.6%): Black greedily capture di c3.",
+                                        "blurb": "Langkah Populer Maia-3 #1 (73.6%): Black serakah memakan di c3.",
                                         "is_blunder": true,
                                         "human_freq": 0.7355
                                       },
@@ -194,7 +194,7 @@
                                                                 "human_freq": 0.2923
                                                               }
                                                             ],
-                                                            "blurb": "Recapture di d4 dengan tempo melawan c5 Bishop."
+                                                            "blurb": "Recapture di d4 dengan tempo menyerang Bishop c5."
                                                           }
                                                         ],
                                                         "blurb": "Black memusatkan perwira di Knight di e4.",
@@ -208,7 +208,7 @@
                                                 "human_freq": 0.2371
                                               }
                                             ],
-                                            "blurb": "Dorong e5 dengan tempo ke Usir f6 Knight!"
+                                            "blurb": "Dorong e5 dengan tempo untuk mengusir f6 Knight!"
                                           }
                                         ],
                                         "blurb": "Langkah Populer Maia-3 #2 (8.6%): Black counter-attack e4 dengan Nf6.",
@@ -251,10 +251,10 @@
                                                 "human_freq": 0.3739
                                               }
                                             ],
-                                            "blurb": "Recapture di d4 dengan tempo di c5 Bishop."
+                                            "blurb": "Recapture di d4 dengan tempo menyerang Bishop c5."
                                           }
                                         ],
-                                        "blurb": "Langkah Populer Maia-3 #3 (5.6%): Black menolak dxc3 dan plays d6.",
+                                        "blurb": "Langkah Populer Maia-3 #3 (5.6%): Black menolak dxc3 dan melangkah d6.",
                                         "human_freq": 0.0557
                                       },
                                       {
@@ -301,7 +301,7 @@
                                         "human_freq": 0.0359
                                       }
                                     ],
-                                    "blurb": "Offer a second pawn untuk membuka c-file dan d1-h5 diagonal."
+                                    "blurb": "Tawarkan pawn kedua untuk membuka c-file dan d1-h5 diagonal."
                                   }
                                 ],
                                 "blurb": "Langkah Populer Maia-3 #1 (76.7%): Black capture d4 gambit pawn.",
@@ -349,25 +349,25 @@
                                                                     "blurb": "Lakukan pin pada f6 Knight dan dominate buka file."
                                                                   }
                                                                 ],
-                                                                "blurb": "Black recapture di e5.",
+                                                                "blurb": "Black memakan balik di e5.",
                                                                 "human_freq": 0.96
                                                               }
                                                             ],
-                                                            "blurb": "open f-file untuk f1 Rook."
+                                                            "blurb": "open f-file untuk aktivitas Rook f1."
                                                           }
                                                         ],
                                                         "blurb": "Black mendevelop Nf6.",
                                                         "human_freq": 0.2518
                                                       }
                                                     ],
-                                                    "blurb": "Luncurkan f4 break melawan Black's center dan f7 petak."
+                                                    "blurb": "Luncurkan dobrakan f4 untuk menekan center Black dan petak f7."
                                                   }
                                                 ],
                                                 "blurb": "Black mempertahankan e5.",
                                                 "human_freq": 0.2913
                                               }
                                             ],
-                                            "blurb": "Castle kingside dan bersiap f4 ke rip open f-file!"
+                                            "blurb": "Castle kingside dan bersiap melangkah f4 untuk membongkar f-file!"
                                           }
                                         ],
                                         "blurb": "Langkah Pemain Maia-3 (83.7%): Black recapture dengan Knight.",
@@ -399,14 +399,14 @@
                                                             "blurb": "Recapture dengan huge keunggulan development."
                                                           }
                                                         ],
-                                                        "blurb": "Black capture di c3.",
+                                                        "blurb": "Black memakan di c3.",
                                                         "human_freq": 0.7143
                                                       }
                                                     ],
                                                     "blurb": "Tantangan d4 pawn dan buka variasi untuk queenside piece."
                                                   }
                                                 ],
-                                                "blurb": "Black opens c8 Bishop.",
+                                                "blurb": "Black membuka jalan Bishop c8.",
                                                 "human_freq": 0.2578
                                               }
                                             ],
@@ -417,7 +417,7 @@
                                         "human_freq": 0.159
                                       }
                                     ],
-                                    "blurb": "Tukar off Black's aktif dark-squared Bishop."
+                                    "blurb": "Tukarkan dark-squared Bishop aktif milik Black."
                                   }
                                 ],
                                 "blurb": "Langkah Populer Maia-3 #2 (10.6%): Black capture dengan Bishop alih-alih pawn.",
@@ -455,10 +455,10 @@
                                                           {
                                                             "move": "e5f7",
                                                             "san": "Nxf7+",
-                                                            "blurb": "Fork d8 King dan h8 Rook ke memenangkan exchange!"
+                                                            "blurb": "Fork d8 King dan h8 Rook untuk memenangkan exchange!"
                                                           }
                                                         ],
-                                                        "blurb": "Black recapture di d8.",
+                                                        "blurb": "Black memakan balik di d8.",
                                                         "human_freq": 1.0
                                                       }
                                                     ],
@@ -472,7 +472,7 @@
                                             "blurb": "Habisi defender dari f7!"
                                           }
                                         ],
-                                        "blurb": "Langkah Populer Maia-3 #1 (28.3%): Black mundur Ne6 ke guard f7.",
+                                        "blurb": "Langkah Populer Maia-3 #1 (28.3%): Black mundur Ne6 untuk menjaga f7.",
                                         "human_freq": 0.2827
                                       },
                                       {
@@ -534,14 +534,14 @@
                                                         "human_freq": 0.7286
                                                       }
                                                     ],
-                                                    "blurb": "Sacrifice atau check di f7 untuk menyeret Black's King ke petak terbuka."
+                                                    "blurb": "Sacrifice atau beri check di f7 untuk menyeret King Black ke petak terbuka."
                                                   }
                                                 ],
                                                 "blurb": "Black recapture dengan g-pawn.",
                                                 "human_freq": 0.491
                                               }
                                             ],
-                                            "blurb": "Shatter Black's kingside struktur oleh eliminating f7 defender!"
+                                            "blurb": "Hancurkan struktur kingside Black dengan menyingkirkan defender di f7!"
                                           }
                                         ],
                                         "blurb": "Langkah Populer Maia-3 #3 (15.2%): Black mempertahankan f7 dengan Nh6.",
@@ -601,21 +601,21 @@
                                                           {
                                                             "move": "f1e1",
                                                             "san": "Re1+",
-                                                            "blurb": "Check di sepanjang open e-file dan paksa Black's King untuk melangkah atau blokir."
+                                                            "blurb": "Beri check di sepanjang open e-file dan paksa King Black melangkah atau memblokir."
                                                           }
                                                         ],
                                                         "blurb": "Black capture c4 Bishop.",
                                                         "human_freq": 0.9015
                                                       }
                                                     ],
-                                                    "blurb": "Capture f6 Knight dan shatter Black's kingside."
+                                                    "blurb": "Capture Knight f6 dan hancurkan struktur sayap kingside Black."
                                                   }
                                                 ],
                                                 "blurb": "Black counter-attack c4.",
                                                 "human_freq": 0.1865
                                               }
                                             ],
-                                            "blurb": "Dorong e5 ke attack f6 Knight!"
+                                            "blurb": "Dorong e5 untuk menyerang f6 Knight!"
                                           }
                                         ],
                                         "blurb": "Langkah Populer Maia-3 #2 (26.4%): Max Lange attack!",
@@ -658,17 +658,17 @@
                                                 "human_freq": 0.7647
                                               }
                                             ],
-                                            "blurb": "Lakukan pin pada e4 Knight di sepanjang open e-file!"
+                                            "blurb": "Lakukan pin pada Knight e4 di sepanjang open e-file!"
                                           }
                                         ],
-                                        "blurb": "Langkah Populer Maia-3 #1 (49.2%): Black grabs e4 pawn.",
+                                        "blurb": "Langkah Populer Maia-3 #1 (49.2%): Black memakan pawn e4.",
                                         "human_freq": 0.2249
                                       }
                                     ],
                                     "blurb": "Castle kingside dan invite 5...Nxe4."
                                   }
                                 ],
-                                "blurb": "Langkah Populer Maia-3 #1 (77.5%): Black capture di d4.",
+                                "blurb": "Langkah Populer Maia-3 #1 (77.5%): Black memakan di d4.",
                                 "human_freq": 0.6628
                               }
                             ],
@@ -711,7 +711,7 @@
                                     "blurb": "Tawarkan pawn Italian Gambit saat Black tertinggal development."
                                   }
                                 ],
-                                "blurb": "Black capture di d4.",
+                                "blurb": "Black memakan di d4.",
                                 "human_freq": 0.7409
                               }
                             ],
@@ -765,7 +765,7 @@
                         "human_freq": 0.0719
                       }
                     ],
-                    "blurb": "Italian Game! Aim di Black's rentan f7 pawn."
+                    "blurb": "Italian Game! Incar pawn f7 Black yang rentan."
                   }
                 ],
                 "blurb": "Langkah Pemain Maia-3 (63.5%): Black mempertahankan e5 dengan Knight.",

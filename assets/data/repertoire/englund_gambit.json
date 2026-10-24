@@ -7,7 +7,7 @@
   "root": {
     "move": "d2d4",
     "san": "d4",
-    "blurb": "White opens dengan Queen's pawn.",
+    "blurb": "White membuka permainan dengan Queen pawn.",
     "children": [
       {
         "move": "e7e5",
@@ -68,10 +68,10 @@
                                                               {
                                                                 "move": "a3a5",
                                                                 "san": "Qa5",
-                                                                "blurb": "Mundur ke a5 menjaga b4 Bishop protected dan White's queenside tied up."
+                                                                "blurb": "Mundur ke a5 untuk menjaga Bishop b4 tetap aman sembari mengikat sayap queenside White."
                                                               }
                                                             ],
-                                                            "blurb": "White chases Queen dengan Rb3.",
+                                                            "blurb": "White mengejar Queen dengan Rb3.",
                                                             "human_freq": 0.5643
                                                           }
                                                         ],
@@ -85,7 +85,7 @@
                                                 "blurb": "Pin Knight c3 sehingga petak b2-a1 kembali terancam!"
                                               }
                                             ],
-                                            "blurb": "Main variasi: White mendevelop Nc3 ke melindungi a1.",
+                                            "blurb": "Main variasi: White mendevelop Nc3 untuk melindungi a1.",
                                             "human_freq": 0.706
                                           },
                                           {
@@ -121,14 +121,14 @@
                                                         "blurb": "Habisi defender dari a1 dan c1!"
                                                       }
                                                     ],
-                                                    "blurb": "White tries untuk menjaga c3 Bishop dengan Qd2.",
+                                                    "blurb": "White mencoba menjaga Bishop c3 dengan Qd2.",
                                                     "human_freq": 0.3357
                                                   }
                                                 ],
                                                 "blurb": "Lakukan pin pada c3 Bishop ke King! White cannot save kedua c3 dan a1."
                                               }
                                             ],
-                                            "blurb": "Pemain klub frequently play 6.Bc3?? ke Jebak Queen dan guard a1!",
+                                            "blurb": "Pemain klub frequently play 6.Bc3?? untuk menjebak Queen dan guard a1!",
                                             "is_blunder": true,
                                             "human_freq": 0.2855
                                           }
@@ -136,7 +136,7 @@
                                         "blurb": "Capture b2 pawn dan mengancam Qxa1!"
                                       }
                                     ],
-                                    "blurb": "Langkah Populer Maia-3 #1 (59.9%): White memblokir dengan Bd2 ke save Bishop.",
+                                    "blurb": "Langkah Populer Maia-3 #1 (59.9%): White memblokir dengan Bd2 untuk menyelamatkan Bishop.",
                                     "human_freq": 0.5987
                                   },
                                   {
@@ -214,11 +214,11 @@
                                                 "blurb": "Pin dan memenangkan White Queen di c3!"
                                               }
                                             ],
-                                            "blurb": "White tries ke Tukar Queen.",
+                                            "blurb": "White mencoba menukar Queen.",
                                             "human_freq": 0.7295
                                           }
                                         ],
-                                        "blurb": "Capture di b2 dan mengancam Bb4 pinning Queen ke King!"
+                                        "blurb": "Capture di b2 dan ancam Bb4 untuk mem-pin Queen ke arah King!"
                                       }
                                     ],
                                     "blurb": "Langkah Populer Maia-3 #5 (7.8%): White memblokir dengan Qd2, allowing Qxb2!",
@@ -289,7 +289,7 @@
                                             "human_freq": 0.3721
                                           }
                                         ],
-                                        "blurb": "Capture di b2 dan attack c3 Knight!"
+                                        "blurb": "Capture di b2 dan serang Knight c3!"
                                       }
                                     ],
                                     "blurb": "White memblokir dengan Nc3.",
@@ -320,7 +320,7 @@
                                         "blurb": "Recapture dengan tempo di d5 Queen!"
                                       }
                                     ],
-                                    "blurb": "White capture di f6.",
+                                    "blurb": "White memakan di f6.",
                                     "human_freq": 0.8006
                                   }
                                 ],
@@ -380,7 +380,7 @@
                               {
                                 "move": "d7d6",
                                 "san": "d6",
-                                "blurb": "Buka c8 Bishop dan chip menjauh di White's e5 wedge."
+                                "blurb": "Buka jalan Bishop c8 dan kikis kekuatan pasak e5 milik White."
                               }
                             ],
                             "blurb": "White mendevelop Nf3.",
@@ -478,7 +478,7 @@
                     "human_freq": 0.7428
                   }
                 ],
-                "blurb": "Capture di d4 ke draw Queen out."
+                "blurb": "Capture di d4 untuk memancing Queen lawan keluar."
               }
             ],
             "blurb": "Langkah Populer Maia-3 #3 (7.8%): White transposes toward an English/QGD.",

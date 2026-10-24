@@ -7,7 +7,7 @@
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "Buka dengan King's pawn.",
+    "blurb": "Buka permainan dengan King pawn.",
     "children": [
       {
         "move": "e7e5",
@@ -71,7 +71,7 @@
                                                         "human_freq": 0.4595
                                                       }
                                                     ],
-                                                    "blurb": "Develop Ne2 ke melindungi c3 dan e4 sembari mempersiapkan O-O dan e5."
+                                                    "blurb": "Develop Ne2 untuk melindungi c3 dan e4 sembari mempersiapkan O-O dan e5."
                                                   }
                                                 ],
                                                 "blurb": "Black mendevelop Nf6.",
@@ -117,7 +117,7 @@
                                                     "blurb": "Blokir check dengan Nc3."
                                                   }
                                                 ],
-                                                "blurb": "Black throws di Bb4+ ke save Knight.",
+                                                "blurb": "Black throws di Bb4+ untuk menyelamatkan Knight.",
                                                 "human_freq": 0.1424
                                               }
                                             ],
@@ -193,7 +193,7 @@
                                                                 "human_freq": 0.9979
                                                               }
                                                             ],
-                                                            "blurb": "Shatter Black's f-pawn oleh menukar di e6!"
+                                                            "blurb": "Hancurkan struktur pawn-f Black dengan menukar perwira di e6!"
                                                           }
                                                         ],
                                                         "blurb": "Black tantangan c4 Bishop.",
@@ -210,7 +210,7 @@
                                             "blurb": "Develop Nf3 dan bersiap O-O plus Qb3."
                                           }
                                         ],
-                                        "blurb": "Langkah Populer Maia-3 #1: Black opens c8 Bishop.",
+                                        "blurb": "Langkah Populer Maia-3 #1: Black membuka jalan Bishop c8.",
                                         "human_freq": 0.1387
                                       },
                                       {
@@ -268,18 +268,18 @@
                                                             "blurb": "Menangkan Queen atau paksa Bb4+ Qd2 untuk bertukar menuju endgame unggul satu pawn!"
                                                           }
                                                         ],
-                                                        "blurb": "Black capture di f7.",
+                                                        "blurb": "Black memakan di f7.",
                                                         "human_freq": 0.4806
                                                       }
                                                     ],
-                                                    "blurb": "Deflect King ke f7 so d8 Queen falls!"
+                                                    "blurb": "Alihkan King ke f7 agar Queen d8 jatuh!"
                                                   }
                                                 ],
                                                 "blurb": "Black mendevelop Nf6.",
                                                 "human_freq": 0.2707
                                               }
                                             ],
-                                            "blurb": "Capture di d5 dengan Bishop, eyeing f7!"
+                                            "blurb": "Capture di d5 dengan Bishop, membidik langsung ke f7!"
                                           }
                                         ],
                                         "blurb": "Schlechter defense: Black returns a pawn dengan 5...d5 untuk membuka variasi.",
@@ -315,10 +315,10 @@
                                                         "human_freq": 0.8062
                                                       }
                                                     ],
-                                                    "blurb": "Attack Queen di buka g-file!"
+                                                    "blurb": "Serang Queen di open g-file!"
                                                   }
                                                 ],
-                                                "blurb": "Black grabs g2.",
+                                                "blurb": "Black memakan pawn g2.",
                                                 "human_freq": 0.715
                                               }
                                             ],
@@ -329,7 +329,7 @@
                                         "human_freq": 0.0115
                                       }
                                     ],
-                                    "blurb": "Kedua White Bishop kini laser-target Black's g7 dan f7 petak!"
+                                    "blurb": "Kedua Bishop White kini membidik tajam ke petak g7 dan f7 milik Black!"
                                   }
                                 ],
                                 "blurb": "Langkah Populer Maia-3 #1 (47.8%): Black menerima full Double Danish Gambit!",
@@ -372,7 +372,7 @@
                                         "human_freq": 0.0936
                                       }
                                     ],
-                                    "blurb": "Recapture di c3 dengan massive keunggulan development."
+                                    "blurb": "Recapture di c3 dengan keunggulan development yang masif."
                                   }
                                 ],
                                 "blurb": "Langkah Populer Maia-3 #2 (12.2%): Half-Danish, Black menolak cxb2.",
@@ -509,7 +509,7 @@
                             "blurb": "Develop Bc4 dan invite 4...cxb2 so kedua Bishop slice di seberang board!"
                           }
                         ],
-                        "blurb": "Langkah Populer Maia-3 #1 (73.3%): Black capture di c3.",
+                        "blurb": "Langkah Populer Maia-3 #1 (73.3%): Black memakan di c3.",
                         "human_freq": 0.7328
                       },
                       {
@@ -534,7 +534,7 @@
                                 "human_freq": 0.3101
                               }
                             ],
-                            "blurb": "Recapture di d4 ke establish ideal d4-e4 center!"
+                            "blurb": "Recapture di d4 untuk membangun formasi ideal pawn center d4-e4!"
                           }
                         ],
                         "blurb": "Langkah Populer Maia-3 #2 (12.4%): Black menolak 3...dxc3 dan mendevelop Nc6.",
@@ -555,7 +555,7 @@
                                   {
                                     "move": "c3d4",
                                     "san": "cxd4",
-                                    "blurb": "Recapture di d4 dan follow up dengan Nc3 gaining tempo di Queen!"
+                                    "blurb": "Recapture di d4 dan lanjutkan dengan Nc3 untuk merebut tempo menyerang Queen!"
                                   }
                                 ],
                                 "blurb": "Black recapture dengan Queen.",
@@ -583,7 +583,7 @@
                                   {
                                     "move": "d1d4",
                                     "san": "Qxd4",
-                                    "blurb": "Recapture di d4 dan attack d5 Knight!"
+                                    "blurb": "Recapture di d4 dan serang Knight d5!"
                                   }
                                 ],
                                 "blurb": "Black memusatkan perwira di di d5.",
@@ -597,14 +597,14 @@
                         "human_freq": 0.0243
                       }
                     ],
-                    "blurb": "Danish Gambit! Offer a second pawn ke sweep a1-h8 dan a2-g8 diagonal."
+                    "blurb": "Danish Gambit! Tawarkan pawn kedua untuk menguasai a1-h8 dan a2-g8 diagonal."
                   }
                 ],
                 "blurb": "Black capture d4 pawn.",
                 "human_freq": 0.6699
               }
             ],
-            "blurb": "Center Game / Danish Gambit setup! open d-file segera."
+            "blurb": "Setup Center Game / Danish Gambit! open d-file secepatnya."
           }
         ],
         "blurb": "Black matches di center.",

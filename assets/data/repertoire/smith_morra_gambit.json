@@ -64,7 +64,7 @@
                                                           {
                                                             "move": "d1e2",
                                                             "san": "Qe2",
-                                                            "blurb": "Clear d1 petak untuk Rook ke dominate open d-file!"
+                                                            "blurb": "Kosongkan petak d1 agar Rook dapat mendominasi open d-file!"
                                                           }
                                                         ],
                                                         "blurb": "Black mendevelop Nf6.",
@@ -117,7 +117,7 @@
                                                     "blurb": "Greek-style sacrifice di f7!"
                                                   }
                                                 ],
-                                                "blurb": "Club kesalahan: Black melakukan pin f3 sebelum playing e6!",
+                                                "blurb": "Club kesalahan: Black melakukan pin f3 sebelum melangkah e6!",
                                                 "is_blunder": true,
                                                 "human_freq": 0.1554
                                               }
@@ -154,7 +154,7 @@
                                                             "blurb": "Play Qe2 untuk mencegah Siberian jebakan dan bersiap Rd1!"
                                                           }
                                                         ],
-                                                        "blurb": "Black sets Siberian jebakan (Nge7-Ng6-Nf4/Nd4).",
+                                                        "blurb": "Black memasang jebakan Siberian Trap (Nge7-Ng6-Nf4/Nd4).",
                                                         "human_freq": 0.0726
                                                       }
                                                     ],
@@ -213,7 +213,7 @@
                                                                             "blurb": "Fork f7 King dan e5 Bishop ke emerge dengan menang attack!"
                                                                           }
                                                                         ],
-                                                                        "blurb": "Black capture di f7.",
+                                                                        "blurb": "Black memakan di f7.",
                                                                         "human_freq": 0.954
                                                                       }
                                                                     ],
@@ -224,14 +224,14 @@
                                                                 "human_freq": 0.9927
                                                               }
                                                             ],
-                                                            "blurb": "Tukar Knight ke buka f7."
+                                                            "blurb": "Tukarkan Knight untuk membuka petak f7."
                                                           }
                                                         ],
                                                         "blurb": "Black capture e5 pawn.",
                                                         "human_freq": 0.4122
                                                       }
                                                     ],
-                                                    "blurb": "Clear d5 petak dan disrupt Black's Knight development!"
+                                                    "blurb": "Kosongkan petak d5 dan kacaukan koordinasi development Knight Black!"
                                                   }
                                                 ],
                                                 "blurb": "Black fianchettoes Bg7.",
@@ -349,7 +349,7 @@
                                                     "blurb": "Deflect e8 King menjauh dari d8 Queen!"
                                                   }
                                                 ],
-                                                "blurb": "Black capture di e5, falling straight ke dalam deflection jebakan!",
+                                                "blurb": "Black memakan di e5, langsung masuk ke dalam jebakan deflection!",
                                                 "human_freq": 0.6165
                                               }
                                             ],
@@ -510,7 +510,7 @@
                                 "human_freq": 0.2561
                               }
                             ],
-                            "blurb": "Recapture di d4 untuk menguasai full d4-e4 center!"
+                            "blurb": "Recapture di d4 untuk menguasai dominasi penuh pawn center d4-e4!"
                           }
                         ],
                         "blurb": "Langkah Populer Maia-3 #2 (12.7%): Black menolak dxc3 dan mendevelop Nc6.",
@@ -531,7 +531,7 @@
                                   {
                                     "move": "d1d4",
                                     "san": "Qxd4",
-                                    "blurb": "Capture di d4 dan attack d5 Knight!"
+                                    "blurb": "Capture di d4 dan serang Knight d5!"
                                   }
                                 ],
                                 "blurb": "Black memusatkan perwira di di d5.",
@@ -587,14 +587,14 @@
                                   {
                                     "move": "g1f3",
                                     "san": "Nf3",
-                                    "blurb": "Develop Nf3 dan recapture di d4 dengan dominant Knight."
+                                    "blurb": "Develop Nf3 dan recapture di d4 dengan dominasi sentral Knight."
                                   }
                                 ],
                                 "blurb": "Black capture.",
                                 "human_freq": 0.8038
                               }
                             ],
-                            "blurb": "Capture di d4 untuk membuka center!"
+                            "blurb": "Capture di d4 untuk membuka petak center!"
                           }
                         ],
                         "blurb": "Maia-3 Top #5 langkah manusia di langkah 3 (2.9%): Black mendorong e5.",
@@ -615,7 +615,7 @@
                                   {
                                     "move": "c3d4",
                                     "san": "cxd4",
-                                    "blurb": "Recapture di d4 dan follow up dengan Nc3 gaining tempo di Queen!"
+                                    "blurb": "Recapture di d4 dan lanjutkan dengan Nc3 untuk merebut tempo menyerang Queen!"
                                   }
                                 ],
                                 "blurb": "Black recapture dengan Queen.",
@@ -632,7 +632,7 @@
                     "blurb": "Smith-Morra Gambit! sacrifice a pawn untuk membuka c- dan d-file dengan 3-tempo lead."
                   }
                 ],
-                "blurb": "Black capture di d4.",
+                "blurb": "Black memakan di d4.",
                 "human_freq": 0.78
               }
             ],

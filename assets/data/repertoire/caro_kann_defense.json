@@ -8,7 +8,7 @@
     "move": "e2e4",
     "san": "e4",
     "human_freq": 0.6406,
-    "blurb": "White opens dengan King's pawn untuk menguasai central space.",
+    "blurb": "White membuka permainan dengan King pawn untuk menguasai ruang sentral.",
     "children": [
       {
         "move": "c7c6",
@@ -30,12 +30,12 @@
                     "move": "e4e5",
                     "san": "e5",
                     "human_freq": 0.488,
-                    "blurb": "Dorong maju variasi: White grabs space dan closes center.",
+                    "blurb": "Advance Variation: White merebut ruang dan menutup center.",
                     "children": [
                       {
                         "move": "c8f5",
                         "san": "Bf5",
-                        "blurb": "Develop light-squared Bishop ke luar rantai pawn sebelum playing e6.",
+                        "blurb": "Develop light-squared Bishop ke luar rantai pawn sebelum melangkah e6.",
                         "children": [
                           {
                             "move": "g1f3",
@@ -56,7 +56,7 @@
                                       {
                                         "move": "c6c5",
                                         "san": "c5",
-                                        "blurb": "Strike di base dari White's rantai pawn di d4 tanpa delay.",
+                                        "blurb": "Serang fondasi rantai pawn White di d4 tanpa menunda.",
                                         "children": [
                                           {
                                             "move": "e1g1",
@@ -77,7 +77,7 @@
                                                       {
                                                         "move": "g8e7",
                                                         "san": "Nge7",
-                                                        "blurb": "Route King's Knight ke f5 atau g6 ke pile up di d4 dan e5."
+                                                        "blurb": "Arahkan King Knight ke f5 atau g6 untuk menumpuk tekanan di d4 dan e5."
                                                       }
                                                     ]
                                                   }
@@ -139,12 +139,12 @@
                             "san": "Bd3",
                             "is_blunder": true,
                             "human_freq": 0.2307,
-                            "blurb": "Inaccurate club langkah: White voluntarily menukar off good light-squared Bishop.",
+                            "blurb": "Inaccurate club langkah: White voluntarily menukar good light-squared Bishop.",
                             "children": [
                               {
                                 "move": "f5d3",
                                 "san": "Bxd3",
-                                "blurb": "Exchange Bishop segera ke solve Black's light-petak problem.",
+                                "blurb": "Tukarkan Bishop segera untuk menyelesaikan kendala petak terang Black.",
                                 "children": [
                                   {
                                     "move": "d1d3",
@@ -154,7 +154,7 @@
                                       {
                                         "move": "e7e6",
                                         "san": "e6",
-                                        "blurb": "Lock down light petak dan bersiap Qa5+ ke Tukar Queen.",
+                                        "blurb": "Kunci petak-petak terang dan bersiap Qa5+ untuk memaksakan pertukaran Queen.",
                                         "children": [
                                           {
                                             "move": "g1f3",
@@ -164,7 +164,7 @@
                                               {
                                                 "move": "d8a5",
                                                 "san": "Qa5+",
-                                                "blurb": "Check di a5 dan bersiap Qa6 untuk memaksa a favorable Queen tukar."
+                                                "blurb": "Beri check di a5 dan bersiap Qa6 untuk memaksakan pertukaran Queen yang menguntungkan."
                                               }
                                             ]
                                           }
@@ -185,7 +185,7 @@
                               {
                                 "move": "e7e6",
                                 "san": "e6",
-                                "blurb": "Amankan d5 first dan wait ke meet g4 dengan Bg6.",
+                                "blurb": "Amankan d5 terlebih dahulu dan bersiap balas g4 dengan Bg6.",
                                 "children": [
                                   {
                                     "move": "g2g4",
@@ -195,7 +195,7 @@
                                       {
                                         "move": "f5g6",
                                         "san": "Bg6",
-                                        "blurb": "Drop Bishop back ke g6 di mana it eyes weakened kingside.",
+                                        "blurb": "Tarik mundur Bishop ke g6 di mana perwira tersebut mengincar kelemahan kingside.",
                                         "children": [
                                           {
                                             "move": "g1e2",
@@ -221,7 +221,7 @@
                             "move": "h2h4",
                             "san": "h4",
                             "human_freq": 0.066,
-                            "blurb": "Tal variasi: White tries ke Jebak f5 Bishop dengan g4.",
+                            "blurb": "Variasi Tal: White mencoba menjebak Bishop f5 dengan g4.",
                             "children": [
                               {
                                 "move": "h7h5",
@@ -236,7 +236,7 @@
                                       {
                                         "move": "f5d3",
                                         "san": "Bxd3",
-                                        "blurb": "Tukar off light-squared Bishop so White cannot build a kingside battery.",
+                                        "blurb": "Tukarkan light-squared Bishop agar White tidak dapat membangun battery di kingside.",
                                         "children": [
                                           {
                                             "move": "d1d3",
@@ -285,7 +285,7 @@
                       {
                         "move": "c6d5",
                         "san": "cxd5",
-                        "blurb": "Recapture toward center dan buka c-file dan c6 petak.",
+                        "blurb": "Recapture ke arah center dan open c-file serta petak c6.",
                         "children": [
                           {
                             "move": "c2c4",
@@ -296,7 +296,7 @@
                               {
                                 "move": "g8f6",
                                 "san": "Nf6",
-                                "blurb": "Mempertahankan d5 dengan piece dan bersiap ke blockade an isolated d-pawn.",
+                                "blurb": "Pertahankan d5 dengan perwira dan bersiap memblokade isolated d-pawn.",
                                 "children": [
                                   {
                                     "move": "b1c3",
@@ -316,7 +316,7 @@
                                               {
                                                 "move": "f8b4",
                                                 "san": "Bb4",
-                                                "blurb": "Lakukan pin pada c3 Knight ke reduce White's tekanan di d5."
+                                                "blurb": "Lakukan pin pada Knight c3 untuk mengurangi tekanan White di d5."
                                               }
                                             ]
                                           }
@@ -337,7 +337,7 @@
                               {
                                 "move": "b8c6",
                                 "san": "Nc6",
-                                "blurb": "Develop dengan tempo melawan White's d4 pawn.",
+                                "blurb": "Develop dengan tempo menyerang pawn d4 milik White.",
                                 "children": [
                                   {
                                     "move": "c2c3",
@@ -449,7 +449,7 @@
                                             "move": "h2h4",
                                             "san": "h4",
                                             "human_freq": 0.1954,
-                                            "blurb": "White advances h4 ke mengancam trapping g6 Bishop.",
+                                            "blurb": "White mendorong h4 untuk mengancam jebakan pada Bishop g6.",
                                             "children": [
                                               {
                                                 "move": "h7h6",
@@ -484,7 +484,7 @@
                                                                       {
                                                                         "move": "h7d3",
                                                                         "san": "Bxd3",
-                                                                        "blurb": "Tukar off White's aktif light-squared Bishop dan reach an ultra-solid posisi."
+                                                                        "blurb": "Tukarkan light-squared Bishop aktif milik White untuk mencapai posisi yang sangat solid."
                                                                       }
                                                                     ]
                                                                   }
@@ -504,7 +504,7 @@
                                             "move": "f1c4",
                                             "san": "Bc4",
                                             "human_freq": 0.046,
-                                            "blurb": "White mendevelop Bishop ke c4, eyeing f7.",
+                                            "blurb": "White mendevelop Bishop ke c4, mengincar f7.",
                                             "children": [
                                               {
                                                 "move": "e7e6",
@@ -550,12 +550,12 @@
                                     "san": "Nc5",
                                     "is_blunder": true,
                                     "human_freq": 0.031,
-                                    "blurb": "Greedy club sally: White eyes b7 pawn prematurely.",
+                                    "blurb": "Manuver serakah pemain klub: White mengincar pawn b7 terlalu dini.",
                                     "children": [
                                       {
                                         "move": "e7e6",
                                         "san": "e6",
-                                        "blurb": "Buka f8 Bishop's diagonal dan invite Nxb7.",
+                                        "blurb": "Buka diagonal Bishop f8 dan pancing lawan memainkan Nxb7.",
                                         "children": [
                                           {
                                             "move": "c5b7",
@@ -565,7 +565,7 @@
                                               {
                                                 "move": "d8b6",
                                                 "san": "Qb6",
-                                                "blurb": "Attack trapped b7 Knight dan merebut buka b-file.",
+                                                "blurb": "Serang Knight b7 yang terperangkap dan rebut kendali open b-file.",
                                                 "children": [
                                                   {
                                                     "move": "b7c5",
@@ -575,7 +575,7 @@
                                                       {
                                                         "move": "f8c5",
                                                         "san": "Bxc5",
-                                                        "blurb": "Habisi Knight dan shatter White's central d4 Dukung."
+                                                        "blurb": "Habisi Knight dan hancurkan tumpuan sentral d4 White."
                                                       }
                                                     ]
                                                   }
@@ -599,12 +599,12 @@
                     "move": "f2f3",
                     "san": "f3",
                     "human_freq": 0.0392,
-                    "blurb": "Fantasy variasi: White tries ke jaga an intact pawn duo di d4 dan e4.",
+                    "blurb": "Variasi Fantasy: White berupaya menjaga pasangan pawn utuh di d4 dan e4.",
                     "children": [
                       {
                         "move": "d5e4",
                         "san": "dxe4",
-                        "blurb": "Buka center segera untuk mengeksploitasi White's weakened kingside diagonal.",
+                        "blurb": "Buka center secepatnya untuk mengeksploitasi kelemahan diagonal kingside White.",
                         "children": [
                           {
                             "move": "f3e4",
@@ -614,7 +614,7 @@
                               {
                                 "move": "e7e5",
                                 "san": "e5",
-                                "blurb": "Strike back dengan 4...e5! mengancam Qh4+ dan shatter White's pawn center.",
+                                "blurb": "Serang balik dengan 4...e5! Mengancam Qh4+ dan meremukkan center pawn White.",
                                 "children": [
                                   {
                                     "move": "g1f3",
@@ -705,7 +705,7 @@
                           {
                             "move": "d2d4",
                             "san": "d4",
-                            "blurb": "Langkah Pemain Maia-3 (69.6%): White beralih ke dalam exchange Caro-Kann.",
+                            "blurb": "Langkah Pemain Maia-3 (69.6%): White beralih ke variasi Exchange Caro-Kann.",
                             "children": [
                               {
                                 "move": "b8c6",
@@ -728,7 +728,7 @@
                       {
                         "move": "c8f5",
                         "san": "Bf5",
-                        "blurb": "Develop light-squared Bishop ke luar rantai pawn sebelum playing e6.",
+                        "blurb": "Develop light-squared Bishop ke luar rantai pawn sebelum melangkah e6.",
                         "children": [
                           {
                             "move": "d2d4",
@@ -766,12 +766,12 @@
                   {
                     "move": "e4d5",
                     "san": "exd5",
-                    "blurb": "Langkah Pemain Maia-3 (94.5%): White capture di d5 untuk menghindari kehilangan a pawn.",
+                    "blurb": "Langkah Pemain Maia-3 (94.5%): White memakan di d5 untuk menghindari kehilangan pawn.",
                     "children": [
                       {
                         "move": "c6d5",
                         "san": "cxd5",
-                        "blurb": "Recapture di d5 dengan tempo melawan c4 Bishop!",
+                        "blurb": "Recapture di d5 dengan tempo menyerang Bishop c4!",
                         "children": [
                           {
                             "move": "c4b3",
@@ -862,7 +862,7 @@
                                       {
                                         "move": "e7e6",
                                         "san": "e6",
-                                        "blurb": "Clamp down di light petak dan bersiap Nf6 plus Nbd7.",
+                                        "blurb": "Kuasai petak-petak terang dan bersiap mendevelop Nf6 serta Nbd7.",
                                         "children": [
                                           {
                                             "move": "d2d4",
@@ -929,7 +929,7 @@
                                               {
                                                 "move": "g4f3",
                                                 "san": "Bxf3",
-                                                "blurb": "Tukar off Knight dan complete development dengan e6 dan Nf6."
+                                                "blurb": "Tukarkan Knight dan lengkapi development dengan langkah e6 serta Nf6."
                                               }
                                             ]
                                           }

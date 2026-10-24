@@ -7,7 +7,7 @@
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "Buka dengan King's pawn.",
+    "blurb": "Buka permainan dengan King pawn.",
     "children": [
       {
         "move": "e7e5",
@@ -48,14 +48,14 @@
                                           {
                                             "move": "f4f5",
                                             "san": "f5",
-                                            "blurb": "Clamp down di Black's kingside dan bersiap Bg5."
+                                            "blurb": "Kunci tekanan di kingside Black dan bersiap melangkah Bg5."
                                           }
                                         ],
                                         "blurb": "Black memainkan d6.",
                                         "human_freq": 0.4612
                                       }
                                     ],
-                                    "blurb": "Luncurkan delayed King's Gambit break dengan Bc4 sudah developed!"
+                                    "blurb": "Luncurkan dobrakan King Gambit yang tertunda dengan Bc4 yang sudah siap tempur!"
                                   }
                                 ],
                                 "blurb": "Black mendevelop Bc5.",
@@ -144,7 +144,7 @@
                                     "blurb": "Develop Nf3 dan bersiap d4 plus Bxf4."
                                   }
                                 ],
-                                "blurb": "Black capture di f4.",
+                                "blurb": "Black memakan di f4.",
                                 "human_freq": 0.3627
                               }
                             ],
@@ -223,7 +223,7 @@
                                             "blurb": "Dukung e5 dan bersiap Bxf4 dengan huge keunggulan development."
                                           }
                                         ],
-                                        "blurb": "Black tries untuk merusak e5.",
+                                        "blurb": "Black berupaya merusak tumpuan e5.",
                                         "human_freq": 0.3961
                                       }
                                     ],
@@ -378,7 +378,7 @@
                                 "human_freq": 0.9825
                               }
                             ],
-                            "blurb": "Capture di e5 ke displace Black's Knight!"
+                            "blurb": "Capture di e5 untuk memukul mundur Knight Black!"
                           }
                         ],
                         "blurb": "Langkah Populer Maia-3 #3 (15.4%): Black mendevelop Nc6 alih-alih d5, allowing fxe5!",
@@ -407,7 +407,7 @@
                                           {
                                             "move": "f1b5",
                                             "san": "Bb5",
-                                            "blurb": "Lakukan pin pada c6 Knight ke melindungi e5 pawn."
+                                            "blurb": "Lakukan pin pada c6 Knight untuk melindungi e5 pawn."
                                           }
                                         ],
                                         "blurb": "Black mendevelop Nc6.",
@@ -421,7 +421,7 @@
                                 "human_freq": 0.8862
                               }
                             ],
-                            "blurb": "Capture di e5 dan attack f6 Knight."
+                            "blurb": "Capture di e5 dan serang Knight f6."
                           }
                         ],
                         "blurb": "Langkah Populer Maia-3 #4 (11.0%): hanya theoretical equalizer untuk Black.",
@@ -453,7 +453,7 @@
                                             "blurb": "Double attack di e4 Knight dan g7 pawn!"
                                           }
                                         ],
-                                        "blurb": "Black takes e4.",
+                                        "blurb": "Black memakan di e4.",
                                         "human_freq": 0.9806
                                       }
                                     ],
@@ -523,7 +523,7 @@
                             "blurb": "Develop Nf3 dan bersiap Bc4 plus d4."
                           }
                         ],
-                        "blurb": "Black capture di f4.",
+                        "blurb": "Black memakan di f4.",
                         "human_freq": 0.4424
                       }
                     ],

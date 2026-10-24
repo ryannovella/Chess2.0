@@ -8,7 +8,7 @@
     "move": "e2e4",
     "san": "e4",
     "human_freq": 0.6406,
-    "blurb": "White opens dengan standard King's pawn Dorong maju.",
+    "blurb": "White membuka permainan dengan dorongan standar King pawn.",
     "children": [
       {
         "move": "e7e5",
@@ -35,7 +35,7 @@
                       {
                         "move": "e5e4",
                         "san": "e4",
-                        "blurb": "Paulsen Countergambit! dorong e4 dengan tempo ke Usir f3 Knight.",
+                        "blurb": "Paulsen Countergambit! dorong e4 dengan tempo untuk mengusir f3 Knight.",
                         "children": [
                           {
                             "move": "d1e2",
@@ -46,7 +46,7 @@
                               {
                                 "move": "g8f6",
                                 "san": "Nf6",
-                                "blurb": "Mempertahankan e4 pawn dan Develop King's Knight.",
+                                "blurb": "Pertahankan pawn e4 dan develop King Knight.",
                                 "children": [
                                   {
                                     "move": "d2d3",
@@ -106,7 +106,7 @@
                                     "move": "b1c3",
                                     "san": "Nc3",
                                     "human_freq": 0.3338,
-                                    "blurb": "White mendevelop Nc3 ke memenangkan e4 pawn.",
+                                    "blurb": "White mendevelop Nc3 untuk memenangkan e4 pawn.",
                                     "children": [
                                       {
                                         "move": "f8e7",
@@ -131,7 +131,7 @@
                                                       {
                                                         "move": "e8g8",
                                                         "san": "O-O",
-                                                        "blurb": "Castle kingside dan bersiap Re8 untuk mengeksploitasi White's Queen di e2."
+                                                        "blurb": "Castle kingside dan bersiap melangkah Re8 untuk menekan Queen White di e2."
                                                       }
                                                     ]
                                                   }
@@ -165,7 +165,7 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Develop King's Knight dan Dukung e4 wedge.",
+                                        "blurb": "Develop King Knight dan dukung pasak pawn e4.",
                                         "children": [
                                           {
                                             "move": "d1b3",
@@ -201,7 +201,7 @@
                                               {
                                                 "move": "d5e5",
                                                 "san": "Qe5",
-                                                "blurb": "Centralize Queen di e5, maintaining a strong spatial clamp."
+                                                "blurb": "Pusatkan Queen di e5 untuk mempertahankan dominasi ruang yang kokoh."
                                               }
                                             ],
                                             "human_freq": 0.6678
@@ -297,7 +297,7 @@
                                                       {
                                                         "move": "d5f5",
                                                         "san": "Qf5",
-                                                        "blurb": "Place Queen di aktif f5 di mana it eyes kingside."
+                                                        "blurb": "Tempatkan Queen di petak aktif f5 untuk mengancam sayap kingside."
                                                       }
                                                     ]
                                                   }
@@ -410,7 +410,7 @@
                                                       {
                                                         "move": "b8c6",
                                                         "san": "Nc6",
-                                                        "blurb": "Develop Knight dengan tempo melawan White's lemah e5 pawn.",
+                                                        "blurb": "Develop Knight dengan tempo menyerang pawn lemah e5 milik White.",
                                                         "children": [
                                                           {
                                                             "move": "b1c3",
@@ -446,12 +446,12 @@
                                                     "move": "h5e5",
                                                     "san": "Qxe5",
                                                     "human_freq": 0.2269,
-                                                    "blurb": "White recapture dengan Queen, inviting an early Queen tukar.",
+                                                    "blurb": "White memakan balik dengan Queen, mengundang pertukaran Queen dini.",
                                                     "children": [
                                                       {
                                                         "move": "e7e5",
                                                         "san": "Qxe5",
-                                                        "blurb": "Tukar Queen ke draw White's d-pawn onto rentan e5 petak.",
+                                                        "blurb": "Tukar Queen untuk menarik d-pawn White ke petak rentan e5.",
                                                         "children": [
                                                           {
                                                             "move": "d4e5",
@@ -531,7 +531,7 @@
                                                               {
                                                                 "move": "b7c6",
                                                                 "san": "bxc6",
-                                                                "blurb": "Recapture toward center dan buka b-file untuk Rook."
+                                                                "blurb": "Recapture ke arah center dan open b-file untuk pergerakan Rook."
                                                               }
                                                             ]
                                                           }
@@ -561,7 +561,7 @@
                                                       {
                                                         "move": "d8d1",
                                                         "san": "Qxd1+",
-                                                        "blurb": "Tukar Queen dengan check ke misplace White's piece koordinasi.",
+                                                        "blurb": "Tukar Queen dengan check untuk merusak koordinasi perwira White.",
                                                         "children": [
                                                           {
                                                             "move": "c3d1",
@@ -571,7 +571,7 @@
                                                               {
                                                                 "move": "f6g4",
                                                                 "san": "Ng4",
-                                                                "blurb": "Lompat ke g4 ke memenangkan back lemah e5 pawn."
+                                                                "blurb": "Lompat ke g4 untuk memenangkan back lemah e5 pawn."
                                                               }
                                                             ]
                                                           }
@@ -591,7 +591,7 @@
                                     "move": "f1e2",
                                     "san": "Be2",
                                     "human_freq": 0.0158,
-                                    "blurb": "Tenang development: White avoids immediate tactical complications.",
+                                    "blurb": "Development tenang: White menghindari komplikasi taktis langsung.",
                                     "children": [
                                       {
                                         "move": "g8f6",
@@ -606,7 +606,7 @@
                                               {
                                                 "move": "e8g8",
                                                 "san": "O-O",
-                                                "blurb": "Castle kingside dan bersiap untuk merusak White's d4 Dukung dengan c5.",
+                                                "blurb": "Castle kingside dan bersiap merusak tumpuan d4 White dengan dorongan c5.",
                                                 "children": [
                                                   {
                                                     "move": "b1c3",
@@ -616,7 +616,7 @@
                                                       {
                                                         "move": "c7c5",
                                                         "san": "c5",
-                                                        "blurb": "Strike di d4 base ke dissolve White's central struktur."
+                                                        "blurb": "Hantam fondasi d4 untuk meruntuhkan struktur sentral White."
                                                       }
                                                     ]
                                                   }
@@ -640,7 +640,7 @@
                               {
                                 "move": "d5e4",
                                 "san": "dxe4",
-                                "blurb": "Capture di e4 dengan tempo, chasing f3 Knight a second time!",
+                                "blurb": "Capture di e4 dengan tempo, mengusir Knight f3 untuk kedua kalinya!",
                                 "children": [
                                   {
                                     "move": "d1e2",
@@ -679,7 +679,7 @@
                             "san": "Nxf7",
                             "is_blunder": true,
                             "human_freq": 0.1698,
-                            "blurb": "Unsound club sacrifice! White gives up a full piece untuk one-langkah check.",
+                            "blurb": "Sacrifice tidak matang pemain klub! White mengorbankan satu piece penuh hanya demi check satu langkah.",
                             "children": [
                               {
                                 "move": "e8f7",
@@ -704,7 +704,7 @@
                                               {
                                                 "move": "g8f6",
                                                 "san": "Nf6",
-                                                "blurb": "Develop Knight dengan tempo melawan White's terbuka Queen.",
+                                                "blurb": "Develop Knight dengan tempo menyerang Queen White yang terbuka.",
                                                 "children": [
                                                   {
                                                     "move": "d5b3",
@@ -744,7 +744,7 @@
                                   {
                                     "move": "e5g6",
                                     "san": "Nxg6",
-                                    "blurb": "Langkah Pemain Maia-3 (64.2%): White tries a desperado capture di g6.",
+                                    "blurb": "Langkah Pemain Maia-3 (64.2%): White mencoba langkah desperado dengan capture di g6.",
                                     "children": [
                                       {
                                         "move": "f7g6",
@@ -754,7 +754,7 @@
                                           {
                                             "move": "h5d5",
                                             "san": "Qxd5",
-                                            "blurb": "Langkah Pemain Maia-3 (92.6%): White grabs d5 pawn ke salvage material.",
+                                            "blurb": "Langkah Pemain Maia-3 (92.6%): White memakan pawn d5 untuk menyelamatkan material.",
                                             "children": [
                                               {
                                                 "move": "g8f6",
@@ -783,7 +783,7 @@
                               {
                                 "move": "d5e4",
                                 "san": "dxe4",
-                                "blurb": "Capture di e4 untuk memaksa e5 Knight ke mundur.",
+                                "blurb": "Capture di e4 untuk memaksa Knight e5 mundur.",
                                 "children": [
                                   {
                                     "move": "e5c4",
@@ -874,7 +874,7 @@
                           {
                             "move": "f3e5",
                             "san": "Nxe5",
-                            "blurb": "Langkah Pemain Maia-3 (89.1%): White capture di e5.",
+                            "blurb": "Langkah Pemain Maia-3 (89.1%): White memakan di e5.",
                             "children": [
                               {
                                 "move": "f8d6",
@@ -898,7 +898,7 @@
                       {
                         "move": "d5d4",
                         "san": "d4",
-                        "blurb": "Dorong maju d4 dengan tempo ke Usir c3 Knight.",
+                        "blurb": "Dorong maju d4 dengan tempo untuk mengusir c3 Knight.",
                         "children": [
                           {
                             "move": "c3e2",
@@ -908,7 +908,7 @@
                               {
                                 "move": "f8d6",
                                 "san": "Bd6",
-                                "blurb": "Melindungi e5 pawn dan clamp down di f4 petak.",
+                                "blurb": "Lindungi pawn e5 dan kunci dominasi petak f4.",
                                 "children": [
                                   {
                                     "move": "e2g3",
@@ -939,7 +939,7 @@
                       {
                         "move": "d5e4",
                         "san": "dxe4",
-                        "blurb": "open d-file segera dan tantangan White's Knight.",
+                        "blurb": "open d-file segera dan tantang Knight White.",
                         "children": [
                           {
                             "move": "f3e5",

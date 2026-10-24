@@ -7,7 +7,7 @@
   "root": {
     "move": "d2d4",
     "san": "d4",
-    "blurb": "Buka dengan Queen's pawn.",
+    "blurb": "Buka permainan dengan Queen pawn.",
     "children": [
       {
         "move": "d7d5",
@@ -51,7 +51,7 @@
                                             "blurb": "Mundur ke c3; kini Knight a6 milik Black terdampar di pinggir papan!"
                                           }
                                         ],
-                                        "blurb": "Black kicks b5 Knight.",
+                                        "blurb": "Black mengusir Knight b5.",
                                         "human_freq": 0.6279
                                       }
                                     ],
@@ -101,7 +101,7 @@
                                     "blurb": "Capture e5 pawn dengan tempo di f6 Knight!"
                                   }
                                 ],
-                                "blurb": "Black tries ke counter-sacrifice dengan e5.",
+                                "blurb": "Black mencoba counter-sacrifice dengan e5.",
                                 "human_freq": 0.8126
                               }
                             ],
@@ -219,7 +219,7 @@
                                 "human_freq": 0.3609
                               }
                             ],
-                            "blurb": "Play e3 dan bersiap Bd3 untuk menukar off Black's light-squared Bishop."
+                            "blurb": "Mainkan e3 dan bersiap memainkan Bd3 untuk menukar light-squared Bishop Black."
                           }
                         ],
                         "blurb": "Langkah Populer Maia-3 #5 (8.5%): Black guards b5 dan c7 dengan c6.",
@@ -229,7 +229,7 @@
                     "blurb": "Jobava-London attack! mengancam Nb5 menargetkan c7 petak."
                   }
                 ],
-                "blurb": "Langkah Populer Maia-3 #1 (26.1%): Black mendevelop King's Knight.",
+                "blurb": "Langkah Populer Maia-3 #1 (26.1%): Black mendevelop King Knight.",
                 "human_freq": 0.2609
               },
               {
@@ -255,7 +255,7 @@
                                   {
                                     "move": "d4e5",
                                     "san": "dxe5",
-                                    "blurb": "Capture di e5 dan attack f6 Knight dengan menang posisi."
+                                    "blurb": "Capture di e5 dan serang Knight f6 dengan posisi menang."
                                   }
                                 ],
                                 "blurb": "Black desperately mendorong e5.",
@@ -283,7 +283,7 @@
                                   {
                                     "move": "e2e3",
                                     "san": "e3",
-                                    "blurb": "Consolidate dengan e3 dan bersiap c4 untuk mengeksploitasi Black's misplaced Rook."
+                                    "blurb": "Konsolidasi posisi dengan e3 dan bersiap melangkah c4 untuk memanfaatkan salah posisi Rook Black."
                                   }
                                 ],
                                 "blurb": "Black awkwardly mempertahankan c7 dengan Rc8.",
@@ -326,7 +326,7 @@
                                         "human_freq": 0.9947
                                       }
                                     ],
-                                    "blurb": "Eliminate Black's dark-squared Bishop dan shatter struktur pawn!"
+                                    "blurb": "Habisi dark-squared Bishop Black dan hancurkan struktur pawn lawan!"
                                   }
                                 ],
                                 "blurb": "Black memblokir c7 attack dengan Bd6.",
@@ -385,14 +385,14 @@
                                         "human_freq": 0.4153
                                       }
                                     ],
-                                    "blurb": "Develop Nd2 ke control e4 dan c4."
+                                    "blurb": "Develop Nd2 untuk mengontrol e4 dan c4."
                                   }
                                 ],
                                 "blurb": "Black mendevelop Nf6.",
                                 "human_freq": 0.3583
                               }
                             ],
-                            "blurb": "Tuck Bishop back ke g3! If Bxg3, hxg3 opens h-file untuk White's Rook."
+                            "blurb": "Amankan Bishop mundur ke g3! Jika Bxg3, maka hxg3 akan membuka h-file untuk Rook White."
                           }
                         ],
                         "blurb": "Langkah Populer Maia-3 #1 (34.0%): Black tantangan f4 Bishop segera.",
@@ -421,7 +421,7 @@
                                           {
                                             "move": "g1f3",
                                             "san": "Ngf3",
-                                            "blurb": "Plant Knight di f3 dan bersiap Bd3 plus Ne5."
+                                            "blurb": "Tempatkan Knight di f3 dan bersiap memainkan Bd3 serta Ne5."
                                           }
                                         ],
                                         "blurb": "Black mendevelop Nc6.",
@@ -507,7 +507,7 @@
                                           {
                                             "move": "c4c5",
                                             "san": "c5",
-                                            "blurb": "Lock queenside dan jebakan Black's b7 pawn di bawah fatal tekanan!"
+                                            "blurb": "Kunci sayap queenside dan letakkan pawn b7 Black di bawah tekanan fatal!"
                                           }
                                         ],
                                         "blurb": "Black counter-attack d4.",
@@ -600,10 +600,10 @@
                                         "human_freq": 0.8821
                                       }
                                     ],
-                                    "blurb": "Dorong c5 untuk memaksa Queen tukar di b6, opening a-file untuk White's Rook!"
+                                    "blurb": "Dorong c5 untuk memaksakan pertukaran Queen di b6 sembari membuka a-file untuk Rook White!"
                                   }
                                 ],
-                                "blurb": "Black offers a Queen tukar di b6.",
+                                "blurb": "Black menawarkan pertukaran Queen di b6.",
                                 "human_freq": 0.364
                               }
                             ],
@@ -701,17 +701,17 @@
                                         "human_freq": 1.0
                                       }
                                     ],
-                                    "blurb": "Tukar Queen ke displace Black's King ke d8!"
+                                    "blurb": "Tukar Queen untuk memaksa King Black bergeser ke d8!"
                                   }
                                 ],
-                                "blurb": "Black capture di e4.",
+                                "blurb": "Black memakan di e4.",
                                 "human_freq": 0.1364
                               }
                             ],
                             "blurb": "Recapture dengan Queen di center!"
                           }
                         ],
-                        "blurb": "Langkah Populer Maia-3 #2 (16.1%): Black capture di d4.",
+                        "blurb": "Langkah Populer Maia-3 #2 (16.1%): Black memakan di d4.",
                         "human_freq": 0.1613
                       }
                     ],

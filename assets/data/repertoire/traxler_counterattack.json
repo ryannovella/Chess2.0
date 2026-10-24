@@ -3,11 +3,11 @@
   "name": "Traxler Counterattack",
   "eco": "C57",
   "color": "black",
-  "description": "Fearless 4...Bc5!! counter-sacrifice melawan 4.Ng5, dragging White's King into jaring checkmate dengan 5...Bxf2+!",
+  "description": "Counter-sacrifice berani 4...Bc5!! melawan 4.Ng5, menyeret King White ke dalam jaring checkmate lewat 5...Bxf2+!",
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "White opens dengan 1.e4.",
+    "blurb": "White membuka dengan 1.e4.",
     "children": [
       {
         "move": "e7e5",
@@ -76,7 +76,7 @@
                                                                       {
                                                                         "move": "h8f8",
                                                                         "san": "Rf8",
-                                                                        "blurb": "Bring Rook ke dalam attack dengan decisive paksa!"
+                                                                        "blurb": "Bawa Rook ke dalam serangan dengan kekuatan penuh!"
                                                                       }
                                                                     ],
                                                                     "blurb": "White mundur ke f1.",
@@ -132,21 +132,21 @@
                                                                       {
                                                                         "move": "c6d4",
                                                                         "san": "Nd4",
-                                                                        "blurb": "Bring second Knight ke dalam attack dengan devastating ancaman di e2 dan f3!"
+                                                                        "blurb": "Bawa Knight kedua ke dalam serangan dengan ancaman mematikan di e2 dan f3!"
                                                                       }
                                                                     ],
-                                                                    "blurb": "White takes h8 Rook.",
+                                                                    "blurb": "White memakan Rook h8.",
                                                                     "human_freq": 0.185
                                                                   }
                                                                 ],
                                                                 "blurb": "Korbankan Knight di g3! Karena pawn h2 terkena pin ke Rook h1, balasan hxg3 akan kehilangan Qxg3+."
                                                               }
                                                             ],
-                                                            "blurb": "White tries ke blokir f2 mate dengan g3.",
+                                                            "blurb": "White berupaya memblokir ancaman mate di f2 dengan g3.",
                                                             "human_freq": 0.167
                                                           }
                                                         ],
-                                                        "blurb": "Bring Queen ke h4, mengancam Qf2# dan Nf2!"
+                                                        "blurb": "Bawa Queen ke h4, mengancam Qf2# dan Nf2!"
                                                       }
                                                     ],
                                                     "blurb": "Langkah Populer Maia-3 #1: White mundur ke g1.",
@@ -167,7 +167,7 @@
                                                               {
                                                                 "move": "e4g3",
                                                                 "san": "Nxg3",
-                                                                "blurb": "Rip buka King's shelter dengan Nxg3!"
+                                                                "blurb": "Hancurkan perisai pelindung King lawan dengan Nxg3!"
                                                               }
                                                             ],
                                                             "blurb": "White memainkan g3.",
@@ -269,11 +269,11 @@
                                                                 "blurb": "Centralize Knight di d4, mengancam Bg4 trapping White Queen!"
                                                               }
                                                             ],
-                                                            "blurb": "White capture di d5.",
+                                                            "blurb": "White memakan di d5.",
                                                             "human_freq": 0.6803
                                                           }
                                                         ],
-                                                        "blurb": "Strike center untuk membuka c8 Bishop melawan White's uncastled King!"
+                                                        "blurb": "Dobrak center untuk membuka jalur Bishop c8 melawan King White yang belum castling!"
                                                       }
                                                     ],
                                                     "blurb": "White capture h8 Rook.",
@@ -395,7 +395,7 @@
                                                     "human_freq": 0.1464
                                                   }
                                                 ],
-                                                "blurb": "Activate Rook di half-open f-file mengincar f2!"
+                                                "blurb": "Aktifkan Rook di half-open f-file untuk membidik petak f2!"
                                               }
                                             ],
                                             "blurb": "Langkah Populer Maia-3 #1: White memundurkan Bishop ke b3.",

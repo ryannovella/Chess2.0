@@ -96,10 +96,10 @@
                                                                                 "human_freq": 0.2163
                                                                               }
                                                                             ],
-                                                                            "blurb": "Recapture di d6! Black's f8 Bishop dan d8 Queen remain completely entombed."
+                                                                            "blurb": "Recapture di d6! Bishop f8 dan Queen d8 milik Black tetap terkurung rapat."
                                                                           }
                                                                         ],
-                                                                        "blurb": "Black tries untuk menukar off d6 thorn.",
+                                                                        "blurb": "Black berupaya menukar pasak duri d6.",
                                                                         "human_freq": 0.8714
                                                                       }
                                                                     ]
@@ -165,7 +165,7 @@
                                                           {
                                                             "move": "d5d6",
                                                             "san": "d6",
-                                                            "blurb": "Suffocate Black's posisi dengan d6!"
+                                                            "blurb": "Bekukan posisi Black dengan pasak pawn d6!"
                                                           }
                                                         ],
                                                         "blurb": "Black mundur ke g8.",
@@ -239,7 +239,7 @@
                                                             "blurb": "Mengancam Qxf7# dan paksa pasif concessions!"
                                                           }
                                                         ],
-                                                        "blurb": "Black tries ke break out dengan d6.",
+                                                        "blurb": "Black berupaya mendobrak posisi dengan d6.",
                                                         "human_freq": 0.338
                                                       }
                                                     ],
@@ -292,7 +292,7 @@
                                                 "human_freq": 0.0174
                                               }
                                             ],
-                                            "blurb": "Dorong maju e5 ke Usir f6 Knight!"
+                                            "blurb": "Dorong maju e5 untuk mengusir f6 Knight!"
                                           }
                                         ],
                                         "blurb": "Langkah Populer Maia-3 #2 (40.3%): Black memundurkan Knight ke g6.",
@@ -313,10 +313,10 @@
                                                   {
                                                     "move": "e1f2",
                                                     "san": "Kxf2",
-                                                    "blurb": "Capture di f2 dan paksa f6 Knight back ke g8."
+                                                    "blurb": "Capture di f2 dan paksa Knight f6 mundur kembali ke g8."
                                                   }
                                                 ],
-                                                "blurb": "Black tries a desperado di f2.",
+                                                "blurb": "Black melancarkan langkah desperado di f2.",
                                                 "human_freq": 0.2753
                                               }
                                             ],
@@ -425,7 +425,7 @@
                                         "human_freq": 0.986
                                       }
                                     ],
-                                    "blurb": "Tukar di c6 ke memenangkan a bersih central pawn dan ruin Black's struktur."
+                                    "blurb": "Tukar di c6 untuk memenangkan satu pawn sentral bersih dan merusak struktur Black."
                                   }
                                 ],
                                 "blurb": "Maia-3 Top #3 langkah manusia di langkah 4 (1.5%): Black attack e5 Knight alih-alih taking it!",
@@ -454,7 +454,7 @@
                                         "human_freq": 0.849
                                       }
                                     ],
-                                    "blurb": "Capture di c6 dengan bersih extra pawn."
+                                    "blurb": "Capture di c6 dengan keunggulan satu pawn bersih."
                                   }
                                 ],
                                 "blurb": "Maia-3 Top #4 langkah manusia di langkah 4 (1.2%): Black melakukan pin c3 alih-alih taking e5!",
@@ -483,7 +483,7 @@
                                         "human_freq": 0.842
                                       }
                                     ],
-                                    "blurb": "Capture di c6 sebelum Black can regain pawn."
+                                    "blurb": "Capture di c6 sebelum Black sempat merebut kembali pawn."
                                   }
                                 ],
                                 "blurb": "Maia-3 Top #5 langkah manusia di langkah 4 (0.8%): Black attack e5 dengan Queen.",
@@ -500,7 +500,7 @@
                                   {
                                     "move": "e5c6",
                                     "san": "Nxc6",
-                                    "blurb": "Habisi c6 Knight first sebelum capture di e4!",
+                                    "blurb": "Habisi Knight c6 terlebih dahulu sebelum memakan di e4!",
                                     "children": [
                                       {
                                         "move": "d7c6",
@@ -519,7 +519,7 @@
                                 ]
                               }
                             ],
-                            "blurb": "Halloween Gambit (4.Nxe5!?)! sacrifice a full Knight ke steamroll Black's Knight dengan d4-e5-f4."
+                            "blurb": "Halloween Gambit (4.Nxe5!?)! Korbankan satu Knight penuh untuk memukul mundur Knight Black dengan dorongan d4-e5-f4."
                           }
                         ],
                         "blurb": "Symmetrical Four Knight defense.",
