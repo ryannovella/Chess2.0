@@ -561,16 +561,16 @@ func _setup_player_turn(node: Variant) -> void:
 
 	if status_label:
 		if is_drill_mode:
-			status_label.text = "Your Turn (%s): Play the best opening move" % side_str
+			status_label.text = "Giliran Anda (%s): Mainkan move opening terbaik" % side_str
 		else:
-			status_label.text = "Play %s (%s to move)" % [node.san, side_str]
+			status_label.text = "Mainkan %s (%s to move)" % [node.san, side_str]
 		status_label.add_theme_color_override("font_color", Color(0.95, 0.96, 0.98, 1))
 
 	if blurb_label:
 		if is_drill_mode:
-			blurb_label.text = "Recall the correct opening move for this position. Tap Hint if needed."
+			blurb_label.text = "Ingat move opening yang tepat untuk posisi ini. Tekan Hint jika butuh bantuan."
 		else:
-			blurb_label.text = node.blurb if not node.blurb.is_empty() else "Play %s to follow the repertoire." % node.san
+			blurb_label.text = node.blurb if not node.blurb.is_empty() else "Mainkan %s untuk mengikuti repertoire." % node.san
 
 	if btn_hint:
 		btn_hint.disabled = false
@@ -588,7 +588,7 @@ func _setup_opponent_turn(node: Variant) -> void:
 	_set_coach_card_accent("neutral")
 
 	if status_label:
-		status_label.text = "Opponent (%s) is playing..." % opp_side
+		status_label.text = "Lawan (%s) sedang berpikir..." % opp_side
 		status_label.add_theme_color_override("font_color", Color(0.74, 0.72, 0.69, 1))
 
 	if btn_hint:
@@ -680,7 +680,7 @@ func _on_opponent_move_animation_done(node: Variant, next_state: ChessBoardState
 	if blurb_label and not node.blurb.is_empty():
 		blurb_label.text = node.blurb
 	elif node.is_blunder and blurb_label:
-		blurb_label.text = "Opponent played %s?! A common club mistake to punish." % node.san
+		blurb_label.text = "Lawan memainkan %s?! Blunder umum tingkat klub yang harus dihukum." % node.san
 
 	current_node_index += 1
 	_process_current_step()
@@ -753,7 +753,7 @@ func _handle_correct_player_move(expected_node: Variant, move: Variant) -> void:
 	_set_coach_card_accent("correct")
 
 	if status_label:
-		status_label.text = "Correct! %s" % expected_node.san
+		status_label.text = "Benar! %s" % expected_node.san
 		status_label.add_theme_color_override("font_color", Color(0.51, 0.78, 0.32, 1))
 
 	if blurb_label and not expected_node.blurb.is_empty():
@@ -798,9 +798,9 @@ func _handle_incorrect_player_move(expected_node: Variant, _move: Variant) -> vo
 
 	if status_label:
 		if is_drill_mode:
-			status_label.text = "Incorrect move. Try again, or tap Hint."
+			status_label.text = "Langkah salah (Incorrect). Coba lagi, atau tekan Hint."
 		else:
-			status_label.text = "Incorrect. Play %s to continue." % expected_node.san
+			status_label.text = "Langkah salah (Incorrect). Mainkan %s untuk lanjut." % expected_node.san
 		status_label.add_theme_color_override("font_color", Color(0.92, 0.38, 0.34, 1))
 
 	if btn_retry:
@@ -824,7 +824,7 @@ func _on_hint_pressed() -> void:
 	_show_hint_arrows(node.move_uci)
 
 	if blurb_label:
-		blurb_label.text = "Hint: Play %s. %s" % [node.san, node.blurb]
+		blurb_label.text = "Hint: Mainkan %s. %s" % [node.san, node.blurb]
 
 func _show_hint_arrows(uci: String) -> void:
 	if chess_board == null or uci.length() < 4:
@@ -857,10 +857,10 @@ func _on_line_completed() -> void:
 	_update_step_badge()
 	_set_coach_card_accent("correct")
 	if status_label:
-		status_label.text = "Line Completed! 100% Accuracy"
+		status_label.text = "Variasi Selesai! Akurasi 100%"
 		status_label.add_theme_color_override("font_color", Color(0.55, 0.82, 0.36, 1))
 	if blurb_label:
-		blurb_label.text = "Excellent reps! You have mastered this branch. Tap Next Line to continue."
+		blurb_label.text = "Reps sempurna! Anda telah menguasai variasi cabang ini. Tekan Next Line untuk melanjutkan."
 	if btn_next_line:
 		btn_next_line.disabled = false
 		TactileStyles.apply_tactile_button(btn_next_line, true, false, false)

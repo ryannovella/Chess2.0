@@ -18,13 +18,13 @@
           {
             "move": "g1f3",
             "san": "Nf3",
-            "blurb": "Develop the King's Knight with tempo, attacking the undefended e5 pawn.",
+            "blurb": "Develop the King's Knight with tempo, menyerang the undefended e5 pawn.",
             "children": [
               {
                 "move": "b8c6",
                 "san": "Nc6",
                 "human_freq": 0.6351,
-                "blurb": "Black defends e5 while developing the Queenside Knight.",
+                "blurb": "Black mempertahankan e5 while developing the Queenside Knight.",
                 "children": [
                   {
                     "move": "f1c4",
@@ -35,30 +35,30 @@
                         "move": "g8f6",
                         "san": "Nf6",
                         "human_freq": 0.308,
-                        "blurb": "Two Knights Defense. Black counter-attacks e4 instead of playing passively.",
+                        "blurb": "Two Knights Defense. Black counter-menyerang e4 instead of playing passively.",
                         "children": [
                           {
                             "move": "f3g5",
                             "san": "Ng5",
-                            "blurb": "The Knight Attack! Gang up on f7 with both the Knight and Bishop.",
+                            "blurb": "The Knight menyerang! Gang up on f7 with both the Knight and Bishop.",
                             "children": [
                               {
                                 "move": "d7d5",
                                 "san": "d5",
                                 "human_freq": 0.766,
-                                "blurb": "Black blocks the a2-g8 diagonal to intercept the attack on f7.",
+                                "blurb": "Black blocks the a2-g8 diagonal to intercept the menyerang on f7.",
                                 "children": [
                                   {
                                     "move": "e4d5",
                                     "san": "exd5",
-                                    "blurb": "Capture the d5 pawn and force Black to choose between risky recaptures or gambit sidelines.",
+                                    "blurb": "memakan the d5 pawn and force Black to choose between risky memakan balik or gambit sidelines.",
                                     "children": [
                                       {
                                         "move": "f6d5",
                                         "san": "Nxd5",
                                         "is_blunder": true,
                                         "human_freq": 0.4528,
-                                        "blurb": "Natural-looking recapture, but a serious tactical concession that allows the Fried Liver sacrifice.",
+                                        "blurb": "Natural-looking memakan balik, but a serious tactical concession that allows the Fried Liver sacrifice.",
                                         "children": [
                                           {
                                             "move": "g5f7",
@@ -74,13 +74,13 @@
                                                   {
                                                     "move": "d1f3",
                                                     "san": "Qf3+",
-                                                    "blurb": "Double attack! Check the exposed King while piling up on the pinned d5 Knight.",
+                                                    "blurb": "Double menyerang! Check the exposed King while piling up on the pinned d5 Knight.",
                                                     "children": [
                                                       {
                                                         "move": "f7e6",
                                                         "san": "Ke6",
                                                         "human_freq": 0.3908,
-                                                        "blurb": "The only fighting move: Black steps into the center to defend the d5 Knight.",
+                                                        "blurb": "The only fighting move: Black steps into the center to mempertahankan the d5 Knight.",
                                                         "children": [
                                                           {
                                                             "move": "b1c3",
@@ -91,7 +91,7 @@
                                                                 "move": "c6b4",
                                                                 "san": "Nb4",
                                                                 "human_freq": 0.3199,
-                                                                "blurb": "Main theoretical defense: Black counter-attacks c2 and bolsters d5.",
+                                                                "blurb": "Main theoretical defense: Black counter-menyerang c2 and bolsters d5.",
                                                                 "children": [
                                                                   {
                                                                     "move": "c4b3",
@@ -107,7 +107,7 @@
                                                                           {
                                                                             "move": "a2a3",
                                                                             "san": "a3",
-                                                                            "blurb": "Kick the b4 Knight away from defending the d5 square.",
+                                                                            "blurb": "Kick the b4 Knight away from mempertahankan the d5 square.",
                                                                             "children": [
                                                                               {
                                                                                 "move": "b4a6",
@@ -127,7 +127,7 @@
                                                                                           {
                                                                                             "move": "c3d5",
                                                                                             "san": "Nxd5",
-                                                                                            "blurb": "Eliminate the central defender and expose the Black King to a decisive attack."
+                                                                                            "blurb": "Eliminate the central defender and expose the Black King to a decisive menyerang."
                                                                                           }
                                                                                         ]
                                                                                       }
@@ -162,7 +162,7 @@
                                                                           {
                                                                             "move": "c1g5",
                                                                             "san": "Bg5",
-                                                                            "blurb": "Pin the e7 defender and prepare Queenside castling with check.",
+                                                                            "blurb": "Pin the e7 defender and bersiap Queenside castling with check.",
                                                                             "children": [
                                                                               {
                                                                                 "move": "h7h6",
@@ -207,7 +207,7 @@
                                                                   {
                                                                     "move": "c4d5",
                                                                     "san": "Bxd5+",
-                                                                    "blurb": "Capture the undefended d5 Knight with check!",
+                                                                    "blurb": "memakan the undefended d5 Knight with check!",
                                                                     "children": [
                                                                       {
                                                                         "move": "e6d6",
@@ -217,7 +217,7 @@
                                                                           {
                                                                             "move": "f3f7",
                                                                             "san": "Qf7",
-                                                                            "blurb": "Infiltrate with Qf7, threatening Ne4# and decisive material gain."
+                                                                            "blurb": "Infiltrate with Qf7, mengancam Ne4# and decisive material gain."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6048
@@ -241,7 +241,7 @@
                                                           {
                                                             "move": "c4d5",
                                                             "san": "Bxd5",
-                                                            "blurb": "Win the d5 Knight while threatening mate on f7.",
+                                                            "blurb": "memenangkan the d5 Knight while mengancam mate on f7.",
                                                             "children": [
                                                               {
                                                                 "move": "d8f6",
@@ -261,7 +261,7 @@
                                                                           {
                                                                             "move": "f3f6",
                                                                             "san": "Qxf6",
-                                                                            "blurb": "Trade Queens into a winning endgame with an extra pawn and ruined Black pawns."
+                                                                            "blurb": "Trade Queens into a menang endgame with an extra pawn and ruined Black pawns."
                                                                           }
                                                                         ]
                                                                       }
@@ -282,7 +282,7 @@
                                                           {
                                                             "move": "c4d5",
                                                             "san": "Bxd5+",
-                                                            "blurb": "Win the d5 Knight with check before trading Queens!",
+                                                            "blurb": "memenangkan the d5 Knight with check before trading Queens!",
                                                             "children": [
                                                               {
                                                                 "move": "c8e6",
@@ -301,7 +301,7 @@
                                                                           {
                                                                             "move": "f3f6",
                                                                             "san": "Qxf6+",
-                                                                            "blurb": "Trade Queens into a winning endgame with an extra pawn and ruined Black pawns."
+                                                                            "blurb": "Trade Queens into a menang endgame with an extra pawn and ruined Black pawns."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.8537
@@ -326,7 +326,7 @@
                                                           {
                                                             "move": "c4d5",
                                                             "san": "Bxd5+",
-                                                            "blurb": "Capture the undefended Knight with check, forcing a quick mate.",
+                                                            "blurb": "memakan the undefended Knight with check, forcing a quick mate.",
                                                             "children": [
                                                               {
                                                                 "move": "d8d5",
@@ -336,7 +336,7 @@
                                                                   {
                                                                     "move": "f3d5",
                                                                     "san": "Qxd5+",
-                                                                    "blurb": "Recapture the Queen with check; Black only has one legal block.",
+                                                                    "blurb": "memakan balik the Queen with check; Black only has one legal block.",
                                                                     "children": [
                                                                       {
                                                                         "move": "c8e6",
@@ -372,7 +372,7 @@
                                                   {
                                                     "move": "f7h8",
                                                     "san": "Nxh8",
-                                                    "blurb": "Capture the Rook in the corner; White is a full exchange and pawn ahead.",
+                                                    "blurb": "memakan the Rook in the corner; White is a full exchange and pawn ahead.",
                                                     "children": [
                                                       {
                                                         "move": "c8e6",
@@ -382,7 +382,7 @@
                                                           {
                                                             "move": "e1g1",
                                                             "san": "O-O",
-                                                            "blurb": "Castle to safety and prepare to liquidate Black's central pieces."
+                                                            "blurb": "Castle to safety and bersiap to liquidate Black's central pieces."
                                                           }
                                                         ]
                                                       }
@@ -395,7 +395,7 @@
                                           {
                                             "move": "d2d4",
                                             "san": "d4",
-                                            "blurb": "The Lolli Attack! Open the center and prepare O-O before sacrificing on f7.",
+                                            "blurb": "The Lolli menyerang! Open the center and bersiap O-O before sacrificing on f7.",
                                             "children": [
                                               {
                                                 "move": "e5d4",
@@ -445,7 +445,7 @@
                                         "move": "c6a5",
                                         "san": "Na5",
                                         "human_freq": 0.407,
-                                        "blurb": "Polerio Defense: the main grandmaster antidote, attacking the c4 Bishop.",
+                                        "blurb": "Polerio Defense: the main grandmaster antidote, menyerang the c4 Bishop.",
                                         "children": [
                                           {
                                             "move": "c4b5",
@@ -461,7 +461,7 @@
                                                   {
                                                     "move": "d5c6",
                                                     "san": "dxc6",
-                                                    "blurb": "Accept the pawn challenge and damage Black's Queenside structure.",
+                                                    "blurb": "Accept the pawn menantang and damage Black's Queenside structure.",
                                                     "children": [
                                                       {
                                                         "move": "b7c6",
@@ -512,7 +512,7 @@
                                                                                           {
                                                                                             "move": "e5d3",
                                                                                             "san": "Nxd3",
-                                                                                            "blurb": "Recapture on d3 with a solid extra pawn and safe King."
+                                                                                            "blurb": "memakan balik on d3 with a solid extra pawn and safe King."
                                                                                           }
                                                                                         ]
                                                                                       }
@@ -547,7 +547,7 @@
                                                                           {
                                                                             "move": "e1g1",
                                                                             "san": "O-O",
-                                                                            "blurb": "Castle Kingside and prepare Nc3 to target Black's offside a5 Knight."
+                                                                            "blurb": "Castle Kingside and bersiap Nc3 to target Black's offside a5 Knight."
                                                                           }
                                                                         ]
                                                                       }
@@ -572,7 +572,7 @@
                                                   {
                                                     "move": "d1e2",
                                                     "san": "Qe2",
-                                                    "blurb": "Attack the e5 pawn and pin the diagonal before trading on d7.",
+                                                    "blurb": "menyerang the e5 pawn and pin the diagonal before trading on d7.",
                                                     "children": [
                                                       {
                                                         "move": "f8d6",
@@ -592,7 +592,7 @@
                                                                   {
                                                                     "move": "b1c3",
                                                                     "san": "Nc3",
-                                                                    "blurb": "Defend the d5 extra pawn and prepare d3 plus O-O."
+                                                                    "blurb": "mempertahankan the d5 extra pawn and bersiap d3 plus O-O."
                                                                   }
                                                                 ]
                                                               }
@@ -617,7 +617,7 @@
                                           {
                                             "move": "c2c3",
                                             "san": "c3",
-                                            "blurb": "Challenge the d4 Knight immediately and force it to declare its intentions.",
+                                            "blurb": "menantang the d4 Knight immediately and force it to declare its intentions.",
                                             "children": [
                                               {
                                                 "move": "b7b5",
@@ -637,7 +637,7 @@
                                                           {
                                                             "move": "c3d4",
                                                             "san": "cxd4",
-                                                            "blurb": "Capture the Knight on d4 and emerge with a clear material advantage."
+                                                            "blurb": "memakan the Knight on d4 and emerge with a clear material advantage."
                                                           }
                                                         ]
                                                       }
@@ -658,7 +658,7 @@
                                           {
                                             "move": "c4f1",
                                             "san": "Bf1",
-                                            "blurb": "Key refutation! Retreat to f1 so both d5 and b5 remain under attack without exposing e4.",
+                                            "blurb": "Key refutation! Retreat to f1 so both d5 and b5 remain under menyerang without exposing e4.",
                                             "children": [
                                               {
                                                 "move": "f6d5",
@@ -698,7 +698,7 @@
                                 "move": "f8c5",
                                 "san": "Bc5",
                                 "human_freq": 0.1238,
-                                "blurb": "Traxler Counterattack! Black ignores f7 and prepares a violent sacrifice on f2.",
+                                "blurb": "Traxler Counterattack! Black ignores f7 and bersiap a violent sacrifice on f2.",
                                 "children": [
                                   {
                                     "move": "c4f7",
@@ -723,7 +723,7 @@
                                                   {
                                                     "move": "e1g1",
                                                     "san": "O-O",
-                                                    "blurb": "Castle Kingside to defend f2 with the Rook and consolidate the extra pawn."
+                                                    "blurb": "Castle Kingside to mempertahankan f2 with the Rook and consolidate the extra pawn."
                                                   }
                                                 ]
                                               }
@@ -765,7 +765,7 @@
                                                   {
                                                     "move": "g5e4",
                                                     "san": "Nxe4",
-                                                    "blurb": "Capture the e4 Knight safely and emerge a clean pawn ahead."
+                                                    "blurb": "memakan the e4 Knight safely and emerge a clean pawn ahead."
                                                   }
                                                 ]
                                               }
@@ -797,7 +797,7 @@
                                           {
                                             "move": "f7h8",
                                             "san": "Nxh8",
-                                            "blurb": "Capture the Rook in the corner for a decisive material lead."
+                                            "blurb": "memakan the Rook in the corner for a decisive material lead."
                                           }
                                         ]
                                       }
@@ -818,7 +818,7 @@
                           {
                             "move": "c2c3",
                             "san": "c3",
-                            "blurb": "Prepare the classical d4 pawn break to seize the center with tempo.",
+                            "blurb": "bersiap the classical d4 pawn break to merebut the center with tempo.",
                             "children": [
                               {
                                 "move": "g8f6",
@@ -828,7 +828,7 @@
                                   {
                                     "move": "d2d4",
                                     "san": "d4",
-                                    "blurb": "Strike at the center immediately, attacking the c5 Bishop and e5 pawn.",
+                                    "blurb": "Strike at the center immediately, menyerang the c5 Bishop and e5 pawn.",
                                     "children": [
                                       {
                                         "move": "e5d4",
@@ -858,7 +858,7 @@
                                                           {
                                                             "move": "e1g1",
                                                             "san": "O-O",
-                                                            "blurb": "Castle immediately and threaten to trap Black's pieces in the center.",
+                                                            "blurb": "Castle immediately and mengancam to trap Black's pieces in the center.",
                                                             "children": [
                                                               {
                                                                 "move": "b4c3",
@@ -868,7 +868,7 @@
                                                                   {
                                                                     "move": "d4d5",
                                                                     "san": "d5",
-                                                                    "blurb": "The Moller Attack! Push d5 to fork the c3 Bishop and c6 Knight."
+                                                                    "blurb": "The Moller menyerang! Push d5 to fork the c3 Bishop and c6 Knight."
                                                                   }
                                                                 ]
                                                               }
@@ -884,7 +884,7 @@
                                                           {
                                                             "move": "e4d5",
                                                             "san": "exd5",
-                                                            "blurb": "Capture on d5 and open the e-file while Black's King is still in the center.",
+                                                            "blurb": "memakan on d5 and open the e-file while Black's King is still in the center.",
                                                             "children": [
                                                               {
                                                                 "move": "f6d5",
@@ -894,7 +894,7 @@
                                                                   {
                                                                     "move": "e1g1",
                                                                     "san": "O-O",
-                                                                    "blurb": "Castle Kingside and prepare Re1+ or Bg5 with strong initiative."
+                                                                    "blurb": "Castle Kingside and bersiap Re1+ or Bg5 with strong initiative."
                                                                   }
                                                                 ]
                                                               }
@@ -945,12 +945,12 @@
                               {
                                 "move": "d7d6",
                                 "san": "d6",
-                                "blurb": "Maia-3 Top #2 Human Move (27.6%): Black supports e5 passively instead of counter-attacking with 4...Nf6.",
+                                "blurb": "Maia-3 Top #2 Human Move (27.6%): Black supports e5 passively instead of counter-menyerang with 4...Nf6.",
                                 "children": [
                                   {
                                     "move": "d2d4",
                                     "san": "d4",
-                                    "blurb": "Seize the full pawn center with tempo against the c5 Bishop.",
+                                    "blurb": "merebut the full pawn center with tempo against the c5 Bishop.",
                                     "children": [
                                       {
                                         "move": "e5d4",
@@ -969,7 +969,7 @@
                                                   {
                                                     "move": "b1c3",
                                                     "san": "Nc3",
-                                                    "blurb": "Block the check and develop with a commanding central advantage."
+                                                    "blurb": "Block the check and Develop with a commanding central advantage."
                                                   }
                                                 ],
                                                 "human_freq": 0.5075
@@ -1002,12 +1002,12 @@
                               {
                                 "move": "e5d4",
                                 "san": "exd4",
-                                "blurb": "Maia-3 Human Move (74.1%): Black captures on d4.",
+                                "blurb": "Maia-3 Human Move (74.1%): Black memakan on d4.",
                                 "children": [
                                   {
                                     "move": "f3d4",
                                     "san": "Nxd4",
-                                    "blurb": "Recapture with a dominant centralized Knight.",
+                                    "blurb": "memakan balik with a dominant centralized Knight.",
                                     "children": [
                                       {
                                         "move": "c6d4",
@@ -1040,7 +1040,7 @@
                           {
                             "move": "d2d4",
                             "san": "d4",
-                            "blurb": "Challenge e5 immediately before Black coordinates.",
+                            "blurb": "menantang e5 immediately before Black coordinates.",
                             "children": [
                               {
                                 "move": "e5d4",
@@ -1050,7 +1050,7 @@
                                   {
                                     "move": "f3d4",
                                     "san": "Nxd4",
-                                    "blurb": "Recapture on d4 with a commanding space advantage.",
+                                    "blurb": "memakan balik on d4 with a commanding space advantage.",
                                     "children": [
                                       {
                                         "move": "g8f6",
@@ -1059,7 +1059,7 @@
                                           {
                                             "move": "b1c3",
                                             "san": "Nc3",
-                                            "blurb": "Defend e4 and prepare O-O plus Bf4."
+                                            "blurb": "mempertahankan e4 and bersiap O-O plus Bf4."
                                           }
                                         ],
                                         "human_freq": 0.1067
@@ -1077,7 +1077,7 @@
                                   {
                                     "move": "c2c3",
                                     "san": "c3",
-                                    "blurb": "Support d4 and prepare Qb3 targeting both f7 and b7.",
+                                    "blurb": "Support d4 and bersiap Qb3 targeting both f7 and b7.",
                                     "children": [
                                       {
                                         "move": "e5d4",
@@ -1086,7 +1086,7 @@
                                           {
                                             "move": "d1b3",
                                             "san": "Qb3",
-                                            "blurb": "Double attack on f7 and b7! Black collapses on the light squares."
+                                            "blurb": "Double menyerang on f7 and b7! Black collapses on the light squares."
                                           }
                                         ],
                                         "human_freq": 0.2918
@@ -1115,7 +1115,7 @@
                               {
                                 "move": "d8g5",
                                 "san": "Qg5",
-                                "blurb": "Maia-3 Human Move (94.4%): Black counter-attacks e5 and g2.",
+                                "blurb": "Maia-3 Human Move (94.4%): Black counter-menyerang e5 and g2.",
                                 "children": [
                                   {
                                     "move": "c4f7",
@@ -1129,7 +1129,7 @@
                                           {
                                             "move": "e1g1",
                                             "san": "O-O",
-                                            "blurb": "Castle into safety while protecting g2; if Qxe5, Re1 pins and wins the Queen!"
+                                            "blurb": "Castle into safety while melindungi g2; if Qxe5, Re1 pins and memenangkan the Queen!"
                                           }
                                         ],
                                         "human_freq": 0.5736
@@ -1153,7 +1153,7 @@
                           {
                             "move": "d2d4",
                             "san": "d4",
-                            "blurb": "Seize central space immediately since Black placed no pressure on e4.",
+                            "blurb": "merebut central space immediately since Black placed no pressure on e4.",
                             "children": [
                               {
                                 "move": "d7d6",

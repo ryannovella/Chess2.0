@@ -79,25 +79,25 @@
                                                                         "blurb": "Open the h-file! White cannot stop Qh2# without giving up heavy material."
                                                                       }
                                                                     ],
-                                                                    "blurb": "White captures the Knight.",
+                                                                    "blurb": "White memakan the Knight.",
                                                                     "human_freq": 0.3365
                                                                   }
                                                                 ],
-                                                                "blurb": "Threaten Qh2# and leave the g4 Knight poisoned (hxg4 hxg4 opens the h-file for mate)!"
+                                                                "blurb": "mengancam Qh2# and leave the g4 Knight poisoned (hxg4 hxg4 opens the h-file for mate)!"
                                                               }
                                                             ],
                                                             "blurb": "White tries to kick the g4 Knight.",
                                                             "human_freq": 0.3611
                                                           }
                                                         ],
-                                                        "blurb": "Jump into g4, threatening Qh4 and Bxf2+!"
+                                                        "blurb": "Jump into g4, mengancam Qh4 and Bxf2+!"
                                                       }
                                                     ],
-                                                    "blurb": "White castles into the attack.",
+                                                    "blurb": "White castles into the menyerang.",
                                                     "human_freq": 0.3856
                                                   }
                                                 ],
-                                                "blurb": "Launch the h5-Ng4 probe! If White castles, Ng4 and Qd6 create a mating net."
+                                                "blurb": "Luncurkan h5-Ng4 probe! If White castles, Ng4 and Qd6 create a mating net."
                                               }
                                             ],
                                             "blurb": "Maia-3 Top #1 Human Move (34.1%): White develops Be2 to prevent Bg4/Ng4 tricks.",
@@ -136,7 +136,7 @@
                                                         "blurb": "Check on f2! White's King has only one legal square."
                                                       }
                                                     ],
-                                                    "blurb": "White greedily captures the d8 Queen.",
+                                                    "blurb": "White greedily memakan the d8 Queen.",
                                                     "human_freq": 0.7147
                                                   },
                                                   {
@@ -154,17 +154,17 @@
                                                               {
                                                                 "move": "d8d1",
                                                                 "san": "Qxd1",
-                                                                "blurb": "Capture White's Queen on d1 for a winning material advantage!"
+                                                                "blurb": "memakan White's Queen on d1 for a menang material advantage!"
                                                               }
                                                             ],
-                                                            "blurb": "White captures on f2.",
+                                                            "blurb": "White memakan on f2.",
                                                             "human_freq": 0.4278
                                                           }
                                                         ],
                                                         "blurb": "Deflect the White King from the d1 Queen with Bxf2+!"
                                                       }
                                                     ],
-                                                    "blurb": "White declines the Queen and captures the Knight on e4.",
+                                                    "blurb": "White declines the Queen and memakan the Knight on e4.",
                                                     "human_freq": 0.1656
                                                   }
                                                 ],
@@ -205,10 +205,10 @@
                                                             "human_freq": 0.3946
                                                           }
                                                         ],
-                                                        "blurb": "Double attack! Check via discovery on the d-file while threatening Qxd1."
+                                                        "blurb": "Double menyerang! Check via discovery on the d-file while mengancam Qxd1."
                                                       }
                                                     ],
-                                                    "blurb": "White captures on f2.",
+                                                    "blurb": "White memakan on f2.",
                                                     "human_freq": 0.9891
                                                   }
                                                 ],
@@ -244,21 +244,21 @@
                                                                 "blurb": "Pile up on e3 with the Queen and Knight!"
                                                               }
                                                             ],
-                                                            "blurb": "White defends e3.",
+                                                            "blurb": "White mempertahankan e3.",
                                                             "human_freq": 0.0626
                                                           }
                                                         ],
-                                                        "blurb": "Attack the weak e3 pawn and f2 square."
+                                                        "blurb": "menyerang the weak e3 pawn and f2 square."
                                                       }
                                                     ],
-                                                    "blurb": "White recaptures, opening the e1-h4 diagonal.",
+                                                    "blurb": "White memakan balik, opening the e1-h4 diagonal.",
                                                     "human_freq": 0.9982
                                                   }
                                                 ],
                                                 "blurb": "Shatter White's central structure by trading on e3!"
                                               }
                                             ],
-                                            "blurb": "Maia-3 Top #4 Human Move (11.9%): White challenges the c5 Bishop.",
+                                            "blurb": "Maia-3 Top #4 Human Move (11.9%): White menantang the c5 Bishop.",
                                             "human_freq": 0.119
                                           },
                                           {
@@ -293,7 +293,7 @@
                                         "blurb": "Develop the Bishop to c5, aiming straight at f2!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #1 Human Move (39.7%): White defends e4 with d3.",
+                                    "blurb": "Maia-3 Top #1 Human Move (39.7%): White mempertahankan e4 with d3.",
                                     "human_freq": 0.3972
                                   },
                                   {
@@ -330,18 +330,18 @@
                                                                 "blurb": "Fork the d1 Queen and f1 Rook with discovered check threats!"
                                                               }
                                                             ],
-                                                            "blurb": "White attacks the g4 Knight.",
+                                                            "blurb": "White menyerang the g4 Knight.",
                                                             "human_freq": 0.772
                                                           }
                                                         ],
-                                                        "blurb": "Bring the Queen to h4, threatening Qxh2# and Nxf2!"
+                                                        "blurb": "Bring the Queen to h4, mengancam Qxh2# and Nxf2!"
                                                       }
                                                     ],
-                                                    "blurb": "White castles to defend f2.",
+                                                    "blurb": "White castles to mempertahankan f2.",
                                                     "human_freq": 0.8147
                                                   }
                                                 ],
-                                                "blurb": "Attack f2 immediately with the Knight and Bishop!"
+                                                "blurb": "menyerang f2 immediately with the Knight and Bishop!"
                                               }
                                             ],
                                             "blurb": "Maia-3 Top #1 Human Move (30.8%): White develops Bc4, allowing Ng4!",
@@ -362,14 +362,14 @@
                                                       {
                                                         "move": "c8e6",
                                                         "san": "Be6",
-                                                        "blurb": "Complete development and prepare O-O-O with a fierce initiative."
+                                                        "blurb": "Complete development and bersiap O-O-O with a fierce initiative."
                                                       }
                                                     ],
-                                                    "blurb": "White defends f2 and e4.",
+                                                    "blurb": "White mempertahankan f2 and e4.",
                                                     "human_freq": 0.4392
                                                   }
                                                 ],
-                                                "blurb": "Threaten Qxf2# and attack the e4 pawn simultaneously!"
+                                                "blurb": "mengancam Qxf2# and menyerang the e4 pawn simultaneously!"
                                               }
                                             ],
                                             "blurb": "Maia-3 Top #2 Human Move (20.6%): White prevents Ng4.",
@@ -390,14 +390,14 @@
                                                       {
                                                         "move": "h7h5",
                                                         "san": "h5",
-                                                        "blurb": "Prepare Ng4 and Qe5 with a dangerous Kingside storm."
+                                                        "blurb": "bersiap Ng4 and Qe5 with a dangerous Kingside storm."
                                                       }
                                                     ],
                                                     "blurb": "White castles out of the mate threat.",
                                                     "human_freq": 0.9693
                                                   }
                                                 ],
-                                                "blurb": "Threaten Qxf2# and force White into passive defense!"
+                                                "blurb": "mengancam Qxf2# and force White into passive defense!"
                                               }
                                             ],
                                             "blurb": "Maia-3 Top #3 Human Move (16.1%): White develops Be2.",
@@ -418,14 +418,14 @@
                                                       {
                                                         "move": "d8d6",
                                                         "san": "Qd6",
-                                                        "blurb": "Unpin and prepare Ng4 or Bxc3+"
+                                                        "blurb": "Unpin and bersiap Ng4 or Bxc3+"
                                                       }
                                                     ],
                                                     "blurb": "White pins f6.",
                                                     "human_freq": 0.2514
                                                   }
                                                 ],
-                                                "blurb": "Capture the d4 pawn with tempo!"
+                                                "blurb": "memakan the d4 pawn with tempo!"
                                               }
                                             ],
                                             "blurb": "Maia-3 Human Move (4.6%): White sacrifices d4 to blunt c5.",
@@ -435,7 +435,7 @@
                                         "blurb": "Develop Bc5 and eye f2."
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #2 Human Move (29.0%): White defends e4 with Nc3.",
+                                    "blurb": "Maia-3 Top #2 Human Move (29.0%): White mempertahankan e4 with Nc3.",
                                     "human_freq": 0.2904
                                   },
                                   {
@@ -469,24 +469,24 @@
                                                               {
                                                                 "move": "d8d1",
                                                                 "san": "Qxd1",
-                                                                "blurb": "Win White's Queen cleanly on d1!"
+                                                                "blurb": "memenangkan White's Queen cleanly on d1!"
                                                               }
                                                             ],
-                                                            "blurb": "White must capture the Bishop.",
+                                                            "blurb": "White must memakan the Bishop.",
                                                             "human_freq": 0.1771
                                                           }
                                                         ],
                                                         "blurb": "Deflect the White King from the d1 Queen with check!"
                                                       }
                                                     ],
-                                                    "blurb": "White captures the Knight.",
+                                                    "blurb": "White memakan the Knight.",
                                                     "human_freq": 0.626
                                                   }
                                                 ],
-                                                "blurb": "Counter-attack f2! If White takes on e4, Bxf2+ wins the d1 Queen!"
+                                                "blurb": "Counter-menyerang f2! If White takes on e4, Bxf2+ memenangkan the d1 Queen!"
                                               }
                                             ],
-                                            "blurb": "Maia-3 Top #1 Human Move (28.0%): Blunder! White attacks the e4 Knight, walking into Bc5!",
+                                            "blurb": "Maia-3 Top #1 Human Move (28.0%): Blunder! White menyerang the e4 Knight, walking into Bc5!",
                                             "is_blunder": true,
                                             "human_freq": 0.28
                                           },
@@ -505,14 +505,14 @@
                                                       {
                                                         "move": "c8f5",
                                                         "san": "Bf5",
-                                                        "blurb": "Develop Bf5 and prepare O-O-O plus c5."
+                                                        "blurb": "Develop Bf5 and bersiap O-O-O plus c5."
                                                       }
                                                     ],
-                                                    "blurb": "White defends f2 with Be3.",
+                                                    "blurb": "White mempertahankan f2 with Be3.",
                                                     "human_freq": 0.2188
                                                   }
                                                 ],
-                                                "blurb": "Threaten Qxf2# immediately!"
+                                                "blurb": "mengancam Qxf2# immediately!"
                                               }
                                             ],
                                             "blurb": "Maia-3 Top #2 Human Move (27.9%): White blocks the c5 diagonal with d4.",
@@ -540,10 +540,10 @@
                                                     "human_freq": 0.6689
                                                   }
                                                 ],
-                                                "blurb": "Defend the e4 outpost with Bf5."
+                                                "blurb": "mempertahankan the e4 outpost with Bf5."
                                               }
                                             ],
-                                            "blurb": "Maia-3 Top #3 Human Move (15.3%): White attacks the e4 Knight with Qe2.",
+                                            "blurb": "Maia-3 Top #3 Human Move (15.3%): White menyerang the e4 Knight with Qe2.",
                                             "human_freq": 0.153
                                           }
                                         ],
@@ -568,14 +568,14 @@
                                               {
                                                 "move": "f6g4",
                                                 "san": "Ng4",
-                                                "blurb": "Attack f2 and h2 with a fierce Kingside assault!"
+                                                "blurb": "menyerang f2 and h2 with a fierce Kingside assault!"
                                               }
                                             ],
                                             "blurb": "White castles.",
                                             "human_freq": 0.4046
                                           }
                                         ],
-                                        "blurb": "Develop Bc5 and prepare Ng4 or Nxe4."
+                                        "blurb": "Develop Bc5 and bersiap Ng4 or Nxe4."
                                       }
                                     ],
                                     "blurb": "Maia-3 Top #4 Human Move (4.2%): White develops Bc4 leaving e4 undefended!",
@@ -597,17 +597,17 @@
                                               {
                                                 "move": "f6h5",
                                                 "san": "Nh5",
-                                                "blurb": "Threaten Qh4+! White's Kingside is critically weak."
+                                                "blurb": "mengancam Qh4+! White's Kingside is critically weak."
                                               }
                                             ],
                                             "blurb": "White develops Nc3.",
                                             "human_freq": 0.1258
                                           }
                                         ],
-                                        "blurb": "Lock White's King in the center by seizing the a7-g1 diagonal!"
+                                        "blurb": "Lock White's King in the center by merebut the a7-g1 diagonal!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #5 Human Move (3.1%): White defends e4 with f3, weakening the King's diagonal!",
+                                    "blurb": "Maia-3 Top #5 Human Move (3.1%): White mempertahankan e4 with f3, weakening the King's diagonal!",
                                     "is_blunder": true,
                                     "human_freq": 0.0307
                                   },
@@ -626,21 +626,21 @@
                                               {
                                                 "move": "d8h4",
                                                 "san": "Qh4",
-                                                "blurb": "Counter-attack f2 before moving the Knight!"
+                                                "blurb": "Counter-menyerang f2 before moving the Knight!"
                                               }
                                             ],
-                                            "blurb": "White attacks the e4 Knight.",
+                                            "blurb": "White menyerang the e4 Knight.",
                                             "human_freq": 0.1823
                                           }
                                         ],
-                                        "blurb": "Capture the undefended e4 pawn with tempo!"
+                                        "blurb": "memakan the undefended e4 pawn with tempo!"
                                       }
                                     ],
                                     "blurb": "Maia-3 Top #6 Human Move (2.0%): White pushes d4 immediately.",
                                     "human_freq": 0.0203
                                   }
                                 ],
-                                "blurb": "Recapture toward the center! Both Bishops and the d8 Queen now have wide-open lines."
+                                "blurb": "memakan balik toward the center! Both Bishops and the d8 Queen now have wide-open lines."
                               }
                             ],
                             "blurb": "White accepts the Knight trade on c6.",
@@ -650,14 +650,14 @@
                         "blurb": "The Stafford Gambit! Offer a pawn to open the d-file and c8-h3/a7-g1 diagonals."
                       }
                     ],
-                    "blurb": "Maia-3 Top #1 Human Move: White captures the e5 pawn.",
+                    "blurb": "Maia-3 Top #1 Human Move: White memakan the e5 pawn.",
                     "human_freq": 0.3286
                   }
                 ],
-                "blurb": "Petrov Defense! Counter-attack White's e4 pawn to bait 3.Nxe5."
+                "blurb": "Petrov Defense! Counter-menyerang White's e4 pawn to bait 3.Nxe5."
               }
             ],
-            "blurb": "White attacks e5.",
+            "blurb": "White menyerang e5.",
             "human_freq": 0.6221
           }
         ],

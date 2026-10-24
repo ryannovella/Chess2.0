@@ -7,7 +7,7 @@
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "Open with the King's pawn.",
+    "blurb": "Buka dengan King's pawn.",
     "children": [
       {
         "move": "e7e5",
@@ -56,7 +56,7 @@
                                                   {
                                                     "move": "c1f4",
                                                     "san": "Bxf4",
-                                                    "blurb": "Recapture the f4 gambit pawn with a superior center and piece activity."
+                                                    "blurb": "memakan balik the f4 gambit pawn with a superior center and piece activity."
                                                   }
                                                 ],
                                                 "blurb": "Black pins the c3 Knight.",
@@ -66,21 +66,21 @@
                                             "blurb": "Develop Nc3 with tempo against the d5 Queen!"
                                           }
                                         ],
-                                        "blurb": "Black recaptures with the Queen.",
+                                        "blurb": "Black memakan balik with the Queen.",
                                         "human_freq": 0.9498
                                       }
                                     ],
-                                    "blurb": "Capture on d5 to drag the Queen out."
+                                    "blurb": "memakan on d5 to drag the Queen out."
                                   }
                                 ],
                                 "blurb": "Black strikes back in the center.",
                                 "human_freq": 0.2928
                               }
                             ],
-                            "blurb": "Seize the full center with d4 and threaten d5."
+                            "blurb": "merebut the full center with d4 and mengancam d5."
                           }
                         ],
-                        "blurb": "Maia-3 Top #1 Human Move (20.7%): Club players most frequently develop Nc6.",
+                        "blurb": "Maia-3 Top #1 Human Move (20.7%): Club players most frequently Develop Nc6.",
                         "human_freq": 0.2068
                       },
                       {
@@ -117,14 +117,14 @@
                                                     "blurb": "Regain the piece on g4 with an extra pawn and an exposed Black King."
                                                   }
                                                 ],
-                                                "blurb": "Black captures the Knight.",
+                                                "blurb": "Black memakan the Knight.",
                                                 "human_freq": 0.8787
                                               }
                                             ],
-                                            "blurb": "Unleash the discovered attack on the g4 Bishop with check!"
+                                            "blurb": "Unleash the discovered menyerang on the g4 Bishop with check!"
                                           }
                                         ],
-                                        "blurb": "Black captures the Bishop.",
+                                        "blurb": "Black memakan the Bishop.",
                                         "human_freq": 0.9306
                                       }
                                     ],
@@ -158,31 +158,31 @@
                                                   {
                                                     "move": "c2c3",
                                                     "san": "c3",
-                                                    "blurb": "Reinforce d4 and prepare Qb3 targeting f7 and b7."
+                                                    "blurb": "Reinforce d4 and bersiap Qb3 targeting f7 and b7."
                                                   }
                                                 ],
                                                 "blurb": "Black fianchettoes the Bishop.",
                                                 "human_freq": 0.391
                                               }
                                             ],
-                                            "blurb": "Castle Kingside and prepare g3 to break up Black's overextended Kingside."
+                                            "blurb": "Castle Kingside and bersiap g3 to break up Black's overextended Kingside."
                                           }
                                         ],
-                                        "blurb": "Black defends the f4 pawn.",
+                                        "blurb": "Black mempertahankan the f4 pawn.",
                                         "human_freq": 0.4581
                                       }
                                     ],
-                                    "blurb": "Claim the center and prepare Bxf4."
+                                    "blurb": "Claim the center and bersiap Bxf4."
                                   }
                                 ],
-                                "blurb": "Black prevents Ng5 and prepares g5.",
+                                "blurb": "Black prevents Ng5 and bersiap g5.",
                                 "human_freq": 0.1815
                               }
                             ],
                             "blurb": "Target the f7 square immediately."
                           }
                         ],
-                        "blurb": "Maia-3 Top #2 Human Move (14.7%): Fischer Defense, controlling e5 and preparing Bg4.",
+                        "blurb": "Maia-3 Top #2 Human Move (14.7%): Fischer Defense, controlling e5 and mempersiapkan Bg4.",
                         "human_freq": 0.1468
                       },
                       {
@@ -224,31 +224,31 @@
                                                           {
                                                             "move": "d2d3",
                                                             "san": "d3",
-                                                            "blurb": "Open the c1 Bishop to capture on f4 with an overwhelming lead in development."
+                                                            "blurb": "Open the c1 Bishop to memakan on f4 with an overwhelming lead in development."
                                                           }
                                                         ],
-                                                        "blurb": "Black captures the e5 pawn.",
+                                                        "blurb": "Black memakan the e5 pawn.",
                                                         "human_freq": 0.4772
                                                       }
                                                     ],
                                                     "blurb": "Clear the e4 square and deflect the f6 Queen!"
                                                   }
                                                 ],
-                                                "blurb": "Black defends f4 with the Queen.",
+                                                "blurb": "Black mempertahankan f4 with the Queen.",
                                                 "human_freq": 0.3159
                                               }
                                             ],
-                                            "blurb": "Recapture with the Queen, creating a triple battery on the f-file against f4 and f7!"
+                                            "blurb": "memakan balik with the Queen, creating a triple battery on the f-file against f4 and f7!"
                                           }
                                         ],
                                         "blurb": "Black accepts the Knight sacrifice.",
                                         "human_freq": 0.9009
                                       }
                                     ],
-                                    "blurb": "The Muzio Gambit! Leave the f3 Knight to be captured in exchange for a devastating f-file attack."
+                                    "blurb": "The Muzio Gambit! Leave the f3 Knight to be captured in exchange for a devastating f-file menyerang."
                                   }
                                 ],
-                                "blurb": "Maia-3 Human Move: Black attacks the f3 Knight with g4.",
+                                "blurb": "Maia-3 Human Move: Black menyerang the f3 Knight with g4.",
                                 "human_freq": 0.2886
                               },
                               {
@@ -266,14 +266,14 @@
                                           {
                                             "move": "e1g1",
                                             "san": "O-O",
-                                            "blurb": "Castle Kingside and prepare a timely g3 break."
+                                            "blurb": "Castle Kingside and bersiap a timely g3 break."
                                           }
                                         ],
                                         "blurb": "Black supports the pawn chain.",
                                         "human_freq": 0.3063
                                       }
                                     ],
-                                    "blurb": "Control the center and prepare c3 plus O-O."
+                                    "blurb": "Kuasai center and bersiap c3 plus O-O."
                                   }
                                 ],
                                 "blurb": "Becker/Classical setup avoiding 4...g4.",
@@ -312,11 +312,11 @@
                                             "blurb": "Develop actively and target f7."
                                           }
                                         ],
-                                        "blurb": "Black challenges the e5 spearhead.",
+                                        "blurb": "Black menantang the e5 spearhead.",
                                         "human_freq": 0.3236
                                       }
                                     ],
-                                    "blurb": "Seize the center and threaten Be2 trapping orwinning the f4 pawn."
+                                    "blurb": "merebut the center and mengancam Be2 trapping orwinning the f4 pawn."
                                   }
                                 ],
                                 "blurb": "Black moves the Knight to h5 to guard f4.",
@@ -326,7 +326,7 @@
                             "blurb": "Advance e5 with tempo to drive the Knight to the rim!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #4 Human Move (12.0%): Schallopp Defense attacking e4.",
+                        "blurb": "Maia-3 Top #4 Human Move (12.0%): Schallopp Defense menyerang e4.",
                         "human_freq": 0.1195
                       },
                       {
@@ -352,7 +352,7 @@
                                           {
                                             "move": "f1c4",
                                             "san": "Bc4",
-                                            "blurb": "Develop the Bishop to c4 and prepare d4 plus Bxf4."
+                                            "blurb": "Develop the Bishop to c4 and bersiap d4 plus Bxf4."
                                           }
                                         ],
                                         "blurb": "Black retreats the Queen.",
@@ -362,7 +362,7 @@
                                     "blurb": "Develop with tempo against the d5 Queen!"
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #1 Human Move: Black recaptures with the Queen.",
+                                "blurb": "Maia-3 Top #1 Human Move: Black memakan balik with the Queen.",
                                 "human_freq": 0.7834
                               },
                               {
@@ -391,11 +391,11 @@
                                                     "blurb": "Retreat to the active a2-g8 diagonal targeting f7."
                                                   }
                                                 ],
-                                                "blurb": "Black recaptures.",
+                                                "blurb": "Black memakan balik.",
                                                 "human_freq": 0.5143
                                               }
                                             ],
-                                            "blurb": "Capture on c6."
+                                            "blurb": "memakan on c6."
                                           }
                                         ],
                                         "blurb": "Black blocks with c6.",
@@ -405,11 +405,11 @@
                                     "blurb": "Throw in Bb5+ to disrupt Black's coordination."
                                   }
                                 ],
-                                "blurb": "Black develops Nf6 to recapture on d5 with the Knight.",
+                                "blurb": "Black develops Nf6 to memakan balik on d5 with the Knight.",
                                 "human_freq": 0.0908
                               }
                             ],
-                            "blurb": "Capture on d5 to prevent Black from establishing a central presence."
+                            "blurb": "memakan on d5 to prevent Black from establishing a central presence."
                           }
                         ],
                         "blurb": "Maia-3 Top #5 Human Move (9.3%): Modern Defense striking back in the center.",
@@ -438,7 +438,7 @@
                                           {
                                             "move": "d2d4",
                                             "san": "d4",
-                                            "blurb": "Seize the full center and threaten Bxf4."
+                                            "blurb": "merebut the full center and mengancam Bxf4."
                                           }
                                         ],
                                         "blurb": "Black opens the c8 Bishop.",
@@ -455,11 +455,11 @@
                             "blurb": "Develop Bc4 and meet 4...Bh4+ with 5.Kf1."
                           }
                         ],
-                        "blurb": "Maia-3 Top #6 Human Move (7.0%): Cunningham Defense preparing Bh4+.",
+                        "blurb": "Maia-3 Top #6 Human Move (7.0%): Cunningham Defense mempersiapkan Bh4+.",
                         "human_freq": 0.0766
                       }
                     ],
-                    "blurb": "Develop the King's Knight to prevent Qh4+ and prepare d4."
+                    "blurb": "Develop the King's Knight to prevent Qh4+ and bersiap d4."
                   }
                 ],
                 "blurb": "Maia-3 Top #1 Human Move (43.4%): King's Gambit Accepted!",
@@ -496,14 +496,14 @@
                                           {
                                             "move": "b1c3",
                                             "san": "Nc3",
-                                            "blurb": "Gain tempo on the d5 Queen and prepare Bxf4."
+                                            "blurb": "Gain tempo on the d5 Queen and bersiap Bxf4."
                                           }
                                         ],
-                                        "blurb": "Black recaptures with the Queen.",
+                                        "blurb": "Black memakan balik with the Queen.",
                                         "human_freq": 0.9345
                                       }
                                     ],
-                                    "blurb": "Capture on d5."
+                                    "blurb": "memakan on d5."
                                   }
                                 ],
                                 "blurb": "Black strikes at the center.",
@@ -513,7 +513,7 @@
                             "blurb": "Occupy the center immediately with d4."
                           }
                         ],
-                        "blurb": "Black belatedly captures on f4, transposing to KGA.",
+                        "blurb": "Black belatedly memakan on f4, transposing to KGA.",
                         "human_freq": 0.291
                       },
                       {
@@ -539,7 +539,7 @@
                                           {
                                             "move": "e5d6",
                                             "san": "exd6",
-                                            "blurb": "Capture on d6 with a strong central wedge."
+                                            "blurb": "memakan on d6 with a strong central wedge."
                                           }
                                         ],
                                         "blurb": "Black retreats the Bishop.",
@@ -549,11 +549,11 @@
                                     "blurb": "Fork the c5 Bishop and e5 center!"
                                   }
                                 ],
-                                "blurb": "Black challenges e5.",
+                                "blurb": "Black menantang e5.",
                                 "human_freq": 0.3415
                               }
                             ],
-                            "blurb": "Capture on e5 now that Black's c5 Bishop can be hit with d4!"
+                            "blurb": "memakan on e5 now that Black's c5 Bishop can be hit with d4!"
                           }
                         ],
                         "blurb": "Black develops Bc5, declining the gambit.",
@@ -563,7 +563,7 @@
                     "blurb": "Develop the King's Knight and increase pressure on e5."
                   }
                 ],
-                "blurb": "Maia-3 Top #2 Human Move (22.9%): Club players frequently defend e5 with Nc6.",
+                "blurb": "Maia-3 Top #2 Human Move (22.9%): Club players frequently mempertahankan e5 with Nc6.",
                 "human_freq": 0.2294
               },
               {
@@ -596,7 +596,7 @@
                                 "human_freq": 0.2974
                               }
                             ],
-                            "blurb": "Develop Bc4 and prepare d3 plus O-O."
+                            "blurb": "Develop Bc4 and bersiap d3 plus O-O."
                           }
                         ],
                         "blurb": "Black maintains the tension with Nc6.",
@@ -617,21 +617,21 @@
                                   {
                                     "move": "d2d4",
                                     "san": "d4",
-                                    "blurb": "Establish the ideal d4-e4 center and prepare Bxf4."
+                                    "blurb": "Establish the ideal d4-e4 center and bersiap Bxf4."
                                   }
                                 ],
                                 "blurb": "Black develops Nc6.",
                                 "human_freq": 0.0841
                               }
                             ],
-                            "blurb": "Develop Bc4 aiming at f7."
+                            "blurb": "Develop Bc4 mengincar f7."
                           }
                         ],
-                        "blurb": "Black surrenders the center by capturing on f4.",
+                        "blurb": "Black surrenders the center by memakan on f4.",
                         "human_freq": 0.1664
                       }
                     ],
-                    "blurb": "Develop Nf3 and attack e5."
+                    "blurb": "Develop Nf3 and menyerang e5."
                   }
                 ],
                 "blurb": "Maia-3 Top #3 Human Move (13.3%): Passive Philidor-style defense of e5.",
@@ -668,14 +668,14 @@
                                           {
                                             "move": "f1e2",
                                             "san": "Be2",
-                                            "blurb": "Block the check and prepare O-O plus Re1 pinning the e6 Queen!"
+                                            "blurb": "Block the check and bersiap O-O plus Re1 pinning the e6 Queen!"
                                           }
                                         ],
-                                        "blurb": "Black captures on f4 with discovered check.",
+                                        "blurb": "Black memakan on f4 with discovered check.",
                                         "human_freq": 0.6971
                                       }
                                     ],
-                                    "blurb": "Block the e-file check and prepare fxe5."
+                                    "blurb": "Block the e-file check and bersiap fxe5."
                                   }
                                 ],
                                 "blurb": "Black retreats the Queen to e6.",
@@ -685,7 +685,7 @@
                             "blurb": "Develop Nc3 with tempo on the d5 Queen."
                           }
                         ],
-                        "blurb": "Maia-3 Top #1 Human Move (31.7%): Black recaptures with the Queen.",
+                        "blurb": "Maia-3 Top #1 Human Move (31.7%): Black memakan balik with the Queen.",
                         "human_freq": 0.3173
                       },
                       {
@@ -711,7 +711,7 @@
                                           {
                                             "move": "f1e2",
                                             "san": "Be2",
-                                            "blurb": "Interpose with Be2 and prepare O-O."
+                                            "blurb": "Interpose with Be2 and bersiap O-O."
                                           }
                                         ],
                                         "blurb": "Black checks on e6.",
@@ -721,14 +721,14 @@
                                     "blurb": "Gain tempo against the d5 Queen."
                                   }
                                 ],
-                                "blurb": "Black recaptures on d5 with the Queen.",
+                                "blurb": "Black memakan balik on d5 with the Queen.",
                                 "human_freq": 0.3284
                               }
                             ],
                             "blurb": "Develop Nf3 and prevent Qh4+."
                           }
                         ],
-                        "blurb": "Maia-3 Top #2 Human Move (30.4%): Black captures on f4.",
+                        "blurb": "Maia-3 Top #2 Human Move (30.4%): Black memakan on f4.",
                         "human_freq": 0.3039
                       },
                       {
@@ -754,17 +754,17 @@
                                           {
                                             "move": "g1f3",
                                             "san": "Nf3",
-                                            "blurb": "Develop Nf3 to prevent Qh4+ and prepare Bd3."
+                                            "blurb": "Develop Nf3 to prevent Qh4+ and bersiap Bd3."
                                           }
                                         ],
-                                        "blurb": "Black recaptures with the Knight.",
+                                        "blurb": "Black memakan balik with the Knight.",
                                         "human_freq": 0.8989
                                       }
                                     ],
                                     "blurb": "Eliminate the e4 thorn."
                                   }
                                 ],
-                                "blurb": "Black defends e4.",
+                                "blurb": "Black mempertahankan e4.",
                                 "human_freq": 0.3088
                               }
                             ],
@@ -775,7 +775,7 @@
                         "human_freq": 0.2773
                       }
                     ],
-                    "blurb": "Always capture the d5 pawn, never the e5 pawn!"
+                    "blurb": "Always memakan the d5 pawn, never the e5 pawn!"
                   }
                 ],
                 "blurb": "Maia-3 Top #4 Human Move (7.3%): Falkbeer Countergambit!",
@@ -812,28 +812,28 @@
                                           {
                                             "move": "f3e5",
                                             "san": "Nxe5",
-                                            "blurb": "Capture the e5 pawn! If Nxe4, Qa4+ forks the King and e4 Knight."
+                                            "blurb": "memakan the e5 pawn! If Nxe4, Qa4+ forks the King and e4 Knight."
                                           }
                                         ],
-                                        "blurb": "Black recaptures.",
+                                        "blurb": "Black memakan balik.",
                                         "human_freq": 0.683
                                       }
                                     ],
                                     "blurb": "Exchange on e5 before pushing d4."
                                   }
                                 ],
-                                "blurb": "Black attacks e4.",
+                                "blurb": "Black menyerang e4.",
                                 "human_freq": 0.2518
                               }
                             ],
-                            "blurb": "Prepare d4 to overrun the center with tempo against c5!"
+                            "blurb": "bersiap d4 to overrun the center with tempo against c5!"
                           }
                         ],
                         "blurb": "Maia-3 Top #1 Human Move (39.8%): Black supports the c5 Bishop and e5 pawn.",
                         "human_freq": 0.3979
                       }
                     ],
-                    "blurb": "Develop the Knight and prepare c3-d4."
+                    "blurb": "Develop Knight and bersiap c3-d4."
                   }
                 ],
                 "blurb": "Maia-3 Top #5 Human Move (3.0%): Classical King's Gambit Declined.",

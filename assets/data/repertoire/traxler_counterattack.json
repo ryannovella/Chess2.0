@@ -76,17 +76,17 @@
                                                                       {
                                                                         "move": "h8f8",
                                                                         "san": "Rf8",
-                                                                        "blurb": "Bring the Rook into the attack with decisive force!"
+                                                                        "blurb": "Bring the Rook into the menyerang with decisive force!"
                                                                       }
                                                                     ],
                                                                     "blurb": "White retreats to f1.",
                                                                     "human_freq": 0.3979
                                                                   }
                                                                 ],
-                                                                "blurb": "Attack the f3 Queen and c2 square simultaneously!"
+                                                                "blurb": "menyerang the f3 Queen and c2 square simultaneously!"
                                                               }
                                                             ],
-                                                            "blurb": "White defends f2 with Qf3.",
+                                                            "blurb": "White mempertahankan f2 with Qf3.",
                                                             "human_freq": 0.4707
                                                           },
                                                           {
@@ -132,7 +132,7 @@
                                                                       {
                                                                         "move": "c6d4",
                                                                         "san": "Nd4",
-                                                                        "blurb": "Bring the second Knight into the attack with devastating threats on e2 and f3!"
+                                                                        "blurb": "Bring the second Knight into the menyerang with devastating threats on e2 and f3!"
                                                                       }
                                                                     ],
                                                                     "blurb": "White takes the h8 Rook.",
@@ -146,7 +146,7 @@
                                                             "human_freq": 0.167
                                                           }
                                                         ],
-                                                        "blurb": "Bring the Queen to h4, threatening Qf2# and Nf2!"
+                                                        "blurb": "Bring the Queen to h4, mengancam Qf2# and Nf2!"
                                                       }
                                                     ],
                                                     "blurb": "Maia-3 Top #1 Human Move: White retreats to g1.",
@@ -174,10 +174,10 @@
                                                             "human_freq": 0.1724
                                                           }
                                                         ],
-                                                        "blurb": "Attack the exposed King on e3 with Qh4!"
+                                                        "blurb": "menyerang the exposed King on e3 with Qh4!"
                                                       }
                                                     ],
-                                                    "blurb": "White steps forward to e3 to defend the g5 square.",
+                                                    "blurb": "White steps forward to e3 to mempertahankan the g5 square.",
                                                     "human_freq": 0.1979
                                                   },
                                                   {
@@ -198,11 +198,11 @@
                                                                 "blurb": "Fork the f1 King, f3 Queen, and c4 Bishop!"
                                                               }
                                                             ],
-                                                            "blurb": "White defends f2.",
+                                                            "blurb": "White mempertahankan f2.",
                                                             "human_freq": 0.612
                                                           }
                                                         ],
-                                                        "blurb": "Threaten Qf2# immediately!"
+                                                        "blurb": "mengancam Qf2# immediately!"
                                                       }
                                                     ],
                                                     "blurb": "White retreats to f1.",
@@ -223,7 +223,7 @@
                                                               {
                                                                 "move": "d8h4",
                                                                 "san": "Qh4",
-                                                                "blurb": "Threaten Qf4+ and Nxg5 with a winning attack!"
+                                                                "blurb": "mengancam Qf4+ and Nxg5 with a menang menyerang!"
                                                               }
                                                             ],
                                                             "blurb": "White steps to e3.",
@@ -237,7 +237,7 @@
                                                     "human_freq": 0.0564
                                                   }
                                                 ],
-                                                "blurb": "Capture on e4 with check, dragging White's King into a mating net!"
+                                                "blurb": "memakan on e4 with check, dragging White's King into a mating net!"
                                               }
                                             ],
                                             "blurb": "Maia-3 Top #1 Human Move (57.3%): White accepts the Bishop on f2.",
@@ -266,21 +266,21 @@
                                                               {
                                                                 "move": "c6d4",
                                                                 "san": "Nd4",
-                                                                "blurb": "Centralize the Knight on d4, threatening Bg4 trapping the White Queen!"
+                                                                "blurb": "Centralize the Knight on d4, mengancam Bg4 trapping the White Queen!"
                                                               }
                                                             ],
-                                                            "blurb": "White captures on d5.",
+                                                            "blurb": "White memakan on d5.",
                                                             "human_freq": 0.6803
                                                           }
                                                         ],
                                                         "blurb": "Strike the center to open the c8 Bishop against White's uncastled King!"
                                                       }
                                                     ],
-                                                    "blurb": "White captures the h8 Rook.",
+                                                    "blurb": "White memakan the h8 Rook.",
                                                     "human_freq": 0.9485
                                                   }
                                                 ],
-                                                "blurb": "Step the Queen to e7, keeping the f2 Bishop and preparing d5 or Rf8!"
+                                                "blurb": "Step the Queen to e7, keeping the f2 Bishop and mempersiapkan d5 or Rf8!"
                                               }
                                             ],
                                             "blurb": "Maia-3 Top #2 Human Move (41.1%): White declines the f2 Bishop and steps to f1.",
@@ -301,7 +301,7 @@
                                                       {
                                                         "move": "d8e7",
                                                         "san": "Qe7",
-                                                        "blurb": "Save the Queen while keeping the f2 Bishop and raging attack!"
+                                                        "blurb": "Save the Queen while keeping the f2 Bishop and raging menyerang!"
                                                       }
                                                     ],
                                                     "blurb": "White's King is forced out to d3.",
@@ -360,7 +360,7 @@
                                                             "human_freq": 0.2406
                                                           }
                                                         ],
-                                                        "blurb": "Open the c8 Bishop and prepare Qe8-g6 or h6."
+                                                        "blurb": "Open the c8 Bishop and bersiap Qe8-g6 or h6."
                                                       }
                                                     ],
                                                     "blurb": "White castles Kingside.",
@@ -381,7 +381,7 @@
                                                               {
                                                                 "move": "d8e8",
                                                                 "san": "Qe8",
-                                                                "blurb": "Prepare Qg6 and Bg4."
+                                                                "blurb": "bersiap Qg6 and Bg4."
                                                               }
                                                             ],
                                                             "blurb": "White develops Nc3.",
@@ -416,14 +416,14 @@
                                                       {
                                                         "move": "d7d6",
                                                         "san": "d6",
-                                                        "blurb": "Prepare Qe8-g6 and Bg4."
+                                                        "blurb": "bersiap Qe8-g6 and Bg4."
                                                       }
                                                     ],
                                                     "blurb": "White castles.",
                                                     "human_freq": 0.5101
                                                   }
                                                 ],
-                                                "blurb": "Seize the f-file with Rf8."
+                                                "blurb": "merebut the f-file with Rf8."
                                               }
                                             ],
                                             "blurb": "White retreats the Bishop to c4.",
@@ -479,14 +479,14 @@
                                               {
                                                 "move": "d7d5",
                                                 "san": "d5",
-                                                "blurb": "Seize the initiative in the center."
+                                                "blurb": "merebut the initiative in the center."
                                               }
                                             ],
                                             "blurb": "White castles.",
                                             "human_freq": 0.3001
                                           }
                                         ],
-                                        "blurb": "Castle out of the f7 threat and prepare d5!"
+                                        "blurb": "Castle out of the f7 threat and bersiap d5!"
                                       }
                                     ],
                                     "blurb": "Maia-3 Top #4 Human Move (1.6%): Quiet d3 support.",
@@ -542,7 +542,7 @@
                                             "human_freq": 0.2522
                                           }
                                         ],
-                                        "blurb": "Castle Kingside and neutralize the g5 attack!"
+                                        "blurb": "Castle Kingside and neutralize the g5 menyerang!"
                                       }
                                     ],
                                     "blurb": "Maia-3 Top #6 Human Move: Four Knights transposition.",
@@ -552,7 +552,7 @@
                                 "blurb": "The Traxler Counterattack (4...Bc5!!)! Ignore f7 and counter-sacrifice on f2!"
                               }
                             ],
-                            "blurb": "White launches the Fried Liver / Knight Attack on f7.",
+                            "blurb": "White launches the Fried Liver / Knight menyerang on f7.",
                             "human_freq": 0.3056
                           }
                         ],
@@ -563,7 +563,7 @@
                     "human_freq": 0.4466
                   }
                 ],
-                "blurb": "Defend e5 with Nc6."
+                "blurb": "mempertahankan e5 with Nc6."
               }
             ],
             "blurb": "White develops Nf3.",

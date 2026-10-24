@@ -2209,7 +2209,7 @@ func test_opening_repertoire_and_srs() -> void:
 		"Label metadata dan step badge di OpeningTrainer murni ASCII tanpa karakter non-ASCII")
 
 	assert_equal(trainer.current_tree.id, "fried_liver_attack", "Default opening aktif adalah Fried Liver Attack")
-	assert_true(trainer.status_label.text.contains("Your Turn") or trainer.status_label.text.contains("Play"), "Opening trainer langsung meminta player menjawab langkah pertama")
+	assert_true(trainer.status_label.text.contains("Giliran Anda") or trainer.status_label.text.contains("Mainkan") or trainer.status_label.text.contains("Your Turn") or trainer.status_label.text.contains("Play"), "Opening trainer langsung meminta player menjawab langkah pertama")
 	assert_true(trainer.chess_board.is_interactive, "Papan catur dalam status is_interactive = true agar bidak dapat digerakkan")
 	assert_true(not CardPalette.is_light(trainer.top_card_style.bg_color) and CardPalette.is_light(trainer.bottom_card_style.bg_color),
 		"Saat latihan sebagai Putih, kartu bawah (Putih) berlatar terang dan kartu atas (Hitam) berlatar gelap")
@@ -2218,7 +2218,7 @@ func test_opening_repertoire_and_srs() -> void:
 
 	# Simulasikan langkah salah (h2h4)
 	trainer._on_board_move_made(ChessMove.new("h2", "h4"))
-	assert_true(trainer.status_label.text.contains("Incorrect"), "Langkah di luar repertoire ditolak dengan status Incorrect")
+	assert_true(trainer.status_label.text.contains("Incorrect") or trainer.status_label.text.contains("Langkah salah"), "Langkah di luar repertoire ditolak dengan status Incorrect")
 
 	# Simulasikan Hint
 	trainer._on_hint_pressed()
@@ -2227,7 +2227,7 @@ func test_opening_repertoire_and_srs() -> void:
 
 	# Simulasikan langkah benar (e2e4)
 	trainer._on_board_move_made(ChessMove.new("e2", "e4"))
-	assert_true(trainer.status_label.text.contains("Correct"), "Langkah repertoire yang benar diterima dengan status Correct")
+	assert_true(trainer.status_label.text.contains("Correct") or trainer.status_label.text.contains("Benar"), "Langkah repertoire yang benar diterima dengan status Correct")
 
 	# Simulasikan posisi latihan dengan pertukaran bidak (Fried Liver: 1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.Ng5 d5 5.exd5 Nxd5 6.Nxf7 Kxf7)
 	trainer.board_state = ChessBoardState.new("r1bq1b1r/ppp2kpp/2n5/3np3/2B5/8/PPPP1PPP/RNBQK2R w KQ - 0 7")

@@ -13,7 +13,7 @@
       {
         "move": "c7c6",
         "san": "c6",
-        "blurb": "The Caro-Kann! Prepare the d5 central thrust while keeping the c8-h3 diagonal open.",
+        "blurb": "The Caro-Kann! bersiap the d5 central thrust while keeping the c8-h3 diagonal open.",
         "children": [
           {
             "move": "d2d4",
@@ -24,7 +24,7 @@
               {
                 "move": "d7d5",
                 "san": "d5",
-                "blurb": "Challenge the e4 pawn immediately with c6 support.",
+                "blurb": "menantang the e4 pawn immediately with c6 support.",
                 "children": [
                   {
                     "move": "e4e5",
@@ -35,13 +35,13 @@
                       {
                         "move": "c8f5",
                         "san": "Bf5",
-                        "blurb": "Develop the light-squared Bishop outside the pawn chain before playing e6.",
+                        "blurb": "Develop light-squared Bishop outside the pawn chain before playing e6.",
                         "children": [
                           {
                             "move": "g1f3",
                             "san": "Nf3",
                             "human_freq": 0.3315,
-                            "blurb": "Short System: White develops calmly and prepares Be2.",
+                            "blurb": "Short System: White develops calmly and bersiap Be2.",
                             "children": [
                               {
                                 "move": "e7e6",
@@ -62,7 +62,7 @@
                                             "move": "e1g1",
                                             "san": "O-O",
                                             "human_freq": 0.1954,
-                                            "blurb": "White castles early before defending d4.",
+                                            "blurb": "White castles early before mempertahankan d4.",
                                             "children": [
                                               {
                                                 "move": "b8c6",
@@ -104,7 +104,7 @@
                                                       {
                                                         "move": "b8c6",
                                                         "san": "Nc6",
-                                                        "blurb": "Develop the Knight and increase the pressure on d4.",
+                                                        "blurb": "Develop Knight and increase the pressure on d4.",
                                                         "children": [
                                                           {
                                                             "move": "e1g1",
@@ -114,7 +114,7 @@
                                                               {
                                                                 "move": "b6b2",
                                                                 "san": "Qxb2",
-                                                                "blurb": "Capture the poisoned b2 pawn and attack the c3 Knight with tempo."
+                                                                "blurb": "memakan the poisoned b2 pawn and menyerang the c3 Knight with tempo."
                                                               }
                                                             ]
                                                           }
@@ -154,7 +154,7 @@
                                       {
                                         "move": "e7e6",
                                         "san": "e6",
-                                        "blurb": "Lock down the light squares and prepare Qa5+ to trade Queens.",
+                                        "blurb": "Lock down the light squares and bersiap Qa5+ to trade Queens.",
                                         "children": [
                                           {
                                             "move": "g1f3",
@@ -164,7 +164,7 @@
                                               {
                                                 "move": "d8a5",
                                                 "san": "Qa5+",
-                                                "blurb": "Check on a5 and prepare Qa6 to force a favorable Queen trade."
+                                                "blurb": "Check on a5 and bersiap Qa6 to force a favorable Queen trade."
                                               }
                                             ]
                                           }
@@ -180,7 +180,7 @@
                             "move": "b1c3",
                             "san": "Nc3",
                             "human_freq": 0.0808,
-                            "blurb": "Shirov / Bayonet Variation: White prepares an aggressive g4 pawn storm.",
+                            "blurb": "Shirov / Bayonet Variation: White bersiap an aggressive g4 pawn storm.",
                             "children": [
                               {
                                 "move": "e7e6",
@@ -205,7 +205,7 @@
                                               {
                                                 "move": "c6c5",
                                                 "san": "c5",
-                                                "blurb": "Counter-attack in the center! Meet a wing attack with a central break."
+                                                "blurb": "Counter-menyerang in the center! Meet a wing menyerang with a central break."
                                               }
                                             ]
                                           }
@@ -246,7 +246,7 @@
                                               {
                                                 "move": "e7e6",
                                                 "san": "e6",
-                                                "blurb": "Close the light-square diagonal and prepare Qb6 plus c5.",
+                                                "blurb": "Close the light-square diagonal and bersiap Qb6 plus c5.",
                                                 "children": [
                                                   {
                                                     "move": "c1g5",
@@ -285,18 +285,18 @@
                       {
                         "move": "c6d5",
                         "san": "cxd5",
-                        "blurb": "Recapture toward the center and open the c-file and c6 square.",
+                        "blurb": "memakan balik toward the center and open the c-file and c6 square.",
                         "children": [
                           {
                             "move": "c2c4",
                             "san": "c4",
                             "human_freq": 0.1344,
-                            "blurb": "Panov-Botvinnik Attack: White challenges the d5 center immediately.",
+                            "blurb": "Panov-Botvinnik menyerang: White menantang the d5 center immediately.",
                             "children": [
                               {
                                 "move": "g8f6",
                                 "san": "Nf6",
-                                "blurb": "Defend d5 with a piece and prepare to blockade an isolated d-pawn.",
+                                "blurb": "mempertahankan d5 with a piece and bersiap to blockade an isolated d-pawn.",
                                 "children": [
                                   {
                                     "move": "b1c3",
@@ -347,7 +347,7 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Control the e4 outpost and prepare Bg4.",
+                                        "blurb": "Control the e4 outpost and bersiap Bg4.",
                                         "children": [
                                           {
                                             "move": "g1f3",
@@ -368,7 +368,7 @@
                                                       {
                                                         "move": "e7e6",
                                                         "san": "e6",
-                                                        "blurb": "Complete the light-square pawn triangle and prepare Bd6 plus O-O."
+                                                        "blurb": "Complete the light-square pawn triangle and bersiap Bd6 plus O-O."
                                                       }
                                                     ]
                                                   }
@@ -384,7 +384,7 @@
                                               {
                                                 "move": "c8g4",
                                                 "san": "Bg4",
-                                                "blurb": "Develop the light-squared Bishop with tempo against the Queen.",
+                                                "blurb": "Develop light-squared Bishop with tempo against the Queen.",
                                                 "children": [
                                                   {
                                                     "move": "d1b3",
@@ -394,7 +394,7 @@
                                                       {
                                                         "move": "d8d7",
                                                         "san": "Qd7",
-                                                        "blurb": "Defend b7 harmoniously without weakening the Queenside pawn structure."
+                                                        "blurb": "mempertahankan b7 harmoniously without weakening the Queenside pawn structure."
                                                       }
                                                     ]
                                                   }
@@ -418,12 +418,12 @@
                     "move": "b1c3",
                     "san": "Nc3",
                     "human_freq": 0.1702,
-                    "blurb": "Classical Variation: White defends e4 with a piece.",
+                    "blurb": "Classical Variation: White mempertahankan e4 with a piece.",
                     "children": [
                       {
                         "move": "d5e4",
                         "san": "dxe4",
-                        "blurb": "Release the central tension so Black can develop pieces smoothly.",
+                        "blurb": "Release the central tension so Black can Develop pieces smoothly.",
                         "children": [
                           {
                             "move": "c3e4",
@@ -449,7 +449,7 @@
                                             "move": "h2h4",
                                             "san": "h4",
                                             "human_freq": 0.1954,
-                                            "blurb": "White advances h4 to threaten trapping the g6 Bishop.",
+                                            "blurb": "White advances h4 to mengancam trapping the g6 Bishop.",
                                             "children": [
                                               {
                                                 "move": "h7h6",
@@ -519,7 +519,7 @@
                                                       {
                                                         "move": "g8f6",
                                                         "san": "Nf6",
-                                                        "blurb": "Develop the Knight and control e4 and d5.",
+                                                        "blurb": "Develop Knight and control e4 and d5.",
                                                         "children": [
                                                           {
                                                             "move": "e1g1",
@@ -529,7 +529,7 @@
                                                               {
                                                                 "move": "f8d6",
                                                                 "san": "Bd6",
-                                                                "blurb": "Place the dark-squared Bishop on its ideal diagonal and prepare O-O."
+                                                                "blurb": "Place the dark-squared Bishop on its ideal diagonal and bersiap O-O."
                                                               }
                                                             ]
                                                           }
@@ -565,7 +565,7 @@
                                               {
                                                 "move": "d8b6",
                                                 "san": "Qb6",
-                                                "blurb": "Attack the trapped b7 Knight and seize the open b-file.",
+                                                "blurb": "menyerang the trapped b7 Knight and merebut the open b-file.",
                                                 "children": [
                                                   {
                                                     "move": "b7c5",
@@ -614,7 +614,7 @@
                               {
                                 "move": "e7e5",
                                 "san": "e5",
-                                "blurb": "Strike back with 4...e5! Threaten Qh4+ and shatter White's pawn center.",
+                                "blurb": "Strike back with 4...e5! mengancam Qh4+ and shatter White's pawn center.",
                                 "children": [
                                   {
                                     "move": "g1f3",
@@ -634,7 +634,7 @@
                                               {
                                                 "move": "b8d7",
                                                 "san": "Nd7",
-                                                "blurb": "Protect e5 and f7 while keeping Ngf6 ready for the next move."
+                                                "blurb": "melindungi e5 and f7 while keeping Ngf6 ready for the next move."
                                               }
                                             ]
                                           }
@@ -647,7 +647,7 @@
                                     "san": "dxe5",
                                     "is_blunder": true,
                                     "human_freq": 0.05,
-                                    "blurb": "Fatal Fantasy blunder! Capturing e5 exposes the e1-h4 diagonal.",
+                                    "blurb": "Fatal Fantasy blunder! memakan e5 exposes the e1-h4 diagonal.",
                                     "children": [
                                       {
                                         "move": "d8h4",
@@ -685,7 +685,7 @@
           {
             "move": "g1f3",
             "san": "Nf3",
-            "blurb": "Maia-3 Top #2 Human Move (33.7%): Over a third of human players develop 2.Nf3 before pushing d4.",
+            "blurb": "Maia-3 Top #2 Human Move (33.7%): Over a third of human players Develop 2.Nf3 before pushing d4.",
             "children": [
               {
                 "move": "d7d5",
@@ -700,7 +700,7 @@
                       {
                         "move": "c6d5",
                         "san": "cxd5",
-                        "blurb": "Recapture toward the center and open the c6 square.",
+                        "blurb": "memakan balik toward the center and open the c6 square.",
                         "children": [
                           {
                             "move": "d2d4",
@@ -710,7 +710,7 @@
                               {
                                 "move": "b8c6",
                                 "san": "Nc6",
-                                "blurb": "Develop the Queenside Knight and prepare Bg4."
+                                "blurb": "Develop the Queenside Knight and bersiap Bg4."
                               }
                             ],
                             "human_freq": 0.6962
@@ -728,7 +728,7 @@
                       {
                         "move": "c8f5",
                         "san": "Bf5",
-                        "blurb": "Develop the light-squared Bishop outside the pawn chain before playing e6.",
+                        "blurb": "Develop light-squared Bishop outside the pawn chain before playing e6.",
                         "children": [
                           {
                             "move": "d2d4",
@@ -738,7 +738,7 @@
                               {
                                 "move": "e7e6",
                                 "san": "e6",
-                                "blurb": "Solidify d5 and prepare c5 counterplay."
+                                "blurb": "Solidify d5 and bersiap c5 counterplay."
                               }
                             ],
                             "human_freq": 0.8563
@@ -756,22 +756,22 @@
           {
             "move": "f1c4",
             "san": "Bc4",
-            "blurb": "Maia-3 Top #3 Human Move (8.6%): The Hillbilly Attack! Very popular among club players aiming at f7.",
+            "blurb": "Maia-3 Top #3 Human Move (8.6%): The Hillbilly menyerang! Very popular among club players aiming at f7.",
             "children": [
               {
                 "move": "d7d5",
                 "san": "d5",
-                "blurb": "Blunt the c4 Bishop and seize the center with tempo!",
+                "blurb": "Blunt the c4 Bishop and merebut the center with tempo!",
                 "children": [
                   {
                     "move": "e4d5",
                     "san": "exd5",
-                    "blurb": "Maia-3 Human Move (94.5%): White captures on d5 to avoid losing a pawn.",
+                    "blurb": "Maia-3 Human Move (94.5%): White memakan on d5 to avoid losing a pawn.",
                     "children": [
                       {
                         "move": "c6d5",
                         "san": "cxd5",
-                        "blurb": "Recapture on d5 with tempo against the c4 Bishop!",
+                        "blurb": "memakan balik on d5 with tempo against the c4 Bishop!",
                         "children": [
                           {
                             "move": "c4b3",
@@ -781,7 +781,7 @@
                               {
                                 "move": "b8c6",
                                 "san": "Nc6",
-                                "blurb": "Develop the Knight and enjoy a full central pawn presence.",
+                                "blurb": "Develop Knight and enjoy a full central pawn presence.",
                                 "children": [
                                   {
                                     "move": "d2d4",
@@ -862,7 +862,7 @@
                                       {
                                         "move": "e7e6",
                                         "san": "e6",
-                                        "blurb": "Clamp down on the light squares and prepare Nf6 plus Nbd7.",
+                                        "blurb": "Clamp down on the light squares and bersiap Nf6 plus Nbd7.",
                                         "children": [
                                           {
                                             "move": "d2d4",
@@ -874,7 +874,7 @@
                                               {
                                                 "move": "d5e4",
                                                 "san": "dxe4",
-                                                "blurb": "Deflect the c3 Knight away from defending d4.",
+                                                "blurb": "Deflect the c3 Knight away from mempertahankan d4.",
                                                 "children": [
                                                   {
                                                     "move": "c3e4",
@@ -909,7 +909,7 @@
                               {
                                 "move": "c6d5",
                                 "san": "cxd5",
-                                "blurb": "Recapture toward the center and open the c6 square.",
+                                "blurb": "memakan balik toward the center and open the c6 square.",
                                 "children": [
                                   {
                                     "move": "f1b5",

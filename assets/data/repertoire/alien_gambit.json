@@ -7,17 +7,17 @@
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "Open with the King's pawn and invite Black's Caro-Kann Defense.",
+    "blurb": "Buka dengan King's pawn and invite Black's Caro-Kann Defense.",
     "children": [
       {
         "move": "c7c6",
         "san": "c6",
-        "blurb": "Black plays the Caro-Kann Defense, preparing d5.",
+        "blurb": "Black plays the Caro-Kann Defense, mempersiapkan d5.",
         "children": [
           {
             "move": "d2d4",
             "san": "d4",
-            "blurb": "Seize the full pawn center and challenge Black's setup.",
+            "blurb": "merebut the full pawn center and menantang Black's setup.",
             "children": [
               {
                 "move": "d7d5",
@@ -27,7 +27,7 @@
                   {
                     "move": "b1c3",
                     "san": "Nc3",
-                    "blurb": "Develop the Queenside Knight to defend e4 and invite 3...dxe4.",
+                    "blurb": "Develop the Queenside Knight to mempertahankan e4 and invite 3...dxe4.",
                     "children": [
                       {
                         "move": "d5e4",
@@ -37,12 +37,12 @@
                           {
                             "move": "c3e4",
                             "san": "Nxe4",
-                            "blurb": "Recapture on e4 with the Knight, centralizing with tempo.",
+                            "blurb": "memakan balik on e4 with the Knight, centralizing with tempo.",
                             "children": [
                               {
                                 "move": "g8f6",
                                 "san": "Nf6",
-                                "blurb": "Maia-3 Human Move (39.0%): Tartakower/Bronstein-Larsen Variation challenging the e4 Knight.",
+                                "blurb": "Maia-3 Human Move (39.0%): Tartakower/Bronstein-Larsen Variation menantang the e4 Knight.",
                                 "children": [
                                   {
                                     "move": "e4g5",
@@ -68,7 +68,7 @@
                                                   {
                                                     "move": "g1f3",
                                                     "san": "Nf3",
-                                                    "blurb": "Develop the Knight with tempo, preparing Ne5+ and Bc4+ against the exposed King on f7.",
+                                                    "blurb": "Develop Knight dengan tempo, mempersiapkan Ne5+ and Bc4+ against the exposed King on f7.",
                                                     "children": [
                                                       {
                                                         "move": "c8g4",
@@ -79,7 +79,7 @@
                                                           {
                                                             "move": "f3e5",
                                                             "san": "Ne5+",
-                                                            "blurb": "Royal fork on e5! Check the King on f7 while uncovering the Queen's attack on the g4 Bishop.",
+                                                            "blurb": "Royal fork on e5! Check the King on f7 while uncovering the Queen's menyerang on the g4 Bishop.",
                                                             "children": [
                                                               {
                                                                 "move": "f7g8",
@@ -99,7 +99,7 @@
                                                                           {
                                                                             "move": "d1g4",
                                                                             "san": "Qxg4",
-                                                                            "blurb": "Recapture with the Queen, threatening Bc4+ and Qe6+ with a winning position."
+                                                                            "blurb": "memakan balik with the Queen, mengancam Bc4+ and Qe6+ with a menang position."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6694
@@ -130,17 +130,17 @@
                                                                   {
                                                                     "move": "e5g4",
                                                                     "san": "Nxg4",
-                                                                    "blurb": "Win back the piece on g4 while keeping Black's King stuck in the center.",
+                                                                    "blurb": "memenangkan back the piece on g4 while keeping Black's King stuck in the center.",
                                                                     "children": [
                                                                       {
                                                                         "move": "f6g4",
                                                                         "san": "Nxg4",
-                                                                        "blurb": "Maia-3 Human Move (67.9%): Black recaptures on g4.",
+                                                                        "blurb": "Maia-3 Human Move (67.9%): Black memakan balik on g4.",
                                                                         "children": [
                                                                           {
                                                                             "move": "d1g4",
                                                                             "san": "Qxg4",
-                                                                            "blurb": "Recapture with the Queen and follow up with Qg6+ or Bd3."
+                                                                            "blurb": "memakan balik with the Queen and follow up with Qg6+ or Bd3."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6791
@@ -163,27 +163,27 @@
                                                           {
                                                             "move": "f1d3",
                                                             "san": "Bd3",
-                                                            "blurb": "Develop the Bishop to d3, aiming at g6 and preparing Ne5+.",
+                                                            "blurb": "Develop the Bishop to d3, aiming at g6 and mempersiapkan Ne5+.",
                                                             "children": [
                                                               {
                                                                 "move": "f8d6",
                                                                 "san": "Bd6",
-                                                                "blurb": "Maia-3 Human Move (47.7%): Black challenges the d3 diagonal.",
+                                                                "blurb": "Maia-3 Human Move (47.7%): Black menantang the d3 diagonal.",
                                                                 "children": [
                                                                   {
                                                                     "move": "d1e2",
                                                                     "san": "Qe2",
-                                                                    "blurb": "Support e4/e5 and prepare O-O plus Ne5+.",
+                                                                    "blurb": "Support e4/e5 and bersiap O-O plus Ne5+.",
                                                                     "children": [
                                                                       {
                                                                         "move": "h8e8",
                                                                         "san": "Re8",
-                                                                        "blurb": "Maia-3 Human Move (54.4%): Black activates the Rook and prepares Kg8.",
+                                                                        "blurb": "Maia-3 Human Move (54.4%): Black activates the Rook and bersiap Kg8.",
                                                                         "children": [
                                                                           {
                                                                             "move": "e1g1",
                                                                             "san": "O-O",
-                                                                            "blurb": "Castle Kingside and prepare Ne5+ or c4 with relentless pressure."
+                                                                            "blurb": "Castle Kingside and bersiap Ne5+ or c4 with relentless pressure."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.5439
@@ -224,7 +224,7 @@
                                                                           {
                                                                             "move": "e5g6",
                                                                             "san": "Ng6",
-                                                                            "blurb": "Fork the e7 Bishop and h8 Rook to win back material with interest!"
+                                                                            "blurb": "Fork the e7 Bishop and h8 Rook to memenangkan back material with interest!"
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6041
@@ -251,7 +251,7 @@
                                                                           {
                                                                             "move": "d1e2",
                                                                             "san": "Qe2",
-                                                                            "blurb": "Prepare O-O and Ne5+ with a powerful attacking setup."
+                                                                            "blurb": "bersiap O-O and Ne5+ with a powerful menyerang setup."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.4506
@@ -284,12 +284,12 @@
                                                                   {
                                                                     "move": "d1e2",
                                                                     "san": "Qe2",
-                                                                    "blurb": "Pile up on the pinned e6 pawn! White threatens Qxe6+ immediately.",
+                                                                    "blurb": "Pile up on the pinned e6 pawn! White mengancam Qxe6+ immediately.",
                                                                     "children": [
                                                                       {
                                                                         "move": "d7b6",
                                                                         "san": "Nb6",
-                                                                        "blurb": "Maia-3 Human Move (39.9%): Black guards d5 and attacks the c4 Bishop.",
+                                                                        "blurb": "Maia-3 Human Move (39.9%): Black guards d5 and menyerang the c4 Bishop.",
                                                                         "children": [
                                                                           {
                                                                             "move": "f3e5",
@@ -302,7 +302,7 @@
                                                                       {
                                                                         "move": "d8e7",
                                                                         "san": "Qe7",
-                                                                        "blurb": "Maia-3 Human Move (21.6%): Black defends e6 with the Queen.",
+                                                                        "blurb": "Maia-3 Human Move (21.6%): Black mempertahankan e6 with the Queen.",
                                                                         "children": [
                                                                           {
                                                                             "move": "e1g1",
@@ -325,7 +325,7 @@
                                                                   {
                                                                     "move": "e1g1",
                                                                     "san": "O-O",
-                                                                    "blurb": "Castle and prepare Re1 plus Qe2 targeting the pinned d5 Knight."
+                                                                    "blurb": "Castle and bersiap Re1 plus Qe2 targeting the pinned d5 Knight."
                                                                   }
                                                                 ],
                                                                 "human_freq": 0.0975
@@ -352,7 +352,7 @@
                                                                   {
                                                                     "move": "f1d3",
                                                                     "san": "Bd3",
-                                                                    "blurb": "Seize the b1-h7 diagonal and threaten Ng6."
+                                                                    "blurb": "merebut the b1-h7 diagonal and mengancam Ng6."
                                                                   }
                                                                 ],
                                                                 "human_freq": 0.6892
@@ -389,7 +389,7 @@
                                                                           {
                                                                             "move": "g2g4",
                                                                             "san": "g4",
-                                                                            "blurb": "Trap the f5 Bishop or win back the piece on g4!"
+                                                                            "blurb": "Trap the f5 Bishop or memenangkan back the piece on g4!"
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.4939
@@ -421,7 +421,7 @@
                                                                   {
                                                                     "move": "d1e2",
                                                                     "san": "Qe2",
-                                                                    "blurb": "Target the weak e6 pawn and prepare O-O."
+                                                                    "blurb": "Target the weak e6 pawn and bersiap O-O."
                                                                   }
                                                                 ],
                                                                 "human_freq": 0.2895
@@ -459,7 +459,7 @@
                                                   {
                                                     "move": "g1e2",
                                                     "san": "Ne2",
-                                                    "blurb": "Develop Ne2 to prepare Ng3 chasing the f5 Bishop."
+                                                    "blurb": "Develop Ne2 to bersiap Ng3 chasing the f5 Bishop."
                                                   }
                                                 ],
                                                 "human_freq": 0.8801
@@ -486,7 +486,7 @@
                                                   {
                                                     "move": "g5f7",
                                                     "san": "Nxf7",
-                                                    "blurb": "Alien Gambit with Bc4 already developed! Capture on f7 and attack e6."
+                                                    "blurb": "Alien Gambit with Bc4 already developed! memakan on f7 and menyerang e6."
                                                   }
                                                 ],
                                                 "human_freq": 0.3151
@@ -513,7 +513,7 @@
                                                   {
                                                     "move": "d1e2",
                                                     "san": "Qxe2",
-                                                    "blurb": "Recapture with the Queen while keeping the d4 pawn and g5 Knight active."
+                                                    "blurb": "memakan balik with the Queen while keeping the d4 pawn and g5 Knight active."
                                                   }
                                                 ],
                                                 "human_freq": 0.7896
@@ -556,7 +556,7 @@
                                                   {
                                                     "move": "d1f3",
                                                     "san": "Qf3",
-                                                    "blurb": "Double attack on the f5 Bishop and f7 King! White wins back the piece or a clean pawn with an exposed Black King.",
+                                                    "blurb": "Double menyerang on the f5 Bishop and f7 King! White memenangkan back the piece or a clean pawn with an exposed Black King.",
                                                     "children": [
                                                       {
                                                         "move": "e7e6",
@@ -584,12 +584,12 @@
                                       {
                                         "move": "e7e6",
                                         "san": "e6",
-                                        "blurb": "Maia-3 Top #2 Human Move (26.7%): Black calmly defends f7 with e6.",
+                                        "blurb": "Maia-3 Top #2 Human Move (26.7%): Black calmly mempertahankan f7 with e6.",
                                         "children": [
                                           {
                                             "move": "g1f3",
                                             "san": "N1f3",
-                                            "blurb": "Develop the King's Knight and prepare Bd3 to trade off Black's f5 Bishop.",
+                                            "blurb": "Develop the King's Knight and bersiap Bd3 to trade off Black's f5 Bishop.",
                                             "children": [
                                               {
                                                 "move": "g8f6",
@@ -598,7 +598,7 @@
                                                   {
                                                     "move": "f1d3",
                                                     "san": "Bd3",
-                                                    "blurb": "Challenge the f5 Bishop and prepare O-O."
+                                                    "blurb": "menantang the f5 Bishop and bersiap O-O."
                                                   }
                                                 ],
                                                 "human_freq": 0.1641
@@ -629,12 +629,12 @@
                               {
                                 "move": "b8d7",
                                 "san": "Nd7",
-                                "blurb": "Maia-3 Top #3 Human Move (5.2%): Karpov Variation preparing Ngf6.",
+                                "blurb": "Maia-3 Top #3 Human Move (5.2%): Karpov Variation mempersiapkan Ngf6.",
                                 "children": [
                                   {
                                     "move": "e4g5",
                                     "san": "Ng5",
-                                    "blurb": "Attack f7 and e6! This sets the famous smothered mate trap if Black plays 5...h6??",
+                                    "blurb": "menyerang f7 and e6! This sets the famous smothered mate trap if Black plays 5...h6??",
                                     "children": [
                                       {
                                         "move": "g8f6",
@@ -653,7 +653,7 @@
                                                   {
                                                     "move": "d1e2",
                                                     "san": "Qe2",
-                                                    "blurb": "Threaten Nxf7 or Nxe6 against Black's cramped setup."
+                                                    "blurb": "mengancam Nxf7 or Nxe6 against Black's cramped setup."
                                                   }
                                                 ],
                                                 "human_freq": 0.8596
@@ -672,7 +672,7 @@
                                           {
                                             "move": "g5e6",
                                             "san": "Ne6",
-                                            "blurb": "Brilliant Knight sacrifice (6.Ne6!!)! Black's Queen is trapped unless Black captures on e6, which allows mate in 2!",
+                                            "blurb": "Brilliant Knight sacrifice (6.Ne6!!)! Black's Queen is trapped unless Black memakan on e6, which allows mate in 2!",
                                             "children": [
                                               {
                                                 "move": "f7e6",
@@ -718,7 +718,7 @@
                       {
                         "move": "g8f6",
                         "san": "Nf6",
-                        "blurb": "Maia-3 Top #2 Human Move at Move 3 (11.1%): Black develops Nf6 before capturing on e4.",
+                        "blurb": "Maia-3 Top #2 Human Move at Move 3 (11.1%): Black develops Nf6 before memakan on e4.",
                         "children": [
                           {
                             "move": "e4e5",

@@ -3,7 +3,7 @@
   "name": "Elephant Gambit",
   "eco": "C40",
   "color": "black",
-  "description": "Bold and tactical 2...d5 counter-strike seizing the initiative against 1.e4 e5 2.Nf3.",
+  "description": "Bold and tactical 2...d5 counter-strike merebut the initiative against 1.e4 e5 2.Nf3.",
   "root": {
     "move": "e2e4",
     "san": "e4",
@@ -19,18 +19,18 @@
             "move": "g1f3",
             "san": "Nf3",
             "human_freq": 0.6221,
-            "blurb": "White develops the Knight and attacks e5.",
+            "blurb": "White develops the Knight and menyerang e5.",
             "children": [
               {
                 "move": "d7d5",
                 "san": "d5",
-                "blurb": "The Elephant Gambit! Strike at the center immediately instead of defending passively.",
+                "blurb": "The Elephant Gambit! Strike at the center immediately instead of mempertahankan passively.",
                 "children": [
                   {
                     "move": "e4d5",
                     "san": "exd5",
                     "human_freq": 0.6027,
-                    "blurb": "White captures the d5 pawn instead of e5.",
+                    "blurb": "White memakan the d5 pawn instead of e5.",
                     "children": [
                       {
                         "move": "e5e4",
@@ -46,7 +46,7 @@
                               {
                                 "move": "g8f6",
                                 "san": "Nf6",
-                                "blurb": "Defend the e4 pawn and develop the King's Knight.",
+                                "blurb": "mempertahankan the e4 pawn and Develop the King's Knight.",
                                 "children": [
                                   {
                                     "move": "d2d3",
@@ -66,7 +66,7 @@
                                               {
                                                 "move": "f8e7",
                                                 "san": "Be7",
-                                                "blurb": "Break the e-file pin and prepare Kingside castling.",
+                                                "blurb": "Break the e-file pin and bersiap Kingside castling.",
                                                 "children": [
                                                   {
                                                     "move": "d3e4",
@@ -106,7 +106,7 @@
                                     "move": "b1c3",
                                     "san": "Nc3",
                                     "human_freq": 0.3338,
-                                    "blurb": "White develops Nc3 to win the e4 pawn.",
+                                    "blurb": "White develops Nc3 to memenangkan the e4 pawn.",
                                     "children": [
                                       {
                                         "move": "f8e7",
@@ -121,7 +121,7 @@
                                               {
                                                 "move": "f6d5",
                                                 "san": "Nxd5",
-                                                "blurb": "Recapture the d5 pawn with a centralized Knight and prepare O-O.",
+                                                "blurb": "memakan balik the d5 pawn with a centralized Knight and bersiap O-O.",
                                                 "children": [
                                                   {
                                                     "move": "d2d4",
@@ -131,7 +131,7 @@
                                                       {
                                                         "move": "e8g8",
                                                         "san": "O-O",
-                                                        "blurb": "Castle Kingside and prepare Re8 to exploit White's Queen on e2."
+                                                        "blurb": "Castle Kingside and bersiap Re8 to exploit White's Queen on e2."
                                                       }
                                                     ]
                                                   }
@@ -155,7 +155,7 @@
                               {
                                 "move": "d8d5",
                                 "san": "Qxd5",
-                                "blurb": "Recapture the d5 pawn with tempo against the d4 Knight!",
+                                "blurb": "memakan balik the d5 pawn with tempo against the d4 Knight!",
                                 "children": [
                                   {
                                     "move": "c2c3",
@@ -174,7 +174,7 @@
                                               {
                                                 "move": "f8d6",
                                                 "san": "Bd6",
-                                                "blurb": "Develop the Bishop actively and prepare O-O."
+                                                "blurb": "Develop the Bishop actively and bersiap O-O."
                                               }
                                             ],
                                             "human_freq": 0.0473
@@ -192,7 +192,7 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Develop the Knight and prepare Nc6 plus Bf5.",
+                                        "blurb": "Develop Knight and bersiap Nc6 plus Bf5.",
                                         "children": [
                                           {
                                             "move": "b1c3",
@@ -226,7 +226,7 @@
                               {
                                 "move": "d8d5",
                                 "san": "Qxd5",
-                                "blurb": "Recapture the d5 pawn with a dominant centralized Queen.",
+                                "blurb": "memakan balik the d5 pawn with a dominant centralized Queen.",
                                 "children": [
                                   {
                                     "move": "b1c3",
@@ -246,7 +246,7 @@
                                               {
                                                 "move": "g8f6",
                                                 "san": "Nf6",
-                                                "blurb": "Develop the Knight and prepare Bd6 plus O-O with a huge lead in tempo."
+                                                "blurb": "Develop Knight and bersiap Bd6 plus O-O with a huge lead in tempo."
                                               }
                                             ]
                                           }
@@ -277,7 +277,7 @@
                                       {
                                         "move": "e4d3",
                                         "san": "exd3",
-                                        "blurb": "Capture en passant to expose the e5 Knight again.",
+                                        "blurb": "memakan en passant to expose the e5 Knight again.",
                                         "children": [
                                           {
                                             "move": "e5d3",
@@ -287,7 +287,7 @@
                                               {
                                                 "move": "g8f6",
                                                 "san": "Nf6",
-                                                "blurb": "Develop the Knight and prepare Bd6 plus O-O with a lead in development.",
+                                                "blurb": "Develop Knight and bersiap Bd6 plus O-O with a lead in development.",
                                                 "children": [
                                                   {
                                                     "move": "b1c3",
@@ -332,7 +332,7 @@
                                       {
                                         "move": "b7c6",
                                         "san": "bxc6",
-                                        "blurb": "Recapture on c6! Both the b5 Bishop and f3 Knight are now hanging.",
+                                        "blurb": "memakan balik on c6! Both the b5 Bishop and f3 Knight are now hanging.",
                                         "children": [
                                           {
                                             "move": "b5c4",
@@ -342,7 +342,7 @@
                                               {
                                                 "move": "e4f3",
                                                 "san": "exf3",
-                                                "blurb": "Capture the f3 Knight and emerge a full piece ahead!"
+                                                "blurb": "memakan the f3 Knight and emerge a full piece ahead!"
                                               }
                                             ]
                                           }
@@ -362,12 +362,12 @@
                     "move": "f3e5",
                     "san": "Nxe5",
                     "human_freq": 0.1808,
-                    "blurb": "White captures the e5 pawn with the Knight.",
+                    "blurb": "White memakan the e5 pawn with the Knight.",
                     "children": [
                       {
                         "move": "f8d6",
                         "san": "Bd6",
-                        "blurb": "Develop the dark-squared Bishop with tempo, attacking the e5 Knight.",
+                        "blurb": "Develop dark-squared Bishop with tempo, menyerang the e5 Knight.",
                         "children": [
                           {
                             "move": "d2d4",
@@ -378,7 +378,7 @@
                               {
                                 "move": "d5e4",
                                 "san": "dxe4",
-                                "blurb": "Recapture the e4 pawn and establish an advanced central thorn.",
+                                "blurb": "memakan balik the e4 pawn and establish an advanced central thorn.",
                                 "children": [
                                   {
                                     "move": "f1c4",
@@ -389,18 +389,18 @@
                                       {
                                         "move": "d6e5",
                                         "san": "Bxe5",
-                                        "blurb": "Eliminate the dangerous e5 Knight before White coordinates an attack.",
+                                        "blurb": "Eliminate the dangerous e5 Knight before White coordinates an menyerang.",
                                         "children": [
                                           {
                                             "move": "d1h5",
                                             "san": "Qh5",
                                             "human_freq": 0.1588,
-                                            "blurb": "White threatens both Qxf7# and Qxe5+.",
+                                            "blurb": "White mengancam both Qxf7# and Qxe5+.",
                                             "children": [
                                               {
                                                 "move": "d8e7",
                                                 "san": "Qe7",
-                                                "blurb": "Dual-purpose defense: guard f7 and protect the e5 Bishop simultaneously.",
+                                                "blurb": "Dual-purpose defense: guard f7 and melindungi the e5 Bishop simultaneously.",
                                                 "children": [
                                                   {
                                                     "move": "d4e5",
@@ -410,7 +410,7 @@
                                                       {
                                                         "move": "b8c6",
                                                         "san": "Nc6",
-                                                        "blurb": "Develop the Knight with tempo against White's weak e5 pawn.",
+                                                        "blurb": "Develop Knight dengan tempo against White's weak e5 pawn.",
                                                         "children": [
                                                           {
                                                             "move": "b1c3",
@@ -420,7 +420,7 @@
                                                               {
                                                                 "move": "c8e6",
                                                                 "san": "Be6",
-                                                                "blurb": "Challenge the active c4 Bishop and prepare Queenside castling.",
+                                                                "blurb": "menantang the active c4 Bishop and bersiap Queenside castling.",
                                                                 "children": [
                                                                   {
                                                                     "move": "c4b5",
@@ -430,7 +430,7 @@
                                                                       {
                                                                         "move": "e6d7",
                                                                         "san": "Bd7",
-                                                                        "blurb": "Break the pin and prepare O-O-O plus Nxe5."
+                                                                        "blurb": "Break the pin and bersiap O-O-O plus Nxe5."
                                                                       }
                                                                     ]
                                                                   }
@@ -446,7 +446,7 @@
                                                     "move": "h5e5",
                                                     "san": "Qxe5",
                                                     "human_freq": 0.2269,
-                                                    "blurb": "White recaptures with the Queen, inviting an early Queen trade.",
+                                                    "blurb": "White memakan balik with the Queen, inviting an early Queen trade.",
                                                     "children": [
                                                       {
                                                         "move": "e7e5",
@@ -461,7 +461,7 @@
                                                               {
                                                                 "move": "b8c6",
                                                                 "san": "Nc6",
-                                                                "blurb": "Attack the overextended e5 pawn immediately.",
+                                                                "blurb": "menyerang the overextended e5 pawn immediately.",
                                                                 "children": [
                                                                   {
                                                                     "move": "b1c3",
@@ -471,7 +471,7 @@
                                                                       {
                                                                         "move": "c6e5",
                                                                         "san": "Nxe5",
-                                                                        "blurb": "Capture the e5 pawn with tempo on the c4 Bishop."
+                                                                        "blurb": "memakan the e5 pawn with tempo on the c4 Bishop."
                                                                       }
                                                                     ]
                                                                   }
@@ -500,7 +500,7 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Reinforce the e4 spearhead and prepare Kingside castling.",
+                                        "blurb": "Reinforce the e4 spearhead and bersiap Kingside castling.",
                                         "children": [
                                           {
                                             "move": "c1g5",
@@ -511,7 +511,7 @@
                                               {
                                                 "move": "e8g8",
                                                 "san": "O-O",
-                                                "blurb": "Castle out of the pin and prepare Re8 or Nc6.",
+                                                "blurb": "Castle out of the pin and bersiap Re8 or Nc6.",
                                                 "children": [
                                                   {
                                                     "move": "f1c4",
@@ -521,7 +521,7 @@
                                                       {
                                                         "move": "b8c6",
                                                         "san": "Nc6",
-                                                        "blurb": "Challenge the e5 Knight and increase pressure on d4.",
+                                                        "blurb": "menantang the e5 Knight and increase pressure on d4.",
                                                         "children": [
                                                           {
                                                             "move": "e5c6",
@@ -531,7 +531,7 @@
                                                               {
                                                                 "move": "b7c6",
                                                                 "san": "bxc6",
-                                                                "blurb": "Recapture toward the center and open the b-file for the Rook."
+                                                                "blurb": "memakan balik toward the center and open the b-file for the Rook."
                                                               }
                                                             ]
                                                           }
@@ -571,7 +571,7 @@
                                                               {
                                                                 "move": "f6g4",
                                                                 "san": "Ng4",
-                                                                "blurb": "Jump to g4 to win back the weak e5 pawn."
+                                                                "blurb": "Jump to g4 to memenangkan back the weak e5 pawn."
                                                               }
                                                             ]
                                                           }
@@ -596,7 +596,7 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Develop naturally and prepare O-O plus c5.",
+                                        "blurb": "Develop naturally and bersiap O-O plus c5.",
                                         "children": [
                                           {
                                             "move": "e1g1",
@@ -606,7 +606,7 @@
                                               {
                                                 "move": "e8g8",
                                                 "san": "O-O",
-                                                "blurb": "Castle Kingside and prepare to undermine White's d4 support with c5.",
+                                                "blurb": "Castle Kingside and bersiap to undermine White's d4 support with c5.",
                                                 "children": [
                                                   {
                                                     "move": "b1c3",
@@ -640,7 +640,7 @@
                               {
                                 "move": "d5e4",
                                 "san": "dxe4",
-                                "blurb": "Capture on e4 with tempo, chasing the f3 Knight a second time!",
+                                "blurb": "memakan on e4 with tempo, chasing the f3 Knight a second time!",
                                 "children": [
                                   {
                                     "move": "d1e2",
@@ -659,7 +659,7 @@
                                               {
                                                 "move": "g8f6",
                                                 "san": "Nf6",
-                                                "blurb": "Develop the Knight and prepare O-O with a comfortable advantage."
+                                                "blurb": "Develop Knight and bersiap O-O with a comfortable advantage."
                                               }
                                             ],
                                             "human_freq": 0.8013
@@ -684,7 +684,7 @@
                               {
                                 "move": "e8f7",
                                 "san": "Kxf7",
-                                "blurb": "Accept the Knight sacrifice! White has no follow-up attack.",
+                                "blurb": "Accept the Knight sacrifice! White has no follow-up menyerang.",
                                 "children": [
                                   {
                                     "move": "d1h5",
@@ -704,7 +704,7 @@
                                               {
                                                 "move": "g8f6",
                                                 "san": "Nf6",
-                                                "blurb": "Develop the Knight with tempo against White's exposed Queen.",
+                                                "blurb": "Develop Knight dengan tempo against White's exposed Queen.",
                                                 "children": [
                                                   {
                                                     "move": "d5b3",
@@ -714,7 +714,7 @@
                                                       {
                                                         "move": "f6e4",
                                                         "san": "Nxe4",
-                                                        "blurb": "Capture the e4 pawn with a decisive extra piece and crushing lead in development."
+                                                        "blurb": "memakan the e4 pawn with a decisive extra piece and crushing lead in development."
                                                       }
                                                     ]
                                                   }
@@ -734,22 +734,22 @@
                             "move": "d1h5",
                             "san": "Qh5",
                             "is_blunder": true,
-                            "blurb": "Maia-3 Top #4 Human Move (7.6%): Aggressive club try threatening Qxf7#, ignoring the attacked e5 Knight.",
+                            "blurb": "Maia-3 Top #4 Human Move (7.6%): Aggressive club try mengancam Qxf7#, ignoring the attacked e5 Knight.",
                             "children": [
                               {
                                 "move": "g7g6",
                                 "san": "g6",
-                                "blurb": "Blunt the Queen attack with tempo! Now both the h5 Queen and e5 Knight are under fire.",
+                                "blurb": "Blunt the Queen menyerang with tempo! Now both the h5 Queen and e5 Knight are under fire.",
                                 "children": [
                                   {
                                     "move": "e5g6",
                                     "san": "Nxg6",
-                                    "blurb": "Maia-3 Human Move (64.2%): White tries a desperado capture on g6.",
+                                    "blurb": "Maia-3 Human Move (64.2%): White tries a desperado memakan on g6.",
                                     "children": [
                                       {
                                         "move": "f7g6",
                                         "san": "fxg6",
-                                        "blurb": "Capture the Knight with the f-pawn! The h8 Rook remains protected because White's Queen is attacked.",
+                                        "blurb": "memakan the Knight with the f-pawn! The h8 Rook remains protected because White's Queen is attacked.",
                                         "children": [
                                           {
                                             "move": "h5d5",
@@ -783,7 +783,7 @@
                               {
                                 "move": "d5e4",
                                 "san": "dxe4",
-                                "blurb": "Capture on e4 to force the e5 Knight to retreat.",
+                                "blurb": "memakan on e4 to force the e5 Knight to retreat.",
                                 "children": [
                                   {
                                     "move": "e5c4",
@@ -793,7 +793,7 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Develop smoothly and prepare O-O with full equality.",
+                                        "blurb": "Develop smoothly and bersiap O-O with full equality.",
                                         "children": [
                                           {
                                             "move": "c4d6",
@@ -803,7 +803,7 @@
                                               {
                                                 "move": "d8d6",
                                                 "san": "Qxd6",
-                                                "blurb": "Recapture with the Queen and maintain active central control."
+                                                "blurb": "memakan balik with the Queen and maintain active central control."
                                               }
                                             ]
                                           }
@@ -835,7 +835,7 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Challenge the centralized d5 Knight immediately.",
+                                        "blurb": "menantang the centralized d5 Knight immediately.",
                                         "children": [
                                           {
                                             "move": "d5f6",
@@ -845,7 +845,7 @@
                                               {
                                                 "move": "d8f6",
                                                 "san": "Qxf6",
-                                                "blurb": "Recapture with the Queen and enjoy a decisive lead in development."
+                                                "blurb": "memakan balik with the Queen and enjoy a decisive lead in development."
                                               }
                                             ]
                                           }
@@ -869,12 +869,12 @@
                       {
                         "move": "d5e4",
                         "san": "dxe4",
-                        "blurb": "Capture the e4 pawn and attack the f3 Knight.",
+                        "blurb": "memakan the e4 pawn and menyerang the f3 Knight.",
                         "children": [
                           {
                             "move": "f3e5",
                             "san": "Nxe5",
-                            "blurb": "Maia-3 Human Move (89.1%): White captures on e5.",
+                            "blurb": "Maia-3 Human Move (89.1%): White memakan on e5.",
                             "children": [
                               {
                                 "move": "f8d6",
@@ -893,7 +893,7 @@
                     "move": "b1c3",
                     "san": "Nc3",
                     "human_freq": 0.0504,
-                    "blurb": "White defends e4 with the Knight instead of capturing.",
+                    "blurb": "White mempertahankan e4 with the Knight instead of memakan.",
                     "children": [
                       {
                         "move": "d5d4",
@@ -908,7 +908,7 @@
                               {
                                 "move": "f8d6",
                                 "san": "Bd6",
-                                "blurb": "Protect the e5 pawn and clamp down on the f4 square.",
+                                "blurb": "melindungi the e5 pawn and clamp down on the f4 square.",
                                 "children": [
                                   {
                                     "move": "e2g3",
@@ -918,7 +918,7 @@
                                       {
                                         "move": "g8e7",
                                         "san": "Ne7",
-                                        "blurb": "Develop the Knight to e7 to keep the f-pawn free for counterplay."
+                                        "blurb": "Develop Knight to e7 to keep the f-pawn free for counterplay."
                                       }
                                     ]
                                   }
@@ -939,7 +939,7 @@
                       {
                         "move": "d5e4",
                         "san": "dxe4",
-                        "blurb": "Open the d-file immediately and challenge White's Knight.",
+                        "blurb": "Open the d-file immediately and menantang White's Knight.",
                         "children": [
                           {
                             "move": "f3e5",
