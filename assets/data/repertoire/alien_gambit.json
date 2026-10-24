@@ -3,103 +3,103 @@
   "name": "Alien Gambit",
   "eco": "B15",
   "color": "white",
-  "description": "Explosive 5.Ng5 and 6.Nxf7! Knight sacrifice against the Caro-Kann Defense, dragging Black's King into the center.",
+  "description": "Pengorbanan Knight 5.Ng5 dan 6.Nxf7! melawan Caro-Kann defense, menyeret King Black ke center.",
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "Buka dengan King's pawn and invite Black's Caro-Kann Defense.",
+    "blurb": "Buka dengan King's pawn dan invite Black's Caro-Kann defense.",
     "children": [
       {
         "move": "c7c6",
         "san": "c6",
-        "blurb": "Black plays the Caro-Kann Defense, mempersiapkan d5.",
+        "blurb": "Black memainkan Caro-Kann defense, mempersiapkan d5.",
         "children": [
           {
             "move": "d2d4",
             "san": "d4",
-            "blurb": "merebut the full pawn center and menantang Black's setup.",
+            "blurb": "Merebut full pawn center dan tantangan Black's setup.",
             "children": [
               {
                 "move": "d7d5",
                 "san": "d5",
-                "blurb": "Maia-3 Human Move (92.9%): Black strikes at the e4 pawn.",
+                "blurb": "Langkah Pemain Maia-3 (92.9%): Black strikes di e4 pawn.",
                 "children": [
                   {
                     "move": "b1c3",
                     "san": "Nc3",
-                    "blurb": "Develop the Queenside Knight to mempertahankan e4 and invite 3...dxe4.",
+                    "blurb": "Develop queenside Knight untuk menjaga e4 dan invite 3...dxe4.",
                     "children": [
                       {
                         "move": "d5e4",
                         "san": "dxe4",
-                        "blurb": "Maia-3 Top #1 Human Move (70.6%): Black exchanges on e4.",
+                        "blurb": "Langkah Populer Maia-3 #1 (70.6%): Black exchanges di e4.",
                         "children": [
                           {
                             "move": "c3e4",
                             "san": "Nxe4",
-                            "blurb": "memakan balik on e4 with the Knight, centralizing with tempo.",
+                            "blurb": "Recapture di e4 dengan Knight, centralizing dengan tempo.",
                             "children": [
                               {
                                 "move": "g8f6",
                                 "san": "Nf6",
-                                "blurb": "Maia-3 Human Move (39.0%): Tartakower/Bronstein-Larsen Variation menantang the e4 Knight.",
+                                "blurb": "Langkah Pemain Maia-3 (39.0%): Tartakower/Bronstein-Larsen variasi tantangan e4 Knight.",
                                 "children": [
                                   {
                                     "move": "e4g5",
                                     "san": "Ng5",
-                                    "blurb": "The Alien Gambit setup! Refuse the Knight trade and eye the vulnerable f7 square.",
+                                    "blurb": "Alien Gambit setup! Refuse Knight tukar dan eye rentan f7 petak.",
                                     "children": [
                                       {
                                         "move": "h7h6",
                                         "san": "h6",
                                         "is_blunder": true,
-                                        "blurb": "Maia-3 Top #1 Human Move (48.1%): Nearly half of all human players reflexively kick the Knight with h6, walking right into the Alien Gambit!",
+                                        "blurb": "Langkah Populer Maia-3 #1 (48.1%): Nearly half dari semua pemain reflexively Usir Knight dengan h6, walking right ke dalam Alien Gambit!",
                                         "children": [
                                           {
                                             "move": "g5f7",
                                             "san": "Nxf7",
-                                            "blurb": "The Alien Gambit (6.Nxf7!!)! Sacrifice the Knight on f7 to rip open Black's King and permanently deny castling.",
+                                            "blurb": "Alien Gambit (6.Nxf7!!)! Korbankan Knight di f7 ke rip buka Black's King dan permanently deny castling.",
                                             "children": [
                                               {
                                                 "move": "e8f7",
                                                 "san": "Kxf7",
-                                                "blurb": "Maia-3 Human Move (99.2%): Black is forced to accept the sacrifice with the King.",
+                                                "blurb": "Langkah Pemain Maia-3 (99.2%): Black terpaksa menerima sacrifice dengan King.",
                                                 "children": [
                                                   {
                                                     "move": "g1f3",
                                                     "san": "Nf3",
-                                                    "blurb": "Develop Knight dengan tempo, mempersiapkan Ne5+ and Bc4+ against the exposed King on f7.",
+                                                    "blurb": "Develop Knight dengan tempo, mempersiapkan Ne5+ dan Bc4+ melawan terbuka King di f7.",
                                                     "children": [
                                                       {
                                                         "move": "c8g4",
                                                         "san": "Bg4",
                                                         "is_blunder": true,
-                                                        "blurb": "Maia-3 Top #1 Human Blunder (40.1%): The most popular human move in this position is a tactical blunder that leaves the g4 Bishop undefended!",
+                                                        "blurb": "Blunder Populer Maia-3 #1 (40.1%): Langkah paling populer di posisi ini adalah blunder taktis yang membiarkan Bishop g4 tanpa penjagaan!",
                                                         "children": [
                                                           {
                                                             "move": "f3e5",
                                                             "san": "Ne5+",
-                                                            "blurb": "Royal fork on e5! Check the King on f7 while uncovering the Queen's menyerang on the g4 Bishop.",
+                                                            "blurb": "Royal fork di e5! check King di f7 sembari uncovering Queen's attack di g4 Bishop.",
                                                             "children": [
                                                               {
                                                                 "move": "f7g8",
                                                                 "san": "Kg8",
-                                                                "blurb": "Maia-3 Human Move (58.3%): Black retreats the King to g8.",
+                                                                "blurb": "Langkah Pemain Maia-3 (58.3%): Black memundurkan King ke g8.",
                                                                 "children": [
                                                                   {
                                                                     "move": "e5g4",
                                                                     "san": "Nxg4",
-                                                                    "blurb": "Regain the sacrificed piece immediately with a dominant center and ruined Black Kingside.",
+                                                                    "blurb": "Regain sacrificed piece segera dengan dominant center dan ruined Black kingside.",
                                                                     "children": [
                                                                       {
                                                                         "move": "f6g4",
                                                                         "san": "Nxg4",
-                                                                        "blurb": "Maia-3 Human Move (66.9%): Black trades Knights on g4.",
+                                                                        "blurb": "Langkah Pemain Maia-3 (66.9%): Black menukar Knight di g4.",
                                                                         "children": [
                                                                           {
                                                                             "move": "d1g4",
                                                                             "san": "Qxg4",
-                                                                            "blurb": "memakan balik with the Queen, mengancam Bc4+ and Qe6+ with a menang position."
+                                                                            "blurb": "Recapture dengan Queen, mengancam Bc4+ dan Qe6+ dengan menang posisi."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6694
@@ -107,12 +107,12 @@
                                                                       {
                                                                         "move": "b8d7",
                                                                         "san": "Nbd7",
-                                                                        "blurb": "Maia-3 Human Move (12.1%): Black develops Nbd7 instead of trading.",
+                                                                        "blurb": "Langkah Pemain Maia-3 (12.1%): Black mendevelop Nbd7 alih-alih menukar.",
                                                                         "children": [
                                                                           {
                                                                             "move": "f1c4",
                                                                             "san": "Bc4+",
-                                                                            "blurb": "Develop with check and lock Black's King in the corner."
+                                                                            "blurb": "Develop dengan check dan lock Black's King di sudut."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.1214
@@ -125,22 +125,22 @@
                                                               {
                                                                 "move": "f7e8",
                                                                 "san": "Ke8",
-                                                                "blurb": "Maia-3 Human Move (36.5%): Black retreats the King to e8.",
+                                                                "blurb": "Langkah Pemain Maia-3 (36.5%): Black memundurkan King ke e8.",
                                                                 "children": [
                                                                   {
                                                                     "move": "e5g4",
                                                                     "san": "Nxg4",
-                                                                    "blurb": "memenangkan back the piece on g4 while keeping Black's King stuck in the center.",
+                                                                    "blurb": "Memenangkan back piece di g4 sembari menjaga Black's King stuck di center.",
                                                                     "children": [
                                                                       {
                                                                         "move": "f6g4",
                                                                         "san": "Nxg4",
-                                                                        "blurb": "Maia-3 Human Move (67.9%): Black memakan balik on g4.",
+                                                                        "blurb": "Langkah Pemain Maia-3 (67.9%): Black recapture di g4.",
                                                                         "children": [
                                                                           {
                                                                             "move": "d1g4",
                                                                             "san": "Qxg4",
-                                                                            "blurb": "memakan balik with the Queen and follow up with Qg6+ or Bd3."
+                                                                            "blurb": "Recapture dengan Queen dan follow up dengan Qg6+ atau Bd3."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6791
@@ -158,32 +158,32 @@
                                                       {
                                                         "move": "e7e6",
                                                         "san": "e6",
-                                                        "blurb": "Maia-3 Top #2 Human Move (16.0%): Black controls d5 and opens the f8 Bishop.",
+                                                        "blurb": "Langkah Populer Maia-3 #2 (16.0%): Black controls d5 dan opens f8 Bishop.",
                                                         "children": [
                                                           {
                                                             "move": "f1d3",
                                                             "san": "Bd3",
-                                                            "blurb": "Develop the Bishop to d3, aiming at g6 and mempersiapkan Ne5+.",
+                                                            "blurb": "Develop Bishop ke d3, mengincar g6 dan mempersiapkan Ne5+.",
                                                             "children": [
                                                               {
                                                                 "move": "f8d6",
                                                                 "san": "Bd6",
-                                                                "blurb": "Maia-3 Human Move (47.7%): Black menantang the d3 diagonal.",
+                                                                "blurb": "Langkah Pemain Maia-3 (47.7%): Black tantangan d3 diagonal.",
                                                                 "children": [
                                                                   {
                                                                     "move": "d1e2",
                                                                     "san": "Qe2",
-                                                                    "blurb": "Support e4/e5 and bersiap O-O plus Ne5+.",
+                                                                    "blurb": "Dukung e4/e5 dan bersiap O-O plus Ne5+.",
                                                                     "children": [
                                                                       {
                                                                         "move": "h8e8",
                                                                         "san": "Re8",
-                                                                        "blurb": "Maia-3 Human Move (54.4%): Black activates the Rook and bersiap Kg8.",
+                                                                        "blurb": "Langkah Pemain Maia-3 (54.4%): Black activates Rook dan bersiap Kg8.",
                                                                         "children": [
                                                                           {
                                                                             "move": "e1g1",
                                                                             "san": "O-O",
-                                                                            "blurb": "Castle Kingside and bersiap Ne5+ or c4 with relentless pressure."
+                                                                            "blurb": "Castle kingside dan bersiap Ne5+ atau c4 dengan relentless tekanan."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.5439
@@ -191,12 +191,12 @@
                                                                       {
                                                                         "move": "h8f8",
                                                                         "san": "Rf8",
-                                                                        "blurb": "Maia-3 Human Move (18.0%): Black tucks the Rook to f8.",
+                                                                        "blurb": "Langkah Pemain Maia-3 (18.0%): Black tucks Rook ke f8.",
                                                                         "children": [
                                                                           {
                                                                             "move": "f3e5",
                                                                             "san": "Ne5+",
-                                                                            "blurb": "Plant the Knight on e5 with check and dominate the dark squares."
+                                                                            "blurb": "Plant Knight di e5 dengan check dan dominate dark petak."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.1802
@@ -210,12 +210,12 @@
                                                                 "move": "f8e7",
                                                                 "san": "Be7",
                                                                 "is_blunder": true,
-                                                                "blurb": "Maia-3 Human Move (16.8%): Passive development that allows a decisive Knight fork on g6.",
+                                                                "blurb": "Langkah Pemain Maia-3 (16.8%): pasif development yang memungkinkan a decisive Knight fork di g6.",
                                                                 "children": [
                                                                   {
                                                                     "move": "f3e5",
                                                                     "san": "Ne5+",
-                                                                    "blurb": "Jump to e5 with check! Wherever the King moves, Ng6 forks the e7 Bishop and h8 Rook.",
+                                                                    "blurb": "Lompat ke e5 dengan check! Wherever King langkah, Ng6 melakukan Fork e7 Bishop dan h8 Rook.",
                                                                     "children": [
                                                                       {
                                                                         "move": "f7g8",
@@ -224,7 +224,7 @@
                                                                           {
                                                                             "move": "e5g6",
                                                                             "san": "Ng6",
-                                                                            "blurb": "Fork the e7 Bishop and h8 Rook to memenangkan back material with interest!"
+                                                                            "blurb": "Fork e7 Bishop dan h8 Rook ke memenangkan back material dengan interest!"
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6041
@@ -237,12 +237,12 @@
                                                               {
                                                                 "move": "f8b4",
                                                                 "san": "Bb4+",
-                                                                "blurb": "Maia-3 Human Move (11.7%): Black throws in a check on b4.",
+                                                                "blurb": "Langkah Pemain Maia-3 (11.7%): Black throws di a check di b4.",
                                                                 "children": [
                                                                   {
                                                                     "move": "c2c3",
                                                                     "san": "c3",
-                                                                    "blurb": "Kick the b4 Bishop with tempo while reinforcing the d4 center.",
+                                                                    "blurb": "Usir b4 Bishop dengan tempo sembari memperkuat d4 center.",
                                                                     "children": [
                                                                       {
                                                                         "move": "b4d6",
@@ -251,7 +251,7 @@
                                                                           {
                                                                             "move": "d1e2",
                                                                             "san": "Qe2",
-                                                                            "blurb": "bersiap O-O and Ne5+ with a powerful menyerang setup."
+                                                                            "blurb": "Bersiap O-O dan Ne5+ dengan powerful attack setup."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.4506
@@ -269,32 +269,32 @@
                                                       {
                                                         "move": "b8d7",
                                                         "san": "Nbd7",
-                                                        "blurb": "Maia-3 Top #3 Human Move (11.9%): Black develops Nbd7 to cover e5.",
+                                                        "blurb": "Langkah Populer Maia-3 #3 (11.9%): Black mendevelop Nbd7 ke cover e5.",
                                                         "children": [
                                                           {
                                                             "move": "f1c4",
                                                             "san": "Bc4+",
-                                                            "blurb": "Develop the Bishop with check! Now e6 is pinned or forced.",
+                                                            "blurb": "Develop Bishop dengan check! Petak e6 kini terkena pin mutlak.",
                                                             "children": [
                                                               {
                                                                 "move": "e7e6",
                                                                 "san": "e6",
-                                                                "blurb": "Maia-3 Human Move (72.5%): Black blocks the check with e6, creating a glaring target on the e6 pawn.",
+                                                                "blurb": "Langkah Pemain Maia-3 (72.5%): Black memblokir check dengan e6, creating a glaring target di e6 pawn.",
                                                                 "children": [
                                                                   {
                                                                     "move": "d1e2",
                                                                     "san": "Qe2",
-                                                                    "blurb": "Pile up on the pinned e6 pawn! White mengancam Qxe6+ immediately.",
+                                                                    "blurb": "Pile up di terkena pin e6 pawn! White mengancam Qxe6+ segera.",
                                                                     "children": [
                                                                       {
                                                                         "move": "d7b6",
                                                                         "san": "Nb6",
-                                                                        "blurb": "Maia-3 Human Move (39.9%): Black guards d5 and menyerang the c4 Bishop.",
+                                                                        "blurb": "Langkah Pemain Maia-3 (39.9%): Black guards d5 dan attack c4 Bishop.",
                                                                         "children": [
                                                                           {
                                                                             "move": "f3e5",
                                                                             "san": "Ne5+",
-                                                                            "blurb": "Check on e5 first to drive the King back before retreating the Bishop."
+                                                                            "blurb": "Check di e5 first untuk memukul mundur King back sebelum mundur Bishop."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.3986
@@ -302,12 +302,12 @@
                                                                       {
                                                                         "move": "d8e7",
                                                                         "san": "Qe7",
-                                                                        "blurb": "Maia-3 Human Move (21.6%): Black mempertahankan e6 with the Queen.",
+                                                                        "blurb": "Langkah Pemain Maia-3 (21.6%): Black mempertahankan e6 dengan Queen.",
                                                                         "children": [
                                                                           {
                                                                             "move": "e1g1",
                                                                             "san": "O-O",
-                                                                            "blurb": "Castle Kingside and bring the Rook to e1 against Black's congested center."
+                                                                            "blurb": "Castle kingside dan bring Rook ke e1 melawan Black's congested center."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.2157
@@ -320,12 +320,12 @@
                                                               {
                                                                 "move": "f6d5",
                                                                 "san": "Nd5",
-                                                                "blurb": "Maia-3 Human Move (9.8%): Black blocks the check with the Knight.",
+                                                                "blurb": "Langkah Pemain Maia-3 (9.8%): Black memblokir check dengan Knight.",
                                                                 "children": [
                                                                   {
                                                                     "move": "e1g1",
                                                                     "san": "O-O",
-                                                                    "blurb": "Castle and bersiap Re1 plus Qe2 targeting the pinned d5 Knight."
+                                                                    "blurb": "Castle dan bersiap Re1 plus Qe2 menargetkan terkena pin d5 Knight."
                                                                   }
                                                                 ],
                                                                 "human_freq": 0.0975
@@ -338,12 +338,12 @@
                                                       {
                                                         "move": "c8e6",
                                                         "san": "Be6",
-                                                        "blurb": "Maia-3 Human Move (4.6%): Black develops Be6 to contest the a2-g8 diagonal.",
+                                                        "blurb": "Langkah Pemain Maia-3 (4.6%): Black mendevelop Be6 ke contest a2-g8 diagonal.",
                                                         "children": [
                                                           {
                                                             "move": "f3e5",
                                                             "san": "Ne5+",
-                                                            "blurb": "Leap into e5 with check and force the Black King back.",
+                                                            "blurb": "Melompat ke e5 dengan check dan memaksa King Black mundur.",
                                                             "children": [
                                                               {
                                                                 "move": "f7g8",
@@ -352,7 +352,7 @@
                                                                   {
                                                                     "move": "f1d3",
                                                                     "san": "Bd3",
-                                                                    "blurb": "merebut the b1-h7 diagonal and mengancam Ng6."
+                                                                    "blurb": "Merebut b1-h7 diagonal dan mengancam Ng6."
                                                                   }
                                                                 ],
                                                                 "human_freq": 0.6892
@@ -366,12 +366,12 @@
                                                         "move": "c8f5",
                                                         "san": "Bf5",
                                                         "is_blunder": true,
-                                                        "blurb": "Maia-3 Human Move (4.5%): Developing the Bishop to f5 walks into a tactical trap.",
+                                                        "blurb": "Langkah Pemain Maia-3 (4.5%): mendevelop Bishop ke f5 masuk ke dalam jebakan taktis.",
                                                         "children": [
                                                           {
                                                             "move": "f3e5",
                                                             "san": "Ne5+",
-                                                            "blurb": "Drive the King back with check before trapping the f5 Bishop.",
+                                                            "blurb": "Drive King back dengan check sebelum trapping f5 Bishop.",
                                                             "children": [
                                                               {
                                                                 "move": "f7g8",
@@ -380,7 +380,7 @@
                                                                   {
                                                                     "move": "f1c4",
                                                                     "san": "Bc4+",
-                                                                    "blurb": "Force 9...e6 with check, cutting off the f5 Bishop's retreat!",
+                                                                    "blurb": "Paksa 9...e6 dengan check, cutting off f5 Bishop's mundur!",
                                                                     "children": [
                                                                       {
                                                                         "move": "e7e6",
@@ -389,7 +389,7 @@
                                                                           {
                                                                             "move": "g2g4",
                                                                             "san": "g4",
-                                                                            "blurb": "Trap the f5 Bishop or memenangkan back the piece on g4!"
+                                                                            "blurb": "Jebak f5 Bishop atau memenangkan back piece di g4!"
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.4939
@@ -407,12 +407,12 @@
                                                       {
                                                         "move": "f7e8",
                                                         "san": "Ke8",
-                                                        "blurb": "Maia-3 Human Move (4.4%): Black immediately retreats the King to e8.",
+                                                        "blurb": "Langkah Pemain Maia-3 (4.4%): Black segera mundur King ke e8.",
                                                         "children": [
                                                           {
                                                             "move": "f1c4",
                                                             "san": "Bc4",
-                                                            "blurb": "Clamp down on the f7-e6 light squares and prevent Black from castling.",
+                                                            "blurb": "Clamp down di f7-e6 light petak dan mencegah Black dari castling.",
                                                             "children": [
                                                               {
                                                                 "move": "e7e6",
@@ -421,7 +421,7 @@
                                                                   {
                                                                     "move": "d1e2",
                                                                     "san": "Qe2",
-                                                                    "blurb": "Target the weak e6 pawn and bersiap O-O."
+                                                                    "blurb": "Target lemah e6 pawn dan bersiap O-O."
                                                                   }
                                                                 ],
                                                                 "human_freq": 0.2895
@@ -444,22 +444,22 @@
                                       {
                                         "move": "c8f5",
                                         "san": "Bf5",
-                                        "blurb": "Maia-3 Top #2 Human Move (17.4%): Black develops Bf5 instead of playing h6.",
+                                        "blurb": "Langkah Populer Maia-3 #2 (17.4%): Black mendevelop Bf5 alih-alih playing h6.",
                                         "children": [
                                           {
                                             "move": "f1c4",
                                             "san": "Bc4",
-                                            "blurb": "Create an immediate battery against f7, forcing Black to play e6.",
+                                            "blurb": "Create an immediate battery melawan f7, memaksa Black untuk melangkah e6.",
                                             "children": [
                                               {
                                                 "move": "e7e6",
                                                 "san": "e6",
-                                                "blurb": "Maia-3 Human Move (96.2%): Black blocks the f7 threat with e6.",
+                                                "blurb": "Langkah Pemain Maia-3 (96.2%): Black memblokir f7 ancaman dengan e6.",
                                                 "children": [
                                                   {
                                                     "move": "g1e2",
                                                     "san": "Ne2",
-                                                    "blurb": "Develop Ne2 to bersiap Ng3 chasing the f5 Bishop."
+                                                    "blurb": "Develop Ne2 ke bersiap Ng3 chasing f5 Bishop."
                                                   }
                                                 ],
                                                 "human_freq": 0.8801
@@ -472,12 +472,12 @@
                                       {
                                         "move": "e7e6",
                                         "san": "e6",
-                                        "blurb": "Maia-3 Top #3 Human Move (12.1%): Black shuts the c8 Bishop inside the pawn chain to guard f7.",
+                                        "blurb": "Langkah Populer Maia-3 #3 (12.1%): Black shuts c8 Bishop di dalam rantai pawn ke guard f7.",
                                         "children": [
                                           {
                                             "move": "f1c4",
                                             "san": "Bc4",
-                                            "blurb": "Increase pressure on e6 and f7! If Black now plays 6...h6, sacrifice with 7.Nxf7!",
+                                            "blurb": "Increase tekanan di e6 dan f7! If Black kini plays 6...h6, sacrifice dengan 7.Nxf7!",
                                             "children": [
                                               {
                                                 "move": "h7h6",
@@ -486,7 +486,7 @@
                                                   {
                                                     "move": "g5f7",
                                                     "san": "Nxf7",
-                                                    "blurb": "Alien Gambit with Bc4 already developed! memakan on f7 and menyerang e6."
+                                                    "blurb": "Alien Gambit dengan Bc4 sudah developed! capture di f7 dan attack e6."
                                                   }
                                                 ],
                                                 "human_freq": 0.3151
@@ -499,12 +499,12 @@
                                       {
                                         "move": "c8g4",
                                         "san": "Bg4",
-                                        "blurb": "Maia-3 Top #4 Human Move (10.2%): Black develops Bg4 with tempo on White's Queen.",
+                                        "blurb": "Langkah Populer Maia-3 #4 (10.2%): Black mendevelop Bg4 dengan tempo di White's Queen.",
                                         "children": [
                                           {
                                             "move": "f1e2",
                                             "san": "Be2",
-                                            "blurb": "Offer a Bishop trade to eliminate Black's active light-squared Bishop.",
+                                            "blurb": "Offer a Bishop tukar ke eliminate Black's aktif light-squared Bishop.",
                                             "children": [
                                               {
                                                 "move": "g4e2",
@@ -513,7 +513,7 @@
                                                   {
                                                     "move": "d1e2",
                                                     "san": "Qxe2",
-                                                    "blurb": "memakan balik with the Queen while keeping the d4 pawn and g5 Knight active."
+                                                    "blurb": "Recapture dengan Queen sembari menjaga d4 pawn dan g5 Knight aktif."
                                                   }
                                                 ],
                                                 "human_freq": 0.7896
@@ -531,23 +531,23 @@
                               {
                                 "move": "c8f5",
                                 "san": "Bf5",
-                                "blurb": "Maia-3 Top #1 Human Move at Move 4 (50.0%): Classical Caro-Kann Variation.",
+                                "blurb": "Maia-3 Top #1 langkah manusia di langkah 4 (50.0%): Classical Caro-Kann variasi.",
                                 "children": [
                                   {
                                     "move": "e4g5",
                                     "san": "Ng5",
-                                    "blurb": "Alien Gambit Sideline vs 4...Bf5! Surprise Classical Caro-Kann players by jumping to g5 anyway.",
+                                    "blurb": "Alien Gambit Sideline vs 4...Bf5! Surprise Classical Caro-Kann players oleh melompat ke g5 anyway.",
                                     "children": [
                                       {
                                         "move": "h7h6",
                                         "san": "h6",
                                         "is_blunder": true,
-                                        "blurb": "Maia-3 Top #1 Human Move (28.7%): Club players reflexively push h6, falling for a devastating tactical fork!",
+                                        "blurb": "Langkah Populer Maia-3 #1 (28.7%): pemain klub reflexively dorong h6, falling untuk devastating tactical fork!",
                                         "children": [
                                           {
                                             "move": "g5f7",
                                             "san": "Nxf7",
-                                            "blurb": "Strike with 6.Nxf7! After Kxf7, 7.Qf3 forks the King on f7 and the undefended Bishop on f5!",
+                                            "blurb": "Strike dengan 6.Nxf7! setelah Kxf7, 7.Qf3 melakukan Fork King di f7 dan tanpa penjagaan Bishop di f5!",
                                             "children": [
                                               {
                                                 "move": "e8f7",
@@ -556,17 +556,17 @@
                                                   {
                                                     "move": "d1f3",
                                                     "san": "Qf3",
-                                                    "blurb": "Double menyerang on the f5 Bishop and f7 King! White memenangkan back the piece or a clean pawn with an exposed Black King.",
+                                                    "blurb": "Double attack di f5 Bishop dan f7 King! White memenangkan back piece atau a bersih pawn dengan terbuka Black King.",
                                                     "children": [
                                                       {
                                                         "move": "e7e6",
                                                         "san": "e6",
-                                                        "blurb": "Maia-3 Human Move (53.9%): Black saves the King but surrenders the f5 Bishop.",
+                                                        "blurb": "Langkah Pemain Maia-3 (53.9%): Black saves King tetapi melepaskan f5 Bishop.",
                                                         "children": [
                                                           {
                                                             "move": "f3f5",
                                                             "san": "Qxf5+",
-                                                            "blurb": "Regain the piece with check and emerge a full pawn ahead!"
+                                                            "blurb": "Regain piece dengan check dan unggul satu pawn penuh ahead!"
                                                           }
                                                         ],
                                                         "human_freq": 0.5388
@@ -584,12 +584,12 @@
                                       {
                                         "move": "e7e6",
                                         "san": "e6",
-                                        "blurb": "Maia-3 Top #2 Human Move (26.7%): Black calmly mempertahankan f7 with e6.",
+                                        "blurb": "Langkah Populer Maia-3 #2 (26.7%): Black dengan tenang mempertahankan f7 dengan e6.",
                                         "children": [
                                           {
                                             "move": "g1f3",
                                             "san": "N1f3",
-                                            "blurb": "Develop the King's Knight and bersiap Bd3 to trade off Black's f5 Bishop.",
+                                            "blurb": "Develop King's Knight dan bersiap Bd3 untuk menukar off Black's f5 Bishop.",
                                             "children": [
                                               {
                                                 "move": "g8f6",
@@ -598,7 +598,7 @@
                                                   {
                                                     "move": "f1d3",
                                                     "san": "Bd3",
-                                                    "blurb": "menantang the f5 Bishop and bersiap O-O."
+                                                    "blurb": "Tantangan f5 Bishop dan bersiap O-O."
                                                   }
                                                 ],
                                                 "human_freq": 0.1641
@@ -611,12 +611,12 @@
                                       {
                                         "move": "f5g6",
                                         "san": "Bg6",
-                                        "blurb": "Maia-3 Top #3 Human Move (16.1%): Black tucks the Bishop back to g6.",
+                                        "blurb": "Langkah Populer Maia-3 #3 (16.1%): Black tucks Bishop back ke g6.",
                                         "children": [
                                           {
                                             "move": "h2h4",
                                             "san": "h4",
-                                            "blurb": "Harass the g6 Bishop immediately with h4-h5!"
+                                            "blurb": "Harass g6 Bishop segera dengan h4-h5!"
                                           }
                                         ],
                                         "human_freq": 0.1614
@@ -629,22 +629,22 @@
                               {
                                 "move": "b8d7",
                                 "san": "Nd7",
-                                "blurb": "Maia-3 Top #3 Human Move (5.2%): Karpov Variation mempersiapkan Ngf6.",
+                                "blurb": "Langkah Populer Maia-3 #3 (5.2%): Karpov variasi mempersiapkan Ngf6.",
                                 "children": [
                                   {
                                     "move": "e4g5",
                                     "san": "Ng5",
-                                    "blurb": "menyerang f7 and e6! This sets the famous smothered mate trap if Black plays 5...h6??",
+                                    "blurb": "Serang f7 dan e6! Ini menyiapkan jebakan smothered mate terkenal jika Black memainkan 5...h6??",
                                     "children": [
                                       {
                                         "move": "g8f6",
                                         "san": "Ngf6",
-                                        "blurb": "Maia-3 Top #1 Human Move (46.1%): Black develops Ngf6.",
+                                        "blurb": "Langkah Populer Maia-3 #1 (46.1%): Black mendevelop Ngf6.",
                                         "children": [
                                           {
                                             "move": "f1c4",
                                             "san": "Bc4",
-                                            "blurb": "Force Black to play e6, locking in the c8 Bishop.",
+                                            "blurb": "Paksa Black untuk melangkah e6, locking di c8 Bishop.",
                                             "children": [
                                               {
                                                 "move": "e7e6",
@@ -653,7 +653,7 @@
                                                   {
                                                     "move": "d1e2",
                                                     "san": "Qe2",
-                                                    "blurb": "mengancam Nxf7 or Nxe6 against Black's cramped setup."
+                                                    "blurb": "Mengancam Nxf7 atau Nxe6 melawan Black's sesak setup."
                                                   }
                                                 ],
                                                 "human_freq": 0.8596
@@ -667,12 +667,12 @@
                                         "move": "h7h6",
                                         "san": "h6",
                                         "is_blunder": true,
-                                        "blurb": "Maia-3 Top #2 Human Move (15.8%): Fatal blunder! Black falls into the classic 6.Ne6! Queen trap.",
+                                        "blurb": "Langkah Populer Maia-3 #2 (15.8%): fatal blunder! Black falls ke dalam classic 6.Ne6! Queen jebakan.",
                                         "children": [
                                           {
                                             "move": "g5e6",
                                             "san": "Ne6",
-                                            "blurb": "Brilliant Knight sacrifice (6.Ne6!!)! Black's Queen is trapped unless Black memakan on e6, which allows mate in 2!",
+                                            "blurb": "Brilliant Knight sacrifice (6.Ne6!!)! Queen Black terjebak kecuali jika Black memakan di e6, yang berujung mate 2 langkah!",
                                             "children": [
                                               {
                                                 "move": "f7e6",
@@ -681,7 +681,7 @@
                                                   {
                                                     "move": "d1h5",
                                                     "san": "Qh5+",
-                                                    "blurb": "Deadly check along the e8-h5 diagonal! Black is forced to play 7...g6.",
+                                                    "blurb": "Check mematikan di diagonal e8-h5! Black terpaksa melangkah 7...g6.",
                                                     "children": [
                                                       {
                                                         "move": "g7g6",
@@ -690,7 +690,7 @@
                                                           {
                                                             "move": "h5g6",
                                                             "san": "Qxg6#",
-                                                            "blurb": "Checkmate! A classic 8-move victory in the Alien Gambit."
+                                                            "blurb": "Checkmate! A classic 8-langkah victory di Alien Gambit."
                                                           }
                                                         ],
                                                         "human_freq": 1.0
@@ -718,12 +718,12 @@
                       {
                         "move": "g8f6",
                         "san": "Nf6",
-                        "blurb": "Maia-3 Top #2 Human Move at Move 3 (11.1%): Black develops Nf6 before memakan on e4.",
+                        "blurb": "Maia-3 Top #2 langkah manusia di langkah 3 (11.1%): Black mendevelop Nf6 sebelum capture di e4.",
                         "children": [
                           {
                             "move": "e4e5",
                             "san": "e5",
-                            "blurb": "Push e5 with tempo to chase the f6 Knight!",
+                            "blurb": "Dorong e5 dengan tempo ke Usir f6 Knight!",
                             "children": [
                               {
                                 "move": "f6d7",
@@ -732,7 +732,7 @@
                                   {
                                     "move": "f2f4",
                                     "san": "f4",
-                                    "blurb": "Bolster the e5 spearhead and claim a massive space advantage."
+                                    "blurb": "Bolster e5 spearhead dan kuasai a massive space keunggulan."
                                   }
                                 ],
                                 "human_freq": 0.415
@@ -745,12 +745,12 @@
                       {
                         "move": "e7e6",
                         "san": "e6",
-                        "blurb": "Maia-3 Top #3 Human Move at Move 3 (8.1%): French-style setup locking in the c8 Bishop.",
+                        "blurb": "Maia-3 Top #3 langkah manusia di langkah 3 (8.1%): French-style setup locking di c8 Bishop.",
                         "children": [
                           {
                             "move": "g1f3",
                             "san": "Nf3",
-                            "blurb": "Develop smoothly and maintain central tension."
+                            "blurb": "Develop smoothly dan maintain central tension."
                           }
                         ],
                         "human_freq": 0.0808

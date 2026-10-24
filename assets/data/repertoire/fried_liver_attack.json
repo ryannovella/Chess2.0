@@ -3,111 +3,111 @@
   "name": "Fried Liver Attack",
   "eco": "C57",
   "color": "white",
-  "description": "Aggressive Italian and Two Knights repertoire targeting f7 and central dominance.",
+  "description": "Repertoire agresif Italian dan Two Knight menargetkan f7 dan dominasi center.",
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "Claim the center immediately and open diagonals for the Queen and light-squared Bishop.",
+    "blurb": "Kuasai center dan buka diagonal untuk Queen serta light-squared Bishop.",
     "children": [
       {
         "move": "e7e5",
         "san": "e5",
         "human_freq": 0.4748,
-        "blurb": "Black mirrors in the center with the classical King's Pawn response.",
+        "blurb": "Black membalas simetris di center dengan King's pawn.",
         "children": [
           {
             "move": "g1f3",
             "san": "Nf3",
-            "blurb": "Develop the King's Knight with tempo, menyerang the undefended e5 pawn.",
+            "blurb": "Develop King's Knight dengan tempo, Menyerang pawn e5 yang tanpa penjagaan.",
             "children": [
               {
                 "move": "b8c6",
                 "san": "Nc6",
                 "human_freq": 0.6351,
-                "blurb": "Black mempertahankan e5 while developing the Queenside Knight.",
+                "blurb": "Black mempertahankan e5 sembari mendevelop queenside Knight.",
                 "children": [
                   {
                     "move": "f1c4",
                     "san": "Bc4",
-                    "blurb": "Deploy the Bishop to the active a2-g8 diagonal, eyeing the vulnerable f7 square.",
+                    "blurb": "Tempatkan Bishop di diagonal aktif a2-g8, mengincar petak f7 yang rentan.",
                     "children": [
                       {
                         "move": "g8f6",
                         "san": "Nf6",
                         "human_freq": 0.308,
-                        "blurb": "Two Knights Defense. Black counter-menyerang e4 instead of playing passively.",
+                        "blurb": "Two Knight Defense. Black counter-attack e4 alih-alih bermain pasif.",
                         "children": [
                           {
                             "move": "f3g5",
                             "san": "Ng5",
-                            "blurb": "The Knight menyerang! Gang up on f7 with both the Knight and Bishop.",
+                            "blurb": "Serangan Knight! Tekan petak f7 bersama Knight dan Bishop.",
                             "children": [
                               {
                                 "move": "d7d5",
                                 "san": "d5",
                                 "human_freq": 0.766,
-                                "blurb": "Black blocks the a2-g8 diagonal to intercept the menyerang on f7.",
+                                "blurb": "Black memblokir diagonal a2-g8 untuk menahan attack di f7.",
                                 "children": [
                                   {
                                     "move": "e4d5",
                                     "san": "exd5",
-                                    "blurb": "memakan the d5 pawn and force Black to choose between risky memakan balik or gambit sidelines.",
+                                    "blurb": "Capture pawn d5 dan paksa Black memilih antara recapture yang berisiko atau jalur gambit.",
                                     "children": [
                                       {
                                         "move": "f6d5",
                                         "san": "Nxd5",
                                         "is_blunder": true,
                                         "human_freq": 0.4528,
-                                        "blurb": "Natural-looking memakan balik, but a serious tactical concession that allows the Fried Liver sacrifice.",
+                                        "blurb": "Recapture yang tampak wajar, tetapi memberi celah taktis untuk Fried Liver sacrifice.",
                                         "children": [
                                           {
                                             "move": "g5f7",
                                             "san": "Nxf7",
-                                            "blurb": "The Fried Liver sacrifice! Rip open f7 and drag Black's King into the crossfire.",
+                                            "blurb": "Fried Liver sacrifice! Bongkar f7 dan seret King Black ke medan attack.",
                                             "children": [
                                               {
                                                 "move": "e8f7",
                                                 "san": "Kxf7",
                                                 "human_freq": 0.9358,
-                                                "blurb": "Black accepts the Knight sacrifice, exposing the King on f7.",
+                                                "blurb": "Black menerima sacrifice Knight, membuka posisi King di f7.",
                                                 "children": [
                                                   {
                                                     "move": "d1f3",
                                                     "san": "Qf3+",
-                                                    "blurb": "Double menyerang! Check the exposed King while piling up on the pinned d5 Knight.",
+                                                    "blurb": "Serangan ganda! Beri check ke King terbuka sembari menekan Knight d5 yang terkena pin.",
                                                     "children": [
                                                       {
                                                         "move": "f7e6",
                                                         "san": "Ke6",
                                                         "human_freq": 0.3908,
-                                                        "blurb": "The only fighting move: Black steps into the center to mempertahankan the d5 Knight.",
+                                                        "blurb": "Satu-satunya langkah bertahan: Black melangkah ke center untuk menjaga Knight d5.",
                                                         "children": [
                                                           {
                                                             "move": "b1c3",
                                                             "san": "Nc3",
-                                                            "blurb": "Bring a third attacker against the pinned d5 Knight.",
+                                                            "blurb": "Bawa perwira penyerang ketiga untuk menekan Knight d5 yang terkena pin.",
                                                             "children": [
                                                               {
                                                                 "move": "c6b4",
                                                                 "san": "Nb4",
                                                                 "human_freq": 0.3199,
-                                                                "blurb": "Main theoretical defense: Black counter-menyerang c2 and bolsters d5.",
+                                                                "blurb": "Teori defense utama: Black menyerang balik c2 dan memperkuat d5.",
                                                                 "children": [
                                                                   {
                                                                     "move": "c4b3",
                                                                     "san": "Bb3",
-                                                                    "blurb": "Sidestep potential forks and maintain the deadly pin along the a2-g8 diagonal.",
+                                                                    "blurb": "Hindari potensi fork dan pertahankan pin mematikan di diagonal a2-g8.",
                                                                     "children": [
                                                                       {
                                                                         "move": "c7c6",
                                                                         "san": "c6",
                                                                         "human_freq": 0.653,
-                                                                        "blurb": "Black reinforces the d5 Knight with a pawn chain.",
+                                                                        "blurb": "Black memperkuat Knight d5 dengan rantai pawn.",
                                                                         "children": [
                                                                           {
                                                                             "move": "a2a3",
                                                                             "san": "a3",
-                                                                            "blurb": "Kick the b4 Knight away from mempertahankan the d5 square.",
+                                                                            "blurb": "Usir Knight b4 agar tidak menjaga petak d5.",
                                                                             "children": [
                                                                               {
                                                                                 "move": "b4a6",
@@ -117,7 +117,7 @@
                                                                                   {
                                                                                     "move": "d2d4",
                                                                                     "san": "d4",
-                                                                                    "blurb": "Blast open the center while Black's King is stranded on e6.",
+                                                                                    "blurb": "Buka center lebar-lebar selagi King Black terjebak di e6.",
                                                                                     "children": [
                                                                                       {
                                                                                         "move": "e5d4",
@@ -127,7 +127,7 @@
                                                                                           {
                                                                                             "move": "c3d5",
                                                                                             "san": "Nxd5",
-                                                                                            "blurb": "Eliminate the central defender and expose the Black King to a decisive menyerang."
+                                                                                            "blurb": "Habisi defender di center dan buka King Black terhadap attack penentu."
                                                                                           }
                                                                                         ]
                                                                                       }
@@ -147,12 +147,12 @@
                                                                 "move": "c6e7",
                                                                 "san": "Ne7",
                                                                 "human_freq": 0.3086,
-                                                                "blurb": "Passive defense of d5 that blocks the f8 Bishop.",
+                                                                "blurb": "Pertahanan pasif d5 yang memblokir Bishop f8.",
                                                                 "children": [
                                                                   {
                                                                     "move": "d2d4",
                                                                     "san": "d4",
-                                                                    "blurb": "Strike at the e5 pawn to pry open the e-file directly against the King.",
+                                                                    "blurb": "Hantam pawn e5 untuk membuka e-file langsung ke arah King.",
                                                                     "children": [
                                                                       {
                                                                         "move": "c7c6",
@@ -162,7 +162,7 @@
                                                                           {
                                                                             "move": "c1g5",
                                                                             "san": "Bg5",
-                                                                            "blurb": "Pin the e7 defender and bersiap Queenside castling with check.",
+                                                                            "blurb": "Lakukan pin pada defender e7 dan bersiap castling queenside dengan check.",
                                                                             "children": [
                                                                               {
                                                                                 "move": "h7h6",
@@ -172,7 +172,7 @@
                                                                                   {
                                                                                     "move": "g5e7",
                                                                                     "san": "Bxe7",
-                                                                                    "blurb": "Remove the key defender of d5 before castling Queenside.",
+                                                                                    "blurb": "Singkirkan defender kunci di d5 sebelum castling queenside.",
                                                                                     "children": [
                                                                                       {
                                                                                         "move": "f8e7",
@@ -182,7 +182,7 @@
                                                                                           {
                                                                                             "move": "e1c1",
                                                                                             "san": "O-O-O",
-                                                                                            "blurb": "Castle Queenside to bring the Rook onto the d-file with overwhelming pressure."
+                                                                                            "blurb": "Castle queenside untuk membawa Rook ke d-file dengan tekanan besar."
                                                                                           }
                                                                                         ]
                                                                                       }
@@ -202,22 +202,22 @@
                                                                 "move": "c6d4",
                                                                 "san": "Nd4",
                                                                 "is_blunder": true,
-                                                                "blurb": "Maia-3 Human Blunder (28.2%): Nearly a third of human players jump 8...Nd4, forgetting that c6 was the only defender of d5!",
+                                                                "blurb": "Blunder Pemain Maia-3 (28.2%): Hampir sepertiga pemain lompat 8...Nd4, lupa bahwa c6 adalah satu-satunya penjaga d5!",
                                                                 "children": [
                                                                   {
                                                                     "move": "c4d5",
                                                                     "san": "Bxd5+",
-                                                                    "blurb": "memakan the undefended d5 Knight with check!",
+                                                                    "blurb": "Capture Knight d5 yang tanpa penjagaan dengan check!",
                                                                     "children": [
                                                                       {
                                                                         "move": "e6d6",
                                                                         "san": "Kd6",
-                                                                        "blurb": "Maia-3 Human Move (60.5%): Black steps to d6.",
+                                                                        "blurb": "Langkah Pemain Maia-3 (60.5%): Black melangkah ke d6.",
                                                                         "children": [
                                                                           {
                                                                             "move": "f3f7",
                                                                             "san": "Qf7",
-                                                                            "blurb": "Infiltrate with Qf7, mengancam Ne4# and decisive material gain."
+                                                                            "blurb": "Infiltrasi dengan Qf7, mengancam Ne4# dan keunggulan material telak."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6048
@@ -236,12 +236,12 @@
                                                         "san": "Ke8",
                                                         "is_blunder": true,
                                                         "human_freq": 0.2829,
-                                                        "blurb": "Retreating to e8 surrenders the d5 Knight and leaves Black's King uncastled.",
+                                                        "blurb": "Mundur ke e8 melepaskan Knight d5 dan membuat King Black gagal castling.",
                                                         "children": [
                                                           {
                                                             "move": "c4d5",
                                                             "san": "Bxd5",
-                                                            "blurb": "memenangkan the d5 Knight while mengancam mate on f7.",
+                                                            "blurb": "Menangkan Knight d5 sembari mengancam mate di f7.",
                                                             "children": [
                                                               {
                                                                 "move": "d8f6",
@@ -251,7 +251,7 @@
                                                                   {
                                                                     "move": "d5c6",
                                                                     "san": "Bxc6+",
-                                                                    "blurb": "Shatter Black's Queenside structure with check and stay a clean pawn ahead.",
+                                                                    "blurb": "Hancurkan struktur queenside Black dengan check dan unggul satu pawn bersih.",
                                                                     "children": [
                                                                       {
                                                                         "move": "b7c6",
@@ -261,7 +261,7 @@
                                                                           {
                                                                             "move": "f3f6",
                                                                             "san": "Qxf6",
-                                                                            "blurb": "Trade Queens into a menang endgame with an extra pawn and ruined Black pawns."
+                                                                            "blurb": "Tukar Queen menuju endgame menang dengan keunggulan pawn."
                                                                           }
                                                                         ]
                                                                       }
@@ -277,22 +277,22 @@
                                                         "move": "d8f6",
                                                         "san": "Qf6",
                                                         "is_blunder": true,
-                                                        "blurb": "Maia-3 Top #3 Human Move (17.9%): Club players often block the check with Qf6, leaving the d5 Knight undefended.",
+                                                        "blurb": "Langkah Populer Maia-3 #3 (17.9%): Pemain klub sering memblokir check dengan Qf6, membiarkan Knight d5 tanpa penjagaan.",
                                                         "children": [
                                                           {
                                                             "move": "c4d5",
                                                             "san": "Bxd5+",
-                                                            "blurb": "memenangkan the d5 Knight with check before trading Queens!",
+                                                            "blurb": "Memenangkan d5 Knight dengan check sebelum menukar Queen!",
                                                             "children": [
                                                               {
                                                                 "move": "c8e6",
                                                                 "san": "Be6",
-                                                                "blurb": "Maia-3 Human Move (80.4%): Black blocks with Be6.",
+                                                                "blurb": "Langkah Pemain Maia-3 (80.4%): Black memblokir dengan Be6.",
                                                                 "children": [
                                                                   {
                                                                     "move": "d5c6",
                                                                     "san": "Bxc6",
-                                                                    "blurb": "Eliminate the c6 defender with check and emerge a full pawn and shattered structure ahead.",
+                                                                    "blurb": "Habisi defender c6 dengan check dan unggul satu pawn bersih dengan struktur lawan yang rusak.",
                                                                     "children": [
                                                                       {
                                                                         "move": "b7c6",
@@ -301,7 +301,7 @@
                                                                           {
                                                                             "move": "f3f6",
                                                                             "san": "Qxf6+",
-                                                                            "blurb": "Trade Queens into a menang endgame with an extra pawn and ruined Black pawns."
+                                                                            "blurb": "Tukar Queen menuju endgame menang dengan keunggulan pawn."
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.8537
@@ -321,12 +321,12 @@
                                                         "san": "Kg8",
                                                         "is_blunder": true,
                                                         "human_freq": 0.1099,
-                                                        "blurb": "Fatal retreat! Abandoning the d5 Knight leads to forced checkmate.",
+                                                        "blurb": "Mundur fatal! Meninggalkan Knight d5 berujung forced checkmate.",
                                                         "children": [
                                                           {
                                                             "move": "c4d5",
                                                             "san": "Bxd5+",
-                                                            "blurb": "memakan the undefended Knight with check, forcing a quick mate.",
+                                                            "blurb": "Capture Knight yang tanpa penjagaan dengan check, memaksa checkmate cepat.",
                                                             "children": [
                                                               {
                                                                 "move": "d8d5",
@@ -336,7 +336,7 @@
                                                                   {
                                                                     "move": "f3d5",
                                                                     "san": "Qxd5+",
-                                                                    "blurb": "memakan balik the Queen with check; Black only has one legal block.",
+                                                                    "blurb": "Recapture Queen dengan check; Black hanya memiliki satu langkah blokir legal.",
                                                                     "children": [
                                                                       {
                                                                         "move": "c8e6",
@@ -346,7 +346,7 @@
                                                                           {
                                                                             "move": "d5e6",
                                                                             "san": "Qxe6#",
-                                                                            "blurb": "Checkmate! Punish the 7...Kg8 retreat cleanly."
+                                                                            "blurb": "Checkmate! Beri hukuman telak atas mundurnya 7...Kg8."
                                                                           }
                                                                         ]
                                                                       }
@@ -367,12 +367,12 @@
                                                 "san": "Qe7",
                                                 "is_blunder": true,
                                                 "human_freq": 0.0056,
-                                                "blurb": "Declining the sacrifice loses the h8 Rook cleanly.",
+                                                "blurb": "Menolak sacrifice membuat Rook h8 hilang cuma-cuma.",
                                                 "children": [
                                                   {
                                                     "move": "f7h8",
                                                     "san": "Nxh8",
-                                                    "blurb": "memakan the Rook in the corner; White is a full exchange and pawn ahead.",
+                                                    "blurb": "Capture Rook di sudut; White unggul satu exchange dan satu pawn bersih.",
                                                     "children": [
                                                       {
                                                         "move": "c8e6",
@@ -382,7 +382,7 @@
                                                           {
                                                             "move": "e1g1",
                                                             "san": "O-O",
-                                                            "blurb": "Castle to safety and bersiap to liquidate Black's central pieces."
+                                                            "blurb": "Castle untuk mengamankan King dan bersiap menyapu bersih piece Black di center."
                                                           }
                                                         ]
                                                       }
@@ -395,7 +395,7 @@
                                           {
                                             "move": "d2d4",
                                             "san": "d4",
-                                            "blurb": "The Lolli menyerang! Open the center and bersiap O-O before sacrificing on f7.",
+                                            "blurb": "Lolli Attack! Buka center dan bersiap castling sebelum sacrifice di f7.",
                                             "children": [
                                               {
                                                 "move": "e5d4",
@@ -405,7 +405,7 @@
                                                   {
                                                     "move": "e1g1",
                                                     "san": "O-O",
-                                                    "blurb": "Castle Kingside to bring the f1 Rook straight to the open e-file.",
+                                                    "blurb": "Castle kingside untuk membawa Rook f1 langsung ke open e-file.",
                                                     "children": [
                                                       {
                                                         "move": "f8e7",
@@ -415,7 +415,7 @@
                                                           {
                                                             "move": "g5f7",
                                                             "san": "Nxf7",
-                                                            "blurb": "Unleash the Lolli sacrifice now that the e1 square is ready for the Rook!",
+                                                            "blurb": "Lancarkan Lolli sacrifice karena petak e1 sudah siap untuk Rook!",
                                                             "children": [
                                                               {
                                                                 "move": "e8f7",
@@ -425,7 +425,7 @@
                                                                   {
                                                                     "move": "d1f3",
                                                                     "san": "Qf3+",
-                                                                    "blurb": "Fork the exposed King and the pinned d5 Knight with the Rook already castled."
+                                                                    "blurb": "Fork King yang terbuka dan Knight d5 yang terkena pin setelah castling."
                                                                   }
                                                                 ]
                                                               }
@@ -445,23 +445,23 @@
                                         "move": "c6a5",
                                         "san": "Na5",
                                         "human_freq": 0.407,
-                                        "blurb": "Polerio Defense: the main grandmaster antidote, menyerang the c4 Bishop.",
+                                        "blurb": "Polerio defense: main grandmaster antidote, attack c4 Bishop.",
                                         "children": [
                                           {
                                             "move": "c4b5",
                                             "san": "Bb5+",
-                                            "blurb": "Deliver check with tempo so the Bishop escapes without losing time.",
+                                            "blurb": "Deliver check dengan tempo so Bishop escapes tanpa kehilangan time.",
                                             "children": [
                                               {
                                                 "move": "c7c6",
                                                 "san": "c6",
                                                 "human_freq": 0.7492,
-                                                "blurb": "Black blocks the check and offers a pawn for rapid development.",
+                                                "blurb": "Black memblokir check dan offers a pawn untuk development cepat.",
                                                 "children": [
                                                   {
                                                     "move": "d5c6",
                                                     "san": "dxc6",
-                                                    "blurb": "Accept the pawn menantang and damage Black's Queenside structure.",
+                                                    "blurb": "Terima pawn tantangan dan damage Black's queenside struktur.",
                                                     "children": [
                                                       {
                                                         "move": "b7c6",
@@ -471,18 +471,18 @@
                                                           {
                                                             "move": "b5e2",
                                                             "san": "Be2",
-                                                            "blurb": "Retreat to e2 where the Bishop controls g4 and avoids future tactical hits.",
+                                                            "blurb": "Mundur ke e2 di mana Bishop controls g4 dan avoids future tactical hits.",
                                                             "children": [
                                                               {
                                                                 "move": "h7h6",
                                                                 "san": "h6",
                                                                 "human_freq": 0.4634,
-                                                                "blurb": "Black questions the g5 Knight immediately.",
+                                                                "blurb": "Black questions g5 Knight segera.",
                                                                 "children": [
                                                                   {
                                                                     "move": "g5f3",
                                                                     "san": "Nf3",
-                                                                    "blurb": "Return to f3 and provoke the overextended e4 push.",
+                                                                    "blurb": "Return ke f3 dan provoke overextended e4 dorong.",
                                                                     "children": [
                                                                       {
                                                                         "move": "e5e4",
@@ -492,7 +492,7 @@
                                                                           {
                                                                             "move": "f3e5",
                                                                             "san": "Ne5",
-                                                                            "blurb": "Jump into the strong central e5 outpost.",
+                                                                            "blurb": "Lompat ke dalam strong central e5 outpost.",
                                                                             "children": [
                                                                               {
                                                                                 "move": "f8d6",
@@ -502,7 +502,7 @@
                                                                                   {
                                                                                     "move": "d2d4",
                                                                                     "san": "d4",
-                                                                                    "blurb": "Support the Knight and force an en passant release of tension.",
+                                                                                    "blurb": "Dukung Knight dan paksa an en passant release dari tension.",
                                                                                     "children": [
                                                                                       {
                                                                                         "move": "e4d3",
@@ -512,7 +512,7 @@
                                                                                           {
                                                                                             "move": "e5d3",
                                                                                             "san": "Nxd3",
-                                                                                            "blurb": "memakan balik on d3 with a solid extra pawn and safe King."
+                                                                                            "blurb": "Recapture di d3 dengan solid extra pawn dan safe King."
                                                                                           }
                                                                                         ]
                                                                                       }
@@ -532,12 +532,12 @@
                                                                 "move": "f8c5",
                                                                 "san": "Bc5",
                                                                 "human_freq": 0.1402,
-                                                                "blurb": "Black develops actively before kicking the g5 Knight.",
+                                                                "blurb": "Black mendevelop secara aktif sebelum kicking g5 Knight.",
                                                                 "children": [
                                                                   {
                                                                     "move": "d2d3",
                                                                     "san": "d3",
-                                                                    "blurb": "Solidify the e4/g5 structure and open the c1-h6 diagonal.",
+                                                                    "blurb": "Perkokoh e4/g5 struktur dan buka c1-h6 diagonal.",
                                                                     "children": [
                                                                       {
                                                                         "move": "e8g8",
@@ -547,7 +547,7 @@
                                                                           {
                                                                             "move": "e1g1",
                                                                             "san": "O-O",
-                                                                            "blurb": "Castle Kingside and bersiap Nc3 to target Black's offside a5 Knight."
+                                                                            "blurb": "Castle kingside dan bersiap Nc3 ke target Black's offside a5 Knight."
                                                                           }
                                                                         ]
                                                                       }
@@ -567,12 +567,12 @@
                                                 "move": "c8d7",
                                                 "san": "Bd7",
                                                 "human_freq": 0.2409,
-                                                "blurb": "Black blocks with the Bishop instead of sacrificing the c6 pawn.",
+                                                "blurb": "Black memblokir dengan Bishop alih-alih mengorbankan c6 pawn.",
                                                 "children": [
                                                   {
                                                     "move": "d1e2",
                                                     "san": "Qe2",
-                                                    "blurb": "menyerang the e5 pawn and pin the diagonal before trading on d7.",
+                                                    "blurb": "Attack e5 pawn dan Lakukan pin pada diagonal sebelum menukar di d7.",
                                                     "children": [
                                                       {
                                                         "move": "f8d6",
@@ -582,7 +582,7 @@
                                                           {
                                                             "move": "b5d7",
                                                             "san": "Bxd7+",
-                                                            "blurb": "Trade off the defender and keep the extra d5 pawn.",
+                                                            "blurb": "Tukar off defender dan jaga extra d5 pawn.",
                                                             "children": [
                                                               {
                                                                 "move": "d8d7",
@@ -592,7 +592,7 @@
                                                                   {
                                                                     "move": "b1c3",
                                                                     "san": "Nc3",
-                                                                    "blurb": "mempertahankan the d5 extra pawn and bersiap d3 plus O-O."
+                                                                    "blurb": "Mempertahankan d5 extra pawn dan bersiap d3 plus O-O."
                                                                   }
                                                                 ]
                                                               }
@@ -612,12 +612,12 @@
                                         "move": "c6d4",
                                         "san": "Nd4",
                                         "human_freq": 0.0822,
-                                        "blurb": "Fritz Variation: Black centralizes the Knight and eyes Bg4.",
+                                        "blurb": "Fritz variasi: Black memusatkan perwira di Knight dan eyes Bg4.",
                                         "children": [
                                           {
                                             "move": "c2c3",
                                             "san": "c3",
-                                            "blurb": "menantang the d4 Knight immediately and force it to declare its intentions.",
+                                            "blurb": "Tantang Knight d4 segera dan paksa untuk menentukan posisinya.",
                                             "children": [
                                               {
                                                 "move": "b7b5",
@@ -627,7 +627,7 @@
                                                   {
                                                     "move": "c4f1",
                                                     "san": "Bf1",
-                                                    "blurb": "Drop the Bishop back to f1, keeping both b5 and d4 under fire.",
+                                                    "blurb": "Drop Bishop back ke f1, menjaga kedua b5 dan d4 di bawah fire.",
                                                     "children": [
                                                       {
                                                         "move": "f6d5",
@@ -637,7 +637,7 @@
                                                           {
                                                             "move": "c3d4",
                                                             "san": "cxd4",
-                                                            "blurb": "memakan the Knight on d4 and emerge with a clear material advantage."
+                                                            "blurb": "Capture Knight di d4 dan emerge dengan clear keunggulan material."
                                                           }
                                                         ]
                                                       }
@@ -653,12 +653,12 @@
                                         "move": "b7b5",
                                         "san": "b5",
                                         "human_freq": 0.0439,
-                                        "blurb": "Ulvestad Variation: an aggressive wing gambit trying to deflect White's Bishop.",
+                                        "blurb": "Ulvestad variasi: an agresif wing gambit trying ke deflect White's Bishop.",
                                         "children": [
                                           {
                                             "move": "c4f1",
                                             "san": "Bf1",
-                                            "blurb": "Key refutation! Retreat to f1 so both d5 and b5 remain under menyerang without exposing e4.",
+                                            "blurb": "Key refutation! mundur ke f1 so kedua d5 dan b5 remain di bawah attack tanpa membuka e4.",
                                             "children": [
                                               {
                                                 "move": "f6d5",
@@ -668,7 +668,7 @@
                                                   {
                                                     "move": "f1b5",
                                                     "san": "Bxb5",
-                                                    "blurb": "Snap off the b5 pawn with a deadly pin on the c6 Knight.",
+                                                    "blurb": "Snap off b5 pawn dengan deadly pin di c6 Knight.",
                                                     "children": [
                                                       {
                                                         "move": "c8d7",
@@ -678,7 +678,7 @@
                                                           {
                                                             "move": "d2d4",
                                                             "san": "d4",
-                                                            "blurb": "Open the center while maintaining the extra pawn and safer King."
+                                                            "blurb": "Buka center sembari maintaining extra pawn dan safer King."
                                                           }
                                                         ]
                                                       }
@@ -698,12 +698,12 @@
                                 "move": "f8c5",
                                 "san": "Bc5",
                                 "human_freq": 0.1238,
-                                "blurb": "Traxler Counterattack! Black ignores f7 and bersiap a violent sacrifice on f2.",
+                                "blurb": "Traxler Counterattack! Black ignores f7 dan bersiap a violent sacrifice di f2.",
                                 "children": [
                                   {
                                     "move": "c4f7",
                                     "san": "Bxf7+",
-                                    "blurb": "Practical antidote: take with the Bishop on f7 with check to avoid Black's Bxf2+ traps.",
+                                    "blurb": "Practical antidote: take dengan Bishop di f7 dengan check untuk menghindari Black's Bxf2+ jebakan.",
                                     "children": [
                                       {
                                         "move": "e8e7",
@@ -713,7 +713,7 @@
                                           {
                                             "move": "f7b3",
                                             "san": "Bb3",
-                                            "blurb": "Tuck the Bishop safely to b3 while keeping the extra pawn and Black's King misplaced.",
+                                            "blurb": "Tuck Bishop dengan aman ke b3 sembari menjaga extra pawn dan Black's King misplaced.",
                                             "children": [
                                               {
                                                 "move": "h8f8",
@@ -723,7 +723,7 @@
                                                   {
                                                     "move": "e1g1",
                                                     "san": "O-O",
-                                                    "blurb": "Castle Kingside to mempertahankan f2 with the Rook and consolidate the extra pawn."
+                                                    "blurb": "Castle kingside untuk menjaga f2 dengan Rook dan consolidate extra pawn."
                                                   }
                                                 ]
                                               }
@@ -740,12 +740,12 @@
                                 "san": "Nxe4",
                                 "is_blunder": true,
                                 "human_freq": 0.059,
-                                "blurb": "Ponziani-Steinitz Gambit: Black grabs e4 but leaves f7 exposed.",
+                                "blurb": "Ponziani-Steinitz Gambit: Black grabs e4 tetapi membiarkan f7 terbuka.",
                                 "children": [
                                   {
                                     "move": "c4f7",
                                     "san": "Bxf7+",
-                                    "blurb": "Punish 4...Nxe4 by taking on f7 with check and stripping Black's castling rights.",
+                                    "blurb": "Menghukum 4...Nxe4 oleh taking di f7 dengan check dan stripping Black's castling rights.",
                                     "children": [
                                       {
                                         "move": "e8e7",
@@ -755,7 +755,7 @@
                                           {
                                             "move": "d2d4",
                                             "san": "d4",
-                                            "blurb": "Retreat the g5 Knight's defense while opening lines against the King on e7.",
+                                            "blurb": "Mundur g5 Knight's defense sembari opening variasi melawan King di e7.",
                                             "children": [
                                               {
                                                 "move": "h7h6",
@@ -765,7 +765,7 @@
                                                   {
                                                     "move": "g5e4",
                                                     "san": "Nxe4",
-                                                    "blurb": "memakan the e4 Knight safely and emerge a clean pawn ahead."
+                                                    "blurb": "Capture e4 Knight dengan aman dan emerge unggul satu pawn bersih."
                                                   }
                                                 ]
                                               }
@@ -782,12 +782,12 @@
                                 "san": "h6",
                                 "is_blunder": true,
                                 "human_freq": 0.0074,
-                                "blurb": "Common club blunder! Kicking the Knight forgets that f7 is completely unguarded.",
+                                "blurb": "Blunder umum pemain klub! Menyerang Knight melupakan bahwa petak f7 sama sekali tanpa penjagaan.",
                                 "children": [
                                   {
                                     "move": "g5f7",
                                     "san": "Nxf7",
-                                    "blurb": "Fork the Queen on d8 and the Rook on h8!",
+                                    "blurb": "Fork Queen di d8 dan Rook di h8!",
                                     "children": [
                                       {
                                         "move": "d8e7",
@@ -797,7 +797,7 @@
                                           {
                                             "move": "f7h8",
                                             "san": "Nxh8",
-                                            "blurb": "memakan the Rook in the corner for a decisive material lead."
+                                            "blurb": "Capture Rook di sudut untuk decisive material lead."
                                           }
                                         ]
                                       }
@@ -813,12 +813,12 @@
                         "move": "f8c5",
                         "san": "Bc5",
                         "human_freq": 0.3342,
-                        "blurb": "Giuoco Piano: Black develops the Bishop to c5, preventing Ng5.",
+                        "blurb": "Giuoco Piano: Black mendevelop Bishop ke c5, mencegah Ng5.",
                         "children": [
                           {
                             "move": "c2c3",
                             "san": "c3",
-                            "blurb": "bersiap the classical d4 pawn break to merebut the center with tempo.",
+                            "blurb": "Bersiap classical d4 dobrakan pawn (dobrakan pawn) ke merebut center dengan tempo.",
                             "children": [
                               {
                                 "move": "g8f6",
@@ -828,7 +828,7 @@
                                   {
                                     "move": "d2d4",
                                     "san": "d4",
-                                    "blurb": "Strike at the center immediately, menyerang the c5 Bishop and e5 pawn.",
+                                    "blurb": "Serang center segera, attack c5 Bishop dan e5 pawn.",
                                     "children": [
                                       {
                                         "move": "e5d4",
@@ -838,7 +838,7 @@
                                           {
                                             "move": "c3d4",
                                             "san": "cxd4",
-                                            "blurb": "Establish an ideal duo of central pawns on d4 and e4.",
+                                            "blurb": "Establish an ideal duo dari central pawn di d4 dan e4.",
                                             "children": [
                                               {
                                                 "move": "c5b4",
@@ -848,7 +848,7 @@
                                                   {
                                                     "move": "b1c3",
                                                     "san": "Nc3",
-                                                    "blurb": "Greco / Moller Gambit! Offer the e4 pawn for rapid piece activation.",
+                                                    "blurb": "Greco / Moller Gambit! Offer e4 pawn untuk rapid piece activation.",
                                                     "children": [
                                                       {
                                                         "move": "f6e4",
@@ -858,7 +858,7 @@
                                                           {
                                                             "move": "e1g1",
                                                             "san": "O-O",
-                                                            "blurb": "Castle immediately and mengancam to trap Black's pieces in the center.",
+                                                            "blurb": "Castle segera dan mengancam ke jebakan Black's piece di center.",
                                                             "children": [
                                                               {
                                                                 "move": "b4c3",
@@ -868,7 +868,7 @@
                                                                   {
                                                                     "move": "d4d5",
                                                                     "san": "d5",
-                                                                    "blurb": "The Moller menyerang! Push d5 to fork the c3 Bishop and c6 Knight."
+                                                                    "blurb": "Moller attack! dorong d5 ke Fork c3 Bishop dan c6 Knight."
                                                                   }
                                                                 ]
                                                               }
@@ -884,7 +884,7 @@
                                                           {
                                                             "move": "e4d5",
                                                             "san": "exd5",
-                                                            "blurb": "memakan on d5 and open the e-file while Black's King is still in the center.",
+                                                            "blurb": "Capture di d5 dan buka e-file selagi King Black masih tertahan di center.",
                                                             "children": [
                                                               {
                                                                 "move": "f6d5",
@@ -894,7 +894,7 @@
                                                                   {
                                                                     "move": "e1g1",
                                                                     "san": "O-O",
-                                                                    "blurb": "Castle Kingside and bersiap Re1+ or Bg5 with strong initiative."
+                                                                    "blurb": "Castle kingside dan bersiap Re1+ atau Bg5 dengan strong inisiatif."
                                                                   }
                                                                 ]
                                                               }
@@ -911,12 +911,12 @@
                                                 "san": "Bb6",
                                                 "is_blunder": true,
                                                 "human_freq": 0.2272,
-                                                "blurb": "Passive retreat! Allows White's central pawns to roll forward unchecked.",
+                                                "blurb": "Pasif mundur! Allows White's central pawn ke roll forward unchecked.",
                                                 "children": [
                                                   {
                                                     "move": "d4d5",
                                                     "san": "d5",
-                                                    "blurb": "Advance d5 to kick the c6 Knight and cramp Black's position.",
+                                                    "blurb": "Dorong maju d5 ke Usir c6 Knight dan cramp Black's posisi.",
                                                     "children": [
                                                       {
                                                         "move": "c6e7",
@@ -926,7 +926,7 @@
                                                           {
                                                             "move": "e4e5",
                                                             "san": "e5",
-                                                            "blurb": "Push e5 as well, driving the f6 Knight away and dominating the board."
+                                                            "blurb": "Dorong e5 sebagai well, driving f6 Knight menjauh dan dominating board."
                                                           }
                                                         ]
                                                       }
@@ -945,22 +945,22 @@
                               {
                                 "move": "d7d6",
                                 "san": "d6",
-                                "blurb": "Maia-3 Top #2 Human Move (27.6%): Black supports e5 passively instead of counter-menyerang with 4...Nf6.",
+                                "blurb": "Langkah Populer Maia-3 #2 (27.6%): Black supports e5 secara pasif alih-alih counter-attack dengan 4...Nf6.",
                                 "children": [
                                   {
                                     "move": "d2d4",
                                     "san": "d4",
-                                    "blurb": "merebut the full pawn center with tempo against the c5 Bishop.",
+                                    "blurb": "Merebut full pawn center dengan tempo melawan c5 Bishop.",
                                     "children": [
                                       {
                                         "move": "e5d4",
                                         "san": "exd4",
-                                        "blurb": "Maia-3 Human Move (91.3%): Black exchanges on d4.",
+                                        "blurb": "Langkah Pemain Maia-3 (91.3%): Black exchanges di d4.",
                                         "children": [
                                           {
                                             "move": "c3d4",
                                             "san": "cxd4",
-                                            "blurb": "Establish the ideal d4-e4 classical pawn duo with tempo.",
+                                            "blurb": "Establish ideal d4-e4 classical pawn duo dengan tempo.",
                                             "children": [
                                               {
                                                 "move": "c5b4",
@@ -969,7 +969,7 @@
                                                   {
                                                     "move": "b1c3",
                                                     "san": "Nc3",
-                                                    "blurb": "Block the check and Develop with a commanding central advantage."
+                                                    "blurb": "Blokir check dan Develop dengan commanding central keunggulan."
                                                   }
                                                 ],
                                                 "human_freq": 0.5075
@@ -992,32 +992,32 @@
                         "move": "h7h6",
                         "san": "h6",
                         "is_blunder": true,
-                        "blurb": "Maia-3 Top #3 Human Move (12.8%): Club players often play passive 3...h6 to prevent Ng5, falling behind in center control.",
+                        "blurb": "Langkah Populer Maia-3 #3 (12.8%): pemain klub often play pasif 3...h6 untuk mencegah Ng5, falling behind di center control.",
                         "children": [
                           {
                             "move": "d2d4",
                             "san": "d4",
-                            "blurb": "Strike the center immediately! Since Black wasted a tempo on h6, open the position.",
+                            "blurb": "Strike center segera! Since Black wasted a tempo di h6, buka posisi.",
                             "children": [
                               {
                                 "move": "e5d4",
                                 "san": "exd4",
-                                "blurb": "Maia-3 Human Move (74.1%): Black memakan on d4.",
+                                "blurb": "Langkah Pemain Maia-3 (74.1%): Black capture di d4.",
                                 "children": [
                                   {
                                     "move": "f3d4",
                                     "san": "Nxd4",
-                                    "blurb": "memakan balik with a dominant centralized Knight.",
+                                    "blurb": "Recapture dengan dominant centralized Knight.",
                                     "children": [
                                       {
                                         "move": "c6d4",
                                         "san": "Nxd4",
-                                        "blurb": "Maia-3 Human Move (51.0%): Black trades Knights.",
+                                        "blurb": "Langkah Pemain Maia-3 (51.0%): Black menukar Knight.",
                                         "children": [
                                           {
                                             "move": "d1d4",
                                             "san": "Qxd4",
-                                            "blurb": "Centralize the Queen on d4 where it cannot be chased by Nc6."
+                                            "blurb": "Centralize Queen di d4 di mana it cannot be chased oleh Nc6."
                                           }
                                         ],
                                         "human_freq": 0.5103
@@ -1035,22 +1035,22 @@
                       {
                         "move": "d7d6",
                         "san": "d6",
-                        "blurb": "Maia-3 Top #4 Human Move (7.2%): Semi-Italian defense, solidifying e5 but locking in the dark-squared Bishop.",
+                        "blurb": "Langkah Populer Maia-3 #4 (7.2%): Semi-Italian defense, memperkokoh e5 tetapi locking di dark-squared Bishop.",
                         "children": [
                           {
                             "move": "d2d4",
                             "san": "d4",
-                            "blurb": "menantang e5 immediately before Black coordinates.",
+                            "blurb": "Tantangan e5 segera sebelum Black berkoordinasi.",
                             "children": [
                               {
                                 "move": "e5d4",
                                 "san": "exd4",
-                                "blurb": "Maia-3 Human Move (46.3%): Black surrenders the center.",
+                                "blurb": "Langkah Pemain Maia-3 (46.3%): Black melepaskan center.",
                                 "children": [
                                   {
                                     "move": "f3d4",
                                     "san": "Nxd4",
-                                    "blurb": "memakan balik on d4 with a commanding space advantage.",
+                                    "blurb": "Recapture di d4 dengan commanding space keunggulan.",
                                     "children": [
                                       {
                                         "move": "g8f6",
@@ -1059,7 +1059,7 @@
                                           {
                                             "move": "b1c3",
                                             "san": "Nc3",
-                                            "blurb": "mempertahankan e4 and bersiap O-O plus Bf4."
+                                            "blurb": "Mempertahankan e4 dan bersiap O-O plus Bf4."
                                           }
                                         ],
                                         "human_freq": 0.1067
@@ -1072,12 +1072,12 @@
                               {
                                 "move": "c8g4",
                                 "san": "Bg4",
-                                "blurb": "Maia-3 Human Move (23.5%): Humans frequently pin the f3 Knight prematurely.",
+                                "blurb": "Langkah Pemain Maia-3 (23.5%): Humans frequently Lakukan pin pada f3 Knight prematurely.",
                                 "children": [
                                   {
                                     "move": "c2c3",
                                     "san": "c3",
-                                    "blurb": "Support d4 and bersiap Qb3 targeting both f7 and b7.",
+                                    "blurb": "Dukung d4 dan bersiap Qb3 menargetkan kedua f7 dan b7.",
                                     "children": [
                                       {
                                         "move": "e5d4",
@@ -1086,7 +1086,7 @@
                                           {
                                             "move": "d1b3",
                                             "san": "Qb3",
-                                            "blurb": "Double menyerang on f7 and b7! Black collapses on the light squares."
+                                            "blurb": "Double attack di f7 dan b7! Black collapses di light petak."
                                           }
                                         ],
                                         "human_freq": 0.2918
@@ -1105,22 +1105,22 @@
                         "move": "c6d4",
                         "san": "Nd4",
                         "is_blunder": true,
-                        "blurb": "Maia-3 Top #5 Human Move (6.4%): Blackburne Shilling Gambit! A notorious club trap baiting 4.Nxe5 Qg5.",
+                        "blurb": "Langkah Populer Maia-3 #5 (6.4%): Blackburne Shilling Gambit! A notorious club jebakan baiting 4.Nxe5 Qg5.",
                         "children": [
                           {
                             "move": "f3e5",
                             "san": "Nxe5",
-                            "blurb": "Accept the e5 pawn! Unlike the trap 5.Nxf7?? Qxg2, we have a clean refutation.",
+                            "blurb": "Terima pawn e5! Berbeda dari jebakan 5.Nxf7?? Qxg2, variasi ini adalah bantahan bersih.",
                             "children": [
                               {
                                 "move": "d8g5",
                                 "san": "Qg5",
-                                "blurb": "Maia-3 Human Move (94.4%): Black counter-menyerang e5 and g2.",
+                                "blurb": "Langkah Pemain Maia-3 (94.4%): Black counter-attack e5 dan g2.",
                                 "children": [
                                   {
                                     "move": "c4f7",
                                     "san": "Bxf7+",
-                                    "blurb": "Refute the gambit with Bxf7+! Keep the e5 Knight covering g4 and force the Black King to move.",
+                                    "blurb": "Refute gambit dengan Bxf7+! jaga e5 Knight covering g4 dan paksa Black King untuk melangkah.",
                                     "children": [
                                       {
                                         "move": "e8e7",
@@ -1129,7 +1129,7 @@
                                           {
                                             "move": "e1g1",
                                             "san": "O-O",
-                                            "blurb": "Castle into safety while melindungi g2; if Qxe5, Re1 pins and memenangkan the Queen!"
+                                            "blurb": "Castle untuk mengamankan King sembari melindungi g2; jika Qxe5, Re1 melakukan pin dan memenangkan Queen!"
                                           }
                                         ],
                                         "human_freq": 0.5736
@@ -1148,12 +1148,12 @@
                         "move": "f8e7",
                         "san": "Be7",
                         "human_freq": 0.0296,
-                        "blurb": "Hungarian Defense: Black plays cautiously to avoid tactical lines.",
+                        "blurb": "Hungarian defense: Black memainkan cautiously untuk menghindari tactical variasi.",
                         "children": [
                           {
                             "move": "d2d4",
                             "san": "d4",
-                            "blurb": "merebut central space immediately since Black placed no pressure on e4.",
+                            "blurb": "Merebut central space segera since Black placed tidak ada tekanan di e4.",
                             "children": [
                               {
                                 "move": "d7d6",
@@ -1163,7 +1163,7 @@
                                   {
                                     "move": "b1c3",
                                     "san": "Nc3",
-                                    "blurb": "Develop naturally and maintain a commanding spatial advantage.",
+                                    "blurb": "Develop naturally dan maintain a commanding spatial keunggulan.",
                                     "children": [
                                       {
                                         "move": "g8f6",
@@ -1173,7 +1173,7 @@
                                           {
                                             "move": "h2h3",
                                             "san": "h3",
-                                            "blurb": "Prevent Bg4 pins and secure a long-term positional squeeze."
+                                            "blurb": "Mencegah Bg4 melakukan pin dan amankan a long-term positional squeeze."
                                           }
                                         ]
                                       }

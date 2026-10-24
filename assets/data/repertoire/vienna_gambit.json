@@ -3,7 +3,7 @@
   "name": "Vienna Gambit",
   "eco": "C29",
   "color": "white",
-  "description": "Punish 2...Nf6 3.f4 exf4?? with 4.e5! and crush copycat 2...Nc6 3.Bc4 Bc5 with the 4.Qg4! trap.",
+  "description": "Hukum 2...Nf6 3.f4 exf4?? dengan 4.e5! dan hancurkan variasi copycat 2...Nc6 3.Bc4 Bc5 lewat jebakan 4.Qg4!.",
   "root": {
     "move": "e2e4",
     "san": "e4",
@@ -48,24 +48,24 @@
                                           {
                                             "move": "f4f5",
                                             "san": "f5",
-                                            "blurb": "Clamp down on Black's Kingside and bersiap Bg5."
+                                            "blurb": "Clamp down di Black's kingside dan bersiap Bg5."
                                           }
                                         ],
-                                        "blurb": "Black plays d6.",
+                                        "blurb": "Black memainkan d6.",
                                         "human_freq": 0.4612
                                       }
                                     ],
-                                    "blurb": "Luncurkan delayed King's Gambit break with Bc4 already developed!"
+                                    "blurb": "Luncurkan delayed King's Gambit break dengan Bc4 sudah developed!"
                                   }
                                 ],
-                                "blurb": "Black develops Bc5.",
+                                "blurb": "Black mendevelop Bc5.",
                                 "human_freq": 0.3817
                               }
                             ],
-                            "blurb": "Support e4 and bersiap f4!"
+                            "blurb": "Dukung e4 dan bersiap f4!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #1 Human Move (44.3%): Black develops Nf6.",
+                        "blurb": "Langkah Populer Maia-3 #1 (44.3%): Black mendevelop Nf6.",
                         "human_freq": 0.4428
                       },
                       {
@@ -99,31 +99,31 @@
                                                   {
                                                     "move": "g1h3",
                                                     "san": "Nh3",
-                                                    "blurb": "Trap or chase the f2 Queen with Nh3 and Rf1!"
+                                                    "blurb": "Jebakan atau Usir f2 Queen dengan Nh3 dan Rf1!"
                                                   }
                                                 ],
-                                                "blurb": "Black mempertahankan g7 with Kf8.",
+                                                "blurb": "Black mempertahankan g7 dengan Kf8.",
                                                 "human_freq": 0.0421
                                               }
                                             ],
-                                            "blurb": "Step to d1! Black's g7 pawn and c7 square are both defenseless."
+                                            "blurb": "Melangkah ke d1! Pawn g7 dan petak c7 Black sama-sama tanpa perlindungan."
                                           }
                                         ],
-                                        "blurb": "Black checks on f2.",
+                                        "blurb": "Black memberi check di f2.",
                                         "human_freq": 0.8633
                                       }
                                     ],
-                                    "blurb": "Counter-menyerang the Queen and c7! Let Black take f2."
+                                    "blurb": "Counter-attack Queen dan c7! Let Black take f2."
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #1 Human Move: Black mempertahankan g7 with Qf6 and mengancam Qxf2+.",
+                                "blurb": "Langkah Populer Maia-3 #1: Black mempertahankan g7 dengan Qf6 dan mengancam Qxf2+.",
                                 "human_freq": 0.5266
                               }
                             ],
-                            "blurb": "The Vienna Copycat Trap (4.Qg4!)! menyerang the undefended g7 pawn."
+                            "blurb": "Vienna Copycat jebakan (4.Qg4!)! menyerang yang tanpa penjagaan g7 pawn."
                           }
                         ],
-                        "blurb": "Maia-3 Top #2 Human Move (29.7%): Copycat variation! Black leaves g7 undefended.",
+                        "blurb": "Langkah Populer Maia-3 #2 (29.7%): Copycat variasi! Black membiarkan g7 tanpa penjagaan.",
                         "human_freq": 0.297
                       },
                       {
@@ -141,17 +141,17 @@
                                   {
                                     "move": "g1f3",
                                     "san": "Nf3",
-                                    "blurb": "Develop Nf3 and bersiap d4 plus Bxf4."
+                                    "blurb": "Develop Nf3 dan bersiap d4 plus Bxf4."
                                   }
                                 ],
-                                "blurb": "Black memakan on f4.",
+                                "blurb": "Black capture di f4.",
                                 "human_freq": 0.3627
                               }
                             ],
                             "blurb": "Luncurkan Grand Prix / Vienna f4 break!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #3 Human Move (8.8%): Passive d6.",
+                        "blurb": "Langkah Populer Maia-3 #3 (8.8%): pasif d6.",
                         "human_freq": 0.0877
                       },
                       {
@@ -169,24 +169,24 @@
                                   {
                                     "move": "g4f3",
                                     "san": "Qf3",
-                                    "blurb": "mengancam Qxf7# immediately!"
+                                    "blurb": "Mengancam Qxf7# segera!"
                                   }
                                 ],
-                                "blurb": "Black weakens the dark squares.",
+                                "blurb": "Black melemahkan dark petak.",
                                 "human_freq": 0.1816
                               }
                             ],
-                            "blurb": "menyerang the undefended g7 pawn while the f8 Bishop is away on b4!"
+                            "blurb": "Serang pawn g7 yang tanpa penjagaan selagi Bishop f8 berada jauh di b4!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #4 Human Move (6.2%): Black pins c3.",
+                        "blurb": "Langkah Populer Maia-3 #4 (6.2%): Black melakukan pin c3.",
                         "human_freq": 0.062
                       }
                     ],
-                    "blurb": "Develop Bc4 mengincar f7 and invite the Copycat Trap 3...Bc5 4.Qg4!"
+                    "blurb": "Develop Bc4 mengincar f7 dan invite Copycat jebakan 3...Bc5 4.Qg4!"
                   }
                 ],
-                "blurb": "Maia-3 Top #1 Human Move (38.5%): Symmetrical 2...Nc6.",
+                "blurb": "Langkah Populer Maia-3 #1 (38.5%): Symmetrical 2...Nc6.",
                 "human_freq": 0.3845
               },
               {
@@ -220,17 +220,17 @@
                                           {
                                             "move": "d2d4",
                                             "san": "d4",
-                                            "blurb": "Support e5 and bersiap Bxf4 with a huge lead in development."
+                                            "blurb": "Dukung e5 dan bersiap Bxf4 dengan huge keunggulan development."
                                           }
                                         ],
-                                        "blurb": "Black tries to undermine e5.",
+                                        "blurb": "Black tries untuk merusak e5.",
                                         "human_freq": 0.3961
                                       }
                                     ],
-                                    "blurb": "Develop Nf3 to prevent Qh4+!"
+                                    "blurb": "Develop Nf3 untuk mencegah Qh4+!"
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #2 Human Move: Black immediately retreats the Knight to g8.",
+                                "blurb": "Langkah Populer Maia-3 #2: Black segera mundur Knight ke g8.",
                                 "human_freq": 0.5651
                               },
                               {
@@ -256,24 +256,24 @@
                                                   {
                                                     "move": "d2d4",
                                                     "san": "d4",
-                                                    "blurb": "Claim the center and mengancam Nd5 plus Bxf4."
+                                                    "blurb": "Kuasai center dan mengancam Nd5 plus Bxf4."
                                                   }
                                                 ],
-                                                "blurb": "Black develops Nc6.",
+                                                "blurb": "Black mendevelop Nc6.",
                                                 "human_freq": 0.3495
                                               }
                                             ],
-                                            "blurb": "Develop Nf3 and bersiap d4 plus Nd5 targeting c7!"
+                                            "blurb": "Develop Nf3 dan bersiap d4 plus Nd5 menargetkan c7!"
                                           }
                                         ],
-                                        "blurb": "Black undevelops the Knight back to g8.",
+                                        "blurb": "Black undevelops Knight back ke g8.",
                                         "human_freq": 0.7327
                                       }
                                     ],
-                                    "blurb": "Break the pin with Qe2! Now the f6 Knight is forced all the way back to g8."
+                                    "blurb": "Lepaskan pin dengan Qe2! Kini Knight f6 terpaksa mundur jauh ke g8."
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #1 Human Move: Black pins the e5 pawn with Qe7.",
+                                "blurb": "Langkah Populer Maia-3 #1: Black melakukan pin pada e5 pawn dengan Qe7.",
                                 "human_freq": 0.3161
                               },
                               {
@@ -283,18 +283,18 @@
                                   {
                                     "move": "c3d5",
                                     "san": "Nxd5",
-                                    "blurb": "memakan the d5 Knight for a free piece!"
+                                    "blurb": "Capture d5 Knight mendapatkan piece gratis!"
                                   }
                                 ],
-                                "blurb": "Club blunder: Black jumps to d5 where c3 controls it!",
+                                "blurb": "Club blunder: Black melompat ke d5 di mana c3 controls it!",
                                 "is_blunder": true,
                                 "human_freq": 0.0265
                               }
                             ],
-                            "blurb": "Advance e5 with tempo! The f6 Knight has no good squares because c3 controls d5 and g4 is covered by the Queen."
+                            "blurb": "Dorong e5 dengan tempo! Knight f6 tidak memiliki petak bagus karena c3 menjaga d5 dan g4 dikawal Queen."
                           }
                         ],
-                        "blurb": "Maia-3 Top #1 Human Blunder (41.8%): Over 40% of human players accept the gambit, forgetting the f6 Knight has no forward squares!",
+                        "blurb": "Blunder Populer Maia-3 #1 (41.8%): lebih dari 40% pemain menerima gambit, lupa bahwa Knight f6 tidak memiliki petak maju!",
                         "is_blunder": true,
                         "human_freq": 0.4175
                       },
@@ -321,24 +321,24 @@
                                           {
                                             "move": "d2d3",
                                             "san": "d3",
-                                            "blurb": "Solidify e4 and bersiap O-O plus Bxc6."
+                                            "blurb": "Perkokoh e4 dan bersiap O-O plus Bxc6."
                                           }
                                         ],
-                                        "blurb": "Black breaks the pin.",
+                                        "blurb": "Black melepas pin.",
                                         "human_freq": 0.492
                                       }
                                     ],
-                                    "blurb": "Pin the c6 Knight to undermine e5!"
+                                    "blurb": "Lakukan pin pada c6 Knight untuk merusak e5!"
                                   }
                                 ],
-                                "blurb": "Black develops Nc6.",
+                                "blurb": "Black mendevelop Nc6.",
                                 "human_freq": 0.3872
                               }
                             ],
-                            "blurb": "Develop Nf3 and pressure e5."
+                            "blurb": "Develop Nf3 dan tekanan e5."
                           }
                         ],
-                        "blurb": "Maia-3 Top #2 Human Move (20.5%): Passive defense of e5, allowing a Ruy-Lopez-style pin.",
+                        "blurb": "Langkah Populer Maia-3 #2 (20.5%): pasif defense dari e5, allowing a Ruy-Lopez-style pin.",
                         "human_freq": 0.2053
                       },
                       {
@@ -364,24 +364,24 @@
                                           {
                                             "move": "e4e5",
                                             "san": "e5",
-                                            "blurb": "Kick the second Knight on f6 as well! White overruns the board."
+                                            "blurb": "Usir second Knight di f6 sebagai well! White overruns board."
                                           }
                                         ],
-                                        "blurb": "Black retreats to g6.",
+                                        "blurb": "Black mundur ke g6.",
                                         "human_freq": 0.3984
                                       }
                                     ],
-                                    "blurb": "Fork the center and kick the e5 Knight with tempo!"
+                                    "blurb": "Fork center dan Usir e5 Knight dengan tempo!"
                                   }
                                 ],
-                                "blurb": "Black memakan balik with the c6 Knight.",
+                                "blurb": "Black recapture dengan c6 Knight.",
                                 "human_freq": 0.9825
                               }
                             ],
-                            "blurb": "memakan on e5 to displace Black's Knights!"
+                            "blurb": "Capture di e5 ke displace Black's Knight!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #3 Human Move (15.4%): Black develops Nc6 instead of d5, allowing fxe5!",
+                        "blurb": "Langkah Populer Maia-3 #3 (15.4%): Black mendevelop Nc6 alih-alih d5, allowing fxe5!",
                         "human_freq": 0.1537
                       },
                       {
@@ -407,24 +407,24 @@
                                           {
                                             "move": "f1b5",
                                             "san": "Bb5",
-                                            "blurb": "Pin the c6 Knight to melindungi the e5 pawn."
+                                            "blurb": "Lakukan pin pada c6 Knight ke melindungi e5 pawn."
                                           }
                                         ],
-                                        "blurb": "Black develops Nc6.",
+                                        "blurb": "Black mendevelop Nc6.",
                                         "human_freq": 0.0736
                                       }
                                     ],
-                                    "blurb": "Develop Qf3 menyerang the e4 Knight and f7!"
+                                    "blurb": "Develop Qf3 attack e4 Knight dan f7!"
                                   }
                                 ],
-                                "blurb": "Black jumps into e4.",
+                                "blurb": "Black melompat ke e4.",
                                 "human_freq": 0.8862
                               }
                             ],
-                            "blurb": "memakan on e5 and menyerang the f6 Knight."
+                            "blurb": "Capture di e5 dan attack f6 Knight."
                           }
                         ],
-                        "blurb": "Maia-3 Top #4 Human Move (11.0%): The only theoretical equalizer for Black.",
+                        "blurb": "Langkah Populer Maia-3 #4 (11.0%): hanya theoretical equalizer untuk Black.",
                         "human_freq": 0.1103
                       },
                       {
@@ -450,24 +450,24 @@
                                           {
                                             "move": "d1g4",
                                             "san": "Qg4",
-                                            "blurb": "Double menyerang on the e4 Knight and g7 pawn!"
+                                            "blurb": "Double attack di e4 Knight dan g7 pawn!"
                                           }
                                         ],
                                         "blurb": "Black takes e4.",
                                         "human_freq": 0.9806
                                       }
                                     ],
-                                    "blurb": "memakan balik with the d-pawn; the f6 Knight is still attacked!"
+                                    "blurb": "Recapture dengan d-pawn; Knight f6 masih tetap terancam!"
                                   }
                                 ],
-                                "blurb": "Black trades on c3.",
+                                "blurb": "Black menukar di c3.",
                                 "human_freq": 0.9298
                               }
                             ],
-                            "blurb": "memakan the e5 pawn!"
+                            "blurb": "Capture e5 pawn!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #5 Human Move (4.6%): Black pins the c3 Knight.",
+                        "blurb": "Langkah Populer Maia-3 #5 (4.6%): Black melakukan pin pada c3 Knight.",
                         "human_freq": 0.0463
                       },
                       {
@@ -485,24 +485,24 @@
                                   {
                                     "move": "d2d4",
                                     "san": "d4",
-                                    "blurb": "Gain a second tempo against the c5 Bishop!"
+                                    "blurb": "Gain a second tempo melawan c5 Bishop!"
                                   }
                                 ],
-                                "blurb": "Black is forced to undevelop to g8.",
+                                "blurb": "Black terpaksa memundurkan perwira ke g8.",
                                 "human_freq": 0.403
                               }
                             ],
-                            "blurb": "memakan e5 and menyerang the f6 Knight!"
+                            "blurb": "Capture e5 dan attack f6 Knight!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #6 Human Move (3.8%): Black develops Bc5.",
+                        "blurb": "Langkah Populer Maia-3 #6 (3.8%): Black mendevelop Bc5.",
                         "human_freq": 0.0379
                       }
                     ],
-                    "blurb": "The Vienna Gambit! Offer the f4 pawn because 3...exf4?? loses tempo to 4.e5!"
+                    "blurb": "Vienna Gambit! Offer f4 pawn karena 3...exf4?? kehilangan tempo ke 4.e5!"
                   }
                 ],
-                "blurb": "Maia-3 Top #2 Human Move (29.5%): Black develops Nf6.",
+                "blurb": "Langkah Populer Maia-3 #2 (29.5%): Black mendevelop Nf6.",
                 "human_freq": 0.2946
               },
               {
@@ -520,17 +520,17 @@
                           {
                             "move": "g1f3",
                             "san": "Nf3",
-                            "blurb": "Develop Nf3 and bersiap Bc4 plus d4."
+                            "blurb": "Develop Nf3 dan bersiap Bc4 plus d4."
                           }
                         ],
-                        "blurb": "Black memakan on f4.",
+                        "blurb": "Black capture di f4.",
                         "human_freq": 0.4424
                       }
                     ],
-                    "blurb": "Strike at the center with f4!"
+                    "blurb": "Hantam center dengan f4!"
                   }
                 ],
-                "blurb": "Maia-3 Top #3 Human Move at Move 2 (9.8%): Black plays 2...d6.",
+                "blurb": "Maia-3 Top #3 langkah manusia di langkah 2 (9.8%): Black memainkan 2...d6.",
                 "human_freq": 0.0977
               },
               {
@@ -548,17 +548,17 @@
                           {
                             "move": "d1g4",
                             "san": "Qg4",
-                            "blurb": "Enter the Vienna Copycat Trap menyerang g7!"
+                            "blurb": "Enter Vienna Copycat jebakan attack g7!"
                           }
                         ],
-                        "blurb": "Black plays Nc6.",
+                        "blurb": "Black memainkan Nc6.",
                         "human_freq": 0.1325
                       }
                     ],
                     "blurb": "Develop Bc4."
                   }
                 ],
-                "blurb": "Maia-3 Top #4 Human Move at Move 2 (9.2%): Black develops 2...Bc5.",
+                "blurb": "Maia-3 Top #4 langkah manusia di langkah 2 (9.2%): Black mendevelop 2...Bc5.",
                 "human_freq": 0.0917
               },
               {
@@ -576,24 +576,24 @@
                           {
                             "move": "f2f4",
                             "san": "f4",
-                            "blurb": "menantang the center with f4!"
+                            "blurb": "Tantangan center dengan f4!"
                           }
                         ],
-                        "blurb": "Black develops Nf6.",
+                        "blurb": "Black mendevelop Nf6.",
                         "human_freq": 0.253
                       }
                     ],
                     "blurb": "Develop Bc4 mengincar f7."
                   }
                 ],
-                "blurb": "Maia-3 Top #5 Human Move at Move 2 (4.2%): Early Bb4 pin.",
+                "blurb": "Maia-3 Top #5 langkah manusia di langkah 2 (4.2%): Early Bb4 pin.",
                 "human_freq": 0.0418
               }
             ],
-            "blurb": "The Vienna Game! bersiap f4 while keeping d4 and e4 protected."
+            "blurb": "Vienna Game! bersiap f4 sembari menjaga d4 dan e4 protected."
           }
         ],
-        "blurb": "Black responds with 1...e5.",
+        "blurb": "Black responds dengan 1...e5.",
         "human_freq": 0.4748
       }
     ]

@@ -3,7 +3,7 @@
   "name": "Danish Gambit",
   "eco": "C21",
   "color": "white",
-  "description": "Highest memenangkan-rate White gambit on Lichess: sacrifice two pawns to aim both Bishops (Bc4 & Bb2) at g7 and f7.",
+  "description": "Highest memenangkan-rate White gambit di Lichess: sacrifice two pawn ke aim kedua Bishop (Bc4 & Bb2) di g7 dan f7.",
   "root": {
     "move": "e2e4",
     "san": "e4",
@@ -64,24 +64,24 @@
                                                           {
                                                             "move": "e1g1",
                                                             "san": "O-O",
-                                                            "blurb": "Castle Kingside and bersiap e5 plus Nd5."
+                                                            "blurb": "Castle kingside dan bersiap e5 plus Nd5."
                                                           }
                                                         ],
-                                                        "blurb": "Black castles.",
+                                                        "blurb": "Black castling.",
                                                         "human_freq": 0.4595
                                                       }
                                                     ],
-                                                    "blurb": "Develop Ne2 to melindungi c3 and e4 while mempersiapkan O-O and e5."
+                                                    "blurb": "Develop Ne2 ke melindungi c3 dan e4 sembari mempersiapkan O-O dan e5."
                                                   }
                                                 ],
-                                                "blurb": "Black develops Nf6.",
+                                                "blurb": "Black mendevelop Nf6.",
                                                 "human_freq": 0.286
                                               }
                                             ],
-                                            "blurb": "Block the check with Nc3."
+                                            "blurb": "Blokir check dengan Nc3."
                                           }
                                         ],
-                                        "blurb": "Maia-3 Top #2 Human Move: Black checks on b4.",
+                                        "blurb": "Langkah Populer Maia-3 #2: Black memberi check di b4.",
                                         "human_freq": 0.2502
                                       },
                                       {
@@ -107,24 +107,24 @@
                                                           {
                                                             "move": "g1e2",
                                                             "san": "Ne2",
-                                                            "blurb": "Develop Ne2 and bersiap O-O plus exf6."
+                                                            "blurb": "Develop Ne2 dan bersiap O-O plus exf6."
                                                           }
                                                         ],
-                                                        "blurb": "Black pins the e5 pawn.",
+                                                        "blurb": "Black melakukan pin pada e5 pawn.",
                                                         "human_freq": 0.2461
                                                       }
                                                     ],
-                                                    "blurb": "Block the check with Nc3."
+                                                    "blurb": "Blokir check dengan Nc3."
                                                   }
                                                 ],
-                                                "blurb": "Black throws in Bb4+ to save the Knight.",
+                                                "blurb": "Black throws di Bb4+ ke save Knight.",
                                                 "human_freq": 0.1424
                                               }
                                             ],
-                                            "blurb": "Push e5 with tempo against the f6 Knight!"
+                                            "blurb": "Dorong e5 dengan tempo melawan f6 Knight!"
                                           }
                                         ],
-                                        "blurb": "Maia-3 Top #3 Human Move: Black develops Nf6, allowing e5!",
+                                        "blurb": "Langkah Populer Maia-3 #3: Black mendevelop Nf6, allowing e5!",
                                         "human_freq": 0.2173
                                       },
                                       {
@@ -142,17 +142,17 @@
                                                   {
                                                     "move": "b1c3",
                                                     "san": "Nc3",
-                                                    "blurb": "Block with Nc3 and bersiap O-O plus Qb3."
+                                                    "blurb": "Blokir dengan Nc3 dan bersiap O-O plus Qb3."
                                                   }
                                                 ],
-                                                "blurb": "Black checks on b4.",
+                                                "blurb": "Black memberi check di b4.",
                                                 "human_freq": 0.208
                                               }
                                             ],
-                                            "blurb": "Develop Nf3 and bersiap O-O."
+                                            "blurb": "Develop Nf3 dan bersiap O-O."
                                           }
                                         ],
-                                        "blurb": "Black develops Nc6.",
+                                        "blurb": "Black mendevelop Nc6.",
                                         "human_freq": 0.1525
                                       },
                                       {
@@ -186,31 +186,31 @@
                                                                   {
                                                                     "move": "d1b3",
                                                                     "san": "Qb3",
-                                                                    "blurb": "Double menyerang on e6 and b7! Black cannot mempertahankan both pawns."
+                                                                    "blurb": "Double attack di e6 dan b7! Black cannot mempertahankan kedua pawn."
                                                                   }
                                                                 ],
-                                                                "blurb": "Black memakan balik, exposing the e6 and g7 squares.",
+                                                                "blurb": "Black recapture, membuka e6 dan g7 petak.",
                                                                 "human_freq": 0.9979
                                                               }
                                                             ],
-                                                            "blurb": "Shatter Black's f-pawns by trading on e6!"
+                                                            "blurb": "Shatter Black's f-pawn oleh menukar di e6!"
                                                           }
                                                         ],
-                                                        "blurb": "Black menantang the c4 Bishop.",
+                                                        "blurb": "Black tantangan c4 Bishop.",
                                                         "human_freq": 0.1675
                                                       }
                                                     ],
-                                                    "blurb": "Castle Kingside and bersiap Qb3 or Re1."
+                                                    "blurb": "Castle kingside dan bersiap Qb3 atau Re1."
                                                   }
                                                 ],
-                                                "blurb": "Black develops Nc6.",
+                                                "blurb": "Black mendevelop Nc6.",
                                                 "human_freq": 0.1367
                                               }
                                             ],
-                                            "blurb": "Develop Nf3 and bersiap O-O plus Qb3."
+                                            "blurb": "Develop Nf3 dan bersiap O-O plus Qb3."
                                           }
                                         ],
-                                        "blurb": "Maia-3 Top #1 Human Move: Black opens the c8 Bishop.",
+                                        "blurb": "Langkah Populer Maia-3 #1: Black opens c8 Bishop.",
                                         "human_freq": 0.1387
                                       },
                                       {
@@ -228,17 +228,17 @@
                                                   {
                                                     "move": "g7h8",
                                                     "san": "Bxh8",
-                                                    "blurb": "memakan the h8 Rook for a menang material advantage!"
+                                                    "blurb": "Capture h8 Rook untuk menang keunggulan material!"
                                                   }
                                                 ],
-                                                "blurb": "Black counter-menyerang g2.",
+                                                "blurb": "Black counter-attack g2.",
                                                 "human_freq": 0.0989
                                               }
                                             ],
-                                            "blurb": "Smash g7 and trap the h8 Rook!"
+                                            "blurb": "Smash g7 dan Jebak h8 Rook!"
                                           }
                                         ],
-                                        "blurb": "Club mistake: Black develops Bc5, leaving g7 undefended!",
+                                        "blurb": "Club kesalahan: Black mendevelop Bc5, membiarkan g7 tanpa penjagaan!",
                                         "is_blunder": true,
                                         "human_freq": 0.024
                                       },
@@ -265,24 +265,24 @@
                                                           {
                                                             "move": "d1d8",
                                                             "san": "Qxd8",
-                                                            "blurb": "memenangkan the Queen or force Bb4+ Qd2 trading into an endgame a pawn up!"
+                                                            "blurb": "Menangkan Queen atau paksa Bb4+ Qd2 untuk bertukar menuju endgame unggul satu pawn!"
                                                           }
                                                         ],
-                                                        "blurb": "Black memakan on f7.",
+                                                        "blurb": "Black capture di f7.",
                                                         "human_freq": 0.4806
                                                       }
                                                     ],
-                                                    "blurb": "Deflect the King to f7 so the d8 Queen falls!"
+                                                    "blurb": "Deflect King ke f7 so d8 Queen falls!"
                                                   }
                                                 ],
-                                                "blurb": "Black develops Nf6.",
+                                                "blurb": "Black mendevelop Nf6.",
                                                 "human_freq": 0.2707
                                               }
                                             ],
-                                            "blurb": "memakan on d5 with the Bishop, eyeing f7!"
+                                            "blurb": "Capture di d5 dengan Bishop, eyeing f7!"
                                           }
                                         ],
-                                        "blurb": "Schlechter Defense: Black returns a pawn with 5...d5 to open lines.",
+                                        "blurb": "Schlechter defense: Black returns a pawn dengan 5...d5 untuk membuka variasi.",
                                         "human_freq": 0.0159
                                       },
                                       {
@@ -308,31 +308,31 @@
                                                           {
                                                             "move": "c4f7",
                                                             "san": "Bxf7+",
-                                                            "blurb": "Sacrifice on f7 to drag Black's King into a crossfire of Bishops and Rooks!"
+                                                            "blurb": "Sacrifice di f7 untuk menyeret King Black ke medan serangan Bishop dan Rook!"
                                                           }
                                                         ],
-                                                        "blurb": "Black retreats the Queen.",
+                                                        "blurb": "Black memundurkan Queen.",
                                                         "human_freq": 0.8062
                                                       }
                                                     ],
-                                                    "blurb": "menyerang the Queen on the open g-file!"
+                                                    "blurb": "Attack Queen di buka g-file!"
                                                   }
                                                 ],
                                                 "blurb": "Black grabs g2.",
                                                 "human_freq": 0.715
                                               }
                                             ],
-                                            "blurb": "Ignore the g2 pawn! Develop Nf3 with tempo on the Queen."
+                                            "blurb": "Ignore g2 pawn! Develop Nf3 dengan tempo di Queen."
                                           }
                                         ],
-                                        "blurb": "Club players often try 5...Qg5 targeting g2.",
+                                        "blurb": "Pemain klub often try 5...Qg5 menargetkan g2.",
                                         "human_freq": 0.0115
                                       }
                                     ],
-                                    "blurb": "Both White Bishops now laser-target Black's g7 and f7 squares!"
+                                    "blurb": "Kedua White Bishop kini laser-target Black's g7 dan f7 petak!"
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #1 Human Move (47.8%): Black accepts the full Double Danish Gambit!",
+                                "blurb": "Langkah Populer Maia-3 #1 (47.8%): Black menerima full Double Danish Gambit!",
                                 "human_freq": 0.4775
                               },
                               {
@@ -358,24 +358,24 @@
                                                   {
                                                     "move": "d1b3",
                                                     "san": "Qb3",
-                                                    "blurb": "Target both f7 and b7 simultaneously!"
+                                                    "blurb": "Target kedua f7 dan b7 simultaneously!"
                                                   }
                                                 ],
-                                                "blurb": "Black plays d6.",
+                                                "blurb": "Black memainkan d6.",
                                                 "human_freq": 0.4146
                                               }
                                             ],
-                                            "blurb": "Develop Nf3 and bersiap O-O plus Qd5."
+                                            "blurb": "Develop Nf3 dan bersiap O-O plus Qd5."
                                           }
                                         ],
-                                        "blurb": "Black develops Bc5.",
+                                        "blurb": "Black mendevelop Bc5.",
                                         "human_freq": 0.0936
                                       }
                                     ],
-                                    "blurb": "memakan balik on c3 with a massive lead in development."
+                                    "blurb": "Recapture di c3 dengan massive keunggulan development."
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #2 Human Move (12.2%): Half-Danish, Black declines cxb2.",
+                                "blurb": "Langkah Populer Maia-3 #2 (12.2%): Half-Danish, Black menolak cxb2.",
                                 "human_freq": 0.122
                               },
                               {
@@ -393,17 +393,17 @@
                                           {
                                             "move": "g1f3",
                                             "san": "Nf3",
-                                            "blurb": "Develop Nf3 and bersiap Qb3."
+                                            "blurb": "Develop Nf3 dan bersiap Qb3."
                                           }
                                         ],
-                                        "blurb": "Black develops Nc6.",
+                                        "blurb": "Black mendevelop Nc6.",
                                         "human_freq": 0.1652
                                       }
                                     ],
-                                    "blurb": "memakan balik on c3 with the Knight."
+                                    "blurb": "Recapture di c3 dengan Knight."
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #3 Human Move (10.2%): Black plays d6.",
+                                "blurb": "Langkah Populer Maia-3 #3 (10.2%): Black memainkan d6.",
                                 "human_freq": 0.1024
                               },
                               {
@@ -429,24 +429,24 @@
                                                   {
                                                     "move": "e1g1",
                                                     "san": "O-O",
-                                                    "blurb": "Castle Kingside and bersiap e5!"
+                                                    "blurb": "Castle kingside dan bersiap e5!"
                                                   }
                                                 ],
-                                                "blurb": "Black pins c3.",
+                                                "blurb": "Black melakukan pin c3.",
                                                 "human_freq": 0.3972
                                               }
                                             ],
                                             "blurb": "Develop Nf3."
                                           }
                                         ],
-                                        "blurb": "Black develops Nc6.",
+                                        "blurb": "Black mendevelop Nc6.",
                                         "human_freq": 0.1292
                                       }
                                     ],
-                                    "blurb": "memakan balik on c3 with the Knight."
+                                    "blurb": "Recapture di c3 dengan Knight."
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #4 Human Move (8.7%): Black develops Nf6 before taking b2.",
+                                "blurb": "Langkah Populer Maia-3 #4 (8.7%): Black mendevelop Nf6 sebelum taking b2.",
                                 "human_freq": 0.0866
                               },
                               {
@@ -464,17 +464,17 @@
                                           {
                                             "move": "g1f3",
                                             "san": "Nf3",
-                                            "blurb": "Develop Nf3 and bersiap O-O."
+                                            "blurb": "Develop Nf3 dan bersiap O-O."
                                           }
                                         ],
-                                        "blurb": "Black develops Nc6.",
+                                        "blurb": "Black mendevelop Nc6.",
                                         "human_freq": 0.0648
                                       }
                                     ],
-                                    "blurb": "memakan balik on c3 and block the check!"
+                                    "blurb": "Recapture di c3 dan blokir check!"
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #5 Human Move (4.1%): Black pins with Bb4.",
+                                "blurb": "Langkah Populer Maia-3 #5 (4.1%): Black melakukan pin dengan Bb4.",
                                 "human_freq": 0.0413
                               },
                               {
@@ -492,24 +492,24 @@
                                           {
                                             "move": "d1b3",
                                             "san": "Qb3",
-                                            "blurb": "Double menyerang on f7 and b7!"
+                                            "blurb": "Double attack di f7 dan b7!"
                                           }
                                         ],
-                                        "blurb": "Black plays d6.",
+                                        "blurb": "Black memainkan d6.",
                                         "human_freq": 0.238
                                       }
                                     ],
-                                    "blurb": "memakan balik on c3."
+                                    "blurb": "Recapture di c3."
                                   }
                                 ],
-                                "blurb": "Maia-3 Top #6 Human Move (3.7%): Black develops Bc5.",
+                                "blurb": "Langkah Populer Maia-3 #6 (3.7%): Black mendevelop Bc5.",
                                 "human_freq": 0.037
                               }
                             ],
-                            "blurb": "Develop Bc4 and invite 4...cxb2 so both Bishops slice across the board!"
+                            "blurb": "Develop Bc4 dan invite 4...cxb2 so kedua Bishop slice di seberang board!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #1 Human Move (73.3%): Black memakan on c3.",
+                        "blurb": "Langkah Populer Maia-3 #1 (73.3%): Black capture di c3.",
                         "human_freq": 0.7328
                       },
                       {
@@ -527,17 +527,17 @@
                                   {
                                     "move": "b1c3",
                                     "san": "Nc3",
-                                    "blurb": "Block the check and maintain central control."
+                                    "blurb": "Blokir check dan maintain kendali center."
                                   }
                                 ],
-                                "blurb": "Black checks on b4.",
+                                "blurb": "Black memberi check di b4.",
                                 "human_freq": 0.3101
                               }
                             ],
-                            "blurb": "memakan balik on d4 to establish the ideal d4-e4 center!"
+                            "blurb": "Recapture di d4 ke establish ideal d4-e4 center!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #2 Human Move (12.4%): Black declines 3...dxc3 and develops Nc6.",
+                        "blurb": "Langkah Populer Maia-3 #2 (12.4%): Black menolak 3...dxc3 dan mendevelop Nc6.",
                         "human_freq": 0.1241
                       },
                       {
@@ -555,17 +555,17 @@
                                   {
                                     "move": "c3d4",
                                     "san": "cxd4",
-                                    "blurb": "memakan balik on d4 and follow up with Nc3 gaining tempo on the Queen!"
+                                    "blurb": "Recapture di d4 dan follow up dengan Nc3 gaining tempo di Queen!"
                                   }
                                 ],
-                                "blurb": "Black memakan balik with the Queen.",
+                                "blurb": "Black recapture dengan Queen.",
                                 "human_freq": 0.8456
                               }
                             ],
-                            "blurb": "memakan the d5 pawn."
+                            "blurb": "Capture d5 pawn."
                           }
                         ],
-                        "blurb": "Maia-3 Top #3 Human Move (3.4%): Sorensen Counterattack.",
+                        "blurb": "Langkah Populer Maia-3 #3 (3.4%): Sorensen Counterattack.",
                         "human_freq": 0.0339
                       },
                       {
@@ -583,31 +583,31 @@
                                   {
                                     "move": "d1d4",
                                     "san": "Qxd4",
-                                    "blurb": "memakan balik on d4 and menyerang the d5 Knight!"
+                                    "blurb": "Recapture di d4 dan attack d5 Knight!"
                                   }
                                 ],
-                                "blurb": "Black centralizes on d5.",
+                                "blurb": "Black memusatkan perwira di di d5.",
                                 "human_freq": 0.4636
                               }
                             ],
-                            "blurb": "Chase the f6 Knight with e5!"
+                            "blurb": "Usir f6 Knight dengan e5!"
                           }
                         ],
-                        "blurb": "Maia-3 Top #4 Human Move (2.4%): Black develops Nf6.",
+                        "blurb": "Langkah Populer Maia-3 #4 (2.4%): Black mendevelop Nf6.",
                         "human_freq": 0.0243
                       }
                     ],
-                    "blurb": "The Danish Gambit! Offer a second pawn to sweep the a1-h8 and a2-g8 diagonals."
+                    "blurb": "Danish Gambit! Offer a second pawn ke sweep a1-h8 dan a2-g8 diagonal."
                   }
                 ],
-                "blurb": "Black memakan the d4 pawn.",
+                "blurb": "Black capture d4 pawn.",
                 "human_freq": 0.6699
               }
             ],
-            "blurb": "The Center Game / Danish Gambit setup! Open the d-file immediately."
+            "blurb": "Center Game / Danish Gambit setup! open d-file segera."
           }
         ],
-        "blurb": "Black matches in the center.",
+        "blurb": "Black matches di center.",
         "human_freq": 0.4748
       }
     ]

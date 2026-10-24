@@ -3,11 +3,11 @@
   "name": "Traxler Counterattack",
   "eco": "C57",
   "color": "black",
-  "description": "Fearless 4...Bc5!! counter-sacrifice against 4.Ng5, dragging White's King into a mating net with 5...Bxf2+!",
+  "description": "Fearless 4...Bc5!! counter-sacrifice melawan 4.Ng5, dragging White's King into jaring checkmate dengan 5...Bxf2+!",
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "blurb": "White opens with 1.e4.",
+    "blurb": "White opens dengan 1.e4.",
     "children": [
       {
         "move": "e7e5",
@@ -76,17 +76,17 @@
                                                                       {
                                                                         "move": "h8f8",
                                                                         "san": "Rf8",
-                                                                        "blurb": "Bring the Rook into the menyerang with decisive force!"
+                                                                        "blurb": "Bring Rook ke dalam attack dengan decisive paksa!"
                                                                       }
                                                                     ],
-                                                                    "blurb": "White retreats to f1.",
+                                                                    "blurb": "White mundur ke f1.",
                                                                     "human_freq": 0.3979
                                                                   }
                                                                 ],
-                                                                "blurb": "menyerang the f3 Queen and c2 square simultaneously!"
+                                                                "blurb": "Attack f3 Queen dan c2 petak simultaneously!"
                                                               }
                                                             ],
-                                                            "blurb": "White mempertahankan f2 with Qf3.",
+                                                            "blurb": "White mempertahankan f2 dengan Qf3.",
                                                             "human_freq": 0.4707
                                                           },
                                                           {
@@ -104,17 +104,17 @@
                                                                       {
                                                                         "move": "h8f8",
                                                                         "san": "Rf8",
-                                                                        "blurb": "Pin along the f-file!"
+                                                                        "blurb": "Pin di sepanjang f-file!"
                                                                       }
                                                                     ],
-                                                                    "blurb": "White retreats.",
+                                                                    "blurb": "White mundur.",
                                                                     "human_freq": 0.4212
                                                                   }
                                                                 ],
-                                                                "blurb": "Hit the e2 Queen and c2 with tempo!"
+                                                                "blurb": "Hit e2 Queen dan c2 dengan tempo!"
                                                               }
                                                             ],
-                                                            "blurb": "White guards f2 with Qe2.",
+                                                            "blurb": "White guards f2 dengan Qe2.",
                                                             "human_freq": 0.1953
                                                           },
                                                           {
@@ -132,24 +132,24 @@
                                                                       {
                                                                         "move": "c6d4",
                                                                         "san": "Nd4",
-                                                                        "blurb": "Bring the second Knight into the menyerang with devastating threats on e2 and f3!"
+                                                                        "blurb": "Bring second Knight ke dalam attack dengan devastating ancaman di e2 dan f3!"
                                                                       }
                                                                     ],
-                                                                    "blurb": "White takes the h8 Rook.",
+                                                                    "blurb": "White takes h8 Rook.",
                                                                     "human_freq": 0.185
                                                                   }
                                                                 ],
-                                                                "blurb": "Sacrifice the Knight on g3! Since the h2 pawn is pinned to the h1 Rook, hxg3 loses Qxg3+."
+                                                                "blurb": "Korbankan Knight di g3! Karena pawn h2 terkena pin ke Rook h1, balasan hxg3 akan kehilangan Qxg3+."
                                                               }
                                                             ],
-                                                            "blurb": "White tries to block the f2 mate with g3.",
+                                                            "blurb": "White tries ke blokir f2 mate dengan g3.",
                                                             "human_freq": 0.167
                                                           }
                                                         ],
-                                                        "blurb": "Bring the Queen to h4, mengancam Qf2# and Nf2!"
+                                                        "blurb": "Bring Queen ke h4, mengancam Qf2# dan Nf2!"
                                                       }
                                                     ],
-                                                    "blurb": "Maia-3 Top #1 Human Move: White retreats to g1.",
+                                                    "blurb": "Langkah Populer Maia-3 #1: White mundur ke g1.",
                                                     "human_freq": 0.3598
                                                   },
                                                   {
@@ -167,17 +167,17 @@
                                                               {
                                                                 "move": "e4g3",
                                                                 "san": "Nxg3",
-                                                                "blurb": "Rip open the King's shelter with Nxg3!"
+                                                                "blurb": "Rip buka King's shelter dengan Nxg3!"
                                                               }
                                                             ],
-                                                            "blurb": "White plays g3.",
+                                                            "blurb": "White memainkan g3.",
                                                             "human_freq": 0.1724
                                                           }
                                                         ],
-                                                        "blurb": "menyerang the exposed King on e3 with Qh4!"
+                                                        "blurb": "Attack terbuka King di e3 dengan Qh4!"
                                                       }
                                                     ],
-                                                    "blurb": "White steps forward to e3 to mempertahankan the g5 square.",
+                                                    "blurb": "White melangkah forward ke e3 untuk menjaga g5 petak.",
                                                     "human_freq": 0.1979
                                                   },
                                                   {
@@ -195,17 +195,17 @@
                                                               {
                                                                 "move": "e4d2",
                                                                 "san": "Nxd2+",
-                                                                "blurb": "Fork the f1 King, f3 Queen, and c4 Bishop!"
+                                                                "blurb": "Fork f1 King, f3 Queen, dan c4 Bishop!"
                                                               }
                                                             ],
                                                             "blurb": "White mempertahankan f2.",
                                                             "human_freq": 0.612
                                                           }
                                                         ],
-                                                        "blurb": "mengancam Qf2# immediately!"
+                                                        "blurb": "Mengancam Qf2# segera!"
                                                       }
                                                     ],
-                                                    "blurb": "White retreats to f1.",
+                                                    "blurb": "White mundur ke f1.",
                                                     "human_freq": 0.0949
                                                   },
                                                   {
@@ -223,24 +223,24 @@
                                                               {
                                                                 "move": "d8h4",
                                                                 "san": "Qh4",
-                                                                "blurb": "mengancam Qf4+ and Nxg5 with a menang menyerang!"
+                                                                "blurb": "Mengancam Qf4+ dan Nxg5 dengan menang attack!"
                                                               }
                                                             ],
-                                                            "blurb": "White steps to e3.",
+                                                            "blurb": "White melangkah ke e3.",
                                                             "human_freq": 0.3363
                                                           }
                                                         ],
-                                                        "blurb": "Check on d4 and drive the King into the center!"
+                                                        "blurb": "Check di d4 dan drive King ke center!"
                                                       }
                                                     ],
-                                                    "blurb": "White steps to e2, walking into Nd4+!",
+                                                    "blurb": "White melangkah ke e2 dan langsung terkena Nd4+!",
                                                     "human_freq": 0.0564
                                                   }
                                                 ],
-                                                "blurb": "memakan on e4 with check, dragging White's King into a mating net!"
+                                                "blurb": "Capture di e4 dengan check, menyeret King White ke dalam jaring checkmate!"
                                               }
                                             ],
-                                            "blurb": "Maia-3 Top #1 Human Move (57.3%): White accepts the Bishop on f2.",
+                                            "blurb": "Langkah Populer Maia-3 #1 (57.3%): White menerima Bishop di f2.",
                                             "human_freq": 0.5729
                                           },
                                           {
@@ -266,24 +266,24 @@
                                                               {
                                                                 "move": "c6d4",
                                                                 "san": "Nd4",
-                                                                "blurb": "Centralize the Knight on d4, mengancam Bg4 trapping the White Queen!"
+                                                                "blurb": "Centralize Knight di d4, mengancam Bg4 trapping White Queen!"
                                                               }
                                                             ],
-                                                            "blurb": "White memakan on d5.",
+                                                            "blurb": "White capture di d5.",
                                                             "human_freq": 0.6803
                                                           }
                                                         ],
-                                                        "blurb": "Strike the center to open the c8 Bishop against White's uncastled King!"
+                                                        "blurb": "Strike center untuk membuka c8 Bishop melawan White's uncastled King!"
                                                       }
                                                     ],
-                                                    "blurb": "White memakan the h8 Rook.",
+                                                    "blurb": "White capture h8 Rook.",
                                                     "human_freq": 0.9485
                                                   }
                                                 ],
-                                                "blurb": "Step the Queen to e7, keeping the f2 Bishop and mempersiapkan d5 or Rf8!"
+                                                "blurb": "Langkah Queen ke e7, menjaga f2 Bishop dan mempersiapkan d5 atau Rf8!"
                                               }
                                             ],
-                                            "blurb": "Maia-3 Top #2 Human Move (41.1%): White declines the f2 Bishop and steps to f1.",
+                                            "blurb": "Langkah Populer Maia-3 #2 (41.1%): White menolak f2 Bishop dan melangkah ke f1.",
                                             "human_freq": 0.4113
                                           },
                                           {
@@ -301,24 +301,24 @@
                                                       {
                                                         "move": "d8e7",
                                                         "san": "Qe7",
-                                                        "blurb": "Save the Queen while keeping the f2 Bishop and raging menyerang!"
+                                                        "blurb": "Save Queen sembari menjaga f2 Bishop dan raging attack!"
                                                       }
                                                     ],
-                                                    "blurb": "White's King is forced out to d3.",
+                                                    "blurb": "King White terpaksa terdorong keluar ke d3.",
                                                     "human_freq": 0.1165
                                                   }
                                                 ],
-                                                "blurb": "Check on d4!"
+                                                "blurb": "Check di d4!"
                                               }
                                             ],
-                                            "blurb": "Maia-3 Human Move (1.6%): White declines the Bishop and steps to e2.",
+                                            "blurb": "Langkah Pemain Maia-3 (1.6%): White menolak Bishop dan melangkah ke e2.",
                                             "human_freq": 0.0158
                                           }
                                         ],
-                                        "blurb": "Counter-sacrifice on f2 with check (5...Bxf2+!)!"
+                                        "blurb": "Counter-sacrifice di f2 dengan check (5...Bxf2+!)!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #1 Human Move (60.2%): Over 60% of club players greedily fork the Queen and Rook with Nxf7!",
+                                    "blurb": "Langkah Populer Maia-3 #1 (60.2%): di atas 60% dari pemain klub greedily Fork Queen dan Rook dengan Nxf7!",
                                     "is_blunder": true,
                                     "human_freq": 0.6022
                                   },
@@ -353,17 +353,17 @@
                                                               {
                                                                 "move": "d8e8",
                                                                 "san": "Qe8",
-                                                                "blurb": "Transfer the Queen to g6 via e8 for a direct Kingside assault!"
+                                                                "blurb": "Transfer Queen ke g6 via e8 untuk direct kingside assault!"
                                                               }
                                                             ],
-                                                            "blurb": "White develops Nc3.",
+                                                            "blurb": "White mendevelop Nc3.",
                                                             "human_freq": 0.2406
                                                           }
                                                         ],
-                                                        "blurb": "Open the c8 Bishop and bersiap Qe8-g6 or h6."
+                                                        "blurb": "Buka c8 Bishop dan bersiap Qe8-g6 atau h6."
                                                       }
                                                     ],
-                                                    "blurb": "White castles Kingside.",
+                                                    "blurb": "White castling kingside.",
                                                     "human_freq": 0.5273
                                                   },
                                                   {
@@ -381,24 +381,24 @@
                                                               {
                                                                 "move": "d8e8",
                                                                 "san": "Qe8",
-                                                                "blurb": "bersiap Qg6 and Bg4."
+                                                                "blurb": "Bersiap Qg6 dan Bg4."
                                                               }
                                                             ],
-                                                            "blurb": "White develops Nc3.",
+                                                            "blurb": "White mendevelop Nc3.",
                                                             "human_freq": 0.2831
                                                           }
                                                         ],
-                                                        "blurb": "Open the c8 Bishop."
+                                                        "blurb": "Buka c8 Bishop."
                                                       }
                                                     ],
-                                                    "blurb": "White plays d3 instead of castling.",
+                                                    "blurb": "White memainkan d3 alih-alih castling.",
                                                     "human_freq": 0.1464
                                                   }
                                                 ],
-                                                "blurb": "Activate the Rook on the half-open f-file aiming at f2!"
+                                                "blurb": "Activate Rook di half-open f-file mengincar f2!"
                                               }
                                             ],
-                                            "blurb": "Maia-3 Top #1 Human Move: White retreats the Bishop to b3.",
+                                            "blurb": "Langkah Populer Maia-3 #1: White memundurkan Bishop ke b3.",
                                             "human_freq": 0.4019
                                           },
                                           {
@@ -416,24 +416,24 @@
                                                       {
                                                         "move": "d7d6",
                                                         "san": "d6",
-                                                        "blurb": "bersiap Qe8-g6 and Bg4."
+                                                        "blurb": "Bersiap Qe8-g6 dan Bg4."
                                                       }
                                                     ],
-                                                    "blurb": "White castles.",
+                                                    "blurb": "White castling.",
                                                     "human_freq": 0.5101
                                                   }
                                                 ],
-                                                "blurb": "merebut the f-file with Rf8."
+                                                "blurb": "Merebut f-file dengan Rf8."
                                               }
                                             ],
-                                            "blurb": "White retreats the Bishop to c4.",
+                                            "blurb": "White memundurkan Bishop ke c4.",
                                             "human_freq": 0.2797
                                           }
                                         ],
-                                        "blurb": "Step the King to e7, forcing the f7 Bishop to retreat!"
+                                        "blurb": "Langkah King ke e7, memaksa f7 Bishop ke mundur!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #2 Human Move (30.7%): White checks with the Bishop instead of the Knight.",
+                                    "blurb": "Langkah Populer Maia-3 #2 (30.7%): White memberi check dengan Bishop alih-alih Knight.",
                                     "human_freq": 0.3069
                                   },
                                   {
@@ -451,17 +451,17 @@
                                               {
                                                 "move": "h7h6",
                                                 "san": "h6",
-                                                "blurb": "Kick the g5 Knight with tempo!"
+                                                "blurb": "Usir g5 Knight dengan tempo!"
                                               }
                                             ],
                                             "blurb": "White supports e4.",
                                             "human_freq": 0.3174
                                           }
                                         ],
-                                        "blurb": "Castle Kingside safely! Now the g5 Knight is misplaced and threatened by h6."
+                                        "blurb": "Castle kingside dengan aman! Kini Knight g5 salah penempatan dan terancam oleh h6."
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #3 Human Move (3.7%): White castles instead of taking on f7.",
+                                    "blurb": "Langkah Populer Maia-3 #3 (3.7%): White castling alih-alih taking di f7.",
                                     "human_freq": 0.0372
                                   },
                                   {
@@ -479,17 +479,17 @@
                                               {
                                                 "move": "d7d5",
                                                 "san": "d5",
-                                                "blurb": "merebut the initiative in the center."
+                                                "blurb": "Merebut inisiatif di center."
                                               }
                                             ],
-                                            "blurb": "White castles.",
+                                            "blurb": "White castling.",
                                             "human_freq": 0.3001
                                           }
                                         ],
-                                        "blurb": "Castle out of the f7 threat and bersiap d5!"
+                                        "blurb": "Castle out dari f7 ancaman dan bersiap d5!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #4 Human Move (1.6%): Quiet d3 support.",
+                                    "blurb": "Langkah Populer Maia-3 #4 (1.6%): tenang d3 Dukung.",
                                     "human_freq": 0.0162
                                   },
                                   {
@@ -507,17 +507,17 @@
                                               {
                                                 "move": "h7h6",
                                                 "san": "h6",
-                                                "blurb": "Chase the misplaced g5 Knight!"
+                                                "blurb": "Usir misplaced g5 Knight!"
                                               }
                                             ],
                                             "blurb": "White supports e4.",
                                             "human_freq": 0.0911
                                           }
                                         ],
-                                        "blurb": "Castle safely out of the f7 fork!"
+                                        "blurb": "Castle dengan aman out dari f7 fork!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #5 Human Move: White plays c3.",
+                                    "blurb": "Langkah Populer Maia-3 #5: White memainkan c3.",
                                     "human_freq": 0.0082
                                   },
                                   {
@@ -535,42 +535,42 @@
                                               {
                                                 "move": "h7h6",
                                                 "san": "h6",
-                                                "blurb": "Kick the g5 Knight with tempo!"
+                                                "blurb": "Usir g5 Knight dengan tempo!"
                                               }
                                             ],
-                                            "blurb": "White castles.",
+                                            "blurb": "White castling.",
                                             "human_freq": 0.2522
                                           }
                                         ],
-                                        "blurb": "Castle Kingside and neutralize the g5 menyerang!"
+                                        "blurb": "Castle kingside dan neutralize g5 attack!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #6 Human Move: Four Knights transposition.",
+                                    "blurb": "Langkah Populer Maia-3 #6: Four Knight transposition.",
                                     "human_freq": 0.0082
                                   }
                                 ],
-                                "blurb": "The Traxler Counterattack (4...Bc5!!)! Ignore f7 and counter-sacrifice on f2!"
+                                "blurb": "Traxler Counterattack (4...Bc5!!)! Ignore f7 dan counter-sacrifice di f2!"
                               }
                             ],
-                            "blurb": "White launches the Fried Liver / Knight menyerang on f7.",
+                            "blurb": "White launches Fried Liver / Knight attack di f7.",
                             "human_freq": 0.3056
                           }
                         ],
-                        "blurb": "Two Knights Defense! Invite 4.Ng5."
+                        "blurb": "Two Knight Defense! Invite 4.Ng5."
                       }
                     ],
-                    "blurb": "White plays the Italian Game.",
+                    "blurb": "White memainkan Italian Game.",
                     "human_freq": 0.4466
                   }
                 ],
-                "blurb": "mempertahankan e5 with Nc6."
+                "blurb": "Mempertahankan e5 dengan Nc6."
               }
             ],
-            "blurb": "White develops Nf3.",
+            "blurb": "White mendevelop Nf3.",
             "human_freq": 0.6221
           }
         ],
-        "blurb": "Respond with 1...e5."
+        "blurb": "Respond dengan 1...e5."
       }
     ],
     "human_freq": 0.6406

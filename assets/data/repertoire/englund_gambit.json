@@ -3,11 +3,11 @@
   "name": "Englund Gambit",
   "eco": "A40",
   "color": "black",
-  "description": "Explosive 1...e5!? counter-gambit against 1.d4 featuring the 4...Qb4+! Queen raid and 8...Qc1# mate trap.",
+  "description": "Counter-gambit eksplosif 1...e5!? melawan 1.d4 dengan manuver Queen 4...Qb4+! dan jebakan mate 8...Qc1#.",
   "root": {
     "move": "d2d4",
     "san": "d4",
-    "blurb": "White opens with the Queen's pawn.",
+    "blurb": "White opens dengan Queen's pawn.",
     "children": [
       {
         "move": "e7e5",
@@ -68,24 +68,24 @@
                                                               {
                                                                 "move": "a3a5",
                                                                 "san": "Qa5",
-                                                                "blurb": "Retreat to a5 keeping the b4 Bishop protected and White's Queenside tied up."
+                                                                "blurb": "Mundur ke a5 menjaga b4 Bishop protected dan White's queenside tied up."
                                                               }
                                                             ],
-                                                            "blurb": "White chases the Queen with Rb3.",
+                                                            "blurb": "White chases Queen dengan Rb3.",
                                                             "human_freq": 0.5643
                                                           }
                                                         ],
-                                                        "blurb": "Step the Queen to a3, maintaining the menyerang on c3."
+                                                        "blurb": "Langkah Queen ke a3, maintaining attack di c3."
                                                       }
                                                     ],
-                                                    "blurb": "White menyerang the Queen with Rb1.",
+                                                    "blurb": "White attack Queen dengan Rb1.",
                                                     "human_freq": 0.8439
                                                   }
                                                 ],
-                                                "blurb": "Pin the c3 Knight so b2-a1 is threatened again!"
+                                                "blurb": "Pin Knight c3 sehingga petak b2-a1 kembali terancam!"
                                               }
                                             ],
-                                            "blurb": "Main Line: White develops Nc3 to melindungi a1.",
+                                            "blurb": "Main variasi: White mendevelop Nc3 ke melindungi a1.",
                                             "human_freq": 0.706
                                           },
                                           {
@@ -111,32 +111,32 @@
                                                               {
                                                                 "move": "b2c1",
                                                                 "san": "Qc1#",
-                                                                "blurb": "Checkmate (8...Qc1#)! The legendary Englund Gambit 8-move mate."
+                                                                "blurb": "Checkmate (8...Qc1#)! legendary Englund Gambit 8-langkah mate."
                                                               }
                                                             ],
-                                                            "blurb": "White memakan balik with the Queen, leaving c1 undefended.",
+                                                            "blurb": "White recapture dengan Queen, membiarkan c1 tanpa penjagaan.",
                                                             "human_freq": 0.8943
                                                           }
                                                         ],
-                                                        "blurb": "Eliminate the defender of a1 and c1!"
+                                                        "blurb": "Habisi defender dari a1 dan c1!"
                                                       }
                                                     ],
-                                                    "blurb": "White tries to mempertahankan the c3 Bishop with Qd2.",
+                                                    "blurb": "White tries untuk menjaga c3 Bishop dengan Qd2.",
                                                     "human_freq": 0.3357
                                                   }
                                                 ],
-                                                "blurb": "Pin the c3 Bishop to the King! White cannot save both c3 and a1."
+                                                "blurb": "Lakukan pin pada c3 Bishop ke King! White cannot save kedua c3 dan a1."
                                               }
                                             ],
-                                            "blurb": "Club players frequently play 6.Bc3?? to trap the Queen and guard a1!",
+                                            "blurb": "Pemain klub frequently play 6.Bc3?? ke Jebak Queen dan guard a1!",
                                             "is_blunder": true,
                                             "human_freq": 0.2855
                                           }
                                         ],
-                                        "blurb": "memakan the b2 pawn and mengancam Qxa1!"
+                                        "blurb": "Capture b2 pawn dan mengancam Qxa1!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #1 Human Move (59.9%): White blocks with Bd2 to save the Bishop.",
+                                    "blurb": "Langkah Populer Maia-3 #1 (59.9%): White memblokir dengan Bd2 ke save Bishop.",
                                     "human_freq": 0.5987
                                   },
                                   {
@@ -154,17 +154,17 @@
                                               {
                                                 "move": "f4e4",
                                                 "san": "Qe4",
-                                                "blurb": "Step to e4, mempertahankan c7 while pinning the d5 Knight or menyerang e5!"
+                                                "blurb": "Langkah ke e4, mempertahankan c7 sembari pinning d5 Knight atau attack e5!"
                                               }
                                             ],
-                                            "blurb": "White counter-menyerang c7 and the f4 Queen.",
+                                            "blurb": "White counter-attack c7 dan f4 Queen.",
                                             "human_freq": 0.3433
                                           }
                                         ],
-                                        "blurb": "Snap off the undefended f4 Bishop for a clean extra piece!"
+                                        "blurb": "Snap off tanpa penjagaan f4 Bishop untuk bersih extra piece!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #2 Human Move (14.4%): White blocks with Nc3, hanging the f4 Bishop!",
+                                    "blurb": "Langkah Populer Maia-3 #2 (14.4%): White memblokir dengan Nc3, gantung (hanging) f4 Bishop!",
                                     "is_blunder": true,
                                     "human_freq": 0.1444
                                   },
@@ -175,10 +175,10 @@
                                       {
                                         "move": "b4f4",
                                         "san": "Qxf4",
-                                        "blurb": "memakan the undefended f4 Bishop for a full piece advantage!"
+                                        "blurb": "Capture yang tanpa penjagaan f4 Bishop untuk full keunggulan perwira!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #3 Human Move (8.7%): White blocks with Nbd2, leaving the f4 Bishop hanging!",
+                                    "blurb": "Langkah Populer Maia-3 #3 (8.7%): White memblokir dengan Nbd2, membiarkan f4 Bishop gantung (hanging)!",
                                     "is_blunder": true,
                                     "human_freq": 0.0871
                                   },
@@ -189,10 +189,10 @@
                                       {
                                         "move": "b4f4",
                                         "san": "Qxf4",
-                                        "blurb": "memakan the f4 Bishop cleanly!"
+                                        "blurb": "Capture f4 Bishop dengan bersih!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #4 Human Move (8.5%): White blocks with c3, hanging both f4 and b2!",
+                                    "blurb": "Langkah Populer Maia-3 #4 (8.5%): White memblokir dengan c3, gantung (hanging) kedua f4 dan b2!",
                                     "is_blunder": true,
                                     "human_freq": 0.0848
                                   },
@@ -211,24 +211,24 @@
                                               {
                                                 "move": "f8b4",
                                                 "san": "Bb4",
-                                                "blurb": "Pin and memenangkan the White Queen on c3!"
+                                                "blurb": "Pin dan memenangkan White Queen di c3!"
                                               }
                                             ],
-                                            "blurb": "White tries to trade Queens.",
+                                            "blurb": "White tries ke Tukar Queen.",
                                             "human_freq": 0.7295
                                           }
                                         ],
-                                        "blurb": "memakan on b2 and mengancam Bb4 pinning the Queen to the King!"
+                                        "blurb": "Capture di b2 dan mengancam Bb4 pinning Queen ke King!"
                                       }
                                     ],
-                                    "blurb": "Maia-3 Top #5 Human Move (7.8%): White blocks with Qd2, allowing Qxb2!",
+                                    "blurb": "Langkah Populer Maia-3 #5 (7.8%): White memblokir dengan Qd2, allowing Qxb2!",
                                     "human_freq": 0.0783
                                   }
                                 ],
-                                "blurb": "Fork the King, the f4 Bishop, and the b2 pawn!"
+                                "blurb": "Fork King, f4 Bishop, dan b2 pawn!"
                               }
                             ],
-                            "blurb": "Maia-3 Top #1 Human Move (40.6%): Over 40% of human players mempertahankan e5 with Bf4, walking into Qb4+!",
+                            "blurb": "Langkah Populer Maia-3 #1 (40.6%): lebih dari 40% pemain menjaga e5 dengan Bf4, yang langsung terkena respon telak Qb4+!",
                             "human_freq": 0.4062
                           },
                           {
@@ -246,17 +246,17 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Develop Nf6 and bersiap d6 or Bb4."
+                                        "blurb": "Develop Nf6 dan bersiap d6 atau Bb4."
                                       }
                                     ],
                                     "blurb": "White occupies e4.",
                                     "human_freq": 0.1065
                                   }
                                 ],
-                                "blurb": "memakan balik the e5 pawn with complete equality and active piece play."
+                                "blurb": "Recapture e5 pawn dengan complete equality dan aktif piece play."
                               }
                             ],
-                            "blurb": "Maia-3 Top #2 Human Move (17.6%): White returns the e5 pawn to Develop.",
+                            "blurb": "Langkah Populer Maia-3 #2 (17.6%): White returns e5 pawn ke Develop.",
                             "human_freq": 0.1757
                           },
                           {
@@ -282,24 +282,24 @@
                                               {
                                                 "move": "f8b4",
                                                 "san": "Bb4",
-                                                "blurb": "Pin the c3 Knight and merebut a strong initiative."
+                                                "blurb": "Lakukan pin pada c3 Knight dan merebut a strong inisiatif."
                                               }
                                             ],
-                                            "blurb": "White mempertahankan c3 with Bd2.",
+                                            "blurb": "White mempertahankan c3 dengan Bd2.",
                                             "human_freq": 0.3721
                                           }
                                         ],
-                                        "blurb": "memakan on b2 and menyerang the c3 Knight!"
+                                        "blurb": "Capture di b2 dan attack c3 Knight!"
                                       }
                                     ],
-                                    "blurb": "White blocks with Nc3.",
+                                    "blurb": "White memblokir dengan Nc3.",
                                     "human_freq": 0.3028
                                   }
                                 ],
-                                "blurb": "Check on b4 and fork the b2 pawn!"
+                                "blurb": "Check di b4 dan Fork b2 pawn!"
                               }
                             ],
-                            "blurb": "Maia-3 Top #3 Human Move (11.8%): White menyerang the e7 Queen with Bg5.",
+                            "blurb": "Langkah Populer Maia-3 #3 (11.8%): White attack e7 Queen dengan Bg5.",
                             "human_freq": 0.1182
                           },
                           {
@@ -317,17 +317,17 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nxf6",
-                                        "blurb": "memakan balik with tempo on the d5 Queen!"
+                                        "blurb": "Recapture dengan tempo di d5 Queen!"
                                       }
                                     ],
-                                    "blurb": "White memakan on f6.",
+                                    "blurb": "White capture di f6.",
                                     "human_freq": 0.8006
                                   }
                                 ],
-                                "blurb": "menantang the e5 pawn to open the f-file!"
+                                "blurb": "Tantangan e5 pawn untuk membuka f-file!"
                               }
                             ],
-                            "blurb": "Maia-3 Top #4 Human Move (8.2%): White centralizes Qd5.",
+                            "blurb": "Langkah Populer Maia-3 #4 (8.2%): White memusatkan perwira di Qd5.",
                             "human_freq": 0.0823
                           },
                           {
@@ -345,24 +345,24 @@
                                       {
                                         "move": "g8f6",
                                         "san": "Nf6",
-                                        "blurb": "Develop Nf6 and bersiap d5."
+                                        "blurb": "Develop Nf6 dan bersiap d5."
                                       }
                                     ],
-                                    "blurb": "White develops Be2.",
+                                    "blurb": "White mendevelop Be2.",
                                     "human_freq": 0.1899
                                   }
                                 ],
-                                "blurb": "Regain the e5 pawn with smooth piece play."
+                                "blurb": "Regain e5 pawn dengan smooth piece play."
                               }
                             ],
-                            "blurb": "Maia-3 Top #5 Human Move (8.1%): White surrenders e5 to Develop.",
+                            "blurb": "Langkah Populer Maia-3 #5 (8.1%): White melepaskan e5 ke Develop.",
                             "human_freq": 0.0814
                           }
                         ],
-                        "blurb": "Double menyerang on e5! Bait White into playing the natural 4.Bf4."
+                        "blurb": "Double attack di e5! Pancing White memainkan langkah natural 4.Bf4."
                       }
                     ],
-                    "blurb": "Maia-3 Top #1 Human Move (71.5%): White mempertahankan e5 with Nf3.",
+                    "blurb": "Langkah Populer Maia-3 #1 (71.5%): White mempertahankan e5 dengan Nf3.",
                     "human_freq": 0.7152
                   },
                   {
@@ -380,17 +380,17 @@
                               {
                                 "move": "d7d6",
                                 "san": "d6",
-                                "blurb": "Open the c8 Bishop and chip away at White's e5 wedge."
+                                "blurb": "Buka c8 Bishop dan chip menjauh di White's e5 wedge."
                               }
                             ],
-                            "blurb": "White develops Nf3.",
+                            "blurb": "White mendevelop Nf3.",
                             "human_freq": 0.4783
                           }
                         ],
-                        "blurb": "merebut the a7-g1 diagonal and prevent White from castling!"
+                        "blurb": "Merebut a7-g1 diagonal dan mencegah White dari castling!"
                       }
                     ],
-                    "blurb": "Maia-3 Top #2 Human Move (9.6%): White mempertahankan e5 with f4, weakening the e1-h4 diagonal.",
+                    "blurb": "Langkah Populer Maia-3 #2 (9.6%): White mempertahankan e5 dengan f4, weakening e1-h4 diagonal.",
                     "human_freq": 0.0963
                   },
                   {
@@ -408,24 +408,24 @@
                               {
                                 "move": "e7b4",
                                 "san": "Qb4+",
-                                "blurb": "Fork the King, the f4 Bishop, and the b2 pawn!"
+                                "blurb": "Fork King, f4 Bishop, dan b2 pawn!"
                               }
                             ],
-                            "blurb": "White mempertahankan e5, transposing into the main trap!",
+                            "blurb": "White mempertahankan e5, beralih ke dalam main jebakan!",
                             "human_freq": 0.6507
                           }
                         ],
-                        "blurb": "menyerang e5 and bersiap Qb4+!"
+                        "blurb": "Attack e5 dan bersiap Qb4+!"
                       }
                     ],
-                    "blurb": "Maia-3 Top #3 Human Move (9.4%): White plays 3.Bf4 immediately.",
+                    "blurb": "Langkah Populer Maia-3 #3 (9.4%): White memainkan 3.Bf4 segera.",
                     "human_freq": 0.0942
                   }
                 ],
-                "blurb": "Develop Nc6 and menyerang the e5 pawn."
+                "blurb": "Develop Nc6 dan attack e5 pawn."
               }
             ],
-            "blurb": "Maia-3 Top #1 Human Move (62.0%): White accepts the gambit pawn.",
+            "blurb": "Langkah Populer Maia-3 #1 (62.0%): White menerima gambit pawn.",
             "human_freq": 0.6203
           },
           {
@@ -443,17 +443,17 @@
                       {
                         "move": "g8f6",
                         "san": "Nf6",
-                        "blurb": "menyerang the e4 pawn and bersiap d6."
+                        "blurb": "Attack e4 pawn dan bersiap d6."
                       }
                     ],
-                    "blurb": "White claims the center.",
+                    "blurb": "White menguasai center.",
                     "human_freq": 0.4532
                   }
                 ],
-                "blurb": "Develop Bc5 targeting f2."
+                "blurb": "Develop Bc5 menargetkan f2."
               }
             ],
-            "blurb": "Maia-3 Top #2 Human Move (9.8%): White declines the gambit and pushes d5.",
+            "blurb": "Langkah Populer Maia-3 #2 (9.8%): White menolak gambit dan mendorong d5.",
             "human_freq": 0.0984
           },
           {
@@ -471,17 +471,17 @@
                       {
                         "move": "b8c6",
                         "san": "Nc6",
-                        "blurb": "Develop with tempo against the d4 Queen!"
+                        "blurb": "Develop dengan tempo melawan d4 Queen!"
                       }
                     ],
-                    "blurb": "White memakan balik.",
+                    "blurb": "White recapture.",
                     "human_freq": 0.7428
                   }
                 ],
-                "blurb": "memakan on d4 to draw the Queen out."
+                "blurb": "Capture di d4 ke draw Queen out."
               }
             ],
-            "blurb": "Maia-3 Top #3 Human Move (7.8%): White transposes toward an English/QGD.",
+            "blurb": "Langkah Populer Maia-3 #3 (7.8%): White transposes toward an English/QGD.",
             "human_freq": 0.0775
           },
           {
@@ -499,21 +499,21 @@
                       {
                         "move": "d7d5",
                         "san": "d5",
-                        "blurb": "Equalize immediately in the center."
+                        "blurb": "Equalize segera di center."
                       }
                     ],
-                    "blurb": "White memakan balik.",
+                    "blurb": "White recapture.",
                     "human_freq": 0.6689
                   }
                 ],
-                "blurb": "Exchange on d4."
+                "blurb": "Exchange di d4."
               }
             ],
-            "blurb": "Maia-3 Top #4 Human Move (5.8%): Passive e3.",
+            "blurb": "Langkah Populer Maia-3 #4 (5.8%): pasif e3.",
             "human_freq": 0.058
           }
         ],
-        "blurb": "The Englund Gambit! Shock 1.d4 players on move 1 by sacrificing the e5 pawn for rapid tactical traps."
+        "blurb": "Englund Gambit! Shock 1.d4 players di langkah 1 oleh mengorbankan e5 pawn untuk rapid tactical jebakan."
       }
     ],
     "human_freq": 0.241

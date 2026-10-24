@@ -166,7 +166,7 @@ static func _analyze_motifs(
 	# 1. Motif Checkmate / Mating Net
 	if ChessMoveGenerator.is_checkmate(board_after):
 		motif = "checkmate"
-		success_detail = "Checkmate! King lawan tidak memiliki escape square."
+		success_detail = "Checkmate! King lawan tidak memiliki petak lari."
 		return _pack_motif(motif, success_detail, flaw_detail, best_benefit)
 
 	if is_mate_after and mate_in_after > 0:
@@ -176,8 +176,8 @@ static func _analyze_motifs(
 
 	if is_mate_before and mate_in_before > 0:
 		motif = "missed_mate"
-		flaw_detail = "Melewatkan Forced mate."
-		best_benefit = "menyelesaikan Forced mate langsung"
+		flaw_detail = "Melewatkan forced mate."
+		best_benefit = "menyelesaikan forced mate langsung"
 		return _pack_motif(motif, success_detail, flaw_detail, best_benefit)
 
 	# 2. Motif Menyerang / Menangkap Queen
@@ -200,8 +200,8 @@ static func _analyze_motifs(
 			for thr in threats:
 				if thr["to"] == played_move.to_sq and thr["type"] == "threat-hanging":
 					motif = "hanging_queen"
-					flaw_detail = "Hanging Queen! Queen tidak terjaga dan bisa ditangkap."
-					best_benefit = "mengamankan Queen ke square aman"
+					flaw_detail = "Hanging Queen! Queen tidak terjaga dan dapat dimakan."
+					best_benefit = "mengamankan Queen ke petak aman"
 					return _pack_motif(motif, success_detail, flaw_detail, best_benefit)
 
 	# 3. Motif Fork
