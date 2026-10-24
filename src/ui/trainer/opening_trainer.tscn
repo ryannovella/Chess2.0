@@ -329,14 +329,12 @@ theme_type_variation = &"LabelBold"
 theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
 theme_override_font_sizes/font_size = 18
 text = "Trainer Bot"
-clip_text = true
 
 [node name="BadgeLabel" type="Label" parent="CenterContainer/MainLayout/BoardArea/TopPlayerCard/HBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
 theme_override_font_sizes/font_size = 16
 text = "Black"
-clip_text = true
 
 [node name="Spacer" type="Control" parent="CenterContainer/MainLayout/BoardArea/TopPlayerCard/HBox"]
 layout_mode = 2
@@ -377,14 +375,12 @@ theme_type_variation = &"LabelBold"
 theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
 theme_override_font_sizes/font_size = 18
 text = "Player (You)"
-clip_text = true
 
 [node name="BadgeLabel" type="Label" parent="CenterContainer/MainLayout/BoardArea/BottomPlayerCard/HBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
 theme_override_font_sizes/font_size = 16
 text = "White"
-clip_text = true
 
 [node name="Spacer" type="Control" parent="CenterContainer/MainLayout/BoardArea/BottomPlayerCard/HBox"]
 layout_mode = 2
