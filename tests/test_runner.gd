@@ -2251,6 +2251,12 @@ func test_opening_repertoire_and_srs() -> void:
 	trainer._on_mode_toggle_pressed()
 	assert_true(trainer.is_drill_mode != prev_mode, "Mode toggle berhasil mengubah state antara Drill dan Learn")
 
+	# Verifikasi penguncian interaktivitas papan saat variasi selesai
+	trainer.active_line = []
+	trainer._process_current_step()
+	assert_true(trainer.is_line_completed, "Variasi ditandai selesai saat active_line habis")
+	assert_true(not trainer.chess_board.is_interactive, "Papan catur dinonaktifkan (is_interactive = false) saat variasi selesai agar bidak lawan tidak dapat digerakkan")
+
 	# Ganti repertoire ke Caro-Kann (Black)
 	trainer.start_repertoire("caro_kann_defense")
 	assert_true(trainer.is_flipped, "Papan otomatis diflip saat berganti ke repertoire Hitam (Caro-Kann)")

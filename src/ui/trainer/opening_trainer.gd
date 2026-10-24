@@ -553,6 +553,11 @@ func _process_current_step() -> void:
 
 func _setup_player_turn(node: Variant) -> void:
 	is_waiting_opponent = false
+	if is_line_completed:
+		if chess_board:
+			chess_board.is_interactive = false
+		return
+
 	if chess_board:
 		chess_board.is_interactive = true
 
@@ -777,8 +782,6 @@ func _handle_correct_player_move(expected_node: Variant, move: Variant) -> void:
 func _on_player_move_animation_done(next_state: ChessBoardState) -> void:
 	board_state = next_state
 	_update_player_cards()
-	if chess_board:
-		chess_board.is_interactive = true
 	current_node_index += 1
 
 	var t = get_tree() if is_inside_tree() else null
@@ -854,6 +857,11 @@ func _on_retry_pressed() -> void:
 
 func _on_line_completed() -> void:
 	is_line_completed = true
+	if chess_board:
+		chess_board.is_interactive = false
+		chess_board.clear_selection()
+		_clear_arrows()
+
 	_update_step_badge()
 	_set_coach_card_accent("correct")
 	if status_label:
@@ -868,9 +876,6 @@ func _on_line_completed() -> void:
 		btn_hint.disabled = true
 	if btn_retry:
 		btn_retry.disabled = false
-
-	if chess_board:
-		_clear_arrows()
 
 	_play_sfx("play_victory")
 
