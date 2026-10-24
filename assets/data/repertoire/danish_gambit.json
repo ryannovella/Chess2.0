@@ -1,0 +1,615 @@
+{
+  "id": "danish_gambit",
+  "name": "Danish Gambit",
+  "eco": "C21",
+  "color": "white",
+  "description": "Highest win-rate White gambit on Lichess: sacrifice two pawns to aim both Bishops (Bc4 & Bb2) at g7 and f7.",
+  "root": {
+    "move": "e2e4",
+    "san": "e4",
+    "blurb": "Open with the King's pawn.",
+    "children": [
+      {
+        "move": "e7e5",
+        "san": "e5",
+        "children": [
+          {
+            "move": "d2d4",
+            "san": "d4",
+            "children": [
+              {
+                "move": "e5d4",
+                "san": "exd4",
+                "children": [
+                  {
+                    "move": "c2c3",
+                    "san": "c3",
+                    "children": [
+                      {
+                        "move": "d4c3",
+                        "san": "dxc3",
+                        "children": [
+                          {
+                            "move": "f1c4",
+                            "san": "Bc4",
+                            "children": [
+                              {
+                                "move": "c3b2",
+                                "san": "cxb2",
+                                "children": [
+                                  {
+                                    "move": "c1b2",
+                                    "san": "Bxb2",
+                                    "children": [
+                                      {
+                                        "move": "f8b4",
+                                        "san": "Bb4+",
+                                        "children": [
+                                          {
+                                            "move": "b1c3",
+                                            "san": "Nc3",
+                                            "children": [
+                                              {
+                                                "move": "g8f6",
+                                                "san": "Nf6",
+                                                "children": [
+                                                  {
+                                                    "move": "g1e2",
+                                                    "san": "Ne2",
+                                                    "children": [
+                                                      {
+                                                        "move": "e8g8",
+                                                        "san": "O-O",
+                                                        "children": [
+                                                          {
+                                                            "move": "e1g1",
+                                                            "san": "O-O",
+                                                            "blurb": "Castle Kingside and prepare e5 plus Nd5."
+                                                          }
+                                                        ],
+                                                        "blurb": "Black castles.",
+                                                        "human_freq": 0.4595
+                                                      }
+                                                    ],
+                                                    "blurb": "Develop Ne2 to protect c3 and e4 while preparing O-O and e5."
+                                                  }
+                                                ],
+                                                "blurb": "Black develops Nf6.",
+                                                "human_freq": 0.286
+                                              }
+                                            ],
+                                            "blurb": "Block the check with Nc3."
+                                          }
+                                        ],
+                                        "blurb": "Maia-3 Top #2 Human Move: Black checks on b4.",
+                                        "human_freq": 0.2502
+                                      },
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "children": [
+                                          {
+                                            "move": "e4e5",
+                                            "san": "e5",
+                                            "children": [
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4+",
+                                                "children": [
+                                                  {
+                                                    "move": "b1c3",
+                                                    "san": "Nc3",
+                                                    "children": [
+                                                      {
+                                                        "move": "d8e7",
+                                                        "san": "Qe7",
+                                                        "children": [
+                                                          {
+                                                            "move": "g1e2",
+                                                            "san": "Ne2",
+                                                            "blurb": "Develop Ne2 and prepare O-O plus exf6."
+                                                          }
+                                                        ],
+                                                        "blurb": "Black pins the e5 pawn.",
+                                                        "human_freq": 0.2461
+                                                      }
+                                                    ],
+                                                    "blurb": "Block the check with Nc3."
+                                                  }
+                                                ],
+                                                "blurb": "Black throws in Bb4+ to save the Knight.",
+                                                "human_freq": 0.1424
+                                              }
+                                            ],
+                                            "blurb": "Push e5 with tempo against the f6 Knight!"
+                                          }
+                                        ],
+                                        "blurb": "Maia-3 Top #3 Human Move: Black develops Nf6, allowing e5!",
+                                        "human_freq": 0.2173
+                                      },
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "children": [
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4+",
+                                                "children": [
+                                                  {
+                                                    "move": "b1c3",
+                                                    "san": "Nc3",
+                                                    "blurb": "Block with Nc3 and prepare O-O plus Qb3."
+                                                  }
+                                                ],
+                                                "blurb": "Black checks on b4.",
+                                                "human_freq": 0.208
+                                              }
+                                            ],
+                                            "blurb": "Develop Nf3 and prepare O-O."
+                                          }
+                                        ],
+                                        "blurb": "Black develops Nc6.",
+                                        "human_freq": 0.1525
+                                      },
+                                      {
+                                        "move": "d7d6",
+                                        "san": "d6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "children": [
+                                              {
+                                                "move": "b8c6",
+                                                "san": "Nc6",
+                                                "children": [
+                                                  {
+                                                    "move": "e1g1",
+                                                    "san": "O-O",
+                                                    "children": [
+                                                      {
+                                                        "move": "c8e6",
+                                                        "san": "Be6",
+                                                        "children": [
+                                                          {
+                                                            "move": "c4e6",
+                                                            "san": "Bxe6",
+                                                            "children": [
+                                                              {
+                                                                "move": "f7e6",
+                                                                "san": "fxe6",
+                                                                "children": [
+                                                                  {
+                                                                    "move": "d1b3",
+                                                                    "san": "Qb3",
+                                                                    "blurb": "Double attack on e6 and b7! Black cannot defend both pawns."
+                                                                  }
+                                                                ],
+                                                                "blurb": "Black recaptures, exposing the e6 and g7 squares.",
+                                                                "human_freq": 0.9979
+                                                              }
+                                                            ],
+                                                            "blurb": "Shatter Black's f-pawns by trading on e6!"
+                                                          }
+                                                        ],
+                                                        "blurb": "Black challenges the c4 Bishop.",
+                                                        "human_freq": 0.1675
+                                                      }
+                                                    ],
+                                                    "blurb": "Castle Kingside and prepare Qb3 or Re1."
+                                                  }
+                                                ],
+                                                "blurb": "Black develops Nc6.",
+                                                "human_freq": 0.1367
+                                              }
+                                            ],
+                                            "blurb": "Develop Nf3 and prepare O-O plus Qb3."
+                                          }
+                                        ],
+                                        "blurb": "Maia-3 Top #1 Human Move: Black opens the c8 Bishop.",
+                                        "human_freq": 0.1387
+                                      },
+                                      {
+                                        "move": "f8c5",
+                                        "san": "Bc5",
+                                        "children": [
+                                          {
+                                            "move": "b2g7",
+                                            "san": "Bxg7",
+                                            "children": [
+                                              {
+                                                "move": "d8g5",
+                                                "san": "Qg5",
+                                                "children": [
+                                                  {
+                                                    "move": "g7h8",
+                                                    "san": "Bxh8",
+                                                    "blurb": "Capture the h8 Rook for a winning material advantage!"
+                                                  }
+                                                ],
+                                                "blurb": "Black counter-attacks g2.",
+                                                "human_freq": 0.0989
+                                              }
+                                            ],
+                                            "blurb": "Smash g7 and trap the h8 Rook!"
+                                          }
+                                        ],
+                                        "blurb": "Club mistake: Black develops Bc5, leaving g7 undefended!",
+                                        "is_blunder": true,
+                                        "human_freq": 0.024
+                                      },
+                                      {
+                                        "move": "d7d5",
+                                        "san": "d5",
+                                        "children": [
+                                          {
+                                            "move": "c4d5",
+                                            "san": "Bxd5",
+                                            "children": [
+                                              {
+                                                "move": "g8f6",
+                                                "san": "Nf6",
+                                                "children": [
+                                                  {
+                                                    "move": "d5f7",
+                                                    "san": "Bxf7+",
+                                                    "children": [
+                                                      {
+                                                        "move": "e8f7",
+                                                        "san": "Kxf7",
+                                                        "children": [
+                                                          {
+                                                            "move": "d1d8",
+                                                            "san": "Qxd8",
+                                                            "blurb": "Win the Queen or force Bb4+ Qd2 trading into an endgame a pawn up!"
+                                                          }
+                                                        ],
+                                                        "blurb": "Black captures on f7.",
+                                                        "human_freq": 0.4806
+                                                      }
+                                                    ],
+                                                    "blurb": "Deflect the King to f7 so the d8 Queen falls!"
+                                                  }
+                                                ],
+                                                "blurb": "Black develops Nf6.",
+                                                "human_freq": 0.2707
+                                              }
+                                            ],
+                                            "blurb": "Capture on d5 with the Bishop, eyeing f7!"
+                                          }
+                                        ],
+                                        "blurb": "Schlechter Defense: Black returns a pawn with 5...d5 to open lines.",
+                                        "human_freq": 0.0159
+                                      },
+                                      {
+                                        "move": "d8g5",
+                                        "san": "Qg5",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "children": [
+                                              {
+                                                "move": "g5g2",
+                                                "san": "Qxg2",
+                                                "children": [
+                                                  {
+                                                    "move": "h1g1",
+                                                    "san": "Rg1",
+                                                    "children": [
+                                                      {
+                                                        "move": "g2h3",
+                                                        "san": "Qh3",
+                                                        "children": [
+                                                          {
+                                                            "move": "c4f7",
+                                                            "san": "Bxf7+",
+                                                            "blurb": "Sacrifice on f7 to drag Black's King into a crossfire of Bishops and Rooks!"
+                                                          }
+                                                        ],
+                                                        "blurb": "Black retreats the Queen.",
+                                                        "human_freq": 0.8062
+                                                      }
+                                                    ],
+                                                    "blurb": "Attack the Queen on the open g-file!"
+                                                  }
+                                                ],
+                                                "blurb": "Black grabs g2.",
+                                                "human_freq": 0.715
+                                              }
+                                            ],
+                                            "blurb": "Ignore the g2 pawn! Develop Nf3 with tempo on the Queen."
+                                          }
+                                        ],
+                                        "blurb": "Club players often try 5...Qg5 targeting g2.",
+                                        "human_freq": 0.0115
+                                      }
+                                    ],
+                                    "blurb": "Both White Bishops now laser-target Black's g7 and f7 squares!"
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #1 Human Move (47.8%): Black accepts the full Double Danish Gambit!",
+                                "human_freq": 0.4775
+                              },
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nxc3",
+                                    "children": [
+                                      {
+                                        "move": "f8c5",
+                                        "san": "Bc5",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "children": [
+                                              {
+                                                "move": "d7d6",
+                                                "san": "d6",
+                                                "children": [
+                                                  {
+                                                    "move": "d1b3",
+                                                    "san": "Qb3",
+                                                    "blurb": "Target both f7 and b7 simultaneously!"
+                                                  }
+                                                ],
+                                                "blurb": "Black plays d6.",
+                                                "human_freq": 0.4146
+                                              }
+                                            ],
+                                            "blurb": "Develop Nf3 and prepare O-O plus Qd5."
+                                          }
+                                        ],
+                                        "blurb": "Black develops Bc5.",
+                                        "human_freq": 0.0936
+                                      }
+                                    ],
+                                    "blurb": "Recapture on c3 with a massive lead in development."
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #2 Human Move (12.2%): Half-Danish, Black declines cxb2.",
+                                "human_freq": 0.122
+                              },
+                              {
+                                "move": "d7d6",
+                                "san": "d6",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nxc3",
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "blurb": "Develop Nf3 and prepare Qb3."
+                                          }
+                                        ],
+                                        "blurb": "Black develops Nc6.",
+                                        "human_freq": 0.1652
+                                      }
+                                    ],
+                                    "blurb": "Recapture on c3 with the Knight."
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #3 Human Move (10.2%): Black plays d6.",
+                                "human_freq": 0.1024
+                              },
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nxc3",
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "children": [
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4",
+                                                "children": [
+                                                  {
+                                                    "move": "e1g1",
+                                                    "san": "O-O",
+                                                    "blurb": "Castle Kingside and prepare e5!"
+                                                  }
+                                                ],
+                                                "blurb": "Black pins c3.",
+                                                "human_freq": 0.3972
+                                              }
+                                            ],
+                                            "blurb": "Develop Nf3."
+                                          }
+                                        ],
+                                        "blurb": "Black develops Nc6.",
+                                        "human_freq": 0.1292
+                                      }
+                                    ],
+                                    "blurb": "Recapture on c3 with the Knight."
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #4 Human Move (8.7%): Black develops Nf6 before taking b2.",
+                                "human_freq": 0.0866
+                              },
+                              {
+                                "move": "f8b4",
+                                "san": "Bb4",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nxc3",
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "blurb": "Develop Nf3 and prepare O-O."
+                                          }
+                                        ],
+                                        "blurb": "Black develops Nc6.",
+                                        "human_freq": 0.0648
+                                      }
+                                    ],
+                                    "blurb": "Recapture on c3 and block the check!"
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #5 Human Move (4.1%): Black pins with Bb4.",
+                                "human_freq": 0.0413
+                              },
+                              {
+                                "move": "f8c5",
+                                "san": "Bc5",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nxc3",
+                                    "children": [
+                                      {
+                                        "move": "d7d6",
+                                        "san": "d6",
+                                        "children": [
+                                          {
+                                            "move": "d1b3",
+                                            "san": "Qb3",
+                                            "blurb": "Double attack on f7 and b7!"
+                                          }
+                                        ],
+                                        "blurb": "Black plays d6.",
+                                        "human_freq": 0.238
+                                      }
+                                    ],
+                                    "blurb": "Recapture on c3."
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #6 Human Move (3.7%): Black develops Bc5.",
+                                "human_freq": 0.037
+                              }
+                            ],
+                            "blurb": "Develop Bc4 and invite 4...cxb2 so both Bishops slice across the board!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #1 Human Move (73.3%): Black captures on c3.",
+                        "human_freq": 0.7328
+                      },
+                      {
+                        "move": "b8c6",
+                        "san": "Nc6",
+                        "children": [
+                          {
+                            "move": "c3d4",
+                            "san": "cxd4",
+                            "children": [
+                              {
+                                "move": "f8b4",
+                                "san": "Bb4+",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "blurb": "Block the check and maintain central control."
+                                  }
+                                ],
+                                "blurb": "Black checks on b4.",
+                                "human_freq": 0.3101
+                              }
+                            ],
+                            "blurb": "Recapture on d4 to establish the ideal d4-e4 center!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #2 Human Move (12.4%): Black declines 3...dxc3 and develops Nc6.",
+                        "human_freq": 0.1241
+                      },
+                      {
+                        "move": "d7d5",
+                        "san": "d5",
+                        "children": [
+                          {
+                            "move": "e4d5",
+                            "san": "exd5",
+                            "children": [
+                              {
+                                "move": "d8d5",
+                                "san": "Qxd5",
+                                "children": [
+                                  {
+                                    "move": "c3d4",
+                                    "san": "cxd4",
+                                    "blurb": "Recapture on d4 and follow up with Nc3 gaining tempo on the Queen!"
+                                  }
+                                ],
+                                "blurb": "Black recaptures with the Queen.",
+                                "human_freq": 0.8456
+                              }
+                            ],
+                            "blurb": "Capture the d5 pawn."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #3 Human Move (3.4%): Sorensen Counterattack.",
+                        "human_freq": 0.0339
+                      },
+                      {
+                        "move": "g8f6",
+                        "san": "Nf6",
+                        "children": [
+                          {
+                            "move": "e4e5",
+                            "san": "e5",
+                            "children": [
+                              {
+                                "move": "f6d5",
+                                "san": "Nd5",
+                                "children": [
+                                  {
+                                    "move": "d1d4",
+                                    "san": "Qxd4",
+                                    "blurb": "Recapture on d4 and attack the d5 Knight!"
+                                  }
+                                ],
+                                "blurb": "Black centralizes on d5.",
+                                "human_freq": 0.4636
+                              }
+                            ],
+                            "blurb": "Chase the f6 Knight with e5!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #4 Human Move (2.4%): Black develops Nf6.",
+                        "human_freq": 0.0243
+                      }
+                    ],
+                    "blurb": "The Danish Gambit! Offer a second pawn to sweep the a1-h8 and a2-g8 diagonals."
+                  }
+                ],
+                "blurb": "Black captures the d4 pawn.",
+                "human_freq": 0.6699
+              }
+            ],
+            "blurb": "The Center Game / Danish Gambit setup! Open the d-file immediately."
+          }
+        ],
+        "blurb": "Black matches in the center.",
+        "human_freq": 0.4748
+      }
+    ]
+  }
+}

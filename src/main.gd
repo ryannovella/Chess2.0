@@ -207,6 +207,9 @@ func start_new_game(fen: String = ChessBoardState.DEFAULT_FEN, mode: String = "v
 	game_mode = mode
 	is_game_active = true
 	is_paused = false
+	engine_service.stop_analysis()
+	engine_arrows.clear()
+	threat_arrows.clear()
 	if pause_menu_layer:
 		pause_menu_layer.visible = false
 	if game_over_layer:
@@ -349,7 +352,8 @@ func _on_board_move_made(move: Variant) -> void:
 	if not is_game_active or is_paused or (move is Dictionary and move.is_empty()) or (move is ChessMove and move.is_empty()):
 		return
 
-	# Bersihkan panah posisi sebelumnya saat langkah dilakukan
+	# Bersihkan panah posisi sebelumnya dan hentikan analisa lama saat langkah dilakukan
+	engine_service.stop_analysis()
 	engine_arrows.clear()
 	threat_arrows.clear()
 	if chess_board:
@@ -535,11 +539,23 @@ func _on_ai_move_ready(move_uci: String) -> void:
 		return
 
 	if move_uci.is_empty():
+		var legal_moves = ChessMoveGenerator.get_legal_moves(board_state)
+		if legal_moves.is_empty():
+			_finalize_move_turn()
+		else:
+			_on_board_move_made(legal_moves[0])
 		return
 
 	var move = ChessSAN.uci_to_move(board_state, move_uci)
 	if not move.is_empty():
 		_on_board_move_made(move)
+	else:
+		push_warning("main: Unparseable AI move '%s' on FEN '%s', executing legal fallback." % [move_uci, board_state.to_fen()])
+		var legal_moves = ChessMoveGenerator.get_legal_moves(board_state)
+		if legal_moves.is_empty():
+			_finalize_move_turn()
+		else:
+			_on_board_move_made(legal_moves[0])
 
 func _update_threats() -> void:
 	if board_state == null:
@@ -577,7 +593,11 @@ func _refresh_arrows() -> void:
 					show_opponent_engine = GameSettings.show_black_engine_arrows
 			
 			if show_player_engine or show_opponent_engine:
-				visible_engine_arrows = engine_arrows
+				for arr in engine_arrows:
+					var from_sq = str(arr.get("from", ""))
+					var p = board_state.get_piece(from_sq)
+					if p != null and p["color"] == board_state.turn:
+						visible_engine_arrows.append(arr)
 			
 			# Threat Arrows Logic
 			if game_mode == "vs_ai":
@@ -731,6 +751,10 @@ func redo_move() -> void:
 
 func _animate_and_apply_undo(target_index: int, steps: int) -> void:
 	engine_service.stop_analysis()
+	engine_arrows.clear()
+	threat_arrows.clear()
+	if chess_board:
+		chess_board.update_arrows([], [])
 	AudioService.play_move()
 
 	if steps == 1:
@@ -760,6 +784,10 @@ func _animate_and_apply_undo(target_index: int, steps: int) -> void:
 
 func _animate_and_apply_redo(target_index: int, steps: int) -> void:
 	engine_service.stop_analysis()
+	engine_arrows.clear()
+	threat_arrows.clear()
+	if chess_board:
+		chess_board.update_arrows([], [])
 	AudioService.play_move()
 
 	if steps == 1:

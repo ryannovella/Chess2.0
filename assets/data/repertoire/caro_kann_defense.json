@@ -3,31 +3,34 @@
   "name": "Caro-Kann Defense",
   "eco": "B12",
   "color": "black",
-  "description": "Solid pawn structure and counter-punching against 1. e4.",
+  "description": "Resilient light-square pawn structure with incisive d5 and c5 counter-strikes against 1. e4.",
   "root": {
     "move": "e2e4",
     "san": "e4",
-    "human_freq": 1.0,
+    "human_freq": 0.6406,
+    "blurb": "White opens with the King's pawn to claim central space.",
     "children": [
       {
         "move": "c7c6",
         "san": "c6",
-        "blurb": "The Caro-Kann! Prepare to challenge White's center with d5.",
+        "blurb": "The Caro-Kann! Prepare the d5 central thrust while keeping the c8-h3 diagonal open.",
         "children": [
           {
             "move": "d2d4",
             "san": "d4",
-            "human_freq": 0.82,
+            "human_freq": 0.3761,
+            "blurb": "White establishes the full two-pawn center.",
             "children": [
               {
                 "move": "d7d5",
                 "san": "d5",
-                "blurb": "Strike back at White's central e4 pawn.",
+                "blurb": "Challenge the e4 pawn immediately with c6 support.",
                 "children": [
                   {
                     "move": "e4e5",
                     "san": "e5",
-                    "human_freq": 0.54,
+                    "human_freq": 0.488,
+                    "blurb": "Advance Variation: White grabs space and closes the center.",
                     "children": [
                       {
                         "move": "c8f5",
@@ -37,22 +40,369 @@
                           {
                             "move": "g1f3",
                             "san": "Nf3",
-                            "human_freq": 0.65,
+                            "human_freq": 0.3315,
+                            "blurb": "Short System: White develops calmly and prepares Be2.",
                             "children": [
                               {
                                 "move": "e7e6",
                                 "san": "e6",
-                                "blurb": "Anchor the center now that the Bishop is active.",
+                                "blurb": "Solidify the d5 pawn and open the diagonal for the dark-squared Bishop.",
                                 "children": [
                                   {
                                     "move": "f1e2",
                                     "san": "Be2",
-                                    "human_freq": 0.72,
+                                    "human_freq": 0.1008,
                                     "children": [
                                       {
                                         "move": "c6c5",
                                         "san": "c5",
-                                        "blurb": "The thematic c5 counter-break targeting White's d4 foundation."
+                                        "blurb": "Strike at the base of White's pawn chain on d4 without delay.",
+                                        "children": [
+                                          {
+                                            "move": "e1g1",
+                                            "san": "O-O",
+                                            "human_freq": 0.1954,
+                                            "blurb": "White castles early before defending d4.",
+                                            "children": [
+                                              {
+                                                "move": "b8c6",
+                                                "san": "Nc6",
+                                                "blurb": "Develop with tempo against the d4 pawn.",
+                                                "children": [
+                                                  {
+                                                    "move": "c2c3",
+                                                    "san": "c3",
+                                                    "human_freq": 0.4736,
+                                                    "children": [
+                                                      {
+                                                        "move": "g8e7",
+                                                        "san": "Nge7",
+                                                        "blurb": "Route the King's Knight to f5 or g6 to pile up on d4 and e5."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "move": "c1e3",
+                                            "san": "Be3",
+                                            "human_freq": 0.0662,
+                                            "blurb": "White reinforces d4 with the dark-squared Bishop.",
+                                            "children": [
+                                              {
+                                                "move": "d8b6",
+                                                "san": "Qb6",
+                                                "blurb": "Double target! Pressure both the b2 pawn and the d4 central pillar.",
+                                                "children": [
+                                                  {
+                                                    "move": "b1c3",
+                                                    "san": "Nc3",
+                                                    "human_freq": 0.0452,
+                                                    "children": [
+                                                      {
+                                                        "move": "b8c6",
+                                                        "san": "Nc6",
+                                                        "blurb": "Develop the Knight and increase the pressure on d4.",
+                                                        "children": [
+                                                          {
+                                                            "move": "e1g1",
+                                                            "san": "O-O",
+                                                            "human_freq": 0.2517,
+                                                            "children": [
+                                                              {
+                                                                "move": "b6b2",
+                                                                "san": "Qxb2",
+                                                                "blurb": "Capture the poisoned b2 pawn and attack the c3 Knight with tempo."
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "f1d3",
+                            "san": "Bd3",
+                            "is_blunder": true,
+                            "human_freq": 0.2307,
+                            "blurb": "Inaccurate club move: White voluntarily trades off the good light-squared Bishop.",
+                            "children": [
+                              {
+                                "move": "f5d3",
+                                "san": "Bxd3",
+                                "blurb": "Exchange Bishops immediately to solve Black's light-square problem.",
+                                "children": [
+                                  {
+                                    "move": "d1d3",
+                                    "san": "Qxd3",
+                                    "human_freq": 0.9768,
+                                    "children": [
+                                      {
+                                        "move": "e7e6",
+                                        "san": "e6",
+                                        "blurb": "Lock down the light squares and prepare Qa5+ to trade Queens.",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "human_freq": 0.5668,
+                                            "children": [
+                                              {
+                                                "move": "d8a5",
+                                                "san": "Qa5+",
+                                                "blurb": "Check on a5 and prepare Qa6 to force a favorable Queen trade."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "human_freq": 0.0808,
+                            "blurb": "Shirov / Bayonet Variation: White prepares an aggressive g4 pawn storm.",
+                            "children": [
+                              {
+                                "move": "e7e6",
+                                "san": "e6",
+                                "blurb": "Secure d5 first and wait to meet g4 with Bg6.",
+                                "children": [
+                                  {
+                                    "move": "g2g4",
+                                    "san": "g4",
+                                    "human_freq": 0.0779,
+                                    "children": [
+                                      {
+                                        "move": "f5g6",
+                                        "san": "Bg6",
+                                        "blurb": "Drop the Bishop back to g6 where it eyes the weakened Kingside.",
+                                        "children": [
+                                          {
+                                            "move": "g1e2",
+                                            "san": "Nge2",
+                                            "human_freq": 0.0504,
+                                            "children": [
+                                              {
+                                                "move": "c6c5",
+                                                "san": "c5",
+                                                "blurb": "Counter-attack in the center! Meet a wing attack with a central break."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "h2h4",
+                            "san": "h4",
+                            "human_freq": 0.066,
+                            "blurb": "Tal Variation: White tries to trap the f5 Bishop with g4.",
+                            "children": [
+                              {
+                                "move": "h7h5",
+                                "san": "h5",
+                                "blurb": "Essential response! Stop g4 in its tracks and secure the f5 post.",
+                                "children": [
+                                  {
+                                    "move": "f1d3",
+                                    "san": "Bd3",
+                                    "human_freq": 0.3311,
+                                    "children": [
+                                      {
+                                        "move": "f5d3",
+                                        "san": "Bxd3",
+                                        "blurb": "Trade off the light-squared Bishops so White cannot build a Kingside battery.",
+                                        "children": [
+                                          {
+                                            "move": "d1d3",
+                                            "san": "Qxd3",
+                                            "human_freq": 0.9741,
+                                            "children": [
+                                              {
+                                                "move": "e7e6",
+                                                "san": "e6",
+                                                "blurb": "Close the light-square diagonal and prepare Qb6 plus c5.",
+                                                "children": [
+                                                  {
+                                                    "move": "c1g5",
+                                                    "san": "Bg5",
+                                                    "human_freq": 0.3022,
+                                                    "children": [
+                                                      {
+                                                        "move": "d8b6",
+                                                        "san": "Qb6",
+                                                        "blurb": "Sidestep the Bishop and hit the undefended b2 pawn immediately."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "move": "e4d5",
+                    "san": "exd5",
+                    "human_freq": 0.2574,
+                    "blurb": "Exchange Variation: White clarifies the pawn structure early.",
+                    "children": [
+                      {
+                        "move": "c6d5",
+                        "san": "cxd5",
+                        "blurb": "Recapture toward the center and open the c-file and c6 square.",
+                        "children": [
+                          {
+                            "move": "c2c4",
+                            "san": "c4",
+                            "human_freq": 0.1344,
+                            "blurb": "Panov-Botvinnik Attack: White challenges the d5 center immediately.",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "blurb": "Defend d5 with a piece and prepare to blockade an isolated d-pawn.",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "human_freq": 0.5449,
+                                    "children": [
+                                      {
+                                        "move": "e7e6",
+                                        "san": "e6",
+                                        "blurb": "Reinforce d5 and open the diagonal for the f8 Bishop.",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "human_freq": 0.4551,
+                                            "children": [
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4",
+                                                "blurb": "Pin the c3 Knight to reduce White's pressure on d5."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "f1d3",
+                            "san": "Bd3",
+                            "human_freq": 0.1063,
+                            "blurb": "Main Line Exchange: White controls the b1-h7 diagonal to prevent Bf5.",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "blurb": "Develop with tempo against White's d4 pawn.",
+                                "children": [
+                                  {
+                                    "move": "c2c3",
+                                    "san": "c3",
+                                    "human_freq": 0.5434,
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Control the e4 outpost and prepare Bg4.",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "human_freq": 0.2808,
+                                            "blurb": "Quiet Exchange setup: White develops the Knight before the c1 Bishop.",
+                                            "children": [
+                                              {
+                                                "move": "c8g4",
+                                                "san": "Bg4",
+                                                "blurb": "Pin the f3 Knight immediately outside the pawn chain.",
+                                                "children": [
+                                                  {
+                                                    "move": "e1g1",
+                                                    "san": "O-O",
+                                                    "human_freq": 0.4387,
+                                                    "children": [
+                                                      {
+                                                        "move": "e7e6",
+                                                        "san": "e6",
+                                                        "blurb": "Complete the light-square pawn triangle and prepare Bd6 plus O-O."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "move": "c1f4",
+                                            "san": "Bf4",
+                                            "human_freq": 0.2662,
+                                            "children": [
+                                              {
+                                                "move": "c8g4",
+                                                "san": "Bg4",
+                                                "blurb": "Develop the light-squared Bishop with tempo against the Queen.",
+                                                "children": [
+                                                  {
+                                                    "move": "d1b3",
+                                                    "san": "Qb3",
+                                                    "human_freq": 0.2005,
+                                                    "children": [
+                                                      {
+                                                        "move": "d8d7",
+                                                        "san": "Qd7",
+                                                        "blurb": "Defend b7 harmoniously without weakening the Queenside pawn structure."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
                                       }
                                     ]
                                   }
@@ -67,32 +417,523 @@
                   {
                     "move": "b1c3",
                     "san": "Nc3",
-                    "human_freq": 0.38,
+                    "human_freq": 0.1702,
+                    "blurb": "Classical Variation: White defends e4 with a piece.",
                     "children": [
                       {
                         "move": "d5e4",
                         "san": "dxe4",
-                        "blurb": "Classical Variation. Release the tension and target White's knight.",
+                        "blurb": "Release the central tension so Black can develop pieces smoothly.",
                         "children": [
                           {
                             "move": "c3e4",
                             "san": "Nxe4",
-                            "human_freq": 0.98,
+                            "human_freq": 0.9278,
                             "children": [
                               {
                                 "move": "c8f5",
                                 "san": "Bf5",
-                                "blurb": "Develop with tempo, attacking the centralized Knight.",
+                                "blurb": "Classical Main Line! Develop the Bishop with tempo against the e4 Knight.",
                                 "children": [
                                   {
                                     "move": "e4g3",
                                     "san": "Ng3",
-                                    "human_freq": 0.88,
+                                    "human_freq": 0.5137,
                                     "children": [
                                       {
                                         "move": "f5g6",
                                         "san": "Bg6",
-                                        "blurb": "Retreat safely while keeping pressure on the diagonal."
+                                        "blurb": "Retreat to g6 while keeping control over the h7-b1 diagonal.",
+                                        "children": [
+                                          {
+                                            "move": "h2h4",
+                                            "san": "h4",
+                                            "human_freq": 0.1954,
+                                            "blurb": "White advances h4 to threaten trapping the g6 Bishop.",
+                                            "children": [
+                                              {
+                                                "move": "h7h6",
+                                                "san": "h6",
+                                                "blurb": "Create the h7 escape square for the Bishop before White plays h5.",
+                                                "children": [
+                                                  {
+                                                    "move": "g1f3",
+                                                    "san": "Nf3",
+                                                    "human_freq": 0.274,
+                                                    "children": [
+                                                      {
+                                                        "move": "b8d7",
+                                                        "san": "Nd7",
+                                                        "blurb": "Crucial move! Prevent Ne5 from landing without being traded off.",
+                                                        "children": [
+                                                          {
+                                                            "move": "h4h5",
+                                                            "san": "h5",
+                                                            "human_freq": 0.3418,
+                                                            "children": [
+                                                              {
+                                                                "move": "g6h7",
+                                                                "san": "Bh7",
+                                                                "blurb": "Tuck the Bishop safely on h7 where it cannot be harassed.",
+                                                                "children": [
+                                                                  {
+                                                                    "move": "f1d3",
+                                                                    "san": "Bd3",
+                                                                    "human_freq": 0.6113,
+                                                                    "children": [
+                                                                      {
+                                                                        "move": "h7d3",
+                                                                        "san": "Bxd3",
+                                                                        "blurb": "Trade off White's active light-squared Bishop and reach an ultra-solid position."
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "move": "f1c4",
+                                            "san": "Bc4",
+                                            "human_freq": 0.046,
+                                            "blurb": "White develops the Bishop to c4, eyeing f7.",
+                                            "children": [
+                                              {
+                                                "move": "e7e6",
+                                                "san": "e6",
+                                                "blurb": "Blunt the c4 Bishop and open the diagonal for the f8 Bishop.",
+                                                "children": [
+                                                  {
+                                                    "move": "g1e2",
+                                                    "san": "N1e2",
+                                                    "human_freq": 0.0961,
+                                                    "children": [
+                                                      {
+                                                        "move": "g8f6",
+                                                        "san": "Nf6",
+                                                        "blurb": "Develop the Knight and control e4 and d5.",
+                                                        "children": [
+                                                          {
+                                                            "move": "e1g1",
+                                                            "san": "O-O",
+                                                            "human_freq": 0.4842,
+                                                            "children": [
+                                                              {
+                                                                "move": "f8d6",
+                                                                "san": "Bd6",
+                                                                "blurb": "Place the dark-squared Bishop on its ideal diagonal and prepare O-O."
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "move": "e4c5",
+                                    "san": "Nc5",
+                                    "is_blunder": true,
+                                    "human_freq": 0.031,
+                                    "blurb": "Greedy club sally: White eyes the b7 pawn prematurely.",
+                                    "children": [
+                                      {
+                                        "move": "e7e6",
+                                        "san": "e6",
+                                        "blurb": "Open the f8 Bishop's diagonal and invite Nxb7.",
+                                        "children": [
+                                          {
+                                            "move": "c5b7",
+                                            "san": "Nxb7",
+                                            "human_freq": 0.6006,
+                                            "children": [
+                                              {
+                                                "move": "d8b6",
+                                                "san": "Qb6",
+                                                "blurb": "Attack the trapped b7 Knight and seize the open b-file.",
+                                                "children": [
+                                                  {
+                                                    "move": "b7c5",
+                                                    "san": "Nc5",
+                                                    "human_freq": 0.9241,
+                                                    "children": [
+                                                      {
+                                                        "move": "f8c5",
+                                                        "san": "Bxc5",
+                                                        "blurb": "Eliminate the Knight and shatter White's central d4 support."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "move": "f2f3",
+                    "san": "f3",
+                    "human_freq": 0.0392,
+                    "blurb": "Fantasy Variation: White tries to keep an intact pawn duo on d4 and e4.",
+                    "children": [
+                      {
+                        "move": "d5e4",
+                        "san": "dxe4",
+                        "blurb": "Open the center immediately to exploit White's weakened Kingside diagonal.",
+                        "children": [
+                          {
+                            "move": "f3e4",
+                            "san": "fxe4",
+                            "human_freq": 0.9513,
+                            "children": [
+                              {
+                                "move": "e7e5",
+                                "san": "e5",
+                                "blurb": "Strike back with 4...e5! Threaten Qh4+ and shatter White's pawn center.",
+                                "children": [
+                                  {
+                                    "move": "g1f3",
+                                    "san": "Nf3",
+                                    "human_freq": 0.6445,
+                                    "children": [
+                                      {
+                                        "move": "c8g4",
+                                        "san": "Bg4",
+                                        "blurb": "Pin the f3 Knight and intensify the pressure on d4.",
+                                        "children": [
+                                          {
+                                            "move": "f1c4",
+                                            "san": "Bc4",
+                                            "human_freq": 0.2947,
+                                            "children": [
+                                              {
+                                                "move": "b8d7",
+                                                "san": "Nd7",
+                                                "blurb": "Protect e5 and f7 while keeping Ngf6 ready for the next move."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "move": "d4e5",
+                                    "san": "dxe5",
+                                    "is_blunder": true,
+                                    "human_freq": 0.05,
+                                    "blurb": "Fatal Fantasy blunder! Capturing e5 exposes the e1-h4 diagonal.",
+                                    "children": [
+                                      {
+                                        "move": "d8h4",
+                                        "san": "Qh4+",
+                                        "blurb": "Deliver the devastating check on h4!",
+                                        "children": [
+                                          {
+                                            "move": "g2g3",
+                                            "san": "g3",
+                                            "human_freq": 0.5798,
+                                            "children": [
+                                              {
+                                                "move": "h4e4",
+                                                "san": "Qxe4+",
+                                                "blurb": "Fork the White King and the h1 Rook in the corner!"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "move": "g1f3",
+            "san": "Nf3",
+            "blurb": "Maia-3 Top #2 Human Move (33.7%): Over a third of human players develop 2.Nf3 before pushing d4.",
+            "children": [
+              {
+                "move": "d7d5",
+                "san": "d5",
+                "blurb": "Claim the center immediately with d5.",
+                "children": [
+                  {
+                    "move": "e4d5",
+                    "san": "exd5",
+                    "blurb": "Maia-3 Human Move (60.1%): Most club players exchange on d5 immediately.",
+                    "children": [
+                      {
+                        "move": "c6d5",
+                        "san": "cxd5",
+                        "blurb": "Recapture toward the center and open the c6 square.",
+                        "children": [
+                          {
+                            "move": "d2d4",
+                            "san": "d4",
+                            "blurb": "Maia-3 Human Move (69.6%): White transposes into the Exchange Caro-Kann.",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "blurb": "Develop the Queenside Knight and prepare Bg4."
+                              }
+                            ],
+                            "human_freq": 0.6962
+                          }
+                        ]
+                      }
+                    ],
+                    "human_freq": 0.6008
+                  },
+                  {
+                    "move": "e4e5",
+                    "san": "e5",
+                    "blurb": "Maia-3 Human Move (21.3%): White pushes e5 into an Advance structure.",
+                    "children": [
+                      {
+                        "move": "c8f5",
+                        "san": "Bf5",
+                        "blurb": "Develop the light-squared Bishop outside the pawn chain before playing e6.",
+                        "children": [
+                          {
+                            "move": "d2d4",
+                            "san": "d4",
+                            "blurb": "Maia-3 Human Move (85.6%): White reinforces e5, transposing to the Advance Variation.",
+                            "children": [
+                              {
+                                "move": "e7e6",
+                                "san": "e6",
+                                "blurb": "Solidify d5 and prepare c5 counterplay."
+                              }
+                            ],
+                            "human_freq": 0.8563
+                          }
+                        ]
+                      }
+                    ],
+                    "human_freq": 0.2125
+                  }
+                ]
+              }
+            ],
+            "human_freq": 0.3374
+          },
+          {
+            "move": "f1c4",
+            "san": "Bc4",
+            "blurb": "Maia-3 Top #3 Human Move (8.6%): The Hillbilly Attack! Very popular among club players aiming at f7.",
+            "children": [
+              {
+                "move": "d7d5",
+                "san": "d5",
+                "blurb": "Blunt the c4 Bishop and seize the center with tempo!",
+                "children": [
+                  {
+                    "move": "e4d5",
+                    "san": "exd5",
+                    "blurb": "Maia-3 Human Move (94.5%): White captures on d5 to avoid losing a pawn.",
+                    "children": [
+                      {
+                        "move": "c6d5",
+                        "san": "cxd5",
+                        "blurb": "Recapture on d5 with tempo against the c4 Bishop!",
+                        "children": [
+                          {
+                            "move": "c4b3",
+                            "san": "Bb3",
+                            "blurb": "Maia-3 Human Move (65.4%): White retreats the Bishop to b3.",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "blurb": "Develop the Knight and enjoy a full central pawn presence.",
+                                "children": [
+                                  {
+                                    "move": "d2d4",
+                                    "san": "d4",
+                                    "children": [
+                                      {
+                                        "move": "c8f5",
+                                        "san": "Bf5",
+                                        "blurb": "Activate the light-squared Bishop outside the pawn chain."
+                                      }
+                                    ],
+                                    "human_freq": 0.2318
+                                  }
+                                ]
+                              }
+                            ],
+                            "human_freq": 0.6544
+                          },
+                          {
+                            "move": "c4b5",
+                            "san": "Bb5+",
+                            "blurb": "Maia-3 Human Move (30.1%): White retreats with a check on b5.",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "blurb": "Block the check while developing the Queenside Knight."
+                              }
+                            ],
+                            "human_freq": 0.3006
+                          }
+                        ]
+                      }
+                    ],
+                    "human_freq": 0.9445
+                  }
+                ]
+              }
+            ],
+            "human_freq": 0.0857
+          },
+          {
+            "move": "b1c3",
+            "san": "Nc3",
+            "human_freq": 0.0658,
+            "blurb": "Two Knights Variation: White develops Knights before committing d4.",
+            "children": [
+              {
+                "move": "d7d5",
+                "san": "d5",
+                "blurb": "Contest the center just as in the main line.",
+                "children": [
+                  {
+                    "move": "g1f3",
+                    "san": "Nf3",
+                    "human_freq": 0.1967,
+                    "children": [
+                      {
+                        "move": "c8g4",
+                        "san": "Bg4",
+                        "blurb": "Pin the f3 Knight outside the pawn chain.",
+                        "children": [
+                          {
+                            "move": "h2h3",
+                            "san": "h3",
+                            "human_freq": 0.3065,
+                            "children": [
+                              {
+                                "move": "g4f3",
+                                "san": "Bxf3",
+                                "blurb": "Give up the Bishop pair in exchange for a rock-solid light-square structure.",
+                                "children": [
+                                  {
+                                    "move": "d1f3",
+                                    "san": "Qxf3",
+                                    "human_freq": 0.9369,
+                                    "children": [
+                                      {
+                                        "move": "e7e6",
+                                        "san": "e6",
+                                        "blurb": "Clamp down on the light squares and prepare Nf6 plus Nbd7.",
+                                        "children": [
+                                          {
+                                            "move": "d2d4",
+                                            "san": "d4",
+                                            "human_freq": 0.2587,
+                                            "is_blunder": true,
+                                            "blurb": "Premature d4 push! White leaves the d4 pawn loose after the central exchange.",
+                                            "children": [
+                                              {
+                                                "move": "d5e4",
+                                                "san": "dxe4",
+                                                "blurb": "Deflect the c3 Knight away from defending d4.",
+                                                "children": [
+                                                  {
+                                                    "move": "c3e4",
+                                                    "san": "Nxe4",
+                                                    "human_freq": 0.456,
+                                                    "children": [
+                                                      {
+                                                        "move": "d8d4",
+                                                        "san": "Qxd4",
+                                                        "blurb": "Snatch the undefended d4 central pawn cleanly."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "e4d5",
+                            "san": "exd5",
+                            "human_freq": 0.2376,
+                            "blurb": "White releases central tension before playing h3.",
+                            "children": [
+                              {
+                                "move": "c6d5",
+                                "san": "cxd5",
+                                "blurb": "Recapture toward the center and open the c6 square.",
+                                "children": [
+                                  {
+                                    "move": "f1b5",
+                                    "san": "Bb5+",
+                                    "human_freq": 0.1789,
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "blurb": "Block the check with natural piece development.",
+                                        "children": [
+                                          {
+                                            "move": "h2h3",
+                                            "san": "h3",
+                                            "human_freq": 0.2897,
+                                            "children": [
+                                              {
+                                                "move": "g4f3",
+                                                "san": "Bxf3",
+                                                "blurb": "Trade off the Knight and complete development with e6 and Nf6."
+                                              }
+                                            ]
+                                          }
+                                        ]
                                       }
                                     ]
                                   }

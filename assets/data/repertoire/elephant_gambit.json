@@ -1,0 +1,982 @@
+{
+  "id": "elephant_gambit",
+  "name": "Elephant Gambit",
+  "eco": "C40",
+  "color": "black",
+  "description": "Bold and tactical 2...d5 counter-strike seizing the initiative against 1.e4 e5 2.Nf3.",
+  "root": {
+    "move": "e2e4",
+    "san": "e4",
+    "human_freq": 0.6406,
+    "blurb": "White opens with the standard King's pawn advance.",
+    "children": [
+      {
+        "move": "e7e5",
+        "san": "e5",
+        "blurb": "Stake a claim in the center and invite 2.Nf3.",
+        "children": [
+          {
+            "move": "g1f3",
+            "san": "Nf3",
+            "human_freq": 0.6221,
+            "blurb": "White develops the Knight and attacks e5.",
+            "children": [
+              {
+                "move": "d7d5",
+                "san": "d5",
+                "blurb": "The Elephant Gambit! Strike at the center immediately instead of defending passively.",
+                "children": [
+                  {
+                    "move": "e4d5",
+                    "san": "exd5",
+                    "human_freq": 0.6027,
+                    "blurb": "White captures the d5 pawn instead of e5.",
+                    "children": [
+                      {
+                        "move": "e5e4",
+                        "san": "e4",
+                        "blurb": "Paulsen Countergambit! Push e4 with tempo to kick the f3 Knight.",
+                        "children": [
+                          {
+                            "move": "d1e2",
+                            "san": "Qe2",
+                            "human_freq": 0.356,
+                            "blurb": "Main Line: White pins the e4 pawn to the King.",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "blurb": "Defend the e4 pawn and develop the King's Knight.",
+                                "children": [
+                                  {
+                                    "move": "d2d3",
+                                    "san": "d3",
+                                    "human_freq": 0.3765,
+                                    "children": [
+                                      {
+                                        "move": "d8d5",
+                                        "san": "Qxd5",
+                                        "blurb": "Regain the d5 pawn while keeping the e4 pin alive.",
+                                        "children": [
+                                          {
+                                            "move": "b1d2",
+                                            "san": "Nbd2",
+                                            "human_freq": 0.015,
+                                            "children": [
+                                              {
+                                                "move": "f8e7",
+                                                "san": "Be7",
+                                                "blurb": "Break the e-file pin and prepare Kingside castling.",
+                                                "children": [
+                                                  {
+                                                    "move": "d3e4",
+                                                    "san": "dxe4",
+                                                    "human_freq": 0.7281,
+                                                    "children": [
+                                                      {
+                                                        "move": "d5d8",
+                                                        "san": "Qd8",
+                                                        "blurb": "Retreat the Queen safely to d8 and follow up with O-O and Nc6.",
+                                                        "children": [
+                                                          {
+                                                            "move": "g2g3",
+                                                            "san": "g3",
+                                                            "human_freq": 0.2561,
+                                                            "children": [
+                                                              {
+                                                                "move": "e8g8",
+                                                                "san": "O-O",
+                                                                "blurb": "Castle Kingside and enjoy rapid piece activity along the open d- and e-files."
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "human_freq": 0.3338,
+                                    "blurb": "White develops Nc3 to win the e4 pawn.",
+                                    "children": [
+                                      {
+                                        "move": "f8e7",
+                                        "san": "Be7",
+                                        "blurb": "Unpin the e-file so the f3 Knight is now truly threatened.",
+                                        "children": [
+                                          {
+                                            "move": "c3e4",
+                                            "san": "Nxe4",
+                                            "human_freq": 0.7173,
+                                            "children": [
+                                              {
+                                                "move": "f6d5",
+                                                "san": "Nxd5",
+                                                "blurb": "Recapture the d5 pawn with a centralized Knight and prepare O-O.",
+                                                "children": [
+                                                  {
+                                                    "move": "d2d4",
+                                                    "san": "d4",
+                                                    "human_freq": 0.1852,
+                                                    "children": [
+                                                      {
+                                                        "move": "e8g8",
+                                                        "san": "O-O",
+                                                        "blurb": "Castle Kingside and prepare Re8 to exploit White's Queen on e2."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "f3d4",
+                            "san": "Nd4",
+                            "blurb": "Maia-3 Top #2 Human Move (28.9%): Nearly 30% of humans centralize the Knight on d4.",
+                            "children": [
+                              {
+                                "move": "d8d5",
+                                "san": "Qxd5",
+                                "blurb": "Recapture the d5 pawn with tempo against the d4 Knight!",
+                                "children": [
+                                  {
+                                    "move": "c2c3",
+                                    "san": "c3",
+                                    "blurb": "Maia-3 Human Move (66.3%): Two-thirds of club players bolster the d4 Knight with c3.",
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Develop the King's Knight and support the e4 wedge.",
+                                        "children": [
+                                          {
+                                            "move": "d1b3",
+                                            "san": "Qb3",
+                                            "children": [
+                                              {
+                                                "move": "f8d6",
+                                                "san": "Bd6",
+                                                "blurb": "Develop the Bishop actively and prepare O-O."
+                                              }
+                                            ],
+                                            "human_freq": 0.0473
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "human_freq": 0.663
+                                  },
+                                  {
+                                    "move": "d4b3",
+                                    "san": "Nb3",
+                                    "blurb": "Maia-3 Human Move (22.9%): White retreats the attacked Knight to b3.",
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Develop the Knight and prepare Nc6 plus Bf5.",
+                                        "children": [
+                                          {
+                                            "move": "b1c3",
+                                            "san": "Nc3",
+                                            "children": [
+                                              {
+                                                "move": "d5e5",
+                                                "san": "Qe5",
+                                                "blurb": "Centralize the Queen on e5, maintaining a strong spatial clamp."
+                                              }
+                                            ],
+                                            "human_freq": 0.6678
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "human_freq": 0.229
+                                  }
+                                ]
+                              }
+                            ],
+                            "human_freq": 0.2893
+                          },
+                          {
+                            "move": "f3g1",
+                            "san": "Ng1",
+                            "is_blunder": true,
+                            "human_freq": 0.1865,
+                            "blurb": "Passive club retreat: White undevelops the Knight back to g1.",
+                            "children": [
+                              {
+                                "move": "d8d5",
+                                "san": "Qxd5",
+                                "blurb": "Recapture the d5 pawn with a dominant centralized Queen.",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "human_freq": 0.711,
+                                    "children": [
+                                      {
+                                        "move": "d5e5",
+                                        "san": "Qe5",
+                                        "blurb": "Keep the Queen in the center and support the e4 wedge.",
+                                        "children": [
+                                          {
+                                            "move": "f1c4",
+                                            "san": "Bc4",
+                                            "human_freq": 0.1212,
+                                            "children": [
+                                              {
+                                                "move": "g8f6",
+                                                "san": "Nf6",
+                                                "blurb": "Develop the Knight and prepare Bd6 plus O-O with a huge lead in tempo."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "f3e5",
+                            "san": "Ne5",
+                            "human_freq": 0.0957,
+                            "blurb": "White jumps the Knight forward to e5.",
+                            "children": [
+                              {
+                                "move": "d8d5",
+                                "san": "Qxd5",
+                                "blurb": "Centralize the Queen and fork the e5 Knight and e4 support.",
+                                "children": [
+                                  {
+                                    "move": "d2d4",
+                                    "san": "d4",
+                                    "human_freq": 0.4681,
+                                    "children": [
+                                      {
+                                        "move": "e4d3",
+                                        "san": "exd3",
+                                        "blurb": "Capture en passant to expose the e5 Knight again.",
+                                        "children": [
+                                          {
+                                            "move": "e5d3",
+                                            "san": "Nxd3",
+                                            "human_freq": 0.8773,
+                                            "children": [
+                                              {
+                                                "move": "g8f6",
+                                                "san": "Nf6",
+                                                "blurb": "Develop the Knight and prepare Bd6 plus O-O with a lead in development.",
+                                                "children": [
+                                                  {
+                                                    "move": "b1c3",
+                                                    "san": "Nc3",
+                                                    "human_freq": 0.6878,
+                                                    "children": [
+                                                      {
+                                                        "move": "d5f5",
+                                                        "san": "Qf5",
+                                                        "blurb": "Place the Queen on active f5 where it eyes the Kingside."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "f1b5",
+                            "san": "Bb5+",
+                            "human_freq": 0.0168,
+                            "blurb": "White throws in a check before moving the attacked f3 Knight.",
+                            "children": [
+                              {
+                                "move": "c7c6",
+                                "san": "c6",
+                                "blurb": "Block the check with tempo against the b5 Bishop.",
+                                "children": [
+                                  {
+                                    "move": "d5c6",
+                                    "san": "dxc6",
+                                    "human_freq": 0.8681,
+                                    "children": [
+                                      {
+                                        "move": "b7c6",
+                                        "san": "bxc6",
+                                        "blurb": "Recapture on c6! Both the b5 Bishop and f3 Knight are now hanging.",
+                                        "children": [
+                                          {
+                                            "move": "b5c4",
+                                            "san": "Bc4",
+                                            "human_freq": 0.0517,
+                                            "children": [
+                                              {
+                                                "move": "e4f3",
+                                                "san": "exf3",
+                                                "blurb": "Capture the f3 Knight and emerge a full piece ahead!"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "move": "f3e5",
+                    "san": "Nxe5",
+                    "human_freq": 0.1808,
+                    "blurb": "White captures the e5 pawn with the Knight.",
+                    "children": [
+                      {
+                        "move": "f8d6",
+                        "san": "Bd6",
+                        "blurb": "Develop the dark-squared Bishop with tempo, attacking the e5 Knight.",
+                        "children": [
+                          {
+                            "move": "d2d4",
+                            "san": "d4",
+                            "human_freq": 0.4042,
+                            "blurb": "Main Line: White reinforces the e5 Knight with d4.",
+                            "children": [
+                              {
+                                "move": "d5e4",
+                                "san": "dxe4",
+                                "blurb": "Recapture the e4 pawn and establish an advanced central thorn.",
+                                "children": [
+                                  {
+                                    "move": "f1c4",
+                                    "san": "Bc4",
+                                    "human_freq": 0.3025,
+                                    "blurb": "White targets the f7 square with the Bishop and Knight.",
+                                    "children": [
+                                      {
+                                        "move": "d6e5",
+                                        "san": "Bxe5",
+                                        "blurb": "Eliminate the dangerous e5 Knight before White coordinates an attack.",
+                                        "children": [
+                                          {
+                                            "move": "d1h5",
+                                            "san": "Qh5",
+                                            "human_freq": 0.1588,
+                                            "blurb": "White threatens both Qxf7# and Qxe5+.",
+                                            "children": [
+                                              {
+                                                "move": "d8e7",
+                                                "san": "Qe7",
+                                                "blurb": "Dual-purpose defense: guard f7 and protect the e5 Bishop simultaneously.",
+                                                "children": [
+                                                  {
+                                                    "move": "d4e5",
+                                                    "san": "dxe5",
+                                                    "human_freq": 0.6065,
+                                                    "children": [
+                                                      {
+                                                        "move": "b8c6",
+                                                        "san": "Nc6",
+                                                        "blurb": "Develop the Knight with tempo against White's weak e5 pawn.",
+                                                        "children": [
+                                                          {
+                                                            "move": "b1c3",
+                                                            "san": "Nc3",
+                                                            "human_freq": 0.0609,
+                                                            "children": [
+                                                              {
+                                                                "move": "c8e6",
+                                                                "san": "Be6",
+                                                                "blurb": "Challenge the active c4 Bishop and prepare Queenside castling.",
+                                                                "children": [
+                                                                  {
+                                                                    "move": "c4b5",
+                                                                    "san": "Bb5",
+                                                                    "human_freq": 0.1988,
+                                                                    "children": [
+                                                                      {
+                                                                        "move": "e6d7",
+                                                                        "san": "Bd7",
+                                                                        "blurb": "Break the pin and prepare O-O-O plus Nxe5."
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "move": "h5e5",
+                                                    "san": "Qxe5",
+                                                    "human_freq": 0.2269,
+                                                    "blurb": "White recaptures with the Queen, inviting an early Queen trade.",
+                                                    "children": [
+                                                      {
+                                                        "move": "e7e5",
+                                                        "san": "Qxe5",
+                                                        "blurb": "Trade Queens to draw White's d-pawn onto the vulnerable e5 square.",
+                                                        "children": [
+                                                          {
+                                                            "move": "d4e5",
+                                                            "san": "dxe5",
+                                                            "human_freq": 0.9973,
+                                                            "children": [
+                                                              {
+                                                                "move": "b8c6",
+                                                                "san": "Nc6",
+                                                                "blurb": "Attack the overextended e5 pawn immediately.",
+                                                                "children": [
+                                                                  {
+                                                                    "move": "b1c3",
+                                                                    "san": "Nc3",
+                                                                    "human_freq": 0.1172,
+                                                                    "children": [
+                                                                      {
+                                                                        "move": "c6e5",
+                                                                        "san": "Nxe5",
+                                                                        "blurb": "Capture the e5 pawn with tempo on the c4 Bishop."
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "human_freq": 0.2394,
+                                    "blurb": "White develops the Queenside Knight to pressure e4.",
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Reinforce the e4 spearhead and prepare Kingside castling.",
+                                        "children": [
+                                          {
+                                            "move": "c1g5",
+                                            "san": "Bg5",
+                                            "human_freq": 0.5143,
+                                            "blurb": "White pins the f6 Knight to undermine e4.",
+                                            "children": [
+                                              {
+                                                "move": "e8g8",
+                                                "san": "O-O",
+                                                "blurb": "Castle out of the pin and prepare Re8 or Nc6.",
+                                                "children": [
+                                                  {
+                                                    "move": "f1c4",
+                                                    "san": "Bc4",
+                                                    "human_freq": 0.2177,
+                                                    "children": [
+                                                      {
+                                                        "move": "b8c6",
+                                                        "san": "Nc6",
+                                                        "blurb": "Challenge the e5 Knight and increase pressure on d4.",
+                                                        "children": [
+                                                          {
+                                                            "move": "e5c6",
+                                                            "san": "Nxc6",
+                                                            "human_freq": 0.3194,
+                                                            "children": [
+                                                              {
+                                                                "move": "b7c6",
+                                                                "san": "bxc6",
+                                                                "blurb": "Recapture toward the center and open the b-file for the Rook."
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "move": "f1c4",
+                                            "san": "Bc4",
+                                            "human_freq": 0.2105,
+                                            "children": [
+                                              {
+                                                "move": "d6e5",
+                                                "san": "Bxe5",
+                                                "blurb": "Eliminate the e5 Knight before White castles.",
+                                                "children": [
+                                                  {
+                                                    "move": "d4e5",
+                                                    "san": "dxe5",
+                                                    "human_freq": 0.961,
+                                                    "children": [
+                                                      {
+                                                        "move": "d8d1",
+                                                        "san": "Qxd1+",
+                                                        "blurb": "Trade Queens with check to misplace White's piece coordination.",
+                                                        "children": [
+                                                          {
+                                                            "move": "c3d1",
+                                                            "san": "Nxd1",
+                                                            "human_freq": 0.7859,
+                                                            "children": [
+                                                              {
+                                                                "move": "f6g4",
+                                                                "san": "Ng4",
+                                                                "blurb": "Jump to g4 to win back the weak e5 pawn."
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "move": "f1e2",
+                                    "san": "Be2",
+                                    "human_freq": 0.0158,
+                                    "blurb": "Quiet development: White avoids immediate tactical complications.",
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Develop naturally and prepare O-O plus c5.",
+                                        "children": [
+                                          {
+                                            "move": "e1g1",
+                                            "san": "O-O",
+                                            "human_freq": 0.584,
+                                            "children": [
+                                              {
+                                                "move": "e8g8",
+                                                "san": "O-O",
+                                                "blurb": "Castle Kingside and prepare to undermine White's d4 support with c5.",
+                                                "children": [
+                                                  {
+                                                    "move": "b1c3",
+                                                    "san": "Nc3",
+                                                    "human_freq": 0.2536,
+                                                    "children": [
+                                                      {
+                                                        "move": "c7c5",
+                                                        "san": "c5",
+                                                        "blurb": "Strike at the d4 base to dissolve White's central structure."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "e5f3",
+                            "san": "Nf3",
+                            "blurb": "Maia-3 Top #2 Human Move (20.1%): One in five humans immediately retreats the attacked Knight back to f3.",
+                            "children": [
+                              {
+                                "move": "d5e4",
+                                "san": "dxe4",
+                                "blurb": "Capture on e4 with tempo, chasing the f3 Knight a second time!",
+                                "children": [
+                                  {
+                                    "move": "d1e2",
+                                    "san": "Qe2",
+                                    "blurb": "Maia-3 Human Move (43.7%): White pins the e4 pawn to the King.",
+                                    "children": [
+                                      {
+                                        "move": "d8e7",
+                                        "san": "Qe7",
+                                        "blurb": "Break the pin and force the f3 Knight to move.",
+                                        "children": [
+                                          {
+                                            "move": "f3d4",
+                                            "san": "Nd4",
+                                            "children": [
+                                              {
+                                                "move": "g8f6",
+                                                "san": "Nf6",
+                                                "blurb": "Develop the Knight and prepare O-O with a comfortable advantage."
+                                              }
+                                            ],
+                                            "human_freq": 0.8013
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "human_freq": 0.4371
+                                  }
+                                ]
+                              }
+                            ],
+                            "human_freq": 0.2006
+                          },
+                          {
+                            "move": "e5f7",
+                            "san": "Nxf7",
+                            "is_blunder": true,
+                            "human_freq": 0.1698,
+                            "blurb": "Unsound club sacrifice! White gives up a full piece for a one-move check.",
+                            "children": [
+                              {
+                                "move": "e8f7",
+                                "san": "Kxf7",
+                                "blurb": "Accept the Knight sacrifice! White has no follow-up attack.",
+                                "children": [
+                                  {
+                                    "move": "d1h5",
+                                    "san": "Qh5+",
+                                    "human_freq": 0.5998,
+                                    "children": [
+                                      {
+                                        "move": "f7f8",
+                                        "san": "Kf8",
+                                        "blurb": "Step the King to safety on f8 while shielding the d5 pawn.",
+                                        "children": [
+                                          {
+                                            "move": "h5d5",
+                                            "san": "Qxd5",
+                                            "human_freq": 0.687,
+                                            "children": [
+                                              {
+                                                "move": "g8f6",
+                                                "san": "Nf6",
+                                                "blurb": "Develop the Knight with tempo against White's exposed Queen.",
+                                                "children": [
+                                                  {
+                                                    "move": "d5b3",
+                                                    "san": "Qb3",
+                                                    "human_freq": 0.2687,
+                                                    "children": [
+                                                      {
+                                                        "move": "f6e4",
+                                                        "san": "Nxe4",
+                                                        "blurb": "Capture the e4 pawn with a decisive extra piece and crushing lead in development."
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "d1h5",
+                            "san": "Qh5",
+                            "is_blunder": true,
+                            "blurb": "Maia-3 Top #4 Human Move (7.6%): Aggressive club try threatening Qxf7#, ignoring the attacked e5 Knight.",
+                            "children": [
+                              {
+                                "move": "g7g6",
+                                "san": "g6",
+                                "blurb": "Blunt the Queen attack with tempo! Now both the h5 Queen and e5 Knight are under fire.",
+                                "children": [
+                                  {
+                                    "move": "e5g6",
+                                    "san": "Nxg6",
+                                    "blurb": "Maia-3 Human Move (64.2%): White tries a desperado capture on g6.",
+                                    "children": [
+                                      {
+                                        "move": "f7g6",
+                                        "san": "fxg6",
+                                        "blurb": "Capture the Knight with the f-pawn! The h8 Rook remains protected because White's Queen is attacked.",
+                                        "children": [
+                                          {
+                                            "move": "h5d5",
+                                            "san": "Qxd5",
+                                            "blurb": "Maia-3 Human Move (92.6%): White grabs the d5 pawn to salvage material.",
+                                            "children": [
+                                              {
+                                                "move": "g8f6",
+                                                "san": "Nf6",
+                                                "blurb": "Develop with tempo against the Queen, emerging a full piece ahead!"
+                                              }
+                                            ],
+                                            "human_freq": 0.9259
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "human_freq": 0.6424
+                                  }
+                                ]
+                              }
+                            ],
+                            "human_freq": 0.0755
+                          },
+                          {
+                            "move": "d2d3",
+                            "san": "d3",
+                            "human_freq": 0.005,
+                            "blurb": "Timid defense of the e5 Knight.",
+                            "children": [
+                              {
+                                "move": "d5e4",
+                                "san": "dxe4",
+                                "blurb": "Capture on e4 to force the e5 Knight to retreat.",
+                                "children": [
+                                  {
+                                    "move": "e5c4",
+                                    "san": "Nc4",
+                                    "human_freq": 0.4453,
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Develop smoothly and prepare O-O with full equality.",
+                                        "children": [
+                                          {
+                                            "move": "c4d6",
+                                            "san": "Nxd6+",
+                                            "human_freq": 0.4888,
+                                            "children": [
+                                              {
+                                                "move": "d8d6",
+                                                "san": "Qxd6",
+                                                "blurb": "Recapture with the Queen and maintain active central control."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "is_blunder": true,
+                            "human_freq": 0.005,
+                            "blurb": "Inaccurate development: White forgets the e5 Knight is attacked by Bd6.",
+                            "children": [
+                              {
+                                "move": "d6e5",
+                                "san": "Bxe5",
+                                "blurb": "Snap off the undefended Knight on e5!",
+                                "children": [
+                                  {
+                                    "move": "c3d5",
+                                    "san": "Nxd5",
+                                    "human_freq": 0.4647,
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Challenge the centralized d5 Knight immediately.",
+                                        "children": [
+                                          {
+                                            "move": "d5f6",
+                                            "san": "Nxf6+",
+                                            "human_freq": 0.3504,
+                                            "children": [
+                                              {
+                                                "move": "d8f6",
+                                                "san": "Qxf6",
+                                                "blurb": "Recapture with the Queen and enjoy a decisive lead in development."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "move": "d2d4",
+                    "san": "d4",
+                    "blurb": "Maia-3 Top #3 Human Move (5.3%): White counters in the center with 3.d4.",
+                    "children": [
+                      {
+                        "move": "d5e4",
+                        "san": "dxe4",
+                        "blurb": "Capture the e4 pawn and attack the f3 Knight.",
+                        "children": [
+                          {
+                            "move": "f3e5",
+                            "san": "Nxe5",
+                            "blurb": "Maia-3 Human Move (89.1%): White captures on e5.",
+                            "children": [
+                              {
+                                "move": "f8d6",
+                                "san": "Bd6",
+                                "blurb": "Transpose into the main line 3.Nxe5 Bd6 4.d4 dxe4 with active piece play."
+                              }
+                            ],
+                            "human_freq": 0.8913
+                          }
+                        ]
+                      }
+                    ],
+                    "human_freq": 0.053
+                  },
+                  {
+                    "move": "b1c3",
+                    "san": "Nc3",
+                    "human_freq": 0.0504,
+                    "blurb": "White defends e4 with the Knight instead of capturing.",
+                    "children": [
+                      {
+                        "move": "d5d4",
+                        "san": "d4",
+                        "blurb": "Advance d4 with tempo to kick the c3 Knight.",
+                        "children": [
+                          {
+                            "move": "c3e2",
+                            "san": "Ne2",
+                            "human_freq": 0.5017,
+                            "children": [
+                              {
+                                "move": "f8d6",
+                                "san": "Bd6",
+                                "blurb": "Protect the e5 pawn and clamp down on the f4 square.",
+                                "children": [
+                                  {
+                                    "move": "e2g3",
+                                    "san": "Ng3",
+                                    "human_freq": 0.253,
+                                    "children": [
+                                      {
+                                        "move": "g8e7",
+                                        "san": "Ne7",
+                                        "blurb": "Develop the Knight to e7 to keep the f-pawn free for counterplay."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "move": "d2d3",
+                    "san": "d3",
+                    "human_freq": 0.0488,
+                    "blurb": "Passive response: White supports e4 instead of accepting the gambit.",
+                    "children": [
+                      {
+                        "move": "d5e4",
+                        "san": "dxe4",
+                        "blurb": "Open the d-file immediately and challenge White's Knight.",
+                        "children": [
+                          {
+                            "move": "f3e5",
+                            "san": "Nxe5",
+                            "human_freq": 0.2542,
+                            "children": [
+                              {
+                                "move": "f8d6",
+                                "san": "Bd6",
+                                "blurb": "Develop the Bishop with tempo against the e5 Knight.",
+                                "children": [
+                                  {
+                                    "move": "e5c4",
+                                    "san": "Nc4",
+                                    "human_freq": 0.5169,
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Complete Kingside development with effortless equality."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

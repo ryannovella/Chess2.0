@@ -1,0 +1,733 @@
+{
+  "id": "london_gambit",
+  "name": "London Gambit",
+  "eco": "D00",
+  "color": "white",
+  "description": "Aggressive Jobava-London (3.Nc3), b7-raid (3.c4), and Morris Gambit (3.e4!) weapons in the 2.Bf4 system.",
+  "root": {
+    "move": "d2d4",
+    "san": "d4",
+    "blurb": "Open with the Queen's pawn.",
+    "children": [
+      {
+        "move": "d7d5",
+        "san": "d5",
+        "children": [
+          {
+            "move": "c1f4",
+            "san": "Bf4",
+            "children": [
+              {
+                "move": "g8f6",
+                "san": "Nf6",
+                "children": [
+                  {
+                    "move": "b1c3",
+                    "san": "Nc3",
+                    "children": [
+                      {
+                        "move": "e7e6",
+                        "san": "e6",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "b8a6",
+                                "san": "Na6",
+                                "children": [
+                                  {
+                                    "move": "e2e3",
+                                    "san": "e3",
+                                    "children": [
+                                      {
+                                        "move": "c7c6",
+                                        "san": "c6",
+                                        "children": [
+                                          {
+                                            "move": "b5c3",
+                                            "san": "Nc3",
+                                            "blurb": "Retreat to c3; now Black's a6 Knight is stranded on the edge of the board!"
+                                          }
+                                        ],
+                                        "blurb": "Black kicks the b5 Knight.",
+                                        "human_freq": 0.6279
+                                      }
+                                    ],
+                                    "blurb": "Solidify d4 and prepare c3 plus Nf3 while Black's Knight is misplaced on a6."
+                                  }
+                                ],
+                                "blurb": "Black defends c7 with Na6 on the rim.",
+                                "human_freq": 0.4085
+                              }
+                            ],
+                            "blurb": "Jump into b5 and threaten Nxc7+ forking King and Rook!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #1 Human Move (29.8%): Black plays e6, leaving c7 vulnerable to Nb5.",
+                        "human_freq": 0.2978
+                      },
+                      {
+                        "move": "b8c6",
+                        "san": "Nc6",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "e7e5",
+                                "san": "e5",
+                                "children": [
+                                  {
+                                    "move": "d4e5",
+                                    "san": "dxe5",
+                                    "children": [
+                                      {
+                                        "move": "f6h5",
+                                        "san": "Nh5",
+                                        "children": [
+                                          {
+                                            "move": "e2e3",
+                                            "san": "e3",
+                                            "blurb": "Protect the f4 Bishop via the Queen and threaten Qxh5 or e6!"
+                                          }
+                                        ],
+                                        "blurb": "Black attacks the f4 Bishop.",
+                                        "human_freq": 0.4178
+                                      }
+                                    ],
+                                    "blurb": "Capture the e5 pawn with tempo on the f6 Knight!"
+                                  }
+                                ],
+                                "blurb": "Black tries to counter-sacrifice with e5.",
+                                "human_freq": 0.8126
+                              }
+                            ],
+                            "blurb": "Attack c7 immediately! Black has no good way to defend c7 without concessions."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #2 Human Move (19.9%): Black develops Nc6, allowing a deadly Nb5!",
+                        "human_freq": 0.1985
+                      },
+                      {
+                        "move": "c8f5",
+                        "san": "Bf5",
+                        "children": [
+                          {
+                            "move": "f2f3",
+                            "san": "f3",
+                            "children": [
+                              {
+                                "move": "e7e6",
+                                "san": "e6",
+                                "children": [
+                                  {
+                                    "move": "g2g4",
+                                    "san": "g4",
+                                    "children": [
+                                      {
+                                        "move": "f5g6",
+                                        "san": "Bg6",
+                                        "children": [
+                                          {
+                                            "move": "h2h4",
+                                            "san": "h4",
+                                            "blurb": "Threaten h5 trapping the g6 Bishop!"
+                                          }
+                                        ],
+                                        "blurb": "Black retreats to g6.",
+                                        "human_freq": 0.9366
+                                      }
+                                    ],
+                                    "blurb": "Launch the bayonet attack against the f5 Bishop!"
+                                  }
+                                ],
+                                "blurb": "Black plays e6.",
+                                "human_freq": 0.6405
+                              }
+                            ],
+                            "blurb": "Prepare e4 and g4 to trap or harass the f5 Bishop!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #3 Human Move (18.1%): Symmetrical Bf5.",
+                        "human_freq": 0.1811
+                      },
+                      {
+                        "move": "a7a6",
+                        "san": "a6",
+                        "children": [
+                          {
+                            "move": "e2e3",
+                            "san": "e3",
+                            "children": [
+                              {
+                                "move": "e7e6",
+                                "san": "e6",
+                                "children": [
+                                  {
+                                    "move": "g2g4",
+                                    "san": "g4",
+                                    "blurb": "Launch a direct Kingside pawn storm!"
+                                  }
+                                ],
+                                "blurb": "Black plays e6.",
+                                "human_freq": 0.2564
+                              }
+                            ],
+                            "blurb": "Open the f1 Bishop and prepare Nf3-Ne5."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #4 Human Move (10.1%): Black prevents Nb5 with a6.",
+                        "human_freq": 0.1011
+                      },
+                      {
+                        "move": "c7c6",
+                        "san": "c6",
+                        "children": [
+                          {
+                            "move": "e2e3",
+                            "san": "e3",
+                            "children": [
+                              {
+                                "move": "c8f5",
+                                "san": "Bf5",
+                                "children": [
+                                  {
+                                    "move": "f1d3",
+                                    "san": "Bd3",
+                                    "children": [
+                                      {
+                                        "move": "f5d3",
+                                        "san": "Bxd3",
+                                        "children": [
+                                          {
+                                            "move": "d1d3",
+                                            "san": "Qxd3",
+                                            "blurb": "Recapture with the Queen and prepare Nge2 plus O-O-O."
+                                          }
+                                        ],
+                                        "blurb": "Black trades on d3.",
+                                        "human_freq": 0.4621
+                                      }
+                                    ],
+                                    "blurb": "Challenge the f5 Bishop."
+                                  }
+                                ],
+                                "blurb": "Black develops Bf5.",
+                                "human_freq": 0.3609
+                              }
+                            ],
+                            "blurb": "Play e3 and prepare Bd3 to trade off Black's light-squared Bishop."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #5 Human Move (8.5%): Black guards b5 and c7 with c6.",
+                        "human_freq": 0.0846
+                      }
+                    ],
+                    "blurb": "The Jobava-London Attack! Threaten Nb5 targeting the c7 square."
+                  }
+                ],
+                "blurb": "Maia-3 Top #1 Human Move (26.1%): Black develops the King's Knight.",
+                "human_freq": 0.2609
+              },
+              {
+                "move": "b8c6",
+                "san": "Nc6",
+                "children": [
+                  {
+                    "move": "b1c3",
+                    "san": "Nc3",
+                    "children": [
+                      {
+                        "move": "g8f6",
+                        "san": "Nf6",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "e7e5",
+                                "san": "e5",
+                                "children": [
+                                  {
+                                    "move": "d4e5",
+                                    "san": "dxe5",
+                                    "blurb": "Capture on e5 and attack the f6 Knight with a winning position."
+                                  }
+                                ],
+                                "blurb": "Black desperately pushes e5.",
+                                "human_freq": 0.8134
+                              }
+                            ],
+                            "blurb": "Infiltrate on b5! The c7 pawn cannot be defended by a pawn or Bishop."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #1 Human Move (34.4%): Black develops Nf6.",
+                        "human_freq": 0.3615
+                      },
+                      {
+                        "move": "c8f5",
+                        "san": "Bf5",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "a8c8",
+                                "san": "Rc8",
+                                "children": [
+                                  {
+                                    "move": "e2e3",
+                                    "san": "e3",
+                                    "blurb": "Consolidate with e3 and prepare c4 to exploit Black's misplaced Rook."
+                                  }
+                                ],
+                                "blurb": "Black awkwardly defends c7 with Rc8.",
+                                "human_freq": 0.3471
+                              }
+                            ],
+                            "blurb": "Jump to b5 and force Black to move the Rook to c8!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #2 Human Move (31.6%): Black develops Bf5.",
+                        "human_freq": 0.1927
+                      },
+                      {
+                        "move": "e7e6",
+                        "san": "e6",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "f8d6",
+                                "san": "Bd6",
+                                "children": [
+                                  {
+                                    "move": "b5d6",
+                                    "san": "Nxd6+",
+                                    "children": [
+                                      {
+                                        "move": "c7d6",
+                                        "san": "cxd6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "blurb": "Develop Nf3 with the Bishop pair and superior pawn structure."
+                                          }
+                                        ],
+                                        "blurb": "Black recaptures.",
+                                        "human_freq": 0.9947
+                                      }
+                                    ],
+                                    "blurb": "Eliminate Black's dark-squared Bishop and shatter the pawn structure!"
+                                  }
+                                ],
+                                "blurb": "Black blocks the c7 attack with Bd6.",
+                                "human_freq": 0.8124
+                              }
+                            ],
+                            "blurb": "Attack c7 and force Bd6."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #3 Human Move (10.8%): Black plays e6.",
+                        "human_freq": 0.1602
+                      }
+                    ],
+                    "blurb": "Develop Nc3 and threaten Nb5 attacking the undefended c7 square!"
+                  }
+                ],
+                "blurb": "Maia-3 Top #2 Human Move (25.0%): Club players love developing 2...Nc6, blocking their c-pawn!",
+                "is_blunder": true,
+                "human_freq": 0.25
+              },
+              {
+                "move": "e7e6",
+                "san": "e6",
+                "children": [
+                  {
+                    "move": "e2e3",
+                    "san": "e3",
+                    "children": [
+                      {
+                        "move": "f8d6",
+                        "san": "Bd6",
+                        "children": [
+                          {
+                            "move": "f4g3",
+                            "san": "Bg3",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "b1d2",
+                                    "san": "Nd2",
+                                    "children": [
+                                      {
+                                        "move": "e8g8",
+                                        "san": "O-O",
+                                        "children": [
+                                          {
+                                            "move": "f1d3",
+                                            "san": "Bd3",
+                                            "blurb": "Establish the classic London battery aiming at h7."
+                                          }
+                                        ],
+                                        "blurb": "Black castles.",
+                                        "human_freq": 0.4153
+                                      }
+                                    ],
+                                    "blurb": "Develop Nd2 to control e4 and c4."
+                                  }
+                                ],
+                                "blurb": "Black develops Nf6.",
+                                "human_freq": 0.3583
+                              }
+                            ],
+                            "blurb": "Tuck the Bishop back to g3! If Bxg3, hxg3 opens the h-file for White's Rook."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #1 Human Move (34.0%): Black challenges the f4 Bishop immediately.",
+                        "human_freq": 0.3396
+                      },
+                      {
+                        "move": "g8f6",
+                        "san": "Nf6",
+                        "children": [
+                          {
+                            "move": "b1d2",
+                            "san": "Nd2",
+                            "children": [
+                              {
+                                "move": "c7c5",
+                                "san": "c5",
+                                "children": [
+                                  {
+                                    "move": "c2c3",
+                                    "san": "c3",
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Ngf3",
+                                            "blurb": "Plant the Knight on f3 and prepare Bd3 plus Ne5."
+                                          }
+                                        ],
+                                        "blurb": "Black develops Nc6.",
+                                        "human_freq": 0.488
+                                      }
+                                    ],
+                                    "blurb": "Complete the rock-solid d4-c3-e3 London triangle."
+                                  }
+                                ],
+                                "blurb": "Black strikes at d4.",
+                                "human_freq": 0.1891
+                              }
+                            ],
+                            "blurb": "Develop Nd2 to prevent Ne4."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #2 Human Move (24.6%): Black develops Nf6.",
+                        "human_freq": 0.246
+                      },
+                      {
+                        "move": "c7c5",
+                        "san": "c5",
+                        "children": [
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "children": [
+                                  {
+                                    "move": "c3b5",
+                                    "san": "Nb5",
+                                    "blurb": "Threaten Nc7+ forking King and Rook!"
+                                  }
+                                ],
+                                "blurb": "Black develops Nc6.",
+                                "human_freq": 0.3084
+                              }
+                            ],
+                            "blurb": "Switch to the Jobava-London Nc3-Nb5 plan now that c5 left d6 and c7 weak!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #3 Human Move (14.6%): Immediate c5 challenge.",
+                        "human_freq": 0.1464
+                      }
+                    ],
+                    "blurb": "Build the London pyramid and open the f1 Bishop."
+                  }
+                ],
+                "blurb": "Maia-3 Top #3 Human Move (17.9%): Solid e6 setup.",
+                "human_freq": 0.1785
+              },
+              {
+                "move": "c8f5",
+                "san": "Bf5",
+                "children": [
+                  {
+                    "move": "c2c4",
+                    "san": "c4",
+                    "children": [
+                      {
+                        "move": "e7e6",
+                        "san": "e6",
+                        "children": [
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "d1b3",
+                                    "san": "Qb3",
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "c4c5",
+                                            "san": "c5",
+                                            "blurb": "Lock the Queenside and trap Black's b7 pawn under fatal pressure!"
+                                          }
+                                        ],
+                                        "blurb": "Black counter-attacks d4.",
+                                        "human_freq": 0.0978
+                                      }
+                                    ],
+                                    "blurb": "Double attack on b7 and d5!"
+                                  }
+                                ],
+                                "blurb": "Black develops Nf6.",
+                                "human_freq": 0.2703
+                              }
+                            ],
+                            "blurb": "Increase pressure on d5 and prepare Qb3."
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #1 Human Move (39.8%): Black supports d5 with e6.",
+                        "human_freq": 0.3983
+                      },
+                      {
+                        "move": "d5c4",
+                        "san": "dxc4",
+                        "children": [
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "f2f3",
+                                    "san": "f3",
+                                    "children": [
+                                      {
+                                        "move": "e7e6",
+                                        "san": "e6",
+                                        "children": [
+                                          {
+                                            "move": "e2e4",
+                                            "san": "e4",
+                                            "blurb": "Overrun the center with tempo against the f5 Bishop!"
+                                          }
+                                        ],
+                                        "blurb": "Black plays e6.",
+                                        "human_freq": 0.5234
+                                      }
+                                    ],
+                                    "blurb": "Support e4 and prevent Ne4."
+                                  }
+                                ],
+                                "blurb": "Black develops Nf6.",
+                                "human_freq": 0.1305
+                              }
+                            ],
+                            "blurb": "Prepare e4 to seize the entire center with tempo on the f5 Bishop!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #2 Human Move (22.1%): Black accepts the c4 gambit pawn.",
+                        "human_freq": 0.2206
+                      },
+                      {
+                        "move": "c7c6",
+                        "san": "c6",
+                        "children": [
+                          {
+                            "move": "d1b3",
+                            "san": "Qb3",
+                            "children": [
+                              {
+                                "move": "d8b6",
+                                "san": "Qb6",
+                                "children": [
+                                  {
+                                    "move": "c4c5",
+                                    "san": "c5",
+                                    "children": [
+                                      {
+                                        "move": "b6b3",
+                                        "san": "Qxb3",
+                                        "children": [
+                                          {
+                                            "move": "a2b3",
+                                            "san": "axb3",
+                                            "blurb": "Recapture with the a-pawn, opening the a1 Rook against a7!"
+                                          }
+                                        ],
+                                        "blurb": "Black trades Queens.",
+                                        "human_freq": 0.8821
+                                      }
+                                    ],
+                                    "blurb": "Push c5 to force the Queen trade on b6, opening the a-file for White's Rook!"
+                                  }
+                                ],
+                                "blurb": "Black offers a Queen trade on b6.",
+                                "human_freq": 0.364
+                              }
+                            ],
+                            "blurb": "Attack b7 immediately while Black's c8 Bishop is away on f5!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #3 Human Move (14.8%): Black defends d5 with c6.",
+                        "human_freq": 0.1475
+                      }
+                    ],
+                    "blurb": "The London c4 Gambit! Strike at d5 and prepare Qb3 targeting b7."
+                  }
+                ],
+                "blurb": "Maia-3 Top #4 Human Move (14.7%): Early Bf5 leaving the b7 pawn unprotected!",
+                "human_freq": 0.1468
+              },
+              {
+                "move": "c7c5",
+                "san": "c5",
+                "children": [
+                  {
+                    "move": "e2e4",
+                    "san": "e4",
+                    "children": [
+                      {
+                        "move": "d5e4",
+                        "san": "dxe4",
+                        "children": [
+                          {
+                            "move": "d4d5",
+                            "san": "d5",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "children": [
+                                      {
+                                        "move": "a7a6",
+                                        "san": "a6",
+                                        "children": [
+                                          {
+                                            "move": "g1e2",
+                                            "san": "Nge2",
+                                            "blurb": "Prepare Ng3 to recapture the e4 pawn with a dominant space advantage."
+                                          }
+                                        ],
+                                        "blurb": "Black prevents Bb5+.",
+                                        "human_freq": 0.1092
+                                      }
+                                    ],
+                                    "blurb": "Develop Nc3 and target the weak e4 pawn."
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #1 Human Move (67.8%): Black develops Nf6.",
+                                "human_freq": 0.6775
+                              }
+                            ],
+                            "blurb": "Advance d5 to drive a wedge into Black's position and prevent Nc6!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #1 Human Move (47.3%): Black captures the e4 gambit pawn.",
+                        "human_freq": 0.4729
+                      },
+                      {
+                        "move": "c5d4",
+                        "san": "cxd4",
+                        "children": [
+                          {
+                            "move": "d1d4",
+                            "san": "Qxd4",
+                            "children": [
+                              {
+                                "move": "d5e4",
+                                "san": "dxe4",
+                                "children": [
+                                  {
+                                    "move": "d4d8",
+                                    "san": "Qxd8+",
+                                    "children": [
+                                      {
+                                        "move": "e8d8",
+                                        "san": "Kxd8",
+                                        "children": [
+                                          {
+                                            "move": "b1c3",
+                                            "san": "Nc3",
+                                            "blurb": "Develop Nc3 and prepare O-O-O with a deadly lead in development."
+                                          }
+                                        ],
+                                        "blurb": "Black's King is forced to recapture and loses castling rights.",
+                                        "human_freq": 1.0
+                                      }
+                                    ],
+                                    "blurb": "Trade Queens to displace Black's King to d8!"
+                                  }
+                                ],
+                                "blurb": "Black captures on e4.",
+                                "human_freq": 0.1364
+                              }
+                            ],
+                            "blurb": "Recapture with the Queen in the center!"
+                          }
+                        ],
+                        "blurb": "Maia-3 Top #2 Human Move (16.1%): Black captures on d4.",
+                        "human_freq": 0.1613
+                      }
+                    ],
+                    "blurb": "The London (Morris) Gambit! Sacrifice the e4/d4 pawn to blow open the center."
+                  }
+                ],
+                "blurb": "Maia-3 Top #5 Human Move (5.2%): Black challenges d4 immediately with c5.",
+                "human_freq": 0.0522
+              }
+            ],
+            "blurb": "The London System! Develop the dark-squared Bishop outside the pawn chain."
+          }
+        ],
+        "blurb": "Maia-3 Top #1 Human Move (47.5%): Black occupies d5.",
+        "human_freq": 0.4751
+      }
+    ]
+  }
+}

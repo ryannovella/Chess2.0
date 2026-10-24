@@ -142,11 +142,17 @@ func _request_stockfish_move(fen: String, elo: int) -> void:
 	is_flushing_for_ai = true
 	client.send_command("stop")
 	client.send_command("isready")
+	_arm_ai_watchdog(ai_request_id, 6.0)
 
 func request_ai_move(fen: String, elo: int) -> void:
 	# Batalkan analisa latar belakang jika sedang berjalan
-	is_analyzing = false
-	is_flushing_for_analysis = false
+	if is_analyzing or is_flushing_for_analysis:
+		is_analyzing = false
+		is_flushing_for_analysis = false
+		multipv_lines.clear()
+		if client != null:
+			client.start_new_search(ChessTypes.PieceColor.WHITE)
+			client.send_command("stop")
 	analysis_progress_updated.emit(0, target_analysis_depth, false)
 
 	ai_request_id += 1
@@ -166,6 +172,7 @@ func request_ai_move(fen: String, elo: int) -> void:
 		configure_maia_elo(elo)
 		maia_client.send_command(build_position_command(fen))
 		maia_client.send_command("go")
+		_arm_ai_watchdog(ai_request_id, 8.0)
 		return
 
 	_request_stockfish_move(fen, elo)
@@ -232,8 +239,11 @@ func analyze_position(fen: String, depth: int = -1) -> void:
 	if is_analyzing or is_flushing_for_analysis:
 		is_analyzing = false
 		is_flushing_for_analysis = true
-		client.send_command("stop")
-		client.send_command("isready")
+		multipv_lines.clear()
+		if client != null:
+			client.start_new_search(ChessTypes.PieceColor.WHITE)
+			client.send_command("stop")
+			client.send_command("isready")
 		return
 
 	_start_analysis_search(fen, target_d)
@@ -280,12 +290,15 @@ func stop_analysis() -> void:
 	is_waiting_for_ai = false
 	is_flushing_for_ai = false
 	is_flushing_for_analysis = false
+	multipv_lines.clear()
 	if is_analyzing:
 		is_analyzing = false
 		analysis_progress_updated.emit(0, target_analysis_depth, false)
 	if client != null:
+		client.start_new_search(ChessTypes.PieceColor.WHITE)
 		client.send_command("stop")
 	if maia_client != null:
+		maia_client.start_new_search(ChessTypes.PieceColor.WHITE)
 		maia_client.send_command("stop")
 
 func _build_engine_arrows() -> Array[Dictionary]:
@@ -345,6 +358,53 @@ func _on_evaluation_updated(eval_dict: Dictionary) -> void:
 		_last_arrow_emit = now
 		arrows_updated.emit(arrows)
 
+func _arm_ai_watchdog(req_id: int, timeout_sec: float) -> void:
+	var tree = get_tree()
+	if tree == null:
+		return
+	var timer = tree.create_timer(timeout_sec, false)
+	timer.timeout.connect(func(): _on_ai_watchdog_timeout(req_id))
+
+func _on_ai_watchdog_timeout(req_id: int) -> void:
+	if req_id != ai_request_id:
+		return
+	if not is_waiting_for_ai and not is_flushing_for_ai:
+		return
+
+	push_warning("EngineService: AI move request %d timed out (stuck). Initiating fallback." % req_id)
+
+	# Jika sebelumnya menunggu Maia, fallback ke Stockfish
+	if maia_client != null and is_waiting_for_ai and client != null and client.is_running:
+		push_warning("EngineService: Falling back from Maia to Stockfish for: %s" % pending_ai_fen)
+		is_waiting_for_ai = false
+		_request_stockfish_move(pending_ai_fen, pending_ai_elo)
+		_arm_ai_watchdog(req_id, 4.0)
+		return
+
+	# Jika Stockfish juga timeout atau flushing macet, paksa langkah legal darurat
+	is_waiting_for_ai = false
+	is_flushing_for_ai = false
+
+	if pending_ai_fen.is_empty():
+		ai_move_ready.emit("")
+		return
+
+	var state = ChessBoardState.new(pending_ai_fen)
+	var legal = ChessMoveGenerator.get_legal_moves(state)
+	if legal.is_empty():
+		push_warning("EngineService: No legal moves in timeout position (terminal).")
+		ai_move_ready.emit("")
+		return
+
+	var chosen: ChessMove = legal[0]
+	for m in legal:
+		if state.get_piece(m.to_sq) != null:
+			chosen = m
+			break
+	var chosen_uci = chosen.to_uci()
+	push_warning("EngineService: Watchdog emergency fallback move played: %s" % chosen_uci)
+	ai_move_ready.emit(chosen_uci)
+
 ## Tunda langkah AI sesuai jam berpikir manusia, lalu lepaskan ke papan.
 func _finish_ai_move(chosen_move: String) -> void:
 	var req_id = ai_request_id
@@ -380,6 +440,12 @@ func _on_best_move_received(move_uci: String) -> void:
 	if is_waiting_for_ai:
 		if move_uci.is_empty():
 			is_waiting_for_ai = false
+			var state = ChessBoardState.new(pending_ai_fen)
+			var legal = ChessMoveGenerator.get_legal_moves(state)
+			if not legal.is_empty():
+				await _finish_ai_move(legal[0].to_uci())
+			else:
+				ai_move_ready.emit("")
 			return
 		await _finish_ai_move(move_uci)
 	elif is_analyzing:

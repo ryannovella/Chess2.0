@@ -1,0 +1,544 @@
+{
+  "id": "halloween_gambit",
+  "name": "Halloween Gambit",
+  "eco": "C47",
+  "color": "white",
+  "description": "Shocking 4.Nxe5!? Knight sacrifice in the Four Knights Game, rolling Black's Knights back to the first rank.",
+  "root": {
+    "move": "e2e4",
+    "san": "e4",
+    "blurb": "Open with 1.e4.",
+    "children": [
+      {
+        "move": "e7e5",
+        "san": "e5",
+        "children": [
+          {
+            "move": "g1f3",
+            "san": "Nf3",
+            "children": [
+              {
+                "move": "b8c6",
+                "san": "Nc6",
+                "children": [
+                  {
+                    "move": "b1c3",
+                    "san": "Nc3",
+                    "children": [
+                      {
+                        "move": "g8f6",
+                        "san": "Nf6",
+                        "children": [
+                          {
+                            "move": "f3e5",
+                            "san": "Nxe5",
+                            "children": [
+                              {
+                                "move": "c6e5",
+                                "san": "Nxe5",
+                                "children": [
+                                  {
+                                    "move": "d2d4",
+                                    "san": "d4",
+                                    "children": [
+                                      {
+                                        "move": "e5c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "d4d5",
+                                            "san": "d5",
+                                            "children": [
+                                              {
+                                                "move": "c6e5",
+                                                "san": "Ne5",
+                                                "children": [
+                                                  {
+                                                    "move": "f2f4",
+                                                    "san": "f4",
+                                                    "children": [
+                                                      {
+                                                        "move": "e5g6",
+                                                        "san": "Ng6",
+                                                        "children": [
+                                                          {
+                                                            "move": "e4e5",
+                                                            "san": "e5",
+                                                            "children": [
+                                                              {
+                                                                "move": "f6g8",
+                                                                "san": "Ng8",
+                                                                "children": [
+                                                                  {
+                                                                    "move": "d5d6",
+                                                                    "san": "d6",
+                                                                    "blurb": "Drive a paralyzing wedge into d6, locking Black's entire Queenside in the box!",
+                                                                    "children": [
+                                                                      {
+                                                                        "move": "c7d6",
+                                                                        "san": "cxd6",
+                                                                        "children": [
+                                                                          {
+                                                                            "move": "e5d6",
+                                                                            "san": "exd6",
+                                                                            "children": [
+                                                                              {
+                                                                                "move": "d8f6",
+                                                                                "san": "Qf6",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "move": "c3b5",
+                                                                                    "san": "Nb5",
+                                                                                    "blurb": "Threaten Nc7+ forking King and Rook!"
+                                                                                  }
+                                                                                ],
+                                                                                "blurb": "Black brings the Queen out.",
+                                                                                "human_freq": 0.2163
+                                                                              }
+                                                                            ],
+                                                                            "blurb": "Recapture on d6! Black's f8 Bishop and d8 Queen remain completely entombed."
+                                                                          }
+                                                                        ],
+                                                                        "blurb": "Black tries to trade off the d6 thorn.",
+                                                                        "human_freq": 0.8714
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ],
+                                                                "blurb": "Black is forced to undevelop the Knight to g8.",
+                                                                "human_freq": 0.7591
+                                                              }
+                                                            ],
+                                                            "blurb": "Now chase the f6 Knight all the way back to g8!"
+                                                          }
+                                                        ],
+                                                        "blurb": "Black retreats to g6.",
+                                                        "human_freq": 0.7832
+                                                      },
+                                                      {
+                                                        "move": "e5g4",
+                                                        "san": "Neg4",
+                                                        "children": [
+                                                          {
+                                                            "move": "e4e5",
+                                                            "san": "e5",
+                                                            "children": [
+                                                              {
+                                                                "move": "f8c5",
+                                                                "san": "Bc5",
+                                                                "children": [
+                                                                  {
+                                                                    "move": "e5f6",
+                                                                    "san": "exf6",
+                                                                    "blurb": "Capture the f6 Knight with a winning material and spatial advantage!"
+                                                                  }
+                                                                ],
+                                                                "blurb": "Black counter-attacks f2.",
+                                                                "human_freq": 0.1175
+                                                              }
+                                                            ],
+                                                            "blurb": "Chase the f6 Knight while keeping the g4 Knight trapped!"
+                                                          }
+                                                        ],
+                                                        "blurb": "Black jumps to g4 instead of g6.",
+                                                        "human_freq": 0.1486
+                                                      }
+                                                    ],
+                                                    "blurb": "Kick the e5 Knight a third time!"
+                                                  }
+                                                ],
+                                                "blurb": "Black jumps back to e5.",
+                                                "human_freq": 0.5837
+                                              },
+                                              {
+                                                "move": "c6e7",
+                                                "san": "Ne7",
+                                                "children": [
+                                                  {
+                                                    "move": "e4e5",
+                                                    "san": "e5",
+                                                    "children": [
+                                                      {
+                                                        "move": "f6g8",
+                                                        "san": "Nfg8",
+                                                        "children": [
+                                                          {
+                                                            "move": "d5d6",
+                                                            "san": "d6",
+                                                            "blurb": "Suffocate Black's position with d6!"
+                                                          }
+                                                        ],
+                                                        "blurb": "Black retreats to g8.",
+                                                        "human_freq": 0.8075
+                                                      }
+                                                    ],
+                                                    "blurb": "Kick the f6 Knight!"
+                                                  }
+                                                ],
+                                                "blurb": "Black retreats the Knight to e7, blocking the f8 Bishop and d8 Queen.",
+                                                "human_freq": 0.1675
+                                              },
+                                              {
+                                                "move": "c6b8",
+                                                "san": "Nb8",
+                                                "children": [
+                                                  {
+                                                    "move": "e4e5",
+                                                    "san": "e5",
+                                                    "children": [
+                                                      {
+                                                        "move": "f6g8",
+                                                        "san": "Ng8",
+                                                        "children": [
+                                                          {
+                                                            "move": "c1f4",
+                                                            "san": "Bf4",
+                                                            "blurb": "Develop Bf4 and prepare Bc4 plus Qd2-O-O-O."
+                                                          }
+                                                        ],
+                                                        "blurb": "Both Black Knights are back on their starting squares at move 7!",
+                                                        "human_freq": 0.7677
+                                                      }
+                                                    ],
+                                                    "blurb": "Kick the f6 Knight back to g8 as well!"
+                                                  }
+                                                ],
+                                                "blurb": "Black undevelops the Knight all the way back to b8.",
+                                                "human_freq": 0.1129
+                                              }
+                                            ],
+                                            "blurb": "Chase the c6 Knight a second time!"
+                                          }
+                                        ],
+                                        "blurb": "Maia-3 Top #1 Human Move (48.1%): Nearly half of human players retreat to c6.",
+                                        "human_freq": 0.4811
+                                      },
+                                      {
+                                        "move": "e5g6",
+                                        "san": "Ng6",
+                                        "children": [
+                                          {
+                                            "move": "e4e5",
+                                            "san": "e5",
+                                            "children": [
+                                              {
+                                                "move": "f6g8",
+                                                "san": "Ng8",
+                                                "children": [
+                                                  {
+                                                    "move": "f1c4",
+                                                    "san": "Bc4",
+                                                    "children": [
+                                                      {
+                                                        "move": "d7d6",
+                                                        "san": "d6",
+                                                        "children": [
+                                                          {
+                                                            "move": "d1f3",
+                                                            "san": "Qf3",
+                                                            "blurb": "Threaten Qxf7# and force passive concessions!"
+                                                          }
+                                                        ],
+                                                        "blurb": "Black tries to break out with d6.",
+                                                        "human_freq": 0.338
+                                                      }
+                                                    ],
+                                                    "blurb": "Develop Bc4 targeting f7."
+                                                  }
+                                                ],
+                                                "blurb": "Maia-3 Top #1 Human Move: Black retreats the f6 Knight to g8 because Nh5 loses the Knight to Qxh5.",
+                                                "human_freq": 0.7665
+                                              },
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4",
+                                                "children": [
+                                                  {
+                                                    "move": "e5f6",
+                                                    "san": "exf6",
+                                                    "children": [
+                                                      {
+                                                        "move": "d8f6",
+                                                        "san": "Qxf6",
+                                                        "children": [
+                                                          {
+                                                            "move": "f1e2",
+                                                            "san": "Be2",
+                                                            "blurb": "Unpin the c3 Knight and prepare O-O with a strong central presence."
+                                                          }
+                                                        ],
+                                                        "blurb": "Black recaptures with the Queen.",
+                                                        "human_freq": 0.6911
+                                                      }
+                                                    ],
+                                                    "blurb": "Regain the sacrificed piece immediately!"
+                                                  }
+                                                ],
+                                                "blurb": "Maia-3 Top #2 Human Move: Counter-attacking countergambit 6...Bb4.",
+                                                "human_freq": 0.0234
+                                              },
+                                              {
+                                                "move": "f6h5",
+                                                "san": "Nh5",
+                                                "children": [
+                                                  {
+                                                    "move": "d1h5",
+                                                    "san": "Qxh5",
+                                                    "blurb": "Snap off the undefended h5 Knight to emerge a full pawn ahead!"
+                                                  }
+                                                ],
+                                                "blurb": "Club blunder: Black moves the Knight to h5 where it is trapped!",
+                                                "is_blunder": true,
+                                                "human_freq": 0.0174
+                                              }
+                                            ],
+                                            "blurb": "Advance e5 to chase the f6 Knight!"
+                                          }
+                                        ],
+                                        "blurb": "Maia-3 Top #2 Human Move (40.3%): Black retreats the Knight to g6.",
+                                        "human_freq": 0.403
+                                      },
+                                      {
+                                        "move": "e5g4",
+                                        "san": "Neg4",
+                                        "children": [
+                                          {
+                                            "move": "e4e5",
+                                            "san": "e5",
+                                            "children": [
+                                              {
+                                                "move": "g4f2",
+                                                "san": "Nxf2",
+                                                "children": [
+                                                  {
+                                                    "move": "e1f2",
+                                                    "san": "Kxf2",
+                                                    "blurb": "Capture on f2 and force the f6 Knight back to g8."
+                                                  }
+                                                ],
+                                                "blurb": "Black tries a desperado on f2.",
+                                                "human_freq": 0.2753
+                                              }
+                                            ],
+                                            "blurb": "Attack both Knights on g4 and f6!"
+                                          }
+                                        ],
+                                        "blurb": "Maia-3 Top #3 Human Move (4.9%): Black jumps to g4.",
+                                        "human_freq": 0.0492
+                                      },
+                                      {
+                                        "move": "e5c4",
+                                        "san": "Nc4",
+                                        "children": [
+                                          {
+                                            "move": "f1c4",
+                                            "san": "Bxc4",
+                                            "blurb": "Capture the c4 Knight and regain the piece immediately!"
+                                          }
+                                        ],
+                                        "blurb": "Maia-3 Top #4 Human Move (2.2%): Black jumps to c4.",
+                                        "human_freq": 0.0216
+                                      },
+                                      {
+                                        "move": "f8b4",
+                                        "san": "Bb4",
+                                        "children": [
+                                          {
+                                            "move": "d4e5",
+                                            "san": "dxe5",
+                                            "children": [
+                                              {
+                                                "move": "f6e4",
+                                                "san": "Nxe4",
+                                                "children": [
+                                                  {
+                                                    "move": "d1d4",
+                                                    "san": "Qd4",
+                                                    "blurb": "Double attack on the b4 Bishop and e4 Knight!"
+                                                  }
+                                                ],
+                                                "blurb": "Black captures e4.",
+                                                "human_freq": 0.552
+                                              }
+                                            ],
+                                            "blurb": "Capture the e5 Knight and attack f6!"
+                                          }
+                                        ],
+                                        "blurb": "Maia-3 Top #5 Human Move (1.9%): Black pins c3 instead of moving the e5 Knight.",
+                                        "human_freq": 0.0186
+                                      }
+                                    ],
+                                    "blurb": "Fork the center and kick the e5 Knight!"
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #1 Human Move (93.0%): Black accepts the Knight sacrifice.",
+                                "human_freq": 0.9299
+                              },
+                              {
+                                "move": "f8c5",
+                                "san": "Bc5",
+                                "children": [
+                                  {
+                                    "move": "e5c6",
+                                    "san": "Nxc6",
+                                    "children": [
+                                      {
+                                        "move": "d7c6",
+                                        "san": "dxc6",
+                                        "children": [
+                                          {
+                                            "move": "f1e2",
+                                            "san": "Be2",
+                                            "blurb": "Prevent Ng4 and prepare d3 plus O-O a clear pawn up."
+                                          }
+                                        ],
+                                        "blurb": "Black recaptures.",
+                                        "human_freq": 0.8776
+                                      }
+                                    ],
+                                    "blurb": "Eliminate the c6 Knight for a clean extra pawn!"
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #2 Human Move at Move 4 (1.7%): Black ignores the e5 Knight!",
+                                "is_blunder": true,
+                                "human_freq": 0.0166
+                              },
+                              {
+                                "move": "d7d6",
+                                "san": "d6",
+                                "children": [
+                                  {
+                                    "move": "e5c6",
+                                    "san": "Nxc6",
+                                    "children": [
+                                      {
+                                        "move": "b7c6",
+                                        "san": "bxc6",
+                                        "children": [
+                                          {
+                                            "move": "d2d4",
+                                            "san": "d4",
+                                            "blurb": "Occupy the full center with an extra pawn."
+                                          }
+                                        ],
+                                        "blurb": "Black recaptures.",
+                                        "human_freq": 0.986
+                                      }
+                                    ],
+                                    "blurb": "Trade on c6 to win a clean central pawn and ruin Black's structure."
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #3 Human Move at Move 4 (1.5%): Black attacks the e5 Knight instead of taking it!",
+                                "is_blunder": true,
+                                "human_freq": 0.0151
+                              },
+                              {
+                                "move": "f8b4",
+                                "san": "Bb4",
+                                "children": [
+                                  {
+                                    "move": "e5c6",
+                                    "san": "Nxc6",
+                                    "children": [
+                                      {
+                                        "move": "d7c6",
+                                        "san": "dxc6",
+                                        "children": [
+                                          {
+                                            "move": "d2d3",
+                                            "san": "d3",
+                                            "blurb": "Protect e4 and enjoy a healthy extra pawn."
+                                          }
+                                        ],
+                                        "blurb": "Black recaptures.",
+                                        "human_freq": 0.849
+                                      }
+                                    ],
+                                    "blurb": "Capture on c6 with a clean extra pawn."
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #4 Human Move at Move 4 (1.2%): Black pins c3 instead of taking e5!",
+                                "is_blunder": true,
+                                "human_freq": 0.0116
+                              },
+                              {
+                                "move": "d8e7",
+                                "san": "Qe7",
+                                "children": [
+                                  {
+                                    "move": "e5c6",
+                                    "san": "Nxc6",
+                                    "children": [
+                                      {
+                                        "move": "d7c6",
+                                        "san": "dxc6",
+                                        "children": [
+                                          {
+                                            "move": "d2d3",
+                                            "san": "d3",
+                                            "blurb": "Solidify e4 with an extra pawn."
+                                          }
+                                        ],
+                                        "blurb": "Black recaptures.",
+                                        "human_freq": 0.842
+                                      }
+                                    ],
+                                    "blurb": "Capture on c6 before Black can regain the pawn."
+                                  }
+                                ],
+                                "blurb": "Maia-3 Top #5 Human Move at Move 4 (0.8%): Black attacks e5 with the Queen.",
+                                "is_blunder": true,
+                                "human_freq": 0.0077
+                              },
+                              {
+                                "move": "f6e4",
+                                "san": "Nxe4",
+                                "human_freq": 0.0075,
+                                "is_blunder": true,
+                                "blurb": "Maia-3 Top #6 Human Move at Move 4 (0.8%): Black counter-captures e4 instead of taking the e5 Knight!",
+                                "children": [
+                                  {
+                                    "move": "e5c6",
+                                    "san": "Nxc6",
+                                    "blurb": "Eliminate the c6 Knight first before capturing on e4!",
+                                    "children": [
+                                      {
+                                        "move": "d7c6",
+                                        "san": "dxc6",
+                                        "human_freq": 0.85,
+                                        "children": [
+                                          {
+                                            "move": "c3e4",
+                                            "san": "Nxe4",
+                                            "blurb": "Capture the e4 Knight and emerge a clean piece ahead!"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "blurb": "The Halloween Gambit (4.Nxe5!?)! Sacrifice a full Knight to steamroll Black's Knights with d4-e5-f4."
+                          }
+                        ],
+                        "blurb": "Symmetrical Four Knights Defense.",
+                        "human_freq": 0.4429
+                      }
+                    ],
+                    "blurb": "Three Knights / Four Knights setup."
+                  }
+                ],
+                "blurb": "Black defends e5.",
+                "human_freq": 0.6351
+              }
+            ],
+            "blurb": "Develop Nf3."
+          }
+        ],
+        "blurb": "Black responds with 1...e5.",
+        "human_freq": 0.4748
+      }
+    ]
+  }
+}

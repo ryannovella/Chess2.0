@@ -1,0 +1,521 @@
+{
+  "id": "englund_gambit",
+  "name": "Englund Gambit",
+  "eco": "A40",
+  "color": "black",
+  "description": "Explosive 1...e5!? counter-gambit against 1.d4 featuring the 4...Qb4+! Queen raid and 8...Qc1# mate trap.",
+  "root": {
+    "move": "d2d4",
+    "san": "d4",
+    "blurb": "White opens with the Queen's pawn.",
+    "children": [
+      {
+        "move": "e7e5",
+        "san": "e5",
+        "children": [
+          {
+            "move": "d4e5",
+            "san": "dxe5",
+            "children": [
+              {
+                "move": "b8c6",
+                "san": "Nc6",
+                "children": [
+                  {
+                    "move": "g1f3",
+                    "san": "Nf3",
+                    "children": [
+                      {
+                        "move": "d8e7",
+                        "san": "Qe7",
+                        "children": [
+                          {
+                            "move": "c1f4",
+                            "san": "Bf4",
+                            "children": [
+                              {
+                                "move": "e7b4",
+                                "san": "Qb4+",
+                                "children": [
+                                  {
+                                    "move": "f4d2",
+                                    "san": "Bd2",
+                                    "children": [
+                                      {
+                                        "move": "b4b2",
+                                        "san": "Qxb2",
+                                        "children": [
+                                          {
+                                            "move": "b1c3",
+                                            "san": "Nc3",
+                                            "children": [
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4",
+                                                "children": [
+                                                  {
+                                                    "move": "a1b1",
+                                                    "san": "Rb1",
+                                                    "children": [
+                                                      {
+                                                        "move": "b2a3",
+                                                        "san": "Qa3",
+                                                        "children": [
+                                                          {
+                                                            "move": "b1b3",
+                                                            "san": "Rb3",
+                                                            "children": [
+                                                              {
+                                                                "move": "a3a5",
+                                                                "san": "Qa5",
+                                                                "blurb": "Retreat to a5 keeping the b4 Bishop protected and White's Queenside tied up."
+                                                              }
+                                                            ],
+                                                            "blurb": "White chases the Queen with Rb3.",
+                                                            "human_freq": 0.5643
+                                                          }
+                                                        ],
+                                                        "blurb": "Step the Queen to a3, maintaining the attack on c3."
+                                                      }
+                                                    ],
+                                                    "blurb": "White attacks the Queen with Rb1.",
+                                                    "human_freq": 0.8439
+                                                  }
+                                                ],
+                                                "blurb": "Pin the c3 Knight so b2-a1 is threatened again!"
+                                              }
+                                            ],
+                                            "blurb": "Main Line: White develops Nc3 to protect a1.",
+                                            "human_freq": 0.706
+                                          },
+                                          {
+                                            "move": "d2c3",
+                                            "san": "Bc3",
+                                            "children": [
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4",
+                                                "children": [
+                                                  {
+                                                    "move": "d1d2",
+                                                    "san": "Qd2",
+                                                    "children": [
+                                                      {
+                                                        "move": "b4c3",
+                                                        "san": "Bxc3",
+                                                        "children": [
+                                                          {
+                                                            "move": "d2c3",
+                                                            "san": "Qxc3",
+                                                            "children": [
+                                                              {
+                                                                "move": "b2c1",
+                                                                "san": "Qc1#",
+                                                                "blurb": "Checkmate (8...Qc1#)! The legendary Englund Gambit 8-move mate."
+                                                              }
+                                                            ],
+                                                            "blurb": "White recaptures with the Queen, leaving c1 undefended.",
+                                                            "human_freq": 0.8943
+                                                          }
+                                                        ],
+                                                        "blurb": "Eliminate the defender of a1 and c1!"
+                                                      }
+                                                    ],
+                                                    "blurb": "White tries to defend the c3 Bishop with Qd2.",
+                                                    "human_freq": 0.3357
+                                                  }
+                                                ],
+                                                "blurb": "Pin the c3 Bishop to the King! White cannot save both c3 and a1."
+                                              }
+                                            ],
+                                            "blurb": "Club players frequently play 6.Bc3?? to trap the Queen and guard a1!",
+                                            "is_blunder": true,
+                                            "human_freq": 0.2855
+                                          }
+                                        ],
+                                        "blurb": "Capture the b2 pawn and threaten Qxa1!"
+                                      }
+                                    ],
+                                    "blurb": "Maia-3 Top #1 Human Move (59.9%): White blocks with Bd2 to save the Bishop.",
+                                    "human_freq": 0.5987
+                                  },
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "children": [
+                                      {
+                                        "move": "b4f4",
+                                        "san": "Qxf4",
+                                        "children": [
+                                          {
+                                            "move": "c3d5",
+                                            "san": "Nd5",
+                                            "children": [
+                                              {
+                                                "move": "f4e4",
+                                                "san": "Qe4",
+                                                "blurb": "Step to e4, defending c7 while pinning the d5 Knight or attacking e5!"
+                                              }
+                                            ],
+                                            "blurb": "White counter-attacks c7 and the f4 Queen.",
+                                            "human_freq": 0.3433
+                                          }
+                                        ],
+                                        "blurb": "Snap off the undefended f4 Bishop for a clean extra piece!"
+                                      }
+                                    ],
+                                    "blurb": "Maia-3 Top #2 Human Move (14.4%): White blocks with Nc3, hanging the f4 Bishop!",
+                                    "is_blunder": true,
+                                    "human_freq": 0.1444
+                                  },
+                                  {
+                                    "move": "b1d2",
+                                    "san": "Nbd2",
+                                    "children": [
+                                      {
+                                        "move": "b4f4",
+                                        "san": "Qxf4",
+                                        "blurb": "Capture the undefended f4 Bishop for a full piece advantage!"
+                                      }
+                                    ],
+                                    "blurb": "Maia-3 Top #3 Human Move (8.7%): White blocks with Nbd2, leaving the f4 Bishop hanging!",
+                                    "is_blunder": true,
+                                    "human_freq": 0.0871
+                                  },
+                                  {
+                                    "move": "c2c3",
+                                    "san": "c3",
+                                    "children": [
+                                      {
+                                        "move": "b4f4",
+                                        "san": "Qxf4",
+                                        "blurb": "Capture the f4 Bishop cleanly!"
+                                      }
+                                    ],
+                                    "blurb": "Maia-3 Top #4 Human Move (8.5%): White blocks with c3, hanging both f4 and b2!",
+                                    "is_blunder": true,
+                                    "human_freq": 0.0848
+                                  },
+                                  {
+                                    "move": "d1d2",
+                                    "san": "Qd2",
+                                    "children": [
+                                      {
+                                        "move": "b4b2",
+                                        "san": "Qxb2",
+                                        "children": [
+                                          {
+                                            "move": "d2c3",
+                                            "san": "Qc3",
+                                            "children": [
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4",
+                                                "blurb": "Pin and win the White Queen on c3!"
+                                              }
+                                            ],
+                                            "blurb": "White tries to trade Queens.",
+                                            "human_freq": 0.7295
+                                          }
+                                        ],
+                                        "blurb": "Capture on b2 and threaten Bb4 pinning the Queen to the King!"
+                                      }
+                                    ],
+                                    "blurb": "Maia-3 Top #5 Human Move (7.8%): White blocks with Qd2, allowing Qxb2!",
+                                    "human_freq": 0.0783
+                                  }
+                                ],
+                                "blurb": "Fork the King, the f4 Bishop, and the b2 pawn!"
+                              }
+                            ],
+                            "blurb": "Maia-3 Top #1 Human Move (40.6%): Over 40% of human players defend e5 with Bf4, walking into Qb4+!",
+                            "human_freq": 0.4062
+                          },
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "children": [
+                              {
+                                "move": "c6e5",
+                                "san": "Nxe5",
+                                "children": [
+                                  {
+                                    "move": "e2e4",
+                                    "san": "e4",
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Develop Nf6 and prepare d6 or Bb4."
+                                      }
+                                    ],
+                                    "blurb": "White occupies e4.",
+                                    "human_freq": 0.1065
+                                  }
+                                ],
+                                "blurb": "Recapture the e5 pawn with complete equality and active piece play."
+                              }
+                            ],
+                            "blurb": "Maia-3 Top #2 Human Move (17.6%): White returns the e5 pawn to develop.",
+                            "human_freq": 0.1757
+                          },
+                          {
+                            "move": "c1g5",
+                            "san": "Bg5",
+                            "children": [
+                              {
+                                "move": "e7b4",
+                                "san": "Qb4+",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "children": [
+                                      {
+                                        "move": "b4b2",
+                                        "san": "Qxb2",
+                                        "children": [
+                                          {
+                                            "move": "g5d2",
+                                            "san": "Bd2",
+                                            "children": [
+                                              {
+                                                "move": "f8b4",
+                                                "san": "Bb4",
+                                                "blurb": "Pin the c3 Knight and seize a strong initiative."
+                                              }
+                                            ],
+                                            "blurb": "White defends c3 with Bd2.",
+                                            "human_freq": 0.3721
+                                          }
+                                        ],
+                                        "blurb": "Capture on b2 and attack the c3 Knight!"
+                                      }
+                                    ],
+                                    "blurb": "White blocks with Nc3.",
+                                    "human_freq": 0.3028
+                                  }
+                                ],
+                                "blurb": "Check on b4 and fork the b2 pawn!"
+                              }
+                            ],
+                            "blurb": "Maia-3 Top #3 Human Move (11.8%): White attacks the e7 Queen with Bg5.",
+                            "human_freq": 0.1182
+                          },
+                          {
+                            "move": "d1d5",
+                            "san": "Qd5",
+                            "children": [
+                              {
+                                "move": "f7f6",
+                                "san": "f6",
+                                "children": [
+                                  {
+                                    "move": "e5f6",
+                                    "san": "exf6",
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nxf6",
+                                        "blurb": "Recapture with tempo on the d5 Queen!"
+                                      }
+                                    ],
+                                    "blurb": "White captures on f6.",
+                                    "human_freq": 0.8006
+                                  }
+                                ],
+                                "blurb": "Challenge the e5 pawn to open the f-file!"
+                              }
+                            ],
+                            "blurb": "Maia-3 Top #4 Human Move (8.2%): White centralizes Qd5.",
+                            "human_freq": 0.0823
+                          },
+                          {
+                            "move": "e2e3",
+                            "san": "e3",
+                            "children": [
+                              {
+                                "move": "c6e5",
+                                "san": "Nxe5",
+                                "children": [
+                                  {
+                                    "move": "f1e2",
+                                    "san": "Be2",
+                                    "children": [
+                                      {
+                                        "move": "g8f6",
+                                        "san": "Nf6",
+                                        "blurb": "Develop Nf6 and prepare d5."
+                                      }
+                                    ],
+                                    "blurb": "White develops Be2.",
+                                    "human_freq": 0.1899
+                                  }
+                                ],
+                                "blurb": "Regain the e5 pawn with smooth piece play."
+                              }
+                            ],
+                            "blurb": "Maia-3 Top #5 Human Move (8.1%): White surrenders e5 to develop.",
+                            "human_freq": 0.0814
+                          }
+                        ],
+                        "blurb": "Double attack on e5! Bait White into playing the natural 4.Bf4."
+                      }
+                    ],
+                    "blurb": "Maia-3 Top #1 Human Move (71.5%): White defends e5 with Nf3.",
+                    "human_freq": 0.7152
+                  },
+                  {
+                    "move": "f2f4",
+                    "san": "f4",
+                    "children": [
+                      {
+                        "move": "f8c5",
+                        "san": "Bc5",
+                        "children": [
+                          {
+                            "move": "g1f3",
+                            "san": "Nf3",
+                            "children": [
+                              {
+                                "move": "d7d6",
+                                "san": "d6",
+                                "blurb": "Open the c8 Bishop and chip away at White's e5 wedge."
+                              }
+                            ],
+                            "blurb": "White develops Nf3.",
+                            "human_freq": 0.4783
+                          }
+                        ],
+                        "blurb": "Seize the a7-g1 diagonal and prevent White from castling!"
+                      }
+                    ],
+                    "blurb": "Maia-3 Top #2 Human Move (9.6%): White defends e5 with f4, weakening the e1-h4 diagonal.",
+                    "human_freq": 0.0963
+                  },
+                  {
+                    "move": "c1f4",
+                    "san": "Bf4",
+                    "children": [
+                      {
+                        "move": "d8e7",
+                        "san": "Qe7",
+                        "children": [
+                          {
+                            "move": "g1f3",
+                            "san": "Nf3",
+                            "children": [
+                              {
+                                "move": "e7b4",
+                                "san": "Qb4+",
+                                "blurb": "Fork the King, the f4 Bishop, and the b2 pawn!"
+                              }
+                            ],
+                            "blurb": "White defends e5, transposing into the main trap!",
+                            "human_freq": 0.6507
+                          }
+                        ],
+                        "blurb": "Attack e5 and prepare Qb4+!"
+                      }
+                    ],
+                    "blurb": "Maia-3 Top #3 Human Move (9.4%): White plays 3.Bf4 immediately.",
+                    "human_freq": 0.0942
+                  }
+                ],
+                "blurb": "Develop Nc6 and attack the e5 pawn."
+              }
+            ],
+            "blurb": "Maia-3 Top #1 Human Move (62.0%): White accepts the gambit pawn.",
+            "human_freq": 0.6203
+          },
+          {
+            "move": "d4d5",
+            "san": "d5",
+            "children": [
+              {
+                "move": "f8c5",
+                "san": "Bc5",
+                "children": [
+                  {
+                    "move": "e2e4",
+                    "san": "e4",
+                    "children": [
+                      {
+                        "move": "g8f6",
+                        "san": "Nf6",
+                        "blurb": "Attack the e4 pawn and prepare d6."
+                      }
+                    ],
+                    "blurb": "White claims the center.",
+                    "human_freq": 0.4532
+                  }
+                ],
+                "blurb": "Develop Bc5 targeting f2."
+              }
+            ],
+            "blurb": "Maia-3 Top #2 Human Move (9.8%): White declines the gambit and pushes d5.",
+            "human_freq": 0.0984
+          },
+          {
+            "move": "c2c4",
+            "san": "c4",
+            "children": [
+              {
+                "move": "e5d4",
+                "san": "exd4",
+                "children": [
+                  {
+                    "move": "d1d4",
+                    "san": "Qxd4",
+                    "children": [
+                      {
+                        "move": "b8c6",
+                        "san": "Nc6",
+                        "blurb": "Develop with tempo against the d4 Queen!"
+                      }
+                    ],
+                    "blurb": "White recaptures.",
+                    "human_freq": 0.7428
+                  }
+                ],
+                "blurb": "Capture on d4 to draw the Queen out."
+              }
+            ],
+            "blurb": "Maia-3 Top #3 Human Move (7.8%): White transposes toward an English/QGD.",
+            "human_freq": 0.0775
+          },
+          {
+            "move": "e2e3",
+            "san": "e3",
+            "children": [
+              {
+                "move": "e5d4",
+                "san": "exd4",
+                "children": [
+                  {
+                    "move": "e3d4",
+                    "san": "exd4",
+                    "children": [
+                      {
+                        "move": "d7d5",
+                        "san": "d5",
+                        "blurb": "Equalize immediately in the center."
+                      }
+                    ],
+                    "blurb": "White recaptures.",
+                    "human_freq": 0.6689
+                  }
+                ],
+                "blurb": "Exchange on d4."
+              }
+            ],
+            "blurb": "Maia-3 Top #4 Human Move (5.8%): Passive e3.",
+            "human_freq": 0.058
+          }
+        ],
+        "blurb": "The Englund Gambit! Shock 1.d4 players on move 1 by sacrificing the e5 pawn for rapid tactical traps."
+      }
+    ],
+    "human_freq": 0.241
+  }
+}

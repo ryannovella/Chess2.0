@@ -234,12 +234,14 @@ theme_type_variation = &"LabelBold"
 theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
 theme_override_font_sizes/font_size = 18
 text = "Stockfish 18 (AI)"
+clip_text = true
 
 [node name="BadgeLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
 theme_override_font_sizes/font_size = 16
 text = "ELO 1500"
+clip_text = true
 
 [node name="MateBadge" type="PanelContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/TopPlayerCard/HBox"]
 visible = false
@@ -308,12 +310,14 @@ theme_type_variation = &"LabelBold"
 theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
 theme_override_font_sizes/font_size = 18
 text = "Player (You)"
+clip_text = true
 
 [node name="BadgeLabel" type="Label" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
 theme_override_font_sizes/font_size = 16
 text = "White"
+clip_text = true
 
 [node name="MateBadge" type="PanelContainer" parent="CenterContainer/MainLayout/GameLayout/BoardArea/BottomPlayerCard/HBox"]
 visible = false
