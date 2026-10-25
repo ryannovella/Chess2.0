@@ -3,7 +3,7 @@
   "name": "Queen's Gambit",
   "eco": "D06",
   "color": "white",
-  "description": "Classical 2.c4! strike merebut central hegemony dan menghukum QGA, QGD, Slav, dan Marshall jebakan.",
+  "description": "Variasi agresif 2.c4! untuk merebut dominasi petak pusat dan menghukum jebakan QGA, QGD, Slav, serta Marshall.",
   "root": {
     "move": "d2d4",
     "san": "d4",

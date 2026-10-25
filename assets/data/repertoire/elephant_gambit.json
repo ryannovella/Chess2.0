@@ -3,7 +3,7 @@
   "name": "Elephant Gambit",
   "eco": "C40",
   "color": "black",
-  "description": "Bold dan tactical 2...d5 counter-strike merebut inisiatif melawan 1.e4 e5 2.Nf3.",
+  "description": "Serangan taktis 2...d5 yang berani untuk merebut inisiatif melawan 1.e4 e5 2.Nf3.",
   "root": {
     "move": "e2e4",
     "san": "e4",

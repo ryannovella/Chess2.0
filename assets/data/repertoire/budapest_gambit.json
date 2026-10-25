@@ -3,7 +3,7 @@
   "name": "Budapest Gambit",
   "eco": "A52",
   "color": "black",
-  "description": "Attack dinamis 2...e5! melawan 1.d4 Nf6 2.c4 dengan jebakan smothered mate Kieninger (8...Nd3#).",
+  "description": "Serangan dinamis 2...e5! melawan 1.d4 Nf6 2.c4 dengan jebakan smothered mate Kieninger (8...Nd3#).",
   "root": {
     "move": "d2d4",
     "san": "d4",

@@ -3,7 +3,7 @@
   "name": "Danish Gambit",
   "eco": "C21",
   "color": "white",
-  "description": "Highest memenangkan-rate White gambit di Lichess: sacrifice two pawn ke aim kedua Bishop (Bc4 & Bb2) di g7 dan f7.",
+  "description": "Gambit agresif dengan pengorbanan dua pawn untuk mengarahkan sepasang Bishop (Bc4 dan Bb2) langsung ke sayap Raja (f7 dan g7).",
   "root": {
     "move": "e2e4",
     "san": "e4",

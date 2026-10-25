@@ -1230,3 +1230,82 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_green_btn")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_green_pressed")
 theme_override_styles/hover = SubResource("StyleBoxTexture_green_hover")
 text = "Update Now"
+
+[node name="TrainerModal" type="Control" parent="." unique_id=741829104]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimBackdrop" type="ColorRect" parent="TrainerModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="CenterContainer" type="CenterContainer" parent="TrainerModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TrainerCard" type="PanelContainer" parent="TrainerModal/CenterContainer"]
+custom_minimum_size = Vector2(660, 920)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_chess_card")
+
+[node name="VBox" type="VBoxContainer" parent="TrainerModal/CenterContainer/TrainerCard"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Header" type="HBoxContainer" parent="TrainerModal/CenterContainer/TrainerCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="TrainerModal/CenterContainer/TrainerCard/VBox/Header"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("11_target")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="TrainerModal/CenterContainer/TrainerCard/VBox/Header"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("18_font_xbold")
+theme_override_font_sizes/font_size = 24
+text = "Pilih Latihan Pembukaan"
+
+[node name="HSeparator" type="HSeparator" parent="TrainerModal/CenterContainer/TrainerCard/VBox"]
+layout_mode = 2
+
+[node name="Scroll" type="ScrollContainer" parent="TrainerModal/CenterContainer/TrainerCard/VBox"]
+custom_minimum_size = Vector2(0, 740)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CardsContainer" type="VBoxContainer" parent="TrainerModal/CenterContainer/TrainerCard/VBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="ActionButtons" type="HBoxContainer" parent="TrainerModal/CenterContainer/TrainerCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BtnCloseTrainer" type="Button" parent="TrainerModal/CenterContainer/TrainerCard/VBox/ActionButtons"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tutup"
