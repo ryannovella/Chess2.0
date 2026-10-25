@@ -198,8 +198,12 @@ func _ready() -> void:
 	if btn_install_update:
 		btn_install_update.pressed.connect(install_update)
 
+	_refresh_version_display()
 	if version_label:
-		version_label.text = "v1.0.0 (%s)" % _get_git_short_hash()
+		version_label.mouse_filter = Control.MOUSE_FILTER_STOP
+		version_label.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		version_label.tooltip_text = "Click to check for updates"
+		version_label.gui_input.connect(_on_version_label_gui_input)
 
 	_update_side_icons()
 	_update_side_ui()
@@ -680,12 +684,39 @@ func _input(event: InputEvent) -> void:
 			settings_modal.visible = false
 			get_viewport().set_input_as_handled()
 
+func _on_version_label_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_on_update_pressed()
+
+func _refresh_version_display() -> void:
+	var ver = _get_active_build_version()
+	if version_label:
+		version_label.text = ver
+	if local_version_label:
+		local_version_label.text = "Local: %s" % _get_git_branch_info()
+
+func _get_active_build_version() -> String:
+	var hash_str = _get_git_short_hash()
+	var rev_count = _get_git_commit_count()
+	if rev_count > 0:
+		return "v1.0.%d (%s)" % [rev_count, hash_str]
+	if hash_str != "main" and not hash_str.is_empty():
+		return "v1.0.0 (%s)" % hash_str
+	return "v1.0.0"
+
+func _get_git_commit_count() -> int:
+	var out: Array = []
+	var git_exe = _get_git_executable()
+	var project_dir = ProjectSettings.globalize_path("res://")
+	var code = OS.execute(git_exe, ["-C", project_dir, "rev-list", "--count", "HEAD"], out, true)
+	if code == 0 and not out.is_empty():
+		return int(str(out[0]).strip_edges())
+	return 0
+
 func _on_update_pressed() -> void:
 	if update_modal:
 		update_modal.visible = true
-		if local_version_label:
-			var branch_info = _get_git_branch_info()
-			local_version_label.text = "Local: %s" % branch_info
+		_refresh_version_display()
 		check_for_updates()
 
 func _open_trainer_menu() -> void:
@@ -819,11 +850,12 @@ func check_for_updates() -> void:
 		btn_install_update.disabled = true
 
 	var git_exe = _get_git_executable()
+	var project_dir = ProjectSettings.globalize_path("res://")
 	var output: Array = []
-	var exit_code = OS.execute(git_exe, ["fetch", "origin", "main"], output, true)
+	var exit_code = OS.execute(git_exe, ["-C", project_dir, "fetch", "origin", "main"], output, true)
 	if exit_code != 0:
 		# Fallback to current branch or master
-		exit_code = OS.execute(git_exe, ["fetch", "origin"], output, true)
+		exit_code = OS.execute(git_exe, ["-C", project_dir, "fetch", "origin"], output, true)
 
 	if exit_code != 0:
 		status_label.text = "Failed to connect to remote repo. Please check internet connection or git remote."
@@ -832,13 +864,13 @@ func check_for_updates() -> void:
 		return
 
 	var status_output: Array = []
-	var rev_exit = OS.execute(git_exe, ["rev-list", "--count", "HEAD..@{u}"], status_output, true)
+	var rev_exit = OS.execute(git_exe, ["-C", project_dir, "rev-list", "--count", "HEAD..@{u}"], status_output, true)
 	var commits_behind = 0
 	if rev_exit == 0 and not status_output.is_empty():
 		commits_behind = int(str(status_output[0]).strip_edges())
 
 	var remote_log: Array = []
-	OS.execute(git_exe, ["log", "-n", "1", "@{u}", "--format=%h - %s"], remote_log, true)
+	OS.execute(git_exe, ["-C", project_dir, "log", "-n", "1", "@{u}", "--format=%h - %s"], remote_log, true)
 	var latest_msg = str(remote_log[0]).strip_edges() if not remote_log.is_empty() else "Up to date"
 
 	if remote_version_label:
@@ -866,16 +898,14 @@ func install_update() -> void:
 		btn_check_update.disabled = true
 
 	var git_exe = _get_git_executable()
+	var project_dir = ProjectSettings.globalize_path("res://")
 	var pull_out: Array = []
-	var exit_code = OS.execute(git_exe, ["pull", "--ff-only"], pull_out, true)
+	var exit_code = OS.execute(git_exe, ["-C", project_dir, "pull", "--ff-only"], pull_out, true)
 	var pull_str = str(pull_out[0]) if not pull_out.is_empty() else ""
 
 	if exit_code == 0:
 		status_label.text = "Update installed successfully!\nPlease restart the game to apply changes.\n" + pull_str.strip_edges()
-		if local_version_label:
-			local_version_label.text = "Local: %s" % _get_git_branch_info()
-		if version_label:
-			version_label.text = "v1.0.0 (%s)" % _get_git_short_hash()
+		_refresh_version_display()
 		if btn_install_update:
 			btn_install_update.disabled = true
 	else:
@@ -889,7 +919,8 @@ func install_update() -> void:
 func _get_git_branch_info() -> String:
 	var out: Array = []
 	var git_exe = _get_git_executable()
-	var code = OS.execute(git_exe, ["log", "-n", "1", "--format=%h (%cd)", "--date=short"], out, true)
+	var project_dir = ProjectSettings.globalize_path("res://")
+	var code = OS.execute(git_exe, ["-C", project_dir, "log", "-n", "1", "--format=%h (%cd)", "--date=short"], out, true)
 	if code == 0 and not out.is_empty():
 		return str(out[0]).strip_edges()
 	return "Git Version"
@@ -897,7 +928,8 @@ func _get_git_branch_info() -> String:
 func _get_git_short_hash() -> String:
 	var out: Array = []
 	var git_exe = _get_git_executable()
-	var code = OS.execute(git_exe, ["log", "-n", "1", "--format=%h"], out, true)
+	var project_dir = ProjectSettings.globalize_path("res://")
+	var code = OS.execute(git_exe, ["-C", project_dir, "log", "-n", "1", "--format=%h"], out, true)
 	if code == 0 and not out.is_empty():
 		return str(out[0]).strip_edges()
 	return "main"

@@ -2309,6 +2309,18 @@ func test_opening_repertoire_and_srs() -> void:
 			menu.btn_close_trainer.emit_signal("pressed")
 			assert_true(not menu.trainer_modal.visible, "Tombol tutup menyembunyikan modal latihan")
 
+		# 12. MainMenu Build Version & GitHub Sync Invariants
+		assert_true(menu.version_label != null, "Version label ter-resolusi di MainMenu")
+		var active_ver = menu._get_active_build_version()
+		assert_true(not active_ver.is_empty(), "Versi build aktif tidak boleh kosong")
+		assert_true(active_ver.begins_with("v1.0."), "Versi build diawali format semver v1.0.x (terbaca: %s)" % active_ver)
+		assert_true(menu.version_label.text == active_ver, "Label versi di MainMenu tersinkronisasi dengan active build (%s)" % active_ver)
+		assert_true(menu.version_label.mouse_filter == Control.MOUSE_FILTER_STOP, "Version label interaktif (bisa diklik)")
+
+		# Simulasi update berhasil memperbarui version_label secara dinamis
+		menu._refresh_version_display()
+		assert_true(menu.version_label.text == active_ver, "Refresh version display mempertahankan sinkronisasi versi build")
+
 		root.remove_child(menu)
 		menu.free()
 
