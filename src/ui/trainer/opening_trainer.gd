@@ -88,6 +88,9 @@ func _ready() -> void:
 	_apply_tactile_styles()
 	_populate_repertoire_options()
 	_connect_signals()
+	var gs = get_node_or_null("/root/GameSettings")
+	if gs and "selected_repertoire_id" in gs and not str(gs.selected_repertoire_id).is_empty():
+		current_rep_id = str(gs.selected_repertoire_id)
 	start_repertoire(current_rep_id)
 
 func _ensure_nodes() -> void:
@@ -406,6 +409,14 @@ func _populate_repertoire_options() -> void:
 
 func start_repertoire(rep_id: String) -> void:
 	current_rep_id = rep_id
+	var gs = get_node_or_null("/root/GameSettings")
+	if gs and "selected_repertoire_id" in gs:
+		gs.selected_repertoire_id = rep_id
+	if opt_repertoire:
+		for i in range(opt_repertoire.item_count):
+			if str(opt_repertoire.get_item_metadata(i)) == rep_id:
+				opt_repertoire.select(i)
+				break
 	current_tree = RepertoireService.load_repertoire(rep_id)
 	if current_tree == null:
 		return

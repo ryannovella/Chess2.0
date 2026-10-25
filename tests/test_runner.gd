@@ -52,6 +52,13 @@ func _restore_settings_file(backup: String) -> void:
 		f.flush()
 
 func _init() -> void:
+	# Ensure GameSettings is available under /root/GameSettings for tests that instantiate menus/previews
+	if not root.has_node("GameSettings"):
+		var GSClass = load("res://src/config/game_settings.gd")
+		var gs_node = GSClass.new()
+		gs_node.name = "GameSettings"
+		root.add_child(gs_node)
+
 	print("\n=======================================================")
 	print("          CHESS 2.0 - AUTOMATED TEST SUITE             ")
 	print("=======================================================\n")
@@ -286,9 +293,10 @@ func test_visual_asset_quality_standards() -> void:
 	#    filternya harus eksplisit linear + mipmap, bukan mewarisi container.
 	var preview_script = load("res://src/ui/menu/mini_board_preview.gd")
 	var preview_inst = preview_script.new()
-	preview_inst._ready()
+	root.add_child(preview_inst)
 	assert_equal(preview_inst.texture_filter, CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS,
 		"MiniBoardPreview memakai LINEAR_WITH_MIPMAPS eksplisit untuk bidak yang diperkecil")
+	root.remove_child(preview_inst)
 	preview_inst.free()
 
 ## Mengumpulkan berkas aset secara rekursif berdasarkan ekstensi (huruf kecil).
@@ -2266,6 +2274,55 @@ func test_opening_repertoire_and_srs() -> void:
 
 	root.remove_child(trainer)
 	trainer.free()
+
+	# 11. MainMenu Chess Reps Training Selection Modal
+	var main_menu_packed = load("res://src/ui/menu/main_menu.tscn")
+	assert_true(main_menu_packed != null, "Resource main_menu.tscn berhasil dimuat")
+	if main_menu_packed:
+		var menu = main_menu_packed.instantiate()
+		assert_true(menu != null, "Scene MainMenu berhasil di-instantiate")
+		root.add_child(menu)
+
+		assert_true(menu.card_trainer != null, "Tombol mode Chess Reps / Trainer ter-resolusi di MainMenu")
+		assert_true(menu.trainer_modal != null, "Trainer modal ter-resolusi di MainMenu")
+		assert_true(menu.trainer_cards_container != null, "Trainer cards container ter-resolusi di MainMenu")
+		assert_true(not menu.trainer_modal.visible, "Trainer modal default tersembunyi")
+
+		# Klik mode trainer membuka modal pemilihan latihan
+		menu.card_trainer.emit_signal("pressed")
+		assert_true(menu.trainer_modal.visible, "Mengklik mode Chess Reps menampilkan modal pemilihan latihan")
+		assert_true(menu.trainer_cards_container.get_child_count() >= 17, "Tersedia kartu latihan pembukaan & gambit (ditemukan %d)" % menu.trainer_cards_container.get_child_count())
+
+		# Verifikasi konten kartu pertama: memuat judul, ringkasan bahasa Indonesia, dan side badge
+		var first_btn = menu.trainer_cards_container.get_child(0) as Button
+		assert_true(first_btn != null, "Kartu latihan berupa Button interaktif yang dapat diklik")
+		var first_margin = first_btn.get_child(0) as MarginContainer
+		var first_vbox = first_margin.get_child(0) as VBoxContainer
+		var top_row = first_vbox.get_child(0) as HBoxContainer
+		var title_lbl = top_row.get_child(0) as Label
+		var desc_lbl = first_vbox.get_child(1) as Label
+		assert_true(not title_lbl.text.is_empty(), "Judul kartu latihan terisi")
+		assert_true(not desc_lbl.text.is_empty(), "Ringkasan latihan terisi dalam bahasa Indonesia")
+
+		# Tutup modal trainer via tombol tutup
+		if menu.btn_close_trainer:
+			menu.btn_close_trainer.emit_signal("pressed")
+			assert_true(not menu.trainer_modal.visible, "Tombol tutup menyembunyikan modal latihan")
+
+		# 12. MainMenu Build Version & GitHub Sync Invariants
+		assert_true(menu.version_label != null, "Version label ter-resolusi di MainMenu")
+		var active_ver = menu._get_active_build_version()
+		assert_true(not active_ver.is_empty(), "Versi build aktif tidak boleh kosong")
+		assert_true(active_ver.begins_with("v1.0."), "Versi build diawali format semver v1.0.x (terbaca: %s)" % active_ver)
+		assert_true(menu.version_label.text == active_ver, "Label versi di MainMenu tersinkronisasi dengan active build (%s)" % active_ver)
+		assert_true(menu.version_label.mouse_filter == Control.MOUSE_FILTER_STOP, "Version label interaktif (bisa diklik)")
+
+		# Simulasi update berhasil memperbarui version_label secara dinamis
+		menu._refresh_version_display()
+		assert_true(menu.version_label.text == active_ver, "Refresh version display mempertahankan sinkronisasi versi build")
+
+		root.remove_child(menu)
+		menu.free()
 
 
 

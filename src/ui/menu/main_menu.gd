@@ -56,6 +56,11 @@ extends Control
 @onready var btn_check_update: Button = $UpdateModal/CenterContainer/UpdateCard/VBox/ActionButtons/BtnCheckUpdate
 @onready var btn_install_update: Button = $UpdateModal/CenterContainer/UpdateCard/VBox/ActionButtons/BtnInstallUpdate
 
+# Trainer Reps Modal
+@onready var trainer_modal: Control = $TrainerModal
+@onready var trainer_cards_container: VBoxContainer = $TrainerModal/CenterContainer/TrainerCard/VBox/Scroll/CardsContainer
+@onready var btn_close_trainer: Button = $TrainerModal/CenterContainer/TrainerCard/VBox/ActionButtons/BtnCloseTrainer
+
 # Settings Modal
 @onready var settings_modal: Control = $SettingsModal
 @onready var banner_board: MiniBoardPreview = $SettingsModal/CenterContainer/SettingsCard/VBox/BannerCenter/BannerBoard
@@ -72,6 +77,9 @@ extends Control
 @onready var btn_save_settings: Button = $SettingsModal/CenterContainer/SettingsCard/VBox/ModalButtons/BtnSaveSettings
 
 const MAIN_SCENE_PATH = "res://src/main.tscn"
+const OPENING_TRAINER_PATH = "res://src/ui/trainer/opening_trainer.tscn"
+const RepertoireService = preload("res://src/core/repertoire/repertoire_service.gd")
+const TactileStyles = preload("res://src/theme/tactile_styles.gd")
 
 var selected_mode: String = "vs_ai" # "vs_ai", "local_2p", "painter"
 
@@ -135,7 +143,10 @@ func _ready() -> void:
 	# Setup Mode Card Clicks
 	card_play_bots.pressed.connect(func(): _select_mode("vs_ai"))
 	card_play_friend.pressed.connect(func(): _select_mode("local_2p"))
-	card_trainer.pressed.connect(func(): _select_mode("trainer"))
+	card_trainer.pressed.connect(func():
+		_select_mode("trainer")
+		_open_trainer_menu()
+	)
 	card_variants.pressed.connect(func(): _select_mode("painter"))
 
 	# Setup Side Selector Buttons
@@ -171,6 +182,10 @@ func _ready() -> void:
 		btn_update.pressed.connect(_on_update_pressed)
 	btn_exit.pressed.connect(func(): get_tree().quit())
 
+	# Trainer Modal Handlers
+	if btn_close_trainer:
+		btn_close_trainer.pressed.connect(func(): trainer_modal.visible = false)
+
 	# Settings Modal Handlers
 	btn_cancel_settings.pressed.connect(func(): settings_modal.visible = false)
 	btn_save_settings.pressed.connect(_on_save_settings_pressed)
@@ -183,8 +198,12 @@ func _ready() -> void:
 	if btn_install_update:
 		btn_install_update.pressed.connect(install_update)
 
+	_refresh_version_display()
 	if version_label:
-		version_label.text = "v1.0.0 (%s)" % _get_git_short_hash()
+		version_label.mouse_filter = Control.MOUSE_FILTER_STOP
+		version_label.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		version_label.tooltip_text = "Click to check for updates"
+		version_label.gui_input.connect(_on_version_label_gui_input)
 
 	_update_side_icons()
 	_update_side_ui()
@@ -452,7 +471,7 @@ func _on_play_pressed() -> void:
 		GameSettings.open_painter_on_launch = false
 		get_tree().change_scene_to_file(MAIN_SCENE_PATH)
 	elif selected_mode == "trainer":
-		get_tree().change_scene_to_file("res://src/ui/trainer/opening_trainer.tscn")
+		_open_trainer_menu()
 	elif selected_mode == "painter":
 		GameSettings.current_game_mode = "vs_ai"
 		GameSettings.open_painter_on_launch = true
@@ -653,6 +672,10 @@ func _on_save_settings_pressed() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel") or (event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_ESCAPE):
+		if trainer_modal and trainer_modal.visible:
+			trainer_modal.visible = false
+			get_viewport().set_input_as_handled()
+			return
 		if update_modal and update_modal.visible:
 			update_modal.visible = false
 			get_viewport().set_input_as_handled()
@@ -661,13 +684,161 @@ func _input(event: InputEvent) -> void:
 			settings_modal.visible = false
 			get_viewport().set_input_as_handled()
 
+func _on_version_label_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		_on_update_pressed()
+
+func _refresh_version_display() -> void:
+	var ver = _get_active_build_version()
+	if version_label:
+		version_label.text = ver
+	if local_version_label:
+		local_version_label.text = "Local: %s" % _get_git_branch_info()
+
+func _get_active_build_version() -> String:
+	var hash_str = _get_git_short_hash()
+	var rev_count = _get_git_commit_count()
+	if rev_count > 0:
+		return "v1.0.%d (%s)" % [rev_count, hash_str]
+	if hash_str != "main" and not hash_str.is_empty():
+		return "v1.0.0 (%s)" % hash_str
+	return "v1.0.0"
+
+func _get_git_commit_count() -> int:
+	var out: Array = []
+	var git_exe = _get_git_executable()
+	var project_dir = ProjectSettings.globalize_path("res://")
+	var code = OS.execute(git_exe, ["-C", project_dir, "rev-list", "--count", "HEAD"], out, true)
+	if code == 0 and not out.is_empty():
+		return int(str(out[0]).strip_edges())
+	return 0
+
 func _on_update_pressed() -> void:
 	if update_modal:
 		update_modal.visible = true
-		if local_version_label:
-			var branch_info = _get_git_branch_info()
-			local_version_label.text = "Local: %s" % branch_info
+		_refresh_version_display()
 		check_for_updates()
+
+func _open_trainer_menu() -> void:
+	if trainer_modal == null:
+		get_tree().change_scene_to_file(OPENING_TRAINER_PATH)
+		return
+	_populate_trainer_cards()
+	trainer_modal.visible = true
+
+func _populate_trainer_cards() -> void:
+	if trainer_cards_container == null:
+		return
+	for child in trainer_cards_container.get_children():
+		child.queue_free()
+
+	var reps: Array[Dictionary] = RepertoireService.get_available_repertoires()
+	for meta in reps:
+		var rep_id: String = meta.get("id", "")
+		var rep_name: String = meta.get("name", "Unknown Opening")
+		var rep_eco: String = meta.get("eco", "")
+		var rep_color: String = meta.get("color", "white")
+		var rep_desc: String = meta.get("description", "")
+		var total_moves: int = int(meta.get("total_moves", 0))
+		var mastery_pct: float = float(meta.get("mastery_percent", 0.0))
+
+		var btn: Button = Button.new()
+		btn.custom_minimum_size = Vector2(0, 108)
+		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		TactileStyles.apply_tactile_button(btn, false, false, false)
+
+		var margin: MarginContainer = MarginContainer.new()
+		margin.set_anchors_preset(Control.PRESET_FULL_RECT)
+		margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		margin.add_theme_constant_override("margin_left", 16)
+		margin.add_theme_constant_override("margin_top", 10)
+		margin.add_theme_constant_override("margin_right", 16)
+		margin.add_theme_constant_override("margin_bottom", 12)
+		btn.add_child(margin)
+
+		var card_vbox: VBoxContainer = VBoxContainer.new()
+		card_vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		card_vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		card_vbox.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		card_vbox.add_theme_constant_override("separation", 6)
+		margin.add_child(card_vbox)
+
+		# Row 1: Title + Side/ECO Badge
+		var top_row: HBoxContainer = HBoxContainer.new()
+		top_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		top_row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		card_vbox.add_child(top_row)
+
+		var title_lbl: Label = Label.new()
+		title_lbl.theme_type_variation = &"LabelBold"
+		title_lbl.text = rep_name
+		title_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		title_lbl.add_theme_font_size_override("font_size", 19)
+		title_lbl.add_theme_color_override("font_color", Color(0.96, 0.96, 0.96, 1.0))
+		top_row.add_child(title_lbl)
+
+		var meta_chip: PanelContainer = PanelContainer.new()
+		meta_chip.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		var chip_sb: StyleBoxFlat = StyleBoxFlat.new()
+		chip_sb.set_corner_radius_all(6)
+		chip_sb.content_margin_left = 8
+		chip_sb.content_margin_right = 8
+		chip_sb.content_margin_top = 2
+		chip_sb.content_margin_bottom = 2
+		var is_white_side: bool = (rep_color.to_lower() == "white")
+		chip_sb.bg_color = Color(0.20, 0.25, 0.18, 0.95) if is_white_side else Color(0.25, 0.20, 0.16, 0.95)
+		chip_sb.border_width_left = 1
+		chip_sb.border_width_top = 1
+		chip_sb.border_width_right = 1
+		chip_sb.border_width_bottom = 1
+		chip_sb.border_color = Color(0.506, 0.714, 0.298, 0.7) if is_white_side else Color(0.9, 0.65, 0.35, 0.7)
+		meta_chip.add_theme_stylebox_override("panel", chip_sb)
+
+		var meta_lbl: Label = Label.new()
+		meta_lbl.theme_type_variation = &"LabelBold"
+		meta_lbl.add_theme_font_size_override("font_size", 13)
+		var side_str: String = "White" if is_white_side else "Black"
+		meta_lbl.text = "%s  •  %s" % [rep_eco, side_str]
+		meta_lbl.add_theme_color_override("font_color", Color(0.85, 0.95, 0.8, 1.0) if is_white_side else Color(1.0, 0.88, 0.7, 1.0))
+		meta_chip.add_child(meta_lbl)
+		top_row.add_child(meta_chip)
+
+		# Row 2: Ringkasan gambit / pembukaan (Indonesian)
+		var desc_lbl: Label = Label.new()
+		desc_lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		desc_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		desc_lbl.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		desc_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		desc_lbl.text = rep_desc
+		desc_lbl.add_theme_font_size_override("font_size", 14)
+		desc_lbl.add_theme_color_override("font_color", Color(0.78, 0.76, 0.74, 1.0))
+		card_vbox.add_child(desc_lbl)
+
+		# Row 3: Info ringkas moves & penguasaan
+		var stats_row: HBoxContainer = HBoxContainer.new()
+		stats_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		stats_row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		stats_row.add_theme_constant_override("separation", 14)
+		card_vbox.add_child(stats_row)
+
+		var stats_lbl: Label = Label.new()
+		stats_lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		stats_lbl.add_theme_font_size_override("font_size", 13)
+		stats_lbl.text = "%d moves  •  Penguasaan: %.0f%%" % [total_moves, mastery_pct]
+		stats_lbl.add_theme_color_override("font_color", Color(0.60, 0.65, 0.68, 1.0))
+		stats_row.add_child(stats_lbl)
+
+		btn.pressed.connect(func(): _start_training_repertoire(rep_id))
+		trainer_cards_container.add_child(btn)
+
+func _start_training_repertoire(rep_id: String) -> void:
+	if trainer_modal:
+		trainer_modal.visible = false
+	var gs = get_node_or_null("/root/GameSettings")
+	if gs and "selected_repertoire_id" in gs:
+		gs.selected_repertoire_id = rep_id
+	get_tree().change_scene_to_file(OPENING_TRAINER_PATH)
 
 func check_for_updates() -> void:
 	if not status_label:
@@ -679,11 +850,12 @@ func check_for_updates() -> void:
 		btn_install_update.disabled = true
 
 	var git_exe = _get_git_executable()
+	var project_dir = ProjectSettings.globalize_path("res://")
 	var output: Array = []
-	var exit_code = OS.execute(git_exe, ["fetch", "origin", "main"], output, true)
+	var exit_code = OS.execute(git_exe, ["-C", project_dir, "fetch", "origin", "main"], output, true)
 	if exit_code != 0:
 		# Fallback to current branch or master
-		exit_code = OS.execute(git_exe, ["fetch", "origin"], output, true)
+		exit_code = OS.execute(git_exe, ["-C", project_dir, "fetch", "origin"], output, true)
 
 	if exit_code != 0:
 		status_label.text = "Failed to connect to remote repo. Please check internet connection or git remote."
@@ -692,13 +864,13 @@ func check_for_updates() -> void:
 		return
 
 	var status_output: Array = []
-	var rev_exit = OS.execute(git_exe, ["rev-list", "--count", "HEAD..@{u}"], status_output, true)
+	var rev_exit = OS.execute(git_exe, ["-C", project_dir, "rev-list", "--count", "HEAD..@{u}"], status_output, true)
 	var commits_behind = 0
 	if rev_exit == 0 and not status_output.is_empty():
 		commits_behind = int(str(status_output[0]).strip_edges())
 
 	var remote_log: Array = []
-	OS.execute(git_exe, ["log", "-n", "1", "@{u}", "--format=%h - %s"], remote_log, true)
+	OS.execute(git_exe, ["-C", project_dir, "log", "-n", "1", "@{u}", "--format=%h - %s"], remote_log, true)
 	var latest_msg = str(remote_log[0]).strip_edges() if not remote_log.is_empty() else "Up to date"
 
 	if remote_version_label:
@@ -726,16 +898,14 @@ func install_update() -> void:
 		btn_check_update.disabled = true
 
 	var git_exe = _get_git_executable()
+	var project_dir = ProjectSettings.globalize_path("res://")
 	var pull_out: Array = []
-	var exit_code = OS.execute(git_exe, ["pull", "--ff-only"], pull_out, true)
+	var exit_code = OS.execute(git_exe, ["-C", project_dir, "pull", "--ff-only"], pull_out, true)
 	var pull_str = str(pull_out[0]) if not pull_out.is_empty() else ""
 
 	if exit_code == 0:
 		status_label.text = "Update installed successfully!\nPlease restart the game to apply changes.\n" + pull_str.strip_edges()
-		if local_version_label:
-			local_version_label.text = "Local: %s" % _get_git_branch_info()
-		if version_label:
-			version_label.text = "v1.0.0 (%s)" % _get_git_short_hash()
+		_refresh_version_display()
 		if btn_install_update:
 			btn_install_update.disabled = true
 	else:
@@ -749,7 +919,8 @@ func install_update() -> void:
 func _get_git_branch_info() -> String:
 	var out: Array = []
 	var git_exe = _get_git_executable()
-	var code = OS.execute(git_exe, ["log", "-n", "1", "--format=%h (%cd)", "--date=short"], out, true)
+	var project_dir = ProjectSettings.globalize_path("res://")
+	var code = OS.execute(git_exe, ["-C", project_dir, "log", "-n", "1", "--format=%h (%cd)", "--date=short"], out, true)
 	if code == 0 and not out.is_empty():
 		return str(out[0]).strip_edges()
 	return "Git Version"
@@ -757,7 +928,8 @@ func _get_git_branch_info() -> String:
 func _get_git_short_hash() -> String:
 	var out: Array = []
 	var git_exe = _get_git_executable()
-	var code = OS.execute(git_exe, ["log", "-n", "1", "--format=%h"], out, true)
+	var project_dir = ProjectSettings.globalize_path("res://")
+	var code = OS.execute(git_exe, ["-C", project_dir, "log", "-n", "1", "--format=%h"], out, true)
 	if code == 0 and not out.is_empty():
 		return str(out[0]).strip_edges()
 	return "main"

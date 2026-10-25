@@ -3,7 +3,7 @@
   "name": "Stafford Gambit",
   "eco": "C42",
   "color": "black",
-  "description": "Jebakan paling mematikan untuk Black (4...dxc6!), dengan trik 6...Nxe4!! ('Oh tidak ada My Queen') dan sacrifice di f2.",
+  "description": "Jebakan paling mematikan untuk Black (4...dxc6!), dengan trik 6...Nxe4!! dan pengorbanan perwira di f2.",
   "root": {
     "move": "e2e4",
     "san": "e4",

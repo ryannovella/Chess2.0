@@ -1,6 +1,8 @@
 class_name MiniBoardPreview
 extends Control
 
+const BoardThemes = preload("res://src/config/board_themes.gd")
+
 @export var board_pixels: float = 440.0
 @export var is_banner_mode: bool = false # True jika hanya merender crop banner atas (untuk modal settings)
 
@@ -27,11 +29,15 @@ func _ready() -> void:
 	# eksplisit (tidak bergantung pada pewarisan filter container) agar tepi bidak halus.
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	_load_textures()
-	GameSettings.theme_changed.connect(func(_thm): queue_redraw())
-	GameSettings.piece_set_changed.connect(func(_set):
-		_load_textures()
-		queue_redraw()
-	)
+	var gs = get_node_or_null("/root/GameSettings")
+	if gs:
+		if gs.has_signal("theme_changed"):
+			gs.theme_changed.connect(func(_thm): queue_redraw())
+		if gs.has_signal("piece_set_changed"):
+			gs.piece_set_changed.connect(func(_set):
+				_load_textures()
+				queue_redraw()
+			)
 
 func _update_dimensions() -> void:
 	if is_banner_mode:
@@ -44,7 +50,8 @@ func _update_dimensions() -> void:
 
 func _load_textures() -> void:
 	piece_textures.clear()
-	var piece_set_name = GameSettings.piece_set if is_inside_tree() and get_node_or_null("/root/GameSettings") else "cburnett"
+	var gs = get_node_or_null("/root/GameSettings")
+	var piece_set_name = gs.piece_set if is_inside_tree() and gs and "piece_set" in gs else "cburnett"
 	if piece_set_name.is_empty():
 		piece_set_name = "cburnett"
 	var pieces = ["wP", "wN", "wB", "wR", "wQ", "wK", "bP", "bN", "bB", "bR", "bQ", "bK"]
@@ -60,12 +67,14 @@ func _load_textures() -> void:
 				piece_textures[p] = load(fb_path)
 
 func _draw() -> void:
-	var theme_data = BoardThemes.get_theme(GameSettings.board_theme)
+	var gs = get_node_or_null("/root/GameSettings")
+	var theme_id = gs.board_theme if gs and "board_theme" in gs else "emerald"
+	var theme_data = BoardThemes.get_theme(theme_id)
 	var light_col: Color = theme_data.get("light_color", Color(0.86, 0.85, 0.82))
 	var dark_col: Color = theme_data.get("dark_color", Color(0.45, 0.52, 0.38))
 
 	var max_rows = 3 if is_banner_mode else 8
-	var is_flipped = (GameSettings.chosen_side == "black")
+	var is_flipped = (gs.chosen_side == "black") if gs and "chosen_side" in gs else false
 
 	for r in range(max_rows):
 		var actual_r = (7 - r) if is_flipped else r

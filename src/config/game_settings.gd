@@ -21,6 +21,7 @@ var ai_delay_mode: String = "natural" # "natural" | "fast" | "relaxed" | "instan
 var ai_custom_delay: float = 1.2 # Rentang: 0.0 s/d 5.0 detik
 var player_color: int = ChessTypes.PieceColor.WHITE
 var chosen_side: String = "white" # "white" | "black" | "random"
+var selected_repertoire_id: String = "fried_liver_attack"
 var piece_set: String = "neo"
 var board_theme: String = "emerald"
 var show_white_engine_arrows: bool = true

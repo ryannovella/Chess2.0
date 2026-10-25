@@ -3,7 +3,7 @@
   "name": "Italian Gambit",
   "eco": "C50",
   "color": "white",
-  "description": "Explosive 4.d4! Italian Gambit dan Scotch Gambit variasi menghukum common club responses ke 3.Bc4.",
+  "description": "Variasi taktis 4.d4! Italian Gambit dan Scotch Gambit untuk menghukum respons populer pemain klub terhadap 3.Bc4.",
   "root": {
     "move": "e2e4",
     "san": "e4",

@@ -3,7 +3,7 @@
   "name": "Smith-Morra Gambit",
   "eco": "B21",
   "color": "white",
-  "description": "Primary attack weapon melawan Sicilian defense (1.e4 c5 2.d4 cxd4 3.c3!) dengan f7 dan d8 Queen jebakan.",
+  "description": "Senjata serang utama menghadapi Sicilian Defense (1.e4 c5 2.d4 cxd4 3.c3!) dengan jebakan di petak f7 dan d8.",
   "root": {
     "move": "e2e4",
     "san": "e4",
