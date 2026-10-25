@@ -1,0 +1,871 @@
+{
+  "color": "white",
+  "description": "Gambit spektakuler 2.Nf3! melawan Scandinavian Defense dengan jebakan ICBM Attack (6.Nxf7! dan 7.Bg6+!!) yang mengorbankan Bishop/Knight demi merebut Queen lawan.",
+  "eco": "A06",
+  "id": "tennison_gambit",
+  "name": "Tennison Gambit",
+  "root": {
+    "blurb": "Buka permainan dengan 1.e4 untuk memicu Scandinavian Defense.",
+    "children": [
+      {
+        "blurb": "Black merespons dengan Scandinavian Defense (1...d5).",
+        "children": [
+          {
+            "blurb": "Tennison Gambit (2.Nf3!)! Tawarkan pion e4 untuk memicu tempo serang tajam.",
+            "children": [
+              {
+                "blurb": "Black menerima gambit dengan 2...dxe4.",
+                "children": [
+                  {
+                    "blurb": "Ng5! Serang pion e4 sekaligus menyiapkan jebakan ICBM Attack.",
+                    "children": [
+                      {
+                        "blurb": "Black mempertahankan pion dengan 3...Nf6.",
+                        "children": [
+                          {
+                            "blurb": "4.d3! Umpan pion kedua agar file dan diagonal Bishop terbuka lebar.",
+                            "children": [
+                              {
+                                "blurb": "Black menerima pertukaran pion di d3.",
+                                "children": [
+                                  {
+                                    "blurb": "5.Bxd3! Bishop membidik diagonal b1-h7 dan petak lemah f7.",
+                                    "children": [
+                                      {
+                                        "blurb": "Black memainkan 5...h6?! untuk mengusir Knight g5, masuk ke dalam jebakan mematikan ICBM Attack!",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nxf7!! Pengorbanan pembuka spektakuler! Forking Queen d8 dan Rook h8.",
+                                            "children": [
+                                              {
+                                                "blurb": "Black terpaksa memakan Knight dengan King (6...Kxf7).",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Bg6+!! Sinar x-ray! Defleksi King agar lepas dari pengawalan Queen d8.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "King memakan Bishop di g6.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Qxd8! Queen Hitam jatuh! ICBM Attack berhasil merebut keunggulan mutlak.",
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Black membalas dengan mengembangkan Knight.",
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Qd3+! Skak mengamankan tempo sambil menarik Queen ke sentral.",
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Black menutup skak dengan Bishop.",
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.Qg3+! Menyerang King dan mengontrol sayap raja dengan dominan.",
+                                                                            "children": [],
+                                                                            "human_freq": 0.0,
+                                                                            "move": "d3g3",
+                                                                            "san": "Qg3+"
+                                                                          }
+                                                                        ],
+                                                                        "human_freq": 0.7,
+                                                                        "move": "c8f5",
+                                                                        "san": "Bf5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.0,
+                                                                    "move": "d8d3",
+                                                                    "san": "Qd3+"
+                                                                  }
+                                                                ],
+                                                                "human_freq": 0.6,
+                                                                "move": "b8c6",
+                                                                "san": "Nc6"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.0,
+                                                            "move": "d1d8",
+                                                            "san": "Qxd8"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.68,
+                                                        "move": "f7g6",
+                                                        "san": "Kxg6"
+                                                      },
+                                                      {
+                                                        "blurb": "King berusaha melarikan diri ke e6.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Qxd8! Menghabisi Queen d8 tanpa ampun dengan keunggulan material masif.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "d1d8",
+                                                            "san": "Qxd8"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.18,
+                                                        "move": "f7e6",
+                                                        "san": "Ke6"
+                                                      },
+                                                      {
+                                                        "blurb": "King mundur ke g8.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Qxd8! Menangkap Queen lawan di d8, unggul Ratu penuh.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "d1d8",
+                                                            "san": "Qxd8"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.14,
+                                                        "move": "f7g8",
+                                                        "san": "Kg8"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "d3g6",
+                                                    "san": "Bg6+"
+                                                  }
+                                                ],
+                                                "human_freq": 0.85,
+                                                "move": "e8f7",
+                                                "san": "Kxf7"
+                                              },
+                                              {
+                                                "blurb": "Black menolak memakan Knight dan menyelamatkan Rook dengan 6...Rg8.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Nxd8! Rebut Queen lawan seketika.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "King memakan kembali di d8.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Bc4+! Skak tempo sekaligus menyerang Rook g8.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "d3c4",
+                                                            "san": "Bc4+"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.9,
+                                                        "move": "e8d8",
+                                                        "san": "Kxd8"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "f7d8",
+                                                    "san": "Nxd8"
+                                                  }
+                                                ],
+                                                "human_freq": 0.1,
+                                                "move": "h8g8",
+                                                "san": "Rg8"
+                                              },
+                                              {
+                                                "blurb": "Black mencoba serangan balik dengan 6...Qd5 menyerang g2.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Nxh8! Ambil Rook di h8 sembari tetap unggul material.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Queen Black memakan pion di g2.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Bg6+! Skak krusial membelah pertahanan King lawan.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "d3g6",
+                                                            "san": "Bg6+"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.85,
+                                                        "move": "d5g2",
+                                                        "san": "Qxg2"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "f7h8",
+                                                    "san": "Nxh8"
+                                                  }
+                                                ],
+                                                "human_freq": 0.05,
+                                                "move": "d8d5",
+                                                "san": "Qd5"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "g5f7",
+                                            "san": "Nxf7"
+                                          }
+                                        ],
+                                        "human_freq": 0.52,
+                                        "move": "h7h6",
+                                        "san": "h6"
+                                      },
+                                      {
+                                        "blurb": "Black mengembangkan Bishop aktif ke g4 mempin Queen d1.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.f3! Usir Bishop lawan dan rebut inisiatif.",
+                                            "children": [
+                                              {
+                                                "blurb": "Bishop mundur ke h5.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.g4! Dorong terus perwira Black keluar dari posisi aktif.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Bishop mundur ke g6.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Bxg6! Bongkar struktur pion sayap raja lawan.",
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Pertukaran Queen.",
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Kxd1! Recapture dengan King.",
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Black memakan kembali di g6.",
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.Ne6! Menyerang petak c7 dan mengurung posisi Black.",
+                                                                            "children": [],
+                                                                            "human_freq": 0.0,
+                                                                            "move": "g5e6",
+                                                                            "san": "Ne6"
+                                                                          }
+                                                                        ],
+                                                                        "human_freq": 0.9,
+                                                                        "move": "f7g6",
+                                                                        "san": "fxg6"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.0,
+                                                                    "move": "e1d1",
+                                                                    "san": "Kxd1"
+                                                                  }
+                                                                ],
+                                                                "human_freq": 0.75,
+                                                                "move": "d8d1",
+                                                                "san": "Qxd1+"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.0,
+                                                            "move": "d3g6",
+                                                            "san": "Bxg6"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.8,
+                                                        "move": "h5g6",
+                                                        "san": "Bg6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "g2g4",
+                                                    "san": "g4"
+                                                  }
+                                                ],
+                                                "human_freq": 0.7,
+                                                "move": "g4h5",
+                                                "san": "Bh5"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "f2f3",
+                                            "san": "f3"
+                                          }
+                                        ],
+                                        "human_freq": 0.2,
+                                        "move": "c8g4",
+                                        "san": "Bg4"
+                                      },
+                                      {
+                                        "blurb": "Black memilih langkah defensif solid 5...e6.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nxe4! Amankan kembali pion dengan posisi perwira sentral yang superior.",
+                                            "children": [
+                                              {
+                                                "blurb": "Black bersiap melakukan castling.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Nc3! Kembangkan seluruh perwira minor ke petak ideal.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Black castling kingside.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.O-O! Putih mengamankan King dengan posisi menyerang yang sangat nyaman.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "e1g1",
+                                                            "san": "O-O"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.8,
+                                                        "move": "e8g8",
+                                                        "san": "O-O"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "b1c3",
+                                                    "san": "Nbc3"
+                                                  }
+                                                ],
+                                                "human_freq": 0.7,
+                                                "move": "f8e7",
+                                                "san": "Be7"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "g5e4",
+                                            "san": "Ne4"
+                                          }
+                                        ],
+                                        "human_freq": 0.15,
+                                        "move": "e7e6",
+                                        "san": "e6"
+                                      },
+                                      {
+                                        "blurb": "Black mengembangkan Knight ke c6.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nxe4! Ambil pion di e4 dan kuasai petak pusat.",
+                                            "children": [
+                                              {
+                                                "blurb": "Black mendorong e5 menantang center.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Nc3! Perkuat kontrol diagonal d5 dan e4.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Black mengembangkan Bishop.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.O-O! Castling aman dengan keunggulan koordinasi perwira.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "e1g1",
+                                                            "san": "O-O"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.75,
+                                                        "move": "f8e7",
+                                                        "san": "Be7"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "b1c3",
+                                                    "san": "Nbc3"
+                                                  }
+                                                ],
+                                                "human_freq": 0.65,
+                                                "move": "e7e5",
+                                                "san": "e5"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "g5e4",
+                                            "san": "Ne4"
+                                          }
+                                        ],
+                                        "human_freq": 0.13,
+                                        "move": "b8c6",
+                                        "san": "Nc6"
+                                      }
+                                    ],
+                                    "human_freq": 0.0,
+                                    "move": "f1d3",
+                                    "san": "Bxd3"
+                                  }
+                                ],
+                                "human_freq": 0.75,
+                                "move": "e4d3",
+                                "san": "exd3"
+                              },
+                              {
+                                "blurb": "Black mencoba mempertahankan pion dengan 4...Bf5.",
+                                "children": [
+                                  {
+                                    "blurb": "5.Nc3! Tambah tekanan pada pion e4.",
+                                    "children": [
+                                      {
+                                        "blurb": "Black memakan pion di d3.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Qf3! Menyerang Bishop f5 sekaligus membidik pion b7.",
+                                            "children": [
+                                              {
+                                                "blurb": "Black mundur ke c8 untuk menjaga perwira.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Bxd3! Ambil pion di d3 dan dominasi diagonal utama.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Pertukaran Bishop di d3.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Qxd3! Recapture dengan Queen, mendominasi sentral secara mutlak.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "f3d3",
+                                                            "san": "Qxd3"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.8,
+                                                        "move": "f5d3",
+                                                        "san": "Bxd3"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "f1d3",
+                                                    "san": "Bxd3"
+                                                  }
+                                                ],
+                                                "human_freq": 0.7,
+                                                "move": "d8c8",
+                                                "san": "Qc8"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "d1f3",
+                                            "san": "Qf3"
+                                          }
+                                        ],
+                                        "human_freq": 0.75,
+                                        "move": "e4d3",
+                                        "san": "exd3"
+                                      }
+                                    ],
+                                    "human_freq": 0.0,
+                                    "move": "b1c3",
+                                    "san": "Nc3"
+                                  }
+                                ],
+                                "human_freq": 0.15,
+                                "move": "c8f5",
+                                "san": "Bf5"
+                              },
+                              {
+                                "blurb": "Black memilih mendorong 4...e5.",
+                                "children": [
+                                  {
+                                    "blurb": "5.Nxe4! Rebut pion kembali.",
+                                    "children": [
+                                      {
+                                        "blurb": "Black menukar Knight di e4.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.dxe4! Buka jalur d-file.",
+                                            "children": [
+                                              {
+                                                "blurb": "Black menukar Queen.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Kxd1! Raja aktif di fase endgame tanpa ancaman lawan.",
+                                                    "children": [],
+                                                    "human_freq": 0.0,
+                                                    "move": "e1d1",
+                                                    "san": "Kxd1"
+                                                  }
+                                                ],
+                                                "human_freq": 0.8,
+                                                "move": "d8d1",
+                                                "san": "Qxd1+"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "d3e4",
+                                            "san": "dxe4"
+                                          }
+                                        ],
+                                        "human_freq": 0.7,
+                                        "move": "f6e4",
+                                        "san": "Nxe4"
+                                      }
+                                    ],
+                                    "human_freq": 0.0,
+                                    "move": "g5e4",
+                                    "san": "Nxe4"
+                                  }
+                                ],
+                                "human_freq": 0.1,
+                                "move": "e7e5",
+                                "san": "e5"
+                              }
+                            ],
+                            "human_freq": 0.0,
+                            "move": "d2d3",
+                            "san": "d3"
+                          },
+                          {
+                            "blurb": "4.Bc4! Alternatif agresif langsung mengincar titik f7.",
+                            "children": [
+                              {
+                                "blurb": "Black menutup diagonal dengan 4...e6.",
+                                "children": [
+                                  {
+                                    "blurb": "5.Nc3! Kembangkan Knight menambah tekanan ke e4.",
+                                    "children": [
+                                      {
+                                        "blurb": "Black bersiap castling.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nxe4! Amankan pion e4 dengan posisi perwira sangat aktif.",
+                                            "children": [
+                                              {
+                                                "blurb": "Black castling kingside.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.O-O! Putih mengamankan posisi dengan kontrol ruang yang solid.",
+                                                    "children": [],
+                                                    "human_freq": 0.0,
+                                                    "move": "e1g1",
+                                                    "san": "O-O"
+                                                  }
+                                                ],
+                                                "human_freq": 0.85,
+                                                "move": "e8g8",
+                                                "san": "O-O"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "g5e4",
+                                            "san": "Ngxe4"
+                                          }
+                                        ],
+                                        "human_freq": 0.75,
+                                        "move": "f8e7",
+                                        "san": "Be7"
+                                      }
+                                    ],
+                                    "human_freq": 0.0,
+                                    "move": "b1c3",
+                                    "san": "Nc3"
+                                  }
+                                ],
+                                "human_freq": 0.7,
+                                "move": "e7e6",
+                                "san": "e6"
+                              }
+                            ],
+                            "human_freq": 0.0,
+                            "move": "f1c4",
+                            "san": "Bc4"
+                          }
+                        ],
+                        "human_freq": 0.65,
+                        "move": "g8f6",
+                        "san": "Nf6"
+                      },
+                      {
+                        "blurb": "Black mengembangkan 3...Bf5 untuk mempertahankan pion e4.",
+                        "children": [
+                          {
+                            "blurb": "4.Nc3! Tambah tekanan pada pion e4.",
+                            "children": [
+                              {
+                                "blurb": "Black mendukung dengan 4...Nf6.",
+                                "children": [
+                                  {
+                                    "blurb": "5.Qe2! Serang pion e4 tiga kali.",
+                                    "children": [
+                                      {
+                                        "blurb": "Black memperkuat posisi dengan 5...c6.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Ngxe4! Rebut pion kembali.",
+                                            "children": [
+                                              {
+                                                "blurb": "Pertukaran Knight.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Nxe4! Dominasi petak tengah catur.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Black membuka diagonal Bishop.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.d3! Posisi harmonis dengan ruang gerak terbuka.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "d2d3",
+                                                            "san": "d3"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.85,
+                                                        "move": "e7e6",
+                                                        "san": "e6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "c3e4",
+                                                    "san": "Nxe4"
+                                                  }
+                                                ],
+                                                "human_freq": 0.8,
+                                                "move": "f6e4",
+                                                "san": "Nxe4"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "g5e4",
+                                            "san": "Ngxe4"
+                                          }
+                                        ],
+                                        "human_freq": 0.5,
+                                        "move": "c7c6",
+                                        "san": "c6"
+                                      },
+                                      {
+                                        "blurb": "Black memainkan 5...e6?",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Qb5+! Double attack mematikan menyerang King dan Bishop f5/pion b7.",
+                                            "children": [
+                                              {
+                                                "blurb": "Black menutup skak dengan Knight.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Qxb7! Rebut pion b7 dan ancam Rook a8.",
+                                                    "children": [],
+                                                    "human_freq": 0.0,
+                                                    "move": "b5b7",
+                                                    "san": "Qxb7"
+                                                  }
+                                                ],
+                                                "human_freq": 0.75,
+                                                "move": "b8d7",
+                                                "san": "Nbd7"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "e2b5",
+                                            "san": "Qb5+"
+                                          }
+                                        ],
+                                        "human_freq": 0.4,
+                                        "move": "e7e6",
+                                        "san": "e6"
+                                      }
+                                    ],
+                                    "human_freq": 0.0,
+                                    "move": "d1e2",
+                                    "san": "Qe2"
+                                  }
+                                ],
+                                "human_freq": 0.75,
+                                "move": "g8f6",
+                                "san": "Nf6"
+                              }
+                            ],
+                            "human_freq": 0.0,
+                            "move": "b1c3",
+                            "san": "Nc3"
+                          }
+                        ],
+                        "human_freq": 0.18,
+                        "move": "c8f5",
+                        "san": "Bf5"
+                      },
+                      {
+                        "blurb": "Black mencoba menyerang center dengan 3...e5.",
+                        "children": [
+                          {
+                            "blurb": "4.Nxe4! Amankan pion e4.",
+                            "children": [
+                              {
+                                "blurb": "Black mendorong pion f5 menyerang Knight.",
+                                "children": [
+                                  {
+                                    "blurb": "5.Ng3! Knight mundur ke g3 membidik pion lemah f5.",
+                                    "children": [
+                                      {
+                                        "blurb": "Black menjaga pion f5 dengan Bishop.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.d4! Pukul balik sentral papan catur.",
+                                            "children": [],
+                                            "human_freq": 0.0,
+                                            "move": "d2d4",
+                                            "san": "d4"
+                                          }
+                                        ],
+                                        "human_freq": 0.7,
+                                        "move": "c8e6",
+                                        "san": "Be6"
+                                      }
+                                    ],
+                                    "human_freq": 0.0,
+                                    "move": "e4g3",
+                                    "san": "Ng3"
+                                  }
+                                ],
+                                "human_freq": 0.6,
+                                "move": "f7f5",
+                                "san": "f5"
+                              }
+                            ],
+                            "human_freq": 0.0,
+                            "move": "g5e4",
+                            "san": "Nxe4"
+                          }
+                        ],
+                        "human_freq": 0.08,
+                        "move": "e7e5",
+                        "san": "e5"
+                      },
+                      {
+                        "blurb": "Black mencoba mempertahankan pion dengan 3...f5.",
+                        "children": [
+                          {
+                            "blurb": "4.Bc4! Manfaatkan petak diagonal a2-g8 yang terbuka dan serang e6.",
+                            "children": [
+                              {
+                                "blurb": "Black terpaksa menaruh Knight di h6 untuk menjaga f7.",
+                                "children": [
+                                  {
+                                    "blurb": "5.d3! Buka file untuk Queen dan Bishop.",
+                                    "children": [
+                                      {
+                                        "blurb": "Black memakan pion di d3.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.O-O! Amankan Raja dan siapkan Re1 dengan inisiatif serang tak terbendung.",
+                                            "children": [],
+                                            "human_freq": 0.0,
+                                            "move": "e1g1",
+                                            "san": "O-O"
+                                          }
+                                        ],
+                                        "human_freq": 0.75,
+                                        "move": "e4d3",
+                                        "san": "exd3"
+                                      }
+                                    ],
+                                    "human_freq": 0.0,
+                                    "move": "d2d3",
+                                    "san": "d3"
+                                  }
+                                ],
+                                "human_freq": 0.7,
+                                "move": "g8h6",
+                                "san": "Nh6"
+                              }
+                            ],
+                            "human_freq": 0.0,
+                            "move": "f1c4",
+                            "san": "Bc4"
+                          }
+                        ],
+                        "human_freq": 0.05,
+                        "move": "f7f5",
+                        "san": "f5"
+                      },
+                      {
+                        "blurb": "Black membawa keluar Queen dengan 3...Qd5.",
+                        "children": [
+                          {
+                            "blurb": "4.d3! Umpan pion agar perwira White melesat keluar.",
+                            "children": [
+                              {
+                                "blurb": "Black memakan di d3.",
+                                "children": [
+                                  {
+                                    "blurb": "5.Bxd3! Kembangkan perwira sambil membuka tempo serang.",
+                                    "children": [
+                                      {
+                                        "blurb": "Black serakah memakan pion g2.",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Be4! Lindungi Benteng dan jebak Queen lawan.",
+                                            "children": [
+                                              {
+                                                "blurb": "Black menukar Queen.",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Qxg4! Habisi Queen Black.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Bishop memakan di g4.",
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Bxb7! Menangkan Rook a8 dengan keunggulan perwira bersih.",
+                                                            "children": [],
+                                                            "human_freq": 0.0,
+                                                            "move": "e4b7",
+                                                            "san": "Bxb7"
+                                                          }
+                                                        ],
+                                                        "human_freq": 0.9,
+                                                        "move": "c8g4",
+                                                        "san": "Bxg4"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.0,
+                                                    "move": "d1g4",
+                                                    "san": "Qxg4"
+                                                  }
+                                                ],
+                                                "human_freq": 0.8,
+                                                "move": "g2g4",
+                                                "san": "Qg4"
+                                              }
+                                            ],
+                                            "human_freq": 0.0,
+                                            "move": "d3e4",
+                                            "san": "Be4"
+                                          }
+                                        ],
+                                        "human_freq": 0.75,
+                                        "move": "d5g2",
+                                        "san": "Qxg2"
+                                      }
+                                    ],
+                                    "human_freq": 0.0,
+                                    "move": "f1d3",
+                                    "san": "Bxd3"
+                                  }
+                                ],
+                                "human_freq": 0.8,
+                                "move": "e4d3",
+                                "san": "exd3"
+                              }
+                            ],
+                            "human_freq": 0.0,
+                            "move": "d2d3",
+                            "san": "d3"
+                          }
+                        ],
+                        "human_freq": 0.04,
+                        "move": "d8d5",
+                        "san": "Qd5"
+                      }
+                    ],
+                    "human_freq": 0.0,
+                    "move": "f3g5",
+                    "san": "Ng5"
+                  }
+                ],
+                "human_freq": 0.88,
+                "move": "d5e4",
+                "san": "dxe4"
+              }
+            ],
+            "human_freq": 0.0,
+            "move": "g1f3",
+            "san": "Nf3"
+          }
+        ],
+        "human_freq": 0.72,
+        "move": "d7d5",
+        "san": "d5"
+      }
+    ],
+    "human_freq": 0.0,
+    "move": "e2e4",
+    "san": "e4"
+  }
+}
