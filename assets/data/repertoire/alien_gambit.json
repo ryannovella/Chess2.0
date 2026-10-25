@@ -224,7 +224,7 @@
                                                                           {
                                                                             "move": "e5g6",
                                                                             "san": "Ng6",
-                                                                            "blurb": "Fork e7 Bishop dan h8 Rook untuk memenangkan back material dengan interest!"
+                                                                            "blurb": "Fork Bishop e7 dan Rook h8 untuk merebut kembali material dengan keuntungan besar!"
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.6041
@@ -237,7 +237,7 @@
                                                               {
                                                                 "move": "f8b4",
                                                                 "san": "Bb4+",
-                                                                "blurb": "Langkah Pemain Maia-3 (11.7%): Black throws di a check di b4.",
+                                                                "blurb": "Langkah Pemain Maia-3 (11.7%): Black melancarkan skak di b4.",
                                                                 "children": [
                                                                   {
                                                                     "move": "c2c3",
@@ -389,7 +389,7 @@
                                                                           {
                                                                             "move": "g2g4",
                                                                             "san": "g4",
-                                                                            "blurb": "Jebak f5 Bishop atau memenangkan back piece di g4!"
+                                                                            "blurb": "Jebak Bishop f5 atau rebut kembali perwira di g4!"
                                                                           }
                                                                         ],
                                                                         "human_freq": 0.4939
@@ -542,7 +542,7 @@
                                         "move": "h7h6",
                                         "san": "h6",
                                         "is_blunder": true,
-                                        "blurb": "Langkah Populer Maia-3 #1 (28.7%): pemain klub reflexively dorong h6, falling untuk devastating tactical fork!",
+                                        "blurb": "Langkah Populer Maia-3 #1 (28.7%): Pemain klub secara refleks mendorong h6, terjebak ke dalam tactical fork mematikan!",
                                         "children": [
                                           {
                                             "move": "g5f7",
@@ -556,7 +556,7 @@
                                                   {
                                                     "move": "d1f3",
                                                     "san": "Qf3",
-                                                    "blurb": "Double attack di f5 Bishop dan f7 King! White memenangkan back piece atau a bersih pawn dengan terbuka Black King.",
+                                                    "blurb": "Double attack pada Bishop f5 dan King f7! White merebut kembali perwira atau unggul satu pawn bersih selagi King Black terbuka.",
                                                     "children": [
                                                       {
                                                         "move": "e7e6",
@@ -644,7 +644,7 @@
                                           {
                                             "move": "f1c4",
                                             "san": "Bc4",
-                                            "blurb": "Paksa Black untuk melangkah e6, locking di c8 Bishop.",
+                                            "blurb": "Paksa Black untuk melangkah e6, mengurung Bishop c8.",
                                             "children": [
                                               {
                                                 "move": "e7e6",
@@ -745,12 +745,12 @@
                       {
                         "move": "e7e6",
                         "san": "e6",
-                        "blurb": "Maia-3 Top #3 langkah manusia di langkah 3 (8.1%): French-style setup locking di c8 Bishop.",
+                        "blurb": "Maia-3 Top #3 langkah manusia di langkah 3 (8.1%): Setup ala French Defense yang mengurung Bishop c8.",
                         "children": [
                           {
                             "move": "g1f3",
                             "san": "Nf3",
-                            "blurb": "Develop smoothly dan maintain central tension."
+                            "blurb": "Kembangkan perwira dengan mulus dan pertahankan ketegangan di sentral."
                           }
                         ],
                         "human_freq": 0.0808

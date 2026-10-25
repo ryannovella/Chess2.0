@@ -13,7 +13,7 @@
       {
         "move": "e7e5",
         "san": "e5",
-        "blurb": "Stake a kuasai di center dan invite 2.Nf3.",
+        "blurb": "Rebut penguasaan di center dan undang 2.Nf3.",
         "children": [
           {
             "move": "g1f3",
@@ -236,7 +236,7 @@
                                       {
                                         "move": "d5e5",
                                         "san": "Qe5",
-                                        "blurb": "Jaga Queen di center dan Dukung e4 wedge.",
+                                        "blurb": "Pertahankan Queen di center dan perkuat pasak pawn e4.",
                                         "children": [
                                           {
                                             "move": "f1c4",
@@ -246,7 +246,7 @@
                                               {
                                                 "move": "g8f6",
                                                 "san": "Nf6",
-                                                "blurb": "Develop Knight dan bersiap Bd6 plus O-O dengan huge lead di tempo."
+                                                "blurb": "Kembangkan Knight dan bersiap Bd6 serta O-O dengan keunggulan tempo yang masif."
                                               }
                                             ]
                                           }
@@ -267,7 +267,7 @@
                               {
                                 "move": "d8d5",
                                 "san": "Qxd5",
-                                "blurb": "Centralize Queen dan Fork e5 Knight dan e4 Dukung.",
+                                "blurb": "Pusatkan Queen dan fork Knight e5 serta pawn e4.",
                                 "children": [
                                   {
                                     "move": "d2d4",
@@ -317,7 +317,7 @@
                             "move": "f1b5",
                             "san": "Bb5+",
                             "human_freq": 0.0168,
-                            "blurb": "White throws di a check sebelum moving attacked f3 Knight.",
+                            "blurb": "White melancarkan skak sebelum memindahkan Knight f3 yang diserang.",
                             "children": [
                               {
                                 "move": "c7c6",
@@ -571,7 +571,7 @@
                                                               {
                                                                 "move": "f6g4",
                                                                 "san": "Ng4",
-                                                                "blurb": "Lompat ke g4 untuk memenangkan back lemah e5 pawn."
+                                                                "blurb": "Lompat ke g4 untuk merebut kembali pawn e5 yang lemah."
                                                               }
                                                             ]
                                                           }

@@ -502,7 +502,7 @@
                                                                                   {
                                                                                     "move": "d2d4",
                                                                                     "san": "d4",
-                                                                                    "blurb": "Dukung Knight dan paksa an en passant release dari tension.",
+                                                                                    "blurb": "Perkuat Knight dan paksa pelepasan ketegangan lewat en passant.",
                                                                                     "children": [
                                                                                       {
                                                                                         "move": "e4d3",
@@ -1017,7 +1017,7 @@
                                           {
                                             "move": "d1d4",
                                             "san": "Qxd4",
-                                            "blurb": "Centralize Queen di d4 di mana it cannot be chased oleh Nc6."
+                                            "blurb": "Pusatkan Queen di d4 di mana perwira tersebut tidak dapat diusir oleh Nc6."
                                           }
                                         ],
                                         "human_freq": 0.5103
@@ -1035,7 +1035,7 @@
                       {
                         "move": "d7d6",
                         "san": "d6",
-                        "blurb": "Langkah Populer Maia-3 #4 (7.2%): Semi-Italian defense, memperkokoh e5 tetapi locking di dark-squared Bishop.",
+                        "blurb": "Langkah Populer Maia-3 #4 (7.2%): Pertahanan Semi-Italian, memperkokoh e5 tetapi mengurung dark-squared Bishop.",
                         "children": [
                           {
                             "move": "d2d4",
