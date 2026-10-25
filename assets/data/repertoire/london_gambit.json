@@ -1,0 +1,733 @@
+{
+  "id": "london_gambit",
+  "name": "London Gambit",
+  "eco": "D00",
+  "color": "white",
+  "description": "Pilihan tajam Jobava-London (3.Nc3), attack b7 (3.c4), dan Morris Gambit (3.e4!) dalam sistem 2.Bf4.",
+  "root": {
+    "move": "d2d4",
+    "san": "d4",
+    "blurb": "Buka permainan dengan Queen pawn.",
+    "children": [
+      {
+        "move": "d7d5",
+        "san": "d5",
+        "children": [
+          {
+            "move": "c1f4",
+            "san": "Bf4",
+            "children": [
+              {
+                "move": "g8f6",
+                "san": "Nf6",
+                "children": [
+                  {
+                    "move": "b1c3",
+                    "san": "Nc3",
+                    "children": [
+                      {
+                        "move": "e7e6",
+                        "san": "e6",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "b8a6",
+                                "san": "Na6",
+                                "children": [
+                                  {
+                                    "move": "e2e3",
+                                    "san": "e3",
+                                    "children": [
+                                      {
+                                        "move": "c7c6",
+                                        "san": "c6",
+                                        "children": [
+                                          {
+                                            "move": "b5c3",
+                                            "san": "Nc3",
+                                            "blurb": "Mundur ke c3; kini Knight a6 milik Black terdampar di pinggir papan!"
+                                          }
+                                        ],
+                                        "blurb": "Black mengusir Knight b5.",
+                                        "human_freq": 0.6279
+                                      }
+                                    ],
+                                    "blurb": "Perkokoh d4 dan bersiap melangkah c3 serta Nf3 selagi Knight Black salah posisi di a6."
+                                  }
+                                ],
+                                "blurb": "Black mempertahankan c7 dengan Na6 di rim.",
+                                "human_freq": 0.4085
+                              }
+                            ],
+                            "blurb": "Melompat ke b5 dan mengancam Nxc7+ untuk mem-fork King dan Rook!"
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #1 (29.8%): Black memainkan e6, membiarkan c7 rentan ke Nb5.",
+                        "human_freq": 0.2978
+                      },
+                      {
+                        "move": "b8c6",
+                        "san": "Nc6",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "e7e5",
+                                "san": "e5",
+                                "children": [
+                                  {
+                                    "move": "d4e5",
+                                    "san": "dxe5",
+                                    "children": [
+                                      {
+                                        "move": "f6h5",
+                                        "san": "Nh5",
+                                        "children": [
+                                          {
+                                            "move": "e2e3",
+                                            "san": "e3",
+                                            "blurb": "Melindungi f4 Bishop via Queen dan mengancam Qxh5 atau e6!"
+                                          }
+                                        ],
+                                        "blurb": "Black attack f4 Bishop.",
+                                        "human_freq": 0.4178
+                                      }
+                                    ],
+                                    "blurb": "Capture e5 pawn dengan tempo di f6 Knight!"
+                                  }
+                                ],
+                                "blurb": "Black mencoba counter-sacrifice dengan e5.",
+                                "human_freq": 0.8126
+                              }
+                            ],
+                            "blurb": "Serang c7 segera! Black tidak punya cara bagus untuk menjaga c7 tanpa kerugian posisi."
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #2 (19.9%): Black mendevelop Nc6, allowing a deadly Nb5!",
+                        "human_freq": 0.1985
+                      },
+                      {
+                        "move": "c8f5",
+                        "san": "Bf5",
+                        "children": [
+                          {
+                            "move": "f2f3",
+                            "san": "f3",
+                            "children": [
+                              {
+                                "move": "e7e6",
+                                "san": "e6",
+                                "children": [
+                                  {
+                                    "move": "g2g4",
+                                    "san": "g4",
+                                    "children": [
+                                      {
+                                        "move": "f5g6",
+                                        "san": "Bg6",
+                                        "children": [
+                                          {
+                                            "move": "h2h4",
+                                            "san": "h4",
+                                            "blurb": "Mengancam h5 trapping g6 Bishop!"
+                                          }
+                                        ],
+                                        "blurb": "Black mundur ke g6.",
+                                        "human_freq": 0.9366
+                                      }
+                                    ],
+                                    "blurb": "Luncurkan bayonet attack melawan f5 Bishop!"
+                                  }
+                                ],
+                                "blurb": "Black memainkan e6.",
+                                "human_freq": 0.6405
+                              }
+                            ],
+                            "blurb": "Bersiap e4 dan g4 ke jebakan atau harass f5 Bishop!"
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #3 (18.1%): Symmetrical Bf5.",
+                        "human_freq": 0.1811
+                      },
+                      {
+                        "move": "a7a6",
+                        "san": "a6",
+                        "children": [
+                          {
+                            "move": "e2e3",
+                            "san": "e3",
+                            "children": [
+                              {
+                                "move": "e7e6",
+                                "san": "e6",
+                                "children": [
+                                  {
+                                    "move": "g2g4",
+                                    "san": "g4",
+                                    "blurb": "Launch a direct kingside pawn storm!"
+                                  }
+                                ],
+                                "blurb": "Black memainkan e6.",
+                                "human_freq": 0.2564
+                              }
+                            ],
+                            "blurb": "Buka f1 Bishop dan bersiap Nf3-Ne5."
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #4 (10.1%): Black mencegah Nb5 dengan a6.",
+                        "human_freq": 0.1011
+                      },
+                      {
+                        "move": "c7c6",
+                        "san": "c6",
+                        "children": [
+                          {
+                            "move": "e2e3",
+                            "san": "e3",
+                            "children": [
+                              {
+                                "move": "c8f5",
+                                "san": "Bf5",
+                                "children": [
+                                  {
+                                    "move": "f1d3",
+                                    "san": "Bd3",
+                                    "children": [
+                                      {
+                                        "move": "f5d3",
+                                        "san": "Bxd3",
+                                        "children": [
+                                          {
+                                            "move": "d1d3",
+                                            "san": "Qxd3",
+                                            "blurb": "Recapture dengan Queen dan bersiap Nge2 plus O-O-O."
+                                          }
+                                        ],
+                                        "blurb": "Black menukar di d3.",
+                                        "human_freq": 0.4621
+                                      }
+                                    ],
+                                    "blurb": "Tantangan f5 Bishop."
+                                  }
+                                ],
+                                "blurb": "Black mendevelop Bf5.",
+                                "human_freq": 0.3609
+                              }
+                            ],
+                            "blurb": "Mainkan e3 dan bersiap memainkan Bd3 untuk menukar light-squared Bishop Black."
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #5 (8.5%): Black guards b5 dan c7 dengan c6.",
+                        "human_freq": 0.0846
+                      }
+                    ],
+                    "blurb": "Jobava-London attack! mengancam Nb5 menargetkan c7 petak."
+                  }
+                ],
+                "blurb": "Langkah Populer Maia-3 #1 (26.1%): Black mendevelop King Knight.",
+                "human_freq": 0.2609
+              },
+              {
+                "move": "b8c6",
+                "san": "Nc6",
+                "children": [
+                  {
+                    "move": "b1c3",
+                    "san": "Nc3",
+                    "children": [
+                      {
+                        "move": "g8f6",
+                        "san": "Nf6",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "e7e5",
+                                "san": "e5",
+                                "children": [
+                                  {
+                                    "move": "d4e5",
+                                    "san": "dxe5",
+                                    "blurb": "Capture di e5 dan serang Knight f6 dengan posisi menang."
+                                  }
+                                ],
+                                "blurb": "Black desperately mendorong e5.",
+                                "human_freq": 0.8134
+                              }
+                            ],
+                            "blurb": "Infiltrasi di b5! c7 pawn cannot be defended oleh a pawn atau Bishop."
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #1 (34.4%): Black mendevelop Nf6.",
+                        "human_freq": 0.3615
+                      },
+                      {
+                        "move": "c8f5",
+                        "san": "Bf5",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "a8c8",
+                                "san": "Rc8",
+                                "children": [
+                                  {
+                                    "move": "e2e3",
+                                    "san": "e3",
+                                    "blurb": "Konsolidasi posisi dengan e3 dan bersiap melangkah c4 untuk memanfaatkan salah posisi Rook Black."
+                                  }
+                                ],
+                                "blurb": "Black awkwardly mempertahankan c7 dengan Rc8.",
+                                "human_freq": 0.3471
+                              }
+                            ],
+                            "blurb": "Lompat ke b5 dan paksa Black untuk melangkah Rook ke c8!"
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #2 (31.6%): Black mendevelop Bf5.",
+                        "human_freq": 0.1927
+                      },
+                      {
+                        "move": "e7e6",
+                        "san": "e6",
+                        "children": [
+                          {
+                            "move": "c3b5",
+                            "san": "Nb5",
+                            "children": [
+                              {
+                                "move": "f8d6",
+                                "san": "Bd6",
+                                "children": [
+                                  {
+                                    "move": "b5d6",
+                                    "san": "Nxd6+",
+                                    "children": [
+                                      {
+                                        "move": "c7d6",
+                                        "san": "cxd6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Nf3",
+                                            "blurb": "Develop Nf3 dengan Bishop pair dan superior struktur pawn."
+                                          }
+                                        ],
+                                        "blurb": "Black recapture.",
+                                        "human_freq": 0.9947
+                                      }
+                                    ],
+                                    "blurb": "Habisi dark-squared Bishop Black dan hancurkan struktur pawn lawan!"
+                                  }
+                                ],
+                                "blurb": "Black memblokir c7 attack dengan Bd6.",
+                                "human_freq": 0.8124
+                              }
+                            ],
+                            "blurb": "Attack c7 dan paksa Bd6."
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #3 (10.8%): Black memainkan e6.",
+                        "human_freq": 0.1602
+                      }
+                    ],
+                    "blurb": "Develop Nc3 dan mengancam Nb5 menyerang yang tanpa penjagaan c7 petak!"
+                  }
+                ],
+                "blurb": "Langkah Populer Maia-3 #2 (25.0%): pemain klub love mendevelop 2...Nc6, memblokir their c-pawn!",
+                "is_blunder": true,
+                "human_freq": 0.25
+              },
+              {
+                "move": "e7e6",
+                "san": "e6",
+                "children": [
+                  {
+                    "move": "e2e3",
+                    "san": "e3",
+                    "children": [
+                      {
+                        "move": "f8d6",
+                        "san": "Bd6",
+                        "children": [
+                          {
+                            "move": "f4g3",
+                            "san": "Bg3",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "b1d2",
+                                    "san": "Nd2",
+                                    "children": [
+                                      {
+                                        "move": "e8g8",
+                                        "san": "O-O",
+                                        "children": [
+                                          {
+                                            "move": "f1d3",
+                                            "san": "Bd3",
+                                            "blurb": "Establish classic London battery mengincar h7."
+                                          }
+                                        ],
+                                        "blurb": "Black castling.",
+                                        "human_freq": 0.4153
+                                      }
+                                    ],
+                                    "blurb": "Develop Nd2 untuk mengontrol e4 dan c4."
+                                  }
+                                ],
+                                "blurb": "Black mendevelop Nf6.",
+                                "human_freq": 0.3583
+                              }
+                            ],
+                            "blurb": "Amankan Bishop mundur ke g3! Jika Bxg3, maka hxg3 akan membuka h-file untuk Rook White."
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #1 (34.0%): Black tantangan f4 Bishop segera.",
+                        "human_freq": 0.3396
+                      },
+                      {
+                        "move": "g8f6",
+                        "san": "Nf6",
+                        "children": [
+                          {
+                            "move": "b1d2",
+                            "san": "Nd2",
+                            "children": [
+                              {
+                                "move": "c7c5",
+                                "san": "c5",
+                                "children": [
+                                  {
+                                    "move": "c2c3",
+                                    "san": "c3",
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "g1f3",
+                                            "san": "Ngf3",
+                                            "blurb": "Tempatkan Knight di f3 dan bersiap memainkan Bd3 serta Ne5."
+                                          }
+                                        ],
+                                        "blurb": "Black mendevelop Nc6.",
+                                        "human_freq": 0.488
+                                      }
+                                    ],
+                                    "blurb": "Complete rock-solid d4-c3-e3 London triangle."
+                                  }
+                                ],
+                                "blurb": "Black strikes di d4.",
+                                "human_freq": 0.1891
+                              }
+                            ],
+                            "blurb": "Develop Nd2 untuk mencegah Ne4."
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #2 (24.6%): Black mendevelop Nf6.",
+                        "human_freq": 0.246
+                      },
+                      {
+                        "move": "c7c5",
+                        "san": "c5",
+                        "children": [
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "children": [
+                                  {
+                                    "move": "c3b5",
+                                    "san": "Nb5",
+                                    "blurb": "Mengancam Nc7+ forking King dan Rook!"
+                                  }
+                                ],
+                                "blurb": "Black mendevelop Nc6.",
+                                "human_freq": 0.3084
+                              }
+                            ],
+                            "blurb": "Beralih ke rencana Jobava-London Nc3-Nb5 setelah c5 membuat petak d6 dan c7 melemah!"
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #3 (14.6%): Immediate c5 tantangan.",
+                        "human_freq": 0.1464
+                      }
+                    ],
+                    "blurb": "Build London pyramid dan buka f1 Bishop."
+                  }
+                ],
+                "blurb": "Langkah Populer Maia-3 #3 (17.9%): solid e6 setup.",
+                "human_freq": 0.1785
+              },
+              {
+                "move": "c8f5",
+                "san": "Bf5",
+                "children": [
+                  {
+                    "move": "c2c4",
+                    "san": "c4",
+                    "children": [
+                      {
+                        "move": "e7e6",
+                        "san": "e6",
+                        "children": [
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "d1b3",
+                                    "san": "Qb3",
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "c4c5",
+                                            "san": "c5",
+                                            "blurb": "Kunci sayap queenside dan letakkan pawn b7 Black di bawah tekanan fatal!"
+                                          }
+                                        ],
+                                        "blurb": "Black counter-attack d4.",
+                                        "human_freq": 0.0978
+                                      }
+                                    ],
+                                    "blurb": "Double attack di b7 dan d5!"
+                                  }
+                                ],
+                                "blurb": "Black mendevelop Nf6.",
+                                "human_freq": 0.2703
+                              }
+                            ],
+                            "blurb": "Increase tekanan di d5 dan bersiap Qb3."
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #1 (39.8%): Black supports d5 dengan e6.",
+                        "human_freq": 0.3983
+                      },
+                      {
+                        "move": "d5c4",
+                        "san": "dxc4",
+                        "children": [
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "f2f3",
+                                    "san": "f3",
+                                    "children": [
+                                      {
+                                        "move": "e7e6",
+                                        "san": "e6",
+                                        "children": [
+                                          {
+                                            "move": "e2e4",
+                                            "san": "e4",
+                                            "blurb": "Overrun center dengan tempo melawan f5 Bishop!"
+                                          }
+                                        ],
+                                        "blurb": "Black memainkan e6.",
+                                        "human_freq": 0.5234
+                                      }
+                                    ],
+                                    "blurb": "Dukung e4 dan mencegah Ne4."
+                                  }
+                                ],
+                                "blurb": "Black mendevelop Nf6.",
+                                "human_freq": 0.1305
+                              }
+                            ],
+                            "blurb": "Bersiap e4 ke merebut entire center dengan tempo di f5 Bishop!"
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #2 (22.1%): Black menerima c4 gambit pawn.",
+                        "human_freq": 0.2206
+                      },
+                      {
+                        "move": "c7c6",
+                        "san": "c6",
+                        "children": [
+                          {
+                            "move": "d1b3",
+                            "san": "Qb3",
+                            "children": [
+                              {
+                                "move": "d8b6",
+                                "san": "Qb6",
+                                "children": [
+                                  {
+                                    "move": "c4c5",
+                                    "san": "c5",
+                                    "children": [
+                                      {
+                                        "move": "b6b3",
+                                        "san": "Qxb3",
+                                        "children": [
+                                          {
+                                            "move": "a2b3",
+                                            "san": "axb3",
+                                            "blurb": "Recapture dengan a-pawn, opening a1 Rook melawan a7!"
+                                          }
+                                        ],
+                                        "blurb": "Black menukar Queen.",
+                                        "human_freq": 0.8821
+                                      }
+                                    ],
+                                    "blurb": "Dorong c5 untuk memaksakan pertukaran Queen di b6 sembari membuka a-file untuk Rook White!"
+                                  }
+                                ],
+                                "blurb": "Black menawarkan pertukaran Queen di b6.",
+                                "human_freq": 0.364
+                              }
+                            ],
+                            "blurb": "Serang b7 segera selagi Bishop c8 Black berada jauh di f5!"
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #3 (14.8%): Black mempertahankan d5 dengan c6.",
+                        "human_freq": 0.1475
+                      }
+                    ],
+                    "blurb": "London c4 Gambit! Strike di d5 dan bersiap Qb3 menargetkan b7."
+                  }
+                ],
+                "blurb": "Langkah Populer Maia-3 #4 (14.7%): Early Bf5 membiarkan b7 pawn tanpa perlindungan!",
+                "human_freq": 0.1468
+              },
+              {
+                "move": "c7c5",
+                "san": "c5",
+                "children": [
+                  {
+                    "move": "e2e4",
+                    "san": "e4",
+                    "children": [
+                      {
+                        "move": "d5e4",
+                        "san": "dxe4",
+                        "children": [
+                          {
+                            "move": "d4d5",
+                            "san": "d5",
+                            "children": [
+                              {
+                                "move": "g8f6",
+                                "san": "Nf6",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "children": [
+                                      {
+                                        "move": "a7a6",
+                                        "san": "a6",
+                                        "children": [
+                                          {
+                                            "move": "g1e2",
+                                            "san": "Nge2",
+                                            "blurb": "Bersiap Ng3 untuk memakan balik e4 pawn dengan dominant space keunggulan."
+                                          }
+                                        ],
+                                        "blurb": "Black mencegah Bb5+.",
+                                        "human_freq": 0.1092
+                                      }
+                                    ],
+                                    "blurb": "Develop Nc3 dan target lemah e4 pawn."
+                                  }
+                                ],
+                                "blurb": "Langkah Populer Maia-3 #1 (67.8%): Black mendevelop Nf6.",
+                                "human_freq": 0.6775
+                              }
+                            ],
+                            "blurb": "Dorong d5 untuk membelah posisi Black dan mencegah langkah Nc6!"
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #1 (47.3%): Black capture e4 gambit pawn.",
+                        "human_freq": 0.4729
+                      },
+                      {
+                        "move": "c5d4",
+                        "san": "cxd4",
+                        "children": [
+                          {
+                            "move": "d1d4",
+                            "san": "Qxd4",
+                            "children": [
+                              {
+                                "move": "d5e4",
+                                "san": "dxe4",
+                                "children": [
+                                  {
+                                    "move": "d4d8",
+                                    "san": "Qxd8+",
+                                    "children": [
+                                      {
+                                        "move": "e8d8",
+                                        "san": "Kxd8",
+                                        "children": [
+                                          {
+                                            "move": "b1c3",
+                                            "san": "Nc3",
+                                            "blurb": "Develop Nc3 dan bersiap O-O-O dengan deadly keunggulan development."
+                                          }
+                                        ],
+                                        "blurb": "King Black terpaksa memakan balik dan kehilangan hak castling.",
+                                        "human_freq": 1.0
+                                      }
+                                    ],
+                                    "blurb": "Tukar Queen untuk memaksa King Black bergeser ke d8!"
+                                  }
+                                ],
+                                "blurb": "Black memakan di e4.",
+                                "human_freq": 0.1364
+                              }
+                            ],
+                            "blurb": "Recapture dengan Queen di center!"
+                          }
+                        ],
+                        "blurb": "Langkah Populer Maia-3 #2 (16.1%): Black memakan di d4.",
+                        "human_freq": 0.1613
+                      }
+                    ],
+                    "blurb": "London (Morris) Gambit! Korbankan e4/d4 pawn ke blow buka center."
+                  }
+                ],
+                "blurb": "Langkah Populer Maia-3 #5 (5.2%): Black tantangan d4 segera dengan c5.",
+                "human_freq": 0.0522
+              }
+            ],
+            "blurb": "London System! Develop dark-squared Bishop ke luar rantai pawn."
+          }
+        ],
+        "blurb": "Langkah Populer Maia-3 #1 (47.5%): Black occupies d5.",
+        "human_freq": 0.4751
+      }
+    ]
+  }
+}

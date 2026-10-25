@@ -457,6 +457,16 @@ theme_override_font_sizes/font_size = 30
 text = "Play Chess"
 uppercase = true
 
+[node name="VersionLabel" type="Label" parent="CenterContainer/MainLayout/RightCard/VBox/HeaderRow" unique_id=1849204821]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_type_variation = &"LabelBold"
+theme_override_colors/font_color = Color(0.35, 0.78, 1, 0.9)
+theme_override_font_sizes/font_size = 14
+text = "v1.0.0"
+horizontal_alignment = 2
+vertical_alignment = 2
+
 [node name="ModeCards" type="VBoxContainer" parent="CenterContainer/MainLayout/RightCard/VBox" unique_id=386532559]
 layout_mode = 2
 theme_override_constants/separation = 8

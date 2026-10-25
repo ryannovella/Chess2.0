@@ -40,6 +40,7 @@ extends Control
 @onready var btn_side_black: Button = $CenterContainer/MainLayout/LeftCard/VBox/Info/PlayAsRow/BtnSideBlack
 
 @onready var btn_play: Button = $CenterContainer/MainLayout/RightCard/VBox/BtnPlay
+@onready var version_label: Label = $CenterContainer/MainLayout/RightCard/VBox/HeaderRow/VersionLabel
 
 # Footer Links
 @onready var btn_settings: Button = $CenterContainer/MainLayout/RightCard/VBox/FooterLinks/BtnSettings
@@ -181,6 +182,9 @@ func _ready() -> void:
 		btn_check_update.pressed.connect(check_for_updates)
 	if btn_install_update:
 		btn_install_update.pressed.connect(install_update)
+
+	if version_label:
+		version_label.text = "v1.0.0 (%s)" % _get_git_short_hash()
 
 	_update_side_icons()
 	_update_side_ui()
@@ -674,11 +678,12 @@ func check_for_updates() -> void:
 	if btn_install_update:
 		btn_install_update.disabled = true
 
+	var git_exe = _get_git_executable()
 	var output: Array = []
-	var exit_code = OS.execute("git", ["fetch", "origin", "main"], output, true)
+	var exit_code = OS.execute(git_exe, ["fetch", "origin", "main"], output, true)
 	if exit_code != 0:
-		# Fallback to master if main doesn't exist
-		exit_code = OS.execute("git", ["fetch", "origin", "master"], output, true)
+		# Fallback to current branch or master
+		exit_code = OS.execute(git_exe, ["fetch", "origin"], output, true)
 
 	if exit_code != 0:
 		status_label.text = "Failed to connect to remote repo. Please check internet connection or git remote."
@@ -687,13 +692,13 @@ func check_for_updates() -> void:
 		return
 
 	var status_output: Array = []
-	var rev_exit = OS.execute("git", ["rev-list", "--count", "HEAD..@{u}"], status_output, true)
+	var rev_exit = OS.execute(git_exe, ["rev-list", "--count", "HEAD..@{u}"], status_output, true)
 	var commits_behind = 0
 	if rev_exit == 0 and not status_output.is_empty():
 		commits_behind = int(str(status_output[0]).strip_edges())
 
 	var remote_log: Array = []
-	OS.execute("git", ["log", "-n", "1", "@{u}", "--format=%h - %s"], remote_log, true)
+	OS.execute(git_exe, ["log", "-n", "1", "@{u}", "--format=%h - %s"], remote_log, true)
 	var latest_msg = str(remote_log[0]).strip_edges() if not remote_log.is_empty() else "Up to date"
 
 	if remote_version_label:
@@ -720,14 +725,17 @@ func install_update() -> void:
 	if btn_check_update:
 		btn_check_update.disabled = true
 
+	var git_exe = _get_git_executable()
 	var pull_out: Array = []
-	var exit_code = OS.execute("git", ["pull", "--ff-only"], pull_out, true)
+	var exit_code = OS.execute(git_exe, ["pull", "--ff-only"], pull_out, true)
 	var pull_str = str(pull_out[0]) if not pull_out.is_empty() else ""
 
 	if exit_code == 0:
 		status_label.text = "Update installed successfully!\nPlease restart the game to apply changes.\n" + pull_str.strip_edges()
 		if local_version_label:
 			local_version_label.text = "Local: %s" % _get_git_branch_info()
+		if version_label:
+			version_label.text = "v1.0.0 (%s)" % _get_git_short_hash()
 		if btn_install_update:
 			btn_install_update.disabled = true
 	else:
@@ -740,7 +748,28 @@ func install_update() -> void:
 
 func _get_git_branch_info() -> String:
 	var out: Array = []
-	var code = OS.execute("git", ["log", "-n", "1", "--format=%h (%cd)", "--date=short"], out, true)
+	var git_exe = _get_git_executable()
+	var code = OS.execute(git_exe, ["log", "-n", "1", "--format=%h (%cd)", "--date=short"], out, true)
 	if code == 0 and not out.is_empty():
 		return str(out[0]).strip_edges()
 	return "Git Version"
+
+func _get_git_short_hash() -> String:
+	var out: Array = []
+	var git_exe = _get_git_executable()
+	var code = OS.execute(git_exe, ["log", "-n", "1", "--format=%h"], out, true)
+	if code == 0 and not out.is_empty():
+		return str(out[0]).strip_edges()
+	return "main"
+
+func _get_git_executable() -> String:
+	var standard_paths = [
+		"git",
+		"C:/Program Files/Git/bin/git.exe",
+		"C:/Program Files/Git/cmd/git.exe",
+		"C:/Users/Reynov/AppData/Local/Programs/Git/cmd/git.exe"
+	]
+	for p in standard_paths:
+		if p == "git" or FileAccess.file_exists(p):
+			return p
+	return "git"

@@ -1,0 +1,535 @@
+{
+  "id": "budapest_gambit",
+  "name": "Budapest Gambit",
+  "eco": "A52",
+  "color": "black",
+  "description": "Attack dinamis 2...e5! melawan 1.d4 Nf6 2.c4 dengan jebakan smothered mate Kieninger (8...Nd3#).",
+  "root": {
+    "move": "d2d4",
+    "san": "d4",
+    "blurb": "White membuka dengan 1.d4.",
+    "children": [
+      {
+        "move": "g8f6",
+        "san": "Nf6",
+        "children": [
+          {
+            "move": "c2c4",
+            "san": "c4",
+            "children": [
+              {
+                "move": "e7e5",
+                "san": "e5",
+                "children": [
+                  {
+                    "move": "d4e5",
+                    "san": "dxe5",
+                    "children": [
+                      {
+                        "move": "f6g4",
+                        "san": "Ng4",
+                        "children": [
+                          {
+                            "move": "g1f3",
+                            "san": "Nf3",
+                            "children": [
+                              {
+                                "move": "f8c5",
+                                "san": "Bc5",
+                                "children": [
+                                  {
+                                    "move": "e2e3",
+                                    "san": "e3",
+                                    "children": [
+                                      {
+                                        "move": "b8c6",
+                                        "san": "Nc6",
+                                        "children": [
+                                          {
+                                            "move": "f1e2",
+                                            "san": "Be2",
+                                            "children": [
+                                              {
+                                                "move": "g4e5",
+                                                "san": "Ngxe5",
+                                                "blurb": "Recapture e5 pawn dengan aktif piece play dan tidak ada weaknesses."
+                                              }
+                                            ],
+                                            "blurb": "White mendevelop Be2.",
+                                            "human_freq": 0.2038
+                                          },
+                                          {
+                                            "move": "a2a3",
+                                            "san": "a3",
+                                            "children": [
+                                              {
+                                                "move": "a7a5",
+                                                "san": "a5",
+                                                "children": [
+                                                  {
+                                                    "move": "b1c3",
+                                                    "san": "Nc3",
+                                                    "children": [
+                                                      {
+                                                        "move": "g4e5",
+                                                        "san": "Ngxe5",
+                                                        "blurb": "Recapture e5 pawn dengan bersih."
+                                                      }
+                                                    ],
+                                                    "blurb": "White mendevelop Nc3.",
+                                                    "human_freq": 0.3629
+                                                  }
+                                                ],
+                                                "blurb": "Hentikan b4 dan jaga c5 Bishop anchored!"
+                                              }
+                                            ],
+                                            "blurb": "White mencegah Bb4+.",
+                                            "human_freq": 0.0817
+                                          }
+                                        ],
+                                        "blurb": "Develop Nc6 dan regain e5 pawn dengan bersih."
+                                      }
+                                    ],
+                                    "blurb": "White memblokir f2 attack dengan e3.",
+                                    "human_freq": 0.8962
+                                  },
+                                  {
+                                    "move": "c1g5",
+                                    "san": "Bg5",
+                                    "children": [
+                                      {
+                                        "move": "c5f2",
+                                        "san": "Bxf2+",
+                                        "children": [
+                                          {
+                                            "move": "e1d2",
+                                            "san": "Kd2",
+                                            "children": [
+                                              {
+                                                "move": "f7f6",
+                                                "san": "f6",
+                                                "blurb": "Redam pengaruh Bishop g5 dan open f-file."
+                                              }
+                                            ],
+                                            "blurb": "King White terpaksa naik ke petak d2.",
+                                            "human_freq": 1.0
+                                          }
+                                        ],
+                                        "blurb": "Strike di f2 dengan check, stripping White dari castling rights!"
+                                      }
+                                    ],
+                                    "blurb": "White melakukan pin atau attack Queen dengan Bg5, forgetting f2!",
+                                    "is_blunder": true,
+                                    "human_freq": 0.0155
+                                  }
+                                ],
+                                "blurb": "Attack f2 petak segera dengan Bc5!"
+                              }
+                            ],
+                            "blurb": "Langkah Populer Maia-3 #1 (54.2%): Rubinstein/Adler variasi.",
+                            "human_freq": 0.5424
+                          },
+                          {
+                            "move": "c1f4",
+                            "san": "Bf4",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "children": [
+                                  {
+                                    "move": "g1f3",
+                                    "san": "Nf3",
+                                    "children": [
+                                      {
+                                        "move": "f8b4",
+                                        "san": "Bb4+",
+                                        "children": [
+                                          {
+                                            "move": "b1c3",
+                                            "san": "Nc3",
+                                            "children": [
+                                              {
+                                                "move": "d8e7",
+                                                "san": "Qe7",
+                                                "children": [
+                                                  {
+                                                    "move": "d1d5",
+                                                    "san": "Qd5",
+                                                    "children": [
+                                                      {
+                                                        "move": "b4c3",
+                                                        "san": "Bxc3+",
+                                                        "blurb": "Hancurkan struktur pawn queenside White dengan Bxc3+!"
+                                                      }
+                                                    ],
+                                                    "blurb": "White mempertahankan kedua.",
+                                                    "human_freq": 0.223
+                                                  }
+                                                ],
+                                                "blurb": "Attack e5 dan c3!"
+                                              }
+                                            ],
+                                            "blurb": "White memblokir dengan Nc3.",
+                                            "human_freq": 0.6401
+                                          },
+                                          {
+                                            "move": "b1d2",
+                                            "san": "Nbd2",
+                                            "children": [
+                                              {
+                                                "move": "d8e7",
+                                                "san": "Qe7",
+                                                "children": [
+                                                  {
+                                                    "move": "a2a3",
+                                                    "san": "a3",
+                                                    "children": [
+                                                      {
+                                                        "move": "g4e5",
+                                                        "san": "Ngxe5",
+                                                        "children": [
+                                                          {
+                                                            "move": "a3b4",
+                                                            "san": "axb4",
+                                                            "children": [
+                                                              {
+                                                                "move": "e5d3",
+                                                                "san": "Nd3#",
+                                                                "blurb": "Smothered checkmate (8...Nd3#)! Pawn e2 terkena pin oleh Queen e7 milik Black."
+                                                              }
+                                                            ],
+                                                            "blurb": "White memakan Bishop dan langsung terkena smothered mate 1 langkah!",
+                                                            "is_blunder": true,
+                                                            "human_freq": 0.4197
+                                                          }
+                                                        ],
+                                                        "blurb": "Capture di e5! Bishop b4 tidak dapat dimakan karena ada ancaman smothered mate di d3!"
+                                                      }
+                                                    ],
+                                                    "blurb": "Pemain klub almost selalu Usir b4 Bishop dengan 7.a3??",
+                                                    "is_blunder": true,
+                                                    "human_freq": 0.5558
+                                                  },
+                                                  {
+                                                    "move": "e2e3",
+                                                    "san": "e3",
+                                                    "children": [
+                                                      {
+                                                        "move": "g4e5",
+                                                        "san": "Ngxe5",
+                                                        "children": [
+                                                          {
+                                                            "move": "f3e5",
+                                                            "san": "Nxe5",
+                                                            "children": [
+                                                              {
+                                                                "move": "c6e5",
+                                                                "san": "Nxe5",
+                                                                "blurb": "Recapture di e5 dan bersiap memainkan d6."
+                                                              }
+                                                            ],
+                                                            "blurb": "White menukar Knight.",
+                                                            "human_freq": 0.5954
+                                                          }
+                                                        ],
+                                                        "blurb": "Regain e5 pawn dengan full equality dan tekanan di d2."
+                                                      }
+                                                    ],
+                                                    "blurb": "White menghindari 7.a3?? dan melangkah 7.e3.",
+                                                    "human_freq": 0.2249
+                                                  }
+                                                ],
+                                                "blurb": "Add a third attacker di e5!"
+                                              }
+                                            ],
+                                            "blurb": "White memblokir check dengan Nbd2.",
+                                            "human_freq": 0.333
+                                          }
+                                        ],
+                                        "blurb": "Develop dengan check untuk memancing Knight White ke d2!"
+                                      }
+                                    ],
+                                    "blurb": "White menambah defender kedua ke e5.",
+                                    "human_freq": 0.637
+                                  }
+                                ],
+                                "blurb": "Add a second attacker melawan e5 pawn."
+                              }
+                            ],
+                            "blurb": "Langkah Populer Maia-3 #2 (16.3%): White mempertahankan e5 dengan Bf4, masuk ke dalam jebakan Kieninger.",
+                            "human_freq": 0.163
+                          },
+                          {
+                            "move": "f2f4",
+                            "san": "f4",
+                            "children": [
+                              {
+                                "move": "f8c5",
+                                "san": "Bc5",
+                                "children": [
+                                  {
+                                    "move": "g1h3",
+                                    "san": "Nh3",
+                                    "children": [
+                                      {
+                                        "move": "d7d6",
+                                        "san": "d6",
+                                        "blurb": "Rusak e5 rantai pawn dan buka c8 Bishop."
+                                      }
+                                    ],
+                                    "blurb": "White mempertahankan f2 dengan Nh3.",
+                                    "human_freq": 0.4486
+                                  }
+                                ],
+                                "blurb": "Merebut a7-g1 diagonal dan mengancam Nf2!"
+                              }
+                            ],
+                            "blurb": "Langkah Populer Maia-3 #3 (6.5%): White memperkuat e5 dengan f4, melemahkan diagonal King sendiri.",
+                            "human_freq": 0.0647
+                          },
+                          {
+                            "move": "e2e4",
+                            "san": "e4",
+                            "children": [
+                              {
+                                "move": "g4e5",
+                                "san": "Nxe5",
+                                "children": [
+                                  {
+                                    "move": "f2f4",
+                                    "san": "f4",
+                                    "children": [
+                                      {
+                                        "move": "e5g6",
+                                        "san": "Ng6",
+                                        "blurb": "Tuck Knight ke g6 dan follow up dengan Bc5."
+                                      }
+                                    ],
+                                    "blurb": "White mengusir Knight e5.",
+                                    "human_freq": 0.2423
+                                  }
+                                ],
+                                "blurb": "Capture e5 pawn dengan tempo."
+                              }
+                            ],
+                            "blurb": "Langkah Populer Maia-3 #4 (5.1%): White mengembalikan pawn untuk menyerang g4.",
+                            "human_freq": 0.0505
+                          },
+                          {
+                            "move": "e2e3",
+                            "san": "e3",
+                            "children": [
+                              {
+                                "move": "g4e5",
+                                "san": "Nxe5",
+                                "children": [
+                                  {
+                                    "move": "b1c3",
+                                    "san": "Nc3",
+                                    "children": [
+                                      {
+                                        "move": "f8b4",
+                                        "san": "Bb4",
+                                        "blurb": "Lakukan pin pada c3 Knight dan bersiap O-O."
+                                      }
+                                    ],
+                                    "blurb": "White mendevelop Nc3.",
+                                    "human_freq": 0.2915
+                                  }
+                                ],
+                                "blurb": "Recapture di e5 dengan aktivitas perwira yang lincah."
+                              }
+                            ],
+                            "blurb": "Langkah Populer Maia-3 #5 (3.9%): White mengembalikan pawn segera.",
+                            "human_freq": 0.0392
+                          },
+                          {
+                            "move": "d1d4",
+                            "san": "Qd4",
+                            "children": [
+                              {
+                                "move": "d7d6",
+                                "san": "d6",
+                                "children": [
+                                  {
+                                    "move": "e5d6",
+                                    "san": "exd6",
+                                    "children": [
+                                      {
+                                        "move": "f8d6",
+                                        "san": "Bxd6",
+                                        "blurb": "Recapture dengan Bishop dan mengancam Be5 atau Nc6."
+                                      }
+                                    ],
+                                    "blurb": "White memakan di d6.",
+                                    "human_freq": 0.664
+                                  }
+                                ],
+                                "blurb": "Korbankan pawn untuk development cepat: if Qxg4, Bxg4 memenangkan Queen!"
+                              }
+                            ],
+                            "blurb": "Langkah Populer Maia-3 #6 (3.7%): White mempertahankan e5 dan attack g4 dengan Qd4.",
+                            "human_freq": 0.0365
+                          }
+                        ],
+                        "blurb": "Lompat ke g4 dan attack e5 pawn!"
+                      }
+                    ],
+                    "blurb": "Langkah Populer Maia-3 #1 (52.2%): White capture e5 pawn.",
+                    "human_freq": 0.5222
+                  },
+                  {
+                    "move": "d4d5",
+                    "san": "d5",
+                    "children": [
+                      {
+                        "move": "f8c5",
+                        "san": "Bc5",
+                        "children": [
+                          {
+                            "move": "b1c3",
+                            "san": "Nc3",
+                            "children": [
+                              {
+                                "move": "d7d6",
+                                "san": "d6",
+                                "blurb": "Amankan c5 outpost dan bersiap O-O plus Nbd7."
+                              }
+                            ],
+                            "blurb": "White mendevelop Nc3.",
+                            "human_freq": 0.5512
+                          }
+                        ],
+                        "blurb": "Develop Bishop ke luar rantai pawn ke c5!"
+                      }
+                    ],
+                    "blurb": "Langkah Populer Maia-3 #2 (17.5%): White menolak gambit dan mendorong d5.",
+                    "human_freq": 0.1745
+                  },
+                  {
+                    "move": "b1c3",
+                    "san": "Nc3",
+                    "children": [
+                      {
+                        "move": "e5d4",
+                        "san": "exd4",
+                        "children": [
+                          {
+                            "move": "d1d4",
+                            "san": "Qxd4",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "blurb": "Develop Nc6 dengan tempo melawan d4 Queen!"
+                              }
+                            ],
+                            "blurb": "White recapture dengan Queen.",
+                            "human_freq": 0.9323
+                          }
+                        ],
+                        "blurb": "Capture di d4 untuk memancing Queen White keluar ke center."
+                      }
+                    ],
+                    "blurb": "Langkah Populer Maia-3 #3 (12.1%): White mendevelop Nc3.",
+                    "human_freq": 0.1213
+                  },
+                  {
+                    "move": "e2e3",
+                    "san": "e3",
+                    "children": [
+                      {
+                        "move": "e5d4",
+                        "san": "exd4",
+                        "children": [
+                          {
+                            "move": "e3d4",
+                            "san": "exd4",
+                            "children": [
+                              {
+                                "move": "f8b4",
+                                "san": "Bb4+",
+                                "blurb": "Develop Bb4+ dengan tempo dan bersiap O-O plus d5."
+                              }
+                            ],
+                            "blurb": "White recapture.",
+                            "human_freq": 0.8275
+                          }
+                        ],
+                        "blurb": "Tukarkan di d4 untuk mengisolasi bidak atau membuka e-file."
+                      }
+                    ],
+                    "blurb": "Langkah Populer Maia-3 #4 (9.8%): pasif e3 defense.",
+                    "human_freq": 0.0978
+                  },
+                  {
+                    "move": "g1f3",
+                    "san": "Nf3",
+                    "children": [
+                      {
+                        "move": "e5e4",
+                        "san": "e4",
+                        "children": [
+                          {
+                            "move": "f3d2",
+                            "san": "Nfd2",
+                            "children": [
+                              {
+                                "move": "c7c6",
+                                "san": "c6",
+                                "blurb": "Dukung d5 dan establish a strong e4 wedge."
+                              }
+                            ],
+                            "blurb": "White memundurkan Knight ke d2.",
+                            "human_freq": 0.4412
+                          }
+                        ],
+                        "blurb": "Dorong maju e4 dengan tempo untuk mengusir f3 Knight!"
+                      }
+                    ],
+                    "blurb": "Langkah Populer Maia-3 #5 (5.8%): White mendevelop Nf3.",
+                    "human_freq": 0.0584
+                  },
+                  {
+                    "move": "c1g5",
+                    "san": "Bg5",
+                    "children": [
+                      {
+                        "move": "e5d4",
+                        "san": "exd4",
+                        "children": [
+                          {
+                            "move": "d1d4",
+                            "san": "Qxd4",
+                            "children": [
+                              {
+                                "move": "b8c6",
+                                "san": "Nc6",
+                                "blurb": "Develop dengan tempo di d4 Queen!"
+                              }
+                            ],
+                            "blurb": "White recapture.",
+                            "human_freq": 0.8187
+                          }
+                        ],
+                        "blurb": "Capture di d4!"
+                      }
+                    ],
+                    "blurb": "Langkah Populer Maia-3 #6 (1.6%): White melakukan pin f6.",
+                    "human_freq": 0.0161
+                  }
+                ],
+                "blurb": "Budapest Gambit! Strike di d4 segera dan set Kieninger jebakan."
+              }
+            ],
+            "blurb": "White memainkan formasi Queen Gambit.",
+            "human_freq": 0.375
+          }
+        ],
+        "blurb": "Develop King Knight secara fleksibel."
+      }
+    ],
+    "human_freq": 0.241
+  }
+}

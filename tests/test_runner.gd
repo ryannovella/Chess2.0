@@ -1090,6 +1090,16 @@ func test_engine_assist_lifecycle() -> void:
 	})
 	assert_equal(es.multipv_lines[1]["best_move"], "e2e4", "Panah engine terkunci dan tidak berubah pasca final")
 
+	# 6. Saat stop_analysis dipanggil (misal saat pemain melangkah), multipv_lines dibersihkan
+	# dan search_id di-increment agar sinyal call_deferred yang tertinggal tidak bocor
+	es.client = UCIClient.new()
+	var prev_sid = es.client.current_search_id
+	es.is_analyzing = true
+	es.stop_analysis()
+	assert_equal(es.is_analyzing, false, "stop_analysis mematikan is_analyzing")
+	assert_equal(es.multipv_lines.is_empty(), true, "stop_analysis membersihkan multipv_lines agar panah lama tidak bocor")
+	assert_true(es.client.current_search_id > prev_sid, "stop_analysis meng-increment search_id UCIClient untuk membatalkan call_deferred lama")
+
 	es.free()
 
 func test_uci_parser() -> void:
@@ -2037,8 +2047,8 @@ func test_opening_repertoire_and_srs() -> void:
 	assert_true(fl != null, "Repertoire Fried Liver Attack berhasil dimuat")
 	assert_equal(fl.color, "white", "Fried Liver Attack adalah repertoire Putih")
 	assert_equal(fl.eco, "C57", "ECO Fried Liver Attack adalah C57")
-	assert_true(fl.get_total_player_moves() >= 10, "Fried Liver memiliki >= 10 langkah pemain (ditemukan %d)" % fl.get_total_player_moves())
-	assert_true(fl.get_total_lines() >= 3, "Fried Liver memiliki >= 3 variasi cabang (ditemukan %d)" % fl.get_total_lines())
+	assert_true(fl.get_total_player_moves() >= 50, "Fried Liver memiliki >= 50 langkah pemain (ditemukan %d)" % fl.get_total_player_moves())
+	assert_true(fl.get_total_lines() >= 15, "Fried Liver memiliki >= 15 variasi cabang (ditemukan %d)" % fl.get_total_lines())
 
 	# 3. Langkah awal Fried Liver dari posisi default FEN
 	var fl_first = fl.get_expected_player_move_from_fen(ChessBoardState.DEFAULT_FEN)
@@ -2059,16 +2069,71 @@ func test_opening_repertoire_and_srs() -> void:
 	assert_true(ck != null, "Repertoire Caro-Kann Defense berhasil dimuat")
 	assert_equal(ck.color, "black", "Caro-Kann Defense adalah repertoire Hitam")
 	assert_equal(ck.eco, "B12", "ECO Caro-Kann Defense adalah B12")
-	assert_true(ck.get_total_player_moves() >= 6, "Caro-Kann memiliki >= 6 langkah pemain (ditemukan %d)" % ck.get_total_player_moves())
+	assert_true(ck.get_total_player_moves() >= 50, "Caro-Kann memiliki >= 50 langkah pemain (ditemukan %d)" % ck.get_total_player_moves())
+	assert_true(ck.get_total_lines() >= 15, "Caro-Kann memiliki >= 15 variasi cabang (ditemukan %d)" % ck.get_total_lines())
 
-	# 6. Guard ASCII: Semua teks blurb dan anotasi bebas dari karakter non-ASCII
+	# 5b. Repertoire Black: Elephant Gambit (C40)
+	var eg = RepertoireService.load_repertoire("elephant_gambit")
+	assert_true(eg != null, "Repertoire Elephant Gambit berhasil dimuat")
+	assert_equal(eg.color, "black", "Elephant Gambit adalah repertoire Hitam")
+	assert_equal(eg.eco, "C40", "ECO Elephant Gambit adalah C40")
+	assert_true(eg.get_total_player_moves() >= 50, "Elephant Gambit memiliki >= 50 langkah pemain (ditemukan %d)" % eg.get_total_player_moves())
+	assert_true(eg.get_total_lines() >= 15, "Elephant Gambit memiliki >= 15 variasi cabang (ditemukan %d)" % eg.get_total_lines())
+
+	# 5c. Repertoire White: Alien Gambit (B15)
+	var ag = RepertoireService.load_repertoire("alien_gambit")
+	assert_true(ag != null, "Repertoire Alien Gambit berhasil dimuat")
+	assert_equal(ag.color, "white", "Alien Gambit adalah repertoire Putih")
+	assert_equal(ag.eco, "B15", "ECO Alien Gambit adalah B15")
+	assert_true(ag.get_total_player_moves() >= 50, "Alien Gambit memiliki >= 50 langkah pemain (ditemukan %d)" % ag.get_total_player_moves())
+	assert_true(ag.get_total_lines() >= 15, "Alien Gambit memiliki >= 15 variasi cabang (ditemukan %d)" % ag.get_total_lines())
+
+	# 5d. Repertoire White: Italian Gambit (C50), King's Gambit (C30), Queen's Gambit (D06), London Gambit (D00)
+	var ig = RepertoireService.load_repertoire("italian_gambit")
+	var kg = RepertoireService.load_repertoire("kings_gambit")
+	var qg = RepertoireService.load_repertoire("queens_gambit")
+	var lg = RepertoireService.load_repertoire("london_gambit")
+	assert_true(ig != null and kg != null and qg != null and lg != null, "Repertoire Italian, King's, Queen's, dan London Gambit berhasil dimuat")
+	assert_true(ig.get_total_lines() >= 15 and ig.get_total_player_moves() >= 45, "Italian Gambit memiliki >= 15 variasi & >= 45 langkah pemain (%d lines, %d moves)" % [ig.get_total_lines(), ig.get_total_player_moves()])
+	assert_true(kg.get_total_lines() >= 15 and kg.get_total_player_moves() >= 45, "King's Gambit memiliki >= 15 variasi & >= 45 langkah pemain (%d lines, %d moves)" % [kg.get_total_lines(), kg.get_total_player_moves()])
+	assert_true(qg.get_total_lines() >= 15 and qg.get_total_player_moves() >= 45, "Queen's Gambit memiliki >= 15 variasi & >= 45 langkah pemain (%d lines, %d moves)" % [qg.get_total_lines(), qg.get_total_player_moves()])
+	assert_true(lg.get_total_lines() >= 15 and lg.get_total_player_moves() >= 45, "London Gambit memiliki >= 15 variasi & >= 45 langkah pemain (%d lines, %d moves)" % [lg.get_total_lines(), lg.get_total_player_moves()])
+
+	# 5e. Repertoire Best Win-Rate Traps (Black: Stafford, Englund, Budapest, Traxler | White: Danish, Vienna, Smith-Morra, Halloween)
+	var st = RepertoireService.load_repertoire("stafford_gambit")
+	var en = RepertoireService.load_repertoire("englund_gambit")
+	var bu = RepertoireService.load_repertoire("budapest_gambit")
+	var tr = RepertoireService.load_repertoire("traxler_counterattack")
+	var da = RepertoireService.load_repertoire("danish_gambit")
+	var vi = RepertoireService.load_repertoire("vienna_gambit")
+	var sm = RepertoireService.load_repertoire("smith_morra_gambit")
+	var ha = RepertoireService.load_repertoire("halloween_gambit")
+	assert_true(st != null and en != null and bu != null and tr != null and da != null and vi != null and sm != null and ha != null,
+		"Seluruh 8 repertoire best win-rate traps (4 Hitam, 4 Putih) berhasil dimuat")
+	assert_true(st.color == "black" and en.color == "black" and bu.color == "black" and tr.color == "black",
+		"Stafford, Englund, Budapest, dan Traxler terdaftar sebagai repertoire Hitam")
+	assert_true(da.color == "white" and vi.color == "white" and sm.color == "white" and ha.color == "white",
+		"Danish, Vienna, Smith-Morra, dan Halloween terdaftar sebagai repertoire Putih")
+	for trap_tree in [st, en, bu, tr, da, vi, sm, ha]:
+		assert_true(trap_tree.get_total_lines() >= 15 and trap_tree.get_total_player_moves() >= 35,
+			"%s memiliki >= 15 variasi & >= 35 langkah pemain (%d lines, %d moves)" % [trap_tree.name, trap_tree.get_total_lines(), trap_tree.get_total_player_moves()])
+
+	# 6. Guard ASCII & Validasi Legalitas Seluruh Langkah pada Semua Variasi
 	var all_blurbs_ascii = true
-	for rep_tree in [fl, ck]:
+	var all_moves_legal = true
+	for rep_tree in [fl, ck, eg, ag, ig, kg, qg, lg, st, en, bu, tr, da, vi, sm, ha]:
 		for line in rep_tree.flattened_lines:
+			var verify_state = ChessBoardState.new()
 			for node in line:
 				if not node.blurb.is_empty() and not _is_clean_ascii(node.blurb):
 					all_blurbs_ascii = false
+				var mv = ChessSAN.uci_to_move(verify_state, node.move_uci)
+				if mv == null or mv.is_empty() or ChessSAN.move_to_san(verify_state, mv) != node.san:
+					all_moves_legal = false
+					break
+				ChessMoveGenerator.apply_move_unchecked(verify_state, mv)
 	assert_true(all_blurbs_ascii, "Seluruh blurb pembukaan berupa teks ASCII bersih tanpa mojibake")
+	assert_true(all_moves_legal, "Seluruh langkah UCI dan notasi SAN di semua variasi latihan 100%% legal dan konsisten")
 
 	# 7. Respon lawan berbobot frekuensi manusia (human_freq)
 	var opp_replies = ck.get_opponent_replies_from_fen(ChessBoardState.DEFAULT_FEN)
@@ -2134,16 +2199,26 @@ func test_opening_repertoire_and_srs() -> void:
 	assert_true(trainer.chess_board != null, "ChessBoard ter-resolusi dalam OpeningTrainer")
 	assert_true(trainer.status_label != null, "StatusLabel ter-resolusi dalam OpeningTrainer")
 	assert_true(trainer.blurb_label != null, "BlurbLabel ter-resolusi dalam OpeningTrainer")
-	assert_true(trainer.btn_hint != null and trainer.btn_retry != null and trainer.btn_next_line != null,
-		"Tombol kontrol (Hint, Retry, NextLine) lengkap di OpeningTrainer")
+	assert_true(trainer.btn_hint != null and trainer.btn_retry != null and trainer.btn_prev_line != null and trainer.btn_next_line != null,
+		"Tombol kontrol (Hint, Retry, PrevLine, NextLine) lengkap di OpeningTrainer")
+	assert_true(trainer.top_player_card != null and trainer.bottom_player_card != null,
+		"TopPlayerCard dan BottomPlayerCard ter-resolusi dalam OpeningTrainer")
+	assert_true(trainer.top_captured_container != null and trainer.bottom_captured_container != null,
+		"Kontainer captured pieces (atas & bawah) ter-resolusi dalam OpeningTrainer")
+	assert_true(_is_clean_ascii(trainer.repertoire_meta_label.text) and _is_clean_ascii(trainer.step_badge_label.text),
+		"Label metadata dan step badge di OpeningTrainer murni ASCII tanpa karakter non-ASCII")
 
 	assert_equal(trainer.current_tree.id, "fried_liver_attack", "Default opening aktif adalah Fried Liver Attack")
-	assert_true(trainer.status_label.text.contains("Your Turn") or trainer.status_label.text.contains("Play"), "Opening trainer langsung meminta player menjawab langkah pertama")
+	assert_true(trainer.status_label.text.contains("Giliran Anda") or trainer.status_label.text.contains("Mainkan") or trainer.status_label.text.contains("Your Turn") or trainer.status_label.text.contains("Play"), "Opening trainer langsung meminta player menjawab langkah pertama")
 	assert_true(trainer.chess_board.is_interactive, "Papan catur dalam status is_interactive = true agar bidak dapat digerakkan")
+	assert_true(not CardPalette.is_light(trainer.top_card_style.bg_color) and CardPalette.is_light(trainer.bottom_card_style.bg_color),
+		"Saat latihan sebagai Putih, kartu bawah (Putih) berlatar terang dan kartu atas (Hitam) berlatar gelap")
+	assert_true(not trainer.top_captured_container.visible and not trainer.bottom_captured_container.visible,
+		"Indikator captured pieces tersembunyi pada posisi awal sebelum ada pertukaran bidak")
 
 	# Simulasikan langkah salah (h2h4)
 	trainer._on_board_move_made(ChessMove.new("h2", "h4"))
-	assert_true(trainer.status_label.text.contains("Incorrect"), "Langkah di luar repertoire ditolak dengan status Incorrect")
+	assert_true(trainer.status_label.text.contains("Incorrect") or trainer.status_label.text.contains("Langkah salah"), "Langkah di luar repertoire ditolak dengan status Incorrect")
 
 	# Simulasikan Hint
 	trainer._on_hint_pressed()
@@ -2152,16 +2227,41 @@ func test_opening_repertoire_and_srs() -> void:
 
 	# Simulasikan langkah benar (e2e4)
 	trainer._on_board_move_made(ChessMove.new("e2", "e4"))
-	assert_true(trainer.status_label.text.contains("Correct"), "Langkah repertoire yang benar diterima dengan status Correct")
+	assert_true(trainer.status_label.text.contains("Correct") or trainer.status_label.text.contains("Benar"), "Langkah repertoire yang benar diterima dengan status Correct")
+
+	# Simulasikan posisi latihan dengan pertukaran bidak (Fried Liver: 1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.Ng5 d5 5.exd5 Nxd5 6.Nxf7 Kxf7)
+	trainer.board_state = ChessBoardState.new("r1bq1b1r/ppp2kpp/2n5/3np3/2B5/8/PPPP1PPP/RNBQK2R w KQ - 0 7")
+	trainer._update_player_cards()
+	assert_true(trainer.top_captured_container.visible and trainer.bottom_captured_container.visible,
+		"Indikator captured pieces tampil pada kartu atas & bawah saat terjadi pertukaran bidak di latihan")
+	var top_cap_view = trainer.top_captured_container.get_child(0) as CapturedPiecesView
+	var bot_cap_view = trainer.bottom_captured_container.get_child(0) as CapturedPiecesView
+	assert_true(top_cap_view != null and bot_cap_view != null and top_cap_view.has_content() and bot_cap_view.has_content(),
+		"CapturedPiecesView di OpeningTrainer identik dengan permainan biasa dan memuat grup bidak yang dicapture")
+
+	# Navigasi Line (Next Line & Prev Line)
+	var init_line_idx = trainer.active_line_index
+	trainer._on_next_line_pressed()
+	assert_true(trainer.active_line_index != init_line_idx, "Next Line berpindah ke variasi cabang berikutnya")
+	trainer._on_prev_line_pressed()
+	assert_equal(trainer.active_line_index, init_line_idx, "Prev Line kembali ke variasi cabang sebelumnya")
 
 	# Toggle Learn / Drill mode
 	var prev_mode = trainer.is_drill_mode
 	trainer._on_mode_toggle_pressed()
 	assert_true(trainer.is_drill_mode != prev_mode, "Mode toggle berhasil mengubah state antara Drill dan Learn")
 
+	# Verifikasi penguncian interaktivitas papan saat variasi selesai
+	trainer.active_line = []
+	trainer._process_current_step()
+	assert_true(trainer.is_line_completed, "Variasi ditandai selesai saat active_line habis")
+	assert_true(not trainer.chess_board.is_interactive, "Papan catur dinonaktifkan (is_interactive = false) saat variasi selesai agar bidak lawan tidak dapat digerakkan")
+
 	# Ganti repertoire ke Caro-Kann (Black)
 	trainer.start_repertoire("caro_kann_defense")
 	assert_true(trainer.is_flipped, "Papan otomatis diflip saat berganti ke repertoire Hitam (Caro-Kann)")
+	assert_true(CardPalette.is_light(trainer.top_card_style.bg_color) and not CardPalette.is_light(trainer.bottom_card_style.bg_color),
+		"Saat latihan sebagai Hitam, kartu atas (Putih) berlatar terang dan kartu bawah (Hitam) berlatar gelap")
 
 	root.remove_child(trainer)
 	trainer.free()

@@ -63,7 +63,7 @@ static func generate_explanation(review_step: Dictionary) -> Dictionary:
 		GameReviewService.Classification.GREAT:
 			emotion = CoachEmotion.PROUD
 			title = "Great Move (!)"
-			coach_text = "Great find! Solusi terbaik di posisi ini. %s" % motif_data["success_detail"]
+			coach_text = "Great find! Langkah terbaik di posisi ini. %s" % motif_data["success_detail"]
 
 		GameReviewService.Classification.BEST:
 			emotion = CoachEmotion.HAPPY
@@ -123,9 +123,9 @@ static func generate_explanation(review_step: Dictionary) -> Dictionary:
 			if is_last_book:
 				title = "Last Book Move"
 				if not op_name.is_empty() and op_name != "Standard Chess":
-					coach_text = "Last book move (%s). Teori pembukaan selesai, permainan memasuki fase mandiri." % op_name
+					coach_text = "Last book move (%s). Teori opening selesai, permainan memasuki fase mandiri." % op_name
 				else:
-					coach_text = "Last book move. Teori pembukaan selesai, permainan memasuki fase mandiri."
+					coach_text = "Last book move. Teori opening selesai, permainan memasuki fase mandiri."
 			else:
 				title = "Book Move"
 				if not op_name.is_empty() and op_name != "Standard Chess":
@@ -166,7 +166,7 @@ static func _analyze_motifs(
 	# 1. Motif Checkmate / Mating Net
 	if ChessMoveGenerator.is_checkmate(board_after):
 		motif = "checkmate"
-		success_detail = "Checkmate! King lawan tidak memiliki escape square."
+		success_detail = "Checkmate! King lawan tidak memiliki petak lari."
 		return _pack_motif(motif, success_detail, flaw_detail, best_benefit)
 
 	if is_mate_after and mate_in_after > 0:
@@ -176,8 +176,8 @@ static func _analyze_motifs(
 
 	if is_mate_before and mate_in_before > 0:
 		motif = "missed_mate"
-		flaw_detail = "Melewatkan Forced mate."
-		best_benefit = "menyelesaikan Forced mate langsung"
+		flaw_detail = "Melewatkan forced mate."
+		best_benefit = "menyelesaikan forced mate langsung"
 		return _pack_motif(motif, success_detail, flaw_detail, best_benefit)
 
 	# 2. Motif Menyerang / Menangkap Queen
@@ -200,8 +200,8 @@ static func _analyze_motifs(
 			for thr in threats:
 				if thr["to"] == played_move.to_sq and thr["type"] == "threat-hanging":
 					motif = "hanging_queen"
-					flaw_detail = "Hanging Queen! Queen tidak terjaga dan bisa ditangkap."
-					best_benefit = "mengamankan Queen ke square aman"
+					flaw_detail = "Hanging Queen! Queen tidak terjaga dan dapat dimakan."
+					best_benefit = "mengamankan Queen ke petak aman"
 					return _pack_motif(motif, success_detail, flaw_detail, best_benefit)
 
 	# 3. Motif Fork
@@ -216,15 +216,18 @@ static func _analyze_motifs(
 	# 4. Motif Pin & Skewer
 	if played_move != null and _is_pin_or_skewer(board_after, board_before.turn):
 		motif = "pin"
-		success_detail = "Pin taktis menekan perwira lawan."
+		success_detail = "Pin taktis menekan piece lawan."
 		return _pack_motif(motif, success_detail, flaw_detail, best_benefit)
+	elif best_move != null and _is_pin_or_skewer(_simulate_move(board_before, best_move), board_before.turn):
+		best_benefit = "melancarkan taktik Pin"
+		flaw_detail = "Melewatkan Pin taktis terhadap piece lawan."
 
 	# 5. Motif Hanging Piece & Win Material
 	if played_move != null:
 		var cap_piece = board_before.get_piece(played_move.to_sq)
 		if cap_piece != null:
 			motif = "winning_material"
-			success_detail = "Memenangkan material perwira lawan."
+			success_detail = "Memenangkan material piece lawan."
 			return _pack_motif(motif, success_detail, flaw_detail, best_benefit)
 
 	# Cek piece gantung pasca langkah

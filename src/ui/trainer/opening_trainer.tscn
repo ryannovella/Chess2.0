@@ -7,18 +7,120 @@
 [ext_resource type="FontFile" uid="uid://r6a0ykpbyp5h" path="res://assets/fonts/ChessSans-Bold.ttf" id="5_font_bold"]
 [ext_resource type="Texture2D" uid="uid://brat8uuhjrw04" path="res://assets/ui/icons/icon_home.svg" id="6_icon_home"]
 [ext_resource type="Texture2D" uid="uid://bd54i7go1ratp" path="res://assets/ui/icons/icon_robot.svg" id="7_icon_robot"]
+[ext_resource type="Texture2D" uid="uid://vw5dsum087od" path="res://assets/ui/icons/icon_person.svg" id="8_icon_person"]
+[ext_resource type="Texture2D" uid="uid://drha877unrd04" path="res://assets/ui/icons/icon_target.svg" id="9_icon_target"]
+[ext_resource type="FontFile" uid="uid://bnbiavn02knhf" path="res://assets/fonts/ChessSans-Regular.ttf" id="10_font_reg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opt_normal"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 30.0
+content_margin_bottom = 8.0
+bg_color = Color(0.173, 0.165, 0.157, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.28, 0.27, 0.25, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opt_hover"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 30.0
+content_margin_bottom = 8.0
+bg_color = Color(0.21, 0.20, 0.19, 0.98)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.506, 0.714, 0.298, 0.85)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header_card"]
 content_margin_left = 18.0
-content_margin_top = 14.0
+content_margin_top = 12.0
 content_margin_right = 18.0
-content_margin_bottom = 14.0
+content_margin_bottom = 12.0
 bg_color = Color(0.149, 0.141, 0.133, 0.98)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.24, 0.23, 0.21, 0.9)
+border_color = Color(0.255, 0.245, 0.23, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mode_chip"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.16, 0.21, 0.14, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.506, 0.714, 0.298, 0.75)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_due_chip"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.18, 0.172, 0.162, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29, 0.28, 0.26, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_bg"]
+bg_color = Color(0.095, 0.09, 0.085, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.23, 0.22, 0.20, 0.8)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_fill"]
+bg_color = Color(0.506, 0.714, 0.298, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_player_card"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.149, 0.141, 0.133, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.255, 0.245, 0.23, 0.6)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -29,30 +131,16 @@ content_margin_left = 18.0
 content_margin_top = 12.0
 content_margin_right = 18.0
 content_margin_bottom = 12.0
-bg_color = Color(0.149, 0.141, 0.133, 0.98)
-border_width_left = 4
+bg_color = Color(0.157, 0.149, 0.141, 0.98)
+border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.35, 0.65, 0.95, 0.9)
+border_color = Color(0.28, 0.27, 0.25, 0.85)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_bg"]
-bg_color = Color(0.11, 0.10, 0.09, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_progress_fill"]
-bg_color = Color(0.51, 0.72, 0.30, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 
 [node name="OpeningTrainer" type="Control"]
 layout_mode = 3
@@ -82,15 +170,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainLayout" type="VBoxContainer" parent="CenterContainer"]
-custom_minimum_size = Vector2(708, 1220)
+custom_minimum_size = Vector2(700, 0)
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 8
 alignment = 1
 
 [node name="TopBar" type="HBoxContainer" parent="CenterContainer/MainLayout"]
-custom_minimum_size = Vector2(708, 44)
+custom_minimum_size = Vector2(700, 46)
 layout_mode = 2
-theme_override_constants/separation = 12
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="BtnBack" type="Button" parent="CenterContainer/MainLayout/TopBar"]
@@ -106,46 +195,93 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("4_font_xbold")
 theme_override_font_sizes/font_size = 20
-theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_color = Color(0.95, 0.96, 0.98, 1)
 text = "OPENING REPS"
 vertical_alignment = 1
 
 [node name="OptRepertoire" type="OptionButton" parent="CenterContainer/MainLayout/TopBar"]
-custom_minimum_size = Vector2(230, 42)
+custom_minimum_size = Vector2(280, 42)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_font_bold")
-theme_override_font_sizes/font_size = 13
-alignment = 1
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.94, 0.95, 0.96, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_opt_normal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_opt_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opt_hover")
+alignment = 0
+text_overrun_behavior = 3
 
 [node name="HeaderCard" type="PanelContainer" parent="CenterContainer/MainLayout"]
-custom_minimum_size = Vector2(708, 104)
+custom_minimum_size = Vector2(700, 94)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_header_card")
 
 [node name="VBox" type="VBoxContainer" parent="CenterContainer/MainLayout/HeaderCard"]
 layout_mode = 2
-theme_override_constants/separation = 6
+theme_override_constants/separation = 8
+alignment = 1
 
-[node name="RepertoireTitleLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
+[node name="TopRow" type="HBoxContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TitleCol" type="VBoxContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox/TopRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="RepertoireTitleLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/TopRow/TitleCol"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_font_xbold")
-theme_override_font_sizes/font_size = 18
-theme_override_colors/font_color = Color(0.96, 0.96, 0.96, 1)
+theme_override_font_sizes/font_size = 19
+theme_override_colors/font_color = Color(0.96, 0.97, 0.98, 1)
 text = "Fried Liver Attack"
+clip_text = true
 
-[node name="RepertoireMetaLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
+[node name="RepertoireMetaLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/TopRow/TitleCol"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_font_bold")
 theme_override_font_sizes/font_size = 13
-theme_override_colors/font_color = Color(0.70, 0.68, 0.65, 1)
-text = "C57 · Playing as White · 12 Key Positions"
+theme_override_colors/font_color = Color(0.72, 0.70, 0.67, 1)
+text = "C57  |  Playing as White  |  12 Key Positions"
+clip_text = true
+
+[node name="MetaRow" type="HBoxContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox/TopRow"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="ModeChip" type="PanelContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox/TopRow/MetaRow"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mode_chip")
+
+[node name="ModeBadgeLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/TopRow/MetaRow/ModeChip"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_font_xbold")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.55, 0.82, 0.36, 1)
+text = "MODE: LEARN"
+
+[node name="DueChip" type="PanelContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox/TopRow/MetaRow"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_due_chip")
+
+[node name="DueBadgeLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/TopRow/MetaRow/DueChip"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.78, 0.76, 0.73, 1)
+text = "0 moves due"
 
 [node name="ProgressHBox" type="HBoxContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
 layout_mode = 2
 theme_override_constants/separation = 12
+alignment = 1
 
 [node name="MasteryProgressBar" type="ProgressBar" parent="CenterContainer/MainLayout/HeaderCard/VBox/ProgressHBox"]
-custom_minimum_size = Vector2(0, 12)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -154,56 +290,129 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_progress_fill")
 show_percentage = false
 
 [node name="MasteryPercentLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/ProgressHBox"]
-custom_minimum_size = Vector2(110, 0)
+custom_minimum_size = Vector2(106, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("5_font_bold")
 theme_override_font_sizes/font_size = 13
-theme_override_colors/font_color = Color(0.51, 0.72, 0.30, 1)
+theme_override_colors/font_color = Color(0.55, 0.78, 0.34, 1)
 text = "0% Mastered"
 horizontal_alignment = 2
 
-[node name="MetaRow" type="HBoxContainer" parent="CenterContainer/MainLayout/HeaderCard/VBox"]
+[node name="BoardArea" type="VBoxContainer" parent="CenterContainer/MainLayout"]
+custom_minimum_size = Vector2(700, 836)
 layout_mode = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 4
+alignment = 1
 
-[node name="ModeBadgeLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/MetaRow"]
+[node name="TopPlayerCard" type="PanelContainer" parent="CenterContainer/MainLayout/BoardArea"]
+custom_minimum_size = Vector2(700, 56)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_font_bold")
-theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.85, 0.75, 0.45, 1)
-text = "MODE: DRILL"
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_player_card")
 
-[node name="DueBadgeLabel" type="Label" parent="CenterContainer/MainLayout/HeaderCard/VBox/MetaRow"]
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/MainLayout/BoardArea/TopPlayerCard"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("5_font_bold")
-theme_override_font_sizes/font_size = 12
-theme_override_colors/font_color = Color(0.60, 0.60, 0.60, 1)
-text = "0 moves due"
+theme_override_constants/separation = 12
+alignment = 0
 
-[node name="BoardCenter" type="CenterContainer" parent="CenterContainer/MainLayout"]
+[node name="AvatarIcon" type="TextureRect" parent="CenterContainer/MainLayout/BoardArea/TopPlayerCard/HBox"]
+texture_filter = 4
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("7_icon_robot")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="CenterContainer/MainLayout/BoardArea/TopPlayerCard/HBox"]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
+theme_override_font_sizes/font_size = 18
+text = "Trainer Bot"
+
+[node name="BadgeLabel" type="Label" parent="CenterContainer/MainLayout/BoardArea/TopPlayerCard/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
+theme_override_font_sizes/font_size = 16
+text = "Black"
+
+[node name="Spacer" type="Control" parent="CenterContainer/MainLayout/BoardArea/TopPlayerCard/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CapturedContainer" type="HBoxContainer" parent="CenterContainer/MainLayout/BoardArea/TopPlayerCard/HBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="BoardCenter" type="CenterContainer" parent="CenterContainer/MainLayout/BoardArea"]
 layout_mode = 2
 
-[node name="ChessBoard" parent="CenterContainer/MainLayout/BoardCenter" instance=ExtResource("3_board")]
+[node name="ChessBoard" parent="CenterContainer/MainLayout/BoardArea/BoardCenter" instance=ExtResource("3_board")]
 layout_mode = 2
+
+[node name="BottomPlayerCard" type="PanelContainer" parent="CenterContainer/MainLayout/BoardArea"]
+custom_minimum_size = Vector2(700, 56)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_player_card")
+
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/MainLayout/BoardArea/BottomPlayerCard"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 0
+
+[node name="AvatarIcon" type="TextureRect" parent="CenterContainer/MainLayout/BoardArea/BottomPlayerCard/HBox"]
+texture_filter = 4
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("8_icon_person")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="CenterContainer/MainLayout/BoardArea/BottomPlayerCard/HBox"]
+layout_mode = 2
+theme_type_variation = &"LabelBold"
+theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
+theme_override_font_sizes/font_size = 18
+text = "Player (You)"
+
+[node name="BadgeLabel" type="Label" parent="CenterContainer/MainLayout/BoardArea/BottomPlayerCard/HBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74, 0.72, 0.69, 1)
+theme_override_font_sizes/font_size = 16
+text = "White"
+
+[node name="Spacer" type="Control" parent="CenterContainer/MainLayout/BoardArea/BottomPlayerCard/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CapturedContainer" type="HBoxContainer" parent="CenterContainer/MainLayout/BoardArea/BottomPlayerCard/HBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
 
 [node name="CoachCard" type="PanelContainer" parent="CenterContainer/MainLayout"]
-custom_minimum_size = Vector2(708, 108)
+clip_contents = true
+custom_minimum_size = Vector2(700, 114)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_coach_card")
 
 [node name="VBox" type="VBoxContainer" parent="CenterContainer/MainLayout/CoachCard"]
 layout_mode = 2
 theme_override_constants/separation = 6
+alignment = 1
 
 [node name="StatusRow" type="HBoxContainer" parent="CenterContainer/MainLayout/CoachCard/VBox"]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 10
+alignment = 1
 
 [node name="Avatar" type="TextureRect" parent="CenterContainer/MainLayout/CoachCard/VBox/StatusRow"]
-custom_minimum_size = Vector2(22, 22)
+texture_filter = 4
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
 size_flags_vertical = 4
-texture = ExtResource("7_icon_robot")
+texture = ExtResource("9_icon_target")
 expand_mode = 1
 stretch_mode = 5
 
@@ -211,54 +420,73 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("4_font_xbold")
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
-text = "Your Turn (White): Play the best repertoire move"
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.95, 0.96, 0.98, 1)
+text = "Play e4 (White to move)"
+clip_text = true
+
+[node name="StepBadgeLabel" type="Label" parent="CenterContainer/MainLayout/CoachCard/VBox/StatusRow"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.68, 0.66, 0.63, 1)
+text = "Line 1/3  |  Move 1/8"
+horizontal_alignment = 2
 
 [node name="BlurbLabel" type="Label" parent="CenterContainer/MainLayout/CoachCard/VBox"]
-custom_minimum_size = Vector2(0, 44)
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("5_font_bold")
-theme_override_font_sizes/font_size = 14
-theme_override_colors/font_color = Color(0.80, 0.78, 0.75, 1)
-text = "Recall the correct opening move for this position."
+theme_override_fonts/font = ExtResource("10_font_reg")
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.84, 0.82, 0.79, 1)
+text = "Ingat move opening yang tepat untuk posisi ini."
 autowrap_mode = 3
+clip_text = true
 
 [node name="ControlsBar" type="HBoxContainer" parent="CenterContainer/MainLayout"]
-custom_minimum_size = Vector2(708, 46)
+custom_minimum_size = Vector2(700, 48)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/separation = 8
 alignment = 1
 
 [node name="BtnHint" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
-custom_minimum_size = Vector2(0, 44)
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("5_font_bold")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 15
 text = "Hint"
 
 [node name="BtnRetry" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
-custom_minimum_size = Vector2(0, 44)
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("5_font_bold")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 15
 text = "Retry"
 
+[node name="BtnPrevLine" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_font_bold")
+theme_override_font_sizes/font_size = 15
+text = "Prev Line"
+
 [node name="BtnNextLine" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
-custom_minimum_size = Vector2(0, 44)
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("4_font_xbold")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 15
 text = "Next Line"
 
 [node name="BtnModeToggle" type="Button" parent="CenterContainer/MainLayout/ControlsBar"]
-custom_minimum_size = Vector2(0, 44)
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("5_font_bold")
-theme_override_font_sizes/font_size = 14
-text = "Learn Mode"
+theme_override_font_sizes/font_size = 15
+text = "Drill Mode"
