@@ -2099,7 +2099,7 @@ func test_opening_repertoire_and_srs() -> void:
 	assert_true(qg.get_total_lines() >= 15 and qg.get_total_player_moves() >= 45, "Queen's Gambit memiliki >= 15 variasi & >= 45 langkah pemain (%d lines, %d moves)" % [qg.get_total_lines(), qg.get_total_player_moves()])
 	assert_true(lg.get_total_lines() >= 15 and lg.get_total_player_moves() >= 45, "London Gambit memiliki >= 15 variasi & >= 45 langkah pemain (%d lines, %d moves)" % [lg.get_total_lines(), lg.get_total_player_moves()])
 
-	# 5e. Repertoire Best Win-Rate Traps (Black: Stafford, Englund, Budapest, Traxler | White: Danish, Vienna, Smith-Morra, Halloween)
+	# 5e. Repertoire Best Win-Rate Traps (Black: Stafford, Englund, Budapest, Traxler | White: Danish, Vienna, Smith-Morra, Halloween, Tennison)
 	var st = RepertoireService.load_repertoire("stafford_gambit")
 	var en = RepertoireService.load_repertoire("englund_gambit")
 	var bu = RepertoireService.load_repertoire("budapest_gambit")
@@ -2108,20 +2108,21 @@ func test_opening_repertoire_and_srs() -> void:
 	var vi = RepertoireService.load_repertoire("vienna_gambit")
 	var sm = RepertoireService.load_repertoire("smith_morra_gambit")
 	var ha = RepertoireService.load_repertoire("halloween_gambit")
-	assert_true(st != null and en != null and bu != null and tr != null and da != null and vi != null and sm != null and ha != null,
-		"Seluruh 8 repertoire best win-rate traps (4 Hitam, 4 Putih) berhasil dimuat")
+	var tn = RepertoireService.load_repertoire("tennison_gambit")
+	assert_true(st != null and en != null and bu != null and tr != null and da != null and vi != null and sm != null and ha != null and tn != null,
+		"Seluruh 9 repertoire best win-rate traps (4 Hitam, 5 Putih termasuk Tennison) berhasil dimuat")
 	assert_true(st.color == "black" and en.color == "black" and bu.color == "black" and tr.color == "black",
 		"Stafford, Englund, Budapest, dan Traxler terdaftar sebagai repertoire Hitam")
-	assert_true(da.color == "white" and vi.color == "white" and sm.color == "white" and ha.color == "white",
-		"Danish, Vienna, Smith-Morra, dan Halloween terdaftar sebagai repertoire Putih")
-	for trap_tree in [st, en, bu, tr, da, vi, sm, ha]:
+	assert_true(da.color == "white" and vi.color == "white" and sm.color == "white" and ha.color == "white" and tn.color == "white",
+		"Danish, Vienna, Smith-Morra, Halloween, dan Tennison terdaftar sebagai repertoire Putih")
+	for trap_tree in [st, en, bu, tr, da, vi, sm, ha, tn]:
 		assert_true(trap_tree.get_total_lines() >= 15 and trap_tree.get_total_player_moves() >= 35,
 			"%s memiliki >= 15 variasi & >= 35 langkah pemain (%d lines, %d moves)" % [trap_tree.name, trap_tree.get_total_lines(), trap_tree.get_total_player_moves()])
 
 	# 6. Guard ASCII & Validasi Legalitas Seluruh Langkah pada Semua Variasi
 	var all_blurbs_ascii = true
 	var all_moves_legal = true
-	for rep_tree in [fl, ck, eg, ag, ig, kg, qg, lg, st, en, bu, tr, da, vi, sm, ha]:
+	for rep_tree in [fl, ck, eg, ag, ig, kg, qg, lg, st, en, bu, tr, da, vi, sm, ha, tn]:
 		for line in rep_tree.flattened_lines:
 			var verify_state = ChessBoardState.new()
 			for node in line:
