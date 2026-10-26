@@ -121,7 +121,7 @@
                                                 "human_freq": 0.2469
                                               }
                                             ],
-                                            "blurb": "Attack b5 pawn! Black cannot mempertahankan b5 tanpa kehilangan a piece atau a8 Rook."
+                                            "blurb": "Serang pawn b5! Black tidak dapat mempertahankan b5 tanpa kehilangan perwira atau Rook a8."
                                           }
                                         ],
                                         "blurb": "Black memakan balik di b5, membiarkan Rook a8 tanpa penjagaan di jalur diagonal.",
@@ -131,7 +131,7 @@
                                     "blurb": "open a-file dan buka diagonal panjang ke petak a8!"
                                   }
                                 ],
-                                "blurb": "Langkah Populer Maia-3 #1 (65.9%): Two-thirds dari pemain klub fall straight ke dalam classic QGA Rook jebakan!",
+                                "blurb": "Langkah Populer Maia-3 #1 (65.9%): Dua pertiga pemain klub langsung terjebak ke dalam jebakan klasik Rook QGA!",
                                 "is_blunder": true,
                                 "human_freq": 0.6586
                               },
@@ -545,7 +545,7 @@
                                         "human_freq": 0.0395
                                       }
                                     ],
-                                    "blurb": "Menghukum early Bf5 oleh menyerang yang tanpa penjagaan b7 pawn dan d5 simultaneously!"
+                                    "blurb": "Hukum langkah dini Bf5 dengan menyerang pawn b7 yang tidak terjaga dan d5 secara simultan!"
                                   }
                                 ],
                                 "blurb": "Black recapture dengan c-pawn.",

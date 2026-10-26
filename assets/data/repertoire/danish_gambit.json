@@ -117,7 +117,7 @@
                                                     "blurb": "Blokir check dengan Nc3."
                                                   }
                                                 ],
-                                                "blurb": "Black throws di Bb4+ untuk menyelamatkan Knight.",
+                                                "blurb": "Black melancarkan skak Bb4+ untuk menyelamatkan Knight.",
                                                 "human_freq": 0.1424
                                               }
                                             ],
@@ -186,7 +186,7 @@
                                                                   {
                                                                     "move": "d1b3",
                                                                     "san": "Qb3",
-                                                                    "blurb": "Double attack di e6 dan b7! Black cannot mempertahankan kedua pawn."
+                                                                    "blurb": "Double attack di e6 dan b7! Black tidak dapat mempertahankan kedua pawn sekaligus."
                                                                   }
                                                                 ],
                                                                 "blurb": "Black recapture, membuka e6 dan g7 petak.",
