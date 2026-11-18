@@ -5,6 +5,7 @@ signal elo_changed(new_elo: int)
 signal theme_changed(theme_name: String)
 signal piece_set_changed(set_name: String)
 signal arrows_toggled
+signal button_sound_theme_changed(theme_name: String)
 signal engine_depth_changed(new_depth: int)
 signal ai_delay_changed(new_mode: String, new_custom_delay: float)
 signal ai_engine_type_changed(new_type: String)
@@ -22,6 +23,8 @@ var ai_custom_delay: float = 1.2 # Rentang: 0.0 s/d 5.0 detik
 var player_color: int = ChessTypes.PieceColor.WHITE
 var chosen_side: String = "white" # "white" | "black" | "random"
 var selected_repertoire_id: String = "fried_liver_attack"
+var selected_tactics_set_id: String = "checkmate_patterns"
+var selected_tactics_puzzle_id: String = ""
 var piece_set: String = "neo"
 var board_theme: String = "emerald"
 var show_white_engine_arrows: bool = true
@@ -44,6 +47,7 @@ var show_threat_arrows: bool:
 
 var sound_enabled: bool = true
 var sound_volume: float = 0.8
+var button_sound_theme: String = "mechanical" # "mechanical" | "modern" | "soft" | "mouse" | "off"
 var is_flipped: bool = false
 var current_game_mode: String = "vs_ai"
 var open_painter_on_launch: bool = false
@@ -118,6 +122,15 @@ func set_board_theme(new_theme: String) -> void:
 	if board_theme != new_theme:
 		board_theme = new_theme
 		theme_changed.emit(board_theme)
+		save_settings()
+
+func set_button_sound_theme(new_theme: String) -> void:
+	if new_theme != "mechanical" and new_theme != "modern" and new_theme != "soft" and new_theme != "mouse" and new_theme != "off":
+		new_theme = "mechanical"
+	if button_sound_theme != new_theme:
+		button_sound_theme = new_theme
+		button_sound_theme_changed.emit(button_sound_theme)
+		settings_changed.emit()
 		save_settings()
 
 func set_show_forbidden_squares(val: bool) -> void:
@@ -379,6 +392,7 @@ func save_settings() -> void:
 		"show_threat_arrows": show_white_threat_arrows,
 		"sound_enabled": sound_enabled,
 		"sound_volume": sound_volume,
+		"button_sound_theme": button_sound_theme,
 		"show_forbidden_squares": show_forbidden_squares,
 		"show_defender_highlights": show_defender_highlights,
 		"review_strength": review_strength,
@@ -459,6 +473,7 @@ func load_settings() -> void:
 				
 		sound_enabled = bool(d.get("sound_enabled", true))
 		sound_volume = float(d.get("sound_volume", 0.8))
+		button_sound_theme = str(d.get("button_sound_theme", "mechanical"))
 		show_forbidden_squares = bool(d.get("show_forbidden_squares", true))
 		show_defender_highlights = bool(d.get("show_defender_highlights", true))
 		review_strength = str(d.get("review_strength", "fast"))

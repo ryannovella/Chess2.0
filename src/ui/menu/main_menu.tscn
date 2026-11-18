@@ -611,7 +611,7 @@ theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 1
 theme_override_fonts/font = ExtResource("18_font_xbold")
 theme_override_font_sizes/font_size = 23
-text = "Opening Trainer (Reps)"
+text = "Training Hub (Drills)"
 
 [node name="CardVariants" type="Button" parent="CenterContainer/MainLayout/RightCard/VBox/ModeCards" unique_id=1069394835]
 custom_minimum_size = Vector2(0, 66)
@@ -1064,6 +1064,19 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 18
 text = "Sound Effects"
 
+[node name="ButtonSoundRow" type="HBoxContainer" parent="SettingsModal/CenterContainer/SettingsCard/VBox/Form" unique_id=1849204812]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SettingsModal/CenterContainer/SettingsCard/VBox/Form/ButtonSoundRow" unique_id=1948293012]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Button Click"
+
+[node name="OptButtonSound" type="OptionButton" parent="SettingsModal/CenterContainer/SettingsCard/VBox/Form/ButtonSoundRow" unique_id=1620394821]
+custom_minimum_size = Vector2(240, 46)
+layout_mode = 2
+
 [node name="HSeparator2" type="HSeparator" parent="SettingsModal/CenterContainer/SettingsCard/VBox/Form" unique_id=338639675]
 layout_mode = 2
 
@@ -1283,13 +1296,38 @@ stretch_mode = 5
 layout_mode = 2
 theme_override_fonts/font = ExtResource("18_font_xbold")
 theme_override_font_sizes/font_size = 24
-text = "Pilih Latihan Pembukaan"
+text = "Training Hub"
+
+[node name="TabBar" type="HBoxContainer" parent="TrainerModal/CenterContainer/TrainerCard/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnTabOpenings" type="Button" parent="TrainerModal/CenterContainer/TrainerCard/VBox/TabBar"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Repertoires"
+
+[node name="BtnTabCheckmate" type="Button" parent="TrainerModal/CenterContainer/TrainerCard/VBox/TabBar"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Checkmate"
+
+[node name="BtnTabQueen" type="Button" parent="TrainerModal/CenterContainer/TrainerCard/VBox/TabBar"]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "Queen Tactics"
 
 [node name="HSeparator" type="HSeparator" parent="TrainerModal/CenterContainer/TrainerCard/VBox"]
 layout_mode = 2
 
 [node name="Scroll" type="ScrollContainer" parent="TrainerModal/CenterContainer/TrainerCard/VBox"]
-custom_minimum_size = Vector2(0, 740)
+custom_minimum_size = Vector2(0, 680)
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
