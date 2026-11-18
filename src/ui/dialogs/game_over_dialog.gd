@@ -3,6 +3,7 @@ extends Control
 
 signal rematch_pressed
 signal review_pressed
+signal painter_pressed
 signal main_menu_pressed
 signal closed
 
@@ -13,6 +14,7 @@ signal closed
 @onready var subtitle_label: Label = $CenterContainer/CardPanel/VBoxContainer/SubtitleLabel
 @onready var score_label: Label = $CenterContainer/CardPanel/VBoxContainer/ScoreBadge/ScoreLabel
 @onready var btn_rematch: Button = $CenterContainer/CardPanel/VBoxContainer/BtnRematch
+@onready var btn_painter: Button = get_node_or_null("CenterContainer/CardPanel/VBoxContainer/BtnPainter")
 @onready var btn_review: Button = $CenterContainer/CardPanel/VBoxContainer/BtnReview
 @onready var btn_main_menu: Button = $CenterContainer/CardPanel/VBoxContainer/BtnMainMenu
 @onready var btn_close: Button = $CenterContainer/CardPanel/VBoxContainer/BtnClose
@@ -32,6 +34,7 @@ func _ensure_nodes() -> void:
 		subtitle_label = get_node_or_null("CenterContainer/CardPanel/VBoxContainer/SubtitleLabel")
 		score_label = get_node_or_null("CenterContainer/CardPanel/VBoxContainer/ScoreBadge/ScoreLabel")
 		btn_rematch = get_node_or_null("CenterContainer/CardPanel/VBoxContainer/BtnRematch")
+		btn_painter = get_node_or_null("CenterContainer/CardPanel/VBoxContainer/BtnPainter")
 		btn_review = get_node_or_null("CenterContainer/CardPanel/VBoxContainer/BtnReview")
 		btn_main_menu = get_node_or_null("CenterContainer/CardPanel/VBoxContainer/BtnMainMenu")
 		btn_close = get_node_or_null("CenterContainer/CardPanel/VBoxContainer/BtnClose")
@@ -41,6 +44,8 @@ func _ready() -> void:
 	visible = false
 	if btn_rematch and not btn_rematch.pressed.is_connected(_on_rematch_pressed):
 		btn_rematch.pressed.connect(_on_rematch_pressed)
+	if btn_painter and not btn_painter.pressed.is_connected(_on_painter_pressed):
+		btn_painter.pressed.connect(_on_painter_pressed)
 	if btn_review and not btn_review.pressed.is_connected(_on_review_pressed):
 		btn_review.pressed.connect(_on_review_pressed)
 	if btn_main_menu and not btn_main_menu.pressed.is_connected(_on_main_menu_pressed):
@@ -105,6 +110,9 @@ func hide_dialog(on_complete: Callable = Callable()) -> void:
 
 func _on_rematch_pressed() -> void:
 	hide_dialog(func(): rematch_pressed.emit())
+
+func _on_painter_pressed() -> void:
+	hide_dialog(func(): painter_pressed.emit())
 
 func _on_review_pressed() -> void:
 	hide_dialog(func(): review_pressed.emit())

@@ -7,7 +7,7 @@ Every logic/UI change MUST pass §5 before you report a task as complete.
 
 | Need | Command (`& "D:\Tools\Godot\Godot_v4.7.2-stable_win64_console.exe" ...`) |
 | :--- | :--- |
-| Verification gate (641 assertions) | `--headless --path . -s res://tests/test_runner.gd` |
+| Verification gate (817 assertions) | `--headless --path . -s res://tests/test_runner.gd` |
 | Reimport assets after editing `.import`/SVG/PNG | `--headless --path . --import` |
 | Asset audit (mipmaps, raster size, font metadata) | `--headless --path . -s res://tools/audit_visual_assets.gd` |
 | Display-scale audit + layout snapshot (`SNAP\|`) | `--headless --path . -s res://tools/audit_texture_display.gd` |
@@ -48,7 +48,7 @@ Every logic/UI change MUST pass §5 before you report a task as complete.
 & "D:\Tools\Godot\Godot_v4.7.2-stable_win64_console.exe" --headless --path . -s res://tests/test_runner.gd
 ```
 
-Currently **641 assertions**. Most frequently relevant guards: Category 9 (savior shield), Category 14 (Game Review + ASCII), Category 15 (review overhaul + icons), Category 16 (review layout floor), Category 17 (visual asset quality).
+Currently **817 assertions**. Most frequently relevant guards: Category 9 (savior shield), Category 14 (Game Review + ASCII), Category 15 (review overhaul + icons), Category 16 (review layout floor), Category 17 (visual asset quality).
 
 ## 6. UI/UX, Anti-Slop & Window Fit
 - **Window fit [MANDATORY]:** the layout is fixed at 720×1280. Sub-panels inside `SidePanel/HUDTabContainer` must not exceed their vertical budget (~245 px); `MainLayout` must not exceed the viewport.

@@ -6,6 +6,7 @@ signal eval_updated(score_cp: int, is_mate: bool, mate_in: int, depth: int)
 signal arrows_updated(arrows: Array[Dictionary])
 signal ai_move_ready(move_uci: String)
 signal analysis_progress_updated(current_depth: int, target_depth: int, is_final: bool)
+signal engine_missing(reason: String)
 
 var client: UCIClient = null
 var maia_client: UCIClient = null
@@ -115,7 +116,56 @@ func _is_using_maia() -> bool:
 			return false
 	return true
 
+func is_stockfish_available() -> bool:
+	return client != null and client.is_running
+
+func ensure_stockfish_started() -> bool:
+	if client != null and client.is_running:
+		return true
+	if client == null:
+		client = UCIClient.new()
+		client.engine_ready.connect(_on_engine_ready)
+		client.evaluation_updated.connect(_on_evaluation_updated)
+		client.best_move_received.connect(_on_best_move_received)
+	return client.start()
+
+static func _pick_emergency_fallback_move(state: ChessBoardState, legal: Array) -> ChessMove:
+	if legal.is_empty():
+		return null
+	var captures: Array = []
+	for m in legal:
+		if state.get_piece(m.to_sq) != null:
+			captures.append(m)
+	if not captures.is_empty():
+		return captures[randi() % captures.size()]
+	return legal[randi() % legal.size()]
+
 func _request_stockfish_move(fen: String, elo: int) -> void:
+	# Stockfish 18 menolak FEN yang tidak sah TANPA pesan apa pun: tidak ada
+	# `info string`, tidak ada `bestmove`. Tanpa pre-check ini bot menggantung
+	# sampai watchdog memainkan langkah darurat acak.
+	var problem := _ai_position_problem(fen)
+	if not problem.is_empty():
+		push_warning("EngineService: Stockfish would reject position '%s' (%s); using the local fallback move instead." % [fen, problem])
+		is_waiting_for_ai = false
+		is_flushing_for_ai = false
+		_emit_fallback_move_deferred()
+		return
+
+	if not ensure_stockfish_started():
+		push_warning("EngineService: Stockfish binary missing or failed to start. Run setup_engines.ps1 or let MainMenu download it.")
+		engine_missing.emit("Stockfish binary not found at res://engine/stockfish.exe")
+		is_waiting_for_ai = false
+		is_flushing_for_ai = false
+		var fallback_state := ChessBoardState.new(fen)
+		var fallback_legal := ChessMoveGenerator.get_legal_moves(fallback_state)
+		var chosen := _pick_emergency_fallback_move(fallback_state, fallback_legal)
+		if chosen != null:
+			ai_move_ready.emit.call_deferred(chosen.to_uci())
+		else:
+			_emit_fallback_move_deferred.call_deferred()
+		return
+
 	var parts = fen.strip_edges().split(" ")
 	var turn = ChessTypes.PieceColor.BLACK if (parts.size() > 1 and parts[1] == "b") else ChessTypes.PieceColor.WHITE
 
@@ -159,6 +209,18 @@ func request_ai_move(fen: String, elo: int) -> void:
 	ai_request_start_time = Time.get_ticks_msec()
 	pending_ai_fen = fen
 	pending_ai_elo = elo
+
+	# Posisi tidak sah tidak boleh masuk ke engine mana pun: Stockfish diam
+	# total (tidak ada `bestmove`), Maia hanya menghasilkan langkah ngawur.
+	# Emit kosong ditunda satu frame supaya pemanggil (start_new_game) selesai
+	# dulu sebelum main.gd memproses fallback-nya.
+	var problem := _ai_position_problem(fen)
+	if not problem.is_empty():
+		push_warning("EngineService: Told to move in an unplayable position '%s' (%s); skipping the engine." % [fen, problem])
+		is_waiting_for_ai = false
+		is_flushing_for_ai = false
+		_emit_fallback_move_deferred.call_deferred()
+		return
 
 	var parts = fen.strip_edges().split(" ")
 	var turn = ChessTypes.PieceColor.BLACK if (parts.size() > 1 and parts[1] == "b") else ChessTypes.PieceColor.WHITE
@@ -216,8 +278,21 @@ func _start_flushed_ai_search() -> void:
 	var turn = ChessTypes.PieceColor.BLACK if (parts.size() > 1 and parts[1] == "b") else ChessTypes.PieceColor.WHITE
 	client.start_new_search(turn)
 	client.send_command("setoption name MultiPV value 1")
-	client.send_command("position fen %s" % pending_ai_fen)
+	# FEN dibersihkan dari hak rokade mustahil sebelum dikirim (lihat
+	# PositionRules): papan aplikasi sudah dibersihkan dengan cara yang sama.
+	client.send_command("position fen %s" % PositionRules.sanitized_fen(pending_ai_fen))
 	client.send_command("go movetime %d" % pending_ai_movetime)
+
+## Alasan posisi tidak sah untuk engine mana pun; string kosong berarti aman.
+func _ai_position_problem(fen: String) -> String:
+	if fen.strip_edges().is_empty():
+		return "empty position"
+	var state = ChessBoardState.new(fen)
+	PositionRules.sanitize_castling(state)
+	return PositionRules.get_playability_error(state)
+
+func _emit_fallback_move_deferred() -> void:
+	ai_move_ready.emit("")
 
 func _get_autoload_depth() -> int:
 	var tree = Engine.get_main_loop() as SceneTree
@@ -228,6 +303,8 @@ func _get_autoload_depth() -> int:
 
 func analyze_position(fen: String, depth: int = -1) -> void:
 	if is_waiting_for_ai or is_flushing_for_ai:
+		return
+	if not ensure_stockfish_started():
 		return
 
 	var target_d = depth if depth > 0 else _get_autoload_depth()
@@ -396,11 +473,7 @@ func _on_ai_watchdog_timeout(req_id: int) -> void:
 		ai_move_ready.emit("")
 		return
 
-	var chosen: ChessMove = legal[0]
-	for m in legal:
-		if state.get_piece(m.to_sq) != null:
-			chosen = m
-			break
+	var chosen: ChessMove = _pick_emergency_fallback_move(state, legal)
 	var chosen_uci = chosen.to_uci()
 	push_warning("EngineService: Watchdog emergency fallback move played: %s" % chosen_uci)
 	ai_move_ready.emit(chosen_uci)

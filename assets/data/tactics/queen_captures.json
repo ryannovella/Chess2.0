@@ -1,0 +1,265 @@
+{
+  "id": "queen_captures",
+  "title": "Queen Tactics & Free Captures",
+  "description": "Latihan menangkap Queen gantung, menghukum overextension, dan menyapu free pieces.",
+  "category": "queen_capture",
+  "total_puzzles": 18,
+  "puzzles": [
+    {
+      "id": "q_hanging_queen_w01",
+      "title": "Hanging Queen Capture",
+      "category": "queen_capture",
+      "theme": "hanging_queen",
+      "side": "white",
+      "fen": "rnb1kbnr/pppp1ppp/8/4p3/4P2q/5N2/PPPP1PPP/RNBQKB1R w KQkq - 0 1",
+      "moves": [
+        "f3h4"
+      ],
+      "difficulty": 1,
+      "blurb": "Black memainkan Queen terlalu dini ke h4 tanpa perlindungan. Tangkap Queen gantung lawan dengan Knight di f3 (Nxh4).",
+      "tip": "Selalu periksa apakah piece lawan yang maju memiliki pengawal aktif sebelum melancarkan langkah lain."
+    },
+    {
+      "id": "q_hanging_queen_w02",
+      "title": "Loose Queen in the Center",
+      "category": "queen_capture",
+      "theme": "hanging_queen",
+      "side": "white",
+      "fen": "r1b1kbnr/ppp2ppp/2n5/3q4/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 1",
+      "moves": [
+        "c3d5"
+      ],
+      "difficulty": 1,
+      "blurb": "Queen Black berdiri di d5 tanpa dijaga oleh bidak atau perwira lain. Rebut Queen gratis menggunakan Knight c3 (Nxd5).",
+      "tip": "Queen di petak sentral yang tidak dijaga adalah sasaran empuk bagi Knight kawan yang sedang berkembang."
+    },
+    {
+      "id": "q_hanging_queen_b01",
+      "title": "Hanging Queen Capture",
+      "category": "queen_capture",
+      "theme": "hanging_queen",
+      "side": "black",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P2Q/8/PPPP1PPP/RNB1KBNR b KQkq - 0 1",
+      "moves": [
+        "d8h4"
+      ],
+      "difficulty": 1,
+      "blurb": "White melakukan blunder fatal dengan menaruh Queen di h4 tanpa pengawalan. Santap Queen White langsung dengan Queen Black (Qxh4).",
+      "tip": "Manfaatkan blunder lawan seketika; memakan Queen gratis memberikan keunggulan material +9 yang menentukan."
+    },
+    {
+      "id": "q_hanging_queen_b02",
+      "title": "Unprotected Center Queen",
+      "category": "queen_capture",
+      "theme": "hanging_queen",
+      "side": "black",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/4Q3/2N5/PPPP1PPP/R1B1KBNR b KQkq - 0 1",
+      "moves": [
+        "f6e4"
+      ],
+      "difficulty": 1,
+      "blurb": "White memajukan Queen ke e4 tanpa perlindungan dari pawn atau perwira lain. Makan Queen tersebut menggunakan Knight f6 (Nxe4).",
+      "tip": "Kembangkan perwira sembari menghukum penempatan piece lawan yang tidak terkoordinasi."
+    },
+    {
+      "id": "q_punish_wayward_w01",
+      "title": "Punishing Wayward Queen",
+      "category": "queen_capture",
+      "theme": "punish_early_queen",
+      "side": "white",
+      "fen": "r1b1k1nr/pppp1ppp/2n5/4p1q1/2B1P3/2N5/PPPP1PPP/R1BQK1NR w KQkq - 0 1",
+      "moves": [
+        "d2d4"
+      ],
+      "difficulty": 1,
+      "blurb": "Black membawa Queen ke g5 untuk memburu pawn g2. Buka serangan balik dengan d4 untuk mendominasi center dan mengusir Queen.",
+      "tip": "Jangan takut pada ancaman semu Queen awal; balas dengan perkembangan perwira dan penguasaan sentral."
+    },
+    {
+      "id": "q_punish_wayward_b01",
+      "title": "Trapping Early Attack Queen",
+      "category": "queen_capture",
+      "theme": "punish_early_queen",
+      "side": "black",
+      "fen": "r1b1k1nr/pppp1ppp/2n5/2b1p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 0 1",
+      "moves": [
+        "g7g6"
+      ],
+      "difficulty": 1,
+      "blurb": "White mencoba Wayward Queen Attack mengincar f7. Halau serangan dengan g6, mengusir Queen White sembari menyiapkan fianchetto.",
+      "tip": "Langkah solid g6 menangkis ancaman skakmat f7 sekaligus merebut tempo perkembangan."
+    },
+    {
+      "id": "q_trapped_queen_w01",
+      "title": "Trapping Overextended Queen",
+      "category": "queen_capture",
+      "theme": "trapped_queen",
+      "side": "white",
+      "fen": "r1b1kbnr/pp1p1ppp/2n1p3/q7/3NP3/2N5/PPP2PPP/R1BQKB1R w KQkq - 0 1",
+      "moves": [
+        "d4b3"
+      ],
+      "difficulty": 1,
+      "blurb": "Queen Black terisolasi di petak a5. Gerakkan Knight ke b3 untuk menyerang Queen dan membatasi mobilitasnya.",
+      "tip": "Mendorong Queen lawan ke petak sempit mempermudah penjebakan material di langkah berikutnya."
+    },
+    {
+      "id": "q_trapped_queen_b01",
+      "title": "Trapping Infiltrating Queen",
+      "category": "queen_capture",
+      "theme": "trapped_queen",
+      "side": "black",
+      "fen": "rn2kb1r/pp2pppp/2p5/Q7/8/8/PPPP1PPP/R1B1KBNR b KQkq - 0 1",
+      "moves": [
+        "b7b6"
+      ],
+      "difficulty": 1,
+      "blurb": "Queen White menyusup sendirian ke a5. Majukan pawn ke b6 untuk memukul mundur Queen dan memperkuat sayap menteri.",
+      "tip": "Gunakan pawn lever sederhana untuk menolak kehadiran piece berat lawan di wilayah pertahanan sendiri."
+    },
+    {
+      "id": "q_free_piece_w01",
+      "title": "Queen Snatching Hanging Bishop",
+      "category": "queen_capture",
+      "theme": "free_minor_piece",
+      "side": "white",
+      "fen": "r1bqk1nr/pppp1ppp/8/4n3/1b1QP3/2N5/PPP2PPP/R1B1KBNR w KQkq - 0 1",
+      "moves": [
+        "d4b4"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop Black di b4 tidak dijaga oleh siapapun. Manfaatkan Queen di d4 untuk memakan Bishop gratis tersebut (Qxb4).",
+      "tip": "Pindai seluruh board: Queen memiliki jangkauan diagonal dan lurus tak terbatas untuk memungut piece yang lepas penjagaan."
+    },
+    {
+      "id": "q_free_piece_b01",
+      "title": "Queen Snatching Hanging Knight",
+      "category": "queen_capture",
+      "theme": "free_minor_piece",
+      "side": "black",
+      "fen": "rnb1kbnr/pppp1ppp/8/8/4N2q/8/PPPPPPPP/RNBQKB1R b KQkq - 0 1",
+      "moves": [
+        "h4e4"
+      ],
+      "difficulty": 1,
+      "blurb": "White meninggalkan Knight di e4 tanpa perlindungan. Tangkap Knight gratis itu menggunakan Queen Black (Qxe4).",
+      "tip": "Memakan perwira gratis (hanging piece) adalah cara paling konsisten untuk memenangkan pertandingan di tingkat klub."
+    },
+    {
+      "id": "q_free_piece_w02",
+      "title": "Queen Snatching Hanging Knight",
+      "category": "queen_capture",
+      "theme": "free_minor_piece",
+      "side": "white",
+      "fen": "r1bqk2r/pppp1ppp/2n5/4n3/2B1P3/2P2N2/PPP2PPP/R1BQK2R w KQkq - 0 1",
+      "moves": [
+        "f3e5"
+      ],
+      "difficulty": 1,
+      "blurb": "Black menaruh Knight di e5 tanpa perlindungan yang memadai. Tumpas Knight tersebut untuk memperbesar keunggulan material.",
+      "tip": "Gunakan perwira aktif Anda untuk melenyapkan perwira lawan yang terlalu maju tanpa dukungan."
+    },
+    {
+      "id": "q_free_piece_b02",
+      "title": "Queen Snatching Hanging Bishop",
+      "category": "queen_capture",
+      "theme": "free_minor_piece",
+      "side": "black",
+      "fen": "rnbqk1nr/pppp1ppp/8/8/1b2P3/2B5/PPP2PPP/RN1QKBNR b KQkq - 0 1",
+      "moves": [
+        "b4c3"
+      ],
+      "difficulty": 1,
+      "blurb": "Sapu Bishop White di c3 untuk merusak koordinasi pertahanan lawan dan memenangkan pertukaran perwira.",
+      "tip": "Lakukan pertukaran menguntungkan saat piece lawan ditempatkan pada petak yang rentan."
+    },
+    {
+      "id": "q_fork_w01",
+      "title": "Queen Central Pin & Win",
+      "category": "queen_capture",
+      "theme": "queen_fork",
+      "side": "white",
+      "fen": "r3k2r/ppp2ppp/8/4b3/4Q3/8/PPP2PPP/R1B1K2R w KQkq - 0 1",
+      "moves": [
+        "e4e5"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop Black di e5 dipin ke King di e8. Tangkap Bishop yang tak berdaya tersebut dengan Queen White (Qxe5+).",
+      "tip": "Piece yang berada dalam keadaan pin absolut tidak dapat bergerak dan kehilangan fungsi pertahanannya."
+    },
+    {
+      "id": "q_fork_w02",
+      "title": "Queen Fork Winning Rook",
+      "category": "queen_capture",
+      "theme": "queen_fork",
+      "side": "white",
+      "fen": "r3k2r/p1p2ppp/8/8/3Q4/8/PPP2PPP/R1B2RK1 w kq - 0 1",
+      "moves": [
+        "d4e4"
+      ],
+      "difficulty": 1,
+      "blurb": "Luncurkan Queen ke e4 untuk melancarkan skak ke King e8 sekaligus menyerang Rook a8 yang tidak terlindungi.",
+      "tip": "Queen fork adalah serangan ganda simultan yang memaksa lawan merespon skak sambil merelakan piece lain."
+    },
+    {
+      "id": "q_fork_b01",
+      "title": "Queen Fork Winning Piece",
+      "category": "queen_capture",
+      "theme": "queen_fork",
+      "side": "black",
+      "fen": "r1b1k2r/pppp1ppp/2n5/4p3/2B1n3/2N5/PPPP1PPP/R1BQK1NR b KQkq - 0 1",
+      "moves": [
+        "e4c3"
+      ],
+      "difficulty": 1,
+      "blurb": "Manfaatkan keunggulan posisi di center untuk memakan Knight c3 White dan mengacaukan susunan pawn lawan.",
+      "tip": "Hilangkan piece bertahan lawan untuk membuka celah serangan baru ke King musuh."
+    },
+    {
+      "id": "q_fork_b02",
+      "title": "Queen Fork Winning Rook",
+      "category": "queen_capture",
+      "theme": "queen_fork",
+      "side": "black",
+      "fen": "r1b2rk1/ppp2ppp/8/3q4/8/8/P1P2PPP/R3K2R b KQ - 0 1",
+      "moves": [
+        "d5e5"
+      ],
+      "difficulty": 1,
+      "blurb": "Lesatkan Queen Black ke e5 dengan skak ke King White di e1 dan ancaman langsung terhadap Rook a1.",
+      "tip": "Perhatikan diagonal panjang terbuka yang menghubungkan King di e-file dengan Rook di pojok a-file."
+    },
+    {
+      "id": "q_discovered_w01",
+      "title": "Discovered Attack Winning Queen",
+      "category": "queen_capture",
+      "theme": "discovered_attack",
+      "side": "white",
+      "fen": "r1bq1rk1/pp3ppp/8/8/8/3B4/PP3PPP/R1BQR1K1 w - - 0 1",
+      "moves": [
+        "d3h7",
+        "g8h8",
+        "d1d8"
+      ],
+      "difficulty": 2,
+      "blurb": "Luncurkan Bishop ke h7 dengan skak (Bxh7+). Saat King Black teralihkan, d-file terbuka lebar untuk memakan Queen d8.",
+      "tip": "Discovered attack bekerja dengan memindahkan satu piece yang memberi ancaman sembari membuka jalur serang bagi piece di belakangnya."
+    },
+    {
+      "id": "q_discovered_b01",
+      "title": "Discovered Attack Winning Queen",
+      "category": "queen_capture",
+      "theme": "discovered_attack",
+      "side": "black",
+      "fen": "r1bqr1k1/pp3ppp/3b4/8/8/8/PP3PPP/R1BQR1K1 b - - 0 1",
+      "moves": [
+        "d6h2",
+        "g1h1",
+        "d8d1"
+      ],
+      "difficulty": 2,
+      "blurb": "Serang h2 dengan Bishop Black (Bxh2+). King White terpaksa menghindar, membuka jalan bagi Queen Black untuk melahap Queen d1.",
+      "tip": "Kombinasi skak pemancing dan discovered capture adalah teknik paling efektif merampas Queen lawan."
+    }
+  ]
+}

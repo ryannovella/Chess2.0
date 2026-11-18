@@ -1,0 +1,1060 @@
+{
+  "color": "white",
+  "description": "Koleksi jebakan pembukaan mematikan untuk Putih: Legal's Mate, Damiano Trap, Caro-Kann Smothered Mate, dan Petrov Copycat dengan berbagai variasi counter-attack.",
+  "eco": "C50",
+  "id": "traps_variation_white",
+  "name": "Traps Variation (White)",
+  "root": {
+    "blurb": "Buka sentral dengan 1.e4 untuk mengontrol petak d5 dan f5.",
+    "children": [
+      {
+        "children": [
+          {
+            "blurb": "Kembangkan Knight ke f3 menekan pion e5.",
+            "children": [
+              {
+                "children": [
+                  {
+                    "blurb": "Bc4 membidik petak lemah f7.",
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "blurb": "Nc3 memperkuat kontrol petak d5.",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "blurb": "5.h3! Menguji niat Bishop lawan dan menyiapkan jebakan Legal's Mate.",
+                                    "children": [
+                                      {
+                                        "annotation": "Bh5?! Mundur pasif mempertahankan pin semu, memicu jebakan pengorbanan Ratu!",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nxe5!! Pengorbanan Ratu spektakuler! Mengosongkan diagonal dan petak d5.",
+                                            "children": [
+                                              {
+                                                "annotation": "Bxd1?? Blunder fatal mengambil umpan Ratu yang berujung skakmat seketika!",
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Bxf7+! Skak tajam memaksa King melangkah ke petak terbuka e7.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Nd5#!! Legal's Mate sempurna! Tiga perwira ringan mengeksekusi skakmat indah.",
+                                                            "children": [],
+                                                            "move": "c3d5",
+                                                            "san": "Nd5#"
+                                                          }
+                                                        ],
+                                                        "move": "e8e7",
+                                                        "san": "Ke7"
+                                                      }
+                                                    ],
+                                                    "move": "c4f7",
+                                                    "san": "Bxf7+"
+                                                  }
+                                                ],
+                                                "is_blunder": true,
+                                                "move": "h5d1",
+                                                "san": "Bxd1"
+                                              },
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Qxh5! Rebut Bishop yang menggantung di h5.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Qb5+! Skak garpu mematikan terhadap King dan Knight c4.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Qxc4! Tangkap kembali Knight c4, White unggul satu pion bersih dan kontrol pusat.",
+                                                                    "children": [],
+                                                                    "move": "b5c4",
+                                                                    "san": "Qxc4"
+                                                                  }
+                                                                ],
+                                                                "move": "c7c6",
+                                                                "san": "c6"
+                                                              }
+                                                            ],
+                                                            "move": "h5b5",
+                                                            "san": "Qb5+"
+                                                          }
+                                                        ],
+                                                        "move": "e5c4",
+                                                        "san": "Nxc4"
+                                                      }
+                                                    ],
+                                                    "move": "d1h5",
+                                                    "san": "Qxh5"
+                                                  }
+                                                ],
+                                                "move": "c6e5",
+                                                "san": "Nxe5"
+                                              },
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Qxh5! Menghukum kesalahan Black dengan menangkap Bishop h5 serta mengancam f7.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.d3! Perkokoh pion sentral dan buka diagonal dark-squared Bishop.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Qd1! Tarik Ratu ke posisi aman dengan keunggulan satu pion bersih.",
+                                                                    "children": [],
+                                                                    "move": "h5d1",
+                                                                    "san": "Qd1"
+                                                                  }
+                                                                ],
+                                                                "move": "g8f6",
+                                                                "san": "Nf6"
+                                                              }
+                                                            ],
+                                                            "move": "d2d3",
+                                                            "san": "d3"
+                                                          }
+                                                        ],
+                                                        "move": "d8d7",
+                                                        "san": "Qd7"
+                                                      }
+                                                    ],
+                                                    "move": "d1h5",
+                                                    "san": "Qxh5"
+                                                  }
+                                                ],
+                                                "move": "d6e5",
+                                                "san": "dxe5"
+                                              }
+                                            ],
+                                            "move": "f3e5",
+                                            "san": "Nxe5"
+                                          }
+                                        ],
+                                        "is_blunder": true,
+                                        "move": "g4h5",
+                                        "san": "Bh5"
+                                      },
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.Qxf3! Ambil dengan Ratu untuk membidik f7 dan mempertahankan bishop pair.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.d3! Struktur pion kokoh menguasai sentral.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Be3! Selesaikan pengembangan perwira ringan.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.O-O! Amankan King dengan keunggulan sepasang Gajah.",
+                                                                    "children": [],
+                                                                    "move": "e1g1",
+                                                                    "san": "O-O"
+                                                                  }
+                                                                ],
+                                                                "move": "e8g8",
+                                                                "san": "O-O"
+                                                              }
+                                                            ],
+                                                            "move": "c1e3",
+                                                            "san": "Be3"
+                                                          }
+                                                        ],
+                                                        "move": "f8e7",
+                                                        "san": "Be7"
+                                                      }
+                                                    ],
+                                                    "move": "d2d3",
+                                                    "san": "d3"
+                                                  }
+                                                ],
+                                                "move": "g8f6",
+                                                "san": "Nf6"
+                                              }
+                                            ],
+                                            "move": "d1f3",
+                                            "san": "Qxf3"
+                                          }
+                                        ],
+                                        "move": "g4f3",
+                                        "san": "Bxf3"
+                                      }
+                                    ],
+                                    "move": "h2h3",
+                                    "san": "h3"
+                                  }
+                                ],
+                                "move": "c8g4",
+                                "san": "Bg4"
+                              }
+                            ],
+                            "move": "b1c3",
+                            "san": "Nc3"
+                          }
+                        ],
+                        "move": "d7d6",
+                        "san": "d6"
+                      }
+                    ],
+                    "move": "f1c4",
+                    "san": "Bc4"
+                  }
+                ],
+                "move": "b8c6",
+                "san": "Nc6"
+              },
+              {
+                "annotation": "2...f6? Damiano Defense yang sangat melemahkan diagonal raja e8-h5!",
+                "children": [
+                  {
+                    "blurb": "3.Nxe5!! Pengorbanan Knight legendaris untuk membongkar kelemahan f6.",
+                    "children": [
+                      {
+                        "annotation": "3...fxe5?? Menerima Knight mengundang pembongkaran total sayap raja!",
+                        "children": [
+                          {
+                            "blurb": "4.Qh5+! Skak tajam memanfaatkan diagonal yang terbuka lebar.",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "blurb": "5.Qxe5+! Ambil pion sentral sambil terus menyerang King Black.",
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.Bc4+! Aktifkan Bishop membimbing King ke tengah medan terbuka.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Bxd5+! Ambil pion penutup dengan tempo skak.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.h4! Dorong h-pawn mengancam h5+ yang mematikan.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Bxb7! Taktik defleksi brilian terhadap Rook a8 dan Bishop c8.",
+                                                                    "children": [
+                                                                      {
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.Qa5! Amankan Ratu sambil tetap menekan posisi Black.",
+                                                                            "children": [
+                                                                              {
+                                                                                "children": [
+                                                                                  {
+                                                                                    "blurb": "11.Bxc6! Bersihkan perwira pertahanan lawan.",
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "blurb": "12.d4! Kuasai pusat penuh dengan keunggulan material mutlak.",
+                                                                                            "children": [],
+                                                                                            "move": "d2d4",
+                                                                                            "san": "d4"
+                                                                                          }
+                                                                                        ],
+                                                                                        "move": "a8b8",
+                                                                                        "san": "Rb8"
+                                                                                      }
+                                                                                    ],
+                                                                                    "move": "b7c6",
+                                                                                    "san": "Bxc6"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "b8c6",
+                                                                                "san": "Nc6"
+                                                                              }
+                                                                            ],
+                                                                            "move": "e5a5",
+                                                                            "san": "Qa5"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f8d6",
+                                                                        "san": "Bd6"
+                                                                      }
+                                                                    ],
+                                                                    "move": "d5b7",
+                                                                    "san": "Bxb7"
+                                                                  }
+                                                                ],
+                                                                "move": "h7h5",
+                                                                "san": "h5"
+                                                              },
+                                                              {
+                                                                "annotation": "8...h6? Melemahkan sayap raja lebih parah memicu gelombang skak penutup!",
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.h5+! Paksa King Black mundur ke pojok h7.",
+                                                                    "children": [
+                                                                      {
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.Qf5+! Skak diagonal memaksa penutupan g6.",
+                                                                            "children": [
+                                                                              {
+                                                                                "children": [
+                                                                                  {
+                                                                                    "blurb": "11.Qxg6#!! Skakmat mutlak di petak g6 dengan dukungan Bishop d5!",
+                                                                                    "children": [],
+                                                                                    "move": "f5g6",
+                                                                                    "san": "Qxg6#"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "g7g6",
+                                                                                "san": "g6"
+                                                                              }
+                                                                            ],
+                                                                            "move": "e5f5",
+                                                                            "san": "Qf5+"
+                                                                          }
+                                                                        ],
+                                                                        "move": "g6h7",
+                                                                        "san": "Kh7"
+                                                                      }
+                                                                    ],
+                                                                    "move": "h4h5",
+                                                                    "san": "h5+"
+                                                                  }
+                                                                ],
+                                                                "is_blunder": true,
+                                                                "move": "h7h6",
+                                                                "san": "h6"
+                                                              }
+                                                            ],
+                                                            "move": "h2h4",
+                                                            "san": "h4"
+                                                          }
+                                                        ],
+                                                        "move": "f7g6",
+                                                        "san": "Kg6"
+                                                      }
+                                                    ],
+                                                    "move": "c4d5",
+                                                    "san": "Bxd5+"
+                                                  }
+                                                ],
+                                                "move": "d7d5",
+                                                "san": "d5"
+                                              }
+                                            ],
+                                            "move": "f1c4",
+                                            "san": "Bc4+"
+                                          }
+                                        ],
+                                        "move": "e7f7",
+                                        "san": "Kf7"
+                                      }
+                                    ],
+                                    "move": "h5e5",
+                                    "san": "Qxe5+"
+                                  }
+                                ],
+                                "move": "e8e7",
+                                "san": "Ke7"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "blurb": "5.Qxe5+! Skak ganda memenangkan Rook h8.",
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.Qxh8! Tangkap Rook gratis di sudut papan.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.d3! Siapkan jalan keluar bagi Queen melalui petak sentral.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Bg5! Pin Knight f6 untuk mematahkan serangan balik Black.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Nc3! Tambah tekanan pada pion d5.",
+                                                                    "children": [
+                                                                      {
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.O-O-O! Amankan King ke queenside dengan keunggulan satu Benteng penuh.",
+                                                                            "children": [],
+                                                                            "move": "e1c1",
+                                                                            "san": "O-O-O"
+                                                                          }
+                                                                        ],
+                                                                        "move": "c7c6",
+                                                                        "san": "c6"
+                                                                      }
+                                                                    ],
+                                                                    "move": "b1c3",
+                                                                    "san": "Nc3"
+                                                                  }
+                                                                ],
+                                                                "move": "b8d7",
+                                                                "san": "Nbd7"
+                                                              }
+                                                            ],
+                                                            "move": "c1g5",
+                                                            "san": "Bg5"
+                                                          }
+                                                        ],
+                                                        "move": "d7d5",
+                                                        "san": "d5"
+                                                      }
+                                                    ],
+                                                    "move": "d2d3",
+                                                    "san": "d3"
+                                                  }
+                                                ],
+                                                "move": "g8f6",
+                                                "san": "Nf6"
+                                              }
+                                            ],
+                                            "move": "e5h8",
+                                            "san": "Qxh8"
+                                          }
+                                        ],
+                                        "move": "d8e7",
+                                        "san": "Qe7"
+                                      }
+                                    ],
+                                    "move": "h5e5",
+                                    "san": "Qxe5+"
+                                  }
+                                ],
+                                "move": "g7g6",
+                                "san": "g6"
+                              }
+                            ],
+                            "move": "d1h5",
+                            "san": "Qh5+"
+                          }
+                        ],
+                        "is_blunder": true,
+                        "move": "f6e5",
+                        "san": "fxe5"
+                      },
+                      {
+                        "children": [
+                          {
+                            "blurb": "4.Nf3! Tarik Knight kembali ke petak aman f3.",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "blurb": "5.Be2! Kembangkan Bishop sekaligus menutupi jalur skak.",
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.O-O! Amankan King ke tempat terlindung.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Re1! Buka jalur e-file menyerang Queen Black yang terisolasi.",
+                                                    "children": [],
+                                                    "move": "f1e1",
+                                                    "san": "Re1"
+                                                  }
+                                                ],
+                                                "move": "c8e6",
+                                                "san": "Be6"
+                                              }
+                                            ],
+                                            "move": "e1g1",
+                                            "san": "O-O"
+                                          }
+                                        ],
+                                        "move": "d7d5",
+                                        "san": "d5"
+                                      }
+                                    ],
+                                    "move": "f1e2",
+                                    "san": "Be2"
+                                  }
+                                ],
+                                "move": "e7e4",
+                                "san": "Qxe4+"
+                              }
+                            ],
+                            "move": "e5f3",
+                            "san": "Nf3"
+                          }
+                        ],
+                        "move": "d8e7",
+                        "san": "Qe7"
+                      }
+                    ],
+                    "move": "f3e5",
+                    "san": "Nxe5"
+                  }
+                ],
+                "is_blunder": true,
+                "move": "f7f6",
+                "san": "f6"
+              },
+              {
+                "children": [
+                  {
+                    "blurb": "3.Nxe5! Ambil pion sentral e5 pada Petrov Defense.",
+                    "children": [
+                      {
+                        "annotation": "3...Nxe4? Copycat prematur sebelum memainkan 3...d6!",
+                        "children": [
+                          {
+                            "blurb": "4.Qe2! Langkah kunci memanfaatkan pin e-file terhadap King lawan.",
+                            "children": [
+                              {
+                                "annotation": "4...Nf6?? Menarik Knight mundur membiarkan skak terbuka mematikan!",
+                                "children": [
+                                  {
+                                    "blurb": "5.Nc6+! Discovered check spektakuler yang langsung memenangkan Ratu!",
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nxd8! Tangkap Ratu Black, White unggul Ratu penuh pada langkah ke-6.",
+                                            "children": [
+                                              {
+                                                "children": [],
+                                                "move": "e8d8",
+                                                "san": "Kxd8"
+                                              }
+                                            ],
+                                            "move": "c6d8",
+                                            "san": "Nxd8"
+                                          }
+                                        ],
+                                        "move": "f8e7",
+                                        "san": "Be7"
+                                      }
+                                    ],
+                                    "move": "e5c6",
+                                    "san": "Nc6+"
+                                  }
+                                ],
+                                "is_blunder": true,
+                                "move": "e4f6",
+                                "san": "Nf6"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "blurb": "5.Qxe4! Rebut Knight di e4.",
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.d4! Dukung penguasaan sentral d4 yang kokoh.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.dxe5! Rebut kembali pion dengan keunggulan struktur.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Nc3! Kembangkan perwira dan bersiap castling sayap ratu.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Qxe5+! Sederhanakan posisi menuju endgame unggul satu pion.",
+                                                                    "children": [
+                                                                      {
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.Bf4! Kembangkan Bishop menyerang Knight c7/e5.",
+                                                                            "children": [
+                                                                              {
+                                                                                "children": [
+                                                                                  {
+                                                                                    "blurb": "11.O-O-O! Amankan King ke d1 dengan dominasi ruang yang jelas.",
+                                                                                    "children": [],
+                                                                                    "move": "e1c1",
+                                                                                    "san": "O-O-O"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "f8d6",
+                                                                                "san": "Bd6"
+                                                                              }
+                                                                            ],
+                                                                            "move": "c1f4",
+                                                                            "san": "Bf4"
+                                                                          }
+                                                                        ],
+                                                                        "move": "c6e5",
+                                                                        "san": "Nxe5"
+                                                                      }
+                                                                    ],
+                                                                    "move": "e4e5",
+                                                                    "san": "Qxe5+"
+                                                                  }
+                                                                ],
+                                                                "move": "e7e5",
+                                                                "san": "Qxe5"
+                                                              }
+                                                            ],
+                                                            "move": "b1c3",
+                                                            "san": "Nc3"
+                                                          }
+                                                        ],
+                                                        "move": "b8c6",
+                                                        "san": "Nc6"
+                                                      }
+                                                    ],
+                                                    "move": "d4e5",
+                                                    "san": "dxe5"
+                                                  }
+                                                ],
+                                                "move": "d6e5",
+                                                "san": "dxe5"
+                                              },
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Nc3! Kembangkan Knight bersiap melompat ke d5.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Nd5! Sentralisasi agresif menekan Ratu dan titik c7.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Bf4! Manfaatkan pin mutlak pada pion e5.",
+                                                                    "children": [
+                                                                      {
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.O-O-O! Tekanan ganda pada d-file menghancurkan pertahanan Black.",
+                                                                            "children": [],
+                                                                            "move": "e1c1",
+                                                                            "san": "O-O-O"
+                                                                          }
+                                                                        ],
+                                                                        "move": "b8d7",
+                                                                        "san": "Nd7"
+                                                                      }
+                                                                    ],
+                                                                    "move": "c1f4",
+                                                                    "san": "Bf4"
+                                                                  }
+                                                                ],
+                                                                "move": "e7d6",
+                                                                "san": "Qd6"
+                                                              }
+                                                            ],
+                                                            "move": "c3d5",
+                                                            "san": "Nd5"
+                                                          }
+                                                        ],
+                                                        "move": "d6e5",
+                                                        "san": "dxe5"
+                                                      }
+                                                    ],
+                                                    "move": "b1c3",
+                                                    "san": "Nc3"
+                                                  }
+                                                ],
+                                                "move": "f7f6",
+                                                "san": "f6"
+                                              }
+                                            ],
+                                            "move": "d2d4",
+                                            "san": "d4"
+                                          }
+                                        ],
+                                        "move": "d7d6",
+                                        "san": "d6"
+                                      }
+                                    ],
+                                    "move": "e2e4",
+                                    "san": "Qxe4"
+                                  }
+                                ],
+                                "move": "d8e7",
+                                "san": "Qe7"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "blurb": "5.d3! Usir Knight e4 yang sedang terpin pada e-file.",
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.dxe4! Tangkap Knight e4 dengan keunggulan material.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.exd5! Menangkan pion sentral d5 dengan pin Ratu.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Nc3! Tambah penjagaan pada d5 dan percepat development.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Qxe5! Tukar Queen menuju babak akhir yang sangat menguntungkan.",
+                                                                    "children": [
+                                                                      {
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.Bd2! Kembangkan Bishop untuk menyelesaikan formasi.",
+                                                                            "children": [],
+                                                                            "move": "c1d2",
+                                                                            "san": "Bd2"
+                                                                          }
+                                                                        ],
+                                                                        "move": "d6e5",
+                                                                        "san": "Bxe5"
+                                                                      }
+                                                                    ],
+                                                                    "move": "e2e5",
+                                                                    "san": "Qxe5"
+                                                                  }
+                                                                ],
+                                                                "move": "e8g8",
+                                                                "san": "O-O"
+                                                              }
+                                                            ],
+                                                            "move": "b1c3",
+                                                            "san": "Nc3"
+                                                          }
+                                                        ],
+                                                        "move": "f8d6",
+                                                        "san": "Bd6"
+                                                      }
+                                                    ],
+                                                    "move": "e4d5",
+                                                    "san": "exd5"
+                                                  }
+                                                ],
+                                                "move": "e7e5",
+                                                "san": "Qxe5"
+                                              }
+                                            ],
+                                            "move": "d3e4",
+                                            "san": "dxe4"
+                                          }
+                                        ],
+                                        "move": "d8e7",
+                                        "san": "Qe7"
+                                      }
+                                    ],
+                                    "move": "d2d3",
+                                    "san": "d3"
+                                  }
+                                ],
+                                "move": "d7d5",
+                                "san": "d5"
+                              }
+                            ],
+                            "move": "d1e2",
+                            "san": "Qe2"
+                          }
+                        ],
+                        "is_blunder": true,
+                        "move": "f6e4",
+                        "san": "Nxe4"
+                      }
+                    ],
+                    "move": "f3e5",
+                    "san": "Nxe5"
+                  }
+                ],
+                "move": "g8f6",
+                "san": "Nf6"
+              }
+            ],
+            "move": "g1f3",
+            "san": "Nf3"
+          }
+        ],
+        "move": "e7e5",
+        "san": "e5"
+      },
+      {
+        "children": [
+          {
+            "blurb": "2.d4! Bangun duet pion sentral klasik melawan Caro-Kann.",
+            "children": [
+              {
+                "children": [
+                  {
+                    "blurb": "3.Nc3! Kembangkan Knight mempertahankan pion sentral.",
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "blurb": "4.Nxe4! Tangkap kembali pion di e4 dengan perwira aktif.",
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "blurb": "5.Qe2! Langkah jebakan licik memasang pin tak terlihat pada pion c7.",
+                                    "children": [
+                                      {
+                                        "annotation": "5...Ngf6?? Langkah alami yang menjadi blunder fatal akibat pin c7!",
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nd6#!! Smothered mate spektakuler! Pion c7 terpin ke King oleh Ratu e2!",
+                                            "children": [],
+                                            "move": "e4d6",
+                                            "san": "Nd6#"
+                                          }
+                                        ],
+                                        "is_blunder": true,
+                                        "move": "g8f6",
+                                        "san": "Ngf6"
+                                      },
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nf3! Kembangkan sayap raja secara harmonis.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Bg5! Pin Knight f6 untuk membatasi manuver lawan.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.O-O-O! Castling queenside dengan inisiatif serangan tajam.",
+                                                            "children": [
+                                                              {
+                                                                "children": [],
+                                                                "move": "e8g8",
+                                                                "san": "O-O"
+                                                              }
+                                                            ],
+                                                            "move": "e1c1",
+                                                            "san": "O-O-O"
+                                                          }
+                                                        ],
+                                                        "move": "f8e7",
+                                                        "san": "Be7"
+                                                      }
+                                                    ],
+                                                    "move": "c1g5",
+                                                    "san": "Bg5"
+                                                  }
+                                                ],
+                                                "move": "g8f6",
+                                                "san": "Ngf6"
+                                              }
+                                            ],
+                                            "move": "g1f3",
+                                            "san": "Nf3"
+                                          }
+                                        ],
+                                        "move": "e7e6",
+                                        "san": "e6"
+                                      },
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.Nxf6+! Tukar Knight untuk merusak koordinasi bidak lawan.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Nf3! Terus kembangkan perwira ke petak ideal.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.c3! Perkuat pengawalan pion d4.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.h3! Usir Bishop lawan dari diagonal pin.",
+                                                                    "children": [
+                                                                      {
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.g4! Rebut ruang di sayap raja dan usir Bishop ke g6.",
+                                                                            "children": [
+                                                                              {
+                                                                                "children": [],
+                                                                                "move": "h5g6",
+                                                                                "san": "Bg6"
+                                                                              }
+                                                                            ],
+                                                                            "move": "g2g4",
+                                                                            "san": "g4"
+                                                                          }
+                                                                        ],
+                                                                        "move": "g4h5",
+                                                                        "san": "Bh5"
+                                                                      }
+                                                                    ],
+                                                                    "move": "h2h3",
+                                                                    "san": "h3"
+                                                                  }
+                                                                ],
+                                                                "move": "e7e6",
+                                                                "san": "e6"
+                                                              }
+                                                            ],
+                                                            "move": "c2c3",
+                                                            "san": "c3"
+                                                          }
+                                                        ],
+                                                        "move": "c8g4",
+                                                        "san": "Bg4"
+                                                      }
+                                                    ],
+                                                    "move": "g1f3",
+                                                    "san": "Nf3"
+                                                  }
+                                                ],
+                                                "move": "g8f6",
+                                                "san": "Nxf6"
+                                              }
+                                            ],
+                                            "move": "e4f6",
+                                            "san": "Nxf6+"
+                                          }
+                                        ],
+                                        "move": "d7f6",
+                                        "san": "Ndf6"
+                                      },
+                                      {
+                                        "children": [
+                                          {
+                                            "blurb": "6.g3! Siapkan Bf4 untuk menekan Queen Black.",
+                                            "children": [
+                                              {
+                                                "children": [
+                                                  {
+                                                    "blurb": "7.Bf4! Serang Ratu Black dengan tempo perwira aktif.",
+                                                    "children": [
+                                                      {
+                                                        "children": [
+                                                          {
+                                                            "blurb": "8.Bd2! Mundur taktis menangkis skak sambil mempertahankan ancaman.",
+                                                            "children": [
+                                                              {
+                                                                "children": [
+                                                                  {
+                                                                    "blurb": "9.Bg2! Tempatkan Bishop di diagonal panjang.",
+                                                                    "children": [
+                                                                      {
+                                                                        "children": [
+                                                                          {
+                                                                            "blurb": "10.Qxe4! Tangkap kembali dengan sentralisasi Ratu yang dominan.",
+                                                                            "children": [],
+                                                                            "move": "e2e4",
+                                                                            "san": "Qxe4"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f6e4",
+                                                                        "san": "Nxe4"
+                                                                      }
+                                                                    ],
+                                                                    "move": "f1g2",
+                                                                    "san": "Bg2"
+                                                                  }
+                                                                ],
+                                                                "move": "a5c7",
+                                                                "san": "Qc7"
+                                                              }
+                                                            ],
+                                                            "move": "f4d2",
+                                                            "san": "Bd2"
+                                                          }
+                                                        ],
+                                                        "move": "c7a5",
+                                                        "san": "Qa5+"
+                                                      }
+                                                    ],
+                                                    "move": "c1f4",
+                                                    "san": "Bf4"
+                                                  }
+                                                ],
+                                                "move": "g8f6",
+                                                "san": "Ngf6"
+                                              }
+                                            ],
+                                            "move": "g2g3",
+                                            "san": "g3"
+                                          }
+                                        ],
+                                        "move": "d8c7",
+                                        "san": "Qc7"
+                                      }
+                                    ],
+                                    "move": "d1e2",
+                                    "san": "Qe2"
+                                  }
+                                ],
+                                "move": "b8d7",
+                                "san": "Nd7"
+                              }
+                            ],
+                            "move": "c3e4",
+                            "san": "Nxe4"
+                          }
+                        ],
+                        "move": "d5e4",
+                        "san": "dxe4"
+                      }
+                    ],
+                    "move": "b1c3",
+                    "san": "Nc3"
+                  }
+                ],
+                "move": "d7d5",
+                "san": "d5"
+              }
+            ],
+            "move": "d2d4",
+            "san": "d4"
+          }
+        ],
+        "move": "c7c6",
+        "san": "c6"
+      }
+    ],
+    "human_freq": 0.7,
+    "move": "e2e4",
+    "san": "e4"
+  }
+}

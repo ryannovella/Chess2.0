@@ -6,6 +6,7 @@ const ChessBoardState = preload("res://src/core/chess_board_state.gd")
 const ChessMoveGenerator = preload("res://src/core/chess_move_generator.gd")
 const ChessSAN = preload("res://src/core/chess_san.gd")
 const EngineService = preload("res://src/engine/engine_service.gd")
+const EngineBootstrap = preload("res://src/engine/engine_bootstrap.gd")
 const UCIClient = preload("res://src/engine/uci_client.gd")
 const GameReviewService = preload("res://src/core/game_review_service.gd")
 const CoachExplanationGenerator = preload("res://src/core/coach_explanation_generator.gd")
@@ -23,6 +24,8 @@ const RepertoireTree = preload("res://src/core/repertoire/repertoire_tree.gd")
 const SRSEngine = preload("res://src/core/repertoire/srs_engine.gd")
 const RepertoireNode = preload("res://src/core/repertoire/repertoire_node.gd")
 const OpeningTrainerScene = preload("res://src/ui/trainer/opening_trainer.tscn")
+const TacticsService = preload("res://src/core/tactics/tactics_service.gd")
+const PositionRules = preload("res://src/core/position_rules.gd")
 
 var total_tests: int = 0
 var passed_tests: int = 0
@@ -131,6 +134,18 @@ func _init() -> void:
 
 	# 15f. Unit Tests: Opening Repertoire & Spaced Repetition System (Chessreps Parity)
 	test_opening_repertoire_and_srs()
+
+	# 15g. Unit Tests: Tactics Service, Checkmate Trainer & Queen Captures
+	test_tactics_and_captures()
+
+	# 15h. Unit Tests: FEN kustom Chess Painter yang tidak boleh membekukan Stockfish
+	test_painter_position_guard()
+
+	# 15i. Unit Tests: AudioService & Tactile Button Click SFX (Press & Release)
+	test_audio_service_and_tactile_sfx()
+
+	# 15j. Unit Tests: EngineBootstrap & Fallback Portability
+	test_engine_bootstrap_and_fallback()
 
 	# 16. Performance Test: Perft Suite (Initial & Kiwipete)
 	test_perft_suite()
@@ -2127,10 +2142,29 @@ func test_opening_repertoire_and_srs() -> void:
 		assert_true(trap_tree.get_total_lines() >= 15 and trap_tree.get_total_player_moves() >= 35,
 			"%s memiliki >= 15 variasi & >= 35 langkah pemain (%d lines, %d moves)" % [trap_tree.name, trap_tree.get_total_lines(), trap_tree.get_total_player_moves()])
 
+	# 5f. Repertoire Black: King's Indian Defense (E60)
+	var kid = RepertoireService.load_repertoire("kings_indian_defense")
+	assert_true(kid != null, "Repertoire King's Indian Defense berhasil dimuat")
+	assert_equal(kid.color, "black", "King's Indian Defense adalah repertoire Hitam")
+	assert_equal(kid.eco, "E60", "ECO King's Indian Defense adalah E60")
+	assert_true(kid.get_total_player_moves() >= 50, "King's Indian memiliki >= 50 langkah pemain (ditemukan %d)" % kid.get_total_player_moves())
+	assert_true(kid.get_total_lines() >= 15, "King's Indian memiliki >= 15 variasi cabang (ditemukan %d)" % kid.get_total_lines())
+
+	# 5g. Repertoire Traps Variation (White: Legal, Damiano, Caro-Kann, Petrov | Black: Blackburne, Fishing Pole, King's Gambit, Queen's Gambit, Lasker)
+	var tp_w = RepertoireService.load_repertoire("traps_variation_white")
+	var tp_b = RepertoireService.load_repertoire("traps_variation_black")
+	assert_true(tp_w != null and tp_b != null, "Repertoire Traps Variation White dan Black berhasil dimuat")
+	assert_equal(tp_w.color, "white", "Traps Variation White adalah repertoire Putih")
+	assert_equal(tp_b.color, "black", "Traps Variation Black adalah repertoire Hitam")
+	assert_true(tp_w.get_total_lines() >= 15 and tp_w.get_total_player_moves() >= 35,
+		"Traps Variation White memiliki >= 15 variasi & >= 35 langkah pemain (%d lines, %d moves)" % [tp_w.get_total_lines(), tp_w.get_total_player_moves()])
+	assert_true(tp_b.get_total_lines() >= 15 and tp_b.get_total_player_moves() >= 35,
+		"Traps Variation Black memiliki >= 15 variasi & >= 35 langkah pemain (%d lines, %d moves)" % [tp_b.get_total_lines(), tp_b.get_total_player_moves()])
+
 	# 6. Guard ASCII & Validasi Legalitas Seluruh Langkah pada Semua Variasi
 	var all_blurbs_ascii = true
 	var all_moves_legal = true
-	for rep_tree in [fl, ck, eg, ag, ig, kg, qg, lg, st, en, bu, tr, da, vi, sm, ha, tn]:
+	for rep_tree in [fl, ck, eg, ag, ig, kg, qg, lg, st, en, bu, tr, da, vi, sm, ha, tn, kid, tp_w, tp_b]:
 		for line in rep_tree.flattened_lines:
 			var verify_state = ChessBoardState.new()
 			for node in line:
@@ -2210,6 +2244,10 @@ func test_opening_repertoire_and_srs() -> void:
 	assert_true(trainer.blurb_label != null, "BlurbLabel ter-resolusi dalam OpeningTrainer")
 	assert_true(trainer.btn_hint != null and trainer.btn_retry != null and trainer.btn_prev_line != null and trainer.btn_next_line != null,
 		"Tombol kontrol (Hint, Retry, PrevLine, NextLine) lengkap di OpeningTrainer")
+	assert_true(trainer.btn_prev_move != null and trainer.btn_next_move != null,
+		"Tombol navigasi panah kiri (<) dan kanan (>) ter-resolusi dalam OpeningTrainer")
+	assert_true(trainer.btn_prev_move.disabled, "Tombol panah kiri (<) awal dinonaktifkan pada posisi awal")
+	assert_true(trainer.btn_next_move.disabled, "Tombol panah kanan (>) awal dinonaktifkan karena sudah di posisi terkini")
 	assert_true(trainer.top_player_card != null and trainer.bottom_player_card != null,
 		"TopPlayerCard dan BottomPlayerCard ter-resolusi dalam OpeningTrainer")
 	assert_true(trainer.top_captured_container != null and trainer.bottom_captured_container != null,
@@ -2237,6 +2275,19 @@ func test_opening_repertoire_and_srs() -> void:
 	# Simulasikan langkah benar (e2e4)
 	trainer._on_board_move_made(ChessMove.new("e2", "e4"))
 	assert_true(trainer.status_label.text.contains("Correct") or trainer.status_label.text.contains("Benar"), "Langkah repertoire yang benar diterima dengan status Correct")
+	assert_true(not trainer.btn_prev_move.disabled, "Tombol panah kiri (<) aktif setelah langkah dijalankan")
+	assert_true(trainer.btn_next_move.disabled, "Tombol panah kanan (>) dinonaktifkan karena sudah di posisi terkini")
+
+	# Navigasi riwayat langkah (panah kiri = undo move, panah kanan = maju gradual mentok ke last position)
+	var latest_idx = trainer.max_reached_index
+	trainer._on_prev_move_pressed()
+	assert_equal(trainer.history_view_index, 0, "Panah kiri (<) berhasil mundur ke posisi awal")
+	assert_true(not trainer.btn_next_move.disabled, "Tombol panah kanan (>) aktif saat melihat riwayat langkah sebelumnya")
+	assert_true(not trainer.chess_board.is_interactive, "Papan catur view-only (is_interactive = false) saat meninjau riwayat langkah")
+	trainer._on_next_move_pressed()
+	assert_equal(trainer.history_view_index, 1, "Panah kanan (>) berhasil melangkah maju gradual ke langkah berikutnya")
+	assert_equal(trainer.history_view_index, latest_idx, "Panah kanan (>) mentok di last position yang sedang dimainkan")
+	assert_true(trainer.btn_next_move.disabled, "Tombol panah kanan (>) kembali nonaktif setelah mentok di posisi terkini")
 
 	# Simulasikan posisi latihan dengan pertukaran bidak (Fried Liver: 1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.Ng5 d5 5.exd5 Nxd5 6.Nxf7 Kxf7)
 	trainer.board_state = ChessBoardState.new("r1bq1b1r/ppp2kpp/2n5/3np3/2B5/8/PPPP1PPP/RNBQK2R w KQ - 0 7")
@@ -2309,6 +2360,25 @@ func test_opening_repertoire_and_srs() -> void:
 			menu.btn_close_trainer.emit_signal("pressed")
 			assert_true(not menu.trainer_modal.visible, "Tombol tutup menyembunyikan modal latihan")
 
+		# 11b. Training Hub Category Tab Switching (Repertoires, Checkmate, Queen Tactics)
+		assert_true(menu.btn_tab_openings != null and menu.btn_tab_checkmate != null and menu.btn_tab_queen != null,
+			"Tab selector Training Hub (Openings, Checkmate, Queen) ter-resolusi di MainMenu")
+
+		# Beralih ke tab Checkmate Trainer
+		menu.btn_tab_checkmate.emit_signal("pressed")
+		assert_equal(menu.current_trainer_tab, "checkmate", "Beralih aktif ke tab Checkmate Trainer")
+		assert_equal(menu.trainer_cards_container.get_child_count(), 26, "Tab Checkmate merender 26 kartu pola skakmat")
+
+		# Beralih ke tab Queen Tactics
+		menu.btn_tab_queen.emit_signal("pressed")
+		assert_equal(menu.current_trainer_tab, "queen_tactics", "Beralih aktif ke tab Queen Tactics")
+		assert_equal(menu.trainer_cards_container.get_child_count(), 18, "Tab Queen Tactics merender 18 kartu taktik Queen")
+
+		# Beralih kembali ke tab Openings
+		menu.btn_tab_openings.emit_signal("pressed")
+		assert_equal(menu.current_trainer_tab, "openings", "Beralih kembali ke tab Opening Repertoires")
+		assert_true(menu.trainer_cards_container.get_child_count() >= 17, "Tab Openings memuat kembali seluruh kartu repertoire")
+
 		# 12. MainMenu Build Version & GitHub Sync Invariants
 		assert_true(menu.version_label != null, "Version label ter-resolusi di MainMenu")
 		var active_ver = menu._get_active_build_version()
@@ -2321,8 +2391,500 @@ func test_opening_repertoire_and_srs() -> void:
 		menu._refresh_version_display()
 		assert_true(menu.version_label.text == active_ver, "Refresh version display mempertahankan sinkronisasi versi build")
 
+		# 13. MainMenu Collapsible Accordion Invariants
+		assert_true(menu.difficulty_card != null, "DifficultyCard ter-resolusi di MainMenu")
+		assert_true(menu.engine_assist_card != null, "EngineAssistCard ter-resolusi di MainMenu")
+		assert_true(menu.difficulty_header != null, "Difficulty header ter-resolusi di MainMenu")
+		assert_true(menu.engine_assist_header != null, "Engine assist header ter-resolusi di MainMenu")
+		assert_true(menu.difficulty_chevron != null, "Difficulty chevron terpasang di MainMenu")
+		assert_true(menu.engine_assist_chevron != null, "Engine assist chevron terpasang di MainMenu")
+
+		# Default state: Difficulty expanded, Engine Assist collapsed
+		assert_true(menu.is_difficulty_expanded == true, "Default: Bot Difficulty dalam kondisi expanded")
+		assert_true(menu.elo_slider.visible == true, "Default: ELO slider tampil saat expanded")
+		assert_true(menu.difficulty_chevron.is_expanded == true, "Default: Difficulty chevron menandai state expanded")
+
+		assert_true(menu.is_engine_assist_expanded == false, "Default: Engine Assist dalam kondisi collapsed")
+		assert_true(menu.player_arrows_row.visible == false, "Default: Player arrows row tersembunyi saat collapsed")
+		assert_true(menu.opponent_arrows_row.visible == false, "Default: Opponent arrows row tersembunyi saat collapsed")
+		assert_true(menu.depth_row.visible == false, "Default: Depth row tersembunyi saat collapsed")
+		assert_true(menu.engine_assist_chevron.is_expanded == false, "Default: Engine assist chevron menandai state collapsed")
+
+		# Toggle Engine Assist to expanded
+		menu.toggle_engine_assist()
+		assert_true(menu.is_engine_assist_expanded == true, "Toggle: Engine Assist berubah menjadi expanded")
+		assert_true(menu.player_arrows_row.visible == true, "Toggle: Player arrows row tampil saat expanded")
+		assert_true(menu.engine_assist_chevron.is_expanded == true, "Toggle: Engine assist chevron berubah ke expanded")
+
+		# Toggle Difficulty to collapsed
+		menu.toggle_difficulty()
+		assert_true(menu.is_difficulty_expanded == false, "Toggle: Bot Difficulty berubah menjadi collapsed")
+		assert_true(menu.elo_slider.visible == false, "Toggle: ELO slider tersembunyi saat collapsed")
+		assert_true(menu.difficulty_chevron.is_expanded == false, "Toggle: Difficulty chevron berubah ke collapsed")
+
+		# Kembalikan ke state default
+		menu.set_difficulty_expanded(true)
+		menu.set_engine_assist_expanded(false)
+
 		root.remove_child(menu)
 		menu.free()
+
+func test_tactics_and_captures() -> void:
+	print("\n[Kategori 21: Tactics Service, Checkmate Trainer & Queen Free Piece Captures]")
+
+	# 1. Available sets
+	var sets = TacticsService.get_available_sets()
+	assert_equal(sets.size(), 2, "Tersedia 2 dataset taktik: Checkmate Patterns dan Queen Captures")
+
+	# 2. Dataset Checkmate
+	var cm_set = TacticsService.load_set("checkmate_patterns")
+	assert_true(not cm_set.is_empty(), "Dataset checkmate_patterns berhasil dimuat")
+	assert_equal(cm_set.get("category", ""), "checkmate", "Kategori set adalah checkmate")
+	var cm_puzzles: Array = cm_set.get("puzzles", [])
+	assert_equal(cm_puzzles.size(), 26, "Tersedia 26 variasi pola skakmat terverifikasi")
+
+	var cm_white = TacticsService.get_puzzles("checkmate_patterns", "white")
+	var cm_black = TacticsService.get_puzzles("checkmate_patterns", "black")
+	assert_equal(cm_white.size(), 13, "Tepat 13 puzzle Checkmate sebagai Putih (50% rasio)")
+	assert_equal(cm_black.size(), 13, "Tepat 13 puzzle Checkmate sebagai Hitam (50% rasio)")
+
+	# 3. Dataset Queen Captures
+	var q_set = TacticsService.load_set("queen_captures")
+	assert_true(not q_set.is_empty(), "Dataset queen_captures berhasil dimuat")
+	assert_equal(q_set.get("category", ""), "queen_capture", "Kategori set adalah queen_capture")
+	var q_puzzles: Array = q_set.get("puzzles", [])
+	assert_equal(q_puzzles.size(), 18, "Tersedia 18 variasi taktik Queen dan free piece capturing")
+
+	var q_white = TacticsService.get_puzzles("queen_captures", "white")
+	var q_black = TacticsService.get_puzzles("queen_captures", "black")
+	assert_equal(q_white.size(), 9, "Tepat 9 puzzle Queen Captures sebagai Putih (50% rasio)")
+	assert_equal(q_black.size(), 9, "Tepat 9 puzzle Queen Captures sebagai Hitam (50% rasio)")
+
+	# 4. Validasi 100% legalitas move & skakmat untuk seluruh puzzle Checkmate
+	var all_cm_legal = true
+	var all_cm_mate = true
+	var all_ascii = true
+	var all_odd_plies = true
+	for p in cm_puzzles:
+		var pid = p.get("id", "")
+		var fen = p.get("fen", "")
+		var moves = p.get("moves", [])
+		var blurb = p.get("blurb", "")
+		var tip = p.get("tip", "")
+		if moves.size() % 2 == 0:
+			all_odd_plies = false
+		if not _is_clean_ascii(blurb) or not _is_clean_ascii(tip):
+			all_ascii = false
+		var state = ChessBoardState.new(fen)
+		for uci in moves:
+			var lm = ChessSAN.uci_to_move(state, uci)
+			if lm == null:
+				all_cm_legal = false
+				break
+			ChessMoveGenerator.apply_move_unchecked(state, lm)
+		if not ChessMoveGenerator.is_checkmate(state):
+			all_cm_mate = false
+	assert_true(all_cm_legal, "Seluruh 26 puzzle skakmat memiliki langkah legal 100%")
+	assert_true(all_cm_mate, "Seluruh 26 puzzle skakmat berakhir pada kondisi checkmate murni")
+	assert_true(all_ascii, "Seluruh deskripsi blurb dan tip catur berupa teks ASCII bersih tanpa mojibake")
+	assert_true(all_odd_plies, "Seluruh puzzle skakmat memiliki jumlah langkah ganjil (berakhir pada langkah pemain)")
+
+	# 5. Validasi 100% legalitas move untuk puzzle Queen Captures
+	var all_q_legal = true
+	var all_q_odd_plies = true
+	for p in q_puzzles:
+		var fen = p.get("fen", "")
+		var moves = p.get("moves", [])
+		var blurb = p.get("blurb", "")
+		var tip = p.get("tip", "")
+		if moves.size() % 2 == 0:
+			all_q_odd_plies = false
+		if not _is_clean_ascii(blurb) or not _is_clean_ascii(tip):
+			all_ascii = false
+		var state = ChessBoardState.new(fen)
+		for uci in moves:
+			var lm = ChessSAN.uci_to_move(state, uci)
+			if lm == null:
+				all_q_legal = false
+				break
+			ChessMoveGenerator.apply_move_unchecked(state, lm)
+	assert_true(all_q_legal, "Seluruh 18 puzzle Queen captures memiliki langkah legal 100%")
+	assert_true(all_q_odd_plies, "Seluruh puzzle Queen captures memiliki jumlah langkah ganjil (berakhir pada langkah pemain)")
+
+	# 6. Validasi Logika Move Step & Hint
+	var p_single = TacticsService.get_puzzle_by_id("checkmate_patterns", "cm_back_rank_w01")
+	var val_wrong = TacticsService.validate_player_move(p_single, 0, "a1b1")
+	assert_true(not val_wrong["is_correct"], "Langkah ilegal/salah ditolak dengan is_correct=false")
+	var val_correct = TacticsService.validate_player_move(p_single, 0, "a1a8")
+	assert_true(val_correct["is_correct"] and val_correct["is_final_step"], "Langkah benar terverifikasi dan ditandai final_step")
+
+	var hint = TacticsService.get_hint(p_single, 0)
+	assert_equal(hint["uci"], "a1a8", "Hint menunjukkan koordinasi langkah penyelesaian yang tepat")
+
+	# 7. Validasi Multi-ply opponent response (Philidor)
+	var p_multi = TacticsService.get_puzzle_by_id("checkmate_patterns", "cm_smothered_w02")
+	var val_step0 = TacticsService.validate_player_move(p_multi, 0, "c4g8")
+	assert_true(val_step0["is_correct"] and not val_step0["is_final_step"], "Langkah 1 kombinasi multi-ply valid tapi belum selesai")
+	assert_equal(val_step0["next_opponent_uci"], "f8g8", "Respon paksaan lawan terdeteksi otomatis (f8g8)")
+
+	# 8. Validasi Sistem Skor Bintang & Persistensi Progress
+	TacticsService.clear_all_progress()
+	var stars3 = TacticsService.record_puzzle_completion("cm_back_rank_w01", 0, 0)
+	assert_equal(stars3, 3, "Selesai tanpa kesalahan dan tanpa hint mendapatkan 3 bintang penuh")
+	var stars2 = TacticsService.record_puzzle_completion("cm_back_rank_b01", 1, 0)
+	assert_equal(stars2, 2, "Selesai dengan 1 kesalahan mendapatkan 2 bintang")
+	var stars1 = TacticsService.record_puzzle_completion("cm_kiss_of_death_w01", 2, 1)
+	assert_equal(stars1, 1, "Selesai dengan >=2 kesalahan atau bantuan hint mendapatkan 1 bintang")
+
+	var stats = TacticsService.get_set_stats("checkmate_patterns")
+	assert_equal(stats["solved_count"], 3, "Statistik set mencatat tepat 3 puzzle selesai")
+	assert_equal(stats["total_stars"], 6, "Total bintang terakumulasi 3+2+1 = 6")
+	assert_true(stats["mastery_percent"] > 0.0, "Persentase penguasaan taktik terhitung proporsional")
+	TacticsService.clear_all_progress()
+
+	# 9. Scene TacticsTrainer Lifecycle & Board Interaction
+	var tactics_packed = load("res://src/ui/trainer/tactics_trainer.tscn")
+	assert_true(tactics_packed != null, "Resource tactics_trainer.tscn berhasil dimuat")
+	if tactics_packed:
+		var trainer = tactics_packed.instantiate()
+		assert_true(trainer != null, "Scene TacticsTrainer berhasil di-instantiate")
+		root.add_child(trainer)
+		trainer._ready()
+
+		assert_true(trainer.chess_board != null, "ChessBoard ter-resolusi dalam TacticsTrainer")
+		assert_true(trainer.status_label != null and trainer.blurb_label != null, "StatusLabel & BlurbLabel ter-resolusi dalam TacticsTrainer")
+		assert_true(trainer.btn_hint != null and trainer.btn_retry != null and trainer.btn_prev_puzzle != null and trainer.btn_next_puzzle != null,
+			"Tombol kontrol (Hint, Retry, Prev, Next) lengkap di TacticsTrainer")
+		assert_true(trainer.btn_prev_move != null and trainer.btn_next_move != null,
+			"Tombol navigasi panah kiri (<) dan kanan (>) ter-resolusi dalam TacticsTrainer")
+		assert_true(trainer.btn_prev_move.disabled, "Tombol panah kiri (<) awal dinonaktifkan di TacticsTrainer")
+		assert_true(trainer.btn_next_move.disabled, "Tombol panah kanan (>) awal dinonaktifkan di TacticsTrainer")
+		assert_true(trainer.top_player_card != null and trainer.bottom_player_card != null, "Kartu pemain ter-resolusi dalam TacticsTrainer")
+		assert_equal(trainer.active_puzzles.size(), 26, "Default dataset aktif adalah 26 checkmate puzzles")
+		assert_equal(trainer.puzzle_title_label.text, "Back Rank Mate", "Puzzle pertama adalah Back Rank Mate")
+		assert_true(trainer.chess_board.is_interactive, "Papan catur dalam status is_interactive = true agar bidak dapat digerakkan")
+
+		# Langkah pemain benar
+		trainer._on_board_move_made(ChessMove.new("a1", "a8"))
+		trainer._on_player_move_animation_done({"is_final_step": true}, ChessBoardState.new("R7/6pk/5p1p/8/8/8/5PPP/6K1 b - - 0 1"))
+		assert_true(trainer.is_puzzle_completed, "Puzzle checkmate berhasil ditandai selesai setelah langkah kunci")
+		assert_true(not trainer.chess_board.is_interactive, "Papan dinonaktifkan (is_interactive = false) saat puzzle selesai")
+		assert_true(trainer.status_label.text.contains("Checkmate"), "Status mengonfirmasi keberhasilan Checkmate")
+
+		# Siklus filter sisi (All -> White -> Black -> All)
+		trainer._on_filter_side_pressed()
+		assert_equal(trainer.active_side_filter, "white", "Filter sisi beralih ke White")
+		assert_equal(trainer.active_puzzles.size(), 13, "Filter White memuat tepat 13 puzzle")
+
+		trainer._on_filter_side_pressed()
+		assert_equal(trainer.active_side_filter, "black", "Filter sisi beralih ke Black")
+		assert_equal(trainer.active_puzzles.size(), 13, "Filter Black memuat tepat 13 puzzle")
+		assert_true(trainer.is_flipped, "Papan otomatis diflip saat memuat puzzle Black")
+
+		trainer._on_filter_side_pressed()
+		assert_equal(trainer.active_side_filter, "", "Filter sisi kembali ke All (26 puzzles)")
+
+		# Ganti dataset ke Queen Captures
+		trainer.load_tactics_set("queen_captures")
+		assert_equal(trainer.current_set_id, "queen_captures", "Dataset berhasil beralih ke queen_captures")
+		assert_equal(trainer.active_puzzles.size(), 18, "Memuat 18 puzzles Queen Captures")
+
+		root.remove_child(trainer)
+		trainer.free()
+
+		# Test direct puzzle ID navigation (dari klik kartu Main Menu)
+		var gs = root.get_node_or_null("GameSettings")
+		if gs:
+			gs.selected_tactics_set_id = "queen_captures"
+			gs.selected_tactics_puzzle_id = "q_hanging_queen_b01"
+		var trainer_q = tactics_packed.instantiate()
+		root.add_child(trainer_q)
+		assert_equal(trainer_q.current_set_id, "queen_captures", "TacticsTrainer membuka set queen_captures dari GameSettings")
+		assert_equal(trainer_q.current_puzzle.get("id", ""), "q_hanging_queen_b01", "TacticsTrainer langsung memuat puzzle target q_hanging_queen_b01")
+		assert_true(trainer_q.is_flipped, "Papan diflip karena q_hanging_queen_b01 adalah giliran Hitam")
+		root.remove_child(trainer_q)
+		trainer_q.free()
+
+# -----------------------------------------------------------------
+# 22. Chess Painter: FEN kustom harus aman untuk Stockfish
+# -----------------------------------------------------------------
+## Stockfish 18 menolak FEN yang tidak sah tanpa pesan apa pun (tidak ada
+## `bestmove`), sehingga bot menggantung sampai watchdog EngineService (6 detik)
+## memainkan langkah darurat acak. Kategori ini mengunci penyaring di depan
+## peluncuran Chess Painter: hak rokade mustahil dibuang, posisi tidak sah
+## ditolak dengan alasan yang terbaca, dan FEN yang lolos tidak pernah membawa
+## "KQkq" tanpa raja/benteng di petak awalnya.
+func test_painter_position_guard() -> void:
+	print("\n[Kategori 22: Chess Painter - FEN Kustom Aman untuk Stockfish]")
+	var GS = root.get_node_or_null("GameSettings") if root else null
+	if GS == null:
+		var GSClass = load("res://src/config/game_settings.gd")
+		GS = GSClass.new()
+		GS.name = "GameSettings"
+		root.add_child(GS)
+
+	# 1. Kasus nyata: papan kosong tetapi checkbox rokade masih "KQkq"
+	var bare = ChessBoardState.new("4k3/8/8/8/8/8/8/4K3 w KQkq - 0 1")
+	PositionRules.sanitize_castling(bare)
+	assert_true(
+		not bare.castling["wK"] and not bare.castling["wQ"] and not bare.castling["bK"] and not bare.castling["bQ"],
+		"Hak rokade tanpa raja/benteng di petak awal dibuang seluruhnya"
+	)
+	assert_true(bare.to_fen().contains(" w - - "), "FEN hasil sanitasi memakai '-' pada field rokade")
+
+	# 2. Posisi standar tidak boleh berubah
+	var init_state = ChessBoardState.new(ChessBoardState.DEFAULT_FEN)
+	PositionRules.sanitize_castling(init_state)
+	assert_equal(init_state.to_fen(), ChessBoardState.DEFAULT_FEN, "FEN posisi awal tetap utuh setelah sanitasi")
+
+	# 3. Raja + dua benteng di petak awal mempertahankan haknya
+	var full_castle = ChessBoardState.new("r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1")
+	PositionRules.sanitize_castling(full_castle)
+	assert_equal(full_castle.to_fen(), "r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1", "Rokade penuh tetap sah setelah sanitasi")
+
+	# 4. Hanya satu benteng tersisa -> hanya hak yang didukung bidak yang bertahan
+	var half_castle = ChessBoardState.new("4k3/8/8/8/8/8/8/R3K3 w KQkq - 0 1")
+	PositionRules.sanitize_castling(half_castle)
+	assert_true(half_castle.castling["wQ"] and not half_castle.castling["wK"], "Hanya hak rokade yang didukung bidak yang bertahan")
+
+	# 5. Posisi sah diterima, posisi yang membuat Stockfish diam ditolak
+	assert_true(PositionRules.get_playability_error(ChessBoardState.new(ChessBoardState.DEFAULT_FEN)).is_empty(), "Posisi awal dinyatakan bisa dimainkan")
+	var kq_k = ChessBoardState.new("4k3/8/8/8/8/8/8/Q3K3 w - - 0 1")
+	assert_true(PositionRules.get_playability_error(kq_k).is_empty(), "Raja+menteri vs raja dinyatakan bisa dimainkan")
+	var no_kings := [
+		"8/8/8/8/8/8/8/8 w - - 0 1",
+		"4k3/8/8/8/8/8/8/8 w - - 0 1",
+		"8/8/8/8/8/8/8/4K3 w - - 0 1",
+	]
+	for fen in no_kings:
+		assert_true(not PositionRules.get_playability_error(ChessBoardState.new(fen)).is_empty(), "Raja kurang ditolak: %s" % fen)
+	assert_true(not PositionRules.get_playability_error(ChessBoardState.new("4k3/8/8/8/8/8/8/3KK3 w - - 0 1")).is_empty(), "Raja ganda ditolak")
+	assert_true(not PositionRules.get_playability_error(ChessBoardState.new("4k3/8/8/8/8/8/8/P3K3 w - - 0 1")).is_empty(), "Pion di rank 1 ditolak")
+	assert_true(not PositionRules.get_playability_error(ChessBoardState.new("4k2P/8/8/8/8/8/8/4K3 w - - 0 1")).is_empty(), "Pion di rank 8 ditolak")
+	assert_true(not PositionRules.get_playability_error(ChessBoardState.new("4k3/4R3/8/8/8/8/8/4K3 w - - 0 1")).is_empty(), "Pihak yang tidak melangkah sudah ter-skak ditolak")
+	assert_true(not PositionRules.get_playability_error(ChessBoardState.new("7k/5Q2/6K1/8/8/8/8/8 b - - 0 1")).is_empty(), "Posisi tanpa langkah legal ditolak")
+
+	# 6. Pembersihan FEN lewat satu pintu (dipakai EngineService & main.start_new_game)
+	assert_equal(PositionRules.sanitized_fen("4k3/8/8/8/8/8/8/4K3 w KQkq - 0 1"), "4k3/8/8/8/8/8/8/4K3 w - - 0 1", "sanitized_fen membuang hak rokade mustahil")
+
+	# 7. Scene Chess Painter: notif banner ada dan peluncuran menyaring posisi
+	var painter_packed = load("res://src/ui/painter/chess_painter.tscn")
+	assert_true(painter_packed != null, "Scene Chess Painter berhasil dimuat")
+	if painter_packed == null:
+		return
+	var painter = painter_packed.instantiate()
+	root.add_child(painter)
+	var emitted: Array = []
+	painter.play_position.connect(func(fen: String, mode: String): emitted.append({"fen": fen, "mode": mode}))
+	assert_true(painter.get_node_or_null("MainLayout/ToolsSection/VBoxContainer/StatusBanner") != null, "Painter memiliki StatusBanner untuk notifikasi")
+	assert_true(painter.status_banner != null and not painter.status_banner.visible, "StatusBanner tersembunyi pada posisi awal yang sah")
+
+	# Papan kosong: tidak boleh diluncurkan, alasan wajib tampil sebagai ASCII bersih di dalam banner
+	painter.painter_state.squares.fill(null)
+	painter._refresh_pieces()
+	painter._launch_game("vs_ai")
+	assert_equal(emitted.size(), 0, "Papan kosong tidak diluncurkan ke engine")
+	assert_true(painter.status_banner != null and painter.status_banner.visible, "StatusBanner tampil saat posisi melanggar aturan")
+	assert_true(painter.status_label != null and not painter.status_label.text.is_empty(), "Painter menjelaskan alasan penolakan posisi")
+	assert_true(_is_clean_ascii(painter.status_label.text), "Pesan penolakan bebas karakter non-ASCII")
+
+	# Dua raja saja: FEN yang diluncurkan tidak boleh membawa "KQkq"
+	painter.painter_state.squares.fill(null)
+	painter.painter_state.set_piece("e1", {"color": ChessTypes.PieceColor.WHITE, "type": ChessTypes.PieceType.KING})
+	painter.painter_state.set_piece("e8", {"color": ChessTypes.PieceColor.BLACK, "type": ChessTypes.PieceType.KING})
+	painter._refresh_pieces()
+	painter._launch_game("vs_ai")
+	assert_equal(emitted.size(), 1, "Posisi dua raja berhasil diluncurkan")
+	if emitted.size() == 1:
+		var launched_fen := str(emitted[0]["fen"])
+		assert_true(not launched_fen.contains("KQkq"), "FEN painter tidak membawa hak rokade mustahil")
+		assert_equal(launched_fen.split(" ")[2], "-", "Field rokade FEN painter adalah '-'")
+		assert_true(PositionRules.is_playable(ChessBoardState.new(launched_fen)), "FEN painter lolos validasi playability")
+	assert_true(painter.status_label.text.is_empty(), "Status bersih setelah peluncuran sah")
+	assert_true(painter.status_banner != null and not painter.status_banner.visible, "StatusBanner otomatis hilang setelah peluncuran sah")
+
+	# Opsi pilihan sisi pemain (White / Black) dan pembalikan orientasi papan di Chess Painter
+	assert_true(painter.opt_side != null, "Painter memiliki OptionButton opt_side untuk memilih sisi pemain")
+	assert_equal(painter.opt_side.item_count, 2, "OptSide memiliki 2 opsi: White dan Black")
+
+	# Pilih Black (Bottom)
+	painter.opt_side.select(1)
+	painter._on_side_selected(1)
+	assert_true(painter.painter_flipped, "Memilih Black mengaktifkan painter_flipped = true")
+
+	# Pada orientasi flipped (Black di bawah), klik di area bawah (y dekat 560) harus memetakan ke rank 8/7
+	var bottom_sq = painter._get_square_from_position(Vector2(20.0, 540.0))
+	assert_true(bottom_sq.ends_with("8"), "Saat flipped, petak paling bawah adalah rank 8 (petak awal perwira hitam): %s" % bottom_sq)
+	var second_bottom_sq = painter._get_square_from_position(Vector2(20.0, 470.0))
+	assert_true(second_bottom_sq.ends_with("7"), "Saat flipped, petak baris kedua dari bawah adalah rank 7 (petak awal pion hitam): %s" % second_bottom_sq)
+
+	# Kembalikan ke White (Bottom)
+	painter.opt_side.select(0)
+	painter._on_side_selected(0)
+	assert_true(not painter.painter_flipped, "Memilih White mengembalikan painter_flipped = false")
+	var unflipped_bottom_sq = painter._get_square_from_position(Vector2(20.0, 540.0))
+	assert_true(unflipped_bottom_sq.ends_with("1"), "Saat unflipped, petak paling bawah adalah rank 1: %s" % unflipped_bottom_sq)
+
+	# Tombol Sync Game tersedia
+	assert_true(painter.btn_sync_game != null, "Painter memiliki tombol btn_sync_game untuk import game")
+
+	# Launching dengan Black terpilih mengatur GameSettings ke black dan flipped
+	painter.opt_side.select(1)
+	painter._on_side_selected(1)
+	emitted.clear()
+	painter.painter_state.squares.fill(null)
+	painter.painter_state.set_piece("e1", {"color": ChessTypes.PieceColor.WHITE, "type": ChessTypes.PieceType.KING})
+	painter.painter_state.set_piece("e8", {"color": ChessTypes.PieceColor.BLACK, "type": ChessTypes.PieceType.KING})
+	painter._refresh_pieces()
+	painter._launch_game("local_2p")
+	assert_equal(emitted.size(), 1, "Posisi berhasil diluncurkan ke local_2p")
+	assert_equal(GS.chosen_side, "black", "Peluncuran dengan Black mengatur GameSettings.chosen_side = black")
+	assert_true(GS.is_flipped, "GameSettings.is_flipped = true saat bermain sebagai Hitam")
+	assert_equal(GS.player_color, ChessTypes.PieceColor.BLACK, "GameSettings.player_color = BLACK")
+
+	# Dialog GameOver dan PauseMenu memiliki opsi Edit in Painter
+	var go_dlg_packed = load("res://src/ui/dialogs/game_over_dialog.tscn")
+	if go_dlg_packed != null:
+		var go_dlg = go_dlg_packed.instantiate()
+		root.add_child(go_dlg)
+		assert_true(go_dlg.has_signal("painter_pressed"), "GameOverDialog mengekspos sinyal painter_pressed")
+		assert_true(go_dlg.btn_painter != null, "GameOverDialog memiliki tombol btn_painter (Edit in Painter)")
+		root.remove_child(go_dlg)
+		go_dlg.free()
+
+	var pause_packed = load("res://src/ui/dialogs/pause_menu.tscn")
+	if pause_packed != null:
+		var pause_dlg = pause_packed.instantiate()
+		root.add_child(pause_dlg)
+		assert_true(pause_dlg.has_signal("painter_pressed"), "PauseMenu mengekspos sinyal painter_pressed")
+		assert_true(pause_dlg.btn_painter != null, "PauseMenu memiliki tombol btn_painter (Edit in Painter)")
+		root.remove_child(pause_dlg)
+		pause_dlg.free()
+
+	# Kembalikan side ke default
+	GS.set_chosen_side("white")
+
+	root.remove_child(painter)
+	painter.free()
+
+func test_audio_service_and_tactile_sfx() -> void:
+	print("\n[Kategori 23: AudioService & Tactile Button Click SFX (Press & Release)]")
+
+	# 1. Pastikan berkas aset audio tombol tersedia di assets/sounds
+	assert_true(FileAccess.file_exists("res://assets/sounds/button_press.wav"), "Berkas button_press.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/button_release.wav"), "Berkas button_release.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/btn_press_mechanical.wav"), "Berkas btn_press_mechanical.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/btn_release_mechanical.wav"), "Berkas btn_release_mechanical.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/btn_press_modern.wav"), "Berkas btn_press_modern.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/btn_release_modern.wav"), "Berkas btn_release_modern.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/btn_press_soft.wav"), "Berkas btn_press_soft.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/btn_release_soft.wav"), "Berkas btn_release_soft.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/btn_press_mouse.wav"), "Berkas btn_press_mouse.wav tersedia")
+	assert_true(FileAccess.file_exists("res://assets/sounds/btn_release_mouse.wav"), "Berkas btn_release_mouse.wav tersedia")
+
+	# 2. Inisialisasi AudioService di tree root jika belum ada
+	var audio = root.get_node_or_null("AudioService")
+	var created_audio := false
+	if audio == null:
+		var AudioClass = load("res://src/audio/audio_service.gd")
+		audio = AudioClass.new()
+		audio.name = "AudioService"
+		root.add_child(audio)
+		created_audio = true
+
+	# 3. Audio stream termuat dengan benar untuk seluruh preset sound theme
+	assert_true(audio.sounds.has("button_press"), "AudioService memuat suara button_press")
+	assert_true(audio.sounds.has("button_release"), "AudioService memuat suara button_release")
+	assert_true(audio.sounds.has("btn_press_mechanical"), "AudioService memuat preset mechanical")
+	assert_true(audio.sounds.has("btn_press_modern"), "AudioService memuat preset modern")
+	assert_true(audio.sounds.has("btn_press_soft"), "AudioService memuat preset soft")
+	assert_true(audio.sounds.has("btn_press_mouse"), "AudioService memuat preset mouse")
+
+	# 4. Metode play_button_down, play_button_up, dan preview_button_sound terekspos
+	assert_true(audio.has_method("play_button_down"), "AudioService memiliki method play_button_down")
+	assert_true(audio.has_method("play_button_up"), "AudioService memiliki method play_button_up")
+	assert_true(audio.has_method("preview_button_sound"), "AudioService memiliki method preview_button_sound")
+	audio.play_button_down()
+	audio.play_button_up()
+	for theme_key in ["mechanical", "modern", "soft", "mouse", "off"]:
+		audio.play_button_down(theme_key)
+		audio.play_button_up(theme_key)
+	assert_true(true, "play_button_down dan play_button_up seluruh preset tereksekusi tanpa crash")
+
+	# 5. Konfigurasi GameSettings untuk button_sound_theme
+	var gs = root.get_node_or_null("GameSettings")
+	if gs:
+		var old_theme = gs.button_sound_theme
+		var emitted_theme: Array = []
+		gs.button_sound_theme_changed.connect(func(t): emitted_theme.append(t))
+		gs.set_button_sound_theme("soft")
+		assert_equal(gs.button_sound_theme, "soft", "GameSettings berhasil mengganti tema button sound")
+		assert_equal(emitted_theme.size(), 1, "Signal button_sound_theme_changed ter-emit")
+		assert_equal(emitted_theme[0], "soft", "Payload signal button_sound_theme_changed sesuai")
+		gs.set_button_sound_theme(old_theme)
+
+	# 6. Tombol baru yang masuk ke scene tree otomatis tersambung ke button_down dan button_up
+	var btn = Button.new()
+	btn.name = "TestTactileButton"
+	root.add_child(btn)
+	assert_true(btn.button_down.is_connected(audio._on_button_down), "Tombol otomatis tersambung ke event button_down untuk audio tactile tekan")
+	assert_true(btn.button_up.is_connected(audio._on_button_up), "Tombol otomatis tersambung ke event button_up untuk audio tactile lepas")
+
+	# 6. Sinyal tombol dapat di-emit tanpa runtime error
+	btn.emit_signal("button_down")
+	btn.emit_signal("button_up")
+	assert_true(true, "Emisi signal button_down dan button_up berjalan lancar")
+
+	# 7. Metadata 'no_tactile_sfx' mengecualikan tombol dari auto-connect jika diinginkan
+	var silent_btn = Button.new()
+	silent_btn.name = "TestSilentButton"
+	silent_btn.set_meta("no_tactile_sfx", true)
+	root.add_child(silent_btn)
+	assert_true(not silent_btn.button_down.is_connected(audio._on_button_down), "Metadata no_tactile_sfx mengecualikan tombol dari koneksi sfx")
+
+	# Cleanup test nodes
+	root.remove_child(btn)
+	btn.free()
+	root.remove_child(silent_btn)
+	silent_btn.free()
+
+	# 8. Verifikasi form OptButtonSound di Settings Modal MainMenu
+	var menu_packed = load("res://src/ui/menu/main_menu.tscn")
+	if menu_packed:
+		var menu = menu_packed.instantiate()
+		root.add_child(menu)
+		assert_true(menu.opt_button_sound != null, "OptButtonSound ter-resolusi di form settings MainMenu")
+		if menu.opt_button_sound:
+			assert_equal(menu.opt_button_sound.item_count, 5, "Tersedia 5 opsi preset button sound (Mechanical, Modern, Soft, Mouse, Muted)")
+		root.remove_child(menu)
+		menu.free()
+
+	if created_audio:
+		root.remove_child(audio)
+		audio.free()
+
+func test_engine_bootstrap_and_fallback() -> void:
+	print("\n[Kategori 15j: EngineBootstrap & Fallback Portability]")
+	var sf_path := EngineBootstrap.get_stockfish_path()
+	assert_true(sf_path.ends_with("stockfish.exe"), "EngineBootstrap.get_stockfish_path() menunjuk ke stockfish.exe")
+	assert_true(not EngineBootstrap.is_valid_binary("res://nonexistent_binary_xyz.exe"), "is_valid_binary() menolak path yang tidak ada")
+	assert_true(not EngineBootstrap.is_valid_binary(ProjectSettings.globalize_path("res://project.godot"), 1000000), "is_valid_binary() menolak file di bawah ambang ukuran minimum")
+
+	var start_state := ChessBoardState.new("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1")
+	var start_legal := ChessMoveGenerator.get_legal_moves(start_state)
+	var fallback_mv := EngineService._pick_emergency_fallback_move(start_state, start_legal)
+	assert_true(fallback_mv != null and not fallback_mv.to_uci().is_empty(), "_pick_emergency_fallback_move() mengembalikan langkah legal valid")
+
+	# Posisi dengan capture tersedia harus memprioritaskan capture
+	var cap_state := ChessBoardState.new("rnbqkbnr/ppp1pppp/8/3p4/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2")
+	var cap_legal := ChessMoveGenerator.get_legal_moves(cap_state)
+	var cap_mv := EngineService._pick_emergency_fallback_move(cap_state, cap_legal)
+	assert_equal(cap_mv.to_uci(), "e4d5", "_pick_emergency_fallback_move() memprioritaskan capture yang tersedia")
+
+	# Validasi ambang ukuran binary minimal 4096 byte (kontrak UCIClient.start)
+	assert_true(not EngineBootstrap.is_valid_binary(ProjectSettings.globalize_path("res://project.godot"), 4096), "is_valid_binary() menolak file non-binary di bawah 4096 byte")
+
+
 
 
 

@@ -35,6 +35,13 @@ var _scene_tag: String = ""
 
 func _init() -> void:
 	print("\n======= AUDIT SKALA TAMPIL ASET VISUAL (ukuran gambar nyata) =======")
+	# Pastikan autoload ada agar scene yang bergantung pada singleton bisa di-load tanpa crash
+	if root.get_node_or_null("GameSettings") == null:
+		var gs_script = load("res://src/config/game_settings.gd")
+		if gs_script:
+			var gs_node = gs_script.new()
+			gs_node.name = "GameSettings"
+			root.add_child(gs_node)
 	print("Autoload GameSettings: ", root.get_node_or_null("GameSettings") != null)
 
 	for scene_path in SCENES:

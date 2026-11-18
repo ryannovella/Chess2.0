@@ -52,6 +52,8 @@ const ICON_CHECKMARK = preload("res://assets/ui/icons/icon_checkmark.svg")
 @onready var step_badge_label: Label = $CenterContainer/MainLayout/CoachCard/VBox/StatusRow/StepBadgeLabel
 @onready var blurb_label: Label = $CenterContainer/MainLayout/CoachCard/VBox/BlurbLabel
 
+@onready var btn_prev_move: Button = $CenterContainer/MainLayout/ControlsBar/BtnPrevMove
+@onready var btn_next_move: Button = $CenterContainer/MainLayout/ControlsBar/BtnNextMove
 @onready var btn_hint: Button = $CenterContainer/MainLayout/ControlsBar/BtnHint
 @onready var btn_retry: Button = $CenterContainer/MainLayout/ControlsBar/BtnRetry
 @onready var btn_prev_line: Button = $CenterContainer/MainLayout/ControlsBar/BtnPrevLine
@@ -67,6 +69,11 @@ var is_flipped: bool = false
 var active_line: Array = []
 var active_line_index: int = 0
 var current_node_index: int = 0
+var current_run_id: int = 0
+
+var move_history: Array[Dictionary] = []
+var history_view_index: int = 0
+var max_reached_index: int = 0
 
 var is_drill_mode: bool = false
 var hint_used_on_step: bool = false
@@ -165,6 +172,14 @@ func _ensure_nodes() -> void:
 	if blurb_label == null:
 		blurb_label = get_node_or_null("CenterContainer/MainLayout/CoachCard/VBox/BlurbLabel")
 
+	if btn_prev_move == null:
+		btn_prev_move = get_node_or_null("CenterContainer/MainLayout/ControlsBar/BtnPrevMove")
+	if btn_prev_move == null:
+		btn_prev_move = get_node_or_null("CenterContainer/MainLayout/ControlsCard/ControlsBar/BtnPrevMove")
+	if btn_next_move == null:
+		btn_next_move = get_node_or_null("CenterContainer/MainLayout/ControlsBar/BtnNextMove")
+	if btn_next_move == null:
+		btn_next_move = get_node_or_null("CenterContainer/MainLayout/ControlsCard/ControlsBar/BtnNextMove")
 	if btn_hint == null:
 		btn_hint = get_node_or_null("CenterContainer/MainLayout/ControlsBar/BtnHint")
 	if btn_hint == null:
@@ -211,6 +226,12 @@ func _init_card_styles() -> void:
 func _apply_tactile_styles() -> void:
 	if btn_back:
 		TactileStyles.apply_tactile_button(btn_back, false, false, true)
+	if btn_prev_move:
+		TactileStyles.apply_tactile_button(btn_prev_move, false, false, false)
+		btn_prev_move.add_theme_color_override("font_disabled_color", Color(0.72, 0.70, 0.67, 0.45))
+	if btn_next_move:
+		TactileStyles.apply_tactile_button(btn_next_move, false, false, false)
+		btn_next_move.add_theme_color_override("font_disabled_color", Color(0.72, 0.70, 0.67, 0.45))
 	if btn_hint:
 		TactileStyles.apply_tactile_button(btn_hint, false, hint_used_on_step, false)
 		btn_hint.add_theme_color_override("font_disabled_color", Color(0.72, 0.70, 0.67, 0.65))
@@ -232,6 +253,10 @@ func _connect_signals() -> void:
 		btn_back.pressed.connect(_on_back_pressed)
 	if opt_repertoire and not opt_repertoire.item_selected.is_connected(_on_repertoire_selected):
 		opt_repertoire.item_selected.connect(_on_repertoire_selected)
+	if btn_prev_move and not btn_prev_move.pressed.is_connected(_on_prev_move_pressed):
+		btn_prev_move.pressed.connect(_on_prev_move_pressed)
+	if btn_next_move and not btn_next_move.pressed.is_connected(_on_next_move_pressed):
+		btn_next_move.pressed.connect(_on_next_move_pressed)
 	if btn_hint and not btn_hint.pressed.is_connected(_on_hint_pressed):
 		btn_hint.pressed.connect(_on_hint_pressed)
 	if btn_retry and not btn_retry.pressed.is_connected(_on_retry_pressed):
@@ -252,6 +277,32 @@ func _connect_signals() -> void:
 			if gs.has_signal("piece_set_changed") and not gs.piece_set_changed.is_connected(_on_piece_set_changed):
 				gs.piece_set_changed.connect(_on_piece_set_changed)
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.is_pressed() and not event.is_echo():
+		if event.is_command_or_control_pressed():
+			if event.keycode == KEY_Z and not event.shift_pressed:
+				if btn_prev_move and not btn_prev_move.disabled:
+					_on_prev_move_pressed()
+				if get_viewport():
+					get_viewport().set_input_as_handled()
+				return
+			elif event.keycode == KEY_Y or (event.keycode == KEY_Z and event.shift_pressed):
+				if btn_next_move and not btn_next_move.disabled:
+					_on_next_move_pressed()
+				if get_viewport():
+					get_viewport().set_input_as_handled()
+				return
+		elif event.keycode == KEY_LEFT:
+			if btn_prev_move and not btn_prev_move.disabled:
+				_on_prev_move_pressed()
+			if get_viewport():
+				get_viewport().set_input_as_handled()
+		elif event.keycode == KEY_RIGHT:
+			if btn_next_move and not btn_next_move.disabled:
+				_on_next_move_pressed()
+			if get_viewport():
+				get_viewport().set_input_as_handled()
+
 func _on_piece_set_changed(_p: String) -> void:
 	_on_settings_changed()
 
@@ -261,7 +312,8 @@ func _on_settings_changed() -> void:
 	_last_bottom_captured_key = ""
 	if chess_board and board_state:
 		var prev_last_move = chess_board.last_move.duplicate()
-		chess_board.setup_board(board_state, is_flipped)
+		var state_to_use = board_state if (history_view_index == max_reached_index or move_history.is_empty()) else move_history[history_view_index].state
+		chess_board.setup_board(state_to_use, is_flipped)
 		if not prev_last_move.is_empty():
 			chess_board.set_last_move(prev_last_move.get("from", ""), prev_last_move.get("to", ""))
 	_update_player_cards()
@@ -377,8 +429,9 @@ func _update_player_cards() -> void:
 	_apply_card_palette(true, top_is_white)
 	_apply_card_palette(false, bottom_is_white)
 
-	if board_state != null:
-		var mat_data = ChessBoardState.calculate_material_and_captured(board_state)
+	var active_state = board_state if (history_view_index == max_reached_index or move_history.is_empty()) else move_history[history_view_index].state
+	if active_state != null:
+		var mat_data = ChessBoardState.calculate_material_and_captured(active_state)
 		var white_adv = int(mat_data.get("white_advantage", 0))
 		var black_cap = mat_data.get("black_captured", [])
 		var white_cap = mat_data.get("white_captured", [])
@@ -518,6 +571,7 @@ func _load_line(line_idx: int) -> void:
 	if current_tree == null or current_tree.flattened_lines.is_empty():
 		return
 
+	current_run_id += 1
 	active_line_index = posmod(line_idx, current_tree.flattened_lines.size())
 	active_line = current_tree.flattened_lines[active_line_index]
 	current_node_index = 0
@@ -527,6 +581,21 @@ func _load_line(line_idx: int) -> void:
 	is_waiting_opponent = false
 
 	board_state = ChessBoardState.new()
+	move_history.clear()
+	move_history.append({
+		"state": board_state.clone(),
+		"from_sq": "",
+		"to_sq": "",
+		"san": "",
+		"blurb": "",
+		"node": null,
+		"is_cap": false,
+		"is_castle": false,
+		"is_ep": false,
+		"promo": ChessTypes.PieceType.NONE
+	})
+	history_view_index = 0
+	max_reached_index = 0
 	_last_top_captured_key = ""
 	_last_bottom_captured_key = ""
 	if chess_board:
@@ -536,6 +605,7 @@ func _load_line(line_idx: int) -> void:
 		_clear_arrows()
 
 	_update_player_cards()
+	_update_nav_buttons()
 
 	if btn_prev_line:
 		btn_prev_line.disabled = (current_tree.flattened_lines.size() <= 1)
@@ -598,6 +668,7 @@ func _setup_player_turn(node: Variant) -> void:
 
 func _setup_opponent_turn(node: Variant) -> void:
 	is_waiting_opponent = true
+	_update_nav_buttons()
 	if chess_board:
 		chess_board.is_interactive = false
 	var opp_side = "Black" if current_tree.color == "white" else "White"
@@ -613,15 +684,20 @@ func _setup_opponent_turn(node: Variant) -> void:
 		btn_retry.disabled = true
 
 	# Natural opponent timing (crisp and immediate, ~180ms)
+	var run_id = current_run_id
 	var t = get_tree() if is_inside_tree() else null
 	if t:
 		var timer = t.create_timer(0.18)
-		timer.timeout.connect(func(): _execute_opponent_move(node))
+		timer.timeout.connect(func():
+			if current_run_id != run_id:
+				return
+			_execute_opponent_move(node)
+		)
 	else:
 		_execute_opponent_move(node)
 
 func _execute_opponent_move(node: Variant) -> void:
-	if not is_inside_tree() or board_state == null:
+	if board_state == null:
 		return
 
 	var move = ChessSAN.uci_to_move(board_state, node.move_uci)
@@ -645,6 +721,23 @@ func _execute_opponent_move(node: Variant) -> void:
 	board_state = next_state
 	_update_player_cards()
 
+	var from_sq = node.move_uci.substr(0, 2)
+	move_history.append({
+		"state": next_state.clone(),
+		"from_sq": from_sq,
+		"to_sq": to_sq,
+		"san": node.san,
+		"blurb": node.blurb if not node.blurb.is_empty() else ("Lawan memainkan %s." % node.san),
+		"node": node,
+		"is_cap": is_cap,
+		"is_castle": is_castle,
+		"is_ep": is_ep,
+		"promo": promo
+	})
+	max_reached_index = move_history.size() - 1
+	history_view_index = max_reached_index
+	_update_nav_buttons()
+
 	if chess_board:
 		chess_board.animate_move(
 			move,
@@ -665,14 +758,12 @@ func _play_sfx(method_name: String) -> void:
 	var t = get_tree()
 	if not t or not t.root:
 		return
-	if t.root.has_node("GameSettings"):
-		var gs = t.root.get_node("GameSettings")
-		if not gs.sound_enabled:
-			return
-	if t.root.has_node("AudioService"):
-		var audio = t.root.get_node("AudioService")
-		if audio.has_method(method_name):
-			audio.call(method_name)
+	var gs = t.root.get_node_or_null("GameSettings")
+	if gs and not gs.sound_enabled:
+		return
+	var audio = t.root.get_node_or_null("AudioService")
+	if audio and audio.has_method(method_name):
+		audio.call(method_name)
 
 func _play_move_sfx(state: ChessBoardState, is_cap: bool, is_castle: bool, is_promo: bool) -> void:
 	if state != null and ChessMoveGenerator.is_in_check(state, state.turn):
@@ -724,6 +815,8 @@ func _extract_move_info(move: Variant) -> Dictionary:
 func _on_board_move_made(move: Variant) -> void:
 	if is_waiting_opponent or is_line_completed:
 		return
+	if history_view_index < max_reached_index:
+		return
 	if current_node_index >= active_line.size():
 		return
 
@@ -756,6 +849,23 @@ func _handle_correct_player_move(expected_node: Variant, move: Variant) -> void:
 	ChessMoveGenerator.apply_move_unchecked(next_state, move)
 	board_state = next_state
 	_update_player_cards()
+
+	var from_sq = info["from"]
+	move_history.append({
+		"state": next_state.clone(),
+		"from_sq": from_sq,
+		"to_sq": to_sq,
+		"san": expected_node.san,
+		"blurb": expected_node.blurb,
+		"node": expected_node,
+		"is_cap": is_cap,
+		"is_castle": is_castle,
+		"is_ep": is_ep,
+		"promo": promo
+	})
+	max_reached_index = move_history.size() - 1
+	history_view_index = max_reached_index
+	_update_nav_buttons()
 
 	# Compute quality for SRS: 5=perfect, 4=one mistake, 3=hint used, etc.
 	var quality = 5
@@ -888,7 +998,181 @@ func _on_line_completed() -> void:
 	if btn_retry:
 		btn_retry.disabled = false
 
+	_update_nav_buttons()
 	_play_sfx("play_victory")
+
+func _on_prev_move_pressed() -> void:
+	if is_waiting_opponent or history_view_index <= 0:
+		return
+	var from_idx = history_view_index
+	history_view_index -= 1
+	var to_idx = history_view_index
+
+	var move_entry = move_history[from_idx]
+	var target_entry = move_history[to_idx]
+
+	_update_nav_buttons()
+	_update_history_labels(to_idx)
+
+	if chess_board:
+		chess_board.is_interactive = false
+		var undo_info = {
+			"from_sq": move_entry.get("from_sq", ""),
+			"to_sq": move_entry.get("to_sq", ""),
+			"is_castle": move_entry.get("is_castle", false),
+			"is_ep": move_entry.get("is_ep", false),
+			"promo": move_entry.get("promo", ChessTypes.PieceType.NONE)
+		}
+		_play_sfx("play_move")
+		chess_board.animate_undo_move(undo_info, target_entry.state, func():
+			_finalize_history_position(to_idx)
+		)
+	else:
+		_finalize_history_position(to_idx)
+
+func _on_next_move_pressed() -> void:
+	if is_waiting_opponent or history_view_index >= max_reached_index:
+		return
+	history_view_index = mini(history_view_index + 1, max_reached_index)
+	var to_idx = history_view_index
+
+	var redo_entry = move_history[to_idx]
+
+	_update_nav_buttons()
+	_update_history_labels(to_idx)
+
+	if chess_board:
+		chess_board.is_interactive = false
+		var redo_move_info = {
+			"from": redo_entry.get("from_sq", ""),
+			"to": redo_entry.get("to_sq", "")
+		}
+		var is_cap = redo_entry.get("is_cap", false)
+		var is_castle = redo_entry.get("is_castle", false)
+		var is_ep = redo_entry.get("is_ep", false)
+		var promo = redo_entry.get("promo", ChessTypes.PieceType.NONE)
+		var is_promo = promo != ChessTypes.PieceType.NONE
+
+		chess_board.animate_move(
+			redo_move_info,
+			redo_entry.state,
+			is_cap,
+			is_castle,
+			is_ep,
+			promo,
+			func():
+				_finalize_history_position(to_idx),
+			func():
+				_play_move_sfx(redo_entry.state, is_cap, is_castle, is_promo)
+		)
+	else:
+		_finalize_history_position(to_idx)
+
+func _update_nav_buttons() -> void:
+	if btn_prev_move:
+		btn_prev_move.disabled = (history_view_index <= 0 or is_waiting_opponent)
+	if btn_next_move:
+		btn_next_move.disabled = (history_view_index >= max_reached_index or is_waiting_opponent)
+
+	var is_at_latest = (history_view_index == max_reached_index)
+	if not is_at_latest:
+		if btn_hint:
+			btn_hint.disabled = true
+		if btn_retry:
+			btn_retry.disabled = true
+	else:
+		if btn_hint:
+			btn_hint.disabled = is_line_completed or is_waiting_opponent or (current_node_index < active_line.size() and not active_line[current_node_index].is_player_move)
+		if btn_retry:
+			btn_retry.disabled = is_waiting_opponent or (current_node_index == 0 and mistakes_on_step == 0 and not is_line_completed)
+
+func _show_history_position(idx: int) -> void:
+	_finalize_history_position(idx)
+	_update_history_labels(idx)
+
+func _finalize_history_position(idx: int) -> void:
+	if idx < 0 or idx >= move_history.size():
+		return
+	var entry = move_history[idx]
+	var is_at_latest = (idx == max_reached_index)
+
+	if chess_board:
+		chess_board.setup_board(entry.state, is_flipped)
+		var f_sq = str(entry.get("from_sq", ""))
+		var t_sq = str(entry.get("to_sq", ""))
+		if not f_sq.is_empty() and not t_sq.is_empty():
+			chess_board.set_last_move(f_sq, t_sq)
+		else:
+			chess_board.clear_last_move()
+		_clear_arrows()
+
+		var can_interact = is_at_latest and not is_waiting_opponent and not is_line_completed
+		if can_interact and current_node_index < active_line.size():
+			var active_node = active_line[current_node_index]
+			can_interact = active_node.is_player_move
+		chess_board.is_interactive = can_interact
+
+	_update_player_cards()
+
+	if is_at_latest:
+		if is_line_completed:
+			_update_step_badge()
+		elif current_node_index < active_line.size():
+			var curr_node = active_line[current_node_index]
+			if curr_node.is_player_move:
+				_setup_player_turn(curr_node)
+			else:
+				_setup_opponent_turn(curr_node)
+		else:
+			_on_line_completed()
+
+func _update_history_labels(idx: int) -> void:
+	if idx < 0 or idx >= move_history.size():
+		return
+	var entry = move_history[idx]
+	var is_at_latest = (idx == max_reached_index)
+
+	if is_at_latest:
+		if is_line_completed:
+			_set_coach_card_accent("correct")
+			if status_label:
+				status_label.text = "Variasi Selesai! Akurasi 100%"
+				status_label.add_theme_color_override("font_color", Color(0.55, 0.82, 0.36, 1))
+			if blurb_label:
+				blurb_label.text = "Reps sempurna! Anda telah menguasai variasi cabang ini. Tekan Next Line untuk melanjutkan."
+			_update_step_badge()
+		elif current_node_index < active_line.size():
+			var curr_node = active_line[current_node_index]
+			_update_step_badge()
+	else:
+		_set_coach_card_accent("neutral")
+		if status_label:
+			if entry.node != null:
+				var side_str = "White" if entry.node.ply % 2 == 1 else "Black"
+				status_label.text = "Langkah: %s (%s)" % [entry.san, side_str]
+			else:
+				status_label.text = "Posisi Awal"
+			status_label.add_theme_color_override("font_color", Color(0.74, 0.72, 0.69, 1))
+
+		if blurb_label:
+			if not str(entry.get("blurb", "")).is_empty():
+				blurb_label.text = str(entry.get("blurb", ""))
+			elif entry.node != null:
+				blurb_label.text = "Posisi setelah langkah %s." % entry.san
+			else:
+				blurb_label.text = "Posisi awal pembukaan sebelum langkah pertama."
+
+		if step_badge_label and current_tree != null:
+			var total_lines = maxi(1, current_tree.flattened_lines.size())
+			var line_num = clampi(active_line_index + 1, 1, total_lines)
+			if idx == 0:
+				step_badge_label.text = "Line %d/%d  |  Start" % [line_num, total_lines]
+			elif entry.node != null:
+				step_badge_label.text = "Line %d/%d  |  Move %s" % [line_num, total_lines, entry.san]
+			else:
+				step_badge_label.text = "Line %d/%d  |  Step %d" % [line_num, total_lines, idx]
+
+	_update_nav_buttons()
 
 func _on_prev_line_pressed() -> void:
 	_load_line(active_line_index - 1)

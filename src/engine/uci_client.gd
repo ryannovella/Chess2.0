@@ -33,6 +33,13 @@ func start(custom_exe_path: String = "") -> bool:
 	if not FileAccess.file_exists(exe_path):
 		printerr("Engine binary not found at: ", exe_path)
 		return false
+	var check_file := FileAccess.open(exe_path, FileAccess.READ)
+	if check_file == null or check_file.get_length() < 4096:
+		if check_file != null:
+			check_file.close()
+		printerr("Engine binary is empty or invalid at: ", exe_path)
+		return false
+	check_file.close()
 
 	var pipe = OS.execute_with_pipe(exe_path, PackedStringArray([]))
 	if not pipe.has("stdio"):

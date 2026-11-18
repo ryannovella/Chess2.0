@@ -1,0 +1,2094 @@
+{
+  "color": "black",
+  "description": "Pertahanan hipermodern dinamis melawan 1. d4 dengan formasi g6, Bg7, dan counter-strike sentral tajam e5 atau c5.",
+  "eco": "E60",
+  "id": "kings_indian_defense",
+  "name": "King's Indian Defense",
+  "root": {
+    "blurb": "White membuka permainan dengan Queen pawn untuk menguasai ruang sentral d4 dan e5.",
+    "children": [
+      {
+        "blurb": "King's Indian Defense! Kembangkan Knight secara fleksibel mengawasi petak sentral e4 dan d5.",
+        "children": [
+          {
+            "children": [
+              {
+                "blurb": "Siapkan fianchetto King's Bishop untuk mengontrol diagonal panjang a1-h8.",
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "blurb": "Tempatkan dark-squared Bishop di posisi ideal dan bersiap castling.",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "blurb": "Kunci struktur pawn d6 untuk menahan laju e4-e5 White serta membuka jalur light-squared Bishop.",
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "blurb": "Castling kingside segera untuk mengamankan King sebelum pertarungan sentral dimulai.",
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Serang pusat dengan e5! Gerakan khas KID untuk menantang dominasi White di d4.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Kembangkan Knight ke c6 menekan sentral d4 dan memancing White mendorong d5.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Reroute Knight ke e7 bersiap mendukung dobrakan f5 di sayap raja.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Keluarkan Knight ke d7 untuk membuka jalan bagi dorongan pawn f5.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Dobrakan f5! Mulai ekspansi agresif di sayap raja khas Mar del Plata.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Kembangkan Knight ke f6 untuk menambah tekanan pada petak sentral e4.",
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "blurb": "Dorong f4! Kunci sayap raja dan bersiap melancarkan serangan badai pawn g5-h5.",
+                                                                                                "children": [],
+                                                                                                "move": "f5f4",
+                                                                                                "san": "f4"
+                                                                                              }
+                                                                                            ],
+                                                                                            "human_freq": 0.6,
+                                                                                            "move": "f2f3",
+                                                                                            "san": "f3"
+                                                                                          }
+                                                                                        ],
+                                                                                        "move": "d7f6",
+                                                                                        "san": "Nf6"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.48,
+                                                                                    "move": "c1d2",
+                                                                                    "san": "Bd2"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "f7f5",
+                                                                                "san": "f5"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.55,
+                                                                            "move": "e1d3",
+                                                                            "san": "Nd3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f6d7",
+                                                                        "san": "Nd7"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.42,
+                                                                    "move": "f3e1",
+                                                                    "san": "Ne1"
+                                                                  },
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Pindahkan Knight ke h5! Buka jalan pawn f sekaligus mengincar petak f4.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Serang rantai sentral White dengan f5 dan aktifkan Rook di f-file.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Kembalikan Knight ke f6 untuk mengontrol petak e4 dan menjaga d5.",
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "blurb": "Kikis struktur pawn White dengan c6 untuk memperkuat ketahanan sentral.",
+                                                                                                "children": [],
+                                                                                                "move": "c7c6",
+                                                                                                "san": "c6"
+                                                                                              }
+                                                                                            ],
+                                                                                            "human_freq": 0.5,
+                                                                                            "move": "e2f3",
+                                                                                            "san": "Bf3"
+                                                                                          }
+                                                                                        ],
+                                                                                        "move": "h5f6",
+                                                                                        "san": "Nf6"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.45,
+                                                                                    "move": "f3g5",
+                                                                                    "san": "Ng5"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "f7f5",
+                                                                                "san": "f5"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.6,
+                                                                            "move": "f1e1",
+                                                                            "san": "Re1"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f6h5",
+                                                                        "san": "Nh5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.35,
+                                                                    "move": "b2b4",
+                                                                    "san": "b4"
+                                                                  },
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Langkah profilaktik a5! Menghambat ekspansi cepat b4 White di sayap menteri.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Reroute Knight ke d7 untuk mendukung dobrakan sayap raja f5.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Luncurkan pion f5 untuk membuka diagonal dan menekan pion e4 White.",
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "blurb": "Amankan King ke h8 agar bebas dari pin diagonal a2-g8 sebelum memulai badai pion.",
+                                                                                                "children": [],
+                                                                                                "move": "g8h8",
+                                                                                                "san": "Kh8"
+                                                                                              }
+                                                                                            ],
+                                                                                            "human_freq": 0.7,
+                                                                                            "move": "b2b4",
+                                                                                            "san": "b4"
+                                                                                          }
+                                                                                        ],
+                                                                                        "move": "f7f5",
+                                                                                        "san": "f5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.62,
+                                                                                    "move": "a1b1",
+                                                                                    "san": "Rb1"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "f6d7",
+                                                                                "san": "Nd7"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.55,
+                                                                            "move": "a2a3",
+                                                                            "san": "a3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "a7a5",
+                                                                        "san": "a5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.18,
+                                                                    "move": "f3d2",
+                                                                    "san": "Nd2"
+                                                                  }
+                                                                ],
+                                                                "move": "c6e7",
+                                                                "san": "Ne7"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.78,
+                                                            "move": "d4d5",
+                                                            "san": "d5"
+                                                          }
+                                                        ],
+                                                        "move": "b8c6",
+                                                        "san": "Nc6"
+                                                      },
+                                                      {
+                                                        "blurb": "Buka sentral dengan exd4 untuk memberi aktivitas penuh pada perwira Black.",
+                                                        "children": [
+                                                          {
+                                                            "annotation": "Mistake: White membiarkan center fork trick yang menghancurkan sentral.",
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Tempatkan Rook di e8 untuk langsung menekan pion lemah e4 White.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Perkuat kontrol petak d5 dengan c6 dan siapkan manuver Queen.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Kembangkan Knight ke d7 untuk mendukung mobilitas sentral.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Serang balik dengan Qb6 menargetkan pion b2 dan Knight d4 sekaligus!",
+                                                                                        "children": [],
+                                                                                        "move": "d8b6",
+                                                                                        "san": "Qb6"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.65,
+                                                                                    "move": "c1g5",
+                                                                                    "san": "Bg5"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "b8d7",
+                                                                                "san": "Nbd7"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.7,
+                                                                            "move": "g1h1",
+                                                                            "san": "Kh1"
+                                                                          }
+                                                                        ],
+                                                                        "move": "c7c6",
+                                                                        "san": "c6"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.85,
+                                                                    "move": "f2f3",
+                                                                    "san": "f3"
+                                                                  }
+                                                                ],
+                                                                "move": "f8e8",
+                                                                "san": "Re8"
+                                                              },
+                                                              {
+                                                                "blurb": "Taktik jitu! Pengorbanan sementara Nxe4 memanfaatkan sentral yang longgar.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Center fork trick! Dorong d5 menggarpu Knight e4 dan Bishop e2 White.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Recapture dengan Queen di d5 merebut inisiatif sentral ganda.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Makan pion e4 dengan Queen, Black unggul kompensasi dan aktivitas penuh.",
+                                                                                        "children": [],
+                                                                                        "move": "d5e4",
+                                                                                        "san": "Qxe4"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.5,
+                                                                                    "move": "d4b5",
+                                                                                    "san": "Nb5"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "d8d5",
+                                                                                "san": "Qxd5"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.6,
+                                                                            "move": "c4d5",
+                                                                            "san": "cxd5"
+                                                                          }
+                                                                        ],
+                                                                        "move": "d6d5",
+                                                                        "san": "d5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.8,
+                                                                    "move": "c3e4",
+                                                                    "san": "Nxe4"
+                                                                  }
+                                                                ],
+                                                                "move": "f6e4",
+                                                                "san": "Nxe4"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.9,
+                                                            "is_blunder": true,
+                                                            "move": "f3d4",
+                                                            "san": "Nxd4"
+                                                          }
+                                                        ],
+                                                        "move": "e5d4",
+                                                        "san": "exd4"
+                                                      },
+                                                      {
+                                                        "blurb": "Kembangkan Knight ke d7 menjaga fleksibilitas formasi sentral.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Perkokoh fondasi sentral dengan c6 untuk menahan tekanan d-file.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Sentralisasi Queen ke e7 untuk menghubungkan kedua Rook.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Cegah ekspansi sayap menteri White dengan a5.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Tancapkan Knight di pos permanen c5 menekan pion e4 White.",
+                                                                                        "children": [],
+                                                                                        "move": "d7c5",
+                                                                                        "san": "Nc5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.65,
+                                                                                    "move": "d4d5",
+                                                                                    "san": "d5"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "a7a5",
+                                                                                "san": "a5"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.45,
+                                                                            "move": "a1b1",
+                                                                            "san": "Rb1"
+                                                                          }
+                                                                        ],
+                                                                        "move": "d8e7",
+                                                                        "san": "Qe7"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.6,
+                                                                    "move": "f1d1",
+                                                                    "san": "Rd1"
+                                                                  }
+                                                                ],
+                                                                "move": "c7c6",
+                                                                "san": "c6"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.5,
+                                                            "move": "d1c2",
+                                                            "san": "Qc2"
+                                                          }
+                                                        ],
+                                                        "move": "b8d7",
+                                                        "san": "Nbd7"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.62,
+                                                    "move": "e1g1",
+                                                    "san": "O-O"
+                                                  },
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Petrosian System: Kunci sayap menteri dengan a5 untuk mencegah b4.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Tantang pin Bishop White segera dengan langkah h6.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Kembangkan Knight ke a6 menuju pos ideal di c5 tanpa menghalangi pion c.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Lepaskan pin dengan Qe8 sekaligus bersiap memfasilitasi dorongan f5.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Reroute Knight ke h7 untuk membersihkan jalur bagi dobrakan f5.",
+                                                                                        "children": [],
+                                                                                        "move": "f6h7",
+                                                                                        "san": "Nh7"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.5,
+                                                                                    "move": "f3d2",
+                                                                                    "san": "Nd2"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "d8e8",
+                                                                                "san": "Qe8"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.6,
+                                                                            "move": "e1g1",
+                                                                            "san": "O-O"
+                                                                          }
+                                                                        ],
+                                                                        "move": "b8a6",
+                                                                        "san": "Na6"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.7,
+                                                                    "move": "g5h4",
+                                                                    "san": "Bh4"
+                                                                  }
+                                                                ],
+                                                                "move": "h7h6",
+                                                                "san": "h6"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.65,
+                                                            "move": "c1g5",
+                                                            "san": "Bg5"
+                                                          }
+                                                        ],
+                                                        "move": "a7a5",
+                                                        "san": "a5"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.2,
+                                                    "move": "d4d5",
+                                                    "san": "d5"
+                                                  },
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Gligoric System: Serang langsung Bishop e3 dengan manuver agresif Ng4!",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Tolak pin Bishop dengan f6 sembari memperkuat perlindungan sayap raja.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Usir Bishop White lebih jauh dengan dorongan g5.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Tempatkan Knight di h6 untuk mengontrol petak f7 dan bersiap f5.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Tutup sayap menteri dengan c5 untuk mengamankan struktur posisi.",
+                                                                                        "children": [],
+                                                                                        "move": "c7c5",
+                                                                                        "san": "c5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.55,
+                                                                                    "move": "d4d5",
+                                                                                    "san": "d5"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "g4h6",
+                                                                                "san": "Nh6"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.8,
+                                                                            "move": "h4g3",
+                                                                            "san": "Bg3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "g6g5",
+                                                                        "san": "g5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.75,
+                                                                    "move": "g5h4",
+                                                                    "san": "Bh4"
+                                                                  }
+                                                                ],
+                                                                "move": "f7f6",
+                                                                "san": "f6"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.85,
+                                                            "move": "e3g5",
+                                                            "san": "Bg5"
+                                                          }
+                                                        ],
+                                                        "move": "f6g4",
+                                                        "san": "Ng4"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.12,
+                                                    "move": "c1e3",
+                                                    "san": "Be3"
+                                                  },
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Ambil kembali pion sentral e5 dengan struktur seimbang.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Recapture Queen dengan Rook untuk menguasai open d-file.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Lindungi pion e5 dengan Re8 sekaligus keluar dari ancaman pin taktis.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Tukarkan Knight untuk melenyapkan ancaman garpuan di c7.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Kikis pion d5 White dengan c6 untuk membuka jalur bagi perwira Black.",
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "blurb": "Makan pion d5 untuk merusak keunggulan ruang White di sentral.",
+                                                                                                "children": [
+                                                                                                  {
+                                                                                                    "children": [
+                                                                                                      {
+                                                                                                        "blurb": "Kembangkan Knight ke a6 menuju pos kuat di c5 atau b4.",
+                                                                                                        "children": [],
+                                                                                                        "move": "b8a6",
+                                                                                                        "san": "Na6"
+                                                                                                      }
+                                                                                                    ],
+                                                                                                    "human_freq": 0.6,
+                                                                                                    "move": "c4d5",
+                                                                                                    "san": "Bxd5"
+                                                                                                  }
+                                                                                                ],
+                                                                                                "move": "c6d5",
+                                                                                                "san": "cxd5"
+                                                                                              }
+                                                                                            ],
+                                                                                            "human_freq": 0.7,
+                                                                                            "move": "e2c4",
+                                                                                            "san": "Bc4"
+                                                                                          }
+                                                                                        ],
+                                                                                        "move": "c7c6",
+                                                                                        "san": "c6"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.65,
+                                                                                    "move": "c4d5",
+                                                                                    "san": "cxd5"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "f6d5",
+                                                                                "san": "Nxd5"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.75,
+                                                                            "move": "c3d5",
+                                                                            "san": "Nd5"
+                                                                          }
+                                                                        ],
+                                                                        "move": "d8e8",
+                                                                        "san": "Re8"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.8,
+                                                                    "move": "c1g5",
+                                                                    "san": "Bg5"
+                                                                  }
+                                                                ],
+                                                                "move": "f8d8",
+                                                                "san": "Rxd8"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.9,
+                                                            "move": "d1d8",
+                                                            "san": "Qxd8"
+                                                          }
+                                                        ],
+                                                        "move": "d6e5",
+                                                        "san": "dxe5"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.08,
+                                                    "move": "d4e5",
+                                                    "san": "dxe5"
+                                                  }
+                                                ],
+                                                "move": "e7e5",
+                                                "san": "e5"
+                                              }
+                                            ],
+                                            "human_freq": 0.8,
+                                            "move": "f1e2",
+                                            "san": "Be2"
+                                          },
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Smyslov System: Tantang sentral White segera dengan c5.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Usir Bishop White dengan h6.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Rebut ruang sayap raja dengan g5.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Incar sepasang Bishop musuh dengan manuver Nh5!",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Makan Bishop g3 melenyapkan perwira bertahan White.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Bongkar pusat dengan e6 untuk membuka jalur serang Black.",
+                                                                                        "children": [],
+                                                                                        "move": "e7e6",
+                                                                                        "san": "e6"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.9,
+                                                                                    "move": "h2g3",
+                                                                                    "san": "hxg3"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "h5g3",
+                                                                                "san": "Nxg3"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.6,
+                                                                            "move": "f3d2",
+                                                                            "san": "Nd2"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f6h5",
+                                                                        "san": "Nh5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.8,
+                                                                    "move": "h4g3",
+                                                                    "san": "Bg3"
+                                                                  }
+                                                                ],
+                                                                "move": "g6g5",
+                                                                "san": "g5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.85,
+                                                            "move": "g5h4",
+                                                            "san": "Bh4"
+                                                          }
+                                                        ],
+                                                        "move": "h7h6",
+                                                        "san": "h6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.8,
+                                                    "move": "d4d5",
+                                                    "san": "d5"
+                                                  }
+                                                ],
+                                                "move": "c7c5",
+                                                "san": "c5"
+                                              }
+                                            ],
+                                            "human_freq": 0.1,
+                                            "move": "c1g5",
+                                            "san": "Bg5"
+                                          }
+                                        ],
+                                        "move": "e8g8",
+                                        "san": "O-O"
+                                      }
+                                    ],
+                                    "human_freq": 0.75,
+                                    "move": "g1f3",
+                                    "san": "Nf3"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "blurb": "Samisch Variation: White memperkokoh e4 dengan f3. Castling Black tetap prioritas.",
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Serang pusat dengan e5 menantang rantai pawn White.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Kikis struktur pawn White di sayap menteri dengan dorongan c6.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Buka c-file dengan cxd5 untuk mempersiapkan serangan balik sayap menteri.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Siapkan badai pion sayap menteri dengan a6.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Kembangkan Knight ke d7 menuju pos serangan c5 atau b6.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Ekspansi agresif b5! Lancarkan serangan balik cepat ke King White di c1.",
+                                                                                        "children": [],
+                                                                                        "move": "b7b5",
+                                                                                        "san": "b5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.7,
+                                                                                    "move": "c1b1",
+                                                                                    "san": "Kb1"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "b8d7",
+                                                                                "san": "Nbd7"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.75,
+                                                                            "move": "e1c1",
+                                                                            "san": "O-O-O"
+                                                                          }
+                                                                        ],
+                                                                        "move": "a7a6",
+                                                                        "san": "a6"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.8,
+                                                                    "move": "c4d5",
+                                                                    "san": "cxd5"
+                                                                  }
+                                                                ],
+                                                                "move": "c6d5",
+                                                                "san": "cxd5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.6,
+                                                            "move": "d1d2",
+                                                            "san": "Qd2"
+                                                          }
+                                                        ],
+                                                        "move": "c7c6",
+                                                        "san": "c6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.7,
+                                                    "move": "d4d5",
+                                                    "san": "d5"
+                                                  },
+                                                  {
+                                                    "annotation": "Inaccuracy: White menukar Queen terlalu dini, melepaskan inisiatif endgame kepada Black.",
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Recapture pion e5 dengan aman menjaga kestabilan posisi.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Kuasai d-file terbuka dengan Rook d8.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Lenyapkan lompatan Knight White di d5 dengan pertukaran bersih.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Gempur pion d5 White dengan c6.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Usir Bishop White dengan dorongan sayap b5!",
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "blurb": "Kembangkan Bishop ke b7 menekan balik pion d5 White.",
+                                                                                                "children": [],
+                                                                                                "move": "c8b7",
+                                                                                                "san": "Bb7"
+                                                                                              }
+                                                                                            ],
+                                                                                            "move": "c4b3",
+                                                                                            "san": "Bb3"
+                                                                                          }
+                                                                                        ],
+                                                                                        "move": "b7b5",
+                                                                                        "san": "b5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.65,
+                                                                                    "move": "f1c4",
+                                                                                    "san": "Bc4"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "c7c6",
+                                                                                "san": "c6"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.8,
+                                                                            "move": "c4d5",
+                                                                            "san": "cxd5"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f6d5",
+                                                                        "san": "Nxd5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.7,
+                                                                    "move": "c3d5",
+                                                                    "san": "Nd5"
+                                                                  }
+                                                                ],
+                                                                "move": "f8d8",
+                                                                "san": "Rxd8"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.9,
+                                                            "move": "d1d8",
+                                                            "san": "Qxd8"
+                                                          }
+                                                        ],
+                                                        "move": "d6e5",
+                                                        "san": "dxe5"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.1,
+                                                    "is_blunder": true,
+                                                    "move": "d4e5",
+                                                    "san": "dxe5"
+                                                  }
+                                                ],
+                                                "move": "e7e5",
+                                                "san": "e5"
+                                              },
+                                              {
+                                                "blurb": "Panno System: Kembangkan Knight ke c6 untuk mempersiapkan dorongan cepat a6 dan b5.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Persiapkan ekspansi sayap menteri dengan a6.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Tempatkan Rook di b8 untuk mendukung pembukaan jalur b-file.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Hentikan pion badai White dengan h5 mengunci laju sayap raja.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Dobrakan b5! Buka sayap menteri secara frontal menghadapi castling panjang White.",
+                                                                                "children": [],
+                                                                                "move": "b7b5",
+                                                                                "san": "b5"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.85,
+                                                                            "move": "e1c1",
+                                                                            "san": "O-O-O"
+                                                                          }
+                                                                        ],
+                                                                        "move": "h7h5",
+                                                                        "san": "h5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.7,
+                                                                    "move": "h2h4",
+                                                                    "san": "h4"
+                                                                  }
+                                                                ],
+                                                                "move": "a8b8",
+                                                                "san": "Rb8"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.8,
+                                                            "move": "d1d2",
+                                                            "san": "Qd2"
+                                                          }
+                                                        ],
+                                                        "move": "a7a6",
+                                                        "san": "a6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.65,
+                                                    "move": "g1e2",
+                                                    "san": "Nge2"
+                                                  }
+                                                ],
+                                                "move": "b8c6",
+                                                "san": "Nc6"
+                                              }
+                                            ],
+                                            "human_freq": 0.85,
+                                            "move": "c1e3",
+                                            "san": "Be3"
+                                          },
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Tantang dominasi White dengan dorongan sayap c5 gaya Benoni.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Gempur rantai sentral dengan e6 untuk membuka e-file.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Buka file sentral dengan exd5 memanfaatkan diagonal bebas.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Aktivasi Rook di e8 menekan jalur sentral e-file.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Persiapkan kontrol sayap menteri dengan dorongan a6.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Kembangkan Knight ke d7 menuju petak e5 yang strategis.",
+                                                                                        "children": [],
+                                                                                        "move": "b8d7",
+                                                                                        "san": "Nbd7"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.7,
+                                                                                    "move": "a2a4",
+                                                                                    "san": "a4"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "a7a6",
+                                                                                "san": "a6"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.75,
+                                                                            "move": "g1e2",
+                                                                            "san": "Nge2"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f8e8",
+                                                                        "san": "Re8"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.8,
+                                                                    "move": "c4d5",
+                                                                    "san": "cxd5"
+                                                                  }
+                                                                ],
+                                                                "move": "e6d5",
+                                                                "san": "exd5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.7,
+                                                            "move": "d1d2",
+                                                            "san": "Qd2"
+                                                          }
+                                                        ],
+                                                        "move": "e7e6",
+                                                        "san": "e6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.85,
+                                                    "move": "d4d5",
+                                                    "san": "d5"
+                                                  }
+                                                ],
+                                                "move": "c7c5",
+                                                "san": "c5"
+                                              }
+                                            ],
+                                            "human_freq": 0.12,
+                                            "move": "c1g5",
+                                            "san": "Bg5"
+                                          }
+                                        ],
+                                        "move": "e8g8",
+                                        "san": "O-O"
+                                      }
+                                    ],
+                                    "human_freq": 0.2,
+                                    "move": "f2f3",
+                                    "san": "f3"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "blurb": "Averbakh Variation: White menyiapkan pin Bg5 sebelum melangkahkan Nf3.",
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Serang pusat dengan c5 meruntuhkan penguasaan petak gelap White.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Kikis pion sentral dengan e6 membuka aktivitas e-file.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Buka file sentral dengan exd5.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Kuasai e-file dengan Re8 memberi tekanan konstan ke King White.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Kembangkan light-squared Bishop ke g4 mem-pin Knight f3.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Sentralisasi Knight ke d7 menghubungkan seluruh perwira Black.",
+                                                                                        "children": [],
+                                                                                        "move": "b8d7",
+                                                                                        "san": "Nbd7"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.85,
+                                                                                    "move": "e1g1",
+                                                                                    "san": "O-O"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "c8g4",
+                                                                                "san": "Bg4"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.7,
+                                                                            "move": "g1f3",
+                                                                            "san": "Nf3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f8e8",
+                                                                        "san": "Re8"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.75,
+                                                                    "move": "e4d5",
+                                                                    "san": "exd5"
+                                                                  }
+                                                                ],
+                                                                "move": "e6d5",
+                                                                "san": "exd5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.65,
+                                                            "move": "d1d2",
+                                                            "san": "Qd2"
+                                                          }
+                                                        ],
+                                                        "move": "e7e6",
+                                                        "san": "e6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.8,
+                                                    "move": "d4d5",
+                                                    "san": "d5"
+                                                  }
+                                                ],
+                                                "move": "c7c5",
+                                                "san": "c5"
+                                              },
+                                              {
+                                                "blurb": "Tantang Bishop White dengan h6 untuk memaksa mundur ke e3.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Serang pusat dengan e5 begitu Bishop musuh mundur.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Kunci sayap menteri dengan a5.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Amankan King ke h7 sembari mempertahankan pion h6.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Kembangkan Knight ke a6 menuju pos aktif.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Tancapkan Knight di c5 dengan garpuan tekanan pada pion e4 dan b3.",
+                                                                                        "children": [],
+                                                                                        "move": "a6c5",
+                                                                                        "san": "Nc5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.8,
+                                                                                    "move": "g1f3",
+                                                                                    "san": "Nf3"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "b8a6",
+                                                                                "san": "Na6"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.65,
+                                                                            "move": "h2h3",
+                                                                            "san": "h3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "g8h7",
+                                                                        "san": "Kh7"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.75,
+                                                                    "move": "d1d2",
+                                                                    "san": "Qd2"
+                                                                  }
+                                                                ],
+                                                                "move": "a7a5",
+                                                                "san": "a5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.6,
+                                                            "move": "d4d5",
+                                                            "san": "d5"
+                                                          }
+                                                        ],
+                                                        "move": "e7e5",
+                                                        "san": "e5"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.85,
+                                                    "move": "g5e3",
+                                                    "san": "Be3"
+                                                  }
+                                                ],
+                                                "move": "h7h6",
+                                                "san": "h6"
+                                              }
+                                            ],
+                                            "human_freq": 0.7,
+                                            "move": "c1g5",
+                                            "san": "Bg5"
+                                          }
+                                        ],
+                                        "move": "e8g8",
+                                        "san": "O-O"
+                                      }
+                                    ],
+                                    "human_freq": 0.08,
+                                    "move": "f1e2",
+                                    "san": "Be2"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "blurb": "Four Pawns Attack! White merebut ruang masif tetapi memperlemah stabilitas King.",
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Dobrakan sentral c5! Hancurkan dinding pion empat lapis White.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Bongkar pilar d5 dengan e6.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Recapture exd5 untuk membuka e-file menghadapi pion e4 yang overextended.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Tempatkan Rook di e8 menekan pion e4/e5 White.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Makan pion e5 dengan dxe5 untuk meruntuhkan rantai sentral musuh.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Lompatkan Knight ke g4 menyerang pion lemah e5 secara ganda.",
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "blurb": "Serang balik dengan Qb6 menargetkan titik lemah b2 dan Bishop g5!",
+                                                                                                "children": [],
+                                                                                                "move": "d8b6",
+                                                                                                "san": "Qb6"
+                                                                                              }
+                                                                                            ],
+                                                                                            "human_freq": 0.6,
+                                                                                            "move": "c1g5",
+                                                                                            "san": "Bg5"
+                                                                                          }
+                                                                                        ],
+                                                                                        "move": "f6g4",
+                                                                                        "san": "Ng4"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.9,
+                                                                                    "move": "f4e5",
+                                                                                    "san": "fxe5"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "d6e5",
+                                                                                "san": "dxe5"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.85,
+                                                                            "move": "e4e5",
+                                                                            "san": "e5"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f8e8",
+                                                                        "san": "Re8"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.7,
+                                                                    "move": "c4d5",
+                                                                    "san": "cxd5"
+                                                                  }
+                                                                ],
+                                                                "move": "e6d5",
+                                                                "san": "exd5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.8,
+                                                            "move": "f1e2",
+                                                            "san": "Be2"
+                                                          }
+                                                        ],
+                                                        "move": "e7e6",
+                                                        "san": "e6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.75,
+                                                    "move": "d4d5",
+                                                    "san": "d5"
+                                                  },
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Taktik jitu Qa5! Pin Knight c3 dan bersiap merebut kembali pion c5.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Recapture dengan Queen di c5 mengamankan dominasi diagonal a7-g1.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Kembangkan Bishop ke g4 untuk menekan Knight f3 White.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Mundurkan Queen ke a5 menjaga pin dan tekanan sayap menteri.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Kembangkan Knight ke c6 menempati petak ideal sentral.",
+                                                                                        "children": [],
+                                                                                        "move": "b8c6",
+                                                                                        "san": "Nc6"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.8,
+                                                                                    "move": "e1g1",
+                                                                                    "san": "O-O"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "c5a5",
+                                                                                "san": "Qa5"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.85,
+                                                                            "move": "c1e3",
+                                                                            "san": "Be3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "c8g4",
+                                                                        "san": "Bg4"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.75,
+                                                                    "move": "d1e2",
+                                                                    "san": "Qe2"
+                                                                  }
+                                                                ],
+                                                                "move": "a5c5",
+                                                                "san": "Qxc5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.8,
+                                                            "move": "f1d3",
+                                                            "san": "Bd3"
+                                                          }
+                                                        ],
+                                                        "move": "d8a5",
+                                                        "san": "Qa5"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.2,
+                                                    "move": "d4c5",
+                                                    "san": "dxc5"
+                                                  }
+                                                ],
+                                                "move": "c7c5",
+                                                "san": "c5"
+                                              }
+                                            ],
+                                            "human_freq": 0.85,
+                                            "move": "g1f3",
+                                            "san": "Nf3"
+                                          }
+                                        ],
+                                        "move": "e8g8",
+                                        "san": "O-O"
+                                      }
+                                    ],
+                                    "human_freq": 0.08,
+                                    "move": "f2f4",
+                                    "san": "f4"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "blurb": "Makogonov System: White mencegah Bg4/Ng4 dengan h3. Black tenang castling.",
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Serang pusat dengan e5!",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Kembangkan Knight ke tepi di a6 bersiap melompat ke c5.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Tancapkan Knight di c5 menyerang pion e4 White.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Kunci laju b4 White dengan a5.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Kikis rantai pion sentral White dengan c6.",
+                                                                                "children": [],
+                                                                                "move": "c7c6",
+                                                                                "san": "c6"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.7,
+                                                                            "move": "d1d2",
+                                                                            "san": "Qd2"
+                                                                          }
+                                                                        ],
+                                                                        "move": "a7a5",
+                                                                        "san": "a5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.8,
+                                                                    "move": "f2f3",
+                                                                    "san": "f3"
+                                                                  }
+                                                                ],
+                                                                "move": "a6c5",
+                                                                "san": "Nc5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.65,
+                                                            "move": "g2g4",
+                                                            "san": "g4"
+                                                          }
+                                                        ],
+                                                        "move": "b8a6",
+                                                        "san": "Na6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.75,
+                                                    "move": "d4d5",
+                                                    "san": "d5"
+                                                  }
+                                                ],
+                                                "move": "e7e5",
+                                                "san": "e5"
+                                              }
+                                            ],
+                                            "human_freq": 0.8,
+                                            "move": "c1e3",
+                                            "san": "Be3"
+                                          }
+                                        ],
+                                        "move": "e8g8",
+                                        "san": "O-O"
+                                      }
+                                    ],
+                                    "human_freq": 0.05,
+                                    "move": "h2h3",
+                                    "san": "h3"
+                                  }
+                                ],
+                                "move": "d7d6",
+                                "san": "d6"
+                              }
+                            ],
+                            "human_freq": 0.85,
+                            "move": "e2e4",
+                            "san": "e4"
+                          }
+                        ],
+                        "move": "f8g7",
+                        "san": "Bg7"
+                      }
+                    ],
+                    "human_freq": 0.72,
+                    "move": "b1c3",
+                    "san": "Nc3"
+                  },
+                  {
+                    "children": [
+                      {
+                        "blurb": "Fianchetto Variation: White meniru formasi g3-Bg2 untuk meredam King's Bishop Black.",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "blurb": "Castling segera mengamankan King.",
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "blurb": "Kunci pion d6 menjaga kestabilan petak pusat.",
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Kembangkan Knight ke d7 bersiap mendukung dobrakan e5.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Serang pusat dengan e5!",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Perkuat pion sentral dengan c6.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Tempatkan Rook di e8 mengawasi petak e4.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Buka posisi dengan exd4 untuk mengaktifkan diagonal Bishop g7.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Tancapkan Knight di c5 menyerang pion e4 White.",
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "blurb": "Langkah profilaktik a5 mengamankan pos Knight c5 dari dorongan b4.",
+                                                                                                "children": [],
+                                                                                                "move": "a7a5",
+                                                                                                "san": "a5"
+                                                                                              }
+                                                                                            ],
+                                                                                            "human_freq": 0.75,
+                                                                                            "move": "d1c2",
+                                                                                            "san": "Qc2"
+                                                                                          }
+                                                                                        ],
+                                                                                        "move": "d7c5",
+                                                                                        "san": "Nc5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.85,
+                                                                                    "move": "f3d4",
+                                                                                    "san": "Nxd4"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "e5d4",
+                                                                                "san": "exd4"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.6,
+                                                                            "move": "c1e3",
+                                                                            "san": "Be3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "f8e8",
+                                                                        "san": "Re8"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.8,
+                                                                    "move": "h2h3",
+                                                                    "san": "h3"
+                                                                  }
+                                                                ],
+                                                                "move": "c7c6",
+                                                                "san": "c6"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.75,
+                                                            "move": "e2e4",
+                                                            "san": "e4"
+                                                          }
+                                                        ],
+                                                        "move": "e7e5",
+                                                        "san": "e5"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.7,
+                                                    "move": "b1c3",
+                                                    "san": "Nc3"
+                                                  }
+                                                ],
+                                                "move": "b8d7",
+                                                "san": "Nbd7"
+                                              },
+                                              {
+                                                "blurb": "Panno System melawan Fianchetto: Kembangkan Knight ke c6 menekan sentral.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Persiapkan manuver b5 dengan a6.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Pindahkan Knight ke tepi di a5 menekan pion c4 White.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Kunci ruang dengan c5 memperkokoh c-file.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Tempatkan Rook di b8 untuk mendukung ekspansi b-file.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Dobrakan sayap menteri b5! Rebut inisiatif dengan serangan balik tajam.",
+                                                                                        "children": [],
+                                                                                        "move": "b7b5",
+                                                                                        "san": "b5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.7,
+                                                                                    "move": "b2b3",
+                                                                                    "san": "b3"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "a8b8",
+                                                                                "san": "Rb8"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.6,
+                                                                            "move": "d1c2",
+                                                                            "san": "Qc2"
+                                                                          }
+                                                                        ],
+                                                                        "move": "c7c5",
+                                                                        "san": "c5"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.75,
+                                                                    "move": "f3d2",
+                                                                    "san": "Nd2"
+                                                                  }
+                                                                ],
+                                                                "move": "c6a5",
+                                                                "san": "Na5"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.8,
+                                                            "move": "d4d5",
+                                                            "san": "d5"
+                                                          }
+                                                        ],
+                                                        "move": "a7a6",
+                                                        "san": "a6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.65,
+                                                    "move": "b1c3",
+                                                    "san": "Nc3"
+                                                  }
+                                                ],
+                                                "move": "b8c6",
+                                                "san": "Nc6"
+                                              },
+                                              {
+                                                "blurb": "Yugoslav System: Siapkan kontrol petak sentral dengan c6.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Aktifkan Queen ke a5 menekan queenside White.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Pin Knight f3 dengan Bg4.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Tukarkan Bishop untuk melemahkan kontrol White atas petak sentral d4.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Reroute Knight ke d7 untuk membuka jalan bagi pion c5.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Dobrakan sentral c5! Hancurkan fondasi pion d4 White.",
+                                                                                        "children": [],
+                                                                                        "move": "c6c5",
+                                                                                        "san": "c5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.7,
+                                                                                    "move": "c1e3",
+                                                                                    "san": "Be3"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "f6d7",
+                                                                                "san": "Nfd7"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.85,
+                                                                            "move": "g2f3",
+                                                                            "san": "Bxf3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "g4f3",
+                                                                        "san": "Bxf3"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.65,
+                                                                    "move": "h2h3",
+                                                                    "san": "h3"
+                                                                  }
+                                                                ],
+                                                                "move": "c8g4",
+                                                                "san": "Bg4"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.7,
+                                                            "move": "e2e4",
+                                                            "san": "e4"
+                                                          }
+                                                        ],
+                                                        "move": "d8a5",
+                                                        "san": "Qa5"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.5,
+                                                    "move": "b1c3",
+                                                    "san": "Nc3"
+                                                  }
+                                                ],
+                                                "move": "c7c6",
+                                                "san": "c6"
+                                              }
+                                            ],
+                                            "human_freq": 0.9,
+                                            "move": "e1g1",
+                                            "san": "O-O"
+                                          }
+                                        ],
+                                        "move": "d7d6",
+                                        "san": "d6"
+                                      }
+                                    ],
+                                    "human_freq": 0.9,
+                                    "move": "g1f3",
+                                    "san": "Nf3"
+                                  }
+                                ],
+                                "move": "e8g8",
+                                "san": "O-O"
+                              }
+                            ],
+                            "human_freq": 0.9,
+                            "move": "f1g2",
+                            "san": "Bg2"
+                          }
+                        ],
+                        "move": "f8g7",
+                        "san": "Bg7"
+                      }
+                    ],
+                    "human_freq": 0.2,
+                    "move": "g2g3",
+                    "san": "g3"
+                  }
+                ],
+                "move": "g7g6",
+                "san": "g6"
+              }
+            ],
+            "human_freq": 0.58,
+            "move": "c2c4",
+            "san": "c4"
+          },
+          {
+            "children": [
+              {
+                "blurb": "Hadapi London System dengan setup KID fleksibel g6 dan Bg7.",
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "blurb": "Selesaikan perkembangan sayap raja dengan Bg7.",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "blurb": "Castling segera mengamankan King.",
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "blurb": "Kunci petak d6 menjaga sentral tetap stabil.",
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Serang rantai pion London dengan dorongan c5.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Siapkan double-fianchetto dengan b6.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Tempatkan Bishop di b7 mengontrol diagonal panjang a8-h1.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Kembangkan Knight ke d7 menjaga koordinasi perwira harmonis.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Profilaksis a6 mencegah dorongan a5 White dan mempertahankan posisi.",
+                                                                                "children": [],
+                                                                                "move": "a7a6",
+                                                                                "san": "a6"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.6,
+                                                                            "move": "a2a4",
+                                                                            "san": "a4"
+                                                                          }
+                                                                        ],
+                                                                        "move": "b8d7",
+                                                                        "san": "Nbd7"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.75,
+                                                                    "move": "b1d2",
+                                                                    "san": "Nbd2"
+                                                                  }
+                                                                ],
+                                                                "move": "c8b7",
+                                                                "san": "Bb7"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.85,
+                                                            "move": "e1g1",
+                                                            "san": "O-O"
+                                                          }
+                                                        ],
+                                                        "move": "b7b6",
+                                                        "san": "b6"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.8,
+                                                    "move": "c2c3",
+                                                    "san": "c3"
+                                                  }
+                                                ],
+                                                "move": "c7c5",
+                                                "san": "c5"
+                                              }
+                                            ],
+                                            "human_freq": 0.7,
+                                            "move": "h2h3",
+                                            "san": "h3"
+                                          }
+                                        ],
+                                        "move": "d7d6",
+                                        "san": "d6"
+                                      }
+                                    ],
+                                    "human_freq": 0.75,
+                                    "move": "f1e2",
+                                    "san": "Be2"
+                                  }
+                                ],
+                                "move": "e8g8",
+                                "san": "O-O"
+                              }
+                            ],
+                            "human_freq": 0.85,
+                            "move": "g1f3",
+                            "san": "Nf3"
+                          }
+                        ],
+                        "move": "f8g7",
+                        "san": "Bg7"
+                      }
+                    ],
+                    "human_freq": 0.8,
+                    "move": "e2e3",
+                    "san": "e3"
+                  }
+                ],
+                "move": "g7g6",
+                "san": "g6"
+              }
+            ],
+            "human_freq": 0.25,
+            "move": "c1f4",
+            "san": "Bf4"
+          },
+          {
+            "children": [
+              {
+                "blurb": "Tetap tenang dalam formasi King's Indian dengan g6.",
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "blurb": "Fianchetto Bishop mengawasi diagonal a1-h8.",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "blurb": "Castling kingside cepat.",
+                                "children": [
+                                  {
+                                    "children": [
+                                      {
+                                        "blurb": "Kunci struktur dengan d6.",
+                                        "children": [
+                                          {
+                                            "children": [
+                                              {
+                                                "blurb": "Gempur sentral dengan c5 merusak formasi pion White.",
+                                                "children": [
+                                                  {
+                                                    "children": [
+                                                      {
+                                                        "blurb": "Tukarkan pion di d4 untuk melenyapkan rantai pusat White.",
+                                                        "children": [
+                                                          {
+                                                            "children": [
+                                                              {
+                                                                "blurb": "Kembangkan Knight ke c6 menekan pion d4.",
+                                                                "children": [
+                                                                  {
+                                                                    "children": [
+                                                                      {
+                                                                        "blurb": "Pin Knight f3 White dengan Bg4.",
+                                                                        "children": [
+                                                                          {
+                                                                            "children": [
+                                                                              {
+                                                                                "blurb": "Tukarkan Bishop untuk melemahkan kontrol sentral musuh.",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "blurb": "Dobrakan pamungkas d5! Hancurkan pusat White dan capai kesetaraan penuh.",
+                                                                                        "children": [],
+                                                                                        "move": "d6d5",
+                                                                                        "san": "d5"
+                                                                                      }
+                                                                                    ],
+                                                                                    "human_freq": 0.85,
+                                                                                    "move": "d2f3",
+                                                                                    "san": "Nxf3"
+                                                                                  }
+                                                                                ],
+                                                                                "move": "g4f3",
+                                                                                "san": "Bxf3"
+                                                                              }
+                                                                            ],
+                                                                            "human_freq": 0.8,
+                                                                            "move": "h2h3",
+                                                                            "san": "h3"
+                                                                          }
+                                                                        ],
+                                                                        "move": "c8g4",
+                                                                        "san": "Bg4"
+                                                                      }
+                                                                    ],
+                                                                    "human_freq": 0.75,
+                                                                    "move": "e1g1",
+                                                                    "san": "O-O"
+                                                                  }
+                                                                ],
+                                                                "move": "b8c6",
+                                                                "san": "Nc6"
+                                                              }
+                                                            ],
+                                                            "human_freq": 0.85,
+                                                            "move": "c3d4",
+                                                            "san": "cxd4"
+                                                          }
+                                                        ],
+                                                        "move": "c5d4",
+                                                        "san": "cxd4"
+                                                      }
+                                                    ],
+                                                    "human_freq": 0.6,
+                                                    "move": "f1d3",
+                                                    "san": "Bd3"
+                                                  }
+                                                ],
+                                                "move": "c7c5",
+                                                "san": "c5"
+                                              }
+                                            ],
+                                            "human_freq": 0.65,
+                                            "move": "c2c3",
+                                            "san": "c3"
+                                          }
+                                        ],
+                                        "move": "d7d6",
+                                        "san": "d6"
+                                      }
+                                    ],
+                                    "human_freq": 0.7,
+                                    "move": "e2e4",
+                                    "san": "e4"
+                                  }
+                                ],
+                                "move": "e8g8",
+                                "san": "O-O"
+                              }
+                            ],
+                            "human_freq": 0.75,
+                            "move": "b1d2",
+                            "san": "Nbd2"
+                          }
+                        ],
+                        "move": "f8g7",
+                        "san": "Bg7"
+                      }
+                    ],
+                    "human_freq": 0.4,
+                    "move": "c1g5",
+                    "san": "Bg5"
+                  }
+                ],
+                "move": "g7g6",
+                "san": "g6"
+              }
+            ],
+            "human_freq": 0.15,
+            "move": "g1f3",
+            "san": "Nf3"
+          }
+        ],
+        "move": "g8f6",
+        "san": "Nf6"
+      }
+    ],
+    "human_freq": 0.65,
+    "move": "d2d4",
+    "san": "d4"
+  }
+}

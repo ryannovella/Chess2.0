@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_new_game.svg" id="5_new_game"]
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_flag.svg" id="6_flag"]
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_home.svg" id="7_home"]
+[ext_resource type="Texture2D" uid="uid://c32mgefh4m53p" path="res://assets/ui/icons/icon_palette.svg" id="8_palette"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pause_panel"]
 content_margin_left = 30.0
@@ -98,6 +99,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 21
 text = "Restart"
 icon = ExtResource("5_new_game")
+
+[node name="BtnPainter" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Edit in Painter"
+icon = ExtResource("8_palette")
 
 [node name="BtnResign" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 58)

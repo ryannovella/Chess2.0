@@ -24,6 +24,7 @@ const TactileStyles = preload("res://src/theme/tactile_styles.gd")
 const ReviewSettingsDialog = preload("res://src/ui/hud/review_settings_dialog.gd")
 const CapturedPiecesView = preload("res://src/ui/hud/captured_pieces_view.gd")
 const CardPalette = preload("res://src/ui/card_palette.gd")
+const PositionRules = preload("res://src/core/position_rules.gd")
 
 @onready var chess_board: ChessBoard = $CenterContainer/MainLayout/GameLayout/BoardArea/BoardMiddle/ChessBoard
 @onready var eval_bar: EvalBar = $CenterContainer/MainLayout/GameLayout/BoardArea/BoardMiddle/EvalBar
@@ -76,6 +77,8 @@ var current_is_mate: bool = false
 var current_mate_in: int = 0
 var last_reviewed_step_index: int = -1
 var is_showing_best_move_active: bool = false
+var painter_launch_fen: String = ""
+var painter_launch_mode: String = ""
 
 var board_state: ChessBoardState = null
 var engine_service: EngineService = null
@@ -86,6 +89,7 @@ var is_game_active: bool = true
 var is_paused: bool = false
 var state_history: Array[Dictionary] = []
 var history_index: int = -1
+var is_history_animating: bool = false
 var game_review_service: GameReviewService = null
 var is_review_mode: bool = false
 
@@ -180,6 +184,8 @@ func _ready() -> void:
 	btn_pause.pressed.connect(_on_pause_button_pressed)
 	pause_menu.resume_pressed.connect(_on_pause_resume)
 	pause_menu.restart_pressed.connect(_on_pause_restart)
+	if pause_menu.has_signal("painter_pressed"):
+		pause_menu.painter_pressed.connect(_on_pause_painter)
 	pause_menu.resign_pressed.connect(_on_pause_resign)
 	pause_menu.main_menu_pressed.connect(_on_pause_main_menu)
 
@@ -190,6 +196,8 @@ func _ready() -> void:
 	# Hubungkan sinyal dari GameOverDialog
 	if game_over_dialog:
 		game_over_dialog.rematch_pressed.connect(_on_game_over_rematch)
+		if game_over_dialog.has_signal("painter_pressed"):
+			game_over_dialog.painter_pressed.connect(_on_game_over_painter)
 		game_over_dialog.review_pressed.connect(_on_game_over_review)
 		game_over_dialog.main_menu_pressed.connect(_on_pause_main_menu)
 		game_over_dialog.closed.connect(_on_game_over_closed)
@@ -240,6 +248,12 @@ func start_new_game(fen: String = ChessBoardState.DEFAULT_FEN, mode: String = "v
 		hud_tab_bar.visible = true
 	_set_engine_tab_available(true)
 	board_state = ChessBoardState.new(fen)
+	# FEN kustom (Chess Painter) bisa membawa hak rokade warisan posisi standar
+	# padahal raja/bentengnya tidak ada. Stockfish menolak posisi seperti itu
+	# tanpa pesan (tidak ada `bestmove`), jadi FEN dibersihkan di satu pintu
+	# masuk ini: papan aplikasi dan posisi engine tidak boleh berbeda.
+	PositionRules.sanitize_castling(board_state)
+	fen = board_state.to_fen()
 
 	if fen == ChessBoardState.DEFAULT_FEN:
 		GameSettings.resolve_player_side()
@@ -714,12 +728,12 @@ func _on_resign_pressed() -> void:
 
 func _update_undo_redo_ui() -> void:
 	if game_controls:
-		var can_undo = not is_paused and history_index > 0
-		var can_redo = not is_paused and history_index < state_history.size() - 1
+		var can_undo = not is_paused and not is_history_animating and history_index > 0
+		var can_redo = not is_paused and not is_history_animating and history_index < state_history.size() - 1
 		game_controls.update_undo_redo(can_undo, can_redo)
 
 func undo_move() -> void:
-	if is_paused or history_index <= 0:
+	if is_paused or is_history_animating or history_index <= 0:
 		return
 
 	var steps_to_undo = 1
@@ -736,7 +750,7 @@ func undo_move() -> void:
 	_animate_and_apply_undo(target_index, steps_to_undo)
 
 func redo_move() -> void:
-	if is_paused or history_index >= state_history.size() - 1:
+	if is_paused or is_history_animating or history_index >= state_history.size() - 1:
 		return
 
 	var steps_to_redo = 1
@@ -750,6 +764,8 @@ func redo_move() -> void:
 	_animate_and_apply_redo(target_index, steps_to_redo)
 
 func _animate_and_apply_undo(target_index: int, steps: int) -> void:
+	is_history_animating = true
+	_update_undo_redo_ui()
 	engine_service.stop_analysis()
 	engine_arrows.clear()
 	threat_arrows.clear()
@@ -783,6 +799,8 @@ func _animate_and_apply_undo(target_index: int, steps: int) -> void:
 		)
 
 func _animate_and_apply_redo(target_index: int, steps: int) -> void:
+	is_history_animating = true
+	_update_undo_redo_ui()
 	engine_service.stop_analysis()
 	engine_arrows.clear()
 	threat_arrows.clear()
@@ -830,6 +848,7 @@ func _animate_and_apply_redo(target_index: int, steps: int) -> void:
 		, func(): _play_move_sfx(is_cap1, is_castle1, is_promo1))
 
 func _finalize_history_transition(state_data: Dictionary) -> void:
+	is_history_animating = false
 	if game_over_layer:
 		game_over_layer.visible = false
 	if game_over_dialog:
@@ -1179,10 +1198,27 @@ func _update_card_mate_state(is_top: bool, badge_node: PanelContainer, label_nod
 
 		badge_node.visible = true
 
-func _on_open_painter_pressed() -> void:
+func _open_chess_painter() -> void:
+	engine_service.stop_analysis()
+	if chess_painter and chess_painter.has_method("sync_orientation_from_settings"):
+		chess_painter.sync_orientation_from_settings()
 	chess_painter_layer.visible = true
 
+func _on_open_painter_pressed() -> void:
+	_open_chess_painter()
+
+func _on_pause_painter() -> void:
+	resume_game()
+	_open_chess_painter()
+
+func _on_game_over_painter() -> void:
+	if game_over_layer:
+		game_over_layer.visible = false
+	_open_chess_painter()
+
 func _on_painter_play_position(fen: String, mode: String) -> void:
+	painter_launch_fen = fen
+	painter_launch_mode = mode
 	chess_painter_layer.visible = false
 	start_new_game(fen, mode)
 
@@ -1192,12 +1228,39 @@ func _set_status(msg: String) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
-		if event.is_command_or_control_pressed():
-			if event.keycode == KEY_Z and not event.shift_pressed:
+		if is_review_mode and game_review_panel:
+			if event.is_command_or_control_pressed():
+				if event.keycode == KEY_Z and not event.shift_pressed:
+					game_review_panel._on_prev_move_pressed()
+					get_viewport().set_input_as_handled()
+					return
+				elif event.keycode == KEY_Y or (event.keycode == KEY_Z and event.shift_pressed):
+					game_review_panel._on_next_move_pressed()
+					get_viewport().set_input_as_handled()
+					return
+			elif event.keycode == KEY_LEFT:
+				game_review_panel._on_prev_move_pressed()
+				get_viewport().set_input_as_handled()
+				return
+			elif event.keycode == KEY_RIGHT:
+				game_review_panel._on_next_move_pressed()
+				get_viewport().set_input_as_handled()
+				return
+		else:
+			if event.is_command_or_control_pressed():
+				if event.keycode == KEY_Z and not event.shift_pressed:
+					undo_move()
+					get_viewport().set_input_as_handled()
+					return
+				elif event.keycode == KEY_Y or (event.keycode == KEY_Z and event.shift_pressed):
+					redo_move()
+					get_viewport().set_input_as_handled()
+					return
+			elif event.keycode == KEY_LEFT:
 				undo_move()
 				get_viewport().set_input_as_handled()
 				return
-			elif event.keycode == KEY_Y or (event.keycode == KEY_Z and event.shift_pressed):
+			elif event.keycode == KEY_RIGHT:
 				redo_move()
 				get_viewport().set_input_as_handled()
 				return
@@ -1258,7 +1321,8 @@ func _on_pause_resume() -> void:
 
 func _on_pause_restart() -> void:
 	resume_game()
-	start_new_game(ChessBoardState.DEFAULT_FEN, game_mode)
+	var restart_fen = painter_launch_fen if not painter_launch_fen.is_empty() else ChessBoardState.DEFAULT_FEN
+	start_new_game(restart_fen, game_mode)
 
 func _on_pause_resign() -> void:
 	resume_game()
@@ -1271,7 +1335,8 @@ func _on_pause_main_menu() -> void:
 func _on_game_over_rematch() -> void:
 	if game_over_layer:
 		game_over_layer.visible = false
-	start_new_game(ChessBoardState.DEFAULT_FEN, game_mode)
+	var restart_fen = painter_launch_fen if not painter_launch_fen.is_empty() else ChessBoardState.DEFAULT_FEN
+	start_new_game(restart_fen, game_mode)
 
 func _on_game_over_review() -> void:
 	if game_over_layer:
@@ -1770,3 +1835,7 @@ func _on_painter_back() -> void:
 	if GameSettings.open_painter_on_launch:
 		GameSettings.open_painter_on_launch = false
 		get_tree().change_scene_to_file("res://src/ui/menu/main_menu.tscn")
+	elif is_game_active and board_state != null and not is_paused:
+		var player_c = GameSettings.player_color
+		if game_mode != "vs_ai" or board_state.turn == player_c:
+			engine_service.analyze_position(board_state.to_fen())

@@ -15,8 +15,12 @@ extends Control
 
 # Setup Controls (Difficulty, Engine Best Move, Play As)
 @onready var difficulty_card: PanelContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard
+@onready var difficulty_header: HBoxContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/Header
 @onready var elo_label: Label = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/Header/EloLabel
 @onready var elo_slider: HSlider = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/EloSlider
+@onready var preset_row: HBoxContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/PresetRow
+@onready var difficulty_separator: HSeparator = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/HSeparator
+@onready var delay_row: HBoxContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/DelayRow
 @onready var delay_slider: HSlider = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/DelayRow/DelaySlider
 @onready var delay_value_label: Label = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/DelayRow/DelayValueLabel
 
@@ -27,6 +31,10 @@ extends Control
 @onready var btn_preset_2800: Button = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/DifficultyCard/VBox/PresetRow/BtnPreset2800
 
 @onready var engine_assist_card: PanelContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/EngineAssistCard
+@onready var engine_assist_header: HBoxContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/EngineAssistCard/VBox/Header
+@onready var player_arrows_row: HBoxContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/EngineAssistCard/VBox/PlayerArrowsRow
+@onready var opponent_arrows_row: HBoxContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/EngineAssistCard/VBox/OpponentArrowsRow
+@onready var depth_row: HBoxContainer = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/EngineAssistCard/VBox/DepthRow
 @onready var chk_best_move: CheckBox = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/EngineAssistCard/VBox/PlayerArrowsRow/ChkBestMove
 @onready var chk_player_threats: CheckBox = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/EngineAssistCard/VBox/PlayerArrowsRow/ChkPlayerThreats
 @onready var chk_opponent_best_move: CheckBox = $CenterContainer/MainLayout/RightCard/VBox/SetupScroll/SetupSection/EngineAssistCard/VBox/OpponentArrowsRow/ChkOpponentBestMove
@@ -56,8 +64,12 @@ extends Control
 @onready var btn_check_update: Button = $UpdateModal/CenterContainer/UpdateCard/VBox/ActionButtons/BtnCheckUpdate
 @onready var btn_install_update: Button = $UpdateModal/CenterContainer/UpdateCard/VBox/ActionButtons/BtnInstallUpdate
 
-# Trainer Reps Modal
+# Trainer Hub Modal
 @onready var trainer_modal: Control = $TrainerModal
+@onready var trainer_modal_title: Label = $TrainerModal/CenterContainer/TrainerCard/VBox/Header/Title
+@onready var btn_tab_openings: Button = $TrainerModal/CenterContainer/TrainerCard/VBox/TabBar/BtnTabOpenings
+@onready var btn_tab_checkmate: Button = $TrainerModal/CenterContainer/TrainerCard/VBox/TabBar/BtnTabCheckmate
+@onready var btn_tab_queen: Button = $TrainerModal/CenterContainer/TrainerCard/VBox/TabBar/BtnTabQueen
 @onready var trainer_cards_container: VBoxContainer = $TrainerModal/CenterContainer/TrainerCard/VBox/Scroll/CardsContainer
 @onready var btn_close_trainer: Button = $TrainerModal/CenterContainer/TrainerCard/VBox/ActionButtons/BtnCloseTrainer
 
@@ -71,6 +83,7 @@ extends Control
 @onready var chk_black_engine: CheckBox = $SettingsModal/CenterContainer/SettingsCard/VBox/Form/BlackArrowsRow/ChkBlackEngine
 @onready var chk_black_threats: CheckBox = $SettingsModal/CenterContainer/SettingsCard/VBox/Form/BlackArrowsRow/ChkBlackThreats
 @onready var chk_sound: CheckBox = $SettingsModal/CenterContainer/SettingsCard/VBox/Form/SoundRow/ChkSound
+@onready var opt_button_sound: OptionButton = $SettingsModal/CenterContainer/SettingsCard/VBox/Form/ButtonSoundRow/OptButtonSound
 @onready var settings_delay_slider: HSlider = $SettingsModal/CenterContainer/SettingsCard/VBox/Form/DelayRow/SettingsDelaySlider
 @onready var settings_delay_value: Label = $SettingsModal/CenterContainer/SettingsCard/VBox/Form/DelayRow/SettingsDelayValue
 @onready var btn_cancel_settings: Button = $SettingsModal/CenterContainer/SettingsCard/VBox/ModalButtons/BtnCancelSettings
@@ -78,10 +91,27 @@ extends Control
 
 const MAIN_SCENE_PATH = "res://src/main.tscn"
 const OPENING_TRAINER_PATH = "res://src/ui/trainer/opening_trainer.tscn"
+const TACTICS_TRAINER_PATH = "res://src/ui/trainer/tactics_trainer.tscn"
 const RepertoireService = preload("res://src/core/repertoire/repertoire_service.gd")
+const TacticsService = preload("res://src/core/tactics/tactics_service.gd")
 const TactileStyles = preload("res://src/theme/tactile_styles.gd")
+const ChevronIndicator = preload("res://src/ui/menu/chevron_indicator.gd")
+const EngineBootstrap = preload("res://src/engine/engine_bootstrap.gd")
 
 var selected_mode: String = "vs_ai" # "vs_ai", "local_2p", "painter"
+var current_trainer_tab: String = "openings" # "openings" | "checkmate" | "queen_tactics"
+
+var is_difficulty_expanded: bool = true
+var is_engine_assist_expanded: bool = false
+var difficulty_chevron: ChevronIndicator = null
+var engine_assist_chevron: ChevronIndicator = null
+var _engine_bootstrap: EngineBootstrap = null
+var _engine_setup_modal: ColorRect = null
+var _engine_setup_status: Label = null
+var _engine_setup_bar: ProgressBar = null
+var _engine_setup_btn_retry: Button = null
+var _engine_setup_btn_skip: Button = null
+var _engine_setup_tween: Tween = null
 
 var card_active_style: StyleBox
 var card_active_hover_style: StyleBox
@@ -185,6 +215,12 @@ func _ready() -> void:
 	# Trainer Modal Handlers
 	if btn_close_trainer:
 		btn_close_trainer.pressed.connect(func(): trainer_modal.visible = false)
+	if btn_tab_openings:
+		btn_tab_openings.pressed.connect(func(): _select_trainer_tab("openings"))
+	if btn_tab_checkmate:
+		btn_tab_checkmate.pressed.connect(func(): _select_trainer_tab("checkmate"))
+	if btn_tab_queen:
+		btn_tab_queen.pressed.connect(func(): _select_trainer_tab("queen_tactics"))
 
 	# Settings Modal Handlers
 	btn_cancel_settings.pressed.connect(func(): settings_modal.visible = false)
@@ -211,7 +247,9 @@ func _ready() -> void:
 	_setup_card_delay()
 	_setup_settings_form()
 	_setup_tactile_card_effects()
+	_setup_collapsible_headers()
 	GameSettings.ai_delay_changed.connect(func(_m, _c): _sync_delay_ui())
+	_check_engine_bootstrap()
 
 func _select_mode(mode: String) -> void:
 	selected_mode = mode
@@ -245,9 +283,9 @@ func _select_mode(mode: String) -> void:
 		opponent_badge.text = "Local 2P"
 		btn_play.text = "Play"
 	elif mode == "trainer":
-		opponent_name.text = "Opening Trainer"
-		opponent_badge.text = "SRS Reps"
-		btn_play.text = "Train Openings"
+		opponent_name.text = "Training Hub"
+		opponent_badge.text = "Openings & Tactics"
+		btn_play.text = "Open Training Hub"
 	elif mode == "painter":
 		opponent_name.text = "Custom Position Setup"
 		opponent_badge.text = "Sandbox"
@@ -275,6 +313,98 @@ func _setup_tactile_card_effects() -> void:
 			hbox.offset_bottom = initial_bottom
 		card.button_up.connect(reset_pos)
 		card.mouse_exited.connect(reset_pos)
+
+func _setup_collapsible_headers() -> void:
+	if difficulty_header:
+		difficulty_header.mouse_filter = Control.MOUSE_FILTER_STOP
+		difficulty_header.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		difficulty_header.tooltip_text = "Click to toggle Bot Difficulty"
+		for child in difficulty_header.get_children():
+			if child is Control:
+				(child as Control).mouse_filter = Control.MOUSE_FILTER_IGNORE
+		
+		difficulty_chevron = ChevronIndicator.new()
+		difficulty_chevron.is_expanded = is_difficulty_expanded
+		difficulty_header.add_child(difficulty_chevron)
+		
+		difficulty_header.gui_input.connect(func(event: InputEvent):
+			if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				toggle_difficulty()
+		)
+		difficulty_header.mouse_entered.connect(func():
+			if difficulty_chevron:
+				difficulty_chevron.chevron_color = Color(1.0, 1.0, 1.0, 1.0)
+		)
+		difficulty_header.mouse_exited.connect(func():
+			if difficulty_chevron:
+				difficulty_chevron.chevron_color = Color(0.75, 0.75, 0.75, 0.85)
+		)
+
+	if engine_assist_header:
+		engine_assist_header.mouse_filter = Control.MOUSE_FILTER_STOP
+		engine_assist_header.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		engine_assist_header.tooltip_text = "Click to toggle Engine Assist"
+		for child in engine_assist_header.get_children():
+			if child is Control:
+				(child as Control).mouse_filter = Control.MOUSE_FILTER_IGNORE
+		
+		engine_assist_chevron = ChevronIndicator.new()
+		engine_assist_chevron.is_expanded = is_engine_assist_expanded
+		engine_assist_header.add_child(engine_assist_chevron)
+		
+		engine_assist_header.gui_input.connect(func(event: InputEvent):
+			if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				toggle_engine_assist()
+		)
+		engine_assist_header.mouse_entered.connect(func():
+			if engine_assist_chevron:
+				engine_assist_chevron.chevron_color = Color(1.0, 1.0, 1.0, 1.0)
+		)
+		engine_assist_header.mouse_exited.connect(func():
+			if engine_assist_chevron:
+				engine_assist_chevron.chevron_color = Color(0.75, 0.75, 0.75, 0.85)
+		)
+
+	set_difficulty_expanded(true)
+	set_engine_assist_expanded(false)
+
+func set_difficulty_expanded(expanded: bool) -> void:
+	is_difficulty_expanded = expanded
+	if elo_slider:
+		elo_slider.visible = expanded
+	if preset_row:
+		preset_row.visible = expanded
+	if difficulty_separator:
+		difficulty_separator.visible = expanded
+	if delay_row:
+		delay_row.visible = expanded
+	if difficulty_chevron:
+		difficulty_chevron.is_expanded = expanded
+
+func set_engine_assist_expanded(expanded: bool) -> void:
+	is_engine_assist_expanded = expanded
+	if player_arrows_row:
+		player_arrows_row.visible = expanded
+	if opponent_arrows_row:
+		opponent_arrows_row.visible = expanded
+	if depth_row:
+		depth_row.visible = expanded
+	if engine_assist_chevron:
+		engine_assist_chevron.is_expanded = expanded
+
+func toggle_difficulty() -> void:
+	set_difficulty_expanded(!is_difficulty_expanded)
+	_play_header_click_sfx()
+
+func toggle_engine_assist() -> void:
+	set_engine_assist_expanded(!is_engine_assist_expanded)
+	_play_header_click_sfx()
+
+func _play_header_click_sfx() -> void:
+	var audio = get_tree().root.get_node_or_null("AudioService")
+	if audio:
+		audio.play_button_down()
+		audio.play_button_up()
 
 func _set_player_side(side: String) -> void:
 	# Simpan preferensi role (Player vs Opponent) sebelum sisi berganti
@@ -495,6 +625,11 @@ func _sync_settings_form_dropdowns() -> void:
 			if str(opt_board_theme.get_item_metadata(i)) == GameSettings.board_theme:
 				opt_board_theme.select(i)
 				break
+	if opt_button_sound:
+		for i in range(opt_button_sound.item_count):
+			if str(opt_button_sound.get_item_metadata(i)) == GameSettings.button_sound_theme:
+				opt_button_sound.select(i)
+				break
 
 func _sync_settings_form_arrows() -> void:
 	if not chk_white_engine or not chk_black_engine:
@@ -556,6 +691,26 @@ func _setup_settings_form() -> void:
 	chk_sound.button_pressed = GameSettings.sound_enabled
 	_setup_settings_delay()
 
+	if opt_button_sound:
+		opt_button_sound.clear()
+		var button_sounds = [
+			{"id": "mechanical", "name": "Mechanical"},
+			{"id": "modern", "name": "Modern"},
+			{"id": "soft", "name": "Soft Tick"},
+			{"id": "mouse", "name": "Classic Mouse"},
+			{"id": "off", "name": "Muted"}
+		]
+		var sel_btn_sound = 0
+		for i in range(button_sounds.size()):
+			var bs = button_sounds[i]
+			opt_button_sound.add_item(bs["name"], i)
+			opt_button_sound.set_item_metadata(i, bs["id"])
+			if bs["id"] == GameSettings.button_sound_theme:
+				sel_btn_sound = i
+		opt_button_sound.select(sel_btn_sound)
+		if not opt_button_sound.item_selected.is_connected(_on_opt_button_sound_selected):
+			opt_button_sound.item_selected.connect(_on_opt_button_sound_selected)
+
 	# Live preview saat dropdown berubah
 	if not opt_piece_set.item_selected.is_connected(_on_opt_piece_set_selected):
 		opt_piece_set.item_selected.connect(_on_opt_piece_set_selected)
@@ -574,6 +729,16 @@ func _on_opt_board_theme_selected(idx: int) -> void:
 	if meta != null and str(meta) != "":
 		GameSettings.set_board_theme(str(meta))
 		if banner_board: banner_board.queue_redraw()
+
+func _on_opt_button_sound_selected(idx: int) -> void:
+	if not opt_button_sound:
+		return
+	var meta = opt_button_sound.get_item_metadata(idx)
+	if meta != null and str(meta) != "":
+		GameSettings.set_button_sound_theme(str(meta))
+		var audio = get_tree().root.get_node_or_null("AudioService")
+		if audio and audio.has_method("preview_button_sound"):
+			audio.preview_button_sound(str(meta))
 
 func _format_delay_label(val: float) -> String:
 	if is_zero_approx(val):
@@ -641,6 +806,10 @@ func _on_save_settings_pressed() -> void:
 		var t_id = opt_board_theme.get_item_metadata(opt_board_theme.selected)
 		if t_id != null and str(t_id) != "":
 			GameSettings.set_board_theme(str(t_id))
+	if opt_button_sound and opt_button_sound.selected >= 0:
+		var b_id = opt_button_sound.get_item_metadata(opt_button_sound.selected)
+		if b_id != null and str(b_id) != "":
+			GameSettings.set_button_sound_theme(str(b_id))
 	if settings_delay_slider:
 		var s_val = settings_delay_slider.value
 		if is_zero_approx(s_val):
@@ -723,15 +892,48 @@ func _open_trainer_menu() -> void:
 	if trainer_modal == null:
 		get_tree().change_scene_to_file(OPENING_TRAINER_PATH)
 		return
+	_update_trainer_tab_buttons()
 	_populate_trainer_cards()
 	trainer_modal.visible = true
+
+func _update_trainer_tab_buttons() -> void:
+	if btn_tab_openings:
+		TactileStyles.apply_tactile_button(btn_tab_openings, false, current_trainer_tab == "openings", false)
+	if btn_tab_checkmate:
+		TactileStyles.apply_tactile_button(btn_tab_checkmate, false, current_trainer_tab == "checkmate", false)
+	if btn_tab_queen:
+		TactileStyles.apply_tactile_button(btn_tab_queen, false, current_trainer_tab == "queen_tactics", false)
+	
+	if trainer_modal_title:
+		match current_trainer_tab:
+			"openings":
+				trainer_modal_title.text = "Pilih Latihan Pembukaan"
+			"checkmate":
+				trainer_modal_title.text = "Checkmate Trainer"
+			"queen_tactics":
+				trainer_modal_title.text = "Queen Tactics & Captures"
+
+func _select_trainer_tab(tab: String) -> void:
+	current_trainer_tab = tab
+	_update_trainer_tab_buttons()
+	_populate_trainer_cards()
 
 func _populate_trainer_cards() -> void:
 	if trainer_cards_container == null:
 		return
 	for child in trainer_cards_container.get_children():
+		trainer_cards_container.remove_child(child)
 		child.queue_free()
 
+	match current_trainer_tab:
+		"openings":
+			_populate_opening_cards()
+		"checkmate":
+			_populate_tactics_cards("checkmate_patterns")
+		"queen_tactics":
+			_populate_tactics_cards("queen_captures")
+
+func _populate_opening_cards() -> void:
 	var reps: Array[Dictionary] = RepertoireService.get_available_repertoires()
 	for meta in reps:
 		var rep_id: String = meta.get("id", "")
@@ -832,6 +1034,119 @@ func _populate_trainer_cards() -> void:
 		btn.pressed.connect(func(): _start_training_repertoire(rep_id))
 		trainer_cards_container.add_child(btn)
 
+func _populate_tactics_cards(set_id: String) -> void:
+	var set_data: Dictionary = TacticsService.load_set(set_id)
+	var puzzles: Array = set_data.get("puzzles", [])
+	
+	for i in range(puzzles.size()):
+		var p: Dictionary = puzzles[i] if puzzles[i] is Dictionary else {}
+		var pid: String = p.get("id", "")
+		var p_title: String = p.get("title", "Puzzle")
+		var p_side: String = p.get("side", "white")
+		var p_theme: String = p.get("theme", "").replace("_", " ").capitalize()
+		var p_blurb: String = p.get("blurb", "")
+		var p_diff: int = int(p.get("difficulty", 1))
+
+		var prog = TacticsService.get_puzzle_progress(pid)
+		var stars = int(prog.get("stars", 0))
+
+		var btn: Button = Button.new()
+		btn.custom_minimum_size = Vector2(0, 108)
+		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		TactileStyles.apply_tactile_button(btn, false, false, false)
+
+		var margin: MarginContainer = MarginContainer.new()
+		margin.set_anchors_preset(Control.PRESET_FULL_RECT)
+		margin.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		margin.add_theme_constant_override("margin_left", 16)
+		margin.add_theme_constant_override("margin_top", 10)
+		margin.add_theme_constant_override("margin_right", 16)
+		margin.add_theme_constant_override("margin_bottom", 12)
+		btn.add_child(margin)
+
+		var card_vbox: VBoxContainer = VBoxContainer.new()
+		card_vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		card_vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		card_vbox.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		card_vbox.add_theme_constant_override("separation", 6)
+		margin.add_child(card_vbox)
+
+		# Row 1: Title + Side/Theme Badge
+		var top_row: HBoxContainer = HBoxContainer.new()
+		top_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		top_row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		card_vbox.add_child(top_row)
+
+		var title_lbl: Label = Label.new()
+		title_lbl.theme_type_variation = &"LabelBold"
+		title_lbl.text = "%d. %s" % [i + 1, p_title]
+		title_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		title_lbl.add_theme_font_size_override("font_size", 19)
+		title_lbl.add_theme_color_override("font_color", Color(0.96, 0.96, 0.96, 1.0))
+		top_row.add_child(title_lbl)
+
+		var meta_chip: PanelContainer = PanelContainer.new()
+		meta_chip.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		var chip_sb: StyleBoxFlat = StyleBoxFlat.new()
+		chip_sb.set_corner_radius_all(6)
+		chip_sb.content_margin_left = 8
+		chip_sb.content_margin_right = 8
+		chip_sb.content_margin_top = 2
+		chip_sb.content_margin_bottom = 2
+		var is_white_side: bool = (p_side.to_lower() == "white")
+		chip_sb.bg_color = Color(0.20, 0.25, 0.18, 0.95) if is_white_side else Color(0.25, 0.20, 0.16, 0.95)
+		chip_sb.border_width_left = 1
+		chip_sb.border_width_top = 1
+		chip_sb.border_width_right = 1
+		chip_sb.border_width_bottom = 1
+		chip_sb.border_color = Color(0.506, 0.714, 0.298, 0.7) if is_white_side else Color(0.9, 0.65, 0.35, 0.7)
+		meta_chip.add_theme_stylebox_override("panel", chip_sb)
+
+		var meta_lbl: Label = Label.new()
+		meta_lbl.theme_type_variation = &"LabelBold"
+		meta_lbl.add_theme_font_size_override("font_size", 13)
+		var side_str: String = "White" if is_white_side else "Black"
+		meta_lbl.text = "%s  •  %s" % [side_str, p_theme]
+		meta_lbl.add_theme_color_override("font_color", Color(0.85, 0.95, 0.8, 1.0) if is_white_side else Color(1.0, 0.88, 0.7, 1.0))
+		meta_chip.add_child(meta_lbl)
+		top_row.add_child(meta_chip)
+
+		# Row 2: Blurb deskripsi
+		var desc_lbl: Label = Label.new()
+		desc_lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		desc_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		desc_lbl.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		desc_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		desc_lbl.text = p_blurb
+		desc_lbl.add_theme_font_size_override("font_size", 14)
+		desc_lbl.add_theme_color_override("font_color", Color(0.78, 0.76, 0.74, 1.0))
+		card_vbox.add_child(desc_lbl)
+
+		# Row 3: Info difficulty & status
+		var stats_row: HBoxContainer = HBoxContainer.new()
+		stats_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		stats_row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		stats_row.add_theme_constant_override("separation", 14)
+		card_vbox.add_child(stats_row)
+
+		var stats_lbl: Label = Label.new()
+		stats_lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		stats_lbl.add_theme_font_size_override("font_size", 13)
+		var stars_text = "New"
+		if stars == 3:
+			stars_text = "[***] Solved"
+		elif stars == 2:
+			stars_text = "[** ] Solved"
+		elif stars == 1:
+			stars_text = "[*  ] Solved"
+		stats_lbl.text = "Difficulty %d  •  Status: %s" % [p_diff, stars_text]
+		stats_lbl.add_theme_color_override("font_color", Color(0.60, 0.65, 0.68, 1.0))
+		stats_row.add_child(stats_lbl)
+
+		btn.pressed.connect(func(): _start_training_tactics(set_id, pid))
+		trainer_cards_container.add_child(btn)
+
 func _start_training_repertoire(rep_id: String) -> void:
 	if trainer_modal:
 		trainer_modal.visible = false
@@ -839,6 +1154,18 @@ func _start_training_repertoire(rep_id: String) -> void:
 	if gs and "selected_repertoire_id" in gs:
 		gs.selected_repertoire_id = rep_id
 	get_tree().change_scene_to_file(OPENING_TRAINER_PATH)
+
+func _start_training_tactics(set_id: String, puzzle_id: String = "") -> void:
+	if trainer_modal:
+		trainer_modal.visible = false
+	if is_inside_tree() and get_tree() and get_tree().root:
+		var gs = get_tree().root.get_node_or_null("GameSettings")
+		if gs:
+			if "selected_tactics_set_id" in gs:
+				gs.selected_tactics_set_id = set_id
+			if "selected_tactics_puzzle_id" in gs:
+				gs.selected_tactics_puzzle_id = puzzle_id
+	get_tree().change_scene_to_file(TACTICS_TRAINER_PATH)
 
 func check_for_updates() -> void:
 	if not status_label:
@@ -935,13 +1262,144 @@ func _get_git_short_hash() -> String:
 	return "main"
 
 func _get_git_executable() -> String:
-	var standard_paths = [
+	var standard_paths: Array[String] = [
 		"git",
 		"C:/Program Files/Git/bin/git.exe",
 		"C:/Program Files/Git/cmd/git.exe",
-		"C:/Users/Reynov/AppData/Local/Programs/Git/cmd/git.exe"
 	]
+	var local_app_data := OS.get_environment("LOCALAPPDATA")
+	if not local_app_data.is_empty():
+		standard_paths.append(local_app_data.path_join("Programs/Git/cmd/git.exe"))
 	for p in standard_paths:
 		if p == "git" or FileAccess.file_exists(p):
 			return p
 	return "git"
+
+func _check_engine_bootstrap() -> void:
+	if DisplayServer.get_name() == "headless":
+		return
+	if EngineBootstrap.is_stockfish_ready():
+		return
+	_show_engine_setup_modal()
+
+func _show_engine_setup_modal() -> void:
+	if _engine_setup_modal != null:
+		_engine_setup_modal.visible = true
+		return
+
+	_engine_setup_modal = ColorRect.new()
+	_engine_setup_modal.name = "EngineSetupModal"
+	_engine_setup_modal.color = Color(0.05, 0.06, 0.08, 0.82)
+	_engine_setup_modal.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_engine_setup_modal.mouse_filter = Control.MOUSE_FILTER_STOP
+	add_child(_engine_setup_modal)
+
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_engine_setup_modal.add_child(center)
+
+	var card := PanelContainer.new()
+	card.custom_minimum_size = Vector2(460, 210)
+	var card_style := StyleBoxFlat.new()
+	card_style.bg_color = Color(0.145, 0.141, 0.133, 1.0)
+	card_style.border_color = Color(0.32, 0.31, 0.29, 1.0)
+	card_style.set_border_width_all(2)
+	card_style.set_corner_radius_all(12)
+	card_style.set_content_margin_all(24)
+	card.add_theme_stylebox_override("panel", card_style)
+	center.add_child(card)
+
+	var vbox := VBoxContainer.new()
+	vbox.add_theme_constant_override("separation", 14)
+	card.add_child(vbox)
+
+	var title := Label.new()
+	title.text = "First-Time Engine Setup"
+	title.add_theme_font_size_override("font_size", 20)
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vbox.add_child(title)
+
+	var desc := Label.new()
+	desc.text = "Stockfish 18 engine binary is missing after clone. Downloading automatically so bot moves and engine arrows work."
+	desc.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	desc.add_theme_font_size_override("font_size", 14)
+	desc.add_theme_color_override("font_color", Color(0.78, 0.77, 0.75, 1.0))
+	vbox.add_child(desc)
+
+	_engine_setup_bar = ProgressBar.new()
+	_engine_setup_bar.custom_minimum_size = Vector2(0, 22)
+	_engine_setup_bar.min_value = 0.0
+	_engine_setup_bar.max_value = 100.0
+	_engine_setup_bar.value = 0.0
+	vbox.add_child(_engine_setup_bar)
+
+	_engine_setup_status = Label.new()
+	_engine_setup_status.text = "Preparing download..."
+	_engine_setup_status.add_theme_font_size_override("font_size", 13)
+	_engine_setup_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_engine_setup_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	vbox.add_child(_engine_setup_status)
+
+	var actions := HBoxContainer.new()
+	actions.alignment = BoxContainer.ALIGNMENT_CENTER
+	actions.add_theme_constant_override("separation", 12)
+	vbox.add_child(actions)
+
+	_engine_setup_btn_retry = Button.new()
+	_engine_setup_btn_retry.text = "Retry Download"
+	_engine_setup_btn_retry.custom_minimum_size = Vector2(150, 38)
+	_engine_setup_btn_retry.visible = false
+	_engine_setup_btn_retry.pressed.connect(_on_engine_setup_retry)
+	actions.add_child(_engine_setup_btn_retry)
+
+	_engine_setup_btn_skip = Button.new()
+	_engine_setup_btn_skip.text = "Skip"
+	_engine_setup_btn_skip.custom_minimum_size = Vector2(110, 38)
+	_engine_setup_btn_skip.visible = false
+	_engine_setup_btn_skip.pressed.connect(func():
+		if _engine_setup_modal != null:
+			_engine_setup_modal.visible = false
+	)
+	actions.add_child(_engine_setup_btn_skip)
+
+	_engine_bootstrap = EngineBootstrap.new()
+	add_child(_engine_bootstrap)
+	_engine_bootstrap.download_progress.connect(_on_engine_setup_progress)
+	_engine_bootstrap.download_completed.connect(_on_engine_setup_completed)
+	_engine_bootstrap.start_stockfish_download()
+
+func _on_engine_setup_retry() -> void:
+	if _engine_setup_btn_retry:
+		_engine_setup_btn_retry.visible = false
+	if _engine_setup_btn_skip:
+		_engine_setup_btn_skip.visible = false
+	if _engine_setup_bar:
+		_engine_setup_bar.value = 0.0
+	if _engine_bootstrap:
+		_engine_bootstrap.start_stockfish_download()
+
+func _on_engine_setup_progress(_downloaded: int, _total: int, percent: float, status_text: String) -> void:
+	if _engine_setup_status:
+		_engine_setup_status.text = status_text
+	if _engine_setup_bar:
+		if _engine_setup_tween != null and _engine_setup_tween.is_valid():
+			_engine_setup_tween.kill()
+		_engine_setup_tween = create_tween()
+		_engine_setup_tween.tween_property(_engine_setup_bar, "value", percent, 0.14)
+
+func _on_engine_setup_completed(success: bool, message: String) -> void:
+	if _engine_setup_status:
+		_engine_setup_status.text = message
+	if success:
+		if _engine_setup_bar:
+			_engine_setup_bar.value = 100.0
+		var tree := get_tree()
+		if tree != null:
+			await tree.create_timer(0.8).timeout
+		if _engine_setup_modal != null:
+			_engine_setup_modal.visible = false
+	else:
+		if _engine_setup_btn_retry:
+			_engine_setup_btn_retry.visible = true
+		if _engine_setup_btn_skip:
+			_engine_setup_btn_skip.visible = true

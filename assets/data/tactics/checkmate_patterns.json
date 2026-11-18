@@ -1,0 +1,381 @@
+{
+  "id": "checkmate_patterns",
+  "title": "Checkmate Patterns",
+  "description": "Koleksi pola skakmat esensial dari Mate in 1 hingga kombinasi klasik pengorbanan perwira.",
+  "category": "checkmate",
+  "total_puzzles": 26,
+  "puzzles": [
+    {
+      "id": "cm_back_rank_w01",
+      "title": "Back Rank Mate",
+      "category": "checkmate",
+      "theme": "back_rank",
+      "side": "white",
+      "fen": "6k1/5ppp/8/8/8/8/5PPP/R5K1 w - - 0 1",
+      "moves": [
+        "a1a8"
+      ],
+      "difficulty": 1,
+      "blurb": "King Black terkunci oleh susunan pawn sendiri di f7, g7, dan h7. Luncurkan Rook ke a8 untuk mengeksekusi Back Rank Mate.",
+      "tip": "Selalu periksa apakah King memiliki petak pelarian (luft) sebelum meninggalkan baris belakang tanpa penjagaan."
+    },
+    {
+      "id": "cm_back_rank_b01",
+      "title": "Back Rank Mate",
+      "category": "checkmate",
+      "theme": "back_rank",
+      "side": "black",
+      "fen": "6k1/5ppp/8/8/8/8/4rPPP/6K1 b - - 0 1",
+      "moves": [
+        "e2e1"
+      ],
+      "difficulty": 1,
+      "blurb": "White tidak membuat celah pelarian untuk King di baris pertama. Manfaatkan open e-file dengan Rook Black untuk melancarkan skakmat di e1.",
+      "tip": "Gunakan open file untuk menyusupkan Rook atau Queen langsung ke baris pertahanan terdalam lawan."
+    },
+    {
+      "id": "cm_back_rank_w02",
+      "title": "Back Rank Deflection",
+      "category": "checkmate",
+      "theme": "back_rank",
+      "side": "white",
+      "fen": "3r2k1/5ppp/8/8/8/8/4QPPP/4R1K1 w - - 0 1",
+      "moves": [
+        "e2e8",
+        "d8e8",
+        "e1e8"
+      ],
+      "difficulty": 2,
+      "blurb": "Kombinasi defleksi paksaan: korbankan Queen di e8 untuk memancing Rook Black keluar dari pertahanan, lalu tuntaskan dengan Rook e1.",
+      "tip": "Defleksi (deflection) memaksa piece kunci lawan meninggalkan tugas bertahan di petak kritis."
+    },
+    {
+      "id": "cm_back_rank_b02",
+      "title": "Back Rank Deflection",
+      "category": "checkmate",
+      "theme": "back_rank",
+      "side": "black",
+      "fen": "4r1k1/4qppp/8/8/8/8/5PPP/3R2K1 b - - 0 1",
+      "moves": [
+        "e7e1",
+        "d1e1",
+        "e8e1"
+      ],
+      "difficulty": 2,
+      "blurb": "Korbankan Queen di e1 dengan skak paksa. Setelah Rook White memakan di e1, Rook Black menyusul untuk eksekusi Back Rank Mate.",
+      "tip": "Jangan ragu mengorbankan piece bernilai tinggi jika kelanjutannya adalah skakmat paksa yang tak terhindarkan."
+    },
+    {
+      "id": "cm_kiss_of_death_w01",
+      "title": "Support Mate: Kiss of Death",
+      "category": "checkmate",
+      "theme": "kiss_of_death",
+      "side": "white",
+      "fen": "r4rk1/pp1b1p1p/7Q/8/8/2B5/PPP2PPP/4RRK1 w - - 0 1",
+      "moves": [
+        "h6g7"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop di c3 mengunci diagonal panjang ke g7. Daratkan Queen langsung di depan King Black (Qg7#) dengan perlindungan Bishop.",
+      "tip": "Queen yang didukung piece lain di depan King lawan sering kali mematikan karena King tidak dapat memakannya."
+    },
+    {
+      "id": "cm_kiss_of_death_b01",
+      "title": "Support Mate: Kiss of Death",
+      "category": "checkmate",
+      "theme": "kiss_of_death",
+      "side": "black",
+      "fen": "4rrk1/ppp2ppp/2b5/8/8/7q/PP1B1P1P/R4RK1 b - - 0 1",
+      "moves": [
+        "h3g2"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop Black di c6 memotong diagonal ke g2. Hantam petak g2 dengan Queen Black untuk menghasilkan skakmat tak tertangkis.",
+      "tip": "Baterai diagonal Bishop dan Queen adalah salah satu senjata penyerangan paling efektif terhadap posisi castling."
+    },
+    {
+      "id": "cm_kiss_of_death_w02",
+      "title": "Pawn Supported Mate",
+      "category": "checkmate",
+      "theme": "kiss_of_death",
+      "side": "white",
+      "fen": "5rk1/7p/5P1Q/8/8/8/8/6K1 w - - 0 1",
+      "moves": [
+        "h6g7"
+      ],
+      "difficulty": 1,
+      "blurb": "Pawn maju di f6 bertindak sebagai outpost pelindung. Tempatkan Queen di g7 untuk mengunci seluruh petak pelarian King Black.",
+      "tip": "Pawn di rank ke-6 yang dekat dengan castled King lawan adalah ancaman skakmat laten yang sangat berbahaya."
+    },
+    {
+      "id": "cm_kiss_of_death_b02",
+      "title": "Pawn Supported Mate",
+      "category": "checkmate",
+      "theme": "kiss_of_death",
+      "side": "black",
+      "fen": "6k1/8/8/8/8/5p1q/7P/5R1K b - - 0 1",
+      "moves": [
+        "h3g2"
+      ],
+      "difficulty": 1,
+      "blurb": "Pawn f3 Black memberi perlindungan kokoh ke petak g2. Masukkan Queen ke g2 untuk mematikan King White di sudut.",
+      "tip": "Kombinasi Queen dan advanced pawn sering kali cukup untuk menyudahi perlawanan tanpa perlu bantuan perwira lain."
+    },
+    {
+      "id": "cm_smothered_w01",
+      "title": "Smothered Mate",
+      "category": "checkmate",
+      "theme": "smothered",
+      "side": "white",
+      "fen": "6rk/6pp/7N/8/8/8/8/6K1 w - - 0 1",
+      "moves": [
+        "h6f7"
+      ],
+      "difficulty": 1,
+      "blurb": "King Black terjepit oleh Rook g8 dan pawns g7, h7 miliknya sendiri. Lompatkan Knight ke f7 untuk Smothered Mate.",
+      "tip": "Smothered mate terjadi saat King terkurung oleh bidak kawan sendiri sehingga lompatan Knight menjadi mematikan."
+    },
+    {
+      "id": "cm_smothered_b01",
+      "title": "Smothered Mate",
+      "category": "checkmate",
+      "theme": "smothered",
+      "side": "black",
+      "fen": "6k1/8/8/8/8/7n/6PP/6RK b - - 0 1",
+      "moves": [
+        "h3f2"
+      ],
+      "difficulty": 1,
+      "blurb": "King White terjebak di h1 oleh Rook g1 dan pawn g2, h2. Luncurkan Knight Black ke f2 untuk eksekusi Smothered Mate seketika.",
+      "tip": "Knight adalah satu-satunya piece yang dapat melompati rintangan untuk menyerang King yang terkepung rapat."
+    },
+    {
+      "id": "cm_smothered_w02",
+      "title": "Classic Philidor Sacrifice",
+      "category": "checkmate",
+      "theme": "smothered",
+      "side": "white",
+      "fen": "5r1k/pp4pp/7N/8/2Q5/8/PP3PPP/6K1 w - - 0 1",
+      "moves": [
+        "c4g8",
+        "f8g8",
+        "h6f7"
+      ],
+      "difficulty": 2,
+      "blurb": "Pola legendaris Philidor: korbankan Queen di g8 untuk memaksa Rook Black memakan dan mengunci King, lalu eksekusi dengan Nf7#.",
+      "tip": "Umpan pengorbanan Queen memaksa lawan menutup petak pelarian King mereka sendiri."
+    },
+    {
+      "id": "cm_smothered_b02",
+      "title": "Classic Philidor Sacrifice",
+      "category": "checkmate",
+      "theme": "smothered",
+      "side": "black",
+      "fen": "6k1/pp3ppp/8/2q5/8/7n/PP4PP/5R1K b - - 0 1",
+      "moves": [
+        "c5g1",
+        "f1g1",
+        "h3f2"
+      ],
+      "difficulty": 2,
+      "blurb": "Korbankan Queen Black di g1 dengan skak paksa. Setelah Rook White memakan di g1, lompatkan Knight ke f2 untuk Smothered Mate.",
+      "tip": "Kombinasi Queen sacrifice dan Knight smothered mate adalah salah satu pola paling terkenal dan memuaskan dalam catur."
+    },
+    {
+      "id": "cm_arabian_w01",
+      "title": "Arabian Mate",
+      "category": "checkmate",
+      "theme": "arabian",
+      "side": "white",
+      "fen": "7k/3R4/5N2/8/8/8/8/6K1 w - - 0 1",
+      "moves": [
+        "d7h7"
+      ],
+      "difficulty": 1,
+      "blurb": "Knight di f6 mengontrol petak pelarian g8 dan menjaga petak h7. Geser Rook ke h7 untuk menuntaskan Arabian Mate di sudut board.",
+      "tip": "Dalam Arabian Mate, Knight dan Rook bekerja sama sempurna: Knight memblokir pelarian sementara Rook memberi skak di sudut."
+    },
+    {
+      "id": "cm_arabian_b01",
+      "title": "Arabian Mate",
+      "category": "checkmate",
+      "theme": "arabian",
+      "side": "black",
+      "fen": "6k1/8/8/8/8/5n2/3r4/7K b - - 0 1",
+      "moves": [
+        "d2h2"
+      ],
+      "difficulty": 1,
+      "blurb": "Knight Black di f3 mengunci g1 dan melindungi petak h2. Gerakkan Rook ke h2 untuk menyelesaikan Arabian Mate terhadap White King.",
+      "tip": "Pola Arabian Mate efektif karena piece bertahan tidak dapat menyela di antara King dan Rook di pinggir petak."
+    },
+    {
+      "id": "cm_anastasia_w01",
+      "title": "Anastasia's Mate",
+      "category": "checkmate",
+      "theme": "anastasia",
+      "side": "white",
+      "fen": "7k/4N1p1/8/R7/8/8/8/6K1 w - - 0 1",
+      "moves": [
+        "a5h5"
+      ],
+      "difficulty": 1,
+      "blurb": "Knight di e7 mengontrol petak pelarian g8 dan g6, sementara pawn g7 membatasi King. Ayunkan Rook ke h5 untuk Anastasia's Mate.",
+      "tip": "Kenali formasi Anastasia: Knight di e7 mengunci dua petak sayap saat open h-file dieksploitasi oleh Rook."
+    },
+    {
+      "id": "cm_anastasia_b01",
+      "title": "Anastasia's Mate",
+      "category": "checkmate",
+      "theme": "anastasia",
+      "side": "black",
+      "fen": "6k1/8/8/8/r7/8/4n1P1/7K b - - 0 1",
+      "moves": [
+        "a4h4"
+      ],
+      "difficulty": 1,
+      "blurb": "Knight Black di e2 mengunci petak g1 dan g3 White. Bawa Rook Black ke h4 untuk melancarkan skakmat telak di open h-file.",
+      "tip": "Manfaatkan open edge-file bersama Knight di petak sentral untuk menjebak King di pinggir board."
+    },
+    {
+      "id": "cm_boden_w01",
+      "title": "Boden's Mate",
+      "category": "checkmate",
+      "theme": "boden",
+      "side": "white",
+      "fen": "2kr4/3p4/2p5/8/5B2/3B4/8/4K3 w - - 0 1",
+      "moves": [
+        "d3a6"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop f4 memblokir c7, sementara d7 dan d8 tertutup bidak Black sendiri. Layangkan Bishop d3 ke a6 untuk menyilang diagonal (Boden's Mate).",
+      "tip": "Sepasang Bishop yang menyilang tajam sangat mematikan terhadap King yang terhimpit di queenside."
+    },
+    {
+      "id": "cm_boden_b01",
+      "title": "Boden's Mate",
+      "category": "checkmate",
+      "theme": "boden",
+      "side": "black",
+      "fen": "4k3/8/3b4/5b2/8/2P5/3P4/2KR4 b - - 0 1",
+      "moves": [
+        "d6a3"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop f5 mengontrol petak c2. Luncurkan Bishop d6 ke a3 untuk mengeksekusi Boden's Mate silang ke arah White King.",
+      "tip": "Boden's mate memanfaatkan rintangan pawn lawan sendiri di c3/d2 yang menghalangi pelarian King mereka."
+    },
+    {
+      "id": "cm_opera_w01",
+      "title": "Opera Mate",
+      "category": "checkmate",
+      "theme": "opera",
+      "side": "white",
+      "fen": "4k3/5ppp/5B2/8/8/8/5PPP/3R2K1 w - - 0 1",
+      "moves": [
+        "d1d8"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop f6 mengontrol petak e7 dan d8 serta melindungi petak serang. Majukan Rook ke d8 untuk Opera Mate klasik ala Paul Morphy.",
+      "tip": "Kombinasi Bishop yang menyilang dan Rook di open central file mengunci King tanpa ruang bernapas."
+    },
+    {
+      "id": "cm_opera_b01",
+      "title": "Opera Mate",
+      "category": "checkmate",
+      "theme": "opera",
+      "side": "black",
+      "fen": "3r2k1/5ppp/8/8/8/5b2/5PPP/4K3 b - - 0 1",
+      "moves": [
+        "d8d1"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop Black di f3 memotong petak e2 dan melindungi d1. Luncurkan Rook Black ke d1 untuk Opera Mate terhadap King White.",
+      "tip": "Bishop yang ditempatkan dominan di f3 atau f6 melumpuhkan kemampuan King untuk kabur ke center."
+    },
+    {
+      "id": "cm_lawnmower_w01",
+      "title": "Lawnmower Mate",
+      "category": "checkmate",
+      "theme": "lawnmower",
+      "side": "white",
+      "fen": "6k1/1R6/8/8/8/8/8/R5K1 w - - 0 1",
+      "moves": [
+        "a1a8"
+      ],
+      "difficulty": 1,
+      "blurb": "Rook di b7 mengunci baris ke-7 sehingga King Black tidak dapat maju. Dorong Rook a1 ke a8 untuk skakmat bersih di baris ke-8.",
+      "tip": "Pola Lawnmower bekerja dengan dua Rook saling bergantian menyapu baris demi baris hingga King terdesak ke tepi."
+    },
+    {
+      "id": "cm_lawnmower_b01",
+      "title": "Lawnmower Mate",
+      "category": "checkmate",
+      "theme": "lawnmower",
+      "side": "black",
+      "fen": "r3k3/8/8/8/8/8/1r6/6K1 b - - 0 1",
+      "moves": [
+        "a8a1"
+      ],
+      "difficulty": 1,
+      "blurb": "Rook b2 mengunci rank ke-2. Luncurkan Rook a8 ke baris pertama untuk menuntaskan Lawnmower Mate terhadap King White.",
+      "tip": "Jaga agar satu Rook selalu mengontrol baris pemisah sebelum Rook kedua melancarkan skak penentu."
+    },
+    {
+      "id": "cm_scholar_w01",
+      "title": "Scholar's Mate Attack",
+      "category": "checkmate",
+      "theme": "scholar",
+      "side": "white",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 0 1",
+      "moves": [
+        "h5f7"
+      ],
+      "difficulty": 1,
+      "blurb": "Bishop di c4 dan Queen di h5 membentuk baterai serangan ganda ke petak terlemah f7. Makan pawn f7 dengan Queen untuk skakmat cepat.",
+      "tip": "Petak f7 (dan f2 bagi White) hanya dijaga oleh King di awal permainan dan rentan menjadi target kilat."
+    },
+    {
+      "id": "cm_fool_b01",
+      "title": "Fool's Mate Motif",
+      "category": "checkmate",
+      "theme": "fool",
+      "side": "black",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/6P1/5P2/PPPPP2P/RNBQKBNR b KQkq - 0 1",
+      "moves": [
+        "d8h4"
+      ],
+      "difficulty": 1,
+      "blurb": "White membuka diagonal King secara ceroboh dengan f3 dan g4. Lesatkan Queen Black ke h4 untuk menyelesaikan Fool's Mate.",
+      "tip": "Jangan memajukan f-pawn di awal permainan tanpa perhitungan matang karena membuka diagonal e1-h4 yang fatal."
+    },
+    {
+      "id": "cm_hook_w01",
+      "title": "Hook Mate",
+      "category": "checkmate",
+      "theme": "hook",
+      "side": "white",
+      "fen": "5r1k/3R4/5N1p/6P1/8/8/8/6K1 w - - 0 1",
+      "moves": [
+        "d7h7"
+      ],
+      "difficulty": 1,
+      "blurb": "Knight di f6 melindungi h7 dan memotong petak g8, sementara pawn g5 memperkuat posisi Knight. Gerakkan Rook ke h7 untuk Hook Mate.",
+      "tip": "Struktur Hook Mate menghubungkan Rook, Knight, dan Pawn menjadi rantai pengaman yang kokoh di sekitar King lawan."
+    },
+    {
+      "id": "cm_hook_b01",
+      "title": "Hook Mate",
+      "category": "checkmate",
+      "theme": "hook",
+      "side": "black",
+      "fen": "6k1/8/8/8/6p1/5n1P/3r4/5R1K b - - 0 1",
+      "moves": [
+        "d2h2"
+      ],
+      "difficulty": 1,
+      "blurb": "Knight Black di f3 didukung pawn g4 dan mengunci g1. Bawa Rook Black ke h2 untuk mengeksekusi Hook Mate terhadap King White.",
+      "tip": "Knight bertindak sebagai jangkar ('hook') yang menahan Rook agar tidak bisa dimakan oleh King."
+    }
+  ]
+}

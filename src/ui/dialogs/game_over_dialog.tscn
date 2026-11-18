@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_new_game.svg" id="4_newgame"]
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_target.svg" id="5_target"]
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_home.svg" id="6_home"]
+[ext_resource type="Texture2D" uid="uid://c32mgefh4m53p" path="res://assets/ui/icons/icon_palette.svg" id="7_palette"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
 content_margin_left = 28.0
@@ -123,6 +124,13 @@ custom_minimum_size = Vector2(0, 58)
 layout_mode = 2
 text = "Rematch"
 icon = ExtResource("4_newgame")
+alignment = 1
+
+[node name="BtnPainter" type="Button" parent="CenterContainer/CardPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+text = "Edit in Painter"
+icon = ExtResource("7_palette")
 alignment = 1
 
 [node name="BtnReview" type="Button" parent="CenterContainer/CardPanel/VBoxContainer"]

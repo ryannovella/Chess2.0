@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_palette.svg" id="2_palette"]
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_play.svg" id="3_play"]
 [ext_resource type="Texture2D" path="res://assets/ui/icons/icon_people.svg" id="4_people"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/review/mistake.png" id="5_mistake"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel_bg"]
 content_margin_left = 16.0
@@ -53,20 +54,32 @@ grow_vertical = 2
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="BoardSection" type="VBoxContainer" parent="MainLayout"]
+[node name="BoardSection" type="HBoxContainer" parent="MainLayout"]
 layout_mode = 2
 alignment = 1
+theme_override_constants/separation = 4
 
-[node name="BoardViewport" type="Control" parent="MainLayout/BoardSection"]
+[node name="RanksContainer" type="VBoxContainer" parent="MainLayout/BoardSection"]
+custom_minimum_size = Vector2(20, 560)
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="BoardCol" type="VBoxContainer" parent="MainLayout/BoardSection"]
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="BoardViewport" type="Control" parent="MainLayout/BoardSection/BoardCol"]
 custom_minimum_size = Vector2(560, 560)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="RanksContainer" type="VBoxContainer" parent="MainLayout/BoardSection"]
+[node name="FilesContainer" type="HBoxContainer" parent="MainLayout/BoardSection/BoardCol"]
+custom_minimum_size = Vector2(560, 20)
 layout_mode = 2
-
-[node name="FilesContainer" type="HBoxContainer" parent="MainLayout/BoardSection"]
-layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
 
 [node name="ToolsSection" type="PanelContainer" parent="MainLayout"]
 custom_minimum_size = Vector2(0, 0)
@@ -140,6 +153,13 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 18
 text = "Initial Setup"
 
+[node name="BtnSyncGame" type="Button" parent="MainLayout/ToolsSection/VBoxContainer/ToolButtons"]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Sync Game"
+
 [node name="HSeparator2" type="HSeparator" parent="MainLayout/ToolsSection/VBoxContainer"]
 layout_mode = 2
 
@@ -153,6 +173,20 @@ theme_override_font_sizes/font_size = 18
 text = "Turn to Move:"
 
 [node name="OptTurn" type="OptionButton" parent="MainLayout/ToolsSection/VBoxContainer/TurnRow"]
+custom_minimum_size = Vector2(200, 44)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="SideRow" type="HBoxContainer" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainLayout/ToolsSection/VBoxContainer/SideRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Play As (Bottom):"
+
+[node name="OptSide" type="OptionButton" parent="MainLayout/ToolsSection/VBoxContainer/SideRow"]
 custom_minimum_size = Vector2(200, 44)
 layout_mode = 2
 theme_override_font_sizes/font_size = 16
@@ -212,6 +246,28 @@ theme_override_colors/font_color = Color(0.3, 0.75, 1, 1)
 theme_override_font_sizes/font_size = 18
 text = "Play Local 2P"
 icon = ExtResource("4_people")
+
+[node name="StatusBanner" type="PanelContainer" parent="MainLayout/ToolsSection/VBoxContainer"]
+layout_mode = 2
+
+[node name="BannerHBox" type="HBoxContainer" parent="MainLayout/ToolsSection/VBoxContainer/StatusBanner"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BannerIcon" type="TextureRect" parent="MainLayout/ToolsSection/VBoxContainer/StatusBanner/BannerHBox"]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_mistake")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatusLabel" type="Label" parent="MainLayout/ToolsSection/VBoxContainer/StatusBanner/BannerHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.72, 0.45, 1)
+theme_override_font_sizes/font_size = 14
+autowrap_mode = 3
 
 [node name="BtnBack" type="Button" parent="MainLayout/ToolsSection/VBoxContainer"]
 custom_minimum_size = Vector2(0, 44)
