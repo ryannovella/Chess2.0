@@ -147,6 +147,9 @@ func _init() -> void:
 	# 15j. Unit Tests: EngineBootstrap & Fallback Portability
 	test_engine_bootstrap_and_fallback()
 
+	# 15k. Unit Tests: Auto-Updater Godot Metadata Conflict Recovery
+	test_updater_conflict_recovery()
+
 	# 16. Performance Test: Perft Suite (Initial & Kiwipete)
 	test_perft_suite()
 
@@ -2883,6 +2886,32 @@ func test_engine_bootstrap_and_fallback() -> void:
 
 	# Validasi ambang ukuran binary minimal 4096 byte (kontrak UCIClient.start)
 	assert_true(not EngineBootstrap.is_valid_binary(ProjectSettings.globalize_path("res://project.godot"), 4096), "is_valid_binary() menolak file non-binary di bawah 4096 byte")
+
+func test_updater_conflict_recovery() -> void:
+	print("\n[Kategori 15k: Auto-Updater Godot Metadata Conflict Recovery]")
+	var MainMenuScript = load("res://src/ui/menu/main_menu.gd")
+	assert_true(MainMenuScript._is_godot_generated_metadata_file("src/core/repertoire/repertoire_node.gd.uid"), "File .uid diterima sebagai metadata Godot")
+	assert_true(MainMenuScript._is_godot_generated_metadata_file("assets/fonts/ChessSans-Bold.ttf.import"), "File .import diterima sebagai metadata Godot")
+	assert_true(not MainMenuScript._is_godot_generated_metadata_file("src/main.gd"), "File kode sumber .gd ditolak agar tidak pernah dihapus otomatis")
+	assert_true(not MainMenuScript._is_godot_generated_metadata_file("../outside.gd.uid"), "Path traversal ditolak")
+
+	var sample_untracked := """error: The following untracked working tree files would be overwritten by merge:
+	src/core/repertoire/repertoire_node.gd.uid
+	src/ui/trainer/opening_trainer.gd.uid
+Please move or remove them before you merge.
+Updating 3fa7587..43afd01
+Aborting"""
+	var parsed_untracked: Dictionary = MainMenuScript._extract_merge_conflict_files(sample_untracked)
+	assert_equal(parsed_untracked["untracked"].size(), 2, "Ekstraksi 2 file untracked konflik dari output git")
+	assert_equal(parsed_untracked["tracked"].size(), 0, "Tidak ada file tracked pada kasus untracked")
+
+	var sample_tracked := """error: Your local changes to the following files would be overwritten by merge:
+	assets/fonts/ChessSans-Bold.ttf.import
+Please commit your changes or stash them before you merge.
+Aborting"""
+	var parsed_tracked: Dictionary = MainMenuScript._extract_merge_conflict_files(sample_tracked)
+	assert_equal(parsed_tracked["tracked"].size(), 1, "Ekstraksi 1 file tracked konflik dari output git")
+	assert_equal(parsed_tracked["tracked"][0], "assets/fonts/ChessSans-Bold.ttf.import", "Path file tracked konflik cocok persis")
 
 
 

@@ -1230,6 +1230,15 @@ func install_update() -> void:
 	var exit_code = OS.execute(git_exe, ["-C", project_dir, "pull", "--ff-only"], pull_out, true)
 	var pull_str = str(pull_out[0]) if not pull_out.is_empty() else ""
 
+	for _retry in range(2):
+		if exit_code == 0:
+			break
+		if not _resolve_godot_pull_conflicts(git_exe, project_dir, pull_str):
+			break
+		pull_out = []
+		exit_code = OS.execute(git_exe, ["-C", project_dir, "pull", "--ff-only"], pull_out, true)
+		pull_str = str(pull_out[0]) if not pull_out.is_empty() else ""
+
 	if exit_code == 0:
 		status_label.text = "Update installed successfully!\nPlease restart the game to apply changes.\n" + pull_str.strip_edges()
 		_refresh_version_display()
@@ -1242,6 +1251,61 @@ func install_update() -> void:
 
 	if btn_check_update:
 		btn_check_update.disabled = false
+
+static func _is_godot_generated_metadata_file(rel_path: String) -> bool:
+	var clean := rel_path.strip_edges().replace("\\", "/")
+	if clean.is_empty() or clean.begins_with("/") or clean.contains(":") or clean.contains(".."):
+		return false
+	return clean.ends_with(".uid") or clean.ends_with(".import")
+
+static func _extract_merge_conflict_files(pull_output: String) -> Dictionary:
+	var untracked: Array[String] = []
+	var tracked: Array[String] = []
+	var mode := ""
+	for raw_line in pull_output.replace("\r\n", "\n").split("\n"):
+		if raw_line.contains("untracked working tree files would be overwritten by merge:"):
+			mode = "untracked"
+			continue
+		if raw_line.contains("local changes to the following files would be overwritten by merge:"):
+			mode = "tracked"
+			continue
+		if mode.is_empty():
+			continue
+		var trimmed := raw_line.strip_edges()
+		if trimmed.is_empty() or trimmed.begins_with("Please ") or trimmed.begins_with("Aborting") or trimmed.begins_with("Updating ") or trimmed.begins_with("error:") or trimmed.begins_with("fatal:"):
+			mode = ""
+			continue
+		if mode == "untracked":
+			untracked.append(trimmed)
+		elif mode == "tracked":
+			tracked.append(trimmed)
+	return {"untracked": untracked, "tracked": tracked}
+
+func _resolve_godot_pull_conflicts(git_exe: String, project_dir: String, pull_output: String) -> bool:
+	var conflicts := _extract_merge_conflict_files(pull_output)
+	var untracked: Array = conflicts["untracked"]
+	var tracked: Array = conflicts["tracked"]
+	if untracked.is_empty() and tracked.is_empty():
+		return false
+	for p in untracked:
+		if not _is_godot_generated_metadata_file(str(p)):
+			return false
+	for p in tracked:
+		if not _is_godot_generated_metadata_file(str(p)):
+			return false
+	for p in untracked:
+		var abs_path := project_dir.path_join(str(p))
+		if FileAccess.file_exists(abs_path):
+			if DirAccess.remove_absolute(abs_path) != OK:
+				return false
+	if not tracked.is_empty():
+		var args: Array[String] = ["-C", project_dir, "checkout", "--"]
+		for p in tracked:
+			args.append(str(p))
+		var co_out: Array = []
+		if OS.execute(git_exe, args, co_out, true) != 0:
+			return false
+	return true
 
 func _get_git_branch_info() -> String:
 	var out: Array = []
